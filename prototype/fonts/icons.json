@@ -1,0 +1,104 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M64 0h960v960z"
+				],
+				"tags": [
+					"corner"
+				],
+				"grid": 0
+			},
+			"properties": {
+				"order": 1,
+				"id": 0,
+				"prevSize": 32,
+				"name": "corner",
+				"ligatures": "",
+				"code": 57344
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M32 64h960v640h-320l-320 256v-256h-320z"
+				],
+				"tags": [
+					"comment"
+				],
+				"grid": 0
+			},
+			"properties": {
+				"order": 2,
+				"id": 0,
+				"prevSize": 32,
+				"name": "comment",
+				"ligatures": "",
+				"code": 57347
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M128 768l384-512 384 512z"
+				],
+				"tags": [
+					"vote"
+				],
+				"grid": 0
+			},
+			"properties": {
+				"order": 3,
+				"id": 0,
+				"prevSize": 32,
+				"name": "vote",
+				"ligatures": "",
+				"code": 57346
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M32 192h640l320 320-320 320h-640z"
+				],
+				"tags": [
+					"tag"
+				],
+				"grid": 0
+			},
+			"properties": {
+				"order": 4,
+				"id": 0,
+				"prevSize": 32,
+				"name": "tag",
+				"ligatures": "",
+				"code": 57348
+			}
+		},
+		{
+			"icon": {
+				"paths": [
+					"M864 512c0 194.404-157.596 352-352 352s-352-157.596-352-352c0-194.404 157.596-352 352-352 194.404 0 352 157.596 352 352z"
+				],
+				"tags": [
+					"do"
+				],
+				"grid": 0
+			},
+			"properties": {
+				"order": 5,
+				"id": 0,
+				"prevSize": 32,
+				"code": 57345,
+				"name": "do",
+				"ligatures": ""
+			}
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icons"
+	}
+}

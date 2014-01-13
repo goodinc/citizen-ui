@@ -4,6 +4,22 @@
   ----------------------------------------------- */
 
 
+
+  /* =Fonts
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family: "Good-Icons";
+    src: url(fonts/icons.eot);
+    src: url(fonts/icons.eot?#iefix) format('eot'), url(fonts/icons.woff) format('woff'), url(fonts/icons.ttf) format('truetype'), url(fonts/icons.svg#Good-Icons) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
   /* =Elements
   -----------------------------------------------
   -----------------------------------------------
@@ -389,9 +405,11 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
+  .activity-list
+
 
   .activity-item:after {
-    /* $clearfix */
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -399,10 +417,10 @@
 
   .activity-item section,
   .activity-item article {
-    margin-top: 1.25em; /* $line_height */
+    margin-top: 1.25em; /* @line-height */
   }
   .activity-item p {
-    margin-top    : 0.625em; /* $line_height / 2 */
+    margin-top    : 0.625em; /* @line-height / 2 */
     margin-bottom : 0.625em;
   }
 
@@ -415,7 +433,7 @@
   .activity-item a:hover,
   .activity-item a:active,
   .activity-item a:focus {
-    color: rgb(113, 179, 247); /* $link_color */
+    color: rgb(113, 179, 247); /* @link-color */
   }
   .activity-item a.follow-button {
     color: white; /* Restore the base style */
@@ -424,7 +442,7 @@
   /* Headlines */
   .activity-item h3 {
     margin: 0;
-    font-size: 1.5em; /* 24px / $font_size */
+    font-size: 1.5em; /* 24px / @font-size */
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.35em; /* Freight Light needs a big line height */
     font-weight: normal;
@@ -447,14 +465,14 @@
   .activity-item h3 a:hover,
   .activity-item h3 a:hover,
   .activity-item h3 a:hover {
-    color: rgb(113, 179, 247); /* $link_color */
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
   /* Icons */
   .meta .dos      abbr,
   .meta .votes    abbr,
   .meta .comments abbr {
-    font-size: 0.75em; /* 12px / $font_size */
+    font-size: 0.75em; /* 12px / @font-size */
   }
   .meta .dos      abbr:before,
   .meta .votes    abbr:before,
@@ -496,55 +514,25 @@
   /* Time */
   .activity-item .time {
     color: rgb(204, 204, 204);
-    font-size: 0.75em; /* 12px / $font_size */
-  }
-
-
-/* =Buttons
-  ----------------------------------------------- */
-
-  /* Give all buttons a pointer cursor (consider doing this throughout the site) */
-  .activity-item button {
-    cursor: pointer;
-  }
-
-  /* Do It */
-  .activity-item .todo_actions .todo_status .icon.primary_box {
-    position: static;
-  }
-  .activity-item .todo_actions {
-    margin-top: 1.25em; /* $line_height */
-    padding-top: 0;
-    border-width: 0;
-  }
-
-  /* KLUDGE: Hide the avatars and dos count (we should do this in the HTML instead) */
-  .activity-item .todo_actions .avatars,
-  .activity-item .todo_actions .number_of_doers {
-    display: none;
-  }
-
-  /* Follow */
-  .activity-item .follow-button {
-    margin-top: 1.25em; /* $line_height */
+    font-size: 0.75em; /* 12px / @font-size */
   }
 
 
 /* =More Link
   ----------------------------------------------- */
   .activity-item .more {
-    padding-left: 0.625em; /* 10px / $font_size */
+    padding-left: 0.625em; /* 10px / @font-size */
     margin-top: 1.5em;
   }
   .activity-item .more a {
-    color: rgb(153, 153, 153); /* $aluminum */
+    color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
-    font-size: 0.875em; /* 14px / $font_size */
+    font-size: 0.875em; /* 14px / @font-size */
   }
   .activity-item .more a:hover,
   .activity-item .more a:active,
   .activity-item .more a:focus {
-    color: rgb(113, 179, 247); /* $link_color */
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
 
@@ -564,14 +552,14 @@
   .activity-item .post h3 .image {
     float: left;
     position: relative;
-    margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
+    margin-right: 0.83333333333333em; /* @line-height / font-size(16px) */
   }
   .activity-item .post h3 .image img {
     display: block;
   }
   .activity-item .post h3 small {
     font-size: 0.5em; /* 12px / 24px */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* $helvetica */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     white-space: nowrap;
 
     /* TRICKY: Limit the width of the element, since the domain name might be very long. */
@@ -587,7 +575,7 @@
   }
 
   /* OPTIONAL: Line up with the headline */
-  @media (min-width: 40em) { /* $medium_size */
+  @media (min-width: 40em) { /* @medium-size */
     .activity-item .post .has-image + .meta {
       margin-left: 7.5em; /* image.width(120px) / font-size(16px) */
     }
@@ -604,7 +592,7 @@
 
   /* The links images are smaller, so we want the meta data to appear after them */
   .activity-item .link .has-image:after {
-    /* $clearfix */
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -614,10 +602,10 @@
   .activity-item .link h3 .image {
     float: right;
     border-right-width: 0;
-    margin-left: 0.9375em; /* $image_margin */
+    margin-left: 0.9375em; /* @image-margin */
 
     /* OPTIONAL: Move the image up and to the right a little */
-    margin-top   : -0.20833333333333em; /* $line_height(20px) / @fontSize(24px) x 1/4 */
+    margin-top   : -0.20833333333333em; /* @line-height(20px) / @fontSize(24px) x 1/4 */
     margin-right : -0.20833333333333em;
   }
 
@@ -628,9 +616,9 @@
 
   .activity-item .link,
   .activity-item .follow {
-    padding       : 1.25em;  /* $line_height */
-    border: 1px solid rgb(243, 243, 243); /* $bright_silver */
-    background: rgb(249, 249, 249); /* $silver */
+    padding       : 1.25em;  /* @line-height */
+    border: 1px solid rgb(243, 243, 243); /* @bright-silver */
+    background: rgb(249, 249, 249); /* @silver */
     border-radius: 0.25em;
     transition: background-color 0.2s, border-color 0.2s;
     position: relative;
@@ -638,14 +626,14 @@
 
   .activity-item .link:after,
   .activity-item .follow:after {
-    /* @clear_fix */
+    /* @clear-fix */
     content: "";
     display: table;
     clear: both;
   }
 
   /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
-  @media (min-width: 40em) { /* $medium_size */
+  @media (min-width: 40em) { /* @medium-size */
 
     /* Make space for the buttons */
     .activity-item .do h3 {
@@ -657,36 +645,17 @@
       margin-right: 6.25em;
     }
 
-    .activity-item .todo_actions,
+    .activity-item .todo-actions,
     .activity-item .follow-button {
       position: absolute;
       margin-top: 0;
       top: 0;
-      right: 0.5625em; /* meta.margin-right(9px) / $font_size(16px) */
+      right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
     }
     .activity-item .follow-button {
-      top   : 1.25em; /* $line_height */
-      right : 1.25em; /* $line_height */
+      top   : 1.25em; /* @line-height */
+      right : 1.25em; /* @line-height */
     }
-
-    /* If this is a feature, don’t position the button */
-    .activity-item.featured-do .todo_actions {
-      position: static;
-      margin-top: 1.25em; /* $line_height */
-      margin-left: 1.25em;
-    }
-  }
-
-  /* Video */
-  .activity-item .link h3.play-button-overlay-60 .image {
-    @include play-button-overlay(60px, 60px, 12px, 10px, 24px, 24px, 2px, #FFF);
-  }
-
-  /* OPTIONAL: Light up the links and follows, when hovering over an item */
-  .activity-item .link:hover,
-  .activity-item .follow:hover {
-    background: white;
-    border-color: rgb(153, 153, 153); /* $aluminum */
   }
 
 
@@ -694,10 +663,10 @@
   ----------------------------------------------- */
   .activity-item .follow h3 .image {
     float: left;
-    margin-right: 0.9375em; /* $image_margin */
+    margin-right: 0.9375em; /* @image-margin */
 
     /* OPTIONAL: Move the image up and to the left a little */
-    margin-top  : -0.3125em; /* $line_height x 1/4 */
+    margin-top  : -0.3125em; /* @line-height x 1/4 */
     margin-left : -0.3125em;
   }
   .activity-item .follow h3 .image img {
@@ -705,15 +674,15 @@
   }
   .activity-item .follow,
   .activity-item .follow + .more {
-    margin-top: 1.25em; /* $line_height */
+    margin-top: 1.25em; /* @line-height */
   }
   .activity-item .follow .meta {
-    margin-top: 0.3125em; /* $line_height / 4 */
-    font-size: 0.75em; /* 12px / $font_size */
+    margin-top: 0.3125em; /* @line-height / 4 */
+    font-size: 0.75em; /* 12px / @font-size */
   }
   .activity-item .follow .meta + .description {
-    border-top: 1px solid rgb(218, 220, 224); /* $bright_blue_silver */
-    padding-top: 0.625em; /* $line_height / 2 */
+    border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
+    padding-top: 0.625em; /* @line-height / 2 */
   }
   .activity-item .follow .description {
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -734,16 +703,16 @@
 /* =Comment
   ----------------------------------------------- */
   .activity-item .comment {
-    padding-left: 2.5em; /* $line_height x 2 */
+    padding-left: 2.5em; /* @line-height x 2 */
   }
   .activity-item .comment,
   .activity-item .comment + .more {
-    margin-top: 1.25em; /* $line_height */
-    border-top: 1px solid $silver_blue;
-    padding-top: 1.25em; /* $line_height */
+    margin-top: 1.25em; /* @line-height */
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    padding-top: 1.25em; /* @line-height */
   }
   .activity-item .comment + .comment {
-    padding-left: 5em; /* $line_height x 4 */
+    padding-left: 5em; /* @line-height x 4 */
   }
 
   .activity-item .comment h3 a {
@@ -753,11 +722,11 @@
     vertical-align: middle;
     margin-right: 0.5em;
 
-    margin-left: -3.33333333333333em; /* ($line_height x 2) / 12px */
+    margin-left: -3.33333333333333em; /* (@line-height x 2) / 12px */
   }
   .activity-item .comment p {
     color: black;
-    font-size: 0.875em; /* 14px / $font_size */
+    font-size: 0.875em; /* 14px / @font-size */
   }
   .activity-item .comment p a {
     color: rgb(102, 153, 204);
@@ -765,7 +734,7 @@
   .activity-item .comment p a:hover,
   .activity-item .comment p a:active,
   .activity-item .comment p a:focus {
-    color: rgb(113, 179, 247); /* $link_color */
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
   /* OPTIONAL: Reduce the space between the headline and the commment */
@@ -777,17 +746,17 @@
 /* =Source
   ----------------------------------------------- */
   .activity-item .source {
-    font-size: 0.75em; /* 12px / $font_size */
-    color: rgb(153, 153, 153); /* $aluminum */
+    font-size: 0.75em; /* 12px / @font-size */
+    color: rgb(153, 153, 153); /* @aluminum */
   }
   .activity-item .source a {
     font-weight: bold;
-    color: rgb(102, 102, 102); /* $steel */
+    color: rgb(102, 102, 102); /* @steel */
   }
   .activity-item .source a:hover,
   .activity-item .source a:hover,
   .activity-item .source a:hover {
-    color: rgb(113, 179, 247); /* $link_color */
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
 
@@ -795,27 +764,15 @@
   ----------------------------------------------- */
   .activity-item .post .meta {
     margin-top: 0.625em;
-    border-top: 1px solid rgb(243, 243, 243); /* $bright_silver */
+    border-top: 1px solid rgb(243, 243, 243); /* @bright-silver */
     padding-top: 0.625em;
   }
 
   .activity-item .link .meta {
-    border-top-color: rgb(218, 220, 224); /* $bright_blue_silver */
+    border-top-color: rgb(218, 220, 224); /* @bright-blue-silver */
 
     /* OPTIONAL: Line up with the image */
     margin-right: -0.3125em;
-  }
-
-  /* TBD: We might be able to remove this set of rules, once these stories are in production:
-  (since the meta element will never be empty)
-
-  https://www.pivotaltracker.com/s/projects/488811/stories/60117862
-  https://www.pivotaltracker.com/s/projects/488811/stories/59167532
-   */
-  .activity-item .post .meta.empty {
-    border-top-width: 0;
-    padding-top: 0;
-    margin-top: 0;
   }
 
   .featured-do .meta {
@@ -824,7 +781,7 @@
     float: right;
   }
   .activity-item .post .meta:after {
-    /* $clearfix */
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -834,7 +791,7 @@
     margin-bottom: 0;
     display: inline-block;
     margin-right: 0.75em;
-    color: rgb(153, 153, 153); /* $aluminum */
+    color: rgb(153, 153, 153); /* @aluminum */
   }
 
   /* OPTIONAL: Add a line between meta items within a follow */
@@ -854,7 +811,7 @@
   .activity-item .meta a:hover,
   .activity-item .meta a:active,
   .activity-item .meta a:focus {
-    color: rgb(113, 179, 247); /* $link_color */
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
 
@@ -869,25 +826,32 @@
     margin: 0;
     display: inline;
     font-size: inherit;
-
-    span {
-      /* @hidden-accessible */
-      position: absolute;
-      left: -9999px;
-    }
-
-    &:before {
-      @include good-icon();
-      content: $icon_tag;
-      color: rgb(247, 105, 100);
-      font-size: 0.9375em; /* 15px / $font_size */
-    }
+  }
+  .activity-item section.tags h4 span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
   }
 
-  /* KLUDGE: Override styles on the popular page */
-  html.controller-posts.action-popular #popular_feed .activity-item section.tags h4 {
-    float: none;
-    display: inline-block;
+  .activity-item section.tags h4:before {
+
+    /* @good-icons */
+    font-family: "Good-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e004";
+
+    color: rgb(247, 105, 100);
+    font-size: 0.9375em; /* 15px / @font-size */
   }
 
   .activity-item section.tags ul,
@@ -898,7 +862,7 @@
   }
   .activity-item section.tags ul {
     margin-left: 0.75em;
-    font-size: 0.75em; /* 12px / $font_size */
+    font-size: 0.75em; /* 12px / @font-size */
     display: inline;
   }
   .activity-item section.tags li {
@@ -908,7 +872,7 @@
     margin-left: 1em;
   }
   .activity-item section.tags a {
-    color: rgb(153, 153, 153); /* $aluminum */
+    color: rgb(153, 153, 153); /* @aluminum */
   }
   .activity-item section.tags a:hover,
   .activity-item section.tags a:active,
@@ -920,79 +884,14 @@
 /* =Activity Item
   ----------------------------------------------- */
   .activity-item {
-    border-top: 1px solid $silver_blue;
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
-    padding: 2.5em 1.25em; /* $line_height x 2    $line_height */
-  }
-
-  /* Show a triangle in the corner of the item, when hovering over it */
-  .activity-item:before {
-    @include good-icon();
-    content: $icon_corner;
-    color: rgb(34, 155, 246);
-    font-size: 0.9375em; /* 15px / $font_size */
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .activity-item:hover:before {
-    opacity: 1;
-  }
-
-  /* OPTIONAL: Only show the tags for one item at a time */
-  html:hover .activity-item .tags {
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  html:hover .activity-item:hover .tags {
-    opacity: 1;
-  }
-
-  /* OPTIONAL: Light up the social icons for an item, when hovering over it */
-
-  /* Off */
-  html:hover .activity-item .meta .dos,
-  html:hover .activity-item .meta .votes,
-  html:hover .activity-item .meta .comments {
-    color: rgb(190, 190, 190);
-    transition: color 0.2s;
-  }
-  html:hover .activity-item .meta .dos      abbr:before,
-  html:hover .activity-item .meta .votes    abbr:before,
-  html:hover .activity-item .meta .comments abbr:before {
-    color: rgb(236, 236, 236);
-    transition: color 0.2s;
-  }
-  html:hover .activity-item section.tags h4:before {
-    color: rgb(222, 222, 222);
-    transition: color 0.2s;
-  }
-
-  /* Over */
-  html:hover .activity-item:hover .meta .dos,
-  html:hover .activity-item:hover .meta .votes,
-  html:hover .activity-item:hover .meta .comments {
-    color: rgb(153, 153, 153);
-  }
-  html:hover .activity-item:hover .meta .dos abbr:before {
-    color: rgb(83, 231, 185);
-  }
-  html:hover .activity-item:hover .meta .votes abbr:before {
-    color: rgb(113, 179, 247);
-  }
-  html:hover .activity-item:hover .meta .comments abbr:before {
-    color: rgb(255, 223, 145);
-  }
-  html:hover .activity-item:hover section.tags h4:before {
-    color: rgb(247, 105, 100);
+    padding: 2.5em 1.25em; /* @line-height x 2    @line-height */
   }
 
   /* OPTIONAL: Move the primary source up and to the left a little */
   .activity-item > .source:first-child {
-    margin-left: -1.66666666666667em; /* $line_height / 12px */
+    margin-left: -1.66666666666667em; /* @line-height / 12px */
   }
   .activity-item > .source.has-image:first-child {
     margin-left: 0;
@@ -1007,7 +906,7 @@
     margin-top: -1em; /* 12px / 12px */
     margin-left: -1.66666666666667em; /* 20px / 12px */
     margin-right: 1.25em;
-    border-color: $silver_blue;
+    border-color: rgb(221, 223, 227); /* @silver-blue */
     border-style: solid;
     border-width: 0 1px 1px 1px;
   }
@@ -1026,7 +925,7 @@
     margin-top: 2.5em;
   }
 
-  @media (min-width: 40em) { /* $medium_size */
+  @media (min-width: 40em) { /* @medium-size */
 
     /* OPTIONAL: Line the content up with the source */
     .activity-item > .post,
@@ -1049,8 +948,8 @@
 
     /* OPTIONAL: Don’t line up with the source if this is a feature */
     .activity-item.featured > .time + .post {
-      margin-top: 2.5em; /* $line_height / 2 */
-      margin-left: -1.25em; /* $line_height */
+      margin-top: 2.5em; /* @line-height / 2 */
+      margin-left: -1.25em; /* @line-height */
       margin-right: 0;
     }
 
@@ -1068,87 +967,9 @@
     margin-left: 0;
     padding-left: 0;
   }
-
-
-/* =Featured Article
-  ----------------------------------------------- */
-
-  /* OPTIONAL: Make the featured source image smaller */
-  .activity-item.featured > .source:first-child img {
-    width: 30px;
-    height: auto;
-    margin-left: -1.66666666666667em; /* 20px / 12px */
-    margin-right: 0.625em;
+  ul.activity-list > li {
+    max-width: none;
   }
-
-  /* OPTIONAL: Make the headline bigger */
-  .activity-item.featured h3 {
-    font-size: 2.25em; /* 36px / 16px */
-  }
-
-  /* OPTIONAL: Don’t use the usual “link” style */
-  .activity-item.featured .link {
-    padding: 0;
-    border-width: 0;
-    background: transparent;
-  }
-  .activity-item.featured .link .has-image:after {
-    display: none;
-    clear: none;
-  }
-  .activity-item.featured .link h3 .image {
-    float: left;
-    margin: 0;
-    margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
-  }
-
-
-/* =Featured Do
-  ----------------------------------------------- */
-  .featured-do-container {
-    width: 300px;
-    display: inline;
-    float: right;
-    padding-left: 20px;
-    margin-right: -321px;
-  }
-  .featured-do-container > h3 {
-    line-height: 36px;
-    color: rgb(42, 43, 44);
-    font-family: Helvetica;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 32px;
-  }
-  .featured-do {
-    background: rgb(246, 255, 250);
-    border: 6px solid rgb(233, 249, 240);
-    padding: 14px;
-  }
-
-  /* KLUDGE: Remove the space above the section in featured do’s
-  (It would be better to remove the section element altogether.) */
-  .activity-item.featured-do section {
-    margin-top: 0;
-  }
-
-  .featured-do h3 {
-    font-size: 20px;
-    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.35em; /* Freight Light needs a big line height */
-  }
-  .featured-do h3 a {
-    display: block;
-  }
-  .featured-do h3 img {
-    border: 5px solid rgb(203, 238, 218);
-    border-radius: 200px;
-    margin: 0 auto 1.25em; /* $line_height */
-    display: block;
-  }
-
-
-
 
 
   /* =Testing
