@@ -41,7 +41,7 @@
   }
 
   /* Older browsers sometimes render these inline */
-  header, footer, section, article, aside, nav, hgroup {
+  header, footer, section, article, aside, nav {
     display: block;
   }
 
@@ -51,7 +51,7 @@
 
   /* Margins */
   h1, h2, h3, h4, h5, h6, p, ol, ul, dl, form, table, blockquote, fieldset,
-  header, footer, section, article, aside, nav, hgroup {
+  header, footer, section, article, aside, nav {
     margin-top    : 0.75em; /* @line-height / 2 */
     margin-bottom : 0.75em;
   }
@@ -88,10 +88,8 @@
     margin-top    : 0.66666666666667em;
     margin-bottom : 0.33333333333334em;
 
-    /* Add to the line-height and subtract from the margin
-    to make multi-line headlines easier to read. */
-    line-height   : 1.16666666666667em; /* (@line-height x 1.75) / 2.25 */
-    margin-top    : 0.16666666666667em;
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.33333333333334em; /* (@line-height x 2) / 2.25 */
   }
   h3 {
     font-size: 1.5em;
@@ -140,7 +138,6 @@
 
   /* =Navigation
   ----------------------------------------------- */
-
 
 
   /* =Text Sections
@@ -261,11 +258,14 @@
     margin-top: 2.95em;
     border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
+    padding-bottom: 2.95em;
+  }
+  #footer {
+    margin-top: 0;
   }
   #footer > .container {
 
     /* @separator */
-    margin-top: 2.95em;
     border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
 
@@ -312,10 +312,842 @@
 
   /* =Header
   ----------------------------------------------- */
+  @media (min-width: 60em) {
+    #header .container > h2,
+    #header .container > p,
+    #header .container > nav {
+      display: inline;
+    }
+    #header .container > p,
+    #header .container > nav {
+      margin-left: 1.5em;
+    }
+    #header .container > nav > form {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 1.5em;
+      white-space: nowrap;
+    }
+    #header .container > nav > p,
+    #header .container > nav > ul,
+    #header .container > nav > ul li {
+      display: inline;
+    }
+    #header .container > nav > ul {
+      margin-left: 1.5em;
+      margin-top: 0;
+      float: right;
+    }
+    #header nav ul,
+    #header nav li {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    #header nav li {
+      display: inline;
+    }
+    #header nav li + li {
+      margin-left: 0.75em;
+    }
+    #header nav li a {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.25);
+      color: white;
+      padding: 0.25em 0.75em;
+    }
+  }
 
 
   /* =Footer
   ----------------------------------------------- */
+  @media (min-width: 60em) {
+  }
+
+
+  /* =Content
+  ----------------------------------------------- */
+  #content {
+    background: rgb(254, 254, 255);
+  }
+
+  @media (min-width: 60em) {
+    #content .body {
+      vertical-align: top;
+      display: inline-block;
+      width: 60%;
+    }
+    #content .body + aside {
+      vertical-align: top;
+      display: inline-block;
+      width: 35%;
+    }
+  }
+
+
+/* =Activity Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  .activity-item:after {
+    /* $clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .activity-item section,
+  .activity-item article {
+    margin-top: 1.25em; /* $line_height */
+  }
+  .activity-item p {
+    margin-top    : 0.625em; /* $line_height / 2 */
+    margin-bottom : 0.625em;
+  }
+
+  /* Links */
+  .activity-item a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .activity-item a:hover,
+  .activity-item a:active,
+  .activity-item a:focus {
+    color: rgb(113, 179, 247); /* $link_color */
+  }
+  .activity-item a.follow-button {
+    color: white; /* Restore the base style */
+  }
+
+  /* Headlines */
+  .activity-item h3 {
+    margin: 0;
+    font-size: 1.5em; /* 24px / $font_size */
+    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.35em; /* Freight Light needs a big line height */
+    font-weight: normal;
+  }
+  .activity-item .do h3 {
+    min-height: 2.7em; /* line-height x 2 */
+  }
+  .activity-item .comment h3,
+  .activity-item .follow  h3 {
+    font-family: inherit;
+    line-height: inherit;
+  }
+  .activity-item .follow h3 {
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .activity-item h3 a {
+    color: inherit;
+  }
+  .activity-item h3 a:hover,
+  .activity-item h3 a:hover,
+  .activity-item h3 a:hover {
+    color: rgb(113, 179, 247); /* $link_color */
+  }
+
+  /* Icons */
+  .meta .dos      abbr,
+  .meta .votes    abbr,
+  .meta .comments abbr {
+    font-size: 0.75em; /* 12px / $font_size */
+  }
+  .meta .dos      abbr:before,
+  .meta .votes    abbr:before,
+  .meta .comments abbr:before {
+    font-family: "Good-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.375em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .meta .dos abbr:before {
+    content: "\e001";
+    color: rgb(83, 231, 185);
+  }
+  .meta .votes abbr:before {
+    content: "\e002";
+    color: rgb(113, 179, 247);
+  }
+  .meta .comments abbr:before {
+    content: "\e003";
+    color: rgb(255, 223, 145);
+  }
+
+  /* Time */
+  .activity-item .time {
+    color: rgb(204, 204, 204);
+    font-size: 0.75em; /* 12px / $font_size */
+  }
+
+
+/* =Buttons
+  ----------------------------------------------- */
+
+  /* Give all buttons a pointer cursor (consider doing this throughout the site) */
+  .activity-item button {
+    cursor: pointer;
+  }
+
+  /* Do It */
+  .activity-item .todo_actions .todo_status .icon.primary_box {
+    position: static;
+  }
+  .activity-item .todo_actions {
+    margin-top: 1.25em; /* $line_height */
+    padding-top: 0;
+    border-width: 0;
+  }
+
+  /* KLUDGE: Hide the avatars and dos count (we should do this in the HTML instead) */
+  .activity-item .todo_actions .avatars,
+  .activity-item .todo_actions .number_of_doers {
+    display: none;
+  }
+
+  /* Follow */
+  .activity-item .follow-button {
+    margin-top: 1.25em; /* $line_height */
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+  .activity-item .more {
+    padding-left: 0.625em; /* 10px / $font_size */
+    margin-top: 1.5em;
+  }
+  .activity-item .more a {
+    color: rgb(153, 153, 153); /* $aluminum */
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / $font_size */
+  }
+  .activity-item .more a:hover,
+  .activity-item .more a:active,
+  .activity-item .more a:focus {
+    color: rgb(113, 179, 247); /* $link_color */
+  }
+
+
+
+
+/* =Units
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Post
+  ----------------------------------------------- */
+  .activity-item .post {
+    position: relative;
+  }
+  .activity-item .post h3 .image {
+    float: left;
+    position: relative;
+    margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
+  }
+  .activity-item .post h3 .image img {
+    display: block;
+  }
+  .activity-item .post h3 small {
+    font-size: 0.5em; /* 12px / 24px */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* $helvetica */
+    white-space: nowrap;
+
+    /* TRICKY: Limit the width of the element, since the domain name might be very long. */
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .activity-item.featured .post h3 small {
+    font-size: 0.33333333333333em; /* 12px / 36px */
+  }
+
+  /* OPTIONAL: Line up with the headline */
+  @media (min-width: 40em) { /* $medium_size */
+    .activity-item .post .has-image + .meta {
+      margin-left: 7.5em; /* image.width(120px) / font-size(16px) */
+    }
+
+    /* Featured posts have a larger image */
+    .activity-item.featured .post .has-image + .meta {
+      margin-left: 16.875em; /* image.width(270px) / font-size(16px) */
+    }
+  }
+
+
+/* =Link
+  ----------------------------------------------- */
+
+  /* The links images are smaller, so we want the meta data to appear after them */
+  .activity-item .link .has-image:after {
+    /* $clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Link images should appear on the right, instead of the left */
+  .activity-item .link h3 .image {
+    float: right;
+    border-right-width: 0;
+    margin-left: 0.9375em; /* $image_margin */
+
+    /* OPTIONAL: Move the image up and to the right a little */
+    margin-top   : -0.20833333333333em; /* $line_height(20px) / @fontSize(24px) x 1/4 */
+    margin-right : -0.20833333333333em;
+  }
+
+  /* OPTIONAL: Reset the margin, since the image is on the right. */
+  .activity-item .link .has-image + .meta {
+    margin-left: 0;
+  }
+
+  .activity-item .link,
+  .activity-item .follow {
+    padding       : 1.25em;  /* $line_height */
+    border: 1px solid rgb(243, 243, 243); /* $bright_silver */
+    background: rgb(249, 249, 249); /* $silver */
+    border-radius: 0.25em;
+    transition: background-color 0.2s, border-color 0.2s;
+    position: relative;
+  }
+
+  .activity-item .link:after,
+  .activity-item .follow:after {
+    /* @clear_fix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
+  @media (min-width: 40em) { /* $medium_size */
+
+    /* Make space for the buttons */
+    .activity-item .do h3 {
+      margin-right: 5em;
+    }
+    .activity-item .follow h3,
+    .activity-item .follow h3           + .description,
+    .activity-item .follow h3.has-image + .description {
+      margin-right: 6.25em;
+    }
+
+    .activity-item .todo_actions,
+    .activity-item .follow-button {
+      position: absolute;
+      margin-top: 0;
+      top: 0;
+      right: 0.5625em; /* meta.margin-right(9px) / $font_size(16px) */
+    }
+    .activity-item .follow-button {
+      top   : 1.25em; /* $line_height */
+      right : 1.25em; /* $line_height */
+    }
+
+    /* If this is a feature, don’t position the button */
+    .activity-item.featured-do .todo_actions {
+      position: static;
+      margin-top: 1.25em; /* $line_height */
+      margin-left: 1.25em;
+    }
+  }
+
+  /* Video */
+  .activity-item .link h3.play-button-overlay-60 .image {
+    @include play-button-overlay(60px, 60px, 12px, 10px, 24px, 24px, 2px, #FFF);
+  }
+
+  /* OPTIONAL: Light up the links and follows, when hovering over an item */
+  .activity-item .link:hover,
+  .activity-item .follow:hover {
+    background: white;
+    border-color: rgb(153, 153, 153); /* $aluminum */
+  }
+
+
+/* =Follow (topic or person)
+  ----------------------------------------------- */
+  .activity-item .follow h3 .image {
+    float: left;
+    margin-right: 0.9375em; /* $image_margin */
+
+    /* OPTIONAL: Move the image up and to the left a little */
+    margin-top  : -0.3125em; /* $line_height x 1/4 */
+    margin-left : -0.3125em;
+  }
+  .activity-item .follow h3 .image img {
+    display: block;
+  }
+  .activity-item .follow,
+  .activity-item .follow + .more {
+    margin-top: 1.25em; /* $line_height */
+  }
+  .activity-item .follow .meta {
+    margin-top: 0.3125em; /* $line_height / 4 */
+    font-size: 0.75em; /* 12px / $font_size */
+  }
+  .activity-item .follow .meta + .description {
+    border-top: 1px solid rgb(218, 220, 224); /* $bright_blue_silver */
+    padding-top: 0.625em; /* $line_height / 2 */
+  }
+  .activity-item .follow .description {
+    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.35em; /* Freight Light needs a big line height */
+    margin-bottom: 0;
+  }
+
+  .activity-item .follow .has-image ~ .description {
+
+    /* OPTIONAL: Line up with the headline */
+    margin-left: 4.375em; /* image.width(70px) / font-size(16px) */
+
+    /* OPTIONAL: Line up with the follow button */
+    margin-right: -0.3125em;
+  }
+
+
+/* =Comment
+  ----------------------------------------------- */
+  .activity-item .comment {
+    padding-left: 2.5em; /* $line_height x 2 */
+  }
+  .activity-item .comment,
+  .activity-item .comment + .more {
+    margin-top: 1.25em; /* $line_height */
+    border-top: 1px solid $silver_blue;
+    padding-top: 1.25em; /* $line_height */
+  }
+  .activity-item .comment + .comment {
+    padding-left: 5em; /* $line_height x 4 */
+  }
+
+  .activity-item .comment h3 a {
+    margin-right: 0.375em;
+  }
+  .activity-item .comment h3 img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+
+    margin-left: -3.33333333333333em; /* ($line_height x 2) / 12px */
+  }
+  .activity-item .comment p {
+    color: black;
+    font-size: 0.875em; /* 14px / $font_size */
+  }
+  .activity-item .comment p a {
+    color: rgb(102, 153, 204);
+  }
+  .activity-item .comment p a:hover,
+  .activity-item .comment p a:active,
+  .activity-item .comment p a:focus {
+    color: rgb(113, 179, 247); /* $link_color */
+  }
+
+  /* OPTIONAL: Reduce the space between the headline and the commment */
+  .activity-item .comment h3.has-image + p {
+    margin-top: 0;
+  }
+
+
+/* =Source
+  ----------------------------------------------- */
+  .activity-item .source {
+    font-size: 0.75em; /* 12px / $font_size */
+    color: rgb(153, 153, 153); /* $aluminum */
+  }
+  .activity-item .source a {
+    font-weight: bold;
+    color: rgb(102, 102, 102); /* $steel */
+  }
+  .activity-item .source a:hover,
+  .activity-item .source a:hover,
+  .activity-item .source a:hover {
+    color: rgb(113, 179, 247); /* $link_color */
+  }
+
+
+/* =Meta
+  ----------------------------------------------- */
+  .activity-item .post .meta {
+    margin-top: 0.625em;
+    border-top: 1px solid rgb(243, 243, 243); /* $bright_silver */
+    padding-top: 0.625em;
+  }
+
+  .activity-item .link .meta {
+    border-top-color: rgb(218, 220, 224); /* $bright_blue_silver */
+
+    /* OPTIONAL: Line up with the image */
+    margin-right: -0.3125em;
+  }
+
+  /* TBD: We might be able to remove this set of rules, once these stories are in production:
+  (since the meta element will never be empty)
+
+  https://www.pivotaltracker.com/s/projects/488811/stories/60117862
+  https://www.pivotaltracker.com/s/projects/488811/stories/59167532
+   */
+  .activity-item .post .meta.empty {
+    border-top-width: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .featured-do .meta {
+    margin-top: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .activity-item .post .meta:after {
+    /* $clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .activity-item .meta p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 0.75em;
+    color: rgb(153, 153, 153); /* $aluminum */
+  }
+
+  /* OPTIONAL: Add a line between meta items within a follow */
+  .activity-item .follow .meta p {
+    margin-right: 0;
+  }
+  .activity-item .follow .meta p + p {
+    border-left: 1px solid rgb(216, 216, 216);
+    padding-left: 0.6em;
+    margin-left: 0.6em;
+    line-height: 1;
+  }
+
+  .activity-item .meta a {
+    color: inherit;
+  }
+  .activity-item .meta a:hover,
+  .activity-item .meta a:active,
+  .activity-item .meta a:focus {
+    color: rgb(113, 179, 247); /* $link_color */
+  }
+
+
+/* =Tags
+  ----------------------------------------------- */
+  .activity-item section.tags {
+    margin: 0;
+    display: inline;
+    float: right;
+  }
+  .activity-item section.tags h4 {
+    margin: 0;
+    display: inline;
+    font-size: inherit;
+
+    span {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+
+    &:before {
+      @include good-icon();
+      content: $icon_tag;
+      color: rgb(247, 105, 100);
+      font-size: 0.9375em; /* 15px / $font_size */
+    }
+  }
+
+  /* KLUDGE: Override styles on the popular page */
+  html.controller-posts.action-popular #popular_feed .activity-item section.tags h4 {
+    float: none;
+    display: inline-block;
+  }
+
+  .activity-item section.tags ul,
+  .activity-item section.tags li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .activity-item section.tags ul {
+    margin-left: 0.75em;
+    font-size: 0.75em; /* 12px / $font_size */
+    display: inline;
+  }
+  .activity-item section.tags li {
+    display: inline;
+  }
+  .activity-item section.tags li + li {
+    margin-left: 1em;
+  }
+  .activity-item section.tags a {
+    color: rgb(153, 153, 153); /* $aluminum */
+  }
+  .activity-item section.tags a:hover,
+  .activity-item section.tags a:active,
+  .activity-item section.tags a:focus {
+    color: rgb(113, 179, 247);
+  }
+
+
+/* =Activity Item
+  ----------------------------------------------- */
+  .activity-item {
+    border-top: 1px solid $silver_blue;
+    position: relative;
+    padding: 2.5em 1.25em; /* $line_height x 2    $line_height */
+  }
+
+  /* Show a triangle in the corner of the item, when hovering over it */
+  .activity-item:before {
+    @include good-icon();
+    content: $icon_corner;
+    color: rgb(34, 155, 246);
+    font-size: 0.9375em; /* 15px / $font_size */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .activity-item:hover:before {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Only show the tags for one item at a time */
+  html:hover .activity-item .tags {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  html:hover .activity-item:hover .tags {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Light up the social icons for an item, when hovering over it */
+
+  /* Off */
+  html:hover .activity-item .meta .dos,
+  html:hover .activity-item .meta .votes,
+  html:hover .activity-item .meta .comments {
+    color: rgb(190, 190, 190);
+    transition: color 0.2s;
+  }
+  html:hover .activity-item .meta .dos      abbr:before,
+  html:hover .activity-item .meta .votes    abbr:before,
+  html:hover .activity-item .meta .comments abbr:before {
+    color: rgb(236, 236, 236);
+    transition: color 0.2s;
+  }
+  html:hover .activity-item section.tags h4:before {
+    color: rgb(222, 222, 222);
+    transition: color 0.2s;
+  }
+
+  /* Over */
+  html:hover .activity-item:hover .meta .dos,
+  html:hover .activity-item:hover .meta .votes,
+  html:hover .activity-item:hover .meta .comments {
+    color: rgb(153, 153, 153);
+  }
+  html:hover .activity-item:hover .meta .dos abbr:before {
+    color: rgb(83, 231, 185);
+  }
+  html:hover .activity-item:hover .meta .votes abbr:before {
+    color: rgb(113, 179, 247);
+  }
+  html:hover .activity-item:hover .meta .comments abbr:before {
+    color: rgb(255, 223, 145);
+  }
+  html:hover .activity-item:hover section.tags h4:before {
+    color: rgb(247, 105, 100);
+  }
+
+  /* OPTIONAL: Move the primary source up and to the left a little */
+  .activity-item > .source:first-child {
+    margin-left: -1.66666666666667em; /* $line_height / 12px */
+  }
+  .activity-item > .source.has-image:first-child {
+    margin-left: 0;
+    margin-bottom: -2em; /* This is arbitrary */
+  }
+  .activity-item > .source:first-child {
+    margin-top: -2.33333333333333em; /* 28px / 12px */
+  }
+
+  .activity-item > .source:first-child img {
+    vertical-align: top;
+    margin-top: -1em; /* 12px / 12px */
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 1.25em;
+    border-color: $silver_blue;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+  }
+
+  /* OPTIONAL: Position the time in the top right corner */
+  .activity-item .time:first-child,
+  .activity-item > .source:first-child + .time {
+    margin: 0;
+    position: absolute;
+    top: 1em; /* 12px / 12px */
+    right: 1.66666666666667em; /* 20px / 12px */
+  }
+
+  .activity-item > .time + .post,
+  .activity-item > .time + .follow {
+    margin-top: 2.5em;
+  }
+
+  @media (min-width: 40em) { /* $medium_size */
+
+    /* OPTIONAL: Line the content up with the source */
+    .activity-item > .post,
+    .activity-item > .comment,
+    .activity-item > .follow,
+    .activity-item > .more {
+      margin-left: 3.75em;
+      margin-right: 3.75em;
+    }
+
+    /* OPTIONAL: Move the first follow or post up a little */
+    .activity-item > .time + .post,
+    .activity-item > .time + .follow {
+      margin-top: 1em;
+    }
+    .activity-item > .time:first-child + .post,
+    .activity-item > .time:first-child + .follow {
+      margin-top: 0;
+    }
+
+    /* OPTIONAL: Don’t line up with the source if this is a feature */
+    .activity-item.featured > .time + .post {
+      margin-top: 2.5em; /* $line_height / 2 */
+      margin-left: -1.25em; /* $line_height */
+      margin-right: 0;
+    }
+
+  }
+
+
+/* =Activity List
+  ----------------------------------------------- */
+  ul.activity-list {
+    margin-top: 1.25em; /* $line_height */
+  }
+  ul.activity-list,
+  ul.activity-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+
+/* =Featured Article
+  ----------------------------------------------- */
+
+  /* OPTIONAL: Make the featured source image smaller */
+  .activity-item.featured > .source:first-child img {
+    width: 30px;
+    height: auto;
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 0.625em;
+  }
+
+  /* OPTIONAL: Make the headline bigger */
+  .activity-item.featured h3 {
+    font-size: 2.25em; /* 36px / 16px */
+  }
+
+  /* OPTIONAL: Don’t use the usual “link” style */
+  .activity-item.featured .link {
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+  }
+  .activity-item.featured .link .has-image:after {
+    display: none;
+    clear: none;
+  }
+  .activity-item.featured .link h3 .image {
+    float: left;
+    margin: 0;
+    margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
+  }
+
+
+/* =Featured Do
+  ----------------------------------------------- */
+  .featured-do-container {
+    width: 300px;
+    display: inline;
+    float: right;
+    padding-left: 20px;
+    margin-right: -321px;
+  }
+  .featured-do-container > h3 {
+    line-height: 36px;
+    color: rgb(42, 43, 44);
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+  .featured-do {
+    background: rgb(246, 255, 250);
+    border: 6px solid rgb(233, 249, 240);
+    padding: 14px;
+  }
+
+  /* KLUDGE: Remove the space above the section in featured do’s
+  (It would be better to remove the section element altogether.) */
+  .activity-item.featured-do section {
+    margin-top: 0;
+  }
+
+  .featured-do h3 {
+    font-size: 20px;
+    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.35em; /* Freight Light needs a big line height */
+  }
+  .featured-do h3 a {
+    display: block;
+  }
+  .featured-do h3 img {
+    border: 5px solid rgb(203, 238, 218);
+    border-radius: 200px;
+    margin: 0 auto 1.25em; /* $line_height */
+    display: block;
+  }
+
+
 
 
 
@@ -323,3 +1155,14 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
+
+  body.pattern {
+    padding: 1.5em 1.5em 6em;
+  }
+  /*
+  body.test-type {
+    background: white url(../images/shared/rule.svg) top left repeat;
+    background-size: auto 1.5em;
+  }
+  */
+
