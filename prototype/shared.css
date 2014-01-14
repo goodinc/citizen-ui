@@ -229,6 +229,7 @@
 
   /* =Links & Buttons
   ----------------------------------------------- */
+  a .action span,
   .action a,
   button {
     display: inline-block;
@@ -243,6 +244,9 @@
     line-height: 1.5em;
     padding: 0.5em 1em; /* (@line-height - 0.5em) / 2 */
   }
+  a:hover  .action span,
+  a:active .action span,
+  a:focus  .action span,
   .action a:hover,
   .action a:active,
   .action a:focus,
@@ -328,6 +332,30 @@
 
   /* =Header
   ----------------------------------------------- */
+  #header nav ul,
+  #header nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #header nav li {
+    display: inline;
+  }
+  #header nav li + li {
+    margin-left: 0.75em;
+  }
+  #header nav li a {
+    display: inline-block;
+    background-color: rgb(219, 235, 237);
+    color: black;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    text-decoration: none;
+  }
+  #header nav li:last-child a {
+    background-color: rgb(255, 224, 18);
+  }
+
   @media (min-width: 60em) {
     #header .container > h2,
     #header .container > p,
@@ -353,24 +381,6 @@
       margin-left: 1.5em;
       margin-top: 0;
       float: right;
-    }
-    #header nav ul,
-    #header nav li {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-    }
-    #header nav li {
-      display: inline;
-    }
-    #header nav li + li {
-      margin-left: 0.75em;
-    }
-    #header nav li a {
-      display: inline-block;
-      background: rgba(0, 0, 0, 0.25);
-      color: white;
-      padding: 0.25em 0.75em;
     }
   }
 
@@ -969,6 +979,22 @@
   }
   ul.activity-list > li {
     max-width: none;
+  }
+
+
+/* =Promotion
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .promotion {
+    padding: 1.5em;
+    background: rgb(249, 249, 250);
+    border: 3px solid rgb(224, 224, 225);
+  }
+  .promotion > a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }
 
 
