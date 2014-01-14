@@ -160,6 +160,36 @@
   ----------------------------------------------- */
 
 
+  /* =Headlines
+  ----------------------------------------------- */
+  ul.headlines,
+  ul.headlines li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  ul.headlines li {
+    margin-top: 1.5em; /* @line-height */
+  }
+  ul.headlines li > a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul.headlines li > a h2 {
+    text-decoration: underline;
+  }
+  ul.headlines li > a:hover  h2,
+  ul.headlines li > a:active h2,
+  ul.headlines li > a:focus  h2 {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  ul.headlines img {
+    float: left;
+    margin-right: 1.5em;
+  }
+
+
+
   /* =Application
   -----------------------------------------------
   -----------------------------------------------
@@ -414,7 +444,33 @@
 
   /* =Footer
   ----------------------------------------------- */
+  #footer section + section {
+    margin-top: 3em;
+  }
+  #footer h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  #footer ul {
+    font-size: 0.75em;
+  }
+  #footer ul,
+  #footer li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #footer li a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   @media (min-width: 60em) {
+    #footer li {
+      display: inline;
+      margin-right: 1em;
+    }
   }
 
 
@@ -424,11 +480,55 @@
     background: rgb(254, 254, 255);
   }
 
+  #content .header {
+    margin-bottom: 3em;
+  }
+  #content .header nav {
+    margin-top: 1.5em;
+    background: rgb(244, 244, 245);
+    max-width: none;
+  }
+
+  #content .header nav ul,
+  #content .header nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  #content .header nav li a {
+    display: inline-block;
+    padding: 0.5em 1em;
+  }
+  #content .header nav dt,
+  #content .header nav dd {
+    padding: 0.5em 1em;
+  }
+
+  @media (min-width: 30em) {
+    #content .header nav ul,
+    #content .header nav li,
+    #content .header nav form,
+    #content .header nav form p,
+    #content .header nav dl,
+    #content .header nav dt,
+    #content .header nav dd {
+      display: inline;
+    }
+
+    #content .header nav dt,
+    #content .header nav dd {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
   @media (min-width: 60em) {
     #content .body {
       vertical-align: top;
       display: inline-block;
-      width: 60%;
+      width: 55%;
+      margin-right: 5%;
     }
     #content .body + aside {
       vertical-align: top;
@@ -442,9 +542,6 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
-  .activity-list
-
-
   .activity-item:after {
     /* @clearfix */
     content: "";
@@ -993,6 +1090,88 @@
   }
 
 
+/* =Featured Article
+  ----------------------------------------------- */
+
+  /* OPTIONAL: Make the featured source image smaller */
+  .activity-item.featured > .source:first-child img {
+    width: 30px;
+    height: auto;
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 0.625em;
+  }
+
+  /* OPTIONAL: Make the headline bigger */
+  .activity-item.featured h3 {
+    font-size: 2.25em; /* 36px / 16px */
+  }
+
+  /* OPTIONAL: Don’t use the usual “link” style */
+  .activity-item.featured .link {
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+  }
+  .activity-item.featured .link .has-image:after {
+    display: none;
+    clear: none;
+  }
+  .activity-item.featured .link h3 .image {
+    float: left;
+    margin: 0;
+    margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
+  }
+
+
+/* =Featured Do
+  ----------------------------------------------- */
+
+  @media (min-width: 60em) {
+    .activity-item.featured {
+      vertical-align: top;
+      display: inline-block;
+      width: 55%;
+      margin-right: 5%;
+      box-sizing: border-box;
+    }
+    .featured-do-container {
+      vertical-align: top;
+      display: inline-block;
+      width: 35%;
+      box-sizing: border-box;
+    }
+  }
+
+  .featured-do-container > h3 {
+  }
+  .featured-do {
+    background: rgb(246, 255, 250);
+    border: 6px solid rgb(233, 249, 240);
+    padding: 14px;
+  }
+
+  /* KLUDGE: Remove the space above the section in featured do’s
+  (It would be better to remove the section element altogether.) */
+  .activity-item.featured-do section {
+    margin-top: 0;
+  }
+
+  .featured-do h3 {
+    font-size: 20px;
+    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.35em; /* Freight Light needs a big line height */
+  }
+  .featured-do h3 a {
+    display: block;
+  }
+  .featured-do h3 img {
+    border: 5px solid rgb(203, 238, 218);
+    border-radius: 200px;
+    margin: 0 auto 1.25em; /* $line_height */
+    display: block;
+  }
+
+
 /* =Activity List
   ----------------------------------------------- */
   ul.activity-list {
@@ -1036,10 +1215,10 @@
     margin-right: 0.75em;
   }
 
-  #content .body > section,
-  #content .body > aside,
-  #content > .container > aside   + section,
-  #content > .container > section + section {
+  #content        .body > section + section,
+  #content        .body > section + aside,
+  #content > .container > section + section,
+  #content > .container > aside   + section {
 
     /* @separator */
     margin-top: 2.95em;
@@ -1048,11 +1227,81 @@
   }
 
 
+/* =Post
+  ----------------------------------------------- */
+  article.body > header {
+    margin-bottom: 3em;
+  }
+  article.body > footer,
+  article.body > footer > form + form,
+  article.body > footer > section,
+  article.body > aside,
+  article.body > section {
+
+    /* @separator */
+    margin-top: 2.95em;
+    border-top: 0.1em solid rgb(221, 221, 221);
+    padding-top: 2.95em;
+  }
+  article.body > footer > section ul,
+  article.body > footer > section li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  article.body > footer > section li {
+    display: inline;
+  }
+  article.body .suggested-post:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  article.body .suggested-post p {
+    font-size: 2em;
+    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
+  article.body .suggested-post img {
+    float: left;
+    margin-right: 0.75em;
+  }
+  article.body > .comments ul {
+    margin-top: 3em;
+  }
+  article.body > .comments ul,
+  article.body > .comments li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  article.body > .comments li form {
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+  }
+
 
 /* =Promotion
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
+  aside .discussion ul,
+  aside .discussion li,
+  aside .promotion ul,
+  aside .promotion li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  aside > .discussion + section,
+  aside > .discussion + p {
+    margin-top: 1.5em;
+  }
+  aside .discussion h3 img {
+    display: block;
+    margin-bottom: 0.375em;
+  }
   .promotion {
     padding: 1.5em;
     background: rgb(249, 249, 250);
