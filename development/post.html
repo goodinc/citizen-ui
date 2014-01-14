@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Native American travels across U.S. photographing citizens of tribal nations | Community on GOOD</title>
+  <title>Lessons from Living on a Bicycle | Bicyling on GOOD</title>
   <link rel="stylesheet" href="http://fast.fonts.net/cssapi/e13ac1f8-9019-429d-a8e5-954965bb3fda.css" />
   <link rel="stylesheet" href="shared.css" />
 </head>
@@ -25,6 +25,7 @@
     </nav>
 
     <section class="search">
+      <h3><a href="search.html">Search</a></h3>
       <form action="search.html" method="get">
         <p>
           <label>
@@ -46,14 +47,32 @@
 
         <h1>Lessons from Living on a Bicycle</h1>
 
-        <p>Learn in <a href="">Bicycling</a>, <a href="">Bikes</a> and <a href="">Life Hacking</a></p>
-        <p><time datetime="2013-01-30T17:48:38Z">December 5, 2013 at 2:55 PM</time></p>
+        <p class="topics"><strong>Learn</strong> in <a href="">Bicycling</a>, <a href="">Bikes</a> and <a href="">Life Hacking</a></p>
 
-        <p>Find more by <a href=""><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F230%2F384%2Foriginal%2F157392_3403147_1530103108_n.jpg&amp;geometry=130x130%23" width="60" height="60" alt="" /> Jedidiah Jenkins</a></p>
+        <p class="time"><time datetime="2013-01-30T17:48:38Z">December 5, 2013 at 2:55 PM</time></p>
 
-        <form action="" method="post">
-          <p><button type="submit">Follow Jedidiah Jenkins</button></p>
-        </form>
+        <section class="promote">
+          <form action="" method="post">
+            <h2><button type="submit">Think it’s good?</button></h2>
+            <p><strong>149</strong> people think it’s good.</p>
+          </form>
+        </section>
+
+        <section class="author">
+          <p><span>Find more by</span> <a href=""><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F230%2F384%2Foriginal%2F157392_3403147_1530103108_n.jpg&amp;geometry=130x130%23" width="60" height="60" alt="" /> Jedidiah Jenkins</a></p>
+
+          <form action="" method="post">
+            <p><button type="submit" title="Follow Jedidiah Jenkins">Follow</button></p>
+          </form>
+        </section>
+
+        <section class="share">
+          <h2>Share this</h2>
+          <ul>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Facebook</a></li>
+          </ul>
+        </section>
 
       </header>
 
@@ -160,7 +179,7 @@
         </form>
 
         <section class="votes">
-          <h2>21 people think this is good</h2>
+          <h2>149 people think this is good</h2>
           <ul>
             <li><a href=""><img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fimage-cache.good.is%2Fimages%2Fassets%2Fdefault-avatar-red.png&amp;geometry=25x25%23" alt="Candy Li"></a></li>
             <li><a href=""><img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F312%2F966%2Foriginal%2F394179_1478921576628_1711800389_n.jpg&amp;geometry=25x25%23" alt="Kirby Culbertson"></a></li>
@@ -173,37 +192,26 @@
           </ul>
         </section>
 
-        <section class="share">
-          <h2>Share this</h2>
-          <ul>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Facebook</a></li>
-          </ul>
-        </section>
-
         <section class="tags">
           <h2>This post is tagged in…</h2>
           <ul>
             <li>
-              <a href="/community">Community</a>
+              <a href="/bicycling">Bicycling</a>
             </li>
             <li>
-              <a href="/culture">Culture</a>
+              <a href="/bikes">Bikes</a>
             </li>
             <li>
-              <a href="/culture-jamming">Culture Jamming</a>
+              <a href="/life-hacking">Life Hacking</a>
             </li>
             <li>
-              <a href="/holidays">Holidays</a>
+              <a href="/lifestyle">Lifestyle</a>
             </li>
             <li>
-              <a href="/native-american">Native American</a>
+              <a href="/living">Living</a>
             </li>
             <li>
-              <a href="/photography">Photography</a>
-            </li>
-            <li>
-              <a href="/travel">Travel</a>
+              <a href="/the-daily-good">The Daily Good</a>
             </li>
             <li>
               <a href="/travel-like-you-give-a-damn">Travel Like You Give A Damn</a>
@@ -424,6 +432,24 @@
 </footer>
 
 </div><!-- .container -->
+
+<script>
+(function() {
+  if (!document.querySelector) return;
+
+  var search = document.querySelector("#header .search");
+  if (!search) return;
+
+  var button = search.querySelector("h2 a");
+  button.addEventListener("click", function(e) {
+    search.className += " active";
+
+    e.preventDefault();
+  });
+
+  search.className += " scripted";
+})();
+</script>
 
 </body>
 </html>
