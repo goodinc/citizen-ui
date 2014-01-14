@@ -238,7 +238,7 @@
     color: rgb(102, 102, 102);
 
     /* TRICKY: Some browsers don’t allow line height to be
-    adjusted on text fields, so assume a line height of â€œnormal“
+    adjusted on text fields, so assume a line height of “normal”
     and rely on padding. */
     padding: 0.45em 0.6em;
   }
@@ -458,6 +458,15 @@
       margin-top: 0;
       float: right;
     }
+    #header .search {
+      margin-top: 0;
+      float: right;
+
+      /* @separator */
+      border-right: 0.05em solid rgb(221, 221, 221);
+      padding-right: 1.5em;
+      margin-right: 0;
+    }
 
     #header .search form {
       margin-top: 0;
@@ -472,14 +481,59 @@
       left: auto;
       right: 0;
     }
+
+    #header .account {
+      display: inline-block;
+      vertical-align: top;
+      float: right;
+      margin-top: 0;
+      position: relative;
+
+      /* @separator */
+      border-right: 0.05em solid rgb(221, 221, 221);
+      padding-right: 1.5em;
+      margin-right: 0;
+    }
+    #header .account .options {
+      position: absolute;
+      left: -9999px;
+      width: 10em;
+      background: white;
+      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+      padding: 1.5em;
+    }
+    #header .account:hover .options {
+      left: auto;
+      right: 0;
+    }
+
+    #header .todos {
+      display: inline-block;
+      vertical-align: top;
+      float: right;
+      margin-top: 0;
+      position: relative;
+
+      /* @separator */
+      border-right: 0.05em solid rgb(221, 221, 221);
+      padding-right: 1.5em;
+      margin-right: 1.5em;
+    }
+    #header .todos .options {
+      position: absolute;
+      left: -9999px;
+      width: 20em;
+      background: white;
+      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+      padding: 1.5em;
+    }
+    #header .todos:hover .options {
+      left: auto;
+      right: 0;
+    }
+
   }
 
-
-/* TEMP */
-  #header .todos {
-    position: absolute;
-    left: -9999px;
-  }
 
 
   @media (min-width: 60em) {
@@ -1286,7 +1340,7 @@
   }
 
   #content        .body > section + section,
-  #content        .body > section + aside,
+  #content        .body > aside,
   #content > .container > section + section,
   #content > .container > aside   + section {
 
