@@ -226,6 +226,17 @@
     font-size: inherit;
   }
 
+  form ul.submit,
+  form ul.submit li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  form ul.submit li {
+    display: inline;
+    margin-right: 1.5em;
+  }
+
 
   /* =Links & Buttons
   ----------------------------------------------- */
@@ -341,7 +352,7 @@
   #header .primary li {
     display: inline;
   }
-  #header .primaryli + li {
+  #header .primary li + li {
     margin-left: 0.75em;
   }
   #header .primary li a {
@@ -354,6 +365,26 @@
   }
   #header .primary li:last-child a {
     background-color: rgb(255, 224, 18);
+  }
+  #header h2 {
+    font-size: inherit;
+  }
+  #header h2 a {
+    vertical-align: top;
+    display: inline-block;
+    background: url(images/good.svg) no-repeat;
+    background-size: contain;
+
+    width: 5em;
+    height: 2.7em;
+
+    /* @hidden-accessible-text */
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+
+  #header .search {
+    margin-top: 1.5em; /* @line-height */
   }
 
 
@@ -976,6 +1007,46 @@
   ul.activity-list > li {
     max-width: none;
   }
+
+
+/* =Follow List
+  ----------------------------------------------- */
+  ul.follow-list,
+  ul.follow-list li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  ul.follow-list + ul.follow-list,
+  ul.follow-list > li + li {
+
+    /* @separator */
+    margin-top: 2.95em;
+    border-top: 0.1em solid rgb(221, 221, 221);
+    padding-top: 2.95em;
+  }
+  ul.follow-list li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  ul.follow-list li img {
+    float: left;
+    margin-right: 0.75em;
+  }
+
+  #content .body > section,
+  #content .body > aside,
+  #content > .container > aside   + section,
+  #content > .container > section + section {
+
+    /* @separator */
+    margin-top: 2.95em;
+    border-top: 0.1em solid rgb(221, 221, 221);
+    padding-top: 2.95em;
+  }
+
 
 
 /* =Promotion
