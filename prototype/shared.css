@@ -29,12 +29,7 @@
     margin: 0;
     padding: 0;
     background: rgb(249, 249, 250); /* @bright-white */
-    color: rgb(0, 0, 1); /* @text-color */
-  }
-  @media (min-width: 80em) {
-    body {
-      font-size: 125%;
-    }
+    color: rgb(42, 43, 44); /* @text-color */
   }
   a {
     color: rgb(113, 179, 247); /* @link-color */
@@ -42,7 +37,7 @@
   a:hover,
   a:active,
   a:focus {
-    color: rgb(153, 153, 153); /* @text-color */
+    color: rgb(153, 153, 153);
     text-decoration: none;
     transition: all 0.2s;
   }
@@ -281,9 +276,10 @@
     cursor: pointer;
     border-width: 0;
     text-decoration: none;
+    font-weight: bold;
 
     line-height: 1.5em;
-    padding: 0.5em 1em; /* (@line-height - 0.5em) / 2 */
+    padding: 0.75em 1.5em;
   }
   a:hover  .action span,
   a:active .action span,
@@ -313,21 +309,20 @@
   #header > .container {
     padding-top: 1.5em;
   }
-  #content > .container {
-
+  #content {
     /* @separator */
     margin-top: 2.95em;
-    border-top: 0.05em solid rgb(221, 221, 221);
     padding-top: 2.95em;
+    border-top: 0.1em solid rgb(221, 221, 221);
     padding-bottom: 2.95em;
   }
   #footer {
     margin-top: 0;
   }
-  #footer > .container {
+  #footer {
 
     /* @separator */
-    border-top: 0.05em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
 
     padding-bottom: 1.5em;
@@ -338,6 +333,9 @@
   #footer > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* On large screens, fill the available vertical space */
@@ -383,30 +381,45 @@
     display: inline;
   }
   #header .primary li + li {
-    margin-left: 0.75em;
+    margin-left: 0.125em;
   }
   #header .primary li a {
     display: inline-block;
     background-color: rgb(219, 235, 237);
-    color: black;
-    color: rgba(0, 0, 0, 0.5);
-    padding: 0.5em 1em;
+    color: rgb(149, 171, 174);
+    padding: 0.75em 1.5em;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / font-size(16px) */
+    border-radius: 0.125em;
+  }
+  #header .primary li a:hover,
+  #header .primary li a:active,
+  #header .primary li a:focus {
+    background: rgb(228, 241, 242);
+    color: rgb(108, 153, 157);
   }
   #header .primary li:last-child a {
     background-color: rgb(255, 224, 18);
+    color: rgb(219, 191, 3);
+  }
+  #header .primary li:last-child a:hover,
+  #header .primary li:last-child a:active,
+  #header .primary li:last-child a:focus {
+    background: rgb(255, 233, 84);
+    color: rgb(170, 149, 5);
   }
   #header h2 {
     font-size: inherit;
   }
   #header h2 a {
-    vertical-align: top;
+    vertical-align: middle;
     display: inline-block;
     background: url(images/good.svg) no-repeat;
     background-size: contain;
 
-    width: 5em;
-    height: 2.7em;
+    width:  6.250em; /* image-width(100px) / font-size(16px) */
+    height: 3.375em; /* image-height(54px) / font-size(16px) */
 
     /* @hidden-accessible-text */
     text-indent: -9999px;
@@ -448,25 +461,37 @@
       margin-top: 0;
     }
     #header .search h3 a {
-      background-color: rgb(50, 50, 51);
-      color: rgb(203, 203, 204);
+      background-color: rgb(139, 139, 139);
+      color: rgb(102, 102, 102);
       display: inline-block;
-      padding: 0.5em 1em;
+      padding: 0.75em 1.5em;
       text-decoration: none;
+      font-size: 0.875em; /* 14px / font-size(16px) */
+      border-radius: 0.125em;
     }
-    #header .primary {
-      margin-top: 0;
-      float: right;
+    #header .search h3 a:hover,
+    #header .search h3 a:active,
+    #header .search h3 a:focus {
+      background: rgb(173, 173, 173);
+      color: rgb(153, 153, 153);
     }
-    #header .search {
-      margin-top: 0;
-      float: right;
 
-      /* @separator */
-      border-right: 0.05em solid rgb(221, 221, 221);
-      padding-right: 1.5em;
-      margin-right: 0;
+    @media (min-width: 60em) {
+      #header .primary {
+        margin-top: 0;
+        float: right;
+      }
+      #header .search {
+        margin-top: 0;
+        float: right;
+
+        /* @separator */
+        border-right: 0.1em solid rgb(239, 239, 239);
+        padding-right: 0.875em;
+        margin-right: 0;
+      }
     }
+
 
     #header .search form {
       margin-top: 0;
@@ -490,7 +515,7 @@
       position: relative;
 
       /* @separator */
-      border-right: 0.05em solid rgb(221, 221, 221);
+      border-right: 0.1em solid rgb(221, 221, 221);
       padding-right: 1.5em;
       margin-right: 0;
     }
@@ -515,7 +540,7 @@
       position: relative;
 
       /* @separator */
-      border-right: 0.05em solid rgb(221, 221, 221);
+      border-right: 0.1em solid rgb(221, 221, 221);
       padding-right: 1.5em;
       margin-right: 1.5em;
     }
@@ -542,9 +567,11 @@
     #header .primary {
       display: inline;
     }
-    #header > .container > p,
-    #header .primary {
+    #header > .container > p {
       margin-left: 1.5em;
+    }
+    #header .primary {
+      margin-left: 0.875em;
     }
     #header .primary ul,
     #header .primary ul li {
@@ -640,21 +667,27 @@
     }
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 70em) {
+    #content > .container:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     #content .body {
-      vertical-align: top;
-      display: inline-block;
-      width: 55%;
-      margin-right: 5%;
+      margin-top: 0;
+      float: left;
+      width: 65%;
+      box-sizing: border-box;
     }
     #content .body + aside {
-      vertical-align: top;
-      display: inline-block;
-      width: 35%;
+      margin-top: 0;
+      float: right;
+      width: 32.5%;
+      box-sizing: border-box;
 
       /* @separator */
-      border-left: 0.05em solid rgb(221, 221, 221);
-      padding-left: 2.95em;
+      border-left: 0.1em solid rgb(221, 221, 221);
+      padding-left: 1.5em;
     }
   }
 
@@ -1250,19 +1283,25 @@
 /* =Featured Do
   ----------------------------------------------- */
 
-  @media (min-width: 60em) {
+  @media (min-width: 70em) {
+    #content .header + .featured:after {
+      /* @clearfix */
+      content: "";
+      display: table;
+      clear: both;
+    }
     .activity-item.featured {
-      vertical-align: top;
-      display: inline-block;
-      width: 55%;
-      margin-right: 5%;
+      margin-top: 0;
+      float: left;
+      width: 65%;
       box-sizing: border-box;
     }
     .featured-do-container {
-      vertical-align: top;
-      display: inline-block;
-      width: 35%;
+      margin-top: 0;
+      float: right;
+      width: 32.5%;
       box-sizing: border-box;
+      padding-left: 1.5em;
     }
   }
 
@@ -1325,7 +1364,7 @@
 
     /* @separator */
     margin-top: 2.95em;
-    border-top: 0.05em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
   }
   ul.follow-list li:after {
@@ -1346,7 +1385,7 @@
 
     /* @separator */
     margin-top: 2.95em;
-    border-top: 0.05em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
   }
 
@@ -1355,6 +1394,10 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
+  article.body {
+    border: 0.1em solid rgb(218, 220, 224);
+    padding: 3em;
+  }
   article.body > header {
     margin-bottom: 3em;
   }
@@ -1363,12 +1406,7 @@
     display: inline;
   }
   article.body > header .topics {
-    margin-right: 1.5em;
-  }
-  article.body > header .promote,
-  article.body > header .author {
-    display: inline-block;
-    vertical-align: top;
+    margin-right: 3em;
   }
   article.body > header .promote,
   article.body > header .author {
@@ -1382,12 +1420,13 @@
   article.body > header .author {
     color: rgb(102, 102, 102);
   }
-  article.body > header .author p {
-    font-size: 0.65em;
-  }
   article.body > header .author p span {
     display: block;
     margin-bottom: 0.375em;
+
+    color: rgb(153, 153, 153);
+    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-weight: bold;
   }
   article.body > header .author img {
     float: left;
@@ -1396,9 +1435,20 @@
   article.body > header .author a {
     color: rgb(51, 51, 51);
     text-decoration: inherit;
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / font-size(16px) */
+    font-weight: bold;
+    position: relative;
+    top: -0.25em;
   }
-  article.body > header .share {
-    display: inline-block;
+  article.body > header .author p {
+    margin-bottom: 0;
+  }
+  article.body > header .author form {
+    margin-top: 0;
+  }
+  article.body > header .author button {
+    font-size: 0.75em; /* 12px / font-size(16px) */
   }
   article.body > header .share h2 {
     font-family: inherit;
@@ -1421,16 +1471,22 @@
   }
   */
 
-  article.body > header .share h2 {
+  article.body > header .share {
     text-align: center;
-    font-size: 0.65em;
-    color: rgb(102, 102, 102);
+  }
+  article.body > header .share h2 {
+    color: rgb(153, 153, 153);
+    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-weight: bold;
   }
   article.body > header .share a {
+    display: inline-block;
     background-color: rgb(255, 249, 208);
-    padding: 0.5em 1em;
     color: rgb(218, 198, 71);
     text-decoration: none;
+    font-size: 0.6875em; /* 11px / font-size(16px) */
+    padding: 0.5em 1em;
+    font-weight: bold;
   }
 
   article.body > header > img {
@@ -1440,35 +1496,60 @@
   article.body > header > img + h1 {
     margin-top: 0;
   }
+  article.body > header .promote abbr {
+    font-size: 2.375em; /* 38px / font-size(16px) */
+    line-height: normal;
+  }
+  article.body > header .promote button {
+    background: inherit;
+    color: inherit;
+    padding: 0;
+    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
 
-  @media (min-width: 60em) {
-    article.body > header {
-      padding-top: 10em;
-      position: relative;
+  @media (min-width: 30em) {
+    article.body > header .options {
+      width: 100%;
+      display: table;
     }
     article.body > header .promote,
     article.body > header .author,
     article.body > header .share {
+      margin-top: 0;
+      display: table-cell;
+      vertical-align: top;
+    }
+    article.body > header .promote,
+    article.body > header .author {
+      border-right: 0.1em solid rgb(221, 221, 221);
+      padding-right: 2.95em;
+    }
+    article.body > header .author,
+    article.body > header .share {
+      padding-left: 2.95em;
+    }
+
+  }
+
+  @media (min-width: 60em) {
+    #content article.body {
+      margin-top: 6em;
+    }
+    article.body > header .options {
       position: absolute;
-      top: 0;
+      top: -9em;
       height: 6em;
     }
-    article.body > header .promote {
+    article.body > header {
+      padding-top: 5em;
+      position: relative;
+    }
+    article.body > header .meta {
+      position: absolute;
+      top: 0;
       left: 0;
-    }
-    article.body > header .author {
-      left: 33%;
-
-      /* @separator */
-      border-left: 0.05em solid rgb(221, 221, 221);
-      padding-left: 2.95em;
-    }
-    article.body > header .share {
-      right: 0;
-
-      /* @separator */
-      border-left: 0.05em solid rgb(221, 221, 221);
-      padding-left: 2.95em;
+      width: 100%;
     }
   }
 
@@ -1543,7 +1624,7 @@
 
     /* @separator */
     margin-top: 2.95em;
-    border-top: 0.05em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
   }
   article.body > footer > section ul,
@@ -1584,11 +1665,74 @@
     margin-left: 1.5em;
   }
 
+  article.body > header h1 {
+    font-size: 2.375em; /* 38px / font-size(16px) */
+  }
+
+  article.body > header .topics {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / font-size(16px) */
+  }
+  article.body > header .topics strong {
+    color: rgb(42, 43, 44); /* @text-color */
+    font-size: 2.5em; /* 30px / font-size(12px) */
+  }
+  article.body > header .topics a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  article.body > header .topics a:hover,
+  article.body > header .topics a:active,
+  article.body > header .topics a:focus {
+    color: rgb(153, 153, 153);
+  }
+  article.body > header .time {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / font-size(16px) */
+  }
+  article.body > header .time span {
+    font-weight: bold;
+  }
+
+
 
 /* =Promotion
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
+  aside .discussion {
+    margin-top: 1.5em;
+    position: relative;
+    border: 0.25em solid rgb(247, 247, 247);
+    background-color: rgb(252, 252, 252);
+    padding: 1em; /* 16px / font-size(16px) */
+  }
+  aside .discussion h2 {
+    position: absolute;
+    top: -2.18181818181818em; /* 1.5em / font-size(0.6875em) */
+    color: rgb(247, 113, 113);
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.6875em; /* 11px / font-size(16px) */
+  }
+  aside .discussion h3 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+  }
+  aside .discussion h3 a {
+    color: rgb(102, 102, 102);
+    text-decoration: inherit;
+  }
+  aside .discussion h3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75em;
+  }
   aside .discussion ul,
   aside .discussion li,
   aside .promotion ul,
@@ -1601,9 +1745,37 @@
   aside > .discussion + p {
     margin-top: 1.5em;
   }
-  aside .discussion h3 img {
-    display: block;
-    margin-bottom: 0.375em;
+  aside .discussion ul {
+    margin-top: 1.5em;
+  }
+  aside .discussion li {
+    padding: 1em 0; /* 11px / font-size(11px) */
+    border-bottom: 1px solid rgb(218, 220, 224);
+    color: rgb(102, 102, 102);
+    font-size: 0.6875em; /* 11px / font-size(16px) */
+  }
+  aside .discussion li a {
+    text-decoration: none;
+  }
+  aside .discussion li a:hover,
+  aside .discussion li a:active,
+  aside .discussion li a:focus {
+    color: rgb(47, 132, 218);
+  }
+  aside .discussion li img {
+    float: right;
+    position: relative;
+    top: -0.5em;
+    margin-left: 0.5em;
+  }
+  aside .discussion .more {
+    text-align: center;
+  }
+  aside .discussion .more a {
+    color: rgb(247, 113, 113);
+    text-decoration: inherit;
+    font-weight: bold;
+    font-size: 0.6875em; /* 11px / font-size(16px) */
   }
   .promotion {
     padding: 1.5em;
