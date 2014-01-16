@@ -11,8 +11,6 @@
 </head>
 <body>
 
-<div class="container">
-
 <header id="header">
   <div class="container">
     <h2><a href="home.html">GOOD</a></h2>
@@ -445,26 +443,6 @@
     </section>
   </div><!-- /.container -->
 </footer>
-
-</div><!-- /.container -->
-
-<script>
-(function() {
-  if (!document.querySelector) return;
-
-  var search = document.querySelector("#header .search");
-  if (!search) return;
-
-  var button = search.querySelector("h2 a");
-  button.addEventListener("click", function(e) {
-    search.className += " active";
-
-    e.preventDefault();
-  });
-
-  search.className += " scripted";
-})();
-</script>
 
 </body>
 </html>
