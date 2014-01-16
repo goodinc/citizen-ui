@@ -43,35 +43,39 @@
   <div class="container">
 
     <article class="body">
+      <div class="container">
       <header>
         <h1>Ciclavia: 80,000-person Community Bike Ride in Los Angeles</h1>
 
-        <p class="topics">Do in <a href="">Bikes</a>, <a href="">Los Angeles</a> and <a href="">Transportation</a></p>
+        <div class="meta">
+          <p class="topics">Do in <a href="">Bikes</a>, <a href="">Los Angeles</a> and <a href="">Transportation</a></p>
+          <p class="time"><time datetime="2013-01-30T17:48:38Z">September 30, 2012 at 11:06 AM</time></p>
+        </div>
 
-        <p class="time"><time datetime="2013-01-30T17:48:38Z">September 30, 2012 at 11:06 AM</time></p>
+        <div class="options">
+          <section class="promote">
+            <form action="" method="post">
+              <h2><abbr title="14 people think it’s good">14</abbr></h2>
+              <p><button type="submit">Are you in?</button></p>
+            </form>
+          </section>
 
-        <section class="promote">
-          <form action="" method="post">
-            <h2><button type="submit">Are you in?</button></h2>
-            <p><strong>14</strong> people are in.</p>
-          </form>
-        </section>
+          <section class="author">
+            <p><span>Find more by</span> <a href=""><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Favatars%2F1269338%2Foriginal%2Fyeedor.jpg%3F1357025086&amp;geometry=130x130%23" width="60" height="60" alt="" /> Doris Yeedor</a></p>
 
-        <section class="author">
-          <p><span>Find more by</span> <a href=""><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Favatars%2F1269338%2Foriginal%2Fyeedor.jpg%3F1357025086&amp;geometry=130x130%23" width="60" height="60" alt="" /> Doris Yeedor</a></p>
+            <form action="" method="post">
+              <p><button type="submit" title="Follow Doris Yee">Follow</button></p>
+            </form>
+          </section>
 
-          <form action="" method="post">
-            <p><button type="submit" title="Follow Doris Yee">Follow</button></p>
-          </form>
-        </section>
-
-        <section class="share">
-          <h2>Share this</h2>
-          <ul>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Facebook</a></li>
-          </ul>
-        </section>
+          <section class="share">
+            <h2>Share this</h2>
+            <ul>
+              <li><a href="">Twitter</a></li>
+              <li><a href="">Facebook</a></li>
+            </ul>
+          </section>
+        </div>
 
       </header>
 
@@ -81,14 +85,14 @@
 
       <footer>
 
-        <form action="" method="post">
+        <form action="" method="post" class="manage">
           <h2>Think it’s inappropriate?</h2>
-          <p><button type="submit">Flag</button></p>
+          <p><button type="submit" title="Flag this post as inappropriate">Flag</button></p>
         </form>
 
-        <form action="" method="post">
-          <h2>Are you in?</h2>
-          <p><button type="submit">Do It</button></p>
+        <form action="" method="post" class="promote">
+          <h2>Think it’s good?</h2>
+          <p><button type="submit" title="Promote this post">It’s GOOD</button></p>
         </form>
 
         <section class="votes">
@@ -122,6 +126,8 @@
 
       </footer>
 
+      </div><!-- .container -->
+
       <aside class="suggested-post">
 
         <h2>Also GOOD in <a href="">Transportation</a></h2>
@@ -136,7 +142,9 @@
         <form action="" method="post">
           <h4>Have something to say?</h4>
           <p>
-            <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea><br />
+            <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+          </p>
+          <p class="submit">
             <button type="submit">Post</button>
           </p>
         </form>
@@ -145,23 +153,25 @@
           <li>
             <article class="comment">
               <h3 class="source has-image">
-                <a href=""><img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fpre.cloudfront.goodinc.com%2Fusers%2Flarge-1322704488-photo1.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" /> Alessandra Rizzotti</a>
+                <a href="/members/hannahw"><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F154%2F289%2Foriginal%2F310244_10100394937159595_3097420_n.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" /> Alessandra Rizzotti</a>
                 <time datetime="2013-01-30T17:48:38Z">About 1 month ago</time>
               </h3>
-              <p>Does anyone have a bike I can borrow?</p>
+              <p>I love how she's debunking stereotypes of Native Americans–and that she’s being so diligent about documenting everyone she can in each tribe.</p>
 
               <footer>
                 <form action="" method="post">
-                  <h4>Reply</h4>
-                  <p>
-                    <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea><br />
-                    <button type="submit">Post</button> or <a href="">Cancel</a>
-                  </p>
+                  <h4>Think it’s inappropriate?</h4>
+                  <p><button type="submit" title="Flag this comment as inappropriate">Flag</button></p>
                 </form>
 
                 <form action="" method="post">
-                  <h4>Think it’s inappropriate?</h4>
-                  <p><button type="submit">Flag</button></p>
+                  <h4>Reply</h4>
+                  <p>
+                    <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+                  </p>
+                  <p class="submit">
+                    <button type="submit">Post</button> or <a href="">Cancel</a>
+                  </p>
                 </form>
               </footer>
             </article>
