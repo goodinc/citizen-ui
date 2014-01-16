@@ -75,7 +75,7 @@
 
   /* For readability */
   h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li {
-    max-width: 33em;
+    max-width: 40em;
   }
 
   /* Headlines
@@ -139,6 +139,7 @@
     margin-top: 0.75em;
     font-variant: small-caps;
     text-transform: lowercase;
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
   }
   dd {
     margin-left: 0;
@@ -498,6 +499,7 @@
     #header .search form {
       margin-top: 0;
       position: absolute;
+      z-index: 9999;
       left: -9999px;
       background: white;
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
@@ -634,11 +636,11 @@
   }
 
   #content .header {
-    margin-bottom: 3em;
+    margin-bottom: 2.25em;
   }
   #content .header nav {
-    margin-top: 1.5em;
-    background: rgb(244, 244, 245);
+    margin-top: 2.25em;
+    background: rgb(218, 220, 224);
     max-width: none;
   }
 
@@ -648,14 +650,21 @@
     margin-left: 0;
     padding-left: 0;
   }
-
-  #content .header nav li a {
+  #content .header nav a {
+    background: rgb(218, 220, 224);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.75em 1.5em;
   }
-  #content .header nav dt,
-  #content .header nav dd {
-    padding: 0.5em 1em;
+  #content .header nav .active a {
+    background-color: rgb(178, 178, 178);
+  }
+  #content .header nav a:hover,
+  #content .header nav a:active,
+  #content .header nav a:focus {
+    background-color: rgb(200, 200, 200);
   }
 
   @media (min-width: 30em) {
@@ -669,6 +678,31 @@
       display: inline;
     }
 
+    #content .header nav {
+      position: relative;
+    }
+
+    /* KLUDGE: Attempt to hide the whitespace to the left of the button.
+    (It might be better to use floats.) */
+    #content .header nav form {
+      display: inline-block;
+      margin: 0;
+      background-color: rgb(135, 233, 184);
+      border-right: 1px solid rgb(233, 233, 235);
+    }
+
+    #content .header nav dt {
+      position: absolute;
+      top: -1.5em;
+      text-align: center;
+      min-width: 6.5em;
+      color: rgb(102, 102, 102);
+    }
+    #content .header nav dd a {
+      min-width: 3.5em;
+      text-align: center;
+      border-right: 1px solid rgb(233, 233, 235);
+    }
     #content .header nav dt,
     #content .header nav dd {
       margin: 0;
@@ -869,7 +903,7 @@
     text-overflow: ellipsis;
   }
 
-  .activity-item.featured .post h3 small {
+  .featured .activity-item .post h3 small {
     font-size: 0.33333333333333em; /* 12px / 36px */
   }
 
@@ -880,22 +914,24 @@
     }
 
     /* Featured posts have a larger image */
-    .activity-item.featured .post .has-image + .meta {
+    .featured .activity-item .post .has-image + .meta {
       margin-left: 16.875em; /* image.width(270px) / font-size(16px) */
     }
   }
 
   .activity-item form {
-    font-size: 0.875em;
+    font-size: 0.75em;
   }
 
   @media (min-width: 40em) {
     .activity-item form {
+      margin-top: 0;
       position: absolute;
       top: 0;
       right: 0;
     }
-    .activity-item.featured-do form {
+    .featured .activity-item.do form {
+      margin-top: 1.5em;
       position: static;
     }
   }
@@ -970,6 +1006,13 @@
       top   : 1.25em; /* @line-height */
       right : 1.25em; /* @line-height */
     }
+  }
+
+  /* OPTIONAL: Light up the links and follows, when hovering over an item */
+  .activity-item .link:hover,
+  .activity-item .follow:hover {
+    background: white;
+    border-color: rgb(153, 153, 153); /* $aluminum */
   }
 
 
@@ -1089,7 +1132,7 @@
     margin-right: -0.3125em;
   }
 
-  .featured-do .meta {
+  .featured .activity-item.do .meta {
     margin-top: 1.5em;
     display: inline;
     float: right;
@@ -1204,6 +1247,84 @@
     padding: 2.5em 1.25em; /* @line-height x 2    @line-height */
   }
 
+  /* Show a triangle in the corner of the item, when hovering over it */
+  .activity-item:before {
+
+    /* @good-icons */
+    font-family: "Good-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e000";
+    color: rgb(34, 155, 246);
+    font-size: 0.9375em; /* 15px / $font_size */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .activity-item:hover:before {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Only show the tags for one item at a time */
+  html:hover .activity-item .tags {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  html:hover .activity-item:hover .tags {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Light up the social icons for an item, when hovering over it */
+
+  /* Off */
+  html:hover .activity-item .meta .dos,
+  html:hover .activity-item .meta .votes,
+  html:hover .activity-item .meta .comments {
+    color: rgb(190, 190, 190);
+    transition: color 0.2s;
+  }
+  html:hover .activity-item .meta .dos      abbr:before,
+  html:hover .activity-item .meta .votes    abbr:before,
+  html:hover .activity-item .meta .comments abbr:before {
+    color: rgb(236, 236, 236);
+    transition: color 0.2s;
+  }
+  html:hover .activity-item section.tags h4:before {
+    color: rgb(222, 222, 222);
+    transition: color 0.2s;
+  }
+
+  /* Over */
+  html:hover .activity-item:hover .meta .dos,
+  html:hover .activity-item:hover .meta .votes,
+  html:hover .activity-item:hover .meta .comments {
+    color: rgb(153, 153, 153);
+  }
+  html:hover .activity-item:hover .meta .dos abbr:before {
+    color: rgb(83, 231, 185);
+  }
+  html:hover .activity-item:hover .meta .votes abbr:before {
+    color: rgb(113, 179, 247);
+  }
+  html:hover .activity-item:hover .meta .comments abbr:before {
+    color: rgb(255, 223, 145);
+  }
+  html:hover .activity-item:hover section.tags h4:before {
+    color: rgb(247, 105, 100);
+  }
+
   /* OPTIONAL: Move the primary source up and to the left a little */
   .activity-item > .source:first-child {
     margin-left: -1.66666666666667em; /* @line-height / 12px */
@@ -1262,7 +1383,7 @@
     }
 
     /* OPTIONAL: Don’t line up with the source if this is a feature */
-    .activity-item.featured > .time + .post {
+    .featured .activity-item > .time + .post {
       margin-top: 2.5em; /* @line-height / 2 */
       margin-left: -1.25em; /* @line-height */
       margin-right: 0;
@@ -1275,7 +1396,7 @@
   ----------------------------------------------- */
 
   /* OPTIONAL: Make the featured source image smaller */
-  .activity-item.featured > .source:first-child img {
+  .featured .activity-item > .source:first-child img {
     width: 30px;
     height: auto;
     margin-left: -1.66666666666667em; /* 20px / 12px */
@@ -1283,21 +1404,21 @@
   }
 
   /* OPTIONAL: Make the headline bigger */
-  .activity-item.featured h3 {
+  .featured .activity-item h3 {
     font-size: 2.25em; /* 36px / 16px */
   }
 
   /* OPTIONAL: Don’t use the usual “link” style */
-  .activity-item.featured .link {
+  .featured .activity-item .link {
     padding: 0;
     border-width: 0;
     background: transparent;
   }
-  .activity-item.featured .link .has-image:after {
+  .featured .activity-item .link .has-image:after {
     display: none;
     clear: none;
   }
-  .activity-item.featured .link h3 .image {
+  .featured .activity-item .link h3 .image {
     float: left;
     margin: 0;
     margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
@@ -1307,6 +1428,17 @@
 /* =Featured Do
   ----------------------------------------------- */
 
+  .topic > .body header h2,
+  .topic > .featured h2,
+  .topic > .featured > section > h3 {
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .topic > .body header h2,
+  .topic > .featured h2 {
+    font-size: 1.875em; /* 30px / font-size(16px) */
+  }
+
   @media (min-width: 70em) {
     #content .header + .featured:after {
       /* @clearfix */
@@ -1314,13 +1446,13 @@
       display: table;
       clear: both;
     }
-    .activity-item.featured {
+    .topic > .featured > section {
       margin-top: 0;
       float: left;
       width: 65%;
       box-sizing: border-box;
     }
-    .featured-do-container {
+    .topic > .featured > section + section {
       margin-top: 0;
       float: right;
       width: 32.5%;
@@ -1329,9 +1461,31 @@
     }
   }
 
-  .featured-do-container > h3 {
+  @media (min-width: 70em) {
+    .topic > .featured {
+      position: relative;
+    }
+    .topic > .featured h2,
+    .topic > .featured h2 + p {
+      display: inline;
+    }
+    .topic > .featured h2 {
+      margin-right: 0.75em;
+    }
+    .topic > .featured h2 + p {
+      color: rgb(153, 153, 153);
+      font-size: 0.75em; /* 12px / font-size(16px) */
+      font-weight: bold;
+    }
+    .topic > .featured > h2 + p + section {
+      margin-top: 1.5em;
+    }
+    .topic > .featured > section + section {
+      margin-top: -1.5em;
+    }
   }
-  .featured-do {
+
+  .featured .activity-item.do {
     background: rgb(246, 255, 250);
     border: 6px solid rgb(233, 249, 240);
     padding: 14px;
@@ -1339,19 +1493,19 @@
 
   /* KLUDGE: Remove the space above the section in featured do’s
   (It would be better to remove the section element altogether.) */
-  .activity-item.featured-do section {
+  .featured .activity-item.do section {
     margin-top: 0;
   }
 
-  .featured-do h3 {
+  .featured .activity-item.do h3 {
     font-size: 20px;
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.35em; /* Freight Light needs a big line height */
   }
-  .featured-do h3 a {
+  .featured .activity-item.do h3 a {
     display: block;
   }
-  .featured-do h3 img {
+  .featured .activity-item.do h3 img {
     border: 5px solid rgb(203, 238, 218);
     border-radius: 200px;
     margin: 0 auto 1.25em; /* $line_height */
@@ -1423,7 +1577,7 @@
     border: 0.05em solid rgb(102, 102, 102);
     padding: 0.75em;
     text-transform: uppercase;
-    color: rgb(102, 102, 102);
+    color: rgb(69, 71, 71);
     font-size: 3.875em; /* 62px / font-size(16px) */
   }
   .topic .header .add a {
@@ -1446,6 +1600,59 @@
       padding-left : 3em;
       right        : 3em;
     }
+  }
+
+  .topic .featured {
+
+    /* @separator */
+    margin-bottom: 2.95em;
+    border-bottom: 0.1em solid rgb(218, 220, 224);
+  }
+
+  .topic .body header h2,
+  .topic .body header h2 + p {
+    display: inline;
+  }
+  .topic .body header h2 {
+    margin-right: 0.75em;
+  }
+  .topic .body header ul,
+  .topic .body header li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .topic .body header p a {
+    font-size: 0.75em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .topic .body header p a:hover,
+  .topic .body header p a:active,
+  .topic .body header p a:focus {
+    color: rgb(49, 144, 242);
+  }
+  .topic .body header ul {
+    display: inline;
+    float: right;
+  }
+  .topic .body header li {
+    display: inline;
+    margin-right: 0.5em;
+  }
+  .topic .body header li:last-child {
+    margin-right: 0;
+  }
+  .topic .body header li a {
+    color: rgb(153, 153, 153);
+    font-size: 0.75em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .topic .body header li a:hover,
+  .topic .body header li a:active,
+  .topic .body header li a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
 
@@ -1741,15 +1948,20 @@
     margin-left: 1.5em;
   }
   aside .promotion.friends .action span,
-  article.body .promote button {
+  article.body footer .promote button {
     background-color: rgb(113, 179, 247);
   }
-  aside .promotion.friends .action span:hover,
-  aside .promotion.friends .action span:active
-  aside .promotion.friends .action span:focus,
-  article.body .promote button:hover,
-  article.body .promote button:active,
-  article.body .promote button:focus {
+  article.body footer .promote button {
+    padding: 0.5em 1em;
+    font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
+  }
+  aside .promotion.friends a:hover  .action span,
+  aside .promotion.friends a:active .action span,
+  aside .promotion.friends a:focus  .action span,
+  article.body footer .promote button:hover,
+  article.body footer .promote button:active,
+  article.body footer .promote button:focus {
     background-color: rgb(49, 144, 242);
   }
   article.body .manage button,
