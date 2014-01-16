@@ -208,7 +208,13 @@
   ul.headlines li > a:focus  h2 {
     color: rgb(113, 179, 247); /* @link-color */
   }
-  ul.headlines img {
+  ul.headlines li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  ul.headlines li img {
     float: left;
     margin-right: 1.5em;
   }
