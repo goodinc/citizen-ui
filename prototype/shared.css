@@ -74,9 +74,11 @@
   }
 
   /* For readability */
-  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li {
+  /*
+  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li, figure {
     max-width: 42em;
   }
+  */
 
   /* Headlines
   http://typecast.com/images/uploads/typographic-scale.png
@@ -1603,9 +1605,11 @@
     margin-left: 0;
     padding-left: 0;
   }
+  /*
   ul.activity-list > li {
     max-width: 48em;
   }
+  */
 
 
 /* =Follow List
