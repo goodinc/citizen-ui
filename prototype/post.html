@@ -43,6 +43,7 @@
   <div class="container">
 
     <article class="body">
+      <div class="container">
       <header>
 
         <h1>Lessons from Living on a Bicycle</h1>
@@ -171,14 +172,14 @@
 
       <footer>
 
-        <form action="" method="post">
+        <form action="" method="post" class="manage">
           <h2>Think it’s inappropriate?</h2>
-          <p><button type="submit">Flag</button></p>
+          <p><button type="submit" title="Flag this post as inappropriate">Flag</button></p>
         </form>
 
-        <form action="" method="post">
+        <form action="" method="post" class="promote">
           <h2>Think it’s good?</h2>
-          <p><button type="submit">It’s GOOD</button></p>
+          <p><button type="submit" title="Promote this post">It’s GOOD</button></p>
         </form>
 
         <section class="votes">
@@ -224,6 +225,8 @@
 
       </footer>
 
+      </div><!-- .container -->
+
       <aside class="suggested-post">
 
         <h2>Also GOOD in <a href="/native-american">Native American</a></h2>
@@ -238,7 +241,9 @@
         <form action="" method="post">
           <h4>Have something to say?</h4>
           <p>
-            <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea><br />
+            <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+          </p>
+          <p class="submit">
             <button type="submit">Post</button>
           </p>
         </form>
@@ -255,13 +260,15 @@
               <footer>
                 <form action="" method="post">
                   <h4>Think it’s inappropriate?</h4>
-                  <p><button type="submit">Flag</button></p>
+                  <p><button type="submit" title="Flag this comment as inappropriate">Flag</button></p>
                 </form>
 
                 <form action="" method="post">
                   <h4>Reply</h4>
                   <p>
-                    <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea><br />
+                    <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+                  </p>
+                  <p class="submit">
                     <button type="submit">Post</button> or <a href="">Cancel</a>
                   </p>
                 </form>
