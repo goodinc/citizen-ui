@@ -39,7 +39,7 @@
   a:focus {
     color: rgb(153, 153, 153);
     text-decoration: none;
-    transition: all 0.2s;
+    transition: color 0.2s, background-color 0.2s, opacity 0.2s;
   }
 
   /* Fit media to the available width */
@@ -75,7 +75,7 @@
 
   /* For readability */
   h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li {
-    max-width: 40em;
+    max-width: 42em;
   }
 
   /* Headlines
@@ -290,6 +290,58 @@
     margin-right: 1.5em;
   }
 
+  form .error input[type="text"],
+  form .error input[type="email"],
+  form .error input[type="phone"],
+  form .error input[type="password"] {
+    border-color: rgb(255, 200, 200);
+    font-weight: bold;
+    color: rgb(249, 154, 152);
+    text-decoration: underline;
+  }
+  form .error-message {
+    color: rgb(225, 51, 51);
+    font-weight: normal;
+    display: block;
+  }
+
+  section.message {
+    padding: 1.5em;
+    font-size: 1.1em;
+    background: rgb(230, 235, 253);
+    border: 1px solid rgb(204, 204, 251);
+  }
+  section.message h1 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    margin-right: 0.25em;
+  }
+  section.message h1,
+  section.message p {
+    display: inline;
+  }
+  section.message p,
+  section.message li {
+    color: rgb(91, 94, 152);
+  }
+  section.message.error {
+    background: rgb(253, 235, 230);
+    border: 1px solid rgb(251, 204, 204);
+  }
+  section.message.error p,
+  section.message.error li {
+    color: rgb(152, 94, 91);
+  }
+  section.message.success {
+    background: rgb(230, 253, 235);
+    border: 1px solid rgb(204, 251, 204);
+  }
+  section.message.success p,
+  section.message.success li {
+    color: rgb(91, 152, 94);
+  }
+
 
   /* =Links & Buttons
   ----------------------------------------------- */
@@ -308,7 +360,7 @@
 
     line-height: 1.5em;
     padding: 0.75em 1.5em;
-    transition: all 0.2s;
+    transition: color 0.2s, background-color 0.2s, opacity 0.2s;
   }
   a:hover  .action span,
   a:active .action span,
@@ -338,7 +390,7 @@
   #header > .container {
     padding-top: 1.5em;
   }
-  #content {
+  #header + #content {
     /* @separator */
     margin-top: 2.95em;
     padding-top: 2.95em;
@@ -659,25 +711,25 @@
   /* =Content
   ----------------------------------------------- */
   #content {
-    background: rgb(254, 254, 255);
+    background: rgb(253, 254, 255);
   }
 
   #content .header {
     margin-bottom: 2.25em;
   }
-  #content .header nav {
+  nav.sub {
     margin-top: 2.25em;
     background: rgb(218, 220, 224);
     max-width: none;
   }
 
-  #content .header nav ul,
-  #content .header nav li {
+  nav.sub ul,
+  nav.sub li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  #content .header nav a {
+  nav.sub a {
     background: rgb(218, 220, 224);
     color: white;
     font-weight: bold;
@@ -685,53 +737,53 @@
     display: inline-block;
     padding: 0.75em 1.5em;
   }
-  #content .header nav .active a {
+  nav.sub .active a {
     background-color: rgb(178, 178, 178);
   }
-  #content .header nav a:hover,
-  #content .header nav a:active,
-  #content .header nav a:focus {
+  nav.sub a:hover,
+  nav.sub a:active,
+  nav.sub a:focus {
     background-color: rgb(200, 200, 200);
   }
 
   @media (min-width: 30em) {
-    #content .header nav ul,
-    #content .header nav li,
-    #content .header nav form,
-    #content .header nav form p,
-    #content .header nav dl,
-    #content .header nav dt,
-    #content .header nav dd {
+    nav.sub ul,
+    nav.sub li,
+    nav.sub form,
+    nav.sub form p,
+    nav.sub dl,
+    nav.sub dt,
+    nav.sub dd {
       display: inline;
     }
 
-    #content .header nav {
+    nav.sub {
       position: relative;
     }
 
     /* KLUDGE: Attempt to hide the whitespace to the left of the button.
     (It might be better to use floats.) */
-    #content .header nav form {
+    nav.sub form {
       display: inline-block;
       margin: 0;
       background-color: rgb(135, 233, 184);
       border-right: 1px solid rgb(233, 233, 235);
     }
 
-    #content .header nav dt {
+    nav.sub dt {
       position: absolute;
       top: -1.5em;
       text-align: center;
       min-width: 6.5em;
       color: rgb(102, 102, 102);
     }
-    #content .header nav dd a {
+    nav.sub dd a {
       min-width: 3.5em;
       text-align: center;
       border-right: 1px solid rgb(233, 233, 235);
     }
-    #content .header nav dt,
-    #content .header nav dd {
+    nav.sub dt,
+    nav.sub dd {
       margin: 0;
       display: inline-block;
     }
@@ -745,6 +797,7 @@
     }
     #content .body {
       margin-top: 0;
+      clear: both;
       float: left;
       width: 65%;
       box-sizing: border-box;
@@ -786,7 +839,6 @@
   .activity-item a {
     color: rgb(102, 153, 204);
     text-decoration: none;
-    transition: all 0.2s;
   }
   .activity-item a:hover,
   .activity-item a:active,
@@ -1552,7 +1604,7 @@
     padding-left: 0;
   }
   ul.activity-list > li {
-    max-width: none;
+    max-width: 48em;
   }
 
 
@@ -2247,7 +2299,11 @@
   ----------------------------------------------- */
 
   body.pattern {
-    padding: 1.5em 1.5em 6em;
+    padding: 3em 1.5em 6em;
+    background: rgb(253, 254, 255);
+  }
+  body.pattern > section + section {
+    margin-top: 3em;
   }
   /*
   body.test-type {
