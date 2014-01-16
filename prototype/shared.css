@@ -146,6 +146,33 @@
     padding-left: 0;
   }
 
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  figure .image {
+    background: rgb(249, 249, 249);
+    border: 1px solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  figure img {
+    display: block;
+    margin: 0 auto;
+  }
+  figcaption {
+    font-size: 0.75em;
+    line-height: 1.33333333333333;
+    padding: 1.86em 0;
+    border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    margin-bottom: 1.86em;
+  }
+
+  blockquote {
+    border-left: 0.125em solid rgb(178, 178, 178);
+    color: black;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding: 0 2.1875em 0 2.0625em; /* 0 35px 0 33px */
+    margin: 2.1875em 3.125em 2.1875em 0; /* 35px 50px 35px 0 */
+  }
 
 
   /* =Navigation
