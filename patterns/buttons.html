@@ -11,34 +11,72 @@
 </head>
 <body class="pattern">
 
-<section id="follow">
-  <h2>Follow</h2>
+<section>
+  <h2>Primary</h2>
 
   <form action="" method="post">
-    <p><button type="submit">Follow this topic</button></p>
+    <p><button type="submit">Submit</button></p>
   </form>
 </section>
 
-<section id="promote">
-  <h2>Promote</h2>
+<section id="secondary">
+  <h2>Secondary</h2>
 
-  <form action="" method="post" class="vote">
-    <p><button type="submit">I think this is GOOD</button></p>
-  </form>
-
-  <form action="" method="post" class="do">
-    <p><button type="submit">I want to do this</button></p>
-  </form>
-</section>
-
-<section id="manage">
-  <h2>Manage</h2>
-
-  <form action="" method="post" class="manage">
+  <form action="" method="post" class="secondary">
     <p><button type="submit">Flag this post</button></p>
   </form>
 
-  <p class="action manage"><a href="">Edit this post</a></p>
+  <p class="secondary action"><a href="">Edit this post</a></p>
+</section>
+
+<section id="follow">
+  <h2>Update</h2>
+
+  <p class="action edit"><a href="">Edit</a></p>
+
+  <form action="" method="post" class="update">
+    <p><button type="submit">Save</button></p>
+  </form>
+</section>
+
+<section id="vote">
+  <h2>Vote</h2>
+
+  <form action="" method="post" class="vote">
+    <p><button type="submit">It’s GOOD</button></p>
+  </form>
+
+  <!-- Currently we don’t support unvoting. -->
+  <form action="" method="post" class="voted">
+    <p><button type="submit" disabled="disabled">It’s GOOD</button></p>
+  </form>
+</section>
+
+<section id="do">
+  <h2>Do</h2>
+  <form action="" method="post" class="do">
+    <p><button type="submit">Do It</button></p>
+  </form>
+
+  <form action="" method="post" class="doing">
+    <p><button type="submit">To Do</button></p>
+  </form>
+
+  <form action="" method="post" class="done">
+    <p><button type="submit">Done</button></p>
+  </form>
+</section>
+
+<section id="follow">
+  <h2>Follow</h2>
+
+  <form action="" method="post" class="follow">
+    <p><button type="submit">Follow</button></p>
+  </form>
+
+  <form action="" method="post" class="following">
+    <p><button type="submit">Following</button></p>
+  </form>
 </section>
 
 </body>
