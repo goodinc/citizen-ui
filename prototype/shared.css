@@ -1062,11 +1062,14 @@
     }
     #content .body {
       margin-top: 0;
-      clear: both;
       float: left;
       width: 65%;
       box-sizing: border-box;
     }
+    #content .body:first-child {
+      clear: both;
+    }
+    #content article.post > aside:first-child,
     #content .body + aside {
       margin-top: 0;
       float: right;
@@ -1074,7 +1077,9 @@
       box-sizing: border-box;
 
       /* @separator */
+      /*
       border-left: 0.1em solid rgb(221, 221, 221);
+      */
       padding-left: 1.5em;
     }
   }
@@ -2139,8 +2144,12 @@
   }
 
 
+  #content aside + .body,
+  #content aside + .body + aside {
+    /* @separator */
+    margin-top: 2.95em;
+  }
   #content        .body > section + section,
-  #content        .body > aside,
   #content > .container > section + section,
   #content > .container > aside   + section {
 
@@ -2551,36 +2560,33 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
-  @media (min-width: 60em) {
-    article.body > .container {
-      border: 0.1em solid rgb(218, 220, 224);
-      padding: 3em;
+
+  .post-header {
+    margin-bottom: 3em;
+  }
+  @media (min-width: 40em) {
+    .post-header .topics,
+    .post-header .time {
+      display: inline;
+    }
+    .post-header .topics {
+      margin-right: 3em;
+    }
+    .post-header .promote,
+    .post-header .author {
+      margin-right: 1.5em;
     }
   }
 
-  article.body > .container > header {
-    margin-bottom: 3em;
-  }
-  article.body > .container > header .topics,
-  article.body > .container > header .time {
-    display: inline;
-  }
-  article.body > .container > header .topics {
-    margin-right: 3em;
-  }
-  article.body > .container > header .promote,
-  article.body > .container > header .author {
-    margin-right: 1.5em;
-  }
-  article.body > .container > header .promote h2 {
+  .post-header .promote h2 {
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
   }
-  article.body > .container > header .author {
+  .post-header .author {
     color: rgb(102, 102, 102);
   }
-  article.body > .container > header .author p span {
+  .post-header .author p span {
     display: block;
     margin-bottom: 0.375em;
 
@@ -2588,11 +2594,11 @@
     font-size: 0.6875em; /* 11px / font-size(16px) */
     font-weight: bold;
   }
-  article.body > .container > header .author img {
+  .post-header .author img {
     float: left;
     margin-right: 0.75em;
   }
-  article.body > .container > header .author a {
+  .post-header .author a {
     color: rgb(51, 51, 51);
     text-decoration: inherit;
     color: rgb(102, 102, 102);
@@ -2601,50 +2607,50 @@
     position: relative;
     top: -0.25em;
   }
-  article.body > .container > header .author a:hover,
-  article.body > .container > header .author a:active,
-  article.body > .container > header .author a:focus {
+  .post-header .author a:hover,
+  .post-header .author a:active,
+  .post-header .author a:focus {
     color: rgb(153, 153, 153);
   }
-  article.body > .container > header .author p {
+  .post-header .author p {
     margin-bottom: 0;
   }
-  article.body > .container > header .author form {
+  .post-header .author form {
     margin-top: 0;
   }
-  article.body > .container > header .author button {
+  .post-header .author button {
     font-size: 0.75em; /* 12px / font-size(16px) */
   }
-  article.body > .container > header .share h2 {
+  .post-header .share h2 {
     font-family: inherit;
     font-size: inherit;
   }
-  article.body > .container > header .share ul,
-  article.body > .container > header .share li {
+  .post-header .share ul,
+  .post-header .share li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  article.body > .container > header .share li {
+  .post-header .share li {
     display: inline
   }
   /*
-  article.body > .container > header form h2 button {
+  .post-header form h2 button {
     background-color: transparent;
     color: inherit;
     padding: 0;
   }
   */
 
-  article.body > .container > header .share {
+  .post-header .share {
     text-align: center;
   }
-  article.body > .container > header .share h2 {
+  .post-header .share h2 {
     color: rgb(153, 153, 153);
     font-size: 0.6875em; /* 11px / font-size(16px) */
     font-weight: bold;
   }
-  article.body > .container > header .share a {
+  .post-header .share a {
     display: inline-block;
     background-color: rgb(255, 249, 208);
     color: rgb(218, 198, 71);
@@ -2654,18 +2660,18 @@
     font-weight: bold;
   }
 
-  article.body > .container > header > img {
+  .post-header > img {
     float: left;
     margin-right: 1.5em;
   }
-  article.body > .container > header > img + h1 {
+  .post-header > img + h1 {
     margin-top: 0;
   }
-  article.body > .container > header .promote abbr {
+  .post-header .promote abbr {
     font-size: 2.375em; /* 38px / font-size(16px) */
     line-height: normal;
   }
-  article.body > .container > header .promote button {
+  .post-header .promote button {
     background: inherit;
     color: inherit;
     padding: 0;
@@ -2674,43 +2680,45 @@
   }
 
   @media (min-width: 30em) {
-    article.body > .container > header .options {
+    .post-header .options {
       width: 100%;
       display: table;
     }
-    article.body > .container > header .promote,
-    article.body > .container > header .author,
-    article.body > .container > header .share {
+    .post-header .promote,
+    .post-header .author,
+    .post-header .share {
       margin-top: 0;
       display: table-cell;
       vertical-align: top;
     }
-    article.body > .container > header .promote,
-    article.body > .container > header .author {
+    .post-header .promote,
+    .post-header .author {
       border-right: 0.1em solid rgb(221, 221, 221);
       padding-right: 2.95em;
     }
-    article.body > .container > header .author,
-    article.body > .container > header .share {
+    .post-header .author,
+    .post-header .share {
       padding-left: 2.95em;
     }
 
   }
 
-  @media (min-width: 60em) {
-    #content article.body {
+  @media (min-width: 50em) {
+    .post-container {
+      border: 0.1em solid rgb(218, 220, 224);
+      padding: 3em;
       margin-top: 6em;
     }
-    article.body > .container > header .options {
+    .post-header .options {
       position: absolute;
       top: -9em;
       height: 6em;
     }
-    article.body > .container > header {
+    .post-header {
       padding-top: 5em;
       position: relative;
     }
-    article.body > .container > header .meta {
+    .post-header .meta {
       position: absolute;
       top: 0;
       left: 0;
@@ -2718,26 +2726,29 @@
     }
   }
 
-  article.body > .container > footer h2 {
+  .post-footer h2 {
     font-size: inherit;
   }
-  article.body > .container > footer .tags {
+  .post-footer .tags {
     background: rgb(247, 247, 247);
+    padding: 1.5em;
+  }
+  .post-container > .post-footer .tags {
     padding: 3em;
     margin-left: -3em;
     margin-right: -3em;
     margin-bottom: -3em;
   }
-  article.body > .container > footer .tags h2,
-  article.body > .container > footer .tags li {
+  .post-footer .tags h2,
+  .post-footer .tags li {
     font-size: 0.875em; /* 14px / font-size(16px) */
   }
 
-  article.body > .container > footer .tags h2 {
+  .post-footer .tags h2 {
     color: rgb(14, 14, 14);
     font-family: inherit;
   }
-  article.body > .container > footer .tags h2:before {
+  .post-footer .tags h2:before {
 
     /* @good-icons */
     font-family: "Good-Icons";
@@ -2760,20 +2771,20 @@
     margin-right: 0.5em;
   }
 
-  article.body > .container > footer .tags ul {
+  .post-footer .tags ul {
     margin-top: 1.2em;
   }
-  article.body > .container > footer .tags:after {
+  .post-footer .tags:after {
     /* $clearfix */
     content: "";
     display: table;
     clear: both;
   }
-  article.body > .container > footer .tags li {
+  .post-footer .tags li {
     float: left;
     margin: 0.5em 0.5em 0 0;
   }
-  article.body > .container > footer .tags a {
+  .post-footer .tags a {
     display: inline-block;
     padding: 0.7em 0.9em 0.6em;
     color: rgb(83, 83, 83);
@@ -2782,32 +2793,30 @@
     text-decoration: none;
   }
 
-  article.body > .container > footer .tags a:hover,
-  article.body > .container > footer .tags a:active,
-  article.body > .container > footer .tags a:focus {
+  .post-footer .tags a:hover,
+  .post-footer .tags a:active,
+  .post-footer .tags a:focus {
     background: white;
     color: #2f84da;
   }
 
 
-  article.body > .container > footer,
-  article.body > .container > footer > form + form,
-  article.body > .container > footer > section,
-  article.body > aside,
-  article.body > section {
+  .post-footer,
+  .post-footer > form + form,
+  .post-footer > section {
 
     /* @separator */
     margin-top: 2.95em;
     border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
   }
-  article.body > .container > footer > section ul,
-  article.body > .container > footer > section li {
+  .post-footer > section ul,
+  .post-footer > section li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  article.body > .container > footer > section li {
+  .post-footer > section li {
     display: inline;
   }
 
@@ -2822,109 +2831,109 @@
     color: rgb(247, 113, 113);
   }
 
-  html:hover article.body .secondary h2 {
+  html:hover article.post .secondary h2 {
     opacity: 0;
     transition: opacity 0.2s;
   }
-  html:hover article.body .secondary:hover h2 {
+  html:hover article.post .secondary:hover h2 {
     opacity: 1;
   }
 
   @media (min-width: 30em) {
-    article.body > .container > footer {
+    .post-footer {
       border-top-width: 0;
       padding-top: 0;
     }
-    article.body > .container > footer .votes,
-    article.body > .container > footer .secondary {
+    .post-footer .votes,
+    .post-footer .secondary {
       text-align: right;
       margin-bottom: 0;
     }
-    article.body > .container > footer .secondary p {
+    .post-footer .secondary p {
       font-size: 0.75em;
     }
-    article.body > .container > footer .votes h2,
-    article.body > .container > footer .secondary h2,
-    article.body > .container > footer .secondary p {
+    .post-footer .votes h2,
+    .post-footer .secondary h2,
+    .post-footer .secondary p {
       max-width: none;
     }
-    article.body > .container > footer .do,
-    article.body > .container > footer .vote {
+    .post-footer .do,
+    .post-footer .vote {
       float: left;
     }
-    article.body > .container > footer .do,
-    article.body > .container > footer .vote,
-    article.body > .container > footer .votes {
+    .post-footer .do,
+    .post-footer .vote,
+    .post-footer .votes {
       margin-top: 1.5em;
     }
   }
 
-  article.body > .container > header h1 {
+  .post-header h1 {
     font-size: 2.375em; /* 38px / font-size(16px) */
   }
 
-  article.body > .container > header .topics {
+  .post-header .topics {
     color: rgb(102, 102, 102);
     font-size: 0.75em; /* 12px / font-size(16px) */
   }
-  article.body > .container > header .topics strong {
+  .post-header .topics strong {
     color: rgb(42, 43, 44); /* @text-color */
     font-size: 2.5em; /* 30px / font-size(12px) */
   }
-  article.body > .container > header .topics a {
+  .post-header .topics a {
     color: inherit;
     font-weight: bold;
     text-decoration: none;
   }
-  article.body > .container > header .topics a:hover,
-  article.body > .container > header .topics a:active,
-  article.body > .container > header .topics a:focus {
+  .post-header .topics a:hover,
+  .post-header .topics a:active,
+  .post-header .topics a:focus {
     color: rgb(153, 153, 153);
   }
-  article.body > .container > header .time {
+  .post-header .time {
     color: rgb(102, 102, 102);
     font-size: 0.75em; /* 12px / font-size(16px) */
   }
-  article.body > .container > header .time span {
+  .post-header .time span {
     font-weight: bold;
   }
 
-  article.body .suggested-post h2,
-  article.body .comments h2,
-  article.body .popular-posts h2 {
+  article.post .suggested-post h2,
+  article.post .comments h2,
+  article.post .popular-posts h2 {
     font-family: inherit;
     font-weight: bold;
   }
-  article.body .suggested-post h2 {
+  article.post .suggested-post h2 {
     font-size: inherit;
     font-weight: inherit;
   }
-  article.body .suggested-post p a {
+  article.post .suggested-post p a {
     text-decoration: inherit;
     color: inherit;
   }
-  article.body .suggested-post p a:hover,
-  article.body .suggested-post p a:active,
-  article.body .suggested-post p a:focus {
+  article.post .suggested-post p a:hover,
+  article.post .suggested-post p a:active,
+  article.post .suggested-post p a:focus {
     color: rgb(47, 132, 218);
   }
-  article.body .suggested-post h2 a,
-  article.body .popular-posts h2 a {
+  article.post .suggested-post h2 a,
+  article.post .popular-posts h2 a {
     color: inherit;
     text-decoration: none;
   }
-  article.body .suggested-post h2 a:hover,
-  article.body .suggested-post h2 a:active,
-  article.body .suggested-post h2 a:focus,
-  article.body .popular-posts  h2 a:hover,
-  article.body .popular-posts  h2 a:active,
-  article.body .popular-posts  h2 a:focus {
+  article.post .suggested-post h2 a:hover,
+  article.post .suggested-post h2 a:active,
+  article.post .suggested-post h2 a:focus,
+  article.post .popular-posts  h2 a:hover,
+  article.post .popular-posts  h2 a:active,
+  article.post .popular-posts  h2 a:focus {
     color: rgb(47, 132, 218);
   }
-  article.body .suggested-post h2 a {
+  article.post .suggested-post h2 a {
     font-weight: bold;
   }
-  article.body .suggested-post {
+  article.post .suggested-post {
     border: 0.1em solid rgb(218, 220, 224);
     padding-left: 7.5em; /* image-width(120px) / font-size(16px) */
     position: relative;
@@ -2933,20 +2942,20 @@
     /* KLUDGE: Override the rules intended for sections and asides in the content area */
     padding-top: 0 !important;
   }
-  article.body .suggested-post img {
+  article.post .suggested-post img {
     position: absolute;
     top: 0;
     left: 0
   }
-  article.body .suggested-post h2 {
+  article.post .suggested-post h2 {
     margin: 1.5em;
   }
-  article.body .suggested-post p {
+  article.post .suggested-post p {
     font-size: 2em;
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
   }
-  article.body .suggested-post p a {
+  article.post .suggested-post p a {
     display: block;
     padding: 0 0.75em 0.75em;
   }
@@ -3046,6 +3055,23 @@
 
   p.ad {
     max-width: none;
+  }
+
+  /* Line the fixed-size promtions up side-by-side */
+  @media (min-width: 40em) and (max-width: 69.9em) {
+    aside:after {
+      /* @clear-fix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+    aside > .ad,
+    aside > .promotion,
+    aside > .discussion,
+    aside > .fb-recommendations {
+      float: left;
+      margin-right: 1.5em;
+    }
   }
 
 
