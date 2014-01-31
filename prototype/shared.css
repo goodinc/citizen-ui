@@ -579,8 +579,8 @@
     #header > .container,
     #content > .container,
     #footer > .container {
-      padding-left: 3em;
-      padding-right: 3em;
+      padding-left: 2.25em;
+      padding-right: 2.25em;
     }
   }
 
@@ -706,18 +706,37 @@
     font-size: 1.375em;
     width: 12em; /* This is about the width of the placeholder text */
     max-width: 100%;
+    border-radius: none;
   }
   #header .search button {
     font-size: 0.875em;
   }
 
+  @media (min-width: 40em) and (max-width: 65em) {
+    #header > .container {
+      padding-bottom: 3em;
+    }
+    #header.has-account > .container {
+      padding-bottom: 0;
+    }
+    #header > .container > h2 + p {
+      position: absolute;
+      bottom: 0;
+      left: 0.75em;
+    }
+    #header > .container > h2 + p + p {
+      position: absolute;
+      bottom: 0;
+      right: 2.25em;
+    }
+  }
 
   @media (max-width: 24.9em) {
     #header .search p {
       font-size: 0.75em;
     }
   }
-  @media (min-width: 60em) {
+  @media (min-width: 40em) {
 
     #header .search,
     #header .search h3 {
@@ -742,8 +761,8 @@
       border: 0.125em solid rgb(139, 139, 139);
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
       padding: 3em;
-      width: 40em;
-      margin-left: -30em;
+      width: 25em;
+      margin-left: -15em;
     }
     #header .search:hover form {
       left: auto;
@@ -765,7 +784,7 @@
 
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 40em) {
     #header > .container:after {
       content: "";
       display: table;
@@ -852,7 +871,7 @@
   }
 
   /* OPTIONAL: Only show the options when hovering over the navigation */
-  @media (min-width: 60em) {
+  @media (min-width: 40em) {
 
     #header > .container {
       position: relative;
@@ -931,7 +950,7 @@
     }
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 40em) {
     #header h2,
     #header > .container > p,
     #header .primary {
@@ -1076,33 +1095,136 @@
     }
   }
 
-  @media (min-width: 70em) {
+
+  aside.ad,
+  aside.facebook,
+  aside.promotion {
+    margin-top: 1.5em;
+  }
+  aside.discussion {
+    margin-top: 3em;
+  }
+
+  @media (min-width: 500em) and (max-width: 609.9em) {
     #content > .container:after {
       content: "";
       display: table;
       clear: both;
     }
+    aside.ad.upper,
+    aside.ad.middlepromo,
+    aside.ad.middle,
+    aside.ad.lower,
+    aside.facebook,
+    aside.promotion,
+    aside.discussion {
+      width: 50%;
+      box-sizing: border-box;
+      float: right;
+    }
+    aside.ad.middle {
+      position: absolute;
+      right: 3em;
+      width: auto;
+    }
+    .post > .popular-posts {
+      margin-top: 3em;
+      margin-right: 20.25em; /* ad-width(300px) / font-size(16px) + 1.5em */
+    }
+    .post > .popular-posts .activity-item > .post,
+    .post > .popular-posts .activity-item > .comment,
+    .post > .popular-posts .activity-item > .follow,
+    .post > .popular-posts .activity-item > .more {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .post > .suggested-post {
+      clear: both;
+    }
+  }
+
+  @media (min-width: 25em) and (max-width: 49.9em) {
+    aside.ad.top,
+    aside.ad.upper,
+    aside.ad.middlepromo,
+    aside.ad.middle,
+    aside.ad.lower,
+    aside.facebook,
+    aside.promotion,
+    aside.discussion,
+    #content .has-aside + aside {
+      vertical-align: top;
+      display: inline-block;
+      margin: 3em 1.5em 0 0;
+      width: 18.75em;
+      box-sizing: border-box;
+    }
+  }
+  @media (min-width: 50em) {
+    #content > .container:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .post > article,
+    .post > footer,
+    .post > .comments,
+    .post > .popular-posts,
+    .post > .suggested-post,
     #content .has-aside {
       margin-top: 0;
       float: left;
-      width: 65%;
+      width: 55%;
       box-sizing: border-box;
     }
-    #content .has-aside:first-child {
-      clear: both;
-    }
-    #content article.post > aside:first-child,
+    aside.ad.top,
+    aside.ad.upper,
+    aside.ad.middlepromo,
+    aside.ad.middle,
+    aside.ad.lower,
+    aside.facebook,
+    aside.promotion,
+    aside.discussion,
     #content .has-aside + aside {
       margin-top: 0;
+      clear: right;
       float: right;
-      width: 32.5%;
+      width: 18.75em;
       box-sizing: border-box;
 
       /* @separator */
       /*
       border-left: 0.1em solid rgb(221, 221, 221);
-      */
       padding-left: 1.5em;
+      */
+    }
+    aside.facebook > div {
+      float: right;
+    }
+    aside.baseboard {
+      clear: both;
+    }
+  }
+  @media (min-width: 60em) {
+
+    .post > article,
+    .post > footer,
+    .post > .comments,
+    .post > .popular-posts,
+    .post > .suggested-post,
+    #content .has-aside {
+      width: 60%;
+    }
+  }
+  @media (min-width: 70em) {
+
+    .post > article,
+    .post > footer,
+    .post > .comments,
+    .post > .popular-posts,
+    .post > .suggested-post,
+    #content .has-aside {
+      width: 65%;
     }
   }
 
@@ -1115,9 +1237,13 @@
     background-color: rgb(105, 206, 155);
     padding: 1.5em 3em;
     color: white;
-    margin-top: -3em;
-    margin-left: -3em;
-    margin-right: -3em;
+  }
+  @media (max-width: 59.9em) {
+    .join-intro {
+      margin-top: -3em;
+      margin-left: -2.25em; /* body-padding */
+      margin-right: -2.25em;
+    }
   }
   .join-intro h1 {
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
@@ -2688,96 +2814,84 @@
   -----------------------------------------------
   ----------------------------------------------- */
 
-  .post-header {
+  .post > header {
     margin-bottom: 3em;
   }
-  @media (min-width: 40em) {
-    .post-header .topics,
-    .post-header .time {
-      display: inline;
-    }
-    .post-header .topics {
-      margin-right: 3em;
-    }
-    .post-header .promote,
-    .post-header .author {
-      margin-right: 1.5em;
-    }
-  }
 
-  .post-header .promote h2 {
+  .post > header .do      h2,
+  .post > header .promote h2 {
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
   }
-  .post-header .author {
+
+  .post > header .author {
     color: rgb(102, 102, 102);
   }
-  .post-header .author p span {
-    display: block;
+  .post > header .author h2 {
     margin-bottom: 0.375em;
 
     color: rgb(153, 153, 153);
     font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-family: inherit;
+    line-height: inherit;
     font-weight: bold;
   }
-  .post-header .author img {
+
+  /* @follow-list */
+  .post > header .author h3 {
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .post > header .author h3 a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .post > header .author h3 a:hover,
+  .post > header .author h3 a:hover,
+  .post > header .author h3 a:hover {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  /* TODO: consider sharing styles between the follow list and author */
+  .post > header .author img {
     float: left;
     margin-right: 0.75em;
   }
-  .post-header .author a {
-    color: rgb(51, 51, 51);
-    text-decoration: inherit;
-    color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / font-size(16px) */
-    font-weight: bold;
-    position: relative;
-    top: -0.25em;
-  }
-  .post-header .author a:hover,
-  .post-header .author a:active,
-  .post-header .author a:focus {
-    color: rgb(153, 153, 153);
-  }
-  .post-header .author p {
-    margin-bottom: 0;
-  }
-  .post-header .author form {
-    margin-top: 0;
-  }
-  .post-header .author button {
+  .post > header .author button {
     font-size: 0.75em; /* 12px / font-size(16px) */
   }
-  .post-header .share h2 {
+
+  .post > header .share h2 {
     font-family: inherit;
     font-size: inherit;
   }
-  .post-header .share ul,
-  .post-header .share li {
+  .post > header .share ul,
+  .post > header .share li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .post-header .share li {
+  .post > header .share li {
     display: inline
   }
   /*
-  .post-header form h2 button {
+  .post > header form h2 button {
     background-color: transparent;
     color: inherit;
     padding: 0;
   }
   */
 
-  .post-header .share {
-    text-align: center;
-  }
-  .post-header .share h2 {
+  .post > header .share h2 {
     color: rgb(153, 153, 153);
     font-size: 0.6875em; /* 11px / font-size(16px) */
     font-weight: bold;
   }
-  .post-header .share a {
+  .post > header .share a {
     display: inline-block;
     background-color: rgb(255, 249, 208);
     color: rgb(218, 198, 71);
@@ -2787,11 +2901,13 @@
     font-weight: bold;
   }
 
-  .post-header .promote abbr {
+  .post > header .do      abbr,
+  .post > header .promote abbr {
     font-size: 2.375em; /* 38px / font-size(16px) */
     line-height: normal;
   }
-  .post-header .promote button {
+  .post > header .do      button,
+  .post > header .promote button {
     background: inherit;
     color: inherit;
     padding: 0;
@@ -2800,79 +2916,112 @@
   }
 
   @media (min-width: 30em) {
-    .post-header .options {
+    .post > header .options {
       width: 100%;
       display: table;
     }
-    .post-header .promote,
-    .post-header .author,
-    .post-header .share {
+    .post > header .do,
+    .post > header .promote,
+    .post > header .author,
+    .post > header .share {
       margin-top: 0;
       display: table-cell;
       vertical-align: top;
     }
-    .post-header .promote,
-    .post-header .author {
+    .post > header .do,
+    .post > header .promote,
+    .post > header .author {
       border-right: 0.1em solid rgb(221, 221, 221);
       padding-right: 2.95em;
     }
-    .post-header .author,
-    .post-header .share {
+    .post > header .author,
+    .post > header .share {
       padding-left: 2.95em;
+    }
+    .post > header .share {
+      text-align: center;
     }
 
   }
 
   @media (min-width: 50em) {
-    .post-container {
+    .post > article {
       border: 0.1em solid rgb(218, 220, 224);
       padding: 3em;
-      margin-top: 6em;
-    }
-    .post-header .options {
-      position: absolute;
-      top: -9em;
-      height: 6em;
-    }
-    .post-header {
-      padding-top: 5em;
-      position: relative;
-    }
-    .post-header .meta {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
     }
   }
 
-  @media (min-width: 70em) {
-    
+  .post > article header h2 {
+    font-size: 2.5em;
+    font-family: inherit;
+    font-weight: bold;
+    color: rgb(42, 43, 44);
+  }
+  .post > article .topics {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / font-size(16px) */
+  }
+  .post > article .topics strong {
+    color: rgb(42, 43, 44); /* @text-color */
+    font-size: 2.5em; /* 30px / font-size(12px) */
+  }
+  .post > article .topics a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .post > article .topics a:hover,
+  .post > article .topics a:active,
+  .post > article .topics a:focus {
+    color: rgb(153, 153, 153);
+  }
+  .post > article .time {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / font-size(16px) */
+  }
+  @media (min-width: 40em) {
+    .post > article header h2,
+    .post > article .topics,
+    .post > article .time {
+      display: inline;
+    }
+    .post > article .topics {
+      margin-right: 3em;
+    }
   }
 
-  .post-footer h2 {
+  .post > article header img {
+    float: left;
+    margin-top: 2.25em;
+    margin-right: 1.5em;
+  }
+  .post > article h1 {
+    font-size: 2.375em; /* 38px / font-size(16px) */
+  }
+
+  .post > footer h2 {
     font-size: inherit;
   }
-  .post-footer .topics {
+  .post > footer .topics {
     background: rgb(247, 247, 247);
     padding: 1.5em;
   }
-  .post-container > .post-footer .topics {
+  .post-container > .post > footer .topics {
     padding: 3em;
     margin-left: -3em;
     margin-right: -3em;
     margin-bottom: -3em;
   }
-  .post-footer .topics h2,
-  .post-footer .topics li {
+  .post > footer .topics h2,
+  .post > footer .topics li {
     font-size: 0.875em; /* 14px / font-size(16px) */
   }
 
-  .post-footer .topics h2 {
+  .post > footer .topics h2 {
     color: rgb(14, 14, 14);
     font-family: inherit;
   }
-  .post-footer .topics h2:before {
+  .post > footer .topics h2:before {
 
     /* @good-icons */
     font-family: "Good-Icons";
@@ -2895,20 +3044,20 @@
     margin-right: 0.5em;
   }
 
-  .post-footer .topics ul {
+  .post > footer .topics ul {
     margin-top: 1.2em;
   }
-  .post-footer .topics:after {
+  .post > footer .topics:after {
     /* $clearfix */
     content: "";
     display: table;
     clear: both;
   }
-  .post-footer .topics li {
+  .post > footer .topics li {
     float: left;
     margin: 0.5em 0.5em 0 0;
   }
-  .post-footer .topics a {
+  .post > footer .topics a {
     display: inline-block;
     padding: 0.7em 0.9em 0.6em;
     color: rgb(83, 83, 83);
@@ -2917,30 +3066,30 @@
     text-decoration: none;
   }
 
-  .post-footer .topics a:hover,
-  .post-footer .topics a:active,
-  .post-footer .topics a:focus {
+  .post > footer .topics a:hover,
+  .post > footer .topics a:active,
+  .post > footer .topics a:focus {
     background: white;
     color: #2f84da;
   }
 
 
-  .post-footer,
-  .post-footer > form + form,
-  .post-footer > section {
+  .post > footer,
+  .post > footer > form + form,
+  .post > footer > section {
 
     /* @separator */
     margin-top: 2.95em;
     border-top: 0.1em solid rgb(221, 221, 221);
     padding-top: 2.95em;
   }
-  .post-footer > section ul,
-  .post-footer > section li {
+  .post > footer > section ul,
+  .post > footer > section li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .post-footer > section li {
+  .post > footer > section li {
     display: inline;
   }
 
@@ -2955,134 +3104,107 @@
     color: rgb(247, 113, 113);
   }
 
-  html:hover article.post .secondary h2 {
+  html:hover .post .secondary h2 {
     opacity: 0;
     transition: opacity 0.2s;
   }
-  html:hover article.post .secondary:hover h2 {
+  html:hover .post .secondary:hover h2 {
     opacity: 1;
   }
 
   @media (min-width: 30em) {
-    .post-footer {
+    .post > footer {
       border-top-width: 0;
       padding-top: 0;
     }
-    .post-footer .promotes,
-    .post-footer .secondary {
+    .post > footer .dos,
+    .post > footer .promotes,
+    .post > footer .secondary {
       text-align: right;
       margin-bottom: 0;
     }
-    .post-footer .secondary p {
+    .post > footer .secondary p {
       font-size: 0.75em;
     }
-    .post-footer .promotes h2,
-    .post-footer .secondary h2,
-    .post-footer .secondary p {
+    .post > footer .dos h2,
+    .post > footer .promotes h2,
+    .post > footer .secondary h2,
+    .post > footer .secondary p {
       max-width: none;
     }
-    .post-footer .do,
-    .post-footer .promote {
+    .post > footer .do,
+    .post > footer .promote {
       float: left;
     }
-    .post-footer .do,
-    .post-footer .promote,
-    .post-footer .promotes {
+    .post > footer .do,
+    .post > footer .dos,
+    .post > footer .promote,
+    .post > footer .promotes {
       margin-top: 1.5em;
     }
   }
 
-  .post-header h1 {
-    font-size: 2.375em; /* 38px / font-size(16px) */
-  }
-
-  .post-header .topics {
-    color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / font-size(16px) */
-  }
-  .post-header .topics strong {
-    color: rgb(42, 43, 44); /* @text-color */
-    font-size: 2.5em; /* 30px / font-size(12px) */
-  }
-  .post-header .topics a {
-    color: inherit;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  .post-header .topics a:hover,
-  .post-header .topics a:active,
-  .post-header .topics a:focus {
-    color: rgb(153, 153, 153);
-  }
-  .post-header .time {
-    color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / font-size(16px) */
-  }
-  .post-header .time span {
-    font-weight: bold;
-  }
-
-  article.post .suggested-post h2,
-  article.post .comments h2,
-  article.post .popular-posts h2 {
+  .post .suggested-post h2,
+  .post .comments h2,
+  .post .popular-posts h2 {
     font-family: inherit;
     font-weight: bold;
   }
-  article.post .suggested-post h2 {
+  .post .suggested-post h2 {
     font-size: inherit;
     font-weight: inherit;
   }
-  article.post .suggested-post p a {
+  .post .suggested-post p a {
     text-decoration: inherit;
     color: inherit;
   }
-  article.post .suggested-post p a:hover,
-  article.post .suggested-post p a:active,
-  article.post .suggested-post p a:focus {
+  .post .suggested-post p a:hover,
+  .post .suggested-post p a:active,
+  .post .suggested-post p a:focus {
     color: rgb(47, 132, 218);
   }
-  article.post .suggested-post h2 a,
-  article.post .popular-posts h2 a {
+  .post .suggested-post h2 a,
+  .post .popular-posts h2 a {
     color: inherit;
     text-decoration: none;
   }
-  article.post .suggested-post h2 a:hover,
-  article.post .suggested-post h2 a:active,
-  article.post .suggested-post h2 a:focus,
-  article.post .popular-posts  h2 a:hover,
-  article.post .popular-posts  h2 a:active,
-  article.post .popular-posts  h2 a:focus {
+  .post .suggested-post h2 a:hover,
+  .post .suggested-post h2 a:active,
+  .post .suggested-post h2 a:focus,
+  .post .popular-posts  h2 a:hover,
+  .post .popular-posts  h2 a:active,
+  .post .popular-posts  h2 a:focus {
     color: rgb(47, 132, 218);
   }
-  article.post .suggested-post h2 a {
+  .post .suggested-post h2 a {
     font-weight: bold;
   }
-  article.post .suggested-post {
+  .post .suggested-post {
     border: 0.1em solid rgb(218, 220, 224);
     position: relative;
   }
-  article.post .suggested-post h2 {
+  .post .suggested-post h2 {
     margin: 1.5em;
   }
-  article.post .suggested-post p {
+  .post .suggested-post p {
     font-size: 2em;
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
   }
-  article.post .suggested-post p a {
+  .post .suggested-post p a {
     display: block;
     padding: 0 0.75em 0.75em;
   }
-  article.post .suggested-post img {
+  .post .suggested-post img {
     display: block;
     margin-bottom: 0.75em;
   }
   @media (min-width: 30em) {
-    article.post .suggested-post {
+    .post .suggested-post {
       padding-left: 7.5em; /* image-width(120px) / font-size(16px) */
       min-height: 12.5em; /* image-height(200px) / font-size(16px) */
     }
-    article.post .suggested-post img {
+    .post .suggested-post img {
       position: absolute;
       top: 0;
       left: 0
@@ -3095,14 +3217,14 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
-  aside .discussion {
+  .discussion {
     margin-top: 1.5em;
     position: relative;
     border: 0.25em solid rgb(247, 247, 247);
     background-color: rgb(252, 252, 252);
     padding: 1em; /* 16px / font-size(16px) */
   }
-  aside .discussion h2 {
+  .discussion h2 {
     position: absolute;
     top: -2.18181818181818em; /* 1.5em / font-size(0.6875em) */
     color: rgb(247, 113, 113);
@@ -3111,61 +3233,59 @@
     text-transform: uppercase;
     font-size: 0.6875em; /* 11px / font-size(16px) */
   }
-  aside .discussion h3 {
+  .discussion h3 {
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
     text-align: center;
   }
-  aside .discussion h3 a {
+  .discussion h3 a {
     color: rgb(102, 102, 102);
     text-decoration: inherit;
   }
-  aside .discussion h3 img {
+  .discussion h3 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.75em;
   }
-  aside .discussion ul,
-  aside .discussion li,
-  aside .promotion ul,
-  aside .promotion li {
+  .discussion ul,
+  .discussion li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  aside > .discussion + section,
-  aside > .discussion + p {
+  .discussion + section,
+  .discussion + p {
     margin-top: 1.5em;
   }
-  aside .discussion ul {
+  .discussion ul {
     margin-top: 1.5em;
   }
-  aside .discussion li {
+  .discussion li {
     padding: 1em 0; /* 11px / font-size(11px) */
     border-bottom: 1px solid rgb(218, 220, 224);
     color: rgb(102, 102, 102);
     font-size: 0.6875em; /* 11px / font-size(16px) */
   }
-  aside .discussion li a {
+  .discussion li a {
     text-decoration: none;
   }
-  aside .discussion li a:hover,
-  aside .discussion li a:active,
-  aside .discussion li a:focus {
+  .discussion li a:hover,
+  .discussion li a:active,
+  .discussion li a:focus {
     color: rgb(47, 132, 218);
   }
-  aside .discussion li img {
+  .discussion li img {
     float: right;
     position: relative;
     top: -0.5em;
     margin-left: 0.5em;
   }
-  aside .discussion .more {
+  .discussion .more {
     text-align: center;
   }
-  aside .discussion .more a {
+  .discussion .more a {
     color: rgb(247, 113, 113);
     text-decoration: inherit;
     font-weight: bold;
@@ -3175,6 +3295,12 @@
     padding: 1.5em;
     background: rgb(249, 249, 250);
     border: 3px solid rgb(224, 224, 225);
+  }
+  .promotion ul,
+  .promotion li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
   }
   .promotion > a {
     text-decoration: none;
@@ -3187,7 +3313,7 @@
   }
 
   /* Line the fixed-size promtions up side-by-side */
-  @media (min-width: 40em) and (max-width: 69.9em) {
+  @media (min-width: 400em) and (max-width: 609.9em) {
     aside:after {
       /* @clear-fix */
       content: "";
