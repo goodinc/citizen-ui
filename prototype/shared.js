@@ -19,10 +19,12 @@
     // document is tall in relation to the height of the screen,
     // and the content may not be visisble when the page loads.
     //
+    /*
     if (!document.getElementById("home-page")) setTimeout(function() {
       var content = document.querySelector("h1");
       if (content) new ScrollToContent(content);
     }, 1);
+    */
 
 
   };

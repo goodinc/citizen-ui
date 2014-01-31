@@ -2952,18 +2952,14 @@
   }
 
   .post > article header h2 {
-    font-size: 2.5em;
+    font-size: 1.875em; /* 30px / font-size(16px) */
     font-family: inherit;
     font-weight: bold;
-    color: rgb(42, 43, 44);
+    color: rgb(42, 43, 44); /* @text-color */
   }
   .post > article .topics {
     color: rgb(102, 102, 102);
     font-size: 0.75em; /* 12px / font-size(16px) */
-  }
-  .post > article .topics strong {
-    color: rgb(42, 43, 44); /* @text-color */
-    font-size: 2.5em; /* 30px / font-size(12px) */
   }
   .post > article .topics a {
     color: inherit;
@@ -2978,6 +2974,9 @@
   .post > article .time {
     color: rgb(102, 102, 102);
     font-size: 0.75em; /* 12px / font-size(16px) */
+  }
+  .post > article .time span {
+    font-weight: bold;
   }
   @media (min-width: 40em) {
     .post > article header h2,
