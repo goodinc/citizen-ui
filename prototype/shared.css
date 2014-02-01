@@ -25,7 +25,7 @@
   -----------------------------------------------
   ----------------------------------------------- */
   body {
-    font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    font: 100%/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     margin: 0;
     padding: 0;
     background: rgb(249, 249, 250); /* @bright-white */
@@ -63,8 +63,8 @@
   /* Margins */
   h1, h2, h3, h4, h5, h6, p, ol, ul, dl, form, table, blockquote, fieldset,
   header, footer, section, article, aside, nav {
-    margin-top    : 0.75em; /* @line-height / 2 */
-    margin-bottom : 0.75em;
+    margin-top    : 0.875em; /* @line-height / 2 */
+    margin-bottom : 0.875em;
   }
   *:first-child {
     margin-top: 0;
@@ -86,34 +86,42 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-weight: 300;
-    margin-top     : 1.5em;  /* @line-height */
-    margin-bottom  : 0.75em; /* @line-height / 2 */
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
   }
+
+  /* KLUDGE: Give vcards the same amount of margin as headlines (for the contact page) */
+  div.vcard {
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
+  }
+
   h1 {
     font-size: 3em;
-    line-height   : 1em; /* @line-height x 2 / 3 */
-    margin-top    : 1em;
-    margin-bottom : 0.5em;
+    line-height   : 1.1666666667em; /* @line-height x 2 / 3 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
   }
   h2 {
     font-size: 2.25em;
-    line-height   : 0.66666666666667em; /* @line-height / 2.25 */
-    margin-top    : 0.66666666666667em;
-    margin-bottom : 0.33333333333334em;
+    line-height   : 0.7777777778em; /* @line-height / 2.25 */
+    margin-top    : 0.7777777778em;
+    margin-bottom : 0.3888888889em;
 
     /* Add to the line-height to make multi-line headlines easier to read. */
-    line-height   : 1.33333333333334em; /* (@line-height x 2) / 2.25 */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
   h3 {
     font-size: 1.5em;
-    line-height   : 1em; /* @line-height / 1.5 */
-    margin-top    : 1em;
-    margin-bottom : 0.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
 
     /* Add to the line-height and subtract from the margin
     to make multi-line headlines easier to read. */
-    line-height   : 1.25em; /* (@line-height x 1.25) / 1.5 */
-    margin-top    : 0.75em;
+    /*
+    line-height   : 1.25em; *//* (@line-height x 1.25) / 1.5 */
+    /*margin-top    : 0.75em;*/
   }
   h4 {
     font-size: 1.3125em;
@@ -317,6 +325,10 @@
     font-size: inherit;
   }
 
+  form .submit {
+    margin-top: 1.5em; /* @line-height */
+  }
+
   form ul.submit,
   form ul.submit li {
     list-style: none;
@@ -326,6 +338,17 @@
   form ul.submit li {
     display: inline;
     margin-right: 1.5em;
+  }
+
+  form .note,
+  form label em {
+    color: rgb(139, 139, 139);
+    font-size: 0.875em; /* 12px / 16px */
+    font-style: italic;
+  }
+  form .note {
+    margin-top: 0.375em;
+    display: block;
   }
 
   form .error input[type="text"],
@@ -341,6 +364,19 @@
     color: rgb(225, 51, 51);
     font-weight: normal;
     display: block;
+  }
+
+  fieldset {
+    margin-top: 1.5em; /* @line-height */
+    border-width: 0;
+    border-top: 0.1em solid rgb(239, 239, 239);
+    padding-top: 3em; /* @line-height x 2 */
+    position: relative;
+  }
+  legend {
+    position: absolute;
+    top: 1.5em; /* @line-height */
+    left: 0;
   }
 
   section.message {
@@ -540,10 +576,10 @@
   }
   #header + #content {
     /* @separator */
-    margin-top: 2.95em;
-    padding-top: 2.95em;
+    margin-top: 2.25em;
+    padding-top: 2.99em;
     border-top: 0.1em solid rgb(221, 221, 221);
-    padding-bottom: 2.95em;
+    padding-bottom: 3em;
   }
   #footer {
     margin-top: 0;
@@ -552,7 +588,7 @@
 
     /* @separator */
     border-top: 0.1em solid rgb(221, 221, 221);
-    padding-top: 2.95em;
+    padding-top: 2.99em;
 
     padding-bottom: 1.5em;
   }
@@ -570,7 +606,7 @@
   /* On large screens, fill the available vertical space */
   @media (min-width: 40em) {
     #header > .container {
-      padding-top: 3em;
+      padding-top: 2.25em;
     }
     #footer > .container {
       padding-bottom: 3em;
@@ -612,14 +648,16 @@
   #header .primary li + li {
     margin-left: 0.125em;
   }
+  #header .search  h3 a,
   #header .primary li a {
     display: inline-block;
     background-color: rgb(219, 235, 237);
     color: rgb(149, 171, 174);
-    padding: 0.75em 1.5em;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.875em; /* 14px / font-size(16px) */
+    line-height: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
+    padding: 0.6428571429em 1.7142857143em; /* (account-image-size(42px) - line-height(24px) / 2 = 9px) / font-size(14px)     @line-height(24px) / font-size(14px) */
     border-radius: 0.125em;
   }
   #header .primary li a:hover,
@@ -640,6 +678,11 @@
   }
   #header h2 {
     font-size: inherit;
+
+    /* OPTIONAL: Adjust to the vertical rythm */
+    position: relative;
+    bottom     : -0.1875em; /* 3px / @font-size(16px) */
+    margin-top : -0.3750em; /* 6px / @font-size(16px) */
   }
   #header h2 a {
     vertical-align: middle;
@@ -684,11 +727,6 @@
   #header .search h3 a {
     background-color: rgb(139, 139, 139);
     color: rgb(102, 102, 102);
-    display: inline-block;
-    padding: 0.75em 1.5em;
-    text-decoration: none;
-    font-size: 0.875em; /* 14px / font-size(16px) */
-    border-radius: 0.125em;
   }
   #header .search h3 a:hover,
   #header .search h3 a:active,
@@ -858,8 +896,8 @@
     font-size: inherit;
   }
   #header .todos h3 a {
-    width       : 2.5em; /* account-image-size(40px) / font-size(16px) */
-    line-height : 2.5em;
+    width       : 2.625em; /* account-image-size(42px) / font-size(16px) */
+    line-height : 2.625em;
     text-align: center;
     text-decoration: inherit;
     background: rgb(69, 71, 71);
@@ -868,6 +906,7 @@
   }
   #header .account h3 img {
     display: block;
+    border: 1px solid rgb(42, 43, 44);
   }
 
   /* OPTIONAL: Only show the options when hovering over the navigation */
@@ -883,14 +922,14 @@
     }
 
     #header.has-account .primary {
-      margin-right: 8.375em;
+      margin-right: 9em;
     }
 
     #header .todos,
     #header .account {
       clear: none;
       position: absolute;
-      top: 3em;
+      top: 2.25em;
       right: 3em;
       margin-top: 0;
       padding-top: 0;
@@ -1305,11 +1344,11 @@
 
   .activity-item section,
   .activity-item article {
-    margin-top: 1.25em; /* @line-height */
+    margin-top: 1.5em; /* @line-height */
   }
   .activity-item p {
-    margin-top    : 0.625em; /* @line-height / 2 */
-    margin-bottom : 0.625em;
+    margin-top    : 0.75em; /* @line-height / 2 */
+    margin-bottom : 0.75em;
   }
 
   /* Links */
@@ -1324,13 +1363,6 @@
   }
 
   /* Headlines */
-  .activity-item h3 {
-    margin: 0;
-    font-size: 1.5em; /* 24px / @font-size */
-    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.35em; /* Freight Light needs a big line height */
-    font-weight: normal;
-  }
   .activity-item .do h3 {
     min-height: 2.7em; /* line-height x 2 */
   }
@@ -1422,8 +1454,6 @@
   }
 
 
-
-
 /* =Units
   -----------------------------------------------
   -----------------------------------------------
@@ -1438,7 +1468,7 @@
   .activity-item .post h3 .image {
     float: left;
     position: relative;
-    margin-right: 0.83333333333333em; /* @line-height / font-size(16px) */
+    margin-right: 0.83333333333333em; /* @line-height(20px) / font-size(24px) */
   }
   .activity-item .post h3 .image img {
     display: block;
@@ -1495,7 +1525,7 @@
     margin-left: 0.9375em; /* @image-margin */
 
     /* OPTIONAL: Move the image up and to the right a little */
-    margin-top   : -0.20833333333333em; /* @line-height(20px) / @fontSize(24px) x 1/4 */
+    margin-top   : -0.20833333333333em; /* @line-height(20px) / font-size(24px) x 1/4 */
     margin-right : -0.20833333333333em;
   }
 
@@ -1506,7 +1536,7 @@
 
   .activity-item .link,
   .activity-item .follow {
-    padding       : 1.25em;  /* @line-height */
+    padding       : 1.25em;  /* @line-height(20px) */
     border: 1px solid rgb(243, 243, 243); /* @bright-silver */
     background: rgb(249, 249, 249); /* @silver */
     border-radius: 0.25em;
@@ -1543,8 +1573,8 @@
       right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
     }
     .activity-item .follow form {
-      top   : 1.25em; /* @line-height */
-      right : 1.25em; /* @line-height */
+      top   : 1.25em; /* @line-height(20px) */
+      right : 1.25em; /* @line-height(20px) */
     }
   }
 
@@ -1563,7 +1593,7 @@
     margin-right: 0.9375em; /* @image-margin */
 
     /* OPTIONAL: Move the image up and to the left a little */
-    margin-top  : -0.3125em; /* @line-height x 1/4 */
+    margin-top  : -0.3125em; /* @line-height(20px) x 1/4 */
     margin-left : -0.3125em;
   }
   .activity-item .follow h3 .image img {
@@ -1571,15 +1601,15 @@
   }
   .activity-item .follow,
   .activity-item .follow + .more {
-    margin-top: 1.25em; /* @line-height */
+    margin-top: 1.25em; /* @line-height(20px) */
   }
   .activity-item .follow .meta {
-    margin-top: 0.3125em; /* @line-height / 4 */
+    margin-top: 0.3125em; /* @line-height(20px) / 4 */
     font-size: 0.75em; /* 12px / @font-size */
   }
   .activity-item .follow .meta + .introduction {
     border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
-    padding-top: 0.625em; /* @line-height / 2 */
+    padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .activity-item .follow .introduction {
     font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
@@ -1601,16 +1631,16 @@
 /* =Comment
   ----------------------------------------------- */
   .activity-item .comment {
-    padding-left: 2.5em; /* @line-height x 2 */
+    padding-left: 2.5em; /* @line-height(20px) x 2 */
   }
   .activity-item .comment,
   .activity-item .comment + .more {
-    margin-top: 1.25em; /* @line-height */
+    margin-top: 1.25em; /* @line-height(20px) */
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
-    padding-top: 1.25em; /* @line-height */
+    padding-top: 1.25em; /* @line-height(20px) */
   }
   .activity-item .comment + .comment {
-    padding-left: 5em; /* @line-height x 4 */
+    padding-left: 5em; /* @line-height(20px) x 4 */
   }
 
   .activity-item .comment h3 a {
@@ -1620,7 +1650,7 @@
     vertical-align: middle;
     margin-right: 0.5em;
 
-    margin-left: -3.33333333333333em; /* (@line-height x 2) / 12px */
+    margin-left: -3.33333333333333em; /* (@line-height(20px) x 2) / 12px */
   }
   .activity-item .comment p {
     color: black;
@@ -1785,12 +1815,12 @@
   .activity-item {
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
-    padding: 2.5em 1.25em; /* @line-height x 2    @line-height */
+    padding: 2.5em 1.25em; /* @line-height(20px) x 2    @line-height(20px) */
   }
 
   @media (max-width: 24.9em) {
     .activity-item {
-      margin-left  : -1.5em; /* @line-height */
+      margin-left  : -1.5em; /* @line-height(20px) */
       margin-right : -1.5em;
     }
   }
@@ -1884,7 +1914,7 @@
   /* OPTIONAL: Move the primary source to the left a little */
   @media (min-width: 25em) { /* @tiny-screen */
     .activity-item > .source:first-child {
-      margin-left: -1.66666666666667em; /* @line-height / 12px */
+      margin-left: -1.66666666666667em; /* @line-height(20px) / 12px */
     }
     .activity-item > .source.has-image:first-child {
       margin-left: 0;
@@ -1938,8 +1968,8 @@
 
     /* OPTIONAL: Don’t line up with the source if this is a feature */
     .featured .activity-item > .time + .post {
-      margin-top: 2.5em; /* @line-height / 2 */
-      margin-left: -1.25em; /* @line-height */
+      margin-top: 2.5em; /* @line-height(20px) / 2 */
+      margin-left: -1.25em; /* @line-height(20px) */
       margin-right: 0;
     }
 
@@ -2116,7 +2146,7 @@
   }
 
   .follow-list p {
-    margin-top    : 0.625em; /* @line-height / 2 */
+    margin-top    : 0.625em; /* @line-height(20px) / 2 */
     margin-bottom : 0.625em;
   }
   .follow-list form {
@@ -2217,18 +2247,18 @@
     margin-right: 0.9375em; /* @image-margin */
 
     /* OPTIONAL: Move the image up and to the left a little */
-    margin-top  : -0.3125em; /* @line-height x 1/4 */
+    margin-top  : -0.3125em; /* @line-height(20px) x 1/4 */
     margin-left : -0.3125em;
   }
 
   .follow-list .meta {
-    margin-top: 0.3125em; /* @line-height / 4 */
+    margin-top: 0.3125em; /* @line-height(20px) / 4 */
     font-size: 0.75em; /* 12px / @font-size */
   }
   .follow-list .meta + .location,
   .follow-list .meta + .introduction {
     border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
-    padding-top: 0.625em; /* @line-height / 2 */
+    padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .follow-list .location,
   .follow-list .introduction {
@@ -2312,7 +2342,7 @@
   .follow-list > li {
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
-    padding: 1.5em; /* @line-height x 2    @line-height */
+    padding: 1.5em; /* @line-height */
   }
 
   @media (max-width: 24.9em) { /* @tiny-screen */
@@ -2482,7 +2512,7 @@
   }
 
   .comment-list p {
-    margin-top    : 0.625em; /* @line-height / 2 */
+    margin-top    : 0.625em; /* @line-height(20px) / 2 */
     margin-bottom : 0.625em;
   }
 
@@ -2547,12 +2577,12 @@
   }
   .comment-list article,
   .comment-list + .more {
-    margin-top: 1.25em; /* @line-height */
+    margin-top: 1.25em; /* @line-height(20px) */
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
-    padding-top: 1.25em; /* @line-height */
+    padding-top: 1.25em; /* @line-height(20px) */
   }
   .comment-list article + article {
-    margin-top: 1.25em; /* @line-height */
+    margin-top: 1.25em; /* @line-height(20px) */
   }
 
   .comment-list h3 img {
@@ -2579,7 +2609,7 @@
     .comment-list article {
       border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
       position: relative;
-      padding: 1.25em; /* @line-height */
+      padding: 1.25em; /* @line-height(20px) */
     }
     .comment-list article {
       padding-left: 5.625em; /* 90px / 16px */
@@ -2997,7 +3027,9 @@
   .post > article h1 {
     font-size: 2.375em; /* 38px / font-size(16px) */
   }
-
+  .post > article p {
+    line-height: 1.875; /* 30px / font-size(16px) */
+  }
   .post > footer h2 {
     font-size: inherit;
   }
@@ -3371,10 +3403,8 @@
   body.pattern > section + section {
     margin-top: 3em;
   }
-  /*
   body.test-type {
-    background: white url(../images/shared/rule.svg) top left repeat;
+    background: white url(images/rule.svg) top left repeat;
     background-size: auto 1.5em;
   }
-  */
 
