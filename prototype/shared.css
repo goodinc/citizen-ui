@@ -199,7 +199,7 @@
   .member .has-aside h1 {
     font-family: inherit;
     font-weight: bold;
-    font-size: 1.875em; /* 30px / font-size(16px) */
+    font-size: 1.875em; /* 30px / @font-size(16px) */
     margin-bottom: 1em;
   }
 
@@ -655,7 +655,7 @@
     color: rgb(149, 171, 174);
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.875em; /* 14px / font-size(16px) */
+    font-size: 0.875em; /* 14px / @font-size(16px) */
     line-height: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
     padding: 0.6428571429em 1.7142857143em; /* (account-image-size(42px) - line-height(24px) / 2 = 9px) / font-size(14px)     @line-height(24px) / font-size(14px) */
     border-radius: 0.125em;
@@ -690,17 +690,14 @@
     background: url(images/good.svg) no-repeat;
     background-size: contain;
 
-    width:  6.250em; /* image-width(100px) / font-size(16px) */
-    height: 3.375em; /* image-height(54px) / font-size(16px) */
+    width:  6.250em; /* image-width(100px) / @font-size(16px) */
+    height: 3.375em; /* image-height(54px) / @font-size(16px) */
 
     /* @hidden-accessible-text */
     text-indent: -9999px;
     overflow: hidden;
   }
 
-  #header .search {
-    margin-top: 1.5em; /* @line-height */
-  }
   #header h2 + p {
     font-weight: bold;
   }
@@ -715,6 +712,9 @@
     font-style: normal;
   }
 
+  #header .search {
+    margin-top: 1.5em; /* @line-height */
+  }
   #header .search h3 {
     font-size: inherit;
     font-family: inherit;
@@ -750,111 +750,144 @@
     font-size: 0.875em;
   }
 
-  @media (min-width: 40em) and (max-width: 65em) {
+  @media (max-width: 24.9em) {
+    #header > .container > h2 + p + p {
+      position: absolute;
+      top: 0.75em;
+      right: 2.25em;
+    }
+  }
+  @media (min-width: 25em) and (max-width: 65em) {
     #header > .container {
-      padding-bottom: 3em;
+      padding-bottom: 4.5em;
     }
     #header.has-account > .container {
       padding-bottom: 0;
     }
-    #header > .container > h2 + p {
-      position: absolute;
-      bottom: 0;
-      left: 0.75em;
-    }
     #header > .container > h2 + p + p {
       position: absolute;
-      bottom: 0;
+      bottom: -0.75em;
       right: 2.25em;
+    }
+  }
+  @media (min-width: 25em) and (max-width: 39.9em) {
+    #header > .container > h2 + p {
+      position: absolute;
+      bottom: 1.5em;
+      left: 0;
+    }
+  }
+  @media (min-width: 40em) and (max-width: 55em) {
+    #header > .container > h2 + p {
+      position: absolute;
+      bottom: -0.75em;
+      left: 0.75em;
+    }
+  }
+  @media (min-width: 40em) and (max-width: 65em) {
+    #header > .container > h2 + p + p {
+      bottom: -0.75em;
+    }
+    #header > .container {
+      padding-bottom: 2.25em;
     }
   }
 
   @media (max-width: 24.9em) {
+    #header .search,
+    #header .primary {
+      font-size: 0.875em;
+    }
+  }
+
+  #header .search,
+  #header .search h3 {
+    display: inline;
+  }
+  #header .search h3 {
+    position: static;
+  }
+  #header .search {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+  }
+
+  #header .search form {
+    margin-top: 0;
+    background: white;
+    border: 0.125em solid rgb(139, 139, 139);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    padding: 3em;
+    position: absolute;
+    z-index: 9999;
+    left: -9999px;
+  }
+  #header .search:hover form {
+    left: auto;
+  }
+
+  @media (max-width: 44.9em) {
+    #header .search form {
+      padding: 1em;
+      width: 17em;
+    }
     #header .search p {
       font-size: 0.75em;
     }
   }
-  @media (min-width: 40em) {
 
-    #header .search,
-    #header .search h3 {
-      display: inline;
-    }
-    #header .search h3 {
-      position: static;
-    }
-    #header .search {
-      margin-left: 1.5em;
-      display: inline-block;
-      position: relative;
-      margin-top: 0;
-    }
-
+  @media (min-width: 25em) {
     #header .search form {
-      margin-top: 0;
-      position: absolute;
-      z-index: 9999;
-      left: -9999px;
-      background: white;
-      border: 0.125em solid rgb(139, 139, 139);
-      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-      padding: 3em;
+      width: 15em;
+      margin-left: -5em;
+    }
+  }
+
+  @media (min-width: 45em) {
+    #header .search form {
       width: 25em;
       margin-left: -15em;
     }
-    #header .search:hover form {
-      left: auto;
-      right: 0;
-    }
-
-    /* OPTIONAL: Make the account menu behave like a dropdown */
-    #header .search.scripted form {
-      transition: opacity 0.2s;
-      position: absolute;
-      left: 50%;
-      opacity: 1;
-    }
-    #header .search.summary form {
-      left: -9999px;
-      right: auto;
-      opacity: 0;
-    }
-
   }
 
-  @media (min-width: 40em) {
-    #header > .container:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    #header > .container > h2,
-    #header > .container > p {
-      margin-bottom: 0;
-      float: left;
-    }
-
-    #header .primary,
-    #header .search {
-      margin-top: 0;
-      margin-bottom: 0;
-      float: right;
-    }
-    #header .search {
-
-      /* @separator */
-      border-right: 0.1em solid rgb(239, 239, 239);
-      padding-right: 0.875em;
-      margin-right: 0;
-    }
+  /* OPTIONAL: Make the account menu behave like a dropdown */
+  #header .search.scripted form {
+    transition: opacity 0.2s;
+    position: absolute;
+    left: auto;
+    opacity: 1;
+  }
+  #header .search.summary form {
+    left: -9999px;
+    right: auto;
+    opacity: 0;
   }
 
+  #header > .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
+  #header .search,
+  #header .primary {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: right;
+  }
+  #header .search {
+
+    /* @separator */
+    border-right: 0.1em solid rgb(239, 239, 239);
+    padding-right: 0.875em;
+    margin-right: 0;
+  }
   #header .options {
     color: rgb(102, 102, 102);
   }
   #header .options li {
-    font-size: 0.875em; /* 14px / 16px */
+    font-size: 0.875em; /* 14px / @font-size(16px) */
   }
   #header .options li a {
     display: block;
@@ -896,7 +929,7 @@
     font-size: inherit;
   }
   #header .todos h3 a {
-    width       : 2.625em; /* account-image-size(42px) / font-size(16px) */
+    width       : 2.625em; /* account-image-size(42px) / @font-size(16px) */
     line-height : 2.625em;
     text-align: center;
     text-decoration: inherit;
@@ -910,86 +943,124 @@
   }
 
   /* OPTIONAL: Only show the options when hovering over the navigation */
-  @media (min-width: 40em) {
-
-    #header > .container {
-      position: relative;
-    }
-
-    #header .account {
-      clear: both;
-      padding-top: 1.5em;
-    }
-
-    #header.has-account .primary {
-      margin-right: 9em;
-    }
-
-    #header .todos,
-    #header .account {
-      clear: none;
-      position: absolute;
-      top: 2.25em;
-      right: 3em;
-      margin-top: 0;
-      padding-top: 0;
-    }
-    #header .account {
-      position: absolute;
-      right: 7em;
-
-      /* @separator */
-      margin-left: 0.875em;
-      border-left: 0.1em solid rgb(239, 239, 239);
-      padding-left: 0.875em;
-    }
-    #header .todos {
-      padding-left: 1.5em;
-    }
-    #header .todos   h3,
-    #header .account h3 {
-      margin-bottom: 0;
-    }
-
-    #header .options {
-      position: absolute;
-      left: -9999px;
-      z-index: 9999;
-      background: white;
-      border: 0.125em solid rgb(139, 139, 139);
-      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-      padding: 1.5em;
-    }
-    #header .todos .options {
-      width: 20em;
-    }
-    #header .account .options {
-      width: 10em;
-    }
-    #header .todos:hover    .options,
-    #header .account:hover  .options {
-      left: auto;
-      right: 0;
-    }
-
-    /* OPTIONAL: Make the account menu behave like a dropdown */
-    #header .todos.scripted   .options,
-    #header .account.scripted .options {
-      transition: opacity 0.2s;
-      position: absolute;
-      left: auto;
-      right: 0;
-      opacity: 1;
-    }
-    #header .todos.summary   .options,
-    #header .account.summary .options {
-      left: -9999px;
-      right: auto;
-      opacity: 0;
-    }
+  #header > .container {
+    position: relative;
+  }
+  #header .account {
+    clear: both;
+    padding-top: 1.5em;
   }
 
   @media (min-width: 40em) {
+    #header.has-account .primary {
+      margin-right: 9em;
+    }
+  }
+
+  #header .todos,
+  #header .account {
+    clear: none;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  #header .account {
+    position: absolute;
+    right: 5.5em;
+
+    /* @separator */
+    margin-left: 0.875em;
+    border-left: 0.1em solid rgb(239, 239, 239);
+    padding-left: 0.875em;
+  }
+  @media (min-width: 40em) {
+    #header .todos,
+    #header .account {
+      top: 2.25em;
+      right: 3em;
+    }
+    #header .account {
+      right: 7em;
+    }
+  }
+  #header .todos {
+    padding-left: 1.5em;
+  }
+  #header .todos   h3,
+  #header .account h3 {
+    margin-bottom: 0;
+  }
+  #header .options {
+    position: absolute;
+    left: -9999px;
+    z-index: 9999;
+    background: white;
+    border: 0.125em solid rgb(139, 139, 139);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    padding: 1.5em;
+  }
+
+  #header .account .options {
+    width: 10em;
+  }
+  #header .todos .options {
+    width: 13.75em;
+  }
+
+  @media (min-width: 25em) {
+    #header .todos .options {
+      width: 20em;
+    }
+  }
+
+  #header .todos:hover    .options,
+  #header .account:hover  .options {
+    left: auto;
+    right: 0;
+  }
+
+  /* OPTIONAL: Make the account menu behave like a dropdown */
+  #header .todos.scripted   .options,
+  #header .account.scripted .options {
+    transition: opacity 0.2s;
+    position: absolute;
+    left: auto;
+    right: 0;
+    opacity: 1;
+  }
+  #header .todos.summary   .options,
+  #header .account.summary .options {
+    left: -9999px;
+    right: auto;
+    opacity: 0;
+  }
+
+
+  #header .primary {
+    margin-left: 0.875em;
+  }
+
+  @media (min-width: 25em) {
+    #header > .container > h2,
+    #header > .container > p {
+      margin-bottom: 0;
+      float: left;
+    }
+  }
+  @media (max-width: 39.9em) {
+    #header.has-account  > .container > h2 {
+      margin-bottom: 1.5em;
+    }
+  }
+  @media (min-width: 25em) and (max-width: 39.9em) {
+    #header.has-account  > .container > h2 {
+      display: block;
+      float: none;
+    }
+  }
+  @media (min-width: 25em) {
     #header h2,
     #header > .container > p,
     #header .primary {
@@ -997,9 +1068,6 @@
     }
     #header > .container > p {
       margin-left: 1.5em;
-    }
-    #header .primary {
-      margin-left: 0.875em;
     }
     #header .primary ul,
     #header .primary ul li {
@@ -1168,7 +1236,7 @@
     }
     .post > .popular-posts {
       margin-top: 3em;
-      margin-right: 20.25em; /* ad-width(300px) / font-size(16px) + 1.5em */
+      margin-right: 20.25em; /* ad-width(300px) / @font-size(16px) + 1.5em */
     }
     .post > .popular-posts .activity-item > .post,
     .post > .popular-posts .activity-item > .comment,
@@ -1182,6 +1250,17 @@
     }
   }
 
+  aside.ad.top,
+  aside.ad.upper,
+  aside.ad.middlepromo,
+  aside.ad.middle,
+  aside.ad.lower,
+  aside.facebook,
+  aside.promotion,
+  aside.discussion,
+  #content .has-aside + aside {
+    margin-top: 3em;
+  }
   @media (min-width: 25em) and (max-width: 49.9em) {
     aside.ad.top,
     aside.ad.upper,
@@ -1194,7 +1273,7 @@
     #content .has-aside + aside {
       vertical-align: top;
       display: inline-block;
-      margin: 3em 1.5em 0 0;
+      margin-right: 1.5em;
       width: 18.75em;
       box-sizing: border-box;
     }
@@ -1493,12 +1572,12 @@
   /* OPTIONAL: Line up with the headline */
   @media (min-width: 40em) { /* @medium-size */
     .activity-item .post .has-image + .meta {
-      margin-left: 7.5em; /* image.width(120px) / font-size(16px) */
+      margin-left: 7.5em; /* image.width(120px) / @font-size(16px) */
     }
 
     /* Featured posts have a larger image */
     .featured .activity-item .post .has-image + .meta {
-      margin-left: 16.875em; /* image.width(270px) / font-size(16px) */
+      margin-left: 16.875em; /* image.width(270px) / @font-size(16px) */
     }
   }
 
@@ -1621,7 +1700,7 @@
   .activity-item .follow .has-image ~ .introduction {
 
     /* OPTIONAL: Line up with the headline */
-    margin-left: 4.375em; /* image.width(70px) / font-size(16px) */
+    margin-left: 4.375em; /* image.width(70px) / @font-size(16px) */
 
     /* OPTIONAL: Line up with the follow button */
     margin-right: -0.3125em;
@@ -2005,7 +2084,7 @@
   .featured .activity-item .link h3 .image {
     float: left;
     margin: 0;
-    margin-right: 0.83333333333333em; /* $line_height / font-size(16px) */
+    margin-right: 0.83333333333333em; /* $line_height / @font-size(16px) */
   }
 
 
@@ -2022,7 +2101,7 @@
   .activity-header h1,
   .activity-header h2,
   .topic > .featured h2 {
-    font-size: 1.875em; /* 30px / font-size(16px) */
+    font-size: 1.875em; /* 30px / @font-size(16px) */
   }
 
   @media (min-width: 70em) {
@@ -2060,7 +2139,7 @@
     }
     .topic > .featured h2 + p {
       color: rgb(153, 153, 153);
-      font-size: 0.75em; /* 12px / font-size(16px) */
+      font-size: 0.75em; /* 12px / @font-size(16px) */
       font-weight: bold;
     }
     .topic > .featured > h2 + p + section {
@@ -2267,7 +2346,7 @@
     margin-bottom: 0;
 
     /* OPTIONAL: Line up with the headline */
-    margin-left: 5.625em; /* image.width(90px) / font-size(16px) */
+    margin-left: 5.625em; /* image.width(90px) / @font-size(16px) */
 
     /* OPTIONAL: Line up with the follow button */
     margin-right: -0.3125em;
@@ -2700,7 +2779,7 @@
     margin-right: 1.5em;
   }
   .member .header .details dd {
-    font-size: 0.875em; /* 14px / font-size(16px) */
+    font-size: 0.875em; /* 14px / @font-size(16px) */
   }
   .member .header .details dd,
   .member .header .details dd a {
@@ -2739,7 +2818,7 @@
     font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
     color: rgb(69, 71, 71);
-    font-size: 3.875em; /* 62px / font-size(16px) */
+    font-size: 3.875em; /* 62px / @font-size(16px) */
   }
   .topic .header h1 a {
     display: block;
@@ -2757,7 +2836,7 @@
   .topic .header .add a {
     font-weight: bold;
     color: rgb(102, 102, 102);
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
   @media (min-width: 30em) {
     .topic .header {
@@ -2862,7 +2941,7 @@
     margin-bottom: 0.375em;
 
     color: rgb(153, 153, 153);
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
     font-family: inherit;
     line-height: inherit;
     font-weight: bold;
@@ -2892,7 +2971,7 @@
     margin-right: 0.75em;
   }
   .post > header .author button {
-    font-size: 0.75em; /* 12px / font-size(16px) */
+    font-size: 0.75em; /* 12px / @font-size(16px) */
   }
 
   .post > header .share h2 {
@@ -2918,7 +2997,7 @@
 
   .post > header .share h2 {
     color: rgb(153, 153, 153);
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
     font-weight: bold;
   }
   .post > header .share a {
@@ -2926,14 +3005,14 @@
     background-color: rgb(255, 249, 208);
     color: rgb(218, 198, 71);
     text-decoration: none;
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
     padding: 0.5em 1em;
     font-weight: bold;
   }
 
   .post > header .do      abbr,
   .post > header .promote abbr {
-    font-size: 2.375em; /* 38px / font-size(16px) */
+    font-size: 2.375em; /* 38px / @font-size(16px) */
     line-height: normal;
   }
   .post > header .do      button,
@@ -2982,14 +3061,14 @@
   }
 
   .post > article header h2 {
-    font-size: 1.875em; /* 30px / font-size(16px) */
+    font-size: 1.875em; /* 30px / @font-size(16px) */
     font-family: inherit;
     font-weight: bold;
     color: rgb(42, 43, 44); /* @text-color */
   }
   .post > article .topics {
     color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / font-size(16px) */
+    font-size: 0.75em; /* 12px / @font-size(16px) */
   }
   .post > article .topics a {
     color: inherit;
@@ -3003,7 +3082,7 @@
   }
   .post > article .time {
     color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / font-size(16px) */
+    font-size: 0.75em; /* 12px / @font-size(16px) */
   }
   .post > article .time span {
     font-weight: bold;
@@ -3025,10 +3104,10 @@
     margin-right: 1.5em;
   }
   .post > article h1 {
-    font-size: 2.375em; /* 38px / font-size(16px) */
+    font-size: 2.375em; /* 38px / @font-size(16px) */
   }
   .post > article p {
-    line-height: 1.875; /* 30px / font-size(16px) */
+    line-height: 1.875; /* 30px / @font-size(16px) */
   }
   .post > footer h2 {
     font-size: inherit;
@@ -3045,7 +3124,7 @@
   }
   .post > footer .topics h2,
   .post > footer .topics li {
-    font-size: 0.875em; /* 14px / font-size(16px) */
+    font-size: 0.875em; /* 14px / @font-size(16px) */
   }
 
   .post > footer .topics h2 {
@@ -3232,8 +3311,8 @@
   }
   @media (min-width: 30em) {
     .post .suggested-post {
-      padding-left: 7.5em; /* image-width(120px) / font-size(16px) */
-      min-height: 12.5em; /* image-height(200px) / font-size(16px) */
+      padding-left: 7.5em; /* image-width(120px) / @font-size(16px) */
+      min-height: 12.5em; /* image-height(200px) / @font-size(16px) */
     }
     .post .suggested-post img {
       position: absolute;
@@ -3253,7 +3332,7 @@
     position: relative;
     border: 0.25em solid rgb(247, 247, 247);
     background-color: rgb(252, 252, 252);
-    padding: 1em; /* 16px / font-size(16px) */
+    padding: 1em; /* 16px / @font-size(16px) */
   }
   .discussion h2 {
     position: absolute;
@@ -3262,7 +3341,7 @@
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
   .discussion h3 {
     font-size: inherit;
@@ -3297,7 +3376,7 @@
     padding: 1em 0; /* 11px / font-size(11px) */
     border-bottom: 1px solid rgb(218, 220, 224);
     color: rgb(102, 102, 102);
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
   .discussion li a {
     text-decoration: none;
@@ -3320,7 +3399,7 @@
     color: rgb(247, 113, 113);
     text-decoration: inherit;
     font-weight: bold;
-    font-size: 0.6875em; /* 11px / font-size(16px) */
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
   .promotion {
     padding: 1.5em;
