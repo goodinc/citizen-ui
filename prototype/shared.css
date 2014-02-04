@@ -1225,43 +1225,6 @@
     margin-top: 3em;
   }
 
-  @media (min-width: 500em) and (max-width: 609.9em) {
-    #content > .container:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    aside.ad.upper,
-    aside.ad.middlepromo,
-    aside.ad.middle,
-    aside.ad.lower,
-    aside.facebook,
-    aside.promotion,
-    aside.discussion {
-      width: 50%;
-      box-sizing: border-box;
-      float: right;
-    }
-    aside.ad.middle {
-      position: absolute;
-      right: 3em;
-      width: auto;
-    }
-    .post > .popular-posts {
-      margin-top: 3em;
-      margin-right: 20.25em; /* ad-width(300px) / @font-size(16px) + 1.5em */
-    }
-    .post > .popular-posts .activity-item > .post,
-    .post > .popular-posts .activity-item > .comment,
-    .post > .popular-posts .activity-item > .follow,
-    .post > .popular-posts .activity-item > .more {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .post > .suggested-post {
-      clear: both;
-    }
-  }
 
   aside.ad.top,
   aside.ad.upper,
@@ -1274,7 +1237,7 @@
   #content .has-aside + aside {
     margin-top: 3em;
   }
-  @media (min-width: 25em) and (max-width: 49.9em) {
+  @media (min-width: 25em) and (max-width: 59.9em) {
     aside.ad.top,
     aside.ad.upper,
     aside.ad.middlepromo,
@@ -1291,17 +1254,12 @@
       box-sizing: border-box;
     }
   }
-  @media (min-width: 50em) {
+  @media (min-width: 60em) {
     #content > .container:after {
       content: "";
       display: table;
       clear: both;
     }
-    .post > article,
-    .post > footer,
-    .post > .comments,
-    .post > .popular-posts,
-    .post > .suggested-post,
     #content .has-aside {
       margin-top: 0;
       float: left;
@@ -1336,24 +1294,12 @@
       clear: both;
     }
   }
-  @media (min-width: 60em) {
-
-    .post > article,
-    .post > footer,
-    .post > .comments,
-    .post > .popular-posts,
-    .post > .suggested-post,
+  @media (min-width: 65em) {
     #content .has-aside {
       width: 60%;
     }
   }
   @media (min-width: 70em) {
-
-    .post > article,
-    .post > footer,
-    .post > .comments,
-    .post > .popular-posts,
-    .post > .suggested-post,
     #content .has-aside {
       width: 65%;
     }
@@ -2940,11 +2886,16 @@
     margin-bottom: 3em;
   }
 
+  .post > header .do      a,
+  .post > header .promote a {
+    display: block;
+    text-decoration: inherit;
+    color: inherit;
+  }
   .post > header .do      h2,
   .post > header .promote h2 {
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: bold;
+    font-size: 1.25em;
+
   }
 
   .post > header .author {
@@ -2959,6 +2910,21 @@
     line-height: inherit;
     font-weight: bold;
   }
+
+  .post > header .do,
+  .post > header .promote,
+  .post > header .author {
+    margin: 0;
+    border-width: 0 0 0.1em 0;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    padding-bottom: 1.5em;
+  }
+  .post > header .author,
+  .post > header .share {
+    padding-top: 1.5em;
+  }
+
 
   /* @follow-list */
   .post > header .author h3 {
@@ -3027,17 +2993,10 @@
   .post > header .promote abbr {
     font-size: 2.375em; /* 38px / @font-size(16px) */
     line-height: normal;
-  }
-  .post > header .do      button,
-  .post > header .promote button {
-    background: inherit;
-    color: inherit;
-    padding: 0;
-    font-family: "FreightText Light", "FreightTextLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-weight: 300;
+    font-weight: bold;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: 30em) and (max-width: 91.9em) {
     .post > header .options {
       width: 100%;
       display: table;
@@ -3053,17 +3012,37 @@
     .post > header .do,
     .post > header .promote,
     .post > header .author {
-      border-right: 0.1em solid rgb(221, 221, 221);
+      border-width: 0 0.1em 0 0;
       padding-right: 2.95em;
+      padding-bottom: 0;
     }
     .post > header .author,
     .post > header .share {
+      padding-top: 0;
       padding-left: 2.95em;
     }
     .post > header .share {
       text-align: center;
     }
 
+  }
+
+  @media (min-width: 92em) {
+    #content > .container > .post {
+      position: relative;
+    }
+    .post > header {
+      position: absolute;
+      left: -10em;
+      width: 9em;
+      text-align: right;
+    }
+    .post > header .author img {
+      display: block;
+      float: none;
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 
   @media (min-width: 50em) {
