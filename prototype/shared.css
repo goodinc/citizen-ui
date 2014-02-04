@@ -1147,8 +1147,12 @@
     color: white;
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     padding: 0.75em 1.5em;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgb(233, 233, 235);
   }
   nav.sub .active a {
     background-color: rgb(178, 178, 178);
@@ -1159,7 +1163,11 @@
     background-color: rgb(200, 200, 200);
   }
 
-  @media (min-width: 30em) {
+  nav.sub dt {
+    padding: 0 1.5em;
+  }
+
+  @media (min-width: 40em) {
     nav.sub ul,
     nav.sub li,
     nav.sub form,
@@ -1172,6 +1180,11 @@
 
     nav.sub {
       position: relative;
+    }
+
+    nav.sub a {
+      display: inline-block;
+      border-width: 0 1px 0 0;
     }
 
     /* KLUDGE: Attempt to hide the whitespace to the left of the button.
@@ -1189,11 +1202,11 @@
       text-align: center;
       min-width: 6.5em;
       color: rgb(102, 102, 102);
+      padding: 0;
     }
     nav.sub dd a {
       min-width: 3.5em;
       text-align: center;
-      border-right: 1px solid rgb(233, 233, 235);
     }
     nav.sub dt,
     nav.sub dd {
