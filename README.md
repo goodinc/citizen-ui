@@ -1,8 +1,8 @@
-### Good HTML
+## Good HTML
 
 These are HTML prototypes that represent the basic structure for the good.is production site.
 
-## Project Goals
+### Project Goals
 
 * Make the site load faster
 
@@ -14,15 +14,11 @@ These are HTML prototypes that represent the basic structure for the good.is pro
 
 * Make the site more accessible for disabled users
 
-## 
-
 * Allow users with old versions of Internet Explorer onto the site
 
 * Remove the need for a separate mobile site (less code to maintain)
 
 * Allow mobile users onto the main site so they get extra features like comments
-
-##
 
 * Simple, consistent HTML patterns so there won’t be a need to abstract into ruby
 
