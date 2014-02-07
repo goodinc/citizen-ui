@@ -245,16 +245,57 @@
 
 
   /* Search Results */
-
-  strong.highlight {
+  mark {
     background-color: rgb(255, 249, 207);
-    display: inline-block;
-    padding: 2px 3px 0px;
+    padding: 0.25em;
   }
 
 
-  /* =Navigation
+  /* =Paging
   ----------------------------------------------- */
+  .pagination {
+    border-top: 1px solid rgb(221, 223, 227);
+    position: relative;
+    padding: 1.75em 0 0;
+    text-align: right;
+  }
+  .pagination:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .pagination ul,
+  .pagination li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .pagination li a {
+    color: rgb(153, 153, 153);
+    font-size: 0.75em;
+    text-decoration: none;
+  }
+  .pagination li a:hover,
+  .pagination li a:active,
+  .pagination li a:focus {
+    color: rgb(49, 144, 242);
+  }
+  .pagination li {
+    display: inline;
+  }
+  .pagination a {
+    display: inline-block;
+    padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
+    color: rgb(83, 83, 83);
+    border: 1px solid rgb(240, 240, 240);
+    text-decoration: none;
+  }
+  .pagination .next     a,
+  .pagination .previous a {
+    font-weight: bold;
+  }
 
 
   /* =Text Sections
@@ -2527,12 +2568,27 @@
     display: block;
     margin-bottom: 0.75em;
   }
+
   .topic-list .more {
     margin-top: 1.5em;
   }
   .topic-list .more a:after {
     content: " →";
   }
+
+  /* More button */
+  .activity-list + .more,
+  .follow-list   + .more {
+  }
+  .activity-list + .more a,
+  .follow-list   + .more a {
+    text-decoration: none;
+  }
+  .activity-list + .more a:after,
+  .follow-list   + .more a:after {
+    content: " →";
+  }
+
   .topic-list a {
     text-decoration: none;
   }
@@ -3261,7 +3317,7 @@
   }
   .post > footer .topics a {
     display: inline-block;
-    padding: 0.7em 0.9em 0.6em;
+    padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83);
     background: rgb(252, 252, 252);
     border: 1px solid rgb(240, 240, 240);
