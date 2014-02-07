@@ -1,0 +1,24 @@
+
+This file contains the original icons, from Adobe Illustrator:
+app-icons.original.svg
+
+
+--
+To add symbols to the font files (icons.ttf, icons.eot, etc…):
+
+1. Visit this site:
+http://icomoon.io/app/
+
+2. Upload this file:
+app-icons.json
+
+3. Import your new icons
+
+4. Download the new font files
+
+Note: It may help if you begin by opening app-icons.original.svg in Adobe Illustrator and use it as a guide.
+
+
+--
+Further reading:
+http://alistapart.com/article/the-era-of-symbol-fonts
