@@ -1230,6 +1230,43 @@
     margin-left: 0;
     padding-left: 0;
   }
+  #footer li.rss       a,
+  #footer li.facebook  a,
+  #footer li.twitter   a,
+  #footer li.google    a,
+  #footer li.linkedin  a,
+  #footer li.tumblr    a,
+  #footer li.pinterest a {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 1.25em;
+    width: 2em;
+    height: 2em;
+  }
+  #footer li.rss       a {
+    background-image: url(shared/social/rss.svg);
+  }
+  #footer li.facebook  a {
+    background-image: url(shared/social/facebook.svg);
+  }
+  #footer li.twitter   a {
+    background-image: url(shared/social/twitter.svg);
+  }
+  #footer li.google    a {
+    background-image: url(shared/social/google.svg);
+  }
+  #footer li.linkedin  a {
+    background-image: url(shared/social/linkedin.svg);
+  }
+  #footer li.tumblr    a {
+    background-image: url(shared/social/tumblr.svg);
+  }
+  #footer li.pinterest a  {
+    background-image: url(shared/social/pinterest.svg);
+  }
   #footer li a {
     text-decoration: none;
     color: inherit;
@@ -3501,6 +3538,12 @@
     }
   }
 
+  .post .suggested-post:after {
+    /* @clear-fix */
+    content: "";
+    display: table;
+    clear: both;
+  }
   .post .suggested-post h2,
   .post .comments h2,
   .post .popular-posts h2 {
@@ -3514,6 +3557,20 @@
   .post .suggested-post p a {
     text-decoration: inherit;
     color: inherit;
+  }
+  .post .suggested-post p a img {
+    float: left;
+    margin-right: 0.875em;
+  }
+  .post .suggested-post p a:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(shared/next.svg) no-repeat center;
+    background-size: 1.25em auto;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
   }
   .post .suggested-post p a:hover,
   .post .suggested-post p a:active,
@@ -3558,14 +3615,16 @@
   }
   @media (min-width: 30em) {
     .post .suggested-post {
-      padding-left: 7.5em; /* image-width(120px) / @font-size(16px) */
-      min-height: 12.5em; /* image-height(200px) / @font-size(16px) */
+      /*padding-left: 7.5em;*/ /* image-width(120px) / @font-size(16px) */
+      /*min-height: 12.5em;*/ /* image-height(200px) / @font-size(16px) */
     }
+    /*
     .post .suggested-post img {
       position: absolute;
       top: 0;
       left: 0
     }
+    */
   }
 
 
