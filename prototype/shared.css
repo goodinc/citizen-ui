@@ -727,7 +727,7 @@
     padding-left: 0;
   }
   #header .primary li {
-    display: inline;
+    display: inline-block;
   }
   #header .primary li + li {
     margin-left: 0.125em;
@@ -735,31 +735,65 @@
   #header .search  h3 a,
   #header .primary li a {
     display: inline-block;
+    /*
     background-color: rgb(219, 235, 237);
     color: rgb(149, 171, 174);
+    */
+    background-color: rgb(228, 241, 242);
+    color: rgb(108, 153, 157);
     text-decoration: none;
     font-weight: bold;
     font-size: 0.875em; /* 14px / @font-size(16px) */
     line-height: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
-    padding: 0.6428571429em 1.7142857143em; /* (account-image-size(42px) - line-height(24px) / 2 = 9px) / font-size(14px)     @line-height(24px) / font-size(14px) */
-    border-radius: 0.125em;
+    padding: 0.6428571429em 1.7142857143em; /* (account-image-size(42px) - line-height(24px) / 2 = 9px) / font-size(14px) */
+
+    border-radius: 0.125em; /* @button-border-radius */
   }
+  #header .primary li a {
+    padding-right: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
+    background-image: url(shared/blocks.svg);
+    background-repeat: no-repeat;
+    background-position: 1.25em 50%;
+    background-size: 1.6428571429em auto; /* image-size(23px) / font-size(14px) */
+    padding-left: 3.6428571429em; /* background-size + 2em */
+  }
+  #header .primary li:last-child a {
+    /*
+    background-color: rgb(255, 224, 18);
+    color: rgb(219, 191, 3);
+    */
+    color: rgb(170, 149, 5);
+    background-color: rgb(255, 233, 84);
+    background-image: url(shared/lightning.svg);
+    background-size: 1.5em auto; /* image-size(21px) / font-size(14px) */
+    padding-left: 3.5em; /* background-size + 2em */
+  }
+
+  #header .search  h3 {
+    background-color: rgb(102, 102, 102);
+    border-radius: 0.125em; /* @button-border-radius */
+  }
+  #header .primary li {
+    background-color: rgb(219, 235, 237);
+    border-radius: 0.125em; /* @button-border-radius */
+  }
+  #header .primary li:last-child {
+    background-color: rgb(255, 224, 18);
+  }
+  #header .search  h3 a,
+  #header .primary li a {
+    opacity: 0.5;
+  }
+
+  #header .search h3 a:hover,
+  #header .search h3 a:active,
+  #header .search h3 a:focus,
   #header .primary li a:hover,
   #header .primary li a:active,
   #header .primary li a:focus {
-    background: rgb(228, 241, 242);
-    color: rgb(108, 153, 157);
+    opacity: 1;
   }
-  #header .primary li:last-child a {
-    background-color: rgb(255, 224, 18);
-    color: rgb(219, 191, 3);
-  }
-  #header .primary li:last-child a:hover,
-  #header .primary li:last-child a:active,
-  #header .primary li:last-child a:focus {
-    background: rgb(255, 233, 84);
-    color: rgb(170, 149, 5);
-  }
+
   #header h2 {
     font-size: inherit;
 
@@ -809,13 +843,17 @@
     left: -9999px;
   }
   #header .search h3 a {
+    /*
     background-color: rgb(139, 139, 139);
-    color: rgb(102, 102, 102);
-  }
-  #header .search h3 a:hover,
-  #header .search h3 a:active,
-  #header .search h3 a:focus {
+    */
     background: rgb(173, 173, 173);
+    background-image: url(shared/lense.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(102, 102, 102);
+
+    /* @hidden-accessible-text */
+    text-indent: -9999px;
   }
   #header .search label {
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
@@ -884,9 +922,12 @@
     }
   }
 
-  #header .search,
-  #header .search h3 {
+  #header .search {
     display: inline;
+  }
+  #header .search h3 {
+    /* TRICKY: Make this inline-block so the background color will appear behind the link. */
+    display: inline-block;
   }
   #header .search h3 {
     position: static;
@@ -1153,9 +1194,12 @@
     #header > .container > p {
       margin-left: 1.5em;
     }
-    #header .primary ul,
-    #header .primary ul li {
+    #header .primary ul {
       display: inline;
+    }
+    #header .primary ul li {
+      /* TRICKY: Make this inline-block so the background color will appear behind the link. */
+      display: inline-block;
     }
   }
 
@@ -1453,7 +1497,7 @@
     /* Data URI encoded from: ocean.svg */
     background: rgb(27, 128, 234) url(data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwMHB4IiBoZWlnaHQ9IjUwMHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAuNSIgeTE9IjAiIHgyPSIwLjUiIHkyPSIxIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMzcsIDEzOSwgMjQ1KSIgLz4KICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoMjcsIDEyOCwgMjM0KSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPgogICAg) top repeat-x;
     background-size: contain;
-    border-radius: 0.125em;
+    border-radius: 0.125em; /* @button-border-radius */
   }
   .join-intro button:hover,
   .join-intro button:active,
@@ -1535,12 +1579,12 @@
 
   /* Icons */
   .meta .dos      abbr,
-  .meta .promotes    abbr,
+  .meta .promotes abbr,
   .meta .comments abbr {
     font-size: 0.75em; /* 12px / @font-size */
   }
   .meta .dos      abbr:before,
-  .meta .promotes    abbr:before,
+  .meta .promotes abbr:before,
   .meta .comments abbr:before {
 
     /* @good-icons */
@@ -1566,15 +1610,15 @@
     background-size: contain;
   }
   .meta .dos abbr:before {
-    content: "\e001";
+    content: "\e001"; /* @icon-do */
     color: rgb(83, 231, 185);
   }
   .meta .promotes abbr:before {
-    content: "\e002";
+    content: "\e002"; /* @icon-promote */
     color: rgb(113, 179, 247);
   }
   .meta .comments abbr:before {
-    content: "\e003";
+    content: "\e003"; /* @icon-comment */
     color: rgb(255, 223, 145);
   }
 
@@ -1925,8 +1969,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-topic */
-    content: "\e004";
+    content: "\e004"; /* @icon-topic */
 
     color: rgb(247, 105, 100);
     font-size: 0.9375em; /* 15px / @font-size */
@@ -1990,7 +2033,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    content: "\e000";
+    content: "\e000"; /* @icon-triangle */
     color: rgb(34, 155, 246);
     font-size: 0.9375em; /* 15px / $font_size */
 
@@ -3039,8 +3082,13 @@
   }
   .post > header .do      h2,
   .post > header .promote h2 {
-    font-size: 1.25em;
-
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+  }
+  .post > header .do      h2 + p,
+  .post > header .promote h2 + p {
+    margin-top: 0;
   }
 
   .post > header .share  h2,
@@ -3058,11 +3106,20 @@
     border-width: 0 0 0.1em 0;
     border-style: solid;
     border-color: rgb(221, 221, 221);
-    padding-bottom: 1.5em;
+  }
+  .post > header .do,
+  .post > header .promote {
+    padding-bottom: 0.875em; /* @line-height(1.75) / 2 */
+  }
+  .post > header .author {
+    padding-bottom: 2.1875em; /* @line-height(1.75) x 5/4 */
   }
   .post > header .author,
   .post > header .share {
-    padding-top: 1.5em;
+    padding-top: 1.75em; /* @line-height(1.75) */
+  }
+  .post > header .share {
+    margin-top: 0;
   }
 
 
@@ -3141,6 +3198,42 @@
     font-weight: bold;
   }
 
+  .post > header .do      abbr:before,
+  .post > header .promote abbr:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 0.55em; /* image-size(21px) / font-size(38px) */
+
+    line-height: 2em;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.25em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .post > header .promote abbr:before {
+    content: "\e001"; /* @icon-do */
+    color: rgb(83, 231, 185);
+  }
+  .post > header .promote abbr:before {
+    content: "\e002"; /* @icon-promote */
+    color: rgb(113, 179, 247);
+  }
+
   @media (min-width: 30em) and (max-width: 91.9em) {
     .post > header .options {
       width: 100%;
@@ -3179,6 +3272,7 @@
     .post > header {
       position: absolute;
       left: -10em;
+      top: 3.5em;
       width: 9em;
       text-align: right;
     }
@@ -3294,8 +3388,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-topic */
-    content: "\e004";
+    content: "\e004"; /* @icon-topic */
 
     color: rgb(247, 105, 100);
     font-size: 1.15384615384615em; /* 15px / 13px */
@@ -3328,7 +3421,7 @@
   .post > footer .topics a:active,
   .post > footer .topics a:focus {
     background: white;
-    color: #2f84da;
+    color: rgb(47, 132, 218); /* @deep-blue */
   }
 
 
@@ -3425,7 +3518,7 @@
   .post .suggested-post p a:hover,
   .post .suggested-post p a:active,
   .post .suggested-post p a:focus {
-    color: rgb(47, 132, 218);
+    color: rgb(47, 132, 218); /* @deep-blue */
   }
   .post .suggested-post h2 a,
   .post .popular-posts h2 a {
@@ -3438,7 +3531,7 @@
   .post .popular-posts  h2 a:hover,
   .post .popular-posts  h2 a:active,
   .post .popular-posts  h2 a:focus {
-    color: rgb(47, 132, 218);
+    color: rgb(47, 132, 218); /* @deep-blue */
   }
   .post .suggested-post h2 a {
     font-weight: bold;
@@ -3482,7 +3575,9 @@
   -----------------------------------------------
   ----------------------------------------------- */
   .discussion {
-    margin-top: 1.5em;
+    /* Make space for the main headline (which is positioned outside of the box) */
+    margin-top: 3.5em; /* @line-height(1.75) x 2 */
+
     position: relative;
     border: 0.25em solid rgb(247, 247, 247);
     background-color: rgb(252, 252, 252);
@@ -3490,12 +3585,17 @@
   }
   .discussion h2 {
     position: absolute;
-    top: -2.18181818181818em; /* 1.5em / font-size(0.6875em) */
+    top: -3.81818181818183em; /* @line-height(1.75) x 3/2 / font-size(0.6875em) */
+    left: 0;
     color: rgb(247, 113, 113);
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
+    line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
+    background: transparent url(shared/target.svg) no-repeat left;
+    background-size: 1.6363636364em auto; /* image-size(18px) / font-size(0.6875em) */
+    padding-left: 2.25em;
   }
   .discussion h3 {
     font-size: inherit;
@@ -3543,7 +3643,7 @@
   .discussion li a:hover,
   .discussion li a:active,
   .discussion li a:focus {
-    color: rgb(47, 132, 218);
+    color: rgb(47, 132, 218); /* @deep-blue */
   }
   .discussion li img {
     float: right;
@@ -3710,15 +3810,15 @@
   }
 
   .comment-list article .comment-reply:before {
-    content: "\e600";
+    content: "\e600"; /* @icon-reply */
   }
 
   .comment-list article .flag:before {
-    content: "\e001";
+    content: "\e001"; /* @icon-flag */
   }
 
   .comment-list article .delete:before {
-    content: "\e004";
+    content: "\e004"; /* @icon-delete */
   }
 
   .comment-list article .comment-reply:hover:before {
