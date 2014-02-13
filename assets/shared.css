@@ -1,0 +1,4173 @@
+
+/*-----------------------------------------------
+    Shared Styles (for all screen sizes)
+  ----------------------------------------------- */
+
+
+
+  /* =Fonts
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url(shared/brandon.eot);
+    src: url(shared/brandon.eot?#iefix) format('eot'),
+         url(shared/brandon.woff) format('woff'),
+         url(shared/brandon.ttf) format('truetype'),
+         url(shared/brandon.svg#brandon) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Freight Text Light";
+    src: url(shared/freight.eot);
+    src: url(shared/freight.eot?#iefix) format('eot'),
+         url(shared/freight.woff) format('woff'),
+         url(shared/freight.ttf) format('truetype'),
+         url(shared/freight.svg#freight) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Trade Gothic Bold Condensed";
+    src: url(shared/trade.eot);
+    src: url(shared/trade.eot?#iefix) format('eot'),
+         url(shared/trade.woff) format('woff'),
+         url(shared/trade.ttf) format('truetype'),
+         url(shared/trade.svg#trade) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Good Icons";
+    src: url(shared/icons.eot);
+    src: url(shared/icons.eot?#iefix) format('eot'), url(shared/icons.woff) format('woff'), url(shared/icons.ttf) format('truetype'), url(shared/icons.svg#icons) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "App Icons";
+    src: url(shared/app-icons.eot);
+    src: url(shared/app-icons.eot?#iefix) format('eot'), url(shared/app-icons.woff) format('woff'), url(shared/app-icons.ttf) format('truetype'), url(shared/app-icons.svg#app-icons) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  /* =Elements
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  body {
+    font: 100%/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    margin: 0;
+    padding: 0;
+    background: rgb(249, 249, 250); /* @bright-white */
+    color: rgb(42, 43, 44); /* @text-color */
+  }
+  a {
+    color: rgb(113, 179, 247); /* @link-color */
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgb(153, 153, 153); /* @link-hover-color */
+    text-decoration: none;
+  }
+
+  /* Fit media to the available width */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  iframe,  object, embed {
+    max-width: 100%;
+  }
+
+  /* Older browsers sometimes render these inline */
+  header, footer, section, article, aside, nav {
+    display: block;
+  }
+
+
+  /* =Text
+  ----------------------------------------------- */
+
+  /* Margins */
+  h1, h2, h3, h4, h5, h6, p, ol, ul, dl, form, table, blockquote, fieldset,
+  header, footer, section, article, aside, nav {
+    margin-top    : 0.875em; /* @line-height / 2 */
+    margin-bottom : 0.875em;
+  }
+  *:first-child {
+    margin-top: 0;
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* For readability */
+  /*
+  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li, figure {
+    max-width: 42em;
+  }
+  */
+
+  /* Headlines
+  http://typecast.com/shared/uploads/typographic-scale.png
+  */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: 300;
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
+  }
+
+  /* KLUDGE: Give vcards the same amount of margin as headlines (for the contact page) */
+  div.vcard {
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height   : 1.1666666667em; /* @line-height x 2 / 3 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+  }
+  h2 {
+    font-size: 2.25em;
+    line-height   : 0.7777777778em; /* @line-height / 2.25 */
+    margin-top    : 0.7777777778em;
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  h3 {
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+
+    /* Add to the line-height and subtract from the margin
+    to make multi-line headlines easier to read. */
+    /*
+    line-height   : 1.25em; *//* (@line-height x 1.25) / 1.5 */
+    /*margin-top    : 0.75em;*/
+  }
+  h4 {
+    font-size: 1.3125em;
+    line-height   : 1.14285714285714em; /* @line-height / 1.3125 */
+    margin-top    : 1.14285714285714em;
+    margin-bottom : 0.57142857142857em;
+  }
+  h5 {
+    font-size: 1.125em;
+    line-height   : 1.33333333333333em; /* @line-height / 1.125 */
+    margin-top    : 1.33333333333333em;
+    margin-bottom : 0.66666666666667em;
+  }
+  h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+  }
+  h6 {
+    font-size: 1em;
+    font-style: italic;
+  }
+
+  /* Experimental */
+  @media (max-width: 50em) {
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  /* Experimental */
+  @media (max-width: 30em) {
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.75em;
+    }
+  }
+
+
+  dt {
+    margin-top: 0.75em;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+  }
+  dd {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  figure .image {
+    background: rgb(249, 249, 249);
+    border: 1px solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  figure img {
+    display: block;
+    margin: 0 auto;
+  }
+  figcaption {
+    font-size: 0.75em;
+    line-height: 1.33333333333333;
+    padding: 1.86em 0;
+    border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    margin-bottom: 1.86em;
+  }
+
+  blockquote {
+    border-left: 0.125em solid rgb(178, 178, 178);
+    color: black;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding: 0 0 0 2.0625em; /* 0 0 0 33px */
+    margin: 2.1875em 0 2.1875em 0; /* 35px 50px 35px 0 */
+  }
+
+  @media (min-width: 25em) {
+    blockquote {
+      padding-right: 2.1875em; /* 35px */
+    }
+  }
+
+  @media (min-width: 40em) {
+    blockquote {
+      margin-right: 3.125em; /* 50px */
+    }
+  }
+
+  .topic .has-aside h2,
+  .member .has-aside h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.875em; /* 30px / @font-size(16px) */
+    margin-bottom: 1em;
+  }
+
+
+  /* Search Results */
+  mark {
+    background-color: rgb(255, 249, 207);
+    padding: 0.25em;
+  }
+
+
+  /* =Paging
+  ----------------------------------------------- */
+  .pagination {
+    border-top: 1px solid rgb(221, 223, 227);
+    position: relative;
+    padding: 1.75em 0 0;
+    text-align: right;
+  }
+  .pagination:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .pagination ul,
+  .pagination li {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .pagination li a {
+    color: rgb(153, 153, 153);
+    font-size: 0.75em;
+    text-decoration: none;
+  }
+  .pagination li a:hover,
+  .pagination li a:active,
+  .pagination li a:focus {
+    color: rgb(49, 144, 242);
+  }
+  .pagination li {
+    display: inline;
+  }
+  .pagination a {
+    display: inline-block;
+    padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
+    color: rgb(83, 83, 83);
+    border: 1px solid rgb(240, 240, 240);
+    text-decoration: none;
+  }
+  .pagination .next     a,
+  .pagination .previous a {
+    font-weight: bold;
+  }
+
+
+  /* =Text Sections
+  ----------------------------------------------- */
+
+
+  /* =Headlines
+  ----------------------------------------------- */
+  ul.headlines,
+  ul.headlines li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  ul.headlines li {
+    margin-top: 1.5em; /* @line-height */
+  }
+  ul.headlines li > a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul.headlines li > a h2 {
+    text-decoration: underline;
+  }
+  ul.headlines li > a:hover  h2,
+  ul.headlines li > a:active h2,
+  ul.headlines li > a:focus  h2 {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  ul.headlines li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  ul.headlines li img {
+    float: left;
+    margin-right: 1.5em;
+  }
+
+
+
+  /* =Application
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Form
+  ----------------------------------------------- */
+  form p.submit {
+    margin-top: 1.5em;
+  }
+  form .text label {
+    display: block;
+    padding-bottom: 0.7em;
+  }
+  form .select label {
+    display: block;
+    padding-bottom: 0.7em;
+  }
+  form label > span {
+    font-size: 0.9375em;
+    line-height: 1.6em; /* @line-height / 0.9375 */
+  }
+  form .text label > span {
+    display: block;
+  }
+  form .text label br {
+    display: none;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="phone"],
+  input[type="search"],
+  input[type="password"],
+  textarea {
+    border-width: 0;
+    border-radius: 0;
+    border: 1px solid rgb(225, 225, 225); /* @bright-silver */
+
+    /* Give the field a width of 22em’s, but make it fit on small screens. */
+    max-width: 22em;
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: rgb(102, 102, 102);
+
+    /* TRICKY: Some browsers don’t allow line height to be
+    adjusted on text fields, so assume a line height of “normal”
+    and rely on padding to adjust to the vertical rythm. */
+    padding: 0.45em 0.6em;
+  }
+  textarea {
+    display: block;
+    margin: 0;
+
+    /* Give the field a width of 33em’s, but make it fit on small screens. */
+    max-width: 33em;
+    width: 100%;
+    height: 4.5em; /* line-height(~1.2em) + padding(0.45em) x 2 */
+    box-sizing: border-box;
+  }
+  select {
+    font-size: inherit;
+  }
+
+  form .submit {
+    margin-top: 1.5em; /* @line-height */
+  }
+
+  form ul.submit,
+  form ul.submit li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  form ul.submit li {
+    display: inline;
+    margin-right: 1.5em;
+  }
+
+  form .note,
+  form label em {
+    color: rgb(139, 139, 139);
+    font-size: 0.875em; /* 12px / 16px */
+    font-style: italic;
+  }
+  form .note {
+    margin-top: 0.375em;
+    display: block;
+  }
+
+  form .error input[type="text"],
+  form .error input[type="email"],
+  form .error input[type="phone"],
+  form .error input[type="password"] {
+    border-color: rgb(255, 200, 200);
+    font-weight: bold;
+    color: rgb(249, 154, 152);
+    text-decoration: underline;
+  }
+  form .error-message {
+    color: rgb(225, 51, 51);
+    font-weight: normal;
+    display: block;
+  }
+
+  fieldset {
+    margin-top: 1.5em; /* @line-height */
+    border-width: 0;
+    border-top: 0.1em solid rgb(239, 239, 239);
+    padding-top: 3em; /* @line-height x 2 */
+    position: relative;
+  }
+  legend {
+    position: absolute;
+    top: 1.5em; /* @line-height */
+    left: 0;
+  }
+
+  section.message {
+    padding: 1.5em;
+    font-size: 1.1em;
+    background: rgb(230, 235, 253);
+    border: 1px solid rgb(204, 204, 251);
+  }
+  section.message h1 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    margin-right: 0.25em;
+  }
+  section.message h1,
+  section.message p {
+    display: inline;
+  }
+  section.message p,
+  section.message li {
+    color: rgb(91, 94, 152);
+  }
+  section.message.error {
+    background: rgb(253, 235, 230);
+    border: 1px solid rgb(251, 204, 204);
+  }
+  section.message.error p,
+  section.message.error li {
+    color: rgb(152, 94, 91);
+  }
+  section.message.success {
+    background: rgb(230, 253, 235);
+    border: 1px solid rgb(204, 251, 204);
+  }
+  section.message.success p,
+  section.message.success li {
+    color: rgb(91, 152, 94);
+  }
+
+
+  /* =Links & Buttons
+  ----------------------------------------------- */
+  a .action span,
+  .action a,
+  button {
+    display: inline-block;
+    font-size: inherit;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    background-color: rgb(113, 179, 247);
+    color: white;
+    cursor: pointer;
+    border-width: 0;
+    text-decoration: none;
+    font-weight: bold;
+
+    line-height: 1.5em;
+    padding: 0.75em 1.5em;
+    transition: color 0.2s, background-color 0.2s, opacity 0.2s;
+  }
+  button[disabled] {
+    cursor: default;
+  }
+  a:hover  .action span,
+  a:active .action span,
+  a:focus  .action span,
+  .action a:hover,
+  .action a:active,
+  .action a:focus,
+  button:hover,
+  button:active,
+  button:focus {
+    background-color: rgb(49, 144, 242);
+  }
+
+  /* Secondary */
+  .secondary.action a,
+  .secondary button {
+    background-color: rgb(239, 239, 239);
+    color: rgb(102, 102, 102);
+  }
+  .secondary.action a:hover,
+  .secondary.action a:active,
+  .secondary.action a:focus,
+  .secondary button:hover,
+  .secondary button:active,
+  .secondary button:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+
+  /* Vote */
+  .promote button {
+    background-color: rgb(113, 179, 247);
+  }
+  .promoted button {
+    background-color: rgb(49, 144, 242);
+  }
+  .promote  button,
+  .promoted button {
+    padding: 0.5em 1em;
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
+    font-size: 1.25em;
+  }
+  .promote button:hover,
+  .promote button:active,
+  .promote button:focus {
+    background-color: rgb(49, 144, 242);
+  }
+
+  /* Follow */
+  .follow button {
+    background-color: rgb(124, 227, 162);
+  }
+  .follow button:hover,
+  .follow button:active,
+  .follow button:focus {
+    background-color: rgb(64, 198, 131);
+  }
+  .following button {
+    background-color: rgb(219, 220, 224);
+  }
+  .following button:hover,
+  .following button:active,
+  .following button:focus {
+    background: rgb(200, 200, 200);
+  }
+
+  /* Do */
+  .do button {
+    background-color: rgb(124, 227, 162);
+  }
+  .do button:hover,
+  .do button:active,
+  .do button:focus {
+    background-color: rgb(64, 198, 131);
+  }
+  .doing button {
+    background-color: rgb(130, 242, 206);
+  }
+  .doing button:hover,
+  .doing button:active,
+  .doing button:focus {
+    background-color: rgb(110, 222, 186);
+  }
+  .done button {
+    background: rgb(64, 198, 149);
+  }
+  .done button:hover,
+  .done button:active,
+  .done button:focus {
+    background-color: rgb(80, 167, 135);
+  }
+
+  /* Update */
+  .action.edit a {
+    background-color: rgb(239, 239, 239);
+    color: rgb(139, 139, 139);
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .action.edit a:hover,
+  .action.edit a:active,
+  .action.edit a:focus {
+    background-color: rgb(218, 220, 224);
+    color: rgb(69, 71, 71);
+  }
+  .update button {
+    background-color: rgb(217, 255, 232);
+    color: rgb(97, 115, 104);
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .update button:hover,
+  .update button:active,
+  .update button:focus {
+    background-color: rgb(189, 250, 213);
+  }
+
+
+  /* =Messages
+  ----------------------------------------------- */
+
+
+  /* =Layouts
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Containers
+  ----------------------------------------------- */
+  #header > .container {
+    padding-top: 1.5em;
+  }
+  #header ~ #content {
+    /* @separator */
+    margin-top: 2.25em;
+    padding-top: 2.99em;
+    border-top: 0.1em solid rgb(221, 221, 221);
+    padding-bottom: 3em;
+  }
+  #footer {
+    margin-top: 0;
+  }
+  #footer {
+
+    /* @separator */
+    border-top: 0.1em solid rgb(221, 221, 221);
+    padding-top: 2.99em;
+
+    padding-bottom: 1.5em;
+  }
+
+  #header > .container,
+  #content > .container,
+  #footer > .container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* On large screens, fill the available vertical space */
+  @media (min-width: 40em) {
+    #header > .container {
+      padding-top: 2.25em;
+    }
+    #footer > .container {
+      padding-bottom: 3em;
+    }
+
+    #header > .container,
+    #content > .container,
+    #footer > .container {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
+  }
+
+
+  /* =Dialog
+  ----------------------------------------------
+  (A page with a small amount of content.)
+  ----------------------------------------------- */
+
+
+
+  /* =Pages
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+  /* =Header
+  ----------------------------------------------- */
+  #header {
+    margin-top: 0
+  }
+  #header nav ul,
+  #header nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #header .primary li {
+    display: inline-block;
+  }
+  #header .primary li + li {
+    margin-left: 0.125em;
+  }
+  #header .search  h3 a,
+  #header .primary li a {
+    display: inline-block;
+    /*
+    background-color: rgb(219, 235, 237);
+    color: rgb(149, 171, 174);
+    */
+    background-color: rgb(228, 241, 242);
+    color: rgb(108, 153, 157);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    line-height: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
+    padding: 0.6428571429em 1.7142857143em; /* (account-image-size(42px) - line-height(24px) / 2 = 9px) / font-size(14px) */
+
+    border-radius: 0.125em; /* @button-border-radius */
+  }
+  #header .primary li a {
+    padding-right: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
+    background-image: url(shared/blocks.svg);
+    background-repeat: no-repeat;
+    background-position: 1.25em 50%;
+    background-size: 1.6428571429em auto; /* image-size(23px) / font-size(14px) */
+    padding-left: 3.6428571429em; /* background-size + 2em */
+  }
+  #header .primary li:last-child a {
+    /*
+    background-color: rgb(255, 224, 18);
+    color: rgb(219, 191, 3);
+    */
+    color: rgb(170, 149, 5);
+    background-color: rgb(255, 233, 84);
+    background-image: url(shared/lightning.svg);
+    background-size: 1.5em auto; /* image-size(21px) / font-size(14px) */
+    padding-left: 3.5em; /* background-size + 2em */
+  }
+
+  #header .search  h3 {
+    background-color: rgb(102, 102, 102);
+    border-radius: 0.125em; /* @button-border-radius */
+  }
+  #header .primary li {
+    background-color: rgb(219, 235, 237);
+    border-radius: 0.125em; /* @button-border-radius */
+  }
+  #header .primary li:last-child {
+    background-color: rgb(255, 224, 18);
+  }
+  #header .search  h3 a,
+  #header .primary li a {
+    opacity: 0.5;
+  }
+
+  #header .search h3 a:hover,
+  #header .search h3 a:active,
+  #header .search h3 a:focus,
+  #header .primary li a:hover,
+  #header .primary li a:active,
+  #header .primary li a:focus {
+    opacity: 1;
+  }
+
+  #header h2 {
+    font-size: inherit;
+
+    /* OPTIONAL: Adjust to the vertical rythm */
+    position: relative;
+    bottom     : -0.1875em; /* 3px / @font-size(16px) */
+    margin-top : -0.3750em; /* 6px / @font-size(16px) */
+  }
+  #header h2 a {
+    vertical-align: middle;
+    display: inline-block;
+    background: url(shared/good.svg) no-repeat;
+    background-size: contain;
+
+    width:  6.250em; /* image-width(100px) / @font-size(16px) */
+    height: 3.375em; /* image-height(54px) / @font-size(16px) */
+
+    /* @hidden-accessible-text */
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+
+  #header h2 + p {
+    font-weight: bold;
+  }
+  #header h2 + p + p {
+    color: rgb(178, 178, 178);
+    font-style: italic;
+  }
+  #footer h2 a,
+  #header h2 + p + p a {
+    color: rgb(37, 139, 245);
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  #header .search {
+    margin-top: 1.5em; /* @line-height */
+  }
+  #header .search h3 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  #header .search h3 a {
+    /*
+    background-color: rgb(139, 139, 139);
+    */
+    background: rgb(173, 173, 173);
+    background-image: url(shared/lense.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: rgb(102, 102, 102);
+
+    /* @hidden-accessible-text */
+    text-indent: -9999px;
+  }
+  #header .search label {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    text-transform: uppercase;
+    color: rgb(113, 179, 247);
+  }
+  #header .search input {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: 300;
+    font-size: 1.375em;
+    width: 12em; /* This is about the width of the placeholder text */
+    max-width: 100%;
+    border-radius: none;
+  }
+  #header .search button {
+    font-size: 0.875em;
+  }
+
+  @media (max-width: 24.9em) {
+    #header > .container > h2 + p + p {
+      position: absolute;
+      top: 0.75em;
+      right: 2.25em;
+    }
+  }
+  @media (min-width: 25em) and (max-width: 65em) {
+    #header > .container {
+      padding-bottom: 4.5em;
+    }
+    #header.has-account > .container {
+      padding-bottom: 0;
+    }
+    #header > .container > h2 + p + p {
+      position: absolute;
+      bottom: -0.75em;
+      right: 2.25em;
+    }
+  }
+  @media (min-width: 25em) and (max-width: 39.9em) {
+    #header > .container > h2 + p {
+      position: absolute;
+      bottom: 1.5em;
+      left: 0;
+    }
+  }
+  @media (min-width: 40em) and (max-width: 55em) {
+    #header > .container > h2 + p {
+      position: absolute;
+      bottom: -0.75em;
+      left: 0.75em;
+    }
+  }
+  @media (min-width: 40em) and (max-width: 65em) {
+    #header > .container > h2 + p + p {
+      bottom: -0.75em;
+    }
+    #header > .container {
+      padding-bottom: 2.25em;
+    }
+  }
+
+  @media (max-width: 24.9em) {
+    #header .search,
+    #header .primary {
+      font-size: 0.875em;
+    }
+  }
+
+  #header .search {
+    display: inline;
+  }
+  #header .search h3 {
+    /* TRICKY: Make this inline-block so the background color will appear behind the link. */
+    display: inline-block;
+  }
+  #header .search h3 {
+    position: static;
+  }
+  #header .search {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+  }
+
+  #header .search form {
+    margin-top: 0;
+    background: white;
+    border: 0.125em solid rgb(139, 139, 139);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    padding: 3em;
+    position: absolute;
+    z-index: 9999;
+    left: -9999px;
+  }
+  #header .search:hover form {
+    left: auto;
+  }
+
+  @media (max-width: 44.9em) {
+    #header .search form {
+      padding: 1em;
+      width: 17em;
+    }
+    #header .search p {
+      font-size: 0.75em;
+    }
+  }
+
+  @media (min-width: 25em) {
+    #header .search form {
+      width: 15em;
+      margin-left: -5em;
+    }
+  }
+
+  @media (min-width: 45em) {
+    #header .search form {
+      width: 25em;
+      margin-left: -15em;
+    }
+  }
+
+  /* OPTIONAL: Make the account menu behave like a dropdown */
+  #header .search.scripted form {
+    transition: opacity 0.2s;
+    position: absolute;
+    left: auto;
+    opacity: 1;
+  }
+  #header .search.summary form {
+    left: -9999px;
+    right: auto;
+    opacity: 0;
+  }
+
+  #header > .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #header .search,
+  #header .primary {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: right;
+  }
+  #header .search {
+
+    /* @separator */
+    border-right: 0.1em solid rgb(239, 239, 239);
+    padding-right: 0.875em;
+    margin-right: 0;
+  }
+  #header .options {
+    color: rgb(102, 102, 102);
+  }
+  #header .options li {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+  #header .options li a {
+    display: block;
+    color: rgb(153, 153, 153);
+    color: inherit;
+    text-decoration: none;
+  }
+  #header .options li a:hover,
+  #header .options li a:active,
+  #header .options li a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  #header .account .options li a {
+    line-height: 2.5;
+    font-weight: bold;
+  }
+
+
+  #header .todos .options li {
+    margin-top: 1.5em;
+  }
+  #header .todos .options h5 {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    font-weight: bold;
+  }
+  #header .todos .options h5,
+  #header .todos .options p {
+    margin: 0;
+  }
+
+  #header .todos   h3 a,
+  #header .account h3 a {
+    display: block;
+  }
+  #header .todos h3 {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  #header .todos h3 a {
+    width       : 2.625em; /* account-image-size(42px) / @font-size(16px) */
+    line-height : 2.625em;
+    text-align: center;
+    text-decoration: inherit;
+    background: rgb(69, 71, 71);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  #header .account h3 img {
+    display: block;
+    border: 1px solid rgb(42, 43, 44);
+  }
+
+  /* OPTIONAL: Only show the options when hovering over the navigation */
+  #header > .container {
+    position: relative;
+  }
+  #header .account {
+    clear: both;
+    padding-top: 1.5em;
+  }
+
+  @media (min-width: 40em) {
+    #header.has-account .primary {
+      margin-right: 9em;
+    }
+  }
+
+  #header .todos,
+  #header .account {
+    clear: none;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  #header .account {
+    position: absolute;
+    right: 5.5em;
+
+    /* @separator */
+    margin-left: 0.875em;
+    border-left: 0.1em solid rgb(239, 239, 239);
+    padding-left: 0.875em;
+  }
+  @media (min-width: 40em) {
+    #header .todos,
+    #header .account {
+      top: 2.25em;
+      right: 3em;
+    }
+    #header .account {
+      right: 7em;
+    }
+  }
+  #header .todos {
+    padding-left: 1.5em;
+  }
+  #header .todos   h3,
+  #header .account h3 {
+    margin-bottom: 0;
+  }
+  #header .options {
+    position: absolute;
+    left: -9999px;
+    z-index: 9999;
+    background: white;
+    border: 0.125em solid rgb(139, 139, 139);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    padding: 1.5em;
+  }
+
+  #header .account .options {
+    width: 10em;
+  }
+  #header .todos .options {
+    width: 13.75em;
+  }
+
+  @media (min-width: 25em) {
+    #header .todos .options {
+      width: 20em;
+    }
+  }
+
+  #header .todos:hover    .options,
+  #header .account:hover  .options {
+    left: auto;
+    right: 0;
+  }
+
+  /* OPTIONAL: Make the account menu behave like a dropdown */
+  #header .todos.scripted   .options,
+  #header .account.scripted .options {
+    transition: opacity 0.2s;
+    position: absolute;
+    left: auto;
+    right: 0;
+    opacity: 1;
+  }
+  #header .todos.summary   .options,
+  #header .account.summary .options {
+    left: -9999px;
+    right: auto;
+    opacity: 0;
+  }
+
+
+  #header .primary {
+    margin-left: 0.875em;
+  }
+
+  @media (min-width: 25em) {
+    #header > .container > h2,
+    #header > .container > p {
+      margin-bottom: 0;
+      float: left;
+    }
+  }
+  @media (max-width: 39.9em) {
+    #header.has-account  > .container > h2 {
+      margin-bottom: 1.5em;
+    }
+  }
+  @media (min-width: 25em) and (max-width: 39.9em) {
+    #header.has-account  > .container > h2 {
+      display: block;
+      float: none;
+    }
+  }
+  @media (min-width: 25em) {
+    #header h2,
+    #header > .container > p,
+    #header .primary {
+      display: inline;
+    }
+    #header > .container > h2 + p {
+      margin-left: 1.5em;
+    }
+    #header > .container > p {
+      margin-left: 0.875em; /* @line-height / 2 */
+    }
+    #header .primary ul {
+      display: inline;
+    }
+    #header .primary ul li {
+      /* TRICKY: Make this inline-block so the background color will appear behind the link. */
+      display: inline-block;
+    }
+  }
+  @media (min-width: 70em) {
+    #header > .container > h2 + p {
+      margin-left: 3.5em; /* @line-height x 2 */
+    }
+  }
+
+
+  /* =Footer
+  ----------------------------------------------- */
+  #footer section {
+    margin-bottom: 1.5em;
+    margin-right: 3em;
+    display: inline-block;
+  }
+  #footer section:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  #footer h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  #footer ul {
+    font-size: 0.75em;
+    margin-top: 1.5em;
+  }
+  #footer ul,
+  #footer li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #footer li.rss       a,
+  #footer li.facebook  a,
+  #footer li.twitter   a,
+  #footer li.google    a,
+  #footer li.linkedin  a,
+  #footer li.tumblr    a,
+  #footer li.pinterest a {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 1.25em;
+    width: 2em;
+    height: 2em;
+  }
+  #footer li.rss       a {
+    background-image: url(shared/social/rss.svg);
+  }
+  #footer li.facebook  a {
+    background-image: url(shared/social/facebook.svg);
+  }
+  #footer li.twitter   a {
+    background-image: url(shared/social/twitter.svg);
+  }
+  #footer li.google    a {
+    background-image: url(shared/social/google.svg);
+  }
+  #footer li.linkedin  a {
+    background-image: url(shared/social/linkedin.svg);
+  }
+  #footer li.tumblr    a {
+    background-image: url(shared/social/tumblr.svg);
+  }
+  #footer li.pinterest a  {
+    background-image: url(shared/social/pinterest.svg);
+  }
+  #footer li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+  #footer li a:hover,
+  #footer li a:active,
+  #footer li a:focus {
+    color: rgb(178, 178, 178);
+  }
+
+  #footer li {
+    display: inline;
+    margin-right: 1em;
+  }
+
+
+  /* =Content
+  ----------------------------------------------- */
+  #content {
+    background: rgb(253, 254, 255);
+  }
+
+  #content .header {
+    margin-bottom: 2.25em;
+  }
+  nav.sub {
+    margin-top: 2.25em;
+    background: rgb(218, 220, 224);
+    max-width: none;
+  }
+
+  nav.sub ul,
+  nav.sub li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  nav.sub a {
+    background: rgb(218, 220, 224);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 0.75em 1.5em;
+
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgb(233, 233, 235);
+  }
+  nav.sub .active a {
+    background-color: rgb(178, 178, 178);
+  }
+  nav.sub a:hover,
+  nav.sub a:active,
+  nav.sub a:focus {
+    background-color: rgb(200, 200, 200);
+  }
+
+  nav.sub dt {
+    padding: 0 1.5em;
+  }
+
+  @media (min-width: 40em) {
+    nav.sub ul,
+    nav.sub li,
+    nav.sub form,
+    nav.sub form p,
+    nav.sub dl,
+    nav.sub dt,
+    nav.sub dd {
+      display: inline;
+    }
+
+    nav.sub {
+      position: relative;
+    }
+
+    nav.sub a {
+      display: inline-block;
+      border-width: 0 1px 0 0;
+    }
+
+    /* KLUDGE: Attempt to hide the whitespace to the left of the button.
+    (It might be better to use floats.) */
+    nav.sub form {
+      display: inline-block;
+      margin: 0;
+      background-color: rgb(135, 233, 184);
+      border-right: 1px solid rgb(233, 233, 235);
+    }
+
+    nav.sub dt {
+      position: absolute;
+      top: -1.5em;
+      text-align: center;
+      min-width: 6.5em;
+      color: rgb(102, 102, 102);
+      padding: 0;
+    }
+    nav.sub dd a {
+      min-width: 3.5em;
+      text-align: center;
+    }
+    nav.sub dt,
+    nav.sub dd {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: 70em) {
+
+    /* @column-container */
+    #content > .container:after {
+      /* @clearfix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* @primary-column */
+    #content .has-aside {
+      margin-top: 0;
+      float: left;
+      width: 70%;
+      box-sizing: border-box;
+    }
+
+    /* @aside-column */
+    #content .has-aside + aside {
+      margin-top: 0;
+      float: right;
+      width: 18.75em; /* ad-unit-width(300px) / @font-size(16px) */
+      box-sizing: border-box;
+    }
+  }
+
+
+  aside.ad,
+  aside.facebook,
+  aside.promotion {
+    margin-top: 1.5em;
+  }
+  aside.discussion {
+    margin-top: 3em;
+  }
+
+
+  aside.ad.top,
+  aside.ad.upper,
+  aside.ad.middlepromo,
+  aside.ad.middle,
+  aside.ad.lower,
+  aside.facebook,
+  aside.promotion,
+  aside.discussion,
+  .test #content .has-aside + aside {
+    margin-top: 3em;
+  }
+  @media (min-width: 25em) and (max-width: 69.9em) {
+    aside.ad.top,
+    aside.ad.upper,
+    aside.ad.middlepromo,
+    aside.ad.middle,
+    aside.ad.lower,
+    aside.facebook,
+    aside.promotion,
+    aside.discussion,
+    .test #content .has-aside + aside {
+      vertical-align: top;
+      display: inline-block;
+      margin-right: 1.5em;
+      width: 18.75em;
+      box-sizing: border-box;
+    }
+  }
+  @media (min-width: 70em) {
+    .test #content > .container:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .test #content .has-aside {
+      margin-top: 0;
+      float: left;
+      width: 55%;
+      box-sizing: border-box;
+    }
+    aside.ad.top,
+    aside.ad.upper,
+    aside.ad.middlepromo,
+    aside.ad.middle,
+    aside.ad.lower,
+    aside.facebook,
+    aside.promotion,
+    aside.discussion,
+    .test #content .has-aside + aside {
+      margin-top: 0;
+      clear: right;
+      float: right;
+      width: 18.75em;
+      box-sizing: border-box;
+
+      /* @separator */
+      /*
+      border-left: 0.1em solid rgb(221, 221, 221);
+      padding-left: 1.5em;
+      */
+    }
+    aside.facebook > div {
+      float: right;
+    }
+    aside.baseboard {
+      clear: both;
+    }
+  }
+  @media (min-width: 65em) {
+    .test #content .has-aside {
+      width: 60%;
+    }
+  }
+  @media (min-width: 70em) {
+    .test #content .has-aside {
+      width: 65%;
+    }
+  }
+
+
+/* =Join Introduction
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .join-intro {
+    background-color: rgb(105, 206, 155);
+    padding: 1.5em 3em;
+    color: white;
+  }
+  @media (max-width: 59.9em) {
+    .join-intro {
+      margin-top: -3em;
+      margin-left: -2.25em; /* body-padding */
+      margin-right: -2.25em;
+    }
+  }
+  .join-intro h1 {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-size: 3.75em; /* 60px / 16px */
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .join-intro form {
+    background: rgb(88, 175, 130);
+    border: 1px solid rgb(92, 157, 124);
+    padding: 1.5em 3em;
+    margin-left: -1.5em; /* @line-height */
+    margin-right: -1.5em;
+  }
+  .join-intro form p:first-child {
+    font-weight: bold;
+  }
+  .join-intro button {
+    /* Data URI encoded from: ocean.svg */
+    background: rgb(27, 128, 234) url(data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwMHB4IiBoZWlnaHQ9IjUwMHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAuNSIgeTE9IjAiIHgyPSIwLjUiIHkyPSIxIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMzcsIDEzOSwgMjQ1KSIgLz4KICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoMjcsIDEyOCwgMjM0KSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPgogICAg) top repeat-x;
+    background-size: contain;
+    border-radius: 0.125em; /* @button-border-radius */
+  }
+  .join-intro button:hover,
+  .join-intro button:active,
+  .join-intro button:focus {
+    /* Data URI encoded from: dark-ocean.svg */
+    background: rgb(13, 112, 215) url(data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjUwMHB4IiBoZWlnaHQ9IjUwMHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudCIgeDE9IjAuNSIgeTE9IjAiIHgyPSIwLjUiIHkyPSIxIj4KICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMjcsIDEyOCwgMjM0KSIgLz4KICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSJyZ2IoMTMsIDExMiwgMjE1KSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPgogICAg) top repeat-x;
+    background-size: contain;
+  }
+  @media (max-width: 39.9em) {
+    .join-intro {
+      padding-bottom: 0;
+    }
+  }
+  @media (min-width: 60em) {
+    .join-intro p.text,
+    .join-intro p.submit {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    .join-intro p.text {
+      margin-right: 1.5em;
+      width: 35%;
+    }
+  }
+
+
+/* =Activity Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .activity-item:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .activity-item section,
+  .activity-item article {
+    margin-top: 1.5em; /* @line-height */
+  }
+  .activity-item p {
+    margin-top    : 0.75em; /* @line-height / 2 */
+    margin-bottom : 0.75em;
+  }
+
+  /* Links */
+  .activity-item a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+  }
+  .activity-item a:hover,
+  .activity-item a:active,
+  .activity-item a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  /* Headlines */
+  .activity-item .do h3 {
+    min-height: 2.7em; /* line-height x 2 */
+  }
+  .activity-item .comment h3,
+  .activity-item .follow  h3 {
+    font-family: inherit;
+    line-height: inherit;
+  }
+  .activity-item .follow h3 {
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .activity-item h3 a {
+    color: inherit;
+  }
+  .activity-item h3 a:hover,
+  .activity-item h3 a:hover,
+  .activity-item h3 a:hover {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  /* Icons */
+  .meta .dos      abbr,
+  .meta .promotes abbr,
+  .meta .comments abbr {
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+  .meta .dos      abbr:before,
+  .meta .promotes abbr:before,
+  .meta .comments abbr:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.375em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .meta .dos abbr:before {
+    content: "\e001"; /* @icon-do */
+    color: rgb(83, 231, 185);
+  }
+  .meta .promotes abbr:before {
+    content: "\e002"; /* @icon-promote */
+    color: rgb(113, 179, 247);
+  }
+  .meta .comments abbr:before {
+    content: "\e003"; /* @icon-comment */
+    color: rgb(255, 223, 145);
+  }
+
+  /* Time */
+  .activity-item .time {
+    color: rgb(204, 204, 204);
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+  .activity-item .more {
+    padding-left: 0.625em; /* 10px / @font-size */
+    margin-top: 1.5em;
+  }
+  .activity-item .more a {
+    color: rgb(153, 153, 153); /* @aluminum */
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+  .activity-item .more a:hover,
+  .activity-item .more a:active,
+  .activity-item .more a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+/* =Units
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Post
+  ----------------------------------------------- */
+  .activity-item .post {
+    position: relative;
+  }
+  .activity-item .post h3 .image {
+    float: left;
+    position: relative;
+    margin-right: 0.83333333333333em; /* @line-height(20px) / font-size(24px) */
+  }
+  .activity-item .post h3 .image img {
+    display: block;
+  }
+  .activity-item .post h3 small {
+    font-size: 0.5em; /* 12px / 24px */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    white-space: nowrap;
+
+    /* TRICKY: Limit the width of the element, since the domain name might be very long. */
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .featured .activity-item .post h3 small {
+    font-size: 0.33333333333333em; /* 12px / 36px */
+  }
+
+  /* OPTIONAL: Line up with the headline */
+  @media (min-width: 40em) { /* @medium-size */
+    .activity-item .post .has-image + .meta {
+      margin-left: 7.5em; /* image.width(120px) / @font-size(16px) */
+    }
+
+    /* Featured posts have a larger image */
+    .featured .activity-item .post .has-image + .meta {
+      margin-left: 16.875em; /* image.width(270px) / @font-size(16px) */
+    }
+  }
+
+  .activity-item form {
+    font-size: 0.75em;
+  }
+
+
+/* =Link
+  ----------------------------------------------- */
+
+  /* The links images are smaller, so we want the meta data to appear after them */
+  .activity-item .link .has-image:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Link images should appear on the right, instead of the left */
+  .activity-item .link h3 .image {
+    float: right;
+    border-right-width: 0;
+    margin-left: 0.9375em; /* @image-margin */
+
+    /* OPTIONAL: Move the image up and to the right a little */
+    margin-top   : -0.20833333333333em; /* @line-height(20px) / font-size(24px) x 1/4 */
+    margin-right : -0.20833333333333em;
+  }
+
+  /* OPTIONAL: Reset the margin, since the image is on the right. */
+  .activity-item .link .has-image + .meta {
+    margin-left: 0;
+  }
+
+  .activity-item .link,
+  .activity-item .follow {
+    padding       : 1.25em;  /* @line-height(20px) */
+    border: 1px solid rgb(243, 243, 243); /* @bright-silver */
+    background: rgb(249, 249, 249); /* @silver */
+    border-radius: 0.25em;
+    transition: background-color 0.2s, border-color 0.2s;
+    position: relative;
+  }
+
+  .activity-item .link:after,
+  .activity-item .follow:after {
+    /* @clear-fix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
+  @media (min-width: 40em) { /* @medium-size */
+
+    /* Make space for the buttons */
+    .activity-item .do h3 {
+      margin-right: 5em;
+    }
+    .activity-item .follow h3,
+    .activity-item .follow h3           + .introduction,
+    .activity-item .follow h3.has-image + .introduction {
+      margin-right: 6.25em;
+    }
+
+    .activity-item .do form,
+    .activity-item .follow form {
+      position: absolute;
+      margin-top: 0;
+      top: 0;
+      right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
+    }
+    .activity-item .follow form {
+      top   : 1.25em; /* @line-height(20px) */
+      right : 1.25em; /* @line-height(20px) */
+    }
+  }
+
+  /* OPTIONAL: Light up the links and follows, when hovering over an item */
+  .activity-item .link:hover,
+  .activity-item .follow:hover {
+    background: white;
+    border-color: rgb(153, 153, 153); /* $aluminum */
+  }
+
+
+/* =Follow (topic or person)
+  ----------------------------------------------- */
+  .activity-item .follow h3 .image {
+    float: left;
+    margin-right: 0.9375em; /* @image-margin */
+
+    /* OPTIONAL: Move the image up and to the left a little */
+    margin-top  : -0.3125em; /* @line-height(20px) x 1/4 */
+    margin-left : -0.3125em;
+  }
+  .activity-item .follow h3 .image img {
+    display: block;
+  }
+  .activity-item .follow,
+  .activity-item .follow + .more {
+    margin-top: 1.25em; /* @line-height(20px) */
+  }
+  .activity-item .follow .meta {
+    margin-top: 0.3125em; /* @line-height(20px) / 4 */
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+  .activity-item .follow .meta + .introduction {
+    border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
+    padding-top: 0.625em; /* @line-height(20px) / 2 */
+  }
+  .activity-item .follow .introduction {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: 300;
+    line-height: 1.35em; /* Freight Light needs a big line height */
+    margin-bottom: 0;
+  }
+
+  .activity-item .follow .has-image ~ .introduction {
+
+    /* OPTIONAL: Line up with the headline */
+    margin-left: 4.375em; /* image.width(70px) / @font-size(16px) */
+
+    /* OPTIONAL: Line up with the follow button */
+    margin-right: -0.3125em;
+  }
+
+
+/* =Comment
+  ----------------------------------------------- */
+  .activity-item .comment {
+    padding-left: 2.5em; /* @line-height(20px) x 2 */
+  }
+  .activity-item .comment,
+  .activity-item .comment + .more {
+    margin-top: 1.25em; /* @line-height(20px) */
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    padding-top: 1.25em; /* @line-height(20px) */
+  }
+  .activity-item .comment + .comment {
+    padding-left: 5em; /* @line-height(20px) x 4 */
+  }
+
+  .activity-item .comment h3 a {
+    margin-right: 0.375em;
+  }
+  .activity-item .comment h3 img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+
+    margin-left: -3.33333333333333em; /* (@line-height(20px) x 2) / 12px */
+  }
+  .activity-item .comment p {
+    color: black;
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+  .activity-item .comment p a {
+    color: rgb(102, 153, 204);
+  }
+  .activity-item .comment p a:hover,
+  .activity-item .comment p a:active,
+  .activity-item .comment p a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  /* OPTIONAL: Reduce the space between the headline and the commment */
+  .activity-item .comment h3.has-image + p {
+    margin-top: 0;
+  }
+
+
+/* =Source
+  ----------------------------------------------- */
+  .activity-item .source {
+    font-size: 0.75em; /* 12px / @font-size */
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+  .activity-item .source a {
+    font-weight: bold;
+    color: rgb(102, 102, 102); /* @steel */
+  }
+  .activity-item .source a:hover,
+  .activity-item .source a:hover,
+  .activity-item .source a:hover {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+/* =Meta
+  ----------------------------------------------- */
+  .activity-item .post .meta {
+    margin-top: 0.625em;
+    border-top: 1px solid rgb(243, 243, 243); /* @bright-silver */
+    padding-top: 0.625em;
+  }
+
+  .activity-item .link .meta {
+    border-top-color: rgb(218, 220, 224); /* @bright-blue-silver */
+
+    /* OPTIONAL: Line up with the image */
+    margin-right: -0.3125em;
+  }
+
+  .featured .activity-item.do .meta {
+    margin-top: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .activity-item .post .meta:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .activity-item .meta p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 0.75em;
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+
+  /* OPTIONAL: Add a line between meta items within a follow */
+  .activity-item .follow .meta p {
+    margin-right: 0;
+  }
+  .activity-item .follow .meta p + p {
+    border-left: 1px solid rgb(216, 216, 216);
+    padding-left: 0.6em;
+    margin-left: 0.6em;
+    line-height: 1;
+  }
+
+  .activity-item .meta a {
+    color: inherit;
+  }
+  .activity-item .meta a:hover,
+  .activity-item .meta a:active,
+  .activity-item .meta a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+/* =Topics
+  ----------------------------------------------- */
+  .activity-item section.topics {
+    margin: 0;
+    display: inline;
+    float: right;
+  }
+  .activity-item section.topics h4 {
+    margin: 0;
+    display: inline;
+    font-size: inherit;
+  }
+  .activity-item section.topics h4 span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+  .activity-item section.topics h4:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e004"; /* @icon-topic */
+
+    color: rgb(247, 105, 100);
+    font-size: 0.9375em; /* 15px / @font-size */
+  }
+
+  .activity-item section.topics ul,
+  .activity-item section.topics li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .activity-item section.topics ul {
+    margin-left: 0.75em;
+    font-size: 0.75em; /* 12px / @font-size */
+    display: inline;
+  }
+  .activity-item section.topics li {
+    display: inline;
+  }
+  .activity-item section.topics li + li {
+    margin-left: 1em;
+  }
+  .activity-item section.topics a {
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+  .activity-item section.topics a:hover,
+  .activity-item section.topics a:active,
+  .activity-item section.topics a:focus {
+    color: rgb(113, 179, 247);
+  }
+
+
+/* =Activity Item
+  ----------------------------------------------- */
+  .activity-item {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding: 2.5em 1.25em; /* @line-height(20px) x 2    @line-height(20px) */
+  }
+
+  @media (max-width: 24.9em) {
+    .activity-item {
+      margin-left  : -1.5em; /* @line-height(20px) */
+      margin-right : -1.5em;
+    }
+  }
+
+  /* Show a triangle in the corner of the item, when hovering over it */
+  .activity-item:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e000"; /* @icon-triangle */
+    color: rgb(34, 155, 246);
+    font-size: 0.9375em; /* 15px / $font_size */
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .activity-item:hover:before {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Only show the topics for one item at a time */
+  html:hover .activity-item .topics {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  html:hover .activity-item:hover .topics {
+    opacity: 1;
+  }
+
+  /* OPTIONAL: Light up the social icons for an item, when hovering over it */
+
+  /* Off */
+  html:hover .activity-item .meta .dos,
+  html:hover .activity-item .meta .promotes,
+  html:hover .activity-item .meta .comments {
+    color: rgb(190, 190, 190);
+    transition: color 0.2s;
+  }
+  html:hover .activity-item .meta .dos      abbr:before,
+  html:hover .activity-item .meta .promotes    abbr:before,
+  html:hover .activity-item .meta .comments abbr:before {
+    color: rgb(236, 236, 236);
+    transition: color 0.2s;
+  }
+  html:hover .activity-item section.topics h4:before {
+    color: rgb(222, 222, 222);
+    transition: color 0.2s;
+  }
+
+  /* Over */
+  html:hover .activity-item:hover .meta .dos,
+  html:hover .activity-item:hover .meta .promotes,
+  html:hover .activity-item:hover .meta .comments {
+    color: rgb(153, 153, 153);
+  }
+  html:hover .activity-item:hover .meta .dos abbr:before {
+    color: rgb(83, 231, 185);
+  }
+  html:hover .activity-item:hover .meta .promotes abbr:before {
+    color: rgb(113, 179, 247);
+  }
+  html:hover .activity-item:hover .meta .comments abbr:before {
+    color: rgb(255, 223, 145);
+  }
+  html:hover .activity-item:hover section.topics h4:before {
+    color: rgb(247, 105, 100);
+  }
+
+  /* OPTIONAL: Move the primary source up a little */
+  .activity-item > .source:first-child {
+    margin-top: -2.33333333333333em; /* 28px / 12px */
+  }
+  .activity-item > .source.has-image:first-child {
+    margin-bottom: -2em; /* This is arbitrary */
+  }
+
+  /* OPTIONAL: Move the primary source to the left a little */
+  @media (min-width: 25em) { /* @tiny-screen */
+    .activity-item > .source:first-child {
+      margin-left: -1.66666666666667em; /* @line-height(20px) / 12px */
+    }
+    .activity-item > .source.has-image:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .activity-item > .source:first-child img {
+    vertical-align: top;
+    margin-top: -1em; /* 12px / 12px */
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 1.25em;
+    border-color: rgb(221, 223, 227); /* @silver-blue */
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+  }
+
+  /* OPTIONAL: Position the time in the top right corner */
+  .activity-item .time:first-child,
+  .activity-item > .source:first-child + .time {
+    margin: 0;
+    position: absolute;
+    top: 1em; /* 12px / 12px */
+    right: 1.66666666666667em; /* 20px / 12px */
+  }
+
+  .activity-item > .time + .post,
+  .activity-item > .time + .follow {
+    margin-top: 2.5em;
+  }
+
+  @media (min-width: 40em) { /* @medium-size */
+
+    /* OPTIONAL: Line the content up with the source */
+    .activity-item > .post,
+    .activity-item > .comment,
+    .activity-item > .follow,
+    .activity-item > .more {
+      margin-left: 3.75em;
+      margin-right: 3.75em;
+    }
+
+    /* OPTIONAL: Move the first follow or post up a little */
+    .activity-item > .time + .post,
+    .activity-item > .time + .follow {
+      margin-top: 1em;
+    }
+    .activity-item > .time:first-child + .post,
+    .activity-item > .time:first-child + .follow {
+      margin-top: 0;
+    }
+
+    /* OPTIONAL: Don’t line up with the source if this is a feature */
+    .featured .activity-item > .time + .post {
+      margin-top: 2.5em; /* @line-height(20px) / 2 */
+      margin-left: -1.25em; /* @line-height(20px) */
+      margin-right: 0;
+    }
+
+  }
+
+
+/* =Featured Article
+  ----------------------------------------------- */
+
+  /* OPTIONAL: Make the featured source image smaller */
+  .featured .activity-item > .source:first-child img {
+    width: 30px;
+    height: auto;
+    margin-left: -1.66666666666667em; /* 20px / 12px */
+    margin-right: 0.625em;
+  }
+
+  /* OPTIONAL: Make the headline bigger */
+  .featured .activity-item h3 {
+    font-size: 2.25em; /* 36px / 16px */
+  }
+
+  /* OPTIONAL: Don’t use the usual “link” style */
+  .featured .activity-item .link {
+    padding: 0;
+    border-width: 0;
+    background: transparent;
+  }
+  .featured .activity-item .link .has-image:after {
+    display: none;
+    clear: none;
+  }
+  .featured .activity-item .link h3 .image {
+    float: left;
+    margin: 0;
+    margin-right: 0.83333333333333em; /* $line_height / @font-size(16px) */
+  }
+
+
+/* =Featured Do
+  ----------------------------------------------- */
+
+  .activity-header h1,
+  .activity-header h2,
+  .topic > .featured h2,
+  .topic > .featured > section > h3 {
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .activity-header h1,
+  .activity-header h2,
+  .topic > .featured h2 {
+    font-size: 1.875em; /* 30px / @font-size(16px) */
+  }
+
+  @media (min-width: 70em) {
+
+    /* @column-container */
+    #content .header + .featured:after {
+      /* @clearfix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* @primary-column */
+    .topic > .featured > section {
+      margin-top: 0;
+      float: left;
+      width: 70%;
+      box-sizing: border-box;
+    }
+
+    /* @aside-column */
+    .topic > .featured > section + section {
+      margin-top: 0;
+      float: right;
+      width: 18.75em; /* ad-unit-width(300px) / @font-size(16px) */
+      box-sizing: border-box;
+    }
+  }
+
+  @media (min-width: 70em) {
+    .topic > .featured {
+      position: relative;
+    }
+    .topic > .featured h2,
+    .topic > .featured h2 + p {
+      display: inline;
+    }
+    .topic > .featured h2 {
+      margin-right: 0.75em;
+    }
+    .topic > .featured h2 + p {
+      color: rgb(153, 153, 153);
+      font-size: 0.75em; /* 12px / @font-size(16px) */
+      font-weight: bold;
+    }
+    .topic > .featured > h2 + p + section {
+      margin-top: 1.5em;
+    }
+    .topic > .featured > section + section {
+      margin-top: -1.5em;
+    }
+  }
+
+  .featured .activity-item.do {
+    background: rgb(246, 255, 250);
+    border: 6px solid rgb(233, 249, 240);
+    padding: 14px;
+  }
+
+  /* KLUDGE: Remove the space above the section in featured do’s
+  (It would be better to remove the section element altogether.) */
+  .featured .activity-item.do section {
+    margin-top: 0;
+  }
+
+  .featured .activity-item.do h3 {
+    font-size: 20px;
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    line-height: 1.35em; /* Freight Light needs a big line height */
+  }
+  .featured .activity-item.do h3 a {
+    display: block;
+  }
+  .featured .activity-item.do h3 img {
+    border: 5px solid rgb(203, 238, 218);
+    border-radius: 200px;
+    margin: 0 auto 1.25em; /* $line_height */
+    display: block;
+  }
+
+
+/* =Activity List
+  ----------------------------------------------- */
+  ul.activity-list {
+    margin-top: 1.25em; /* $line_height */
+  }
+  ul.activity-list,
+  ul.activity-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  /*
+  ul.activity-list > li {
+    max-width: 48em;
+  }
+  */
+
+
+/* =Follow Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Follow List
+  ----------------------------------------------- */
+  .follow-list {
+    margin-top: 1.25em; /* $line_height */
+  }
+  .follow-list,
+  .follow-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .follow-list > li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .follow-list > li {
+    position: relative;
+  }
+
+  .follow-list p {
+    margin-top    : 0.625em; /* @line-height(20px) / 2 */
+    margin-bottom : 0.625em;
+  }
+  .follow-list form {
+    font-size: 0.75em;
+  }
+
+  /* Links */
+  .follow-list a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+  }
+  .follow-list a:hover,
+  .follow-list a:active,
+  .follow-list a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  /* Headlines */
+  .follow-list h3 {
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .follow-list h3 a {
+    color: inherit;
+  }
+  .follow-list h3 a:hover,
+  .follow-list h3 a:hover,
+  .follow-list h3 a:hover {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+  .follow-list .more {
+    padding-left: 0.625em; /* 10px / @font-size */
+    margin-top: 1.5em;
+  }
+  .follow-list .more a {
+    color: rgb(153, 153, 153); /* @aluminum */
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+  .follow-list .more a:hover,
+  .follow-list .more a:active,
+  .follow-list .more a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
+  @media (min-width: 40em) { /* @medium-size */
+
+    /* Make space for the buttons */
+    .follow-list h3,
+    .follow-list h3           + .introduction,
+    .follow-list h3.has-image + .introduction {
+      margin-right: 6.25em;
+    }
+
+    .follow-list form {
+      position: absolute;
+      margin-top: 0;
+      top: 1.5em;
+      right: 1.5em;
+    }
+  }
+
+  /* Meta */
+  .follow-list .meta p {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    margin-right: 0.75em;
+    color: rgb(153, 153, 153); /* @aluminum */
+  }
+
+  /* OPTIONAL: Add a line between meta items within a follow */
+  .follow-list .meta p {
+    margin-right: 0;
+  }
+  .follow-list .meta p + p {
+    border-left: 1px solid rgb(216, 216, 216);
+    padding-left: 0.6em;
+    margin-left: 0.6em;
+    line-height: 1;
+  }
+
+
+/* =Follow (topic or person)
+  ----------------------------------------------- */
+  .follow-list h3 img {
+    display: block;
+    float: left;
+    margin-right: 0.9375em; /* @image-margin */
+
+    /* OPTIONAL: Move the image up and to the left a little */
+    margin-top  : -0.3125em; /* @line-height(20px) x 1/4 */
+    margin-left : -0.3125em;
+  }
+
+  .follow-list .meta {
+    margin-top: 0.3125em; /* @line-height(20px) / 4 */
+    font-size: 0.75em; /* 12px / @font-size */
+  }
+  .follow-list .meta + .location,
+  .follow-list .meta + .introduction {
+    border-top: 1px solid rgb(218, 220, 224); /* @bright-blue-silver */
+    padding-top: 0.625em; /* @line-height(20px) / 2 */
+  }
+  .follow-list .location,
+  .follow-list .introduction {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    line-height: 1.35em; /* Freight Light needs a big line height */
+    margin-bottom: 0;
+
+    /* OPTIONAL: Line up with the headline */
+    margin-left: 5.625em; /* image.width(90px) / @font-size(16px) */
+
+    /* OPTIONAL: Line up with the follow button */
+    margin-right: -0.3125em;
+  }
+
+  /* Learn / Do */
+  .follow-list .do   > a,
+  .follow-list .learn > a {
+    color: inherit;
+    display: block;
+    padding: 1.5em;
+  }
+  @media (min-width: 25em) { /* @small-size */
+    .follow-list .do   a:after,
+    .follow-list .learn a:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .follow-list .do   img,
+    .follow-list .learn img {
+      float: left;
+      margin-right: 1em;
+    }
+    .follow-list .do   h4,
+    .follow-list .learn h4 {
+      margin-top: 0;
+    }
+  }
+  /*
+  @media (min-width: 60em) {
+    .follow-list .do,
+    .follow-list .learn {
+      display: inline-block;
+      width: 45%;
+      vertical-align: top;
+    }
+  }
+  */
+  .follow-list .do    h4,
+  .follow-list .learn h4 {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .follow-list .learn > a {
+    background: rgb(233, 240, 249);
+  }
+  .follow-list .learn h4 {
+    color: rgb(113, 179, 247);
+  }
+  .follow-list .do > a {
+    background: rgb(233, 249, 240);
+  }
+  .follow-list .do h4 {
+    color: rgb(83, 231, 185);
+  }
+  .follow-list .do   > a:hover  h4,
+  .follow-list .do   > a:active h4,
+  .follow-list .do   > a:focus  h4 {
+    color: rgb(73, 221, 175);
+  }
+  .follow-list .learn > a:hover  h4,
+  .follow-list .learn > a:active h4,
+  .follow-list .learn > a:focus  h4 {
+    color: rgb(103, 169, 237);
+  }
+
+
+/* =Follow Item
+  ----------------------------------------------- */
+  .follow-list > li {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding: 1.5em; /* @line-height */
+  }
+
+  @media (max-width: 24.9em) { /* @tiny-screen */
+    .follow-list > li {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+
+
+  #content aside + .has-aside,
+  #content aside + .has-aside + aside {
+    /* @separator */
+    margin-top: 2.95em;
+  }
+  #content        .has-aside > section + section,
+  #content > .container > section + section,
+  #content > .container > aside   + section {
+
+    /* @separator */
+    margin-top: 2.95em;
+    padding-top: 2.95em;
+  }
+
+
+/* =Topic List
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  .topic-list {
+    margin-top: 1.5em; /* @line-height */
+  }
+  .topic-list,
+  .topic-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .topic-list > li {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgb(239, 239, 239);
+    margin-top: 1.5em; /* @line-height */
+    padding: 1.5em;
+    background: rgb(249, 249, 249);
+  }
+  .topic-list header {
+    border: 1px solid rgb(239, 239, 239);
+    padding: 1.5em;
+  }
+  .topic-list header a {
+    color: rgb(102, 102, 102);
+  }
+  .topic-list header img {
+    display: block;
+    margin-bottom: 0.75em;
+    margin-right: 0.75em;
+    border-radius: 10em;
+    vertical-align: middle;
+  }
+  .topic-list .post:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .topic-list .post img {
+    display: block;
+    margin-bottom: 0.75em;
+  }
+
+  .topic-list .more {
+    margin-top: 1.5em;
+  }
+  .topic-list .more a:after {
+    content: " →";
+  }
+
+  /* More button */
+  .activity-list + .more,
+  .follow-list   + .more {
+  }
+  .activity-list + .more a,
+  .follow-list   + .more a {
+    text-decoration: none;
+  }
+  .activity-list + .more a:after,
+  .follow-list   + .more a:after {
+    content: " →";
+  }
+
+  .topic-list a {
+    text-decoration: none;
+  }
+  .topic-list h3 {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .topic-list .post {
+    border: 1px solid rgb(239, 239, 239);
+    background: white;
+    padding: 1.5em;
+  }
+  .topic-list h4 {
+    font-size: 1.75em; /* 28px / 16px */
+  }
+  .topic-list h2 a,
+  .topic-list h4 a {
+    color: inherit;
+  }
+  .topic-list h2 a:hover,
+  .topic-list h2 a:hover,
+  .topic-list h2 a:hover,
+  .topic-list h4 a:hover,
+  .topic-list h4 a:hover,
+  .topic-list h4 a:hover {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  .topic-list .learn header {
+    background: rgb(233, 240, 249);
+  }
+  .topic-list .learn h3 {
+    color: rgb(113, 179, 247);
+  }
+  .topic-list .do header {
+    background: rgb(233, 249, 240);
+  }
+  .topic-list .do h3 {
+    color: rgb(83, 231, 185);
+  }
+  @media (max-width: 24.9em) {
+    .topic-list > li {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+    .topic-list header,
+    .topic-list .post {
+      margin-left: -0.75em;
+      margin-right: -0.75em;
+    }
+  }
+  @media (min-width: 25em) { /* @tiny-screen */
+    .topic-list .post img {
+      float: right;
+      margin-left: 0.75em;
+    }
+  }
+  @media (min-width: 40em) { /* @medium-screen */
+    .topic-list form p {
+      display: inline;
+      margin-right: 0.75em;
+    }
+  }
+
+
+
+/* =Comment Item
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Comment List
+  ----------------------------------------------- */
+  .comment-list {
+    margin-top: 1.25em; /* $line_height */
+  }
+  .comment-list,
+  .comment-list > li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .comment-list > li:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .comment-list p {
+    margin-top    : 0.625em; /* @line-height(20px) / 2 */
+    margin-bottom : 0.625em;
+  }
+
+  /* Links */
+  .comment-list a {
+    color: rgb(102, 153, 204);
+    text-decoration: none;
+  }
+  .comment-list a:hover,
+  .comment-list a:active,
+  .comment-list a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  /* Headlines */
+  .comment-list h3 {
+    margin: 0;
+    font-size: 0.75em;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+    font-family: inherit;
+    line-height: inherit;
+  }
+  .comment-list h3 a {
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+  }
+
+
+/* =More Link
+  ----------------------------------------------- */
+  .comment-list + .more {
+    padding-left: 0.625em; /* 10px / @font-size */
+    margin-top: 1.5em;
+  }
+  .comment-list + .more a {
+    color: rgb(153, 153, 153); /* @aluminum */
+    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size */
+    text-decoration: none;
+  }
+  .comment-list + .more a:hover,
+  .comment-list + .more a:active,
+  .comment-list + .more a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+
+
+/* =Units
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+/* =Comment
+  ----------------------------------------------- */
+  .comment-list article {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    position: relative;
+    padding-top: 1.25em;
+  }
+  .comment-list article,
+  .comment-list + .more {
+    margin-top: 1.25em; /* @line-height(20px) */
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    padding-top: 1.25em; /* @line-height(20px) */
+  }
+  .comment-list article + article {
+    margin-top: 1.25em; /* @line-height(20px) */
+  }
+
+  .comment-list article > h3 img {
+    float: left;
+    margin-right: 0.5em;
+  }
+  .comment-list article > h3 a {
+    margin-right: 0.375em;
+  }
+  .comment-list article > p {
+    color: black;
+    font-size: 0.875em; /* 14px / @font-size */
+
+    /* OPTIONAL: Handle the case where a URL within a comment is really long and won’t wrap naturally.*/
+    /* For an example, see Kevin Van Lierop’s commment in this article: http://www.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
+    word-wrap     : break-word; /* Currently supported in most browsers */
+    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
+  }
+  .comment-list article > p a {
+    color: rgb(102, 153, 204);
+  }
+  .comment-list article > p a:hover,
+  .comment-list article > p a:active,
+  .comment-list article > p a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  .comments label > span:first-child {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .comments label br {
+    display: none;
+  }
+
+  @media (min-width: 25em) {
+    .comment-list article {
+      border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      position: relative;
+      padding: 1.25em; /* @line-height(20px) */
+    }
+    .comment-list article {
+      padding-left: 5.625em; /* 90px / 16px */
+    }
+    .comment-list article + article {
+      padding-left: 10em; /* 160px / 16px */
+    }
+    .comment-list article > h3 img {
+      float: none;
+      vertical-align: -3.25em;
+      margin-left: -5.83333333333333em; /* 70px / 12px */
+    }
+
+    /* OPTIONAL: Reduce the space between the headline and the commment */
+    .comment-list article > h3 + p {
+      margin-top: -1.75em;
+    }
+
+    .comment-list form {
+      margin-top: 1.5em;
+    }
+  }
+
+
+
+/* =Member
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  @media (min-width: 40em) {
+    .member .header {
+      border: 0.1em solid rgb(239, 239, 239);
+      padding: 1.5em;
+    }
+  }
+
+  .member .header nav {
+    margin-top: 4.5em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    margin-bottom: -1.5em;
+  }
+  .member .header h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+  }
+  .member .header h1 img {
+    display: block;
+    margin-bottom: 0.75em; /* @line-height / 2 */
+  }
+  .member .header h1 a {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .member .header h1 a[href]:hover,
+  .member .header h1 a[href]:active,
+  .member .header h1 a[href]:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  .member .header h1 + form {
+    margin-top: 1.5em; /* @line-height */
+  }
+  .member .header .introduction {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: 300;
+    padding-bottom: 0.25em;
+    border-bottom: 0.05em solid rgb(218, 220, 224);
+
+    /* @h1 */
+    font-size: 3em;
+    line-height   : 1em; /* @line-height x 2 / 3 */
+    margin-top    : 1em;
+    margin-bottom : 0.5em;
+  }
+  .member .header .skills {
+    font-style: italic;
+  }
+  .member .header .details dt,
+  .member .header .details dd {
+    display: inline;
+  }
+  .member .header .details dt:after {
+    content: ":";
+  }
+  .member .header .details dd {
+    margin-right: 1.5em;
+  }
+  .member .header .details dd {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+  .member .header .details dd,
+  .member .header .details dd a {
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+  }
+  .member .header .details dd a:hover,
+  .member .header .details dd a:active,
+  .member .header .details dd a:focus {
+    color: rgb(153, 153, 153);
+  }
+
+  @media (min-width: 40em) {
+    .member .header .introduction {
+      margin-top: 0;
+    }
+    .member .header .basics {
+      display: inline-block;
+      vertical-align: middle;
+      width: 25%;
+      margin-right: 5%;
+    }
+    .member .header .details {
+      display: inline-block;
+      vertical-align: middle;
+      width: 65%;
+    }
+  }
+
+
+/* =Topic
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .topic .header h1 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    color: rgb(69, 71, 71);
+    font-size: 3.875em; /* 62px / @font-size(16px) */
+  }
+  .topic .header h1 a {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+    border: 0.05em solid rgb(102, 102, 102);
+    padding: 0.75em;
+  }
+  .topic .header h1 a[href]:hover,
+  .topic .header h1 a[href]:active,
+  .topic .header h1 a[href]:focus {
+    border-color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  .topic .header .add a {
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+  }
+  @media (min-width: 30em) {
+    .topic .header {
+      position: relative;
+    }
+    .topic .header .add {
+      margin: 0;
+      position: absolute;
+
+      line-height : 5em;   /* This is about the same as the height of the main headline */
+      top         : 2.5em; /* This is about the same as the padding around the main headline */
+
+      border-left: 0.1em solid rgb(139, 139, 139);
+      padding-left : 3em;
+      right        : 3em;
+    }
+  }
+
+  .topic .featured {
+
+    /* @separator */
+    margin-bottom: 2.95em;
+    border-bottom: 0.1em solid rgb(218, 220, 224);
+  }
+
+  .activity-header:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .activity-header h1,
+  .activity-header h2,
+  .activity-header p {
+    display: inline;
+    margin-right: 0.75em;
+  }
+  .activity-header ul,
+  .activity-header li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .activity-header p a {
+    font-size: 0.75em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .activity-header p a:hover,
+  .activity-header p a:active,
+  .activity-header p a:focus {
+    color: rgb(49, 144, 242);
+  }
+  .activity-header ul {
+    display: inline;
+    float: right;
+  }
+  .activity-header li {
+    display: inline;
+    margin-right: 0.5em;
+  }
+  .activity-header li:last-child {
+    margin-right: 0;
+  }
+  .activity-header li a {
+    color: rgb(153, 153, 153);
+    font-size: 0.75em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .activity-header li a:hover,
+  .activity-header li a:active,
+  .activity-header li a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+
+/* =Post
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  .post > header {
+    margin-bottom: 3em;
+  }
+
+  .post > header .do      a,
+  .post > header .promote a {
+    display: block;
+    text-decoration: inherit;
+    color: inherit;
+  }
+  .post > header .do      h2,
+  .post > header .promote h2 {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+  }
+  .post > header .do      h2 + p,
+  .post > header .promote h2 + p {
+    margin-top: 0;
+  }
+
+  .post > header .share  h2,
+  .post > header .author h2 {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    font-weight: bold;
+  }
+
+  .post > header .do,
+  .post > header .promote,
+  .post > header .author {
+    margin: 0;
+    border-width: 0 0 0.1em 0;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+  }
+  .post > header .do,
+  .post > header .promote {
+    padding-bottom: 0.875em; /* @line-height(1.75) / 2 */
+  }
+  .post > header .author {
+    padding-bottom: 2.1875em; /* @line-height(1.75) x 5/4 */
+  }
+  .post > header .author,
+  .post > header .share {
+    padding-top: 1.75em; /* @line-height(1.75) */
+  }
+  .post > header .share {
+    margin-top: 0;
+  }
+
+
+  /* @follow-list */
+  .post > header .author h3 {
+    font-family: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    font-weight: bold;
+  }
+  .post > header .author h3 a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .post > header .author h3 a:hover,
+  .post > header .author h3 a:hover,
+  .post > header .author h3 a:hover {
+    color: rgb(153, 153, 153);
+  }
+
+  .post > header .author h3 {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / @font-size(16px) */
+    margin-top: 1.16666666666667em; /* @line-height(0.875em) / font-size(0.75em)  */
+  }
+
+  /* OPTIONAL: Add more space above the second author */
+  .post > header .author form + h3 {
+    margin-top: 2.3333333333em; /* @line-height(0.875em) / font-size(0.75em) x 2/3 */
+  }
+
+  .post > header .author form {
+    margin-top: 0.4375em; /* @line-height / 2 */
+  }
+
+  /* TODO: consider sharing styles between the follow list and author */
+  .post > header .author img {
+    float: left;
+    margin-right: 0.75em;
+  }
+  .post > header .author button {
+    font-size: 0.75em; /* 12px / @font-size(16px) */
+  }
+
+  .post > header .share ul,
+  .post > header .share li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .post > header .share li {
+    display: inline;
+  }
+  /*
+  .post > header form h2 button {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+  */
+
+
+  .post > header .facebook  a:after,
+  .post > header .twitter   a:after {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 1.25em;
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    margin-left: 0.5em;
+  }
+  .post > header .facebook  a:after {
+    background-image: url(shared/social/facebook-218-198-71.svg);
+  }
+  .post > header .twitter   a:after {
+    background-image: url(shared/social/twitter-218-198-71.svg);
+  }
+
+  .post > header .share a {
+    display: inline-block;
+    background-color: rgb(255, 249, 208);
+    color: rgb(218, 198, 71);
+    text-decoration: none;
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+    padding: 0.5em 1em;
+    font-weight: bold;
+  }
+
+  .post > header .do      abbr,
+  .post > header .promote abbr {
+    font-size: 2.375em; /* 38px / @font-size(16px) */
+    line-height: normal;
+    font-weight: bold;
+  }
+
+  .post > header .do      abbr:before,
+  .post > header .promote abbr:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 0.55em; /* image-size(21px) / font-size(38px) */
+
+    line-height: 2em;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.25em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .post > header .promote abbr:before {
+    content: "\e001"; /* @icon-do */
+    color: rgb(83, 231, 185);
+  }
+  .post > header .promote abbr:before {
+    content: "\e002"; /* @icon-promote */
+    color: rgb(113, 179, 247);
+  }
+
+  @media (min-width: 30em) and (max-width: 91.9em) {
+    .post > header .options {
+      width: 100%;
+      display: table;
+    }
+    .post > header .do,
+    .post > header .promote,
+    .post > header .author,
+    .post > header .share {
+      margin-top: 0;
+      display: table-cell;
+      vertical-align: top;
+    }
+    .post > header .do,
+    .post > header .promote,
+    .post > header .author {
+      border-width: 0 0.1em 0 0;
+      padding-right: 2.95em;
+      padding-bottom: 0;
+    }
+    .post > header .author,
+    .post > header .share {
+      padding-top: 0;
+      padding-left: 2.95em;
+    }
+    .post > header .share {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+  }
+
+  @media (min-width: 92em) {
+    #content > .container > .post {
+      position: relative;
+    }
+    .post > header {
+      position: absolute;
+      left: -10em;
+      top: 3.5em;
+      width: 9em;
+      text-align: right;
+    }
+    .post > header .author img {
+      display: block;
+      float: none;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 0.4375em; /* @line-height / 2 */
+    }
+    .post > header .author form {
+      margin-top: 0.875em; /* @line-height */
+    }
+    .post > header .share li {
+      display: block;
+    }
+    .post > header .share li + li {
+      margin-top: 0.875em; /* @line-height / 2 */
+    }
+
+    /* OPTIONAL: Attempt to make the buttons the same width */
+    .post > header .share a {
+      min-width: 8em;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .post > article {
+      border: 0.1em solid rgb(218, 220, 224);
+      padding: 3em;
+    }
+  }
+
+  .post > article header h2 {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / @font-size(16px) */
+  }
+  .post > article header h2 strong {
+    font-size: 2.5em; /* 30px / font-size(12px) */
+    color: rgb(42, 43, 44); /* @text-color */
+  }
+  .post > article header h2 a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .post > article header h2 a:hover,
+  .post > article header h2 a:active,
+  .post > article header h2 a:focus {
+    color: rgb(153, 153, 153);
+  }
+  .post > article .time {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em; /* 12px / @font-size(16px) */
+    font-weight: bold;
+  }
+  @media (min-width: 40em) {
+    .post > article header h2,
+    .post > article .time {
+      display: inline;
+    }
+    .post > article header h2 {
+      margin-right: 3em;
+    }
+  }
+
+  .post > article header img {
+    float: left;
+    margin-top: 2.25em;
+    margin-right: 1.5em;
+  }
+  .post > article header a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .post > article header a:hover,
+  .post > article header a:active,
+  .post > article header a:focus {
+    color: rgb(153, 153, 153); /* @link-hover-color */
+  }
+  .post > article h1 {
+    font-size: 2.375em; /* 38px / @font-size(16px) */
+  }
+  .post > article p {
+    line-height: 1.875; /* 30px / @font-size(16px) */
+  }
+  .post > footer h2 {
+    font-size: inherit;
+  }
+  .post > footer .topics {
+    background: rgb(247, 247, 247);
+    padding: 1.5em;
+  }
+  .post-container > .post > footer .topics {
+    padding: 3em;
+    margin-left: -3em;
+    margin-right: -3em;
+    margin-bottom: -3em;
+  }
+  .post > footer .topics h2,
+  .post > footer .topics li {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+
+  .post > footer .topics h2 {
+    color: rgb(14, 14, 14);
+    font-family: inherit;
+  }
+  .post > footer .topics h2:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e004"; /* @icon-topic */
+
+    color: rgb(247, 105, 100);
+    font-size: 1.15384615384615em; /* 15px / 13px */
+    margin-right: 0.5em;
+  }
+
+  .post > footer .topics ul {
+    margin-top: 1.2em;
+  }
+  .post > footer .topics:after {
+    /* $clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .post > footer .topics li {
+    float: left;
+    margin: 0.5em 0.5em 0 0;
+  }
+  .post > footer .topics a {
+    display: inline-block;
+    padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
+    color: rgb(83, 83, 83);
+    background: rgb(252, 252, 252);
+    border: 1px solid rgb(240, 240, 240);
+    text-decoration: none;
+  }
+
+  .post > footer .topics a:hover,
+  .post > footer .topics a:active,
+  .post > footer .topics a:focus {
+    background: white;
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+
+
+  .post > footer,
+  .post > footer > form + form,
+  .post > footer section {
+
+    /* @separator */
+    margin-top: 2.95em;
+    border-top: 0.1em solid rgb(221, 221, 221);
+    padding-top: 1.75em; /* @line-height */
+  }
+  .post > footer ul,
+  .post > footer li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .post > footer li {
+    display: inline;
+  }
+
+  form .submit a {
+    color: rgb(247, 157, 130);
+    font-weight: bold;
+    text-decoration: inherit;
+  }
+  form .submit a:hover,
+  form .submit a:active,
+  form .submit a:focus {
+    color: rgb(247, 113, 113);
+  }
+
+  html:hover .post .secondary h2 {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  html:hover .post .secondary:hover h2 {
+    opacity: 1;
+  }
+
+  .post > footer .do      h2,
+  .post > footer .promote h2 {
+    position: absolute;
+    left: -9999px;
+  }
+  .post > footer .do      h2 + p,
+  .post > footer .promote h2 + p {
+    margin-top: 0;
+  }
+
+  .post > footer .dos      h2,
+  .post > footer .promotes h2 {
+    font-family: inherit;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+  }
+
+  @media (min-width: 30em) {
+    .post > footer {
+      border-top-width: 0;
+      padding-top: 0;
+    }
+    .post > footer .dos,
+    .post > footer .promotes,
+    .post > footer .secondary {
+      text-align: right;
+      margin-bottom: 0;
+    }
+    .post > footer .secondary p {
+      font-size: 0.75em;
+    }
+    .post > footer .dos h2,
+    .post > footer .promotes h2,
+    .post > footer .secondary h2,
+    .post > footer .secondary p {
+      max-width: none;
+    }
+    .post > footer .do,
+    .post > footer .doing,
+    .post > footer .done,
+    .post > footer .promote,
+    .post > footer .promoted {
+      float: left;
+    }
+    .post > footer .do,
+    .post > footer .doing,
+    .post > footer .done,
+    .post > footer .dos,
+    .post > footer .promote,
+    .post > footer .promoted,
+    .post > footer .promotes {
+      margin-top: 1.75em; /* @line-height */
+    }
+    .post > footer .dos      h2,
+    .post > footer .promotes h2,
+    .post > footer .dos      ul,
+    .post > footer .promotes ul {
+      display: inline;
+    }
+    .post > footer .dos      h2,
+    .post > footer .promotes h2 {
+      margin-right: 1.75em;
+    }
+    .post > footer .dos      img,
+    .post > footer .promotes img {
+      vertical-align: middle;
+    }
+  }
+
+  .post .suggested-post:after {
+    /* @clear-fix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .post .suggested-post h2,
+  .post .comments h2,
+  .post .popular-posts h2 {
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .post .suggested-post h2 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  .post .suggested-post p a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+  .post .suggested-post p a img {
+    float: left;
+    margin-right: 0.875em;
+  }
+  .post .suggested-post p a:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent url(shared/next.svg) no-repeat center;
+    background-size: 1.25em auto;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5em;
+  }
+  .post .suggested-post p a:hover,
+  .post .suggested-post p a:active,
+  .post .suggested-post p a:focus {
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+  .post .suggested-post h2 a,
+  .post .popular-posts h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post .suggested-post h2 a:hover,
+  .post .suggested-post h2 a:active,
+  .post .suggested-post h2 a:focus,
+  .post .popular-posts  h2 a:hover,
+  .post .popular-posts  h2 a:active,
+  .post .popular-posts  h2 a:focus {
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+  .post .suggested-post h2 a {
+    font-weight: bold;
+  }
+  .post .suggested-post {
+    border: 0.1em solid rgb(218, 220, 224);
+    position: relative;
+  }
+  .post .suggested-post h2 {
+    margin: 1.5em;
+  }
+  .post .suggested-post p {
+    font-size: 2em;
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
+  .post .suggested-post p a {
+    display: block;
+    padding: 0 0.75em 0.75em;
+  }
+  .post .suggested-post img {
+    display: block;
+    margin-bottom: 0.75em;
+  }
+  @media (min-width: 30em) {
+    .post .suggested-post {
+      /*padding-left: 7.5em;*/ /* image-width(120px) / @font-size(16px) */
+      /*min-height: 12.5em;*/ /* image-height(200px) / @font-size(16px) */
+    }
+    /*
+    .post .suggested-post img {
+      position: absolute;
+      top: 0;
+      left: 0
+    }
+    */
+  }
+
+
+
+/* =Promotion
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .discussion {
+    /* Make space for the main headline (which is positioned outside of the box) */
+    margin-top: 3.5em; /* @line-height(1.75) x 2 */
+
+    position: relative;
+    border: 0.25em solid rgb(247, 247, 247);
+    background-color: rgb(252, 252, 252);
+    padding: 1em; /* 16px / @font-size(16px) */
+  }
+  .discussion h2 {
+    position: absolute;
+    top: -3.81818181818183em; /* @line-height(1.75) x 3/2 / font-size(0.6875em) */
+    left: 0;
+    color: rgb(247, 113, 113);
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+    line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
+    background: transparent url(shared/target.svg) no-repeat left;
+    background-size: 1.6363636364em auto; /* image-size(18px) / font-size(0.6875em) */
+    padding-left: 2.25em;
+  }
+  .discussion h3 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+  }
+  .discussion h3 a {
+    color: rgb(102, 102, 102);
+    text-decoration: inherit;
+  }
+  .discussion h3 a:hover,
+  .discussion h3 a:active,
+  .discussion h3 a:focus {
+    color: rgb(153, 153, 153); /* @link-hover-color */
+  }
+  .discussion h3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75em;
+  }
+  .discussion ul,
+  .discussion li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .discussion + section,
+  .discussion + p {
+    margin-top: 1.5em;
+  }
+  .discussion ul {
+    margin-top: 1.5em;
+  }
+  .discussion li {
+    padding: 1em 0; /* 11px / font-size(11px) */
+    border-bottom: 1px solid rgb(218, 220, 224);
+    color: rgb(102, 102, 102);
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+  }
+  .discussion li a {
+    text-decoration: none;
+  }
+  .discussion li a:hover,
+  .discussion li a:active,
+  .discussion li a:focus {
+    color: rgb(47, 132, 218); /* @deep-blue */
+  }
+  .discussion li img {
+    float: right;
+    position: relative;
+    top: -0.5em;
+    margin-left: 0.5em;
+  }
+  .discussion .more {
+    text-align: center;
+  }
+  .discussion .more a {
+    color: rgb(247, 113, 113);
+    text-decoration: inherit;
+    font-weight: bold;
+    font-size: 0.6875em; /* 11px / @font-size(16px) */
+  }
+  .promotion {
+    padding: 1.5em;
+    background: rgb(249, 249, 250);
+    border: 3px solid rgb(224, 224, 225);
+  }
+  .promotion ul,
+  .promotion li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .promotion > a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .feedback {
+    background-color: rgb(58, 58, 58);
+    border-color: black;
+    color: white;
+  }
+  .feedback h2 {
+    font-size: 1.25em;
+    line-height: inherit;
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+  }
+  .feedback a {
+    color: inherit;
+  }
+  .feedback a:hover,
+  .feedback a:active,
+  .feedback a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  p.ad {
+    max-width: none;
+  }
+
+  /* Line the fixed-size promtions up side-by-side */
+  @media (min-width: 400em) and (max-width: 609.9em) {
+    aside:after {
+      /* @clear-fix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+    aside > .ad,
+    aside > .promotion,
+    aside > .discussion,
+    aside > .fb-recommendations {
+      float: left;
+      margin-right: 1.5em;
+    }
+  }
+
+
+/* =Pages
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+
+/* =Explore
+  ----------------------------------------------- */
+  .explore h1 strong {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
+  }
+  .explore .follow-list img {
+    border-radius: 10em;
+  }
+  .explore .post {
+    color: rgb(255, 224, 18);
+  }
+  .explore .do {
+    color: rgb(99, 221, 144);
+  }
+  .explore .promote {
+    color: rgb(113, 179, 247);
+  }
+  .explore .connect {
+    color: rgb(238, 130, 105);
+  }
+
+
+
+  /* =Testing
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  body.pattern {
+    padding: 3em 1.5em 6em;
+    background: rgb(253, 254, 255);
+  }
+  body.pattern > section + section {
+    margin-top: 3em;
+  }
+  body.test-type {
+    background: white url(shared/rule.svg) top left repeat;
+    background-size: auto 1.5em;
+  }
+
+
+
+  /* =Admin
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  .comment-list article footer ul,
+  .comment-list article footer li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .comment-list article footer ul {
+    text-align: right;
+  }
+  .comment-list article footer li {
+    display: inline;
+    margin-right: 1.75em; /* @line-height */
+    color: rgb(102, 102, 102);
+    cursor: pointer;
+  }
+  .comment-list article footer .reply {
+    float: left;
+  }
+
+  .comment-list article footer .reply       a:before,
+  .comment-list article footer .flag   button:before,
+  .comment-list article footer .delete button:before {
+    font-family: "App Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+    margin-right: 0.375em;
+    color: rgb(229, 229, 229);
+    transition: color 0.2s;
+  }
+
+  .comment-list article footer .reply a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .comment-list article footer .flag form,
+  .comment-list article footer .delete form {
+    display: inline;
+  }
+  .comment-list article footer .flag button,
+  .comment-list article footer .delete button {
+    background-color: transparent;
+    font-weight: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  .comment-list article .reply a:before {
+    content: "\e600"; /* @icon-reply */
+  }
+
+  .comment-list article .flag button:before {
+    content: "\e001"; /* @icon-flag */
+  }
+
+  .comment-list article .delete button:before {
+    content: "\e004"; /* @icon-delete */
+  }
+
+  .comment-list article .reply a:hover:before {
+    color: rgb(49, 144, 242);
+  }
+
+  .comment-list article .flag button:hover:before,
+  .comment-list article .flag button:active:before,
+  .comment-list article .flag button:focus:before {
+    color: rgb(255, 102, 102);
+  }
+  .comment-list article .delete button:hover:before,
+  .comment-list article .delete button:active:before,
+  .comment-list article .delete button:focus:before {
+    color: rgb(255, 102, 102);
+  }
+
+  /* =Post Buttons
+  ----------------------------------------------- */
+  .inline-edit-controls {
+    text-align: right;
+    margin-bottom: 12px;
+    float: left;
+  }
+  .inline-edit-controls input[type=submit] {
+    background-color: white;
+  }
+  .inline-edit-controls a,
+  .inline-edit-controls input[type=submit] {
+    font-size: 10px;
+    font-weight: bold;
+    color: #8b8b8b;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  .inline-edit-controls a:hover,
+  .inline-edit-controls input[type=submit]:hover {
+    color: #ee8269;
+  }
+  .inline-edit-controls span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ee8269;
+  }
+  .inline-edit-controls #delete_bookmark_js,
+  .inline-edit-controls #admin_edit_js,
+  .inline-edit-controls #spam_flag {
+    margin-left: 12px;
+    display: inline-block;
+  }
+  .inline-edit-controls #delete_bookmark_js {
+    margin-left: 0
+  }
+  .inline-edit-controls #admin_edit_js a {
+    margin-left: 12px;
+  }
+
+
+/* =Facebook Invite
+  ----------------------------------------------- */
+
+  /* line 163, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
+  .fb_invite_container {
+    padding: 0.875em 1.75em;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    background: #2a2b2c;
+    position: relative;
+    /* display: none; */
+  }
+  /* line 172, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
+  .fb_invite_container strong {
+    font-weight: bold;
+  }
+  /* line 174, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
+  .fb_invite_container .fb_invite {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  /* line 178, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
+  .fb_invite_container .fb_invite .invite-friends {
+    font-size: 12px;
+    height: 37px;
+    line-height: 37px;
+    background: #6bb4f1;
+    color: white;
+    display: block;
+    padding: 0px 22px 0px 22px;
+    font-weight: bold;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  /* line 190, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
+  .fb_invite_container .fb_invite .invite-friends:hover {
+    background: #59a1dd;
+  }
+  /* line 196, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
+  .fb_invite_container .close {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
+  }
+
+
+/* =Activity List Buttons
+  ----------------------------------------------- */
+  /* line 890, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
+  .feed-edit-controls {
+    display: none;
+    line-height: 30px;
+    border-top: 1px solid #dadce0;
+    background-color: #f7f7f7;
+    text-align: right;
+    padding-right: 12px;
+  }
+  /* line 897, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
+  .feed-edit-controls span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ee8269;
+    margin-left: 12px;
+  }
+  /* line 903, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
+  .inline-edit-controls a,
+  .inline-edit-controls input[type=submit],
+  .feed-edit-controls a,
+  .feed-edit-controls input[type=submit] {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: inherit;
+    color: #8b8b8b;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 12px;
+    border-width: 0;
+    text-decoration: none;
+    padding: 0;
+  }
+  /* line 910, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
+  .inline-edit-controls a:hover,
+  .inline-edit-controls input[type=submit]:hover,
+  .feed-edit-controls a:hover,
+  .feed-edit-controls input[type=submit]:hover {
+    color: #ee8269;
+  }
+  /* line 914, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
+  .feed-edit-controls .edit_feed_item,
+  .feed-edit-controls .delete_feed_item,
+  .feed-edit-controls .flag_feed_item {
+    display: inline-block;
+  }
+
+  /* TBD: Combine this set of rules with the one above? */
+  .feed-edit-controls,
+  .inline-edit-controls {
+    border-width: 0;
+    background-color: rgb(245, 245, 245);
+    padding: 0.3em 1.5em 0.2em 0.2em;
+    line-height: 1.2em;
+  }
+
+  .activity-item ~ .feed-edit-controls {
+    float: right;
+    margin-top: -1.7em;
+    transition: opacity 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Only show the admin options for one item at a time */
+  html:hover .activity-item ~ .feed-edit-controls {
+    opacity: 0;
+  }
+  html:hover li:hover .activity-item ~ .feed-edit-controls {
+    opacity: 1;
+  }
+
