@@ -11,39 +11,6 @@
   ----------------------------------------------- */
 
   @font-face {
-    font-family: "Brandon Grotesque Bold";
-    src: url(shared/brandon.eot);
-    src: url(shared/brandon.eot?#iefix) format('eot'),
-         url(shared/brandon.woff) format('woff'),
-         url(shared/brandon.ttf) format('truetype'),
-         url(shared/brandon.svg#brandon) format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Freight Text Light";
-    src: url(shared/freight.eot);
-    src: url(shared/freight.eot?#iefix) format('eot'),
-         url(shared/freight.woff) format('woff'),
-         url(shared/freight.ttf) format('truetype'),
-         url(shared/freight.svg#freight) format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Trade Gothic Bold Condensed";
-    src: url(shared/trade.eot);
-    src: url(shared/trade.eot?#iefix) format('eot'),
-         url(shared/trade.woff) format('woff'),
-         url(shared/trade.ttf) format('truetype'),
-         url(shared/trade.svg#trade) format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
     font-family: "Good Icons";
     src: url(shared/icons.eot);
     src: url(shared/icons.eot?#iefix) format('eot'), url(shared/icons.woff) format('woff'), url(shared/icons.ttf) format('truetype'), url(shared/icons.svg#icons) format('svg');
@@ -87,8 +54,16 @@
     max-width: 100%;
     height: auto;
   }
-  iframe,  object, embed {
+  iframe, object, embed {
     max-width: 100%;
+  }
+
+  a img {
+    border-width: 0;
+  }
+
+  iframe {
+    border-width: 0;
   }
 
   /* Older browsers sometimes render these inline */
@@ -124,8 +99,8 @@
   http://typecast.com/shared/uploads/typographic-scale.png
   */
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-weight: 300;
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: inherit;
     margin-top     : 1.75em;  /* @line-height */
     margin-bottom  : 0.875em; /* @line-height / 2 */
   }
@@ -209,7 +184,7 @@
     margin-top: 0.75em;
     font-variant: small-caps;
     text-transform: lowercase;
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
   }
   dd {
     margin-left: 0;
@@ -579,7 +554,7 @@
   .promote  button,
   .promoted button {
     padding: 0.5em 1em;
-    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
     font-weight: normal;
     font-size: 1.25em;
   }
@@ -637,7 +612,7 @@
   .action.edit a {
     background-color: rgb(239, 239, 239);
     color: rgb(139, 139, 139);
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -650,7 +625,7 @@
   .update button {
     background-color: rgb(217, 255, 232);
     color: rgb(97, 115, 104);
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -877,13 +852,12 @@
     text-indent: -9999px;
   }
   #header .search label {
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     text-transform: uppercase;
     color: rgb(113, 179, 247);
   }
   #header .search input {
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-weight: 300;
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 1.375em;
     width: 12em; /* This is about the width of the placeholder text */
     max-width: 100%;
@@ -1542,7 +1516,7 @@
     }
   }
   .join-intro h1 {
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-size: 3.75em; /* 60px / 16px */
     text-align: center;
     text-transform: uppercase;
@@ -1759,6 +1733,43 @@
     }
   }
 
+  /* KLUDGE: Consider using an SVG image here instead */
+  .activity-item .post h3.play-button-overlay-100 .image:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: 2px solid white;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .activity-item .post h3.play-button-overlay-100 .image:after {
+    content: '';
+    position: absolute;
+    top: 41px;
+    left: 44.5px;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    width: 0;
+    height: 0;
+    display: block;
+    border-style: solid;
+    border-width: 18px;
+    border-left: 15px white solid;
+    border-right: 0;
+    border-top: 9px transparent solid;
+    border-bottom: 9px transparent solid;
+  }
+
   .activity-item form {
     font-size: 0.75em;
   }
@@ -1835,6 +1846,43 @@
     }
   }
 
+  /* KLUDGE: Consider using an SVG image here instead */
+  .activity-item .link h3.play-button-overlay-60 .image:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    border: 2px solid white;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .activity-item .link h3.play-button-overlay-60 .image:after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    width: 0;
+    height: 0;
+    display: block;
+    border-style: solid;
+    border-width: 12px;
+    border-left: 10px white solid;
+    border-right: 0;
+    border-top: 6px transparent solid;
+    border-bottom: 6px transparent solid;
+  }
+
   /* OPTIONAL: Light up the links and follows, when hovering over an item */
   .activity-item .link:hover,
   .activity-item .follow:hover {
@@ -1869,8 +1917,7 @@
     padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .activity-item .follow .introduction {
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-weight: 300;
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     line-height: 1.35em; /* Freight Light needs a big line height */
     margin-bottom: 0;
   }
@@ -2345,9 +2392,7 @@
   }
 
   .featured .activity-item.do h3 {
-    font-size: 20px;
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    line-height: 1.35em; /* Freight Light needs a big line height */
+    font-size: 1.25em;
   }
   .featured .activity-item.do h3 a {
     display: block;
@@ -2406,10 +2451,6 @@
     position: relative;
   }
 
-  .follow-list p {
-    margin-top    : 0.625em; /* @line-height(20px) / 2 */
-    margin-bottom : 0.625em;
-  }
   .follow-list form {
     font-size: 0.75em;
   }
@@ -2476,6 +2517,7 @@
       margin-top: 0;
       top: 1.5em;
       right: 1.5em;
+      text-align: right;
     }
   }
 
@@ -2523,7 +2565,7 @@
   }
   .follow-list .location,
   .follow-list .introduction {
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     line-height: 1.35em; /* Freight Light needs a big line height */
     margin-bottom: 0;
 
@@ -2570,7 +2612,7 @@
   */
   .follow-list .do    h4,
   .follow-list .learn h4 {
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -2700,7 +2742,7 @@
     text-decoration: none;
   }
   .topic-list h3 {
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -2965,8 +3007,7 @@
     margin-top: 1.5em; /* @line-height */
   }
   .member .header .introduction {
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-weight: 300;
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     padding-bottom: 0.25em;
     border-bottom: 0.05em solid rgb(218, 220, 224);
 
@@ -3026,7 +3067,7 @@
   -----------------------------------------------
   ----------------------------------------------- */
   .topic .header h1 {
-    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
     text-transform: uppercase;
     color: rgb(69, 71, 71);
     font-size: 3.875em; /* 62px / @font-size(16px) */
@@ -3420,14 +3461,23 @@
       display: inline;
     }
     .post > article header h2 {
-      margin-right: 3em;
+      margin-right: 3.5em; /* @line-height x 2 */
     }
   }
 
+  .post > article header > a {
+    display: block;
+    margin-top: 2.25em;
+  }
+  .post > article header > a.has-image:after {
+    /* @clear-fix */
+    content: "";
+    display: table;
+    clear: both;
+  }
   .post > article header img {
     float: left;
-    margin-top: 2.25em;
-    margin-right: 1.5em;
+    margin-right: 1.75em; /* @line-height */
   }
   .post > article header a {
     color: inherit;
@@ -3443,6 +3493,12 @@
   }
   .post > article p {
     line-height: 1.875; /* 30px / @font-size(16px) */
+  }
+  .post > article ul.images,
+  .post > article ul.images li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
   }
   .post > footer h2 {
     font-size: inherit;
@@ -3556,6 +3612,7 @@
     opacity: 1;
   }
 
+  /*
   .post > footer .do      h2,
   .post > footer .promote h2 {
     position: absolute;
@@ -3565,6 +3622,7 @@
   .post > footer .promote h2 + p {
     margin-top: 0;
   }
+  */
 
   .post > footer .dos      h2,
   .post > footer .promotes h2 {
@@ -3690,8 +3748,7 @@
   }
   .post .suggested-post p {
     font-size: 2em;
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
   }
   .post .suggested-post p a {
     display: block;
@@ -3735,7 +3792,7 @@
     top: -3.81818181818183em; /* @line-height(1.75) x 3/2 / font-size(0.6875em) */
     left: 0;
     color: rgb(247, 113, 113);
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
@@ -3832,7 +3889,7 @@
   .feedback h2 {
     font-size: 1.25em;
     line-height: inherit;
-    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
     text-transform: uppercase;
   }
   .feedback a {
@@ -3875,7 +3932,7 @@
 /* =Explore
   ----------------------------------------------- */
   .explore h1 strong {
-    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
     font-weight: normal;
   }
   .explore .follow-list img {

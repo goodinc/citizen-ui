@@ -6,7 +6,44 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <link rel="stylesheet" href="http://fast.fonts.net/cssapi/f90e5d12-8fa4-47b1-a316-b233141d7f51.css" />
   <link rel="stylesheet" href="../../assets/shared.css" />
+
+  <style>
+    body:hover .hover .following h6 {
+      position: absolute;
+      left: -9999px;
+    }
+    body:hover .hover .following button {
+      position: relative;
+    }
+    body:hover .hover .following button span {
+      opacity: 0;
+    }
+    body:hover .hover .following button:after {
+      content: "Following";
+      display: block;
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 0.75em; /* Button padding */
+      width: 100%;
+      text-align: center;
+    }
+
+    body:hover .hover .following button:hover  span,
+    body:hover .hover .following button:active span,
+    body:hover .hover .following button:focus  span {
+      opacity: 1;
+    }
+    body:hover .hover .following button:hover:after,
+    body:hover .hover .following button:active:after,
+    body:hover .hover .following button:focus:after {
+      opacity: 0;
+    }
+  </style>
+
 </head>
 <body class="pattern">
 
@@ -66,23 +103,6 @@
     <p><button type="submit">Done</button></p>
   </form>
 
-  <!-- Consider adding headlines for clarity. -->
-  <!--
-  <form action="" method="post" class="do">
-    <p><button type="submit">Do It</button></p>
-  </form>
-
-  <h3>You’re doing this</h3>
-  <form action="" method="post" class="doing">
-    <p><button type="submit">Done</button></p>
-  </form>
-
-  <h3>You did this</h3>
-  <form action="" method="post" class="done">
-    <p><button type="submit">Cancel</button></p>
-  </form>
-  -->
-
   <!-- You can also place the class names inside the form. -->
   <!--
   <form action="" method="post">
@@ -91,6 +111,24 @@
     <p class="done"><button type="submit">Cancel</button></p>
   </form>
   -->
+</section>
+
+<section>
+  <h2>Do (with Headlines)</h2>
+
+  <form action="" method="post" class="do">
+    <p><button type="submit">Do It</button></p>
+  </form>
+
+  <form action="" method="post" class="doing">
+    <h6>You’re doing this</h6>
+    <p><button type="submit">Done</button></p>
+  </form>
+
+  <form action="" method="post" class="done">
+    <h6>You did this</h6>
+    <p><button type="submit">Undo</button></p>
+  </form>
 </section>
 
 <section id="follow">
@@ -104,6 +142,88 @@
     <p><button type="submit">Following</button></p>
   </form>
 </section>
+
+<section>
+  <h2>Follow (with Headlines)</h2>
+
+  <form action="" method="post" class="follow">
+    <p><button type="submit">Follow</button></p>
+  </form>
+
+  <form action="" method="post" class="following">
+    <h6>You’re following</h6>
+    <p><button type="submit">Unfollow</button></p>
+  </form>
+</section>
+
+<section class="hover">
+  <h2>Follow (Hover)</h2>
+
+  <form action="" method="post" class="following">
+    <h6>You’re following</h6>
+    <p><button type="submit"><span>Unfollow</span></button></p>
+  </form>
+</section>
+
+<section class="toggle">
+  <h2>Follow (Toggle)</h2>
+
+  <form action="" method="post">
+    <h6>You’re following</h6>
+    <p class="following"><button type="submit">Unfollow</button></p>
+    <p class="cancel"><a href="">Cancel</a></p>
+  </form>
+</section>
+
+<script>
+
+/*  =ToggleButton
+  ----------------------------------------------- */
+  var ToggleButton = function() {};
+
+  (function() {
+
+    if (!document.body.addEventListener || !document.querySelector) return;
+
+    ToggleButton = function(element, activeLabel, inactiveLabel) {
+
+      if (!element) return;
+
+      var button = element.getElementsByTagName("button");
+      if (button.length > 0) button = button[0];
+
+      var active;
+
+      function activate() {
+        element.className += " active";
+        button.innerHTML = activeLabel;
+        active = true;
+      };
+
+      function deactivate() {
+        element.className = element.className.replace(/active/g, "");
+        button.innerHTML = inactiveLabel;
+        active = false;
+      };
+
+      function toggle() {
+        if (active) deactivate();
+        else activate();
+      }
+
+      if (element.className.indexOf("active") >= 0) active = true;
+
+      element.addEventListener("submit", function(e) { e.preventDefault(); }, false);
+      button.addEventListener("click", function(e) {
+        toggle();
+        e.preventDefault();
+      }, false);
+
+    }
+      
+  })();
+
+</script>
 
 </body>
 </html>
