@@ -1,0 +1,38 @@
+
+  /* =Third Party Fonts
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family:"Brandon Grot W01 Bold";
+    src: url(test-files/c12a6d37-72c1-408b-9ca9-32946956c57f.eot);
+    src: url(test-files/c12a6d37-72c1-408b-9ca9-32946956c57f.eot?#iefix) format('eot'),
+         url(test-files/4f2d0548-c7dc-459b-a2e0-e86656a10ded.woff) format('woff'),
+         url(test-files/dc21d9e5-516f-4e7e-9a84-7be79a44c2dd.ttf) format('truetype'),
+         url(test-files/a9bdb836-ee14-494d-8c69-5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family:"FreightText Light";
+    src: url(test-files/2c61d060-b821-44b0-9ef3-df033ba73b29.eot);
+    src: url(test-files/2c61d060-b821-44b0-9ef3-df033ba73b29.eot?#iefix) format('eot'),
+         url(test-files/1c750263-86c6-4341-a6e9-1b1a01cf0cd4.woff) format('woff'),
+         url(test-files/bf3cfac2-4b5a-4e19-9287-91528eef23a6.ttf) format('truetype'),
+         url(test-files/981e61ba-ddc5-4e86-9332-ce6d21a55161.svg#981e61ba-ddc5-4e86-9332-ce6d21a55161) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family:"TradeGothicW01-BoldCn20 675334";
+    src: url(test-files/257c802f-349c-4b4d-aefa-546d5de15ec6.eot);
+    src: url(test-files/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix) format('eot'),
+         url(test-files/5fdc935e-9e30-442a-bbe9-8d887b858471.woff) format('woff'),
+         url(test-files/616c4c87-a077-43f4-a9f4-f01267c13818.ttf) format('truetype'),
+         url(test-files/c901ad5f-a842-4549-a1f4-583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
