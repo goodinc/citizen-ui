@@ -747,7 +747,7 @@
   }
   #header .primary li a {
     padding-right: 1.7142857143em; /* @line-height(24px) / font-size(14px) */
-    background-image: url(shared/blocks.svg);
+    background-image: url(shared/misc/blocks.svg);
     background-repeat: no-repeat;
     background-position: 1.25em 50%;
     background-size: 1.6428571429em auto; /* image-size(23px) / font-size(14px) */
@@ -760,7 +760,7 @@
     */
     color: rgb(170, 149, 5);
     background-color: rgb(255, 233, 84);
-    background-image: url(shared/lightning.svg);
+    background-image: url(shared/misc/lightning.svg);
     background-size: 1.5em auto; /* image-size(21px) / font-size(14px) */
     padding-left: 3.5em; /* background-size + 2em */
   }
@@ -801,7 +801,7 @@
   #header h2 a {
     vertical-align: middle;
     display: inline-block;
-    background: url(shared/good.svg) no-repeat;
+    background: url(shared/misc/good.svg) no-repeat;
     background-size: contain;
 
     width:  6.250em; /* image-width(100px) / @font-size(16px) */
@@ -843,7 +843,7 @@
     background-color: rgb(139, 139, 139);
     */
     background: rgb(173, 173, 173);
-    background-image: url(shared/lense.svg);
+    background-image: url(shared/misc/lense.svg);
     background-repeat: no-repeat;
     background-position: center;
     color: rgb(102, 102, 102);
@@ -3347,7 +3347,7 @@
     background-size: contain;
   }
 
-  .post > header .promote abbr:before {
+  .post > header .do abbr:before {
     content: "\e001"; /* @icon-do */
     color: rgb(83, 231, 185);
   }
@@ -3574,15 +3574,6 @@
   }
 
 
-  .post > footer,
-  .post > footer > form + form,
-  .post > footer section {
-
-    /* @separator */
-    margin-top: 2.95em;
-    border-top: 0.1em solid rgb(221, 221, 221);
-    padding-top: 1.75em; /* @line-height */
-  }
   .post > footer ul,
   .post > footer li {
     list-style: none;
@@ -3643,6 +3634,11 @@
       text-align: right;
       margin-bottom: 0;
     }
+    .post > footer .dos,
+    .post > footer .promotes {
+      display: inline-block;
+      margin-left: 1.75em; /* @line-height */
+    }
     .post > footer .secondary p {
       font-size: 0.75em;
     }
@@ -3652,6 +3648,7 @@
     .post > footer .secondary p {
       max-width: none;
     }
+    /*
     .post > footer .do,
     .post > footer .doing,
     .post > footer .done,
@@ -3659,14 +3656,15 @@
     .post > footer .promoted {
       float: left;
     }
+    */
     .post > footer .do,
     .post > footer .doing,
     .post > footer .done,
     .post > footer .dos,
     .post > footer .promote,
-    .post > footer .promoted,
-    .post > footer .promotes {
+    .post > footer .promoted {
       margin-top: 1.75em; /* @line-height */
+      display: inline-block;
     }
     .post > footer .dos      h2,
     .post > footer .promotes h2,
@@ -3712,7 +3710,7 @@
     content: "";
     display: inline-block;
     vertical-align: middle;
-    background: transparent url(shared/next.svg) no-repeat center;
+    background: transparent url(shared/misc/next.svg) no-repeat center;
     background-size: 1.25em auto;
     width: 2em;
     height: 2em;
@@ -3797,7 +3795,7 @@
     text-transform: uppercase;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
     line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
-    background: transparent url(shared/target.svg) no-repeat left;
+    background: transparent url(shared/misc/target.svg) no-repeat left;
     background-size: 1.6363636364em auto; /* image-size(18px) / font-size(0.6875em) */
     padding-left: 2.25em;
   }
@@ -3966,7 +3964,7 @@
     margin-top: 3em;
   }
   body.test-type {
-    background: white url(shared/rule.svg) top left repeat;
+    background: white url(shared/test/rule.svg) top left repeat;
     background-size: auto 1.5em;
   }
 
