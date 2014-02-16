@@ -46,12 +46,20 @@
     h3 {
       margin-bottom: 0;
     }
+    h4 {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
     ul {
       margin-top: 0.5em;
       padding-left: 0.5em;
     }
     #container {
       margin: 50px auto;
+    }
+    #container > section > section {
+      float: left;
+      margin-right: 5em;
     }
     #outer-outer-container {
       margin: 0 auto;
@@ -69,6 +77,17 @@
     .not-recommended {
       opacity: 0.25;
     }
+    .official:before {
+      content: "✔";
+      position: absolute;
+      margin-left: -1.5em;
+    }
+    .blocking a[href*="pending"]:after {
+      margin-left: 0.25em;
+      text-transform: lowercase;
+      content: "(blocking)";
+      color: rgb(255, 102, 102);
+    }
   </style>
 </head>
 <body>
@@ -83,73 +102,79 @@
 
         <section>
           <section>
-            <h3>Load from a third-party (using CSS)</h3>
-            <ul>
-              <li><a href="a.html">Service Up</a></li>
-              <li><a href="a-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section class="not-recommended">
-            <h3>Load from a third-party (using JavaScript)</h3>
-            <ul>
-              <li><a href="i.html">Service Up</a></li>
-              <li><a href="i-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Load from a third-party (with AJAX)</h3>
-            <ul>
-              <li><a href="b.html">Service Up</a></li>
-              <li><a href="b-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Load from a third-party (TypeKit method)</h3>
-            <ul>
-              <li><a href="g.html">Service Up</a></li>
-              <li><a href="g-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section class="not-recommended">
-            <h3>Load from a third-party (using <a href="https://developers.google.com/fonts/docs/webfont_loader">Web Font Loader</a>)</h3>
-            <ul>
-              <li><a href="g.html">Service Up</a></li>
-              <li><a href="g-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section class="not-recommended">
-            <h3>Self-host with third-party CSS tracking</h3>
-            <ul>
-              <li><a href="c.html">Service Up</a></li>
-              <li><a href="c-pending.html">Service Down</a></li>
-            </ul>
+            <h3>Load from a third-party</h3>
+            <section class="official blocking">
+              <h4>Using a “link” element</h4>
+              <ul>
+                <li><a href="a.html">Service Up</a></li>
+                <li><a href="a-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Using a “link” element (added with JavaScript)</h4>
+              <ul>
+                <li><a href="g.html">Service Up</a></li>
+                <li><a href="g-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Using a “style” element (loaded with AJAX)</h4>
+              <ul>
+                <li><a href="b.html">Service Up</a></li>
+                <li><a href="b-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section class="official">
+              <h4>Using third-party JavaScript</h4>
+              <ul>
+                <li><a href="i.html">Service Up</a></li>
+                <li><a href="i-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section class="not-recommended official">
+              <h4>Using the <a href="https://developers.google.com/fonts/docs/webfont_loader">Web Font Loader</a> from Google &amp; Typekit</h4>
+              <ul>
+                <li><a href="g.html">Service Up</a></li>
+                <li><a href="g-pending.html">Service Down</a></li>
+              </ul>
+            </section>
           </section>
           <section>
-            <h3>Self-host with third-party CSS tracking (loaded with AJAX)</h3>
-            <ul>
-              <li><a href="e.html">Service Up</a></li>
-              <li><a href="e-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section class="not-recommended">
-            <h3>Self-host with third-party CSS tracking (loaded with an image tag)</h3>
-            <ul>
-              <li><a href="h.html">Service Up</a></li>
-              <li><a href="h-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Self-host with third-party JavaScript tracking</h3>
-            <ul>
-              <li><a href="d.html">Service Up</a></li>
-              <li><a href="d-pending.html">Service Down</a></li>
-            </ul>
-          </section>
-          <section class="not-recommended">
-            <h3>Use alternate fonts that don’t require a license</h3>
-            <ul>
-              <li><a href="f.html">Example</a></li>
-            </ul>
+            <h3>Self-host</h3>
+            <section class="not-recommended official blocking">
+              <h4>With third-party CSS tracking</h4>
+              <ul>
+                <li><a href="c.html">Service Up</a></li>
+                <li><a href="c-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section class="not-recommended">
+              <h4>With third-party CSS tracking (loaded with an image tag)</h4>
+              <ul>
+                <li><a href="h.html">Service Up</a></li>
+                <li><a href="h-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>With third-party CSS tracking (loaded with AJAX)</h4>
+              <ul>
+                <li><a href="e.html">Service Up</a></li>
+                <li><a href="e-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section class="official">
+              <h4>With third-party JavaScript tracking</h4>
+              <ul>
+                <li><a href="d.html">Service Up</a></li>
+                <li><a href="d-pending.html">Service Down</a></li>
+              </ul>
+            </section>
+            <section class="not-recommended official">
+              <h4>Using alternate fonts that don’t require a license</h4>
+              <ul>
+                <li><a href="f.html">Example</a></li>
+              </ul>
+            </section>
           </section>
         </section>
 
