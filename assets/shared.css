@@ -648,14 +648,18 @@
 
   /* =Containers
   ----------------------------------------------- */
+  #header {
+    margin-bottom: 0;
+  }
   #header > .container {
     padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
   #header ~ #content {
     /* @separator */
-    margin-top: 2.25em;
-    padding-top: 2.99em;
+    margin-top: 0;
     border-top: 0.1em solid rgb(221, 221, 221);
+    padding-top: 2.99em;
     padding-bottom: 3em;
   }
   #footer {
@@ -675,7 +679,7 @@
   #footer > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 70em;
+    max-width: 70em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -684,6 +688,7 @@
   @media (min-width: 40em) {
     #header > .container {
       padding-top: 2.25em;
+      padding-bottom: 2.25em;
     }
     #footer > .container {
       padding-bottom: 3em;
@@ -876,37 +881,37 @@
   }
   @media (min-width: 25em) and (max-width: 65em) {
     #header > .container {
-      padding-bottom: 4.5em;
+      padding-bottom: 6em;
     }
     #header.has-account > .container {
       padding-bottom: 0;
     }
     #header > .container > h2 + p + p {
       position: absolute;
-      bottom: -0.75em;
+      bottom: 0.75em;
       right: 2.25em;
     }
   }
   @media (min-width: 25em) and (max-width: 39.9em) {
     #header > .container > h2 + p {
       position: absolute;
-      bottom: 1.5em;
+      bottom: 3em;
       left: 0;
     }
   }
   @media (min-width: 40em) and (max-width: 55em) {
     #header > .container > h2 + p {
       position: absolute;
-      bottom: -0.75em;
+      bottom: 0.75em;
       left: 0.75em;
     }
   }
   @media (min-width: 40em) and (max-width: 65em) {
     #header > .container > h2 + p + p {
-      bottom: -0.75em;
+      bottom: 0.75em;
     }
     #header > .container {
-      padding-bottom: 2.25em;
+      padding-bottom: 3.75em;
     }
   }
 
@@ -1507,10 +1512,16 @@
     background-color: rgb(105, 206, 155);
     padding: 1.5em 3em;
     color: white;
+    box-sizing: border-box;
   }
+
+  body > .join-intro {
+    max-width: 70em; /* @max-page-width */
+    margin: 0 auto;
+  }
+
   @media (max-width: 59.9em) {
     .join-intro {
-      margin-top: -3em;
       margin-left: -2.25em; /* body-padding */
       margin-right: -2.25em;
     }

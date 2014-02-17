@@ -53,7 +53,9 @@
       var detailsShowing;
 
       function hideDetails() {
-        element.className += " summary";
+        if (element.className.indexOf("summary") < 0) {
+          element.className += " summary";
+        }
         detailsShowing = false;
       };
 
