@@ -466,8 +466,8 @@
   section.message {
     padding: 1.5em;
     font-size: 1.1em;
-    background: rgb(230, 235, 253);
-    border: 1px solid rgb(204, 204, 251);
+    background: #fffce7;
+    border: 3px solid #f3efd1;
   }
   section.message h1 {
     font-size: inherit;
@@ -479,13 +479,9 @@
   section.message p {
     display: inline;
   }
-  section.message p,
-  section.message li {
-    color: rgb(91, 94, 152);
-  }
   section.message.error {
     background: rgb(253, 235, 230);
-    border: 1px solid rgb(251, 204, 204);
+    border-color: rgb(251, 204, 204);
   }
   section.message.error p,
   section.message.error li {
@@ -493,11 +489,44 @@
   }
   section.message.success {
     background: rgb(230, 253, 235);
-    border: 1px solid rgb(204, 251, 204);
+    border-color: rgb(204, 251, 204);
   }
   section.message.success p,
   section.message.success li {
     color: rgb(91, 152, 94);
+  }
+  section.message a {
+    color: inherit;
+  }
+
+  section.message.spam h1:before {
+
+    /* @app-icons */
+    font-family: "App Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+
+    font-size: 2.25em; /* 36px / @font-size(16px) */
+    margin-right: 0.5em;
+    color: rgb(229, 229, 229);
+    transition: color 0.2s;
+
+    /* TODO
+    background: transparent url(/assets/admin/shadow.png) bottom no-repeat;
+    padding-bottom: 0.25em;
+    */
+
+    content: "\e002"; /* @icon-spam */
+    color: #f33;
   }
 
 
@@ -1222,9 +1251,11 @@
   /* =Footer
   ----------------------------------------------- */
   #footer section {
-    margin-bottom: 1.5em;
     margin-right: 3em;
     display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    margin-bottom: 3em;
   }
   #footer section:last-child {
     margin-right: 0;
@@ -1235,9 +1266,13 @@
     font-family: inherit;
     font-weight: bold;
   }
-  #footer ul {
+  #footer ul,
+  #footer p {
     font-size: 0.75em;
     margin-top: 1.5em;
+  }
+  #footer p {
+    color: rgb(153, 153, 153); /* @aluminum */
   }
   #footer ul,
   #footer li {
