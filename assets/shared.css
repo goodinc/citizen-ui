@@ -159,6 +159,13 @@
     font-style: italic;
   }
 
+  /* Experimental
+  h1, h2, h3, h4, h5, h6, p,
+  .follow-list li {
+    max-width: 33em;
+  }
+  */
+
   /* Experimental */
   @media (max-width: 50em) {
     h1 {
@@ -1813,8 +1820,8 @@
     margin-left: 0;
   }
 
-  .activity-item .link,
-  .activity-item .follow {
+  .activity-item section.link,
+  .activity-item section.follow {
     padding       : 1.25em;  /* @line-height(20px) */
     border: 1px solid rgb(243, 243, 243); /* @bright-silver */
     background: rgb(249, 249, 249); /* @silver */
@@ -1823,8 +1830,8 @@
     position: relative;
   }
 
-  .activity-item .link:after,
-  .activity-item .follow:after {
+  .activity-item section.link:after,
+  .activity-item section.follow:after {
     /* @clear-fix */
     content: "";
     display: table;
@@ -2683,59 +2690,6 @@
   }
 
 
-/* =Topic List
-  -----------------------------------------------
-  -----------------------------------------------
-  ----------------------------------------------- */
-
-  .topic-list {
-    margin-top: 1.5em; /* @line-height */
-  }
-  .topic-list,
-  .topic-list > li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .topic-list > li {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: rgb(239, 239, 239);
-    margin-top: 1.5em; /* @line-height */
-    padding: 1.5em;
-    background: rgb(249, 249, 249);
-  }
-  .topic-list header {
-    border: 1px solid rgb(239, 239, 239);
-    padding: 1.5em;
-  }
-  .topic-list header a {
-    color: rgb(102, 102, 102);
-  }
-  .topic-list header img {
-    display: block;
-    margin-bottom: 0.75em;
-    margin-right: 0.75em;
-    border-radius: 10em;
-    vertical-align: middle;
-  }
-  .topic-list .post:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .topic-list .post img {
-    display: block;
-    margin-bottom: 0.75em;
-  }
-
-  .topic-list .more {
-    margin-top: 1.5em;
-  }
-  .topic-list .more a:after {
-    content: " →";
-  }
-
   /* More button */
   .activity-list + .more,
   .follow-list   + .more {
@@ -2749,69 +2703,6 @@
     content: " →";
   }
 
-  .topic-list a {
-    text-decoration: none;
-  }
-  .topic-list h3 {
-    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
-    font-weight: normal;
-    text-transform: uppercase;
-  }
-  .topic-list .post {
-    border: 1px solid rgb(239, 239, 239);
-    background: white;
-    padding: 1.5em;
-  }
-  .topic-list h4 {
-    font-size: 1.75em; /* 28px / 16px */
-  }
-  .topic-list h2 a,
-  .topic-list h4 a {
-    color: inherit;
-  }
-  .topic-list h2 a:hover,
-  .topic-list h2 a:hover,
-  .topic-list h2 a:hover,
-  .topic-list h4 a:hover,
-  .topic-list h4 a:hover,
-  .topic-list h4 a:hover {
-    color: rgb(113, 179, 247); /* @link-color */
-  }
-  .topic-list .learn header {
-    background: rgb(233, 240, 249);
-  }
-  .topic-list .learn h3 {
-    color: rgb(113, 179, 247);
-  }
-  .topic-list .do header {
-    background: rgb(233, 249, 240);
-  }
-  .topic-list .do h3 {
-    color: rgb(83, 231, 185);
-  }
-  @media (max-width: 24.9em) {
-    .topic-list > li {
-      margin-left: -1.5em;
-      margin-right: -1.5em;
-    }
-    .topic-list header,
-    .topic-list .post {
-      margin-left: -0.75em;
-      margin-right: -0.75em;
-    }
-  }
-  @media (min-width: 25em) { /* @tiny-screen */
-    .topic-list .post img {
-      float: right;
-      margin-left: 0.75em;
-    }
-  }
-  @media (min-width: 40em) { /* @medium-screen */
-    .topic-list form p {
-      display: inline;
-      margin-right: 0.75em;
-    }
-  }
 
 
 

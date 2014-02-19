@@ -6,15 +6,17 @@
   ----------------------------------------------- */
   function start() {
 
+    if (!document.querySelector) return;
+
     // OPTIONAL: Show drop-down content on press (instead of hover)
     new DropDown(document.querySelector("#header .search"));
     new DropDown(document.querySelector("#header .account"));
     new DropDown(document.querySelector("#header .todos"));
 
-  };
+  }
 
 
-  /* =Drop Down
+  /* =DropDown
   ----------------------------------------------- */
   var DropDown = function() {};
 
@@ -33,22 +35,21 @@
         var child = haystack.firstChild;
         do {
           if (within(needle, child)) return true;
-        } while(child = child.nextSibling);
+        } while (child = child.nextSibling);
       }
 
     }
 
-
-    /* =DropDown
-    ----------------------------------------------- */
     DropDown = function(element) {
 
       if (!element) return;
 
-      var headline = element.getElementsByTagName("h3");
+      var headline = element.querySelector("h3");
       if (headline.length > 0) {
         headline = headline[0];
       }
+
+      if (!headline) return;
 
       var detailsShowing;
 
@@ -57,12 +58,12 @@
           element.className += " summary";
         }
         detailsShowing = false;
-      };
+      }
 
       function showDetails() {
         element.className = element.className.replace(/summary/g, "");
         detailsShowing = true;
-      };
+      }
 
       function toggle() {
         if (detailsShowing) hideDetails();
@@ -84,7 +85,7 @@
         }
       }, false);
 
-    }
+    };
       
   })();
 
