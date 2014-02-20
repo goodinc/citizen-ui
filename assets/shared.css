@@ -501,6 +501,10 @@
     color: inherit;
   }
 
+  .activity-list li > .message.success:last-child {
+    margin-bottom: 0.875em; /* @line-height / 2 */
+  }
+
   section.message.spam h1:before {
 
     /* @app-icons */
@@ -1963,7 +1967,7 @@
   }
   .activity-item .follow,
   .activity-item .follow + .more {
-    margin-top: 1.25em; /* @line-height(20px) */
+    margin-top: 1.75em; /* @line-height */
   }
   .activity-item .follow .meta {
     margin-top: 0.3125em; /* @line-height(20px) / 4 */
