@@ -465,6 +465,9 @@
     left: 0;
   }
 
+
+  /* =Messages
+  ----------------------------------------------- */
   section.message {
     padding: 1.5em;
     font-size: 1.1em;
@@ -678,8 +681,62 @@
   }
 
 
-  /* =Messages
+  /* =Progress
   ----------------------------------------------- */
+  @-moz-keyframes outerspin {
+      0% { -moz-transform:rotate(0deg); }
+      100% { -moz-transform:rotate(360deg); }
+  }
+
+  @-webkit-keyframes outerspin {
+      0% { -webkit-transform:rotate(0deg); }
+      100% { -webkit-transform:rotate(360deg); }
+  }
+
+  @-moz-keyframes innerspin {
+      0% { -moz-transform:rotate(0deg); }
+      100% { -moz-transform:rotate(360deg); }
+  }
+
+  @-webkit-keyframes innerspin {
+      0% { -webkit-transform:rotate(0deg); }
+      100% { -webkit-transform:rotate(360deg); }
+  }
+
+  .progress {
+    position: relative;
+    width: 1em;
+    height: 1em;
+  }
+  .progress:before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0.75em;
+    height: 0.75em;
+    border: 0.125em solid rgb(69, 71, 71);
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: outerspin 1.3s linear infinite;
+    -moz-animation: outerspin 1.3s infinite linear;
+    -webkit-animation: outerspin 1.3s infinite linear;
+  }
+  .progress:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.35em;
+    height: 0.35em;
+    top: 0.2em;
+    left: 0.2em;
+    border: 0.125em solid rgb(69, 71, 71);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: innerspin 2s linear infinite;
+    -moz-animation: innerspin 2s infinite linear;
+    -webkit-animation: innerspin 2s infinite linear;
+  }
 
 
   /* =Layouts
