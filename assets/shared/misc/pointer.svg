@@ -4,7 +4,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="107.071px" height="60.607px" viewBox="0 0 107.071 60.607" enable-background="new 0 0 107.071 60.607"
 	 xml:space="preserve">
-<polyline fill="#FFFFFF" stroke="black" stroke-width="5" points="3.536,57.071 53.536,7.071 103.536,57.071 "/>
-<polyline fill="#FFFFFF" stroke="black" stroke-width="5" points="3.536,57.071 53.536,7.071 103.536,57.071 "/>
+<polyline fill="#FFFFFF" stroke="rgb(139, 139, 139)" stroke-width="7" points="3.536,57.071 53.536,7.071 103.536,57.071 "/>
+<polyline fill="#FFFFFF" stroke="rgb(139, 139, 139)" stroke-width="7" points="3.536,57.071 53.536,7.071 103.536,57.071 "/>
 <rect x="0" y="57.071" fill="#FFFFFF" width="107.071" height="3.536"/>
 </svg>
