@@ -238,8 +238,7 @@
     }
   }
 
-  .topic .has-aside h2,
-  .member .has-aside h1 {
+  .member .has-aside > h1 {
     font-family: inherit;
     font-weight: bold;
     font-size: 1.875em; /* 30px / @font-size(16px) */
@@ -536,6 +535,23 @@
 
     content: "\e002"; /* @icon-spam */
     color: #f33;
+  }
+
+  /*
+  .activity-item .message.success {
+    background-color: rgb(58, 58, 58);
+    border-color: black;
+    color: white;
+    padding-top: 0.875em;
+    padding-bottom: 0.875em;
+    border-width: 0;
+  }
+  .activity-item .message.success p {
+    color: inherit;
+  }
+  */
+  .activity-item .message.success a {
+    text-decoration: underline;
   }
 
 

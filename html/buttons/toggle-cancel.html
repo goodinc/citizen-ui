@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Buttons / Good</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="http://fast.fonts.net/cssapi/f90e5d12-8fa4-47b1-a316-b233141d7f51.css" />
+  <link rel="stylesheet" href="../../assets/shared.css" />
+
+  <style>
+    .activity-item form {
+      text-align: right;
+    }
+    .activity-item form h6 {
+      margin-bottom: 0.25em;
+    }
+    .activity-item form p {
+      margin-top: 0;
+    }
+  </style>
+
+  <style>
+
+    .confirm button {
+      background: white;
+      color: inherit;
+      border: 1px solid rgb(204, 204, 204);
+    }
+    .confirm button:hover,
+    .confirm button:active,
+    .confirm button:focus {
+      background: white;
+      border: 1px solid rgb(113, 179, 247);
+    }
+
+    .confirm a {
+      text-decoration: underline;
+      color: rgb(247, 157, 130);
+    }
+    .confirm a:hover,
+    .confirm a:active,
+    .confirm a:focus {
+      color: rgb(247, 113, 113);
+    }
+
+  </style>
+
+</head>
+<body class="pattern">
+
+<section class="cycle">
+  <ul class="activity-list">
+    <li>
+      <section class="activity-item" data-slug="pre-order-a-new-book-by-matthew-manos-of-verynice" data-spam="false" data-title="Pre-order a new book by Matthew Manos (of verynice)">
+        <p class="source has-image">
+          <a href="member.html">
+            <img src="http:&#47;&#47;images-2.good.is&#47;albums&#47;crop?image_url=http%3A%2F%2Fimage-cache.good.is%2Favatars%2F1851962%2Foriginal%2FMatt2.jpeg%3F1346285103&amp;geometry=60x60%23" alt="" width="60" height="60" />
+            Matthew Manos
+          </a>
+          did this
+        </p>
+        <p class="time">
+          <time datetime="2013-12-16T01:09:57Z">
+            <abbr title="3 weeks ago">
+              3 w
+            </abbr>
+          </time>
+        </p>
+        <section class="post do">
+          <h3 class=" has-image">
+            <a href="post.html">
+              <span class="image">
+                <img src="http:&#47;&#47;images-2.good.is&#47;albums&#47;crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Factions%2Fphotos%2F000%2F256%2F362%2Foriginal%2F20130907153915-IndieGoGo_Cover.jpg&amp;geometry=100x100%23" alt="" width="100" height="100" />
+              </span>
+              Pre-order a new book by Matthew Manos (of verynice)
+            </a>
+          </h3>
+          <div class="meta">
+            <p class="dos">
+              <abbr title="4 people want to do this">
+                4
+              </abbr>
+            </p>
+          </div>
+          <form action="" method="post" class="do">
+            <p><button type="submit">Do It</button></p>
+          </form>
+        </section>
+      </section>
+      <script type="text/template" id="doing-message">
+        <section class="message success">
+          <h1>It’s on your To-Do List!</h1>
+          <p>Get your friends involved too. <a href="">Invite from Facebook</a></p>
+        </section>
+      </script>
+      <script type="text/template" id="done-message">
+        <section class="message success">
+          <h1>You did it!</h1>
+          <p>Comment and share your experience, and invite friends to Do It too! <a href="">Invite from Facebook</a></p>
+        </section>
+      </script>
+    </li>
+    <li>
+      <section class="activity-item">
+        <p class="source has-image">
+          <a href="member.html"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F860%2F698%2Foriginal%2FAttachment-1.jpg&amp;geometry=60x60%23" alt="" width="60" height="60"> Adele Peters</a> is now following…
+        </p>
+        <p class="time">
+          <time datetime="2013-12-16T22:46:27Z">
+            <abbr title="5 weeks ago">5 w</abbr>
+          </time>
+        </p>
+        <section class="follow">
+          <h3 class="has-image">
+            <a href="/members/kcrepeau"><span class="image"><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F127%2F174%2Foriginal%2FKatie_18_sq.jpg&amp;geometry=60x60%23" alt="" width="60" height="60"></span> Katie Crepeau</a>
+          </h3>
+          <div class="meta">
+            <p>32 Followers</p>
+          </div>
+          <p class="introduction">architect, blogger, health nut, happiness builder</p>
+
+          <form action="" method="post" class="follow">
+            <p><button type="submit">Follow</button></p>
+          </form>
+        </section>
+      </section>
+    </li>
+  </ul>
+</section>
+
+<script>
+(function() {
+
+  if (!document.body.addEventListener || !document.body.querySelector) return;
+
+/*  =ToggleButton
+  ----------------------------------------------- */
+  var ToggleButton = function(element, labels) {
+
+    if (!element) return;
+
+    var button = element.getElementsByTagName("button");
+    if (button.length > 0) button = button[0];
+
+    function toggle() {
+      cursor++;
+      if (cursor >= labels.length) cursor = 0;
+      update();
+    }
+
+    function update() {
+      element.className = labels[cursor].toLowerCase();
+      button.textContent = (labels[cursor] === "Doing") ? "To Do" : (labels[cursor] === "Do") ? "Do It" : labels[cursor];
+      p.style.display = "none";
+    }
+
+    var cursor = 0;
+    for (var index = 0; index < labels.length; index++) {
+      if (element.className === labels[index].toLowerCase()) {
+        cursor = index;
+      }
+    }
+
+
+    var cancel = document.createElement("a");
+    cancel.href="#cancel";
+    cancel.textContent = "Cancel";
+
+// KLUDGE: 
+    var p = document.createElement("p");
+    p.appendChild(cancel);
+    element.appendChild(p);
+    p.style.display = "none";
+    p.style.textAlign = "center";
+
+    element.addEventListener("submit", function(e) { e.preventDefault(); }, false);
+
+    var confirm = false;
+    button.addEventListener("click", function(e) {
+      console.log("click");
+      if (cursor > 0 && !confirm) {
+        element.className = "confirm";
+        var label;
+        switch (labels[cursor]) {
+          case "Do":
+            label = "Do It?";
+            break;
+          case "Doing":
+            label = "Done?";
+            break;
+          case "Done":
+            label = "Remove?";
+            break;
+          case "Follow":
+            label = "Follow?";
+            break;
+          case "Following":
+            label = "Unfollow?";
+            break;
+        }
+        button.textContent = label;
+        confirm = true;
+        p.style.display = "block";
+      } else {
+        toggle();
+        confirm = false;
+      }
+
+      e.preventDefault();
+    }, false);
+    /*
+    button.addEventListener("blur", function(e) {
+      if (confirm) {
+        update();
+        confirm = false;
+      }
+    });
+    */
+
+    cancel.addEventListener("click", function(e) {
+      if (confirm) {
+        update();
+        confirm = false;
+      }
+      e.preventDefault();
+    }, false);
+  }
+
+  var forms = document.querySelectorAll(".cycle form.do");
+  for (var index = 0; index < forms.length; index++) {
+    new ToggleButton(forms[index], ["Do", "Doing", "Done"]);
+  }
+
+  var forms = document.querySelectorAll(".cycle form.follow");
+  for (var index = 0; index < forms.length; index++) {
+    new ToggleButton(forms[index], ["Follow", "Following"]);
+  }
+
+})();
+</script>
+
+</body>
+</html>
