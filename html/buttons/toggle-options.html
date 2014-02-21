@@ -195,7 +195,7 @@
 
     var confirm = false;
     button.addEventListener("click", function(e) {
-      if (labels[cursor] !== "Follow" && labels[cursor] !== "Do" && !confirm) {
+      if (labels[cursor] !== "Follow" && !confirm) {
         element.className = "confirm";
         var label;
         switch (labels[cursor]) {
