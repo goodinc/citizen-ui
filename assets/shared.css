@@ -879,7 +879,9 @@
     -moz-animation: innerspin 2s infinite linear;
     -webkit-animation: innerspin 2s infinite linear;
   }
-
+  form p .loading {
+    margin: 0.4375em; /* @line-height / 2 */
+  }
 
   /* =Layouts
   -----------------------------------------------

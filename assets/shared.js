@@ -136,7 +136,7 @@
       }
 
       function toggle(target) {
-        if (active === target) {
+        if (active === target && active.className.indexOf("active") >= 0) {
           hide(active);
         } else {
           show(target);
