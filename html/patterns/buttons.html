@@ -79,136 +79,30 @@
 <section>
   <h2>Do (with options)</h2>
 
-  <form action="" method="post" class="do">
+  <form action="" method="post" class="do has-options">
     <h6>Do It</h6>
     <p>
-      <button type="submit" name="todo" value="1">To Do</button>
-      <button type="submit" name="done" value="1">Done</button>
+      <button type="submit" name="todo" value="1">I want to do this</button>
+      <button type="submit" name="done" value="1">I did this</button>
     </p>
   </form>
 
-  <form action="" method="post" class="doing">
+  <form action="" method="post" class="doing has-options">
     <h6>To Do</h6>
     <p>
-      <button type="submit" name="done" value="1">Done</button>
+      <button type="submit" name="done" value="1">I did this</button>
       <button type="submit" name="remove" value="1">Remove</button>
     </p>
   </form>
 
-  <form action="" method="post" class="done">
+  <form action="" method="post" class="done has-options">
     <h6>Done</h6>
     <p>
-      <button type="submit" name="remove" value="1">Remove</button>
+      <button type="submit" name="remove" value="1">Restart</button>
     </p>
   </form>
-
-  <!--
-  Here’s what they look like with scripting
-
-  <form action="" method="post" class="do scripted-options">
-    <h6>Do It</h6>
-    <p>
-      <button type="submit" name="todo" value="1">To Do</button>
-      <button type="submit" name="done" value="1">Done</button>
-    </p>
-  </form>
-
-  <form action="" method="post" class="doing scripted-options">
-    <h6>To Do</h6>
-    <p>
-      <button type="submit" name="done" value="1">Done</button>
-      <button type="submit" name="remove" value="1">Remove</button>
-    </p>
-  </form>
-
-  <form action="" method="post" class="done scripted-options">
-    <h6>Done</h6>
-    <p>
-      <button type="submit" name="remove" value="1">Remove</button>
-    </p>
-  </form>
-  -->
-
-  <!--
-  And here’s what they’re like when they’re inactive
-
-  <form action="" method="post" class="do scripted-options summary">
-    <h6>Do It</h6>
-    <p>
-      <button type="submit" name="todo" value="1">To Do</button>
-      <button type="submit" name="done" value="1">Done</button>
-    </p>
-  </form>
-
-  <form action="" method="post" class="doing scripted-options summary">
-    <h6>To Do</h6>
-    <p>
-      <button type="submit" name="done" value="1">Done</button>
-      <button type="submit" name="remove" value="1">Remove</button>
-    </p>
-  </form>
-
-  <form action="" method="post" class="done scripted-options summary">
-    <h6>Done</h6>
-    <p>
-      <button type="submit" name="remove" value="1">Remove</button>
-    </p>
-  </form>
-  -->
 
 </section>
-
-<!--
-<section>
-  <h2>Do</h2>
-  <form action="" method="post" class="do">
-    <p><button type="submit">Do It</button></p>
-  </form>
-
-  <form action="" method="post" class="doing">
-    <p><button type="submit">To Do</button></p>
-  </form>
-
-  <form action="" method="post" class="done">
-    <p><button type="submit">Done</button></p>
-  </form>
-</section>
--->
-
-<!--
-<section>
-  <h2>Do</h2>
-
-  <form action="" method="post" class="do">
-    <h6>Are you in?</h6>
-    <div>
-      <p class="do"><button type="submit">Do It</button></p>
-      <p class="done"><button type="submit">Done</button></p>
-    </div>
-  </form>
-</section>
-
-<section>
-  <h2>Doing</h2>
-  <form action="" method="post" class="doing">
-    <h6>You’re doing this</h6>
-    <div>
-      <p class="done"><button type="submit">Done</button></p>
-      <p class="warning"><button type="submit">Remove</button></p>
-    </div>
-  </form>
-</section>
-
-<section>
-  <h2>Done</h2>
-  <form action="" method="post" class="done">
-    <h6>You did this!</h6>
-    <div>
-      <p class="warning"><button type="submit">Remove</button></p>
-    </div>
-  </form>
-</section>
--->
 
 <section id="follow">
   <h2>Follow</h2>
@@ -221,6 +115,8 @@
     <p><button type="submit">Unfollow</button></p>
   </form>
 </section>
+
+<script src="../../assets/shared.js"></script>
 
 </body>
 </html>

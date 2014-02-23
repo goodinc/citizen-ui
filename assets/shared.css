@@ -557,7 +557,9 @@
 
   /* =Links & Buttons
   ----------------------------------------------- */
-  form.scripted-options h6,
+  .scripted-do .has-options.do    h6,
+  .scripted-do .has-options.doing h6,
+  .scripted-do .has-options.done  h6,
   a .action span,
   .action a,
   button {
@@ -629,37 +631,37 @@
   }
 
   /* Do */
-  .do.scripted-options h6,
+  .scripted-do .has-options.do h6,
   .do button {
     background-color: rgb(124, 227, 162);
   }
-  .do.scripted-options h6:hover,
-  .do.scripted-options h6:active,
-  .do.scripted-options h6:focus,
+  .scripted-do .has-options.do h6:hover,
+  .scripted-do .has-options.do h6:active,
+  .scripted-do .has-options.do h6:focus,
   .do button:hover,
   .do button:active,
   .do button:focus {
     background-color: rgb(64, 198, 131);
   }
-  .doing.scripted-options h6,
+  .scripted-do .has-options.doing h6,
   .doing button {
     background-color: rgb(130, 242, 206);
   }
-  .doing.scripted-options h6:hover,
-  .doing.scripted-options h6:active,
-  .doing.scripted-options h6:focus,
+  .scripted-do .has-options.doing h6:hover,
+  .scripted-do .has-options.doing h6:active,
+  .scripted-do .has-options.doing h6:focus,
   .doing button:hover,
   .doing button:active,
   .doing button:focus {
     background-color: rgb(110, 222, 186);
   }
-  .done.scripted-options h6,
+  .scripted-do .has-options.done h6,
   .done button {
     background: rgb(64, 198, 149);
   }
-  .done.scripted-options h6:hover,
-  .done.scripted-options h6:active,
-  .done.scripted-options h6:focus,
+  .scripted-do .has-options.done h6:hover,
+  .scripted-do .has-options.done h6:active,
+  .scripted-do .has-options.done h6:focus,
   .done button:hover,
   .done button:active,
   .done button:focus {
@@ -720,26 +722,52 @@
   }
 
   /**/
-  form.scripted-options {
-    text-align: center;
-    display: table;
+  form.do    h6,
+  form.doing h6,
+  form.done  h6 {
+    font-style: inherit;
+    font-size: 0.875em;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+    margin-bottom: 0;
   }
-  form.scripted-options h6 {
+  form.do    h6 + p,
+  form.doing h6 + p,
+  form.done  h6 + p {
+    margin-top: 0.4375em;
+  }
+  .scripted-do .has-options.do    h6,
+  .scripted-do .has-options.doing h6,
+  .scripted-do .has-options.done  h6 {
+    margin-top: 0;
     font-style: normal;
+    font-size: inherit;
+    color: white;
   }
-  form.scripted-options p {
+  .scripted-do .has-options.do    p,
+  .scripted-do .has-options.doing p,
+  .scripted-do .has-options.done  p {
     position: absolute;
     background: white;
     text-align: center;
     border: 0.125em solid rgb(139, 139, 139);
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
     transition: opacity 0.2s;
-    margin-top: 0.125em;
+    margin-top: 1em;
   }
-  form.scripted-options.summary p {
+  .scripted-do .has-options.do    p,
+  .scripted-do .has-options.doing p,
+  .scripted-do .has-options.done  p {
     left: -9999px; 
   }
-  form.scripted-options p:after {
+  .scripted-do .has-options.do.active    p,
+  .scripted-do .has-options.doing.active p,
+  .scripted-do .has-options.done.active  p {
+    left: auto;
+  }
+  .scripted-do .has-options.do    p:after,
+  .scripted-do .has-options.doing p:after,
+  .scripted-do .has-options.done  p:after {
     content: "";
     background: transparent url(shared/misc/pointer.svg) no-repeat bottom;
     background-size: contain;
@@ -750,7 +778,9 @@
     width: 2em;
     height: 2em;
   }
-  form.scripted-options button {
+  .scripted-do .has-options.do    button,
+  .scripted-do .has-options.doing button,
+  .scripted-do .has-options.done  button {
     background: transparent;
     color: rgb(102, 102, 102);
     padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
@@ -759,23 +789,31 @@
     margin-left: auto;
     margin-right: auto;
   }
-  form.scripted-options button + button {
+  .scripted-do .has-options.do    button + button,
+  .scripted-do .has-options.doing button + button,
+  .scripted-do .has-options.done  button + button {
     border-top: 1px solid rgb(204, 204, 204);
   }
-  form.scripted-options button:hover,
-  form.scripted-options button:active,
-  form.scripted-options button:focus {
+  .scripted-do .has-options.do    button:hover,
+  .scripted-do .has-options.doing button:active,
+  .scripted-do .has-options.done  button:focus {
     background: transparent;
     color: rgb(113, 179, 247);
   }
-  form.scripted-options button[name*="remove"] {
+  /*
+  .scripted-do .has-options.doing button[name*="remove"],
+  .scripted-do .has-options.done  button[name*="remove"] {
     color: rgb(247, 157, 130);
   }
-  form.scripted-options button[name*="remove"]:hover,
-  form.scripted-options button[name*="remove"]:active,
-  form.scripted-options button[name*="remove"]:focus {
+  .scripted-do .has-options.doing button[name*="remove"]:hover,
+  .scripted-do .has-options.doing button[name*="remove"]:active,
+  .scripted-do .has-options.doing button[name*="remove"]:focus,
+  .scripted-do .has-options.done  button[name*="remove"]:hover,
+  .scripted-do .has-options.done  button[name*="remove"]:active,
+  .scripted-do .has-options.done  button[name*="remove"]:focus {
     color: rgb(247, 113, 113);
   }
+  */
 
 
   /* =Progress
@@ -2051,14 +2089,14 @@
       margin-right: 6.25em;
     }
 
-    .activity-item .do form,
-    .activity-item .follow form {
+    .scripted-do .activity-item .do     form.has-options,
+    .scripted-do .activity-item .follow form {
       position: absolute;
       margin-top: 0;
       top: 0;
       right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
     }
-    .activity-item .follow form {
+    .scripted-do .activity-item .follow form {
       top   : 1.25em; /* @line-height(20px) */
       right : 1.25em; /* @line-height(20px) */
     }
