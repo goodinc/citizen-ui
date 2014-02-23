@@ -744,9 +744,9 @@
     font-size: inherit;
     color: white;
   }
-  .scripted-do form.do    p,
-  .scripted-do form.doing p,
-  .scripted-do form.done  p {
+  .scripted-do form.do    h6 + p,
+  .scripted-do form.doing h6 + p,
+  .scripted-do form.done  h6 + p {
     position: absolute;
     background: white;
     text-align: center;
@@ -755,19 +755,19 @@
     transition: opacity 0.2s;
     margin-top: 1em;
   }
-  .scripted-do form.do    p,
-  .scripted-do form.doing p,
-  .scripted-do form.done  p {
+  .scripted-do form.do    h6 + p,
+  .scripted-do form.doing h6 + p,
+  .scripted-do form.done  h6 + p {
     left: -9999px; 
   }
-  .scripted-do form.do.active    p,
-  .scripted-do form.doing.active p,
-  .scripted-do form.done.active  p {
+  .scripted-do form.do.active    h6 + p,
+  .scripted-do form.doing.active h6 + p,
+  .scripted-do form.done.active  h6 + p {
     left: auto;
   }
-  .scripted-do form.do    p:after,
-  .scripted-do form.doing p:after,
-  .scripted-do form.done  p:after {
+  .scripted-do form.do    h6 + p:after,
+  .scripted-do form.doing h6 + p:after,
+  .scripted-do form.done  h6 + p:after {
     content: "";
     background: transparent url(shared/misc/pointer.svg) no-repeat bottom;
     background-size: contain;
@@ -778,9 +778,9 @@
     width: 2em;
     height: 2em;
   }
-  .scripted-do form.do    button,
-  .scripted-do form.doing button,
-  .scripted-do form.done  button {
+  .scripted-do form.do    h6 + p button,
+  .scripted-do form.doing h6 + p button,
+  .scripted-do form.done  h6 + p button {
     background: transparent;
     color: rgb(102, 102, 102);
     padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
@@ -790,9 +790,9 @@
     margin-right: auto;
     white-space: nowrap;
   }
-  .scripted-do form.do    button + button,
-  .scripted-do form.doing button + button,
-  .scripted-do form.done  button + button {
+  .scripted-do form.do    h6 + p button + button,
+  .scripted-do form.doing h6 + p button + button,
+  .scripted-do form.done  h6 + p button + button {
     border-top: 1px solid rgb(204, 204, 204);
   }
   .scripted-do form.doing button[name*="remove"],
@@ -807,15 +807,15 @@
   .scripted-do form.done  button[name*="remove"]:focus {
     color: rgb(247, 113, 113);
   }
-  .scripted-do form.do    button:hover,
-  .scripted-do form.do    button:active,
-  .scripted-do form.do    button:focus,
-  .scripted-do form.doing button:hover,
-  .scripted-do form.doing button:active,
-  .scripted-do form.doing button:focus,
-  .scripted-do form.done  button:hover,
-  .scripted-do form.done  button:active,
-  .scripted-do form.done  button:focus {
+  .scripted-do form.do    h6 + p button:hover,
+  .scripted-do form.do    h6 + p button:active,
+  .scripted-do form.do    h6 + p button:focus,
+  .scripted-do form.doing h6 + p button:hover,
+  .scripted-do form.doing h6 + p button:active,
+  .scripted-do form.doing h6 + p button:focus,
+  .scripted-do form.done  h6 + p button:hover,
+  .scripted-do form.done  h6 + p button:active,
+  .scripted-do form.done  h6 + p button:focus {
     color: rgb(113, 179, 247);
   }
 
@@ -2094,13 +2094,13 @@
     }
 
     .scripted-do .activity-item .do     form,
-    .scripted-do .activity-item .follow form {
+                 .activity-item .follow form {
       position: absolute;
       margin-top: 0;
       top: 0;
       right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
     }
-    .scripted-do .activity-item .follow form {
+    .activity-item .follow form {
       top   : 1.25em; /* @line-height(20px) */
       right : 1.25em; /* @line-height(20px) */
     }
