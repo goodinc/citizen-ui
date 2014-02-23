@@ -2311,23 +2311,23 @@
 
 /* =Topics
   ----------------------------------------------- */
-  .activity-item section.topics {
+  .activity-item section.tags {
     margin: 0;
     display: inline;
     float: right;
   }
-  .activity-item section.topics h4 {
+  .activity-item section.tags h4 {
     margin: 0;
     display: inline;
     font-size: inherit;
   }
-  .activity-item section.topics h4 span {
+  .activity-item section.tags h4 span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
 
-  .activity-item section.topics h4:before {
+  .activity-item section.tags h4:before {
 
     /* @good-icons */
     font-family: "Good Icons";
@@ -2348,29 +2348,29 @@
     font-size: 0.9375em; /* 15px / @font-size */
   }
 
-  .activity-item section.topics ul,
-  .activity-item section.topics li {
+  .activity-item section.tags ul,
+  .activity-item section.tags li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .activity-item section.topics ul {
+  .activity-item section.tags ul {
     margin-left: 0.75em;
     font-size: 0.75em; /* 12px / @font-size */
     display: inline;
   }
-  .activity-item section.topics li {
+  .activity-item section.tags li {
     display: inline;
   }
-  .activity-item section.topics li + li {
+  .activity-item section.tags li + li {
     margin-left: 1em;
   }
-  .activity-item section.topics a {
+  .activity-item section.tags a {
     color: rgb(153, 153, 153); /* @aluminum */
   }
-  .activity-item section.topics a:hover,
-  .activity-item section.topics a:active,
-  .activity-item section.topics a:focus {
+  .activity-item section.tags a:hover,
+  .activity-item section.tags a:active,
+  .activity-item section.tags a:focus {
     color: rgb(113, 179, 247);
   }
 
@@ -2421,11 +2421,11 @@
   }
 
   /* OPTIONAL: Only show the topics for one item at a time */
-  html:hover .activity-item .topics {
+  html:hover .activity-item .tags {
     opacity: 0;
     transition: opacity 0.2s;
   }
-  html:hover .activity-item:hover .topics {
+  html:hover .activity-item:hover .tags {
     opacity: 1;
   }
 
@@ -2444,7 +2444,7 @@
     color: rgb(236, 236, 236);
     transition: color 0.2s;
   }
-  html:hover .activity-item section.topics h4:before {
+  html:hover .activity-item section.tags h4:before {
     color: rgb(222, 222, 222);
     transition: color 0.2s;
   }
@@ -2464,7 +2464,7 @@
   html:hover .activity-item:hover .meta .comments abbr:before {
     color: rgb(255, 223, 145);
   }
-  html:hover .activity-item:hover section.topics h4:before {
+  html:hover .activity-item:hover section.tags h4:before {
     color: rgb(247, 105, 100);
   }
 
@@ -3651,26 +3651,26 @@
   .post > footer h2 {
     font-size: inherit;
   }
-  .post > footer .topics {
+  .post > footer .tags {
     background: rgb(247, 247, 247);
     padding: 1.5em;
   }
-  .post-container > .post > footer .topics {
+  .post-container > .post > footer .tags {
     padding: 3em;
     margin-left: -3em;
     margin-right: -3em;
     margin-bottom: -3em;
   }
-  .post > footer .topics h2,
-  .post > footer .topics li {
+  .post > footer .tags h2,
+  .post > footer .tags li {
     font-size: 0.875em; /* 14px / @font-size(16px) */
   }
 
-  .post > footer .topics h2 {
+  .post > footer .tags h2 {
     color: rgb(14, 14, 14);
     font-family: inherit;
   }
-  .post > footer .topics h2:before {
+  .post > footer .tags h2:before {
 
     /* @good-icons */
     font-family: "Good Icons";
@@ -3692,20 +3692,20 @@
     margin-right: 0.5em;
   }
 
-  .post > footer .topics ul {
+  .post > footer .tags ul {
     margin-top: 1.2em;
   }
-  .post > footer .topics:after {
+  .post > footer .tags:after {
     /* $clearfix */
     content: "";
     display: table;
     clear: both;
   }
-  .post > footer .topics li {
+  .post > footer .tags li {
     float: left;
     margin: 0.5em 0.5em 0 0;
   }
-  .post > footer .topics a {
+  .post > footer .tags a {
     display: inline-block;
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83);
@@ -3714,9 +3714,9 @@
     text-decoration: none;
   }
 
-  .post > footer .topics a:hover,
-  .post > footer .topics a:active,
-  .post > footer .topics a:focus {
+  .post > footer .tags a:hover,
+  .post > footer .tags a:active,
+  .post > footer .tags a:focus {
     background: white;
     color: rgb(47, 132, 218); /* @deep-blue */
   }
