@@ -90,8 +90,9 @@
 
   /* For readability */
   /*
-  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li, figure {
-    max-width: 42em;
+  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li, figure,
+  .follow-list li {
+    max-width: 33em;
   }
   */
 
@@ -158,13 +159,6 @@
     font-size: 1em;
     font-style: italic;
   }
-
-  /* Experimental
-  h1, h2, h3, h4, h5, h6, p,
-  .follow-list li {
-    max-width: 33em;
-  }
-  */
 
   /* Experimental */
   @media (max-width: 50em) {
@@ -759,11 +753,14 @@
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
     left: -9999px; 
+    opacity: 0;
+    transition: opacity 0.2s;
   }
   .scripted-do form.do.active    h6 + p,
   .scripted-do form.doing.active h6 + p,
   .scripted-do form.done.active  h6 + p {
     left: auto;
+    opacity: 1;
   }
   .scripted-do form.do    h6 + p:after,
   .scripted-do form.doing h6 + p:after,

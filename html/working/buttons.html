@@ -161,9 +161,9 @@
             target.querySelector("p").appendChild(loading);
           }, 50);
 
-        }
+          e.preventDefault();
 
-        e.preventDefault();
+        }
       }
 
       document.body.addEventListener("submit", delegate, false);

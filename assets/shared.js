@@ -117,55 +117,55 @@
 
     DoDropDown = function() {
 
-      if (!document.body.addEventListener) return;
+      var active; // The currently active element
 
-      var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-do";
-
-      var active;
-      function show(target) {
-        target.className += " active";
-        active = target;
+      function hide(element) {
+        element.className = element.className.replace(/active/g, "");
+        if (active === element) active = undefined;
       }
 
-      function hide(target) {
-        target.className = target.className.replace(/active/g, "");
-        if (active === target) {
-          active = undefined;
-        }
+      function show(element) {
+        element.className += " active";
+        active = element;
       }
 
-      function toggle(target) {
-        if (active === target && active.className.indexOf("active") >= 0) {
-          hide(active);
-        } else {
-          show(target);
-        }
-      }
-
-      function delegate(e) {
+      function toggle(e) {
         var target = e.target;
+        var name = target.nodeName.toLowerCase();
 
+        // If a dropdown is currently open and it’s not the target, close it
         if (active) {
-          if (!within(target, active)) {
+          if (!within(e.target, active)) {
             hide(active);
           }
         }
 
-        if (target.nodeName.toLowerCase() === "h6") {
+        // If the target is a headline or a button
+        if (name == "h6" || name == "button") {
           var form = closest(target, "form");
-          if (form && (form.className.indexOf("do")    >= 0 ||
-                       form.className.indexOf("doing") >= 0 ||
-                       form.className.indexOf("done")  >= 0)) {
-            toggle(form);
+
+          // If the target is within a “do” form
+          if (form && form.className.indexOf("do") >= 0) {
+
+            // Toggle the dropdown
+            if (name == "h6" && form.className.indexOf("active") >= 0) {
+              hide(form);
+            } else {
+              show(form);
+            }
           }
         }
+
       }
 
-      document.body.addEventListener("click", delegate, false);
 
-      // TODO: Handle the case where a user is tabbing between buttons and links on the page
-      //document.body.addEventListener("focus", delegate, false);
+      document.body.addEventListener("click", toggle, false);
+      document.body.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+
+
+      // Style the dropdowns
+      var html = document.getElementsByTagName("html")[0];
+      html.className += " scripted-do";
 
     };
       
