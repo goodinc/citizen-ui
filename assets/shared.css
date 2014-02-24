@@ -743,6 +743,7 @@
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
     position: absolute;
+    z-index: 9999;
     background: white;
     text-align: center;
     border: 0.125em solid rgb(139, 139, 139);
