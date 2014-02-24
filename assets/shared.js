@@ -85,11 +85,19 @@
 
       element.className += " scripted";
 
-      document.addEventListener("click", function(e) {
+      document.body.addEventListener("click", function(e) {
         if (!within(e.target, element)) {
           hideDetails();
         }
       }, false);
+
+      document.body.addEventListener("focus", function(e) {
+        if (within(e.target, element)) {
+          showDetails();
+        } else {
+          hideDetails();
+        }
+      }, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
     };
       

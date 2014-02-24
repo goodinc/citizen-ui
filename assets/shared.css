@@ -560,7 +560,7 @@
     display: inline-block;
     font-size: inherit;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
-    background-color: rgb(113, 179, 247);
+    background-color: rgb(113, 179, 247); /* @link-color */
     color: white;
     cursor: pointer;
     border-width: 0;
@@ -588,7 +588,7 @@
 
   /* Vote */
   .vote button {
-    background-color: rgb(113, 179, 247);
+    background-color: rgb(113, 179, 247); /* @link-color */
   }
   .voted button {
     background-color: rgb(49, 144, 242);
@@ -724,6 +724,7 @@
     font-weight: bold;
     color: rgb(153, 153, 153);
     margin-bottom: 0;
+    cursor: pointer;
   }
   form.do    h6 + p,
   form.doing h6 + p,
@@ -813,30 +814,65 @@
   .scripted-do form.done  h6 + p button:hover,
   .scripted-do form.done  h6 + p button:active,
   .scripted-do form.done  h6 + p button:focus {
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
 
-  /* =Progress
+  /* =Loading
   ----------------------------------------------- */
-  @-moz-keyframes outerspin {
-      0% { -moz-transform:rotate(0deg); }
-      100% { -moz-transform:rotate(360deg); }
-  }
 
   @-webkit-keyframes outerspin {
-      0% { -webkit-transform:rotate(0deg); }
-      100% { -webkit-transform:rotate(360deg); }
-  }
-
-  @-moz-keyframes innerspin {
-      0% { -moz-transform:rotate(0deg); }
-      100% { -moz-transform:rotate(360deg); }
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
   }
 
   @-webkit-keyframes innerspin {
-      0% { -webkit-transform:rotate(0deg); }
-      100% { -webkit-transform:rotate(360deg); }
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+  }
+
+  @-moz-keyframes outerspin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
+  }
+
+  @-moz-keyframes innerspin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(360deg);
+      }
+  }
+
+  @keyframes outerspin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }
+
+  @keyframes innerspin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
   }
 
   .loading {
@@ -856,9 +892,9 @@
     border: 0.125em solid rgb(69, 71, 71);
     border-right-color: transparent;
     border-radius: 50%;
-    animation: outerspin 1.3s linear infinite;
-    -moz-animation: outerspin 1.3s infinite linear;
-    -webkit-animation: outerspin 1.3s infinite linear;
+    -webkit-animation : outerspin 1.3s infinite linear;
+       -moz-animation : outerspin 1.3s infinite linear;
+            animation : outerspin 1.3s infinite linear;
   }
   .loading:after {
     content: "";
@@ -872,13 +908,17 @@
     border-left-color: transparent;
     border-top-color: transparent;
     border-radius: 50%;
-    animation: innerspin 2s linear infinite;
-    -moz-animation: innerspin 2s infinite linear;
-    -webkit-animation: innerspin 2s infinite linear;
+    -webkit-animation : innerspin 2s infinite linear;
+       -moz-animation : innerspin 2s infinite linear;
+            animation : innerspin 2s infinite linear;
   }
+
+
+  /* OPTIONAL: Add space around a loading icon, when it appears within a dropdown */
   form p .loading {
     margin: 0.4375em; /* @line-height / 2 */
   }
+
 
   /* =Layouts
   -----------------------------------------------
@@ -914,9 +954,9 @@
     padding-bottom: 1.5em;
   }
 
-  #header > .container,
+  #header  > .container,
   #content > .container,
-  #footer > .container {
+  #footer  > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
     max-width: 70em; /* @max-page-width */
@@ -930,9 +970,9 @@
       padding-top: 2.25em;
       padding-bottom: 2.25em;
     }
-    #header > .container,
+    #header  > .container,
     #content > .container,
-    #footer > .container {
+    #footer  > .container {
       padding-left: 2.25em;
       padding-right: 2.25em;
     }
@@ -1062,7 +1102,7 @@
   }
   #footer h2 a,
   #header h2 + p + p a {
-    color: rgb(37, 139, 245);
+    color: rgb(37, 139, 245); /* @ocean */
     font-weight: bold;
     font-style: normal;
   }
@@ -1095,7 +1135,7 @@
   #header .search label {
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     text-transform: uppercase;
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
   #header .search input {
     font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
@@ -1912,7 +1952,7 @@
   }
   .meta .votes abbr:before {
     content: "\e002"; /* @icon-vote */
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
   .meta .comments abbr:before {
     content: "\e003"; /* @icon-comment */
@@ -2368,7 +2408,7 @@
   .activity-item section.tags a:hover,
   .activity-item section.tags a:active,
   .activity-item section.tags a:focus {
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
 
@@ -2456,7 +2496,7 @@
     color: rgb(83, 231, 185);
   }
   html:hover .activity-item:hover .meta .votes abbr:before {
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
   html:hover .activity-item:hover .meta .comments abbr:before {
     color: rgb(255, 223, 145);
@@ -2881,7 +2921,7 @@
     background: rgb(233, 240, 249);
   }
   .follow-list .learn h4 {
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
   .follow-list .do > a {
     background: rgb(233, 249, 240);
@@ -3321,19 +3361,23 @@
     margin-bottom: 3em;
   }
 
-  .post > header .do      a,
+  .post > header .do   a,
   .post > header .vote a {
     display: block;
     text-decoration: inherit;
     color: inherit;
   }
-  .post > header .do      h2,
+  .post > header .do   a:hover h2,
+  .post > header .vote a:hover h2 {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  .post > header .do   h2,
   .post > header .vote h2 {
     font-size: inherit;
     line-height: inherit;
     margin-bottom: 0;
   }
-  .post > header .do      h2 + p,
+  .post > header .do   h2 + p,
   .post > header .vote h2 + p {
     margin-top: 0;
   }
@@ -3498,7 +3542,7 @@
   }
   .post > header .vote abbr:before {
     content: "\e002"; /* @icon-vote */
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
 
   @media (min-width: 30em) and (max-width: 91.9em) {
@@ -4088,7 +4132,7 @@
     color: rgb(99, 221, 144);
   }
   .explore .vote {
-    color: rgb(113, 179, 247);
+    color: rgb(113, 179, 247); /* @link-color */
   }
   .explore .connect {
     color: rgb(238, 130, 105);
