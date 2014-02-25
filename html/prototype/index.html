@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HTML Prototype / Good</title>
-  <style type="text/css">
-    html, body, #outer-outer-container, #outer-container {
+  <style type="text/css">    html, body, #outer-outer-container, #outer-container {
       height: 100%;
       min-height: 100%;
     }
@@ -18,7 +17,8 @@
     header h1 {
       margin-bottom: 0;
     }
-    header h1 a {
+    header h1 a,
+    header h1 a:visited {
       color: inherit;
     }
     header h2 {
@@ -34,6 +34,9 @@
     a[href]:active,
     a[href]:focus {
       text-decoration: underline;
+    }
+    a[href]:visited {
+      color: #333;
     }
     ul, li {
       margin-left: 0;
@@ -67,6 +70,9 @@
       color: #bbb;
     }
     .optional a[href] {
+      color: rgb(49, 144, 242);
+    }
+    .optional a[href]:visited {
       color: rgb(153, 153, 153);
     }
   </style>
@@ -85,9 +91,11 @@
           <section>
             <h3>Introduction</h3>
             <ul>
-              <li><a href="home.html">Home</a></li>
-              <li class="optional"><a href="explore.html">Explore</a></li>
+              <li><a href="home.html">Featured</a></li>
               <li><a href="popular.html">Popular</a></li>
+              <li><a href="newest.html">Newest</a></li>
+              <li><a href="for-you.html">For You</a></li>
+              <li class="optional"><a href="explore.html">Explore</a></li>
             </ul>
           </section>
           <section>
@@ -135,12 +143,11 @@
               <li class="optional"><a href="join-confirmation.html">Join (Confirmation)</a></li>
               <li class="optional"><a href="forgot.html">Forgot Password</a></li>
               <li class="optional"><a href="forgot-success.html">Forgot Password (Confirmation)</a></li>
-              <li><a href="for-you.html">For You</a></li>
               <li><a href="member-edit.html">Edit Profile</a></li>
               <li class="optional"><a href="account.html">Manage Account</a></li>
               <li class="optional"><a href="account-email.html">Manage Email</a></li>
-              <li><a href="friends.html">Find Friends</a></li>
-              <li><a href="friends-invite.html">Invite Friends</a></li>
+              <li class="optional"><a href="friends.html">Find Friends</a></li>
+              <li class="optional"><a href="friends-invite.html">Invite Friends</a></li>
               <li class="optional"><a href="post-new-link.html">Post (Link)</a></li>
               <li class="optional"><a href="post-new-action.html">Post (Action)</a></li>
               <li class="optional"><a href="sign-out.html">Sign Out</a></li>
