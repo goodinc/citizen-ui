@@ -3269,6 +3269,10 @@
     border: 0.05em solid rgb(102, 102, 102);
     padding: 0.75em;
   }
+  .topic .header.featured h1 a {
+    border-width: 0;
+    padding: 0;
+  }
   .topic .header h1 a[href]:hover,
   .topic .header h1 a[href]:active,
   .topic .header h1 a[href]:focus {
