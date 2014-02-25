@@ -18,8 +18,7 @@
     header h1 {
       margin-bottom: 0;
     }
-    header h1 a,
-    header h1 a:visited {
+    header h1 a {
       color: inherit;
     }
     header h2 {
@@ -35,9 +34,6 @@
     a[href]:active,
     a[href]:focus {
       text-decoration: underline;
-    }
-    a[href]:visited {
-      color: #333;
     }
     ul, li {
       margin-left: 0;
@@ -70,8 +66,8 @@
     li {
       color: #bbb;
     }
-    .new a {
-      color: #a93c44;
+    .optional a[href] {
+      color: rgb(153, 153, 153);
     }
   </style>
 </head>
@@ -90,7 +86,7 @@
             <h3>Introduction</h3>
             <ul>
               <li><a href="home.html">Home</a></li>
-              <li><a href="explore.html">Explore</a></li>
+              <li class="optional"><a href="explore.html">Explore</a></li>
               <li><a href="popular.html">Popular</a></li>
             </ul>
           </section>
@@ -98,17 +94,12 @@
             <h3>Topic</h3>
             <ul>
               <li><a href="topic.html">Topic</a></li>
-              <li><a href="topic-featured.html">Topic (Featured)</a></li>
               <li><a href="topic-followers.html">Followers</a></li>
-              <li><a href="topic-rss.xml">RSS</a></li>
             </ul>
           </section>
           <section>
             <h3>Post</h3>
             <ul>
-              <li><a href="post.html">Article</a></li>
-              <li><a href="post-piece.html">Piece</a></li>
-              <li><a href="post-slideshow.html">Slideshow</a></li>
               <li><a href="post-link.html">Link</a></li>
               <li><a href="post-link-aside.html">Link (Mixed Ads)</a></li>
               <li><a href="post-link-switch.html">Link (Switched Ads)</a></li>
@@ -129,7 +120,7 @@
           </section>
           <section>
             <h3>Search</h3>
-            <ul>
+            <ul class="optional">
               <li><a href="search.html">Results</a></li>
               <li><a href="search-members.html">Results (Members)</a></li>
               <li><a href="search-posts.html">Results (Posts)</a></li>
@@ -139,25 +130,25 @@
           <section>
             <h3>Account</h3>
             <ul>
-              <li><a href="sign-in.html">Sign In</a></li>
-              <li><a href="join.html">Join</a></li>
-              <li><a href="join-confirmation.html">Join (Confirmation)</a></li>
-              <li><a href="forgot.html">Forgot Password</a></li>
-              <li><a href="forgot-success.html">Forgot Password (Confirmation)</a></li>
+              <li class="optional"><a href="sign-in.html">Sign In</a></li>
+              <li class="optional"><a href="join.html">Join</a></li>
+              <li class="optional"><a href="join-confirmation.html">Join (Confirmation)</a></li>
+              <li class="optional"><a href="forgot.html">Forgot Password</a></li>
+              <li class="optional"><a href="forgot-success.html">Forgot Password (Confirmation)</a></li>
               <li><a href="for-you.html">For You</a></li>
               <li><a href="member-edit.html">Edit Profile</a></li>
-              <li><a href="account.html">Manage Account</a></li>
-              <li><a href="account-email.html">Manage Email</a></li>
+              <li class="optional"><a href="account.html">Manage Account</a></li>
+              <li class="optional"><a href="account-email.html">Manage Email</a></li>
               <li><a href="friends.html">Find Friends</a></li>
               <li><a href="friends-invite.html">Invite Friends</a></li>
-              <li><a href="post-new-link.html">Post (Link)</a></li>
-              <li><a href="post-new-action.html">Post (Action)</a></li>
-              <li><a href="sign-out.html">Sign Out</a></li>
+              <li class="optional"><a href="post-new-link.html">Post (Link)</a></li>
+              <li class="optional"><a href="post-new-action.html">Post (Action)</a></li>
+              <li class="optional"><a href="sign-out.html">Sign Out</a></li>
             </ul>
           </section>
           <section>
             <h3>Information</h3>
-            <ul>
+            <ul class="optional">
               <li><a href="about.html">About</a></li>
               <li><a href="guidelines.html">Guidelines</a></li>
               <li><a href="terms.html">Terms</a></li>
