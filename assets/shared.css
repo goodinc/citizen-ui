@@ -67,7 +67,7 @@
   }
 
   /* Older browsers sometimes render these inline */
-  header, footer, section, article, aside, nav {
+  header, footer, section, article, aside, nav, main {
     display: block;
   }
 
