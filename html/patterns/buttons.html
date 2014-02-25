@@ -11,8 +11,23 @@
 </head>
 <body class="pattern">
 
-<section>
-  <h2>Primary</h2>
+<section id="links">
+  <h2>Primary Action (Link)</h2>
+
+  <p class="action"><a href="">Take Action</a></p>
+
+  <!--
+  <h3>Back</h3>
+  <p class="back"><a href="">Back to that page</a></p>
+
+  <h3>Top</h3>
+  <p class="top"><a href="">Back to that thing</a></p>
+  -->
+
+</section>
+
+<section id="buttons">
+  <h2>Primary Action (Button)</h2>
 
   <form action="" method="post">
     <p><button type="submit">Submit</button></p>
@@ -20,7 +35,7 @@
 </section>
 
 <section id="secondary">
-  <h2>Secondary</h2>
+  <h2>Secondary Button</h2>
 
   <form action="" method="post" class="secondary">
     <p><button type="submit">Flag this post</button></p>
@@ -30,13 +45,14 @@
 </section>
 
 <section id="warning">
-  <h2>Warning</h2>
+  <h2>Warning Button</h2>
 
   <form action="" method="post" class="warning">
     <p><button type="submit">Delete</button></p>
   </form>
 </section>
 
+<!--
 <section id="follow">
   <h2>Update</h2>
 
@@ -46,6 +62,7 @@
     <p><button type="submit">Save</button></p>
   </form>
 </section>
+-->
 
 <section id="vote">
   <h2>Vote</h2>
@@ -98,6 +115,34 @@
   <form action="" method="post" class="following">
     <p><button type="submit">Unfollow</button></p>
   </form>
+</section>
+
+<section id="loading">
+  <h2>Loading Indicator</h2>
+
+  <p class="loading">Loading…</p>
+
+  <form action="" method="post" class="do">
+    <h6>Do It</h6>
+    <p>
+      <button type="submit" name="todo" value="1">I want to do this</button>
+      <button type="submit" name="done" value="1">I did this</button>
+      <span class="loading">Loading…</span>
+    </p>
+  </form>
+
+  <form action="" method="post" class="follow">
+    <p>
+      <button type="submit">Follow</button>
+      <span class="loading">Loading…</span>
+    </p>
+  </form>
+
+  <p class="action">
+    <a href="">Load more results</a>
+    <span class="loading">Loading…</span>
+  </p>
+
 </section>
 
 <script src="../../assets/shared.js"></script>
