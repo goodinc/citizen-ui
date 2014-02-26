@@ -133,7 +133,9 @@
       }
 
       function show(element) {
-        element.className += " active";
+        if (element.className.indexOf("active") < 0) {
+          element.className += " active";
+        }
         active = element;
       }
 

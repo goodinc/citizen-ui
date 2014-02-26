@@ -63,8 +63,10 @@
       margin: 0 auto;
     }
     #container > section > section {
-      float: left;
+      display: inline-block;
       margin-right: 3em;
+      margin-bottom: 3em;
+      vertical-align: top;
     }
     li {
       color: #bbb;
@@ -102,7 +104,7 @@
             <h3>Topic</h3>
             <ul>
               <li><a href="topic.html">Posts</a></li>
-              <li><a href="topic-featured.html">Posts (Featured Topic)</a></li>
+              <li><a href="topic-featured.html">Posts (Header)</a></li>
               <li><a href="topic-followers.html">Followers</a></li>
             </ul>
           </section>
@@ -110,8 +112,10 @@
             <h3>Post</h3>
             <ul>
               <li><a href="post-link.html">Link</a></li>
+              <!--
               <li><a href="post-link-aside.html">Link (Mixed Ads)</a></li>
               <li><a href="post-link-switch.html">Link (Switched Ads)</a></li>
+              -->
               <li><a href="post-link-video.html">Link (Video)</a></li>
               <li><a href="post-action.html">Do</a></li>
               <li><a href="post-action-slideshow.html">Do (Slideshow)</a></li>
@@ -131,26 +135,26 @@
             <h3>Search</h3>
             <ul class="optional">
               <li><a href="search.html">Results</a></li>
-              <li><a href="search-members.html">Results (Members)</a></li>
               <li><a href="search-posts.html">Results (Posts)</a></li>
               <li><a href="search-topics.html">Results (Topics)</a></li>
+              <li><a href="search-members.html">Results (Members)</a></li>
             </ul>
           </section>
           <section>
             <h3>Account</h3>
             <ul>
-              <li class="optional"><a href="sign-in.html">Sign In</a></li>
               <li class="optional"><a href="join.html">Join</a></li>
               <li class="optional"><a href="join-confirmation.html">Join (Confirmation)</a></li>
-              <li class="optional"><a href="forgot.html">Forgot Password</a></li>
-              <li class="optional"><a href="forgot-success.html">Forgot Password (Confirmation)</a></li>
-              <li><a href="member-edit.html">Edit Profile</a></li>
-              <li class="optional"><a href="account.html">Manage Account</a></li>
-              <li class="optional"><a href="account-email.html">Manage Email</a></li>
-              <li class="optional"><a href="friends.html">Find Friends</a></li>
-              <li class="optional"><a href="friends-invite.html">Invite Friends</a></li>
               <li class="optional"><a href="post-new-link.html">Post (Link)</a></li>
               <li class="optional"><a href="post-new-action.html">Post (Action)</a></li>
+              <li class="optional"><a href="friends.html">Friends (Find)</a></li>
+              <li class="optional"><a href="friends-invite.html">Friends (Invite)</a></li>
+              <li><a href="member-edit.html">Edit Profile</a></li>
+              <li class="optional"><a href="account.html">Manage (Account)</a></li>
+              <li class="optional"><a href="account-email.html">Manage (Email)</a></li>
+              <li class="optional"><a href="sign-in.html">Sign In</a></li>
+              <li class="optional"><a href="forgot.html">Forgot</a></li>
+              <li class="optional"><a href="forgot-success.html">Forgot (Confirmation)</a></li>
               <li class="optional"><a href="sign-out.html">Sign Out</a></li>
             </ul>
           </section>
@@ -158,13 +162,13 @@
             <h3>Information</h3>
             <ul class="optional">
               <li><a href="about.html">About</a></li>
+              <li><a href="advertise.html">Advertise</a></li>
+              <li><a href="contact.html">Contact</a></li>
               <li><a href="guidelines.html">Guidelines</a></li>
               <li><a href="terms.html">Terms</a></li>
               <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="advertise.html">Advertise</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="500.html">Error 500</a></li>
               <li><a href="404.html">Error 404</a></li>
+              <li><a href="500.html">Error 500</a></li>
             </ul>
           </section>
         </section>
