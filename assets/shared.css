@@ -3506,7 +3506,7 @@
   }
 
   @media (min-width: 30em) and (max-width: 91.9em) {
-    .post > header .options {
+    .post > header {
       width: 100%;
       display: table;
     }
@@ -3522,13 +3522,13 @@
     .post > header .vote,
     .post > header .author {
       border-width: 0 0.1em 0 0;
-      padding-right: 2.95em;
+      padding-right: 1.75em;
       padding-bottom: 0;
     }
     .post > header .author,
     .post > header .share {
       padding-top: 0;
-      padding-left: 2.95em;
+      padding-left: 1.75em;
     }
     .post > header .share {
       text-align: center;
