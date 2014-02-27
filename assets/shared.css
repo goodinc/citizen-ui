@@ -3329,107 +3329,19 @@
     margin-bottom: 3em;
   }
 
-  .post > header .do   a,
-  .post > header .vote a {
-    display: block;
-    text-decoration: inherit;
-    color: inherit;
-  }
-  .post > header .do   a:hover h2,
-  .post > header .vote a:hover h2 {
-    color: rgb(113, 179, 247); /* @link-color */
-  }
-  .post > header .do   h2,
-  .post > header .vote h2 {
-    font-size: inherit;
-    line-height: inherit;
-    margin-bottom: 0;
-  }
-  .post > header .do   h2 + p,
-  .post > header .vote h2 + p {
-    margin-top: 0;
-  }
-
-  .post > header .share  h2,
-  .post > header .author h2 {
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
-    font-weight: bold;
-  }
-
-  .post > header .do,
-  .post > header .vote,
-  .post > header .author {
-    margin: 0;
-    border-width: 0 0 0.1em 0;
+  .post > article .share {
+    border-width: 0.1em 0;
+    padding: 0.4375em 0;
     border-style: solid;
-    border-color: rgb(221, 221, 221);
+    border-color: rgb(218, 220, 224); /* @article-border-color */
   }
-  .post > header .do,
-  .post > header .vote {
-    padding-bottom: 0.875em; /* @line-height(1.75) / 2 */
-  }
-  .post > header .author {
-    padding-bottom: 2.1875em; /* @line-height(1.75) x 5/4 */
-  }
-  .post > header .author,
-  .post > header .share {
-    padding-top: 1.75em; /* @line-height(1.75) */
-  }
-  .post > header .share {
-    margin-top: 0;
-  }
-
-
-  /* @follow-list */
-  .post > header .author h3 {
-    font-family: inherit;
-    line-height: inherit;
-    font-size: inherit;
-    font-weight: bold;
-  }
-  .post > header .author h3 a {
-    color: inherit;
-    text-decoration: inherit;
-  }
-  .post > header .author h3 a:hover,
-  .post > header .author h3 a:hover,
-  .post > header .author h3 a:hover {
-    color: rgb(153, 153, 153);
-  }
-
-  .post > header .author h3 {
-    color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / @font-size(16px) */
-    margin-top: 1.16666666666667em; /* @line-height(0.875em) / font-size(0.75em)  */
-  }
-
-  /* OPTIONAL: Add more space above the second author */
-  .post > header .author form + h3 {
-    margin-top: 2.3333333333em; /* @line-height(0.875em) / font-size(0.75em) x 2/3 */
-  }
-
-  .post > header .author form {
-    margin-top: 0.4375em; /* @line-height / 2 */
-  }
-
-  /* TODO: consider sharing styles between the follow list and author */
-  .post > header .author img {
-    float: left;
-    margin-right: 0.75em;
-  }
-  .post > header .author button {
-    font-size: 0.75em; /* 12px / @font-size(16px) */
-  }
-
-  .post > header .share ul,
-  .post > header .share li {
+  .post > article .share,
+  .post > article .share li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .post > header .share li {
+  .post > article .share li {
     display: inline;
   }
   /*
@@ -3441,8 +3353,8 @@
   */
 
 
-  .post > header .facebook  a:after,
-  .post > header .twitter   a:after {
+  .post > article .facebook  a:after,
+  .post > article .twitter   a:after {
     content: "";
     display: inline-block;
     background-repeat: no-repeat;
@@ -3453,14 +3365,14 @@
     vertical-align: middle;
     margin-left: 0.5em;
   }
-  .post > header .facebook  a:after {
+  .post > article .facebook  a:after {
     background-image: url(shared/social/facebook-218-198-71.svg);
   }
-  .post > header .twitter   a:after {
+  .post > article .twitter   a:after {
     background-image: url(shared/social/twitter-218-198-71.svg);
   }
 
-  .post > header .share a {
+  .post > article .share a {
     display: inline-block;
     background-color: rgb(255, 249, 208);
     color: rgb(218, 198, 71);
@@ -3470,14 +3382,14 @@
     font-weight: bold;
   }
 
-  .post > header .do      abbr,
+  .post > header .do   abbr,
   .post > header .vote abbr {
     font-size: 2.375em; /* 38px / @font-size(16px) */
     line-height: normal;
     font-weight: bold;
   }
 
-  .post > header .do      abbr:before,
+  .post > header .do   abbr:before,
   .post > header .vote abbr:before {
 
     /* @good-icons */
@@ -3513,204 +3425,79 @@
     color: rgb(113, 179, 247); /* @link-color */
   }
 
-  @media (min-width: 30em) and (max-width: 91.9em) {
+  @media (min-width: 30em) {
     .post > header {
       width: 100%;
       display: table;
     }
     .post > header .do,
+    .post > header .dos,
     .post > header .vote,
-    .post > header .author,
-    .post > header .share {
+    .post > header .votes {
       margin-top: 0;
       display: table-cell;
       vertical-align: top;
     }
-    .post > header .do,
-    .post > header .vote,
-    .post > header .author {
-      border-width: 0 0.1em 0 0;
-      padding-right: 1.75em;
-      padding-bottom: 0;
-    }
-    .post > header .author,
-    .post > header .share {
-      padding-top: 0;
+    .post > header .dos,
+    .post > header .votes {
+      border-left: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
       padding-left: 1.75em;
     }
-    .post > header .share {
-      text-align: center;
-      white-space: nowrap;
-    }
-
-  }
-
-  @media (min-width: 92em) {
-    #content > .container > .post {
-      position: relative;
-    }
-    .post > header {
-      position: absolute;
-      left: -10em;
-      top: 3.5em;
-      width: 9em;
+    .post > header form.do,
+    .post > header form.vote {
       text-align: right;
-    }
-    .post > header .author img {
-      display: block;
-      float: none;
-      margin-left: auto;
-      margin-right: 0;
-      margin-bottom: 0.4375em; /* @line-height / 2 */
-    }
-    .post > header .author form {
-      margin-top: 0.875em; /* @line-height */
-    }
-    .post > header .share li {
-      display: block;
-    }
-    .post > header .share li + li {
-      margin-top: 0.875em; /* @line-height / 2 */
-    }
-
-    /* OPTIONAL: Attempt to make the buttons the same width */
-    .post > header .share a {
-      min-width: 8em;
     }
   }
 
   @media (min-width: 50em) {
     .post > article {
-      border: 0.1em solid rgb(218, 220, 224);
+      border: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
       padding: 3em;
     }
   }
 
-  .post > article header h2 {
-    font-family: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-    color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / @font-size(16px) */
-  }
-  .post > article header h2 strong {
-    font-size: 2.5em; /* 30px / font-size(12px) */
-    color: rgb(42, 43, 44); /* @text-color */
-  }
-  .post > article header h2 a {
-    color: inherit;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  .post > article header h2 a:hover,
-  .post > article header h2 a:active,
-  .post > article header h2 a:focus {
-    color: rgb(153, 153, 153);
-  }
-  .post > article .time {
-    color: rgb(102, 102, 102);
-    font-size: 0.75em; /* 12px / @font-size(16px) */
-    font-weight: bold;
-  }
-  @media (min-width: 40em) {
-    .post > article header h2,
-    .post > article .time {
-      display: inline;
-    }
-    .post > article header h2 {
-      margin-right: 3.5em; /* @line-height x 2 */
-    }
-  }
 
-  .post > article header > a {
-    display: block;
-    margin-top: 2.25em;
+  .post > article h1 {
+    font-size: 2.375em; /* 38px / @font-size(16px) */
   }
-  .post > article header > a.has-image:after {
-    /* @clear-fix */
-    content: "";
-    display: table;
-    clear: both;
-  }
-  @media (min-width: 30em) {
-    .post > article header img {
-      float: left;
-      margin-right: 1.75em; /* @line-height */
-    }
-  }
-  .post > article header a {
+  .post > article h1      a,
+  .post > article .source a {
     color: inherit;
     text-decoration: inherit;
   }
-  .post > article header a:hover,
-  .post > article header a:active,
-  .post > article header a:focus {
-    color: rgb(153, 153, 153); /* @link-hover-color */
+  .post > article .source {
+    color: rgb(153, 153, 153); /* @activity-source */
+    font-size: 0.75em;
   }
-  .post > article h1 {
-    font-size: 2.375em; /* 38px / @font-size(16px) */
+  .post > article .source img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  .post > article .source a {
+    /* @activity-source-link */
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+  }
+  @media (min-width: 30em) {
+    .post > article h1 img {
+      float: right;
+      margin-left: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
+    }
+  }
+  .post > article h1      a:hover,
+  .post > article h1      a:active,
+  .post > article h1      a:focus,
+  .post > article .source a:hover,
+  .post > article .source a:active,
+  .post > article .source a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
   }
   .post > article p {
     line-height: 1.875; /* 30px / @font-size(16px) */
   }
-  .post > article ul.images,
-  .post > article ul.images li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
 
 
-/* =Slideshow (Header)
-  ----------------------------------------------- */
-  @media (min-width: 30em) {
-    .post > article header .slideshow {
-      float: left;
-      margin-right: 1.75em; /* @line-height */
-    }
-    .post > article header .slideshow img {
-      float: none;
-    }
-  }
-  .post > article header .slideshow a {
-    display: block;
-    border: 0.25em solid black;
-    position: relative;
-    background: black;
-  }
-  .post > article header .slideshow img {
-    transition: opacity 0.2s;
-  }
-  .post > article header .slideshow:hover  img,
-  .post > article header .slideshow:active img,
-  .post > article header .slideshow:focus  img {
-    opacity: 0.6;
-  }
-  .post > article header .slideshow span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: black;
-    background: rgba(0, 0, 0, 0.75);
-    background-image: url(shared/misc/slideshow.png);
-    background-image: url(shared/misc/slideshow.svg), none;
-    background-position: 1em 50%;
-    background-repeat: no-repeat;
-    padding: 0.5em 1em 0.5em 3em;
-    color: rgb(204, 204, 204);
-    border-radius: 1.5em;
-    margin-top: -1em;
-    margin-left: -7em;
-    font-weight: bold;
-  }
-  .post > article header .slideshow img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-/* =Slideshow (Body)
+/* =Slideshow
   ----------------------------------------------- */
   .post > article figure.slideshow {
     margin-bottom: 1.5em;
@@ -3773,6 +3560,13 @@
     font-size: 0.875em; /* 14px / @font-size(16px) */
   }
 
+  .post .tags ul,
+  .post .tags li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
   .post > footer .tags h2 {
     color: rgb(14, 14, 14);
     font-family: inherit;
@@ -3828,17 +3622,6 @@
     color: rgb(47, 132, 218); /* @deep-blue */
   }
 
-
-  .post > footer ul,
-  .post > footer li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .post > footer li {
-    display: inline;
-  }
-
   form .submit a {
     color: rgb(247, 157, 130);
     font-weight: bold;
@@ -3850,13 +3633,6 @@
     color: rgb(247, 113, 113);
   }
 
-  html:hover .post .secondary h2 {
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  html:hover .post .secondary:hover h2 {
-    opacity: 1;
-  }
 
   /*
   .post > footer .do      h2,
@@ -3870,12 +3646,24 @@
   }
   */
 
-  .post > footer .dos      h2,
-  .post > footer .votes h2 {
+  .post .dos   h2,
+  .post .votes h2 {
     font-family: inherit;
     font-size: 0.875em; /* 14px / @font-size(16px) */
     font-weight: bold;
     color: rgb(153, 153, 153);
+  }
+  .post .dos   ul,
+  .post .dos   li,
+  .post .votes ul,
+  .post .votes li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .post .dos   li,
+  .post .votes li {
+    display: inline;
   }
 
   @media (min-width: 30em) {
