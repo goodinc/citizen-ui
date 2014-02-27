@@ -268,6 +268,10 @@
     margin: 0;
     padding-left: 0;
   }
+  .pagination ul + ul {
+    display: block;
+    text-align: center;
+  }
   .pagination li a {
     color: rgb(153, 153, 153);
     text-decoration: none;
@@ -3309,6 +3313,10 @@
   .activity-header li a:active,
   .activity-header li a:focus {
     color: rgb(113, 179, 247); /* @link-color */
+  }
+  .activity-header li.active a {
+    color: black;
+    border-bottom: 2px solid black;
   }
 
 
