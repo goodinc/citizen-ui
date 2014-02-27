@@ -3327,7 +3327,7 @@
   ----------------------------------------------- */
 
   .post > header {
-    margin-bottom: 3em;
+    margin-bottom: 1.75em; /* @line-height */
   }
 
   .post > article .share {
@@ -3455,10 +3455,16 @@
     }
   }
 
+  .post > article {
+    border-width: 0.1em 0 0 0;
+    padding-top: 1.75em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @article-border-color */
+  }
   @media (min-width: 50em) {
     .post > article {
-      border: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
-      padding: 3em;
+      border-width: 0.1em;
+      padding: 3.5em; /* @line-height x 2 */
     }
   }
 
