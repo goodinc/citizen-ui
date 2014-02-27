@@ -3316,7 +3316,7 @@
   }
   .activity-header li.active a {
     color: black;
-    border-bottom: 2px solid black;
+    border-bottom: 0.125em solid black;
   }
 
 
@@ -3632,9 +3632,11 @@
     display: table;
     clear: both;
   }
-  .post > article header img {
-    float: left;
-    margin-right: 1.75em; /* @line-height */
+  @media (min-width: 30em) {
+    .post > article header img {
+      float: left;
+      margin-right: 1.75em; /* @line-height */
+    }
   }
   .post > article header a {
     color: inherit;
@@ -3657,6 +3659,102 @@
     margin-left: 0;
     padding-left: 0;
   }
+
+
+/* =Slideshow (Header)
+  ----------------------------------------------- */
+  @media (min-width: 30em) {
+    .post > article header .slideshow {
+      float: left;
+      margin-right: 1.75em; /* @line-height */
+    }
+    .post > article header .slideshow img {
+      float: none;
+    }
+  }
+  .post > article header .slideshow a {
+    display: block;
+    border: 0.25em solid black;
+    position: relative;
+    background: black;
+  }
+  .post > article header .slideshow img {
+    transition: opacity 0.2s;
+  }
+  .post > article header .slideshow:hover  img,
+  .post > article header .slideshow:active img,
+  .post > article header .slideshow:focus  img {
+    opacity: 0.6;
+  }
+  .post > article header .slideshow span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: black;
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(shared/misc/slideshow.png);
+    background-image: url(shared/misc/slideshow.svg), none;
+    background-position: 1em 50%;
+    background-repeat: no-repeat;
+    padding: 0.5em 1em 0.5em 3em;
+    color: rgb(204, 204, 204);
+    border-radius: 1.5em;
+    margin-top: -1em;
+    margin-left: -7em;
+    font-weight: bold;
+  }
+  .post > article header .slideshow img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+/* =Slideshow (Body)
+  ----------------------------------------------- */
+  .post > article figure.slideshow {
+    margin-bottom: 1.5em;
+  }
+  .post > article figure.slideshow a {
+    display: block;
+    border: 10px solid black;
+    position: relative;
+    background: black;
+  }
+  .post > article figure.slideshow a img {
+    transition: opacity 0.2s;
+  }
+  .post > article figure.slideshow a:hover  img,
+  .post > article figure.slideshow a:active img,
+  .post > article figure.slideshow a:focus  img {
+    opacity: 0.6;
+  }
+  .post > article figure.slideshow p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: black;
+    background: rgba(0, 0, 0, 0.75);
+    background-image: url(shared/misc/slideshow.png);
+    background-image: url(shared/misc/slideshow.svg), none;
+    background-position: 1em 50%;
+    background-repeat: no-repeat;
+    padding: 0.5em 1em 0.5em 3em;
+    color: rgb(204, 204, 204);
+    border-radius: 1.5em;
+    margin-top: -1em;
+    margin-left: -7em;
+    font-weight: bold;
+  }
+  .post > article figure.slideshow img {
+    display: block;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+
+
+
   .post > footer h2 {
     font-size: inherit;
   }
