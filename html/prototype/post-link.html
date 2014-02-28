@@ -100,22 +100,24 @@
 
         <p><a href="http://usnews.nbcnews.com/_news/2013/11/23/21384252-native-american-travels-across-us-photographing-citizens-of-tribal-nations">Continue to nbcnews.com</a></p>
 
+        <footer>
+          <form action="" method="post" class="secondary">
+            <h2>Inappropriate?</h2>
+            <p><button type="submit" title="Flag this post as inappropriate">Flag</button></p>
+          </form>
+        </footer>
+
       </article>
 
       <footer>
 
-        <form action="" method="post" class="secondary">
-          <h2>Inappropriate?</h2>
-          <p><button type="submit" title="Flag this post as inappropriate">Flag</button></p>
-        </form>
-
-        <form action="" method="post" class="vote" id="vote">
+        <form action="" method="post" class="vote">
           <h2>Think it’s good?</h2>
           <p><button type="submit" title="Vote for this post">It’s GOOD</button></p>
         </form>
 
         <!--
-        <form action="" method="post" class="voted" id="vote">
+        <form action="" method="post" class="voted">
           <h2>You think this is good</h2>
           <p><button type="submit" disabled="disabled">It’s GOOD</button></p>
         </form>
@@ -176,9 +178,11 @@
         <h2>Discuss</h2>
 
         <form action="" method="post">
-          <h4>Have something to say?</h4>
           <p>
-            <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+            <label>
+              <span>Comment</span><br />
+              <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+            </label>
           </p>
           <p class="submit">
             <button type="submit">Post</button>
@@ -202,17 +206,22 @@
                       <button type="submit" title="Flag this comment as inappropriate">Flag</button>
                     </form>
                   </li>
+                  <!--
                   <li class="delete">
                     <form action="" method="post">
                       <button type="submit" title="Delete this comment">Delete</button>
                     </form>
                   </li>
+                  -->
                 </ul>
 
                 <form action="" method="post">
                   <h4>Reply</h4>
                   <p>
-                    <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+                    <label>
+                      <span>Comment</span><br />
+                      <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+                    </label>
                   </p>
                   <p class="submit">
                     <button type="submit">Post</button> or <a href="">Cancel</a>

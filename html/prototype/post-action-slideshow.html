@@ -122,16 +122,18 @@
           </a>
         </figure>
 
+        <footer>
+          <form action="" method="post" class="secondary">
+            <h2>Inappropriate?</h2>
+            <p><button type="submit" title="Flag this post as inappropriate">Flag</button></p>
+          </form>
+        </footer>
+
       </article>
 
       <footer>
 
-        <form action="" method="post" class="secondary">
-          <h2>Inappropriate?</h2>
-          <p><button type="submit" title="Flag this post as inappropriate">Flag</button></p>
-        </form>
-
-        <form action="" method="post" class="do" id="do">
+        <form action="" method="post" class="do">
           <h2>Are you in?</h2>
           <h6>Do It</h6>
           <p>
@@ -141,7 +143,7 @@
         </form>
 
         <!--
-        <form action="" method="post" class="doing" id="do">
+        <form action="" method="post" class="doing">
           <h2>You’re doing this.</h2>
           <h6>To Do</h6>
           <p>
@@ -152,7 +154,7 @@
         -->
 
         <!--
-        <form action="" method="post" class="done" id="do">
+        <form action="" method="post" class="done">
           <h2>You did this!</h2>
           <h6>Done</h6>
           <p>
@@ -252,9 +254,11 @@
         <h2>Discuss</h2>
 
         <form action="" method="post">
-          <h4>Have something to say?</h4>
           <p>
-            <textarea name="comment[body]" placeholder="Share your thoughts or insights..."></textarea>
+            <label>
+              <span>Comment</span><br />
+              <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+            </label>
           </p>
           <p class="submit">
             <button type="submit">Post</button>
