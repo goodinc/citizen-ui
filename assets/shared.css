@@ -596,7 +596,7 @@
     background-color: rgb(113, 179, 247); /* @link-color */
     color: white;
     cursor: pointer;
-    border-width: 0;
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
     text-decoration: none;
     font-weight: bold;
     border-radius: 0.25em;
@@ -632,7 +632,7 @@
     padding: 0.5em 1em;
     font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
     font-weight: normal;
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
   .vote button:hover,
   .vote button:active,
@@ -819,6 +819,7 @@
   .scripted-do form.doing h6 + p button,
   .scripted-do form.done  h6 + p button {
     background: transparent;
+    border-width: 0;
     color: rgb(102, 102, 102);
     padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
     min-width: 8em;
@@ -3666,8 +3667,8 @@
     color: rgb(47, 132, 218); /* @deep-blue */
   }
 
-  .post .comments,
-  .post .popular-posts {
+  .post > .comments,
+  .post > .popular-posts {
     margin-top: 1.75em;
     padding-top: 1.75em;
     border-top: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
@@ -3702,6 +3703,7 @@
   .post > footer h2 {
     font-family: inherit;
     font-size: 0.875em; /* 14px / @font-size(16px) */
+    line-height: 2em; /* @line-height(1.75em) / font-size(0.875em) */
     color: rgb(102, 102, 102);
   }
   .post > header h2.do,
@@ -4058,6 +4060,7 @@
   .comment-list article footer .flag button,
   .comment-list article footer .delete button {
     background-color: transparent;
+    border-width: 0;
     font-weight: inherit;
     color: inherit;
     margin: 0;
