@@ -3330,10 +3330,6 @@
   -----------------------------------------------
   ----------------------------------------------- */
 
-  .post > header {
-    margin-bottom: 1.75em; /* @line-height */
-  }
-
   .post > article .share {
     border-width: 0.1em 0;
     padding: 0.875em 0;
@@ -3433,6 +3429,8 @@
   .post > header {
     width: 100%;
     display: table;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
   }
   .post > header .link,
   .post > header .do,
@@ -3449,11 +3447,12 @@
   }
   .post > header .dos h2,
   .post > header .votes h2 {
+    margin-left: 0.875em;
     border-left: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
     padding-left: 0.875em;
   }
 
-  @media (max-width: 30em) {
+  @media (max-width: 40em) {
     .post > header .dos   ul,
     .post > header .votes ul {
       position: absolute;
@@ -3474,9 +3473,21 @@
     margin-bottom: 1.75em; /* @line-height */
   }
   @media (min-width: 50em) {
+    .post > header {
+      margin-bottom: 0;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @article-border-color */
+      border-width: 0.1em 0.1em 0;
+      padding: 3.5em 3.5em 1.75em; /* @line-height x 2 */
+    }
     .post > article {
-      border-width: 0.1em;
-      padding: 3.5em; /* @line-height x 2 */
+      margin-top: 0;
+      border-width: 0 0.1em 0.1em;
+      padding: 0 3.5em 3.5em; /* @line-height x 2 */
+    }
+    .post > article h1 {
+      border-top: 1px solid rgb(218, 220, 224); /* @article-border-color */
+      padding-top: 0.7368421053em; /* @line-height(1.75em) / font-size(2.375em) */
     }
   }
 
