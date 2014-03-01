@@ -16,6 +16,18 @@
     // OPTIONAL: Present the do buttons as drop-downs
     new DoDropDown();
 
+
+    // OPTIONAL: Hide redundant labels in browsers that support the placeholder attribute.
+    // http://stackoverflow.com/questions/8263891/simple-way-to-check-if-placeholder-is-supported
+    function supportsPlaceholder() {
+      var test = document.createElement("input");
+      return ("placeholder" in test);
+    }
+    if (supportsPlaceholder()) {
+      var html = document.getElementsByTagName("html")[0];
+      html.className += " supports-placeholder";
+    }
+
   }
 
 
@@ -44,7 +56,7 @@
 
   (function() {
 
-    if (!document.body.addEventListener || !document.querySelector) return;
+    if (!document.addEventListener || !document.querySelector) return;
 
     DropDown = function(element) {
 
@@ -85,13 +97,13 @@
 
       element.className += " scripted";
 
-      document.body.addEventListener("click", function(e) {
+      document.addEventListener("click", function(e) {
         if (!within(e.target, element)) {
           hideDetails();
         }
       }, false);
 
-      document.body.addEventListener("focus", function(e) {
+      document.addEventListener("focus", function(e) {
         if (within(e.target, element)) {
           showDetails();
         } else {
@@ -110,7 +122,7 @@
 
   (function() {
 
-    if (!document.body.addEventListener) return;
+    if (!document.addEventListener) return;
 
     function closest(element, nodeName) {
 
@@ -169,8 +181,8 @@
       }
 
 
-      document.body.addEventListener("click", toggle, false);
-      document.body.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+      document.addEventListener("click", toggle, false);
+      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
 
       // Style the dropdowns
