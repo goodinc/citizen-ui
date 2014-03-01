@@ -289,6 +289,9 @@
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83);
     text-decoration: none;
+
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
   }
   .pagination .next     a,
   .pagination .previous a {
@@ -1176,20 +1179,27 @@
     /* @hidden-accessible-text */
     text-indent: -9999px;
   }
-  #header .search label {
+  #header .search label span {
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     text-transform: uppercase;
     color: rgb(113, 179, 247); /* @link-color */
+    font-size: 0.75em; /* 12px / @font-size(16px) */
   }
   #header .search input {
-    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-size: 1.375em;
-    width: 12em; /* This is about the width of the placeholder text */
+    width: 14em; /* This is about the width of the placeholder text */
     max-width: 100%;
     border-radius: none;
   }
+
+  @media (min-width: 60em) {
+    #header .search input {
+      width: 20em;
+    }
+  }
+
   #header .search button {
     font-size: 0.875em;
+    padding: 0.45em 1em;
   }
 
   @media (max-width: 24.9em) {
@@ -1251,6 +1261,7 @@
   }
   #header .search h3 {
     position: static;
+    margin-bottom: 0;
   }
   #header .search {
     display: inline-block;
@@ -1263,8 +1274,9 @@
     background: white;
     border: 0.125em solid rgb(139, 139, 139);
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-    padding: 3em;
+    padding: 1em 1.5em 1.5em;
     position: absolute;
+    white-space: nowrap;
     z-index: 9999;
     left: -9999px;
   }
@@ -1272,6 +1284,13 @@
     left: auto;
   }
 
+  @media (min-width: 40em) {
+    #header .search:hover form {
+      right: 0.875em;
+    }
+  }
+
+  /*
   @media (max-width: 44.9em) {
     #header .search form {
       padding: 1em;
@@ -1288,13 +1307,7 @@
       margin-left: -5em;
     }
   }
-
-  @media (min-width: 45em) {
-    #header .search form {
-      width: 25em;
-      margin-left: -15em;
-    }
-  }
+  */
 
   /* OPTIONAL: Make the account menu behave like a dropdown */
   #header .search.scripted form {
@@ -1307,6 +1320,15 @@
     left: -9999px;
     right: auto;
     opacity: 0;
+  }
+
+  @media (min-width: 40em) {
+    #header .search.scripted form {
+      right: 0.875em;
+    }
+    #header .search.summary form {
+      right: auto;
+    }
   }
 
   #header > .container:after {
@@ -1556,6 +1578,10 @@
     margin-top: 1.5em;
   }
   #footer p {
+
+    /* KLUDGE: Reduce the amount of space above the copyright statement. */
+    margin-top: -1.75em;
+
     color: rgb(153, 153, 153); /* @aluminum */
   }
   #footer ul,
