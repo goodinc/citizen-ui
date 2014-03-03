@@ -331,13 +331,13 @@
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83);
     text-decoration: none;
-
-    border: 0.1em solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25em;
   }
   .pagination .next     a,
   .pagination .previous a {
     font-weight: bold;
+
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25em;
   }
   .pagination .next a {
     background-color: rgb(113, 179, 247); /* @link-color */
@@ -798,7 +798,7 @@
     background-color: rgb(247, 113, 113);
   }
 
-  /**/
+  /* OPTIONAL: Present the do buttons as drop-downs */
   form.do    h6,
   form.doing h6,
   form.done  h6 {
@@ -850,15 +850,37 @@
   .scripted-do form.do    h6 + p:after,
   .scripted-do form.doing h6 + p:after,
   .scripted-do form.done  h6 + p:after {
+    display: block;
     content: "";
-    background: transparent url(shared/misc/pointer.svg) no-repeat bottom;
-    background-size: contain;
+    background: white;
+    border-width: 0.125em 0 0 0.125em;
+    border-style: solid;
+    border-color: rgb(139, 139, 139);
+    width: 1em;
+    height: 1em;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
     position: absolute;
-    top: -1.94em;
+    top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
+    left: 50%;
+    margin-left: -0.5em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+
+    /*
+    background: transparent url(shared/misc/pointer.svg) no-repeat bottom;
+    background-size: auto 1em;
+    position: absolute;
+    margin-top: 0.0625em;
+    top: -1em;
     left: 50%;
     margin-left: -1em;
     width: 2em;
-    height: 2em;
+    height: 1em;
+    */
   }
   .scripted-do form.do    h6 + p button,
   .scripted-do form.doing h6 + p button,
@@ -872,6 +894,7 @@
     margin-left: auto;
     margin-right: auto;
     white-space: nowrap;
+    border-radius: 0;
   }
   .scripted-do form.do    h6 + p button + button,
   .scripted-do form.doing h6 + p button + button,
@@ -901,6 +924,34 @@
   .scripted-do form.done  h6 + p button:focus {
     color: rgb(113, 179, 247); /* @link-color */
   }
+
+  /* OPTIONAL: Center the drop-down */
+  .scripted-do form.do,
+  .scripted-do form.doing,
+  .scripted-do form.done {
+    position: relative;
+    text-align: right;
+  }
+  .scripted-do form.do    h6 + p button,
+  .scripted-do form.doing h6 + p button,
+  .scripted-do form.done  h6 + p button {
+    min-width: 11em;
+  }
+  @media (max-width: 49.9em) {
+    .scripted-do form.do.active    h6 + p,
+    .scripted-do form.doing.active h6 + p,
+    .scripted-do form.done.active  h6 + p {
+      right: 0;
+    }
+  }
+  @media (min-width: 50em) {
+    .scripted-do form.do.active    h6 + p,
+    .scripted-do form.doing.active h6 + p,
+    .scripted-do form.done.active  h6 + p {
+      right: -3em;
+    }
+  }
+
 
 
   /* =Loading
@@ -2207,7 +2258,7 @@
   }
 
   /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
-  @media (min-width: 40em) { /* @medium-size */
+  @media (min-width: 50em) {
 
     /* Make space for the buttons */
     .activity-item .do h3 {
@@ -2797,6 +2848,9 @@
     border-radius: 200px;
     margin: 0 auto 1.25em; /* $line_height */
     display: block;
+  }
+  .featured .activity-item.do form {
+    float: left;
   }
 
 
