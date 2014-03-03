@@ -294,7 +294,7 @@
   .pagination {
     border-top: 1px solid rgb(221, 223, 227);
     position: relative;
-    padding: 1.75em 0 0;
+    padding: 1.75em 1.25em 0;
     text-align: right;
   }
   .pagination:after {
@@ -1772,6 +1772,10 @@
       background-color: rgb(135, 233, 184);
       border-right: 1px solid rgb(233, 233, 235);
     }
+    nav.sub form button {
+      border-radius: 0;
+      border-color: transparent;
+    }
 
     nav.sub dt {
       position: absolute;
@@ -1810,6 +1814,13 @@
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
+
+    /* TODO: Figure out how to make this look good on post pages
+    #content .has-aside {
+      padding-right: 1.75em;
+      border-right: 1px solid rgb(221, 223, 227);
+    }
+    */
 
     /* @aside-column */
     #content .has-aside + aside {
@@ -2772,6 +2783,14 @@
     font-size: 1.875em; /* 30px / @font-size(16px) */
   }
 
+
+  .topic .featured {
+    border-bottom: 0.1em solid rgb(218, 220, 224);
+  }
+  .topic > .featured > section + section {
+    margin-bottom: 1.75em;
+  }
+
   @media (min-width: 70em) {
 
     /* @column-container */
@@ -2805,23 +2824,12 @@
     .topic > .featured {
       position: relative;
     }
-    .topic > .featured h2,
-    .topic > .featured h2 + p {
-      display: inline;
-    }
-    .topic > .featured h2 {
-      margin-right: 0.75em;
-    }
-    .topic > .featured h2 + p {
-      color: rgb(153, 153, 153);
-      font-size: 0.75em; /* 12px / @font-size(16px) */
-      font-weight: bold;
-    }
-    .topic > .featured > h2 + p + section {
-      margin-top: 1.5em;
+
+    .topic .featured {
+      margin-bottom: 3.5em;
     }
     .topic > .featured > section + section {
-      margin-top: -1.5em;
+      margin-top: -3.5em;
     }
   }
 
@@ -3359,13 +3367,9 @@
     }
   }
 
-  .topic .featured {
-
-    /* @separator */
-    margin-bottom: 2.95em;
-    border-bottom: 0.1em solid rgb(218, 220, 224);
+  .activity-header {
+    padding-right: 1.25em;
   }
-
   .activity-header:after {
     /* @clearfix */
     content: "";
@@ -3373,15 +3377,11 @@
     clear: both;
   }
 
-  .activity-header h1 {
+  .activity-header h1,
+  .activity-header h2 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
-  }
-  .activity-header h2,
-  .activity-header p {
-    display: inline;
-    margin-right: 0.75em;
   }
   .activity-header ul,
   .activity-header li {
@@ -3418,13 +3418,13 @@
     font-weight: bold;
     text-decoration: none;
   }
+  .activity-header li.active a {
+    color: black;
+  }
   .activity-header li a:hover,
   .activity-header li a:active,
   .activity-header li a:focus {
     color: rgb(113, 179, 247); /* @link-color */
-  }
-  .activity-header li.active a {
-    color: black;
   }
   .activity-header p.rss {
     margin: 0;
