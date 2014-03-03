@@ -4087,6 +4087,22 @@
 
 /* =Explore
   ----------------------------------------------- */
+  .explore h1 {
+    /* @h2 */
+    font-size: 2.25em;
+    line-height   : 0.7777777778em; /* @line-height / 2.25 */
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  .explore h1 + h2 {
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-top    : 1.1666666667em;
+    margin-bottom : 0.5833333334em;
+  }
   .explore h1 strong {
     font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
     font-weight: normal;
