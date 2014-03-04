@@ -1366,6 +1366,10 @@
     top: 2.25em;
     right: 2.25em;
     color: rgb(153, 153, 153);
+    font-style: italic;
+  }
+  #header .join a {
+    font-style: normal;
   }
 
   #header .account .options {
@@ -1794,9 +1798,12 @@
     #content .has-aside .comments,
     #content .has-aside .popular-posts,
     #content .has-aside .activity-header,
-    #content .has-aside > .activity-list,
-    #content .has-aside > .pagination {
+    #content .has-aside .activity-list,
+    #content .has-aside .pagination {
       margin-right: -1.75em;
+    }
+    #content .has-aside .popular-posts .activity-list {
+      margin-right: 0;
     }
 
     #content .has-aside {
@@ -2753,6 +2760,9 @@
   ----------------------------------------------- */
   .activity-list .ad {
     margin-bottom: 1.75em; /* @line-height */
+  }
+  aside div.ad {
+    margin-bottom : 0.875em; /* @line-height / 2 */
   }
 
 
