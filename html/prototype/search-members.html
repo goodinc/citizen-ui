@@ -24,27 +24,29 @@
     <h2><a href="home.html">GOOD</a></h2>
     <p>Creative Solutions for Living Well + Doing Good.</p>
 
-    <p><a href="join.html">Join</a> or <a href="sign-in.html">Sign In</a></p>
-
     <nav class="primary">
-      <ul>
-        <li><a href="explore.html">Explore</a></li>
-        <li><a href="post-new-link.html">Post</a></li>
-      </ul>
+      <h3>Navigation</h3>
+      <div class="options">
+        <ul>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="post-new-link.html">Post</a></li>
+        </ul>
+        <section role="search" class="search">
+          <h4>Search</h4>
+          <form action="search.html" method="get">
+            <p>
+              <label>
+                <span><strong>Search</strong> for topics, members or keywords…</span><br />
+                <input name="q" type="search" value="dinosaur" />
+              </label>
+              <button type="submit">Search</button>
+            </p>
+          </form>
+        </section>
+      </div>
     </nav>
 
-    <section role="search" class="search">
-      <h3><a href="search.html">Search</a></h3>
-      <form action="search.html" method="get">
-        <p>
-          <label>
-            <span>Find topics, members, or keywords…</span><br />
-            <input name="q" type="search" placeholder="What are you looking for?" value="dinosaur" />
-          </label>
-          <button type="submit">Search</button>
-        </p>
-      </form>
-    </section>
+    <p class="join"><a href="join.html">Join</a></p>
   </div><!-- /.container -->
 </header>
 

@@ -8,9 +8,9 @@
 
     // OPTIONAL: Show drop-down content on press (instead of hover)
     if (document.querySelector) {
-      new DropDown(document.querySelector("#header .search"));
+      new DropDown(document.querySelector("#header .primary"));
       new DropDown(document.querySelector("#header .account"));
-      new DropDown(document.querySelector("#header .todos"));
+      new DropDown(document.querySelector("#header .search"));
     }
 
     // OPTIONAL: Present the do buttons as drop-downs
@@ -63,8 +63,8 @@
       if (!element) return;
 
       var headline = element.querySelector("h3");
-      if (headline.length > 0) {
-        headline = headline[0];
+      if (!headline) {
+        headline = element.querySelector("h4");
       }
 
       if (!headline) return;
