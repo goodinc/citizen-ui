@@ -1626,10 +1626,8 @@
   #footer li.rss       a,
   #footer li.facebook  a,
   #footer li.twitter   a,
-  #footer li.google    a,
-  #footer li.linkedin  a,
-  #footer li.tumblr    a,
-  #footer li.pinterest a {
+  #footer li.instagram a,
+  #footer li.tumblr    a {
     display: inline-block;
     text-indent: -9999px;
     overflow: hidden;
@@ -1648,17 +1646,11 @@
   #footer li.twitter   a {
     background-image: url(shared/social/twitter.svg);
   }
-  #footer li.google    a {
-    background-image: url(shared/social/google.svg);
-  }
-  #footer li.linkedin  a {
-    background-image: url(shared/social/linkedin.svg);
+  #footer li.instagram a  {
+    background-image: url(shared/social/instagram.svg);
   }
   #footer li.tumblr    a {
     background-image: url(shared/social/tumblr.svg);
-  }
-  #footer li.pinterest a  {
-    background-image: url(shared/social/pinterest.svg);
   }
   #footer li a {
     text-decoration: none;
