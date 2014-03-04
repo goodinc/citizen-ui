@@ -294,7 +294,7 @@
   .pagination {
     border-top: 1px solid rgb(221, 223, 227);
     position: relative;
-    padding: 1.75em 1.25em 0;
+    padding: 1.25em 1.25em 0;
     text-align: right;
   }
   .pagination:after {
@@ -1350,10 +1350,14 @@
     margin: 0;
     position: absolute;
     top: 2.25em;
-    right: 6em;
+    right: 10em;
 
     border-right: 0.1em solid rgb(239, 239, 239);
     padding-right: 0.4375em;
+  }
+
+  #header.has-account .primary {
+    right: 6em;
   }
 
   #header .join {
@@ -1361,6 +1365,7 @@
     position: absolute;
     top: 2.25em;
     right: 2.25em;
+    color: rgb(153, 153, 153);
   }
 
   #header .account .options {
