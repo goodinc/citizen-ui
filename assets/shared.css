@@ -1303,6 +1303,9 @@
       min-width: 19em;
     }
   }
+  #header .search input {
+    width: 10em;
+  }
   @media (min-width: 30em) {
     #header .search input {
       width: 14em;
@@ -1342,10 +1345,6 @@
   }
   #header .account {
     position: absolute;
-    right: 5.5em;
-  }
-
-  #header .account {
     top: 2.7em;
     right: 2.25em;
   }
@@ -1386,7 +1385,6 @@
       top: 1.25em;
     }
   }
-
 
   /* OPTIONAL: Add a little space around the word “or” */
   #header .join a:first-child {
@@ -1564,6 +1562,27 @@
     }
   }
 
+  @media (max-width: 44.9em) {
+    #header .primary {
+      position: static;
+    }
+    #header .primary h3 {
+      margin: 0;
+      position: absolute;
+      top: 1.25em;
+      right: 10em;
+
+      border-right: 0.1em solid rgb(239, 239, 239);
+      padding-right: 0.4375em;
+    }
+    #header .primary:hover .options {
+      left: -1px;
+      right: auto;
+      width: 100%;
+      top: 3.875em;
+    }
+  }
+
   /* OPTIONAL: Make the account navigation behave like a dropdown */
   #header .account.scripted .options {
     transition: opacity 0.2s;
@@ -1607,6 +1626,18 @@
     #header .primary.summary h3 {
       background-color: transparent;
       border-color: transparent;
+    }
+  }
+
+  @media (max-width: 44.9em) {
+    #header .primary.scripted h3 {
+      position: absolute;
+    }
+    #header .primary.scripted .options {
+      left: -1px;
+      right: auto;
+      width: 100%;
+      top: 3.875em;
     }
   }
 
@@ -2788,13 +2819,15 @@
   .activity-header h1,
   .activity-header h2,
   .topic > .featured h2,
-  .topic > .featured > section > h3 {
+  .topic > .featured > section > h3,
+  .topic > header + section > header > h2 { /* followers */
     font-family: inherit;
     font-weight: bold;
   }
   .activity-header h1,
   .activity-header h2,
-  .topic > .featured h2 {
+  .topic > .featured h2,
+  .topic > header + section > header > h2 { /* followers */
     font-size: 1.875em; /* 30px / @font-size(16px) */
   }
 
