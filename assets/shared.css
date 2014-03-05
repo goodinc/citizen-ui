@@ -1086,7 +1086,7 @@
     /* @separator */
     margin-top: 0;
     border-top: 0.1em solid rgb(221, 221, 221);
-    padding-top: 2.99em;
+    padding-top: 2em;
     padding-bottom: 3em;
   }
   #footer {
@@ -1096,7 +1096,7 @@
 
     /* @separator */
     border-top: 0.1em solid rgb(221, 221, 221);
-    padding-top: 2.99em;
+    padding-top: 2em;
 
     padding-bottom: 1.5em;
   }
@@ -1106,7 +1106,7 @@
   #footer  > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 70em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -1180,8 +1180,7 @@
 
     /* OPTIONAL: Adjust to the vertical rythm */
     position: relative;
-    bottom     : -0.1875em; /* 3px / @font-size(16px) */
-    margin-top : -0.3750em; /* 6px / @font-size(16px) */
+    margin-bottom: 0;
   }
   #header h2 a {
     vertical-align: middle;
@@ -1197,23 +1196,28 @@
     overflow: hidden;
   }
 
-  @media (min-width: 45em) {
+  @media (max-width: 44.9em) {
+    #header h2 a {
+      width:  4em; /* image-width(64px) / @font-size(16px) */
+      height: 2.1875em; /* image-height(35px) / @font-size(16px) */
+    }
+  }
+
+  @media (min-width: 55em) {
     #header h2,
     #header h2 + p {
       display: inline-block;
     }
     #header h2 {
       vertical-align: top;
-      margin-right: 1.75em;
-    }
-    #header h2 + p {
-      margin-top: 0.5em;
+      margin-right: 6.25em;
     }
   }
 
 
   #header h2 + p {
     font-weight: bold;
+    margin-bottom: 0;
   }
   #footer h2 a {
     color: rgb(37, 139, 245); /* @ocean */
@@ -1342,20 +1346,19 @@
   }
 
   #header .account {
-    top: 2.25em;
+    top: 2.7em;
     right: 2.25em;
   }
 
   #header .primary {
     margin: 0;
     position: absolute;
-    top: 2.25em;
+    top: 2.7em; /* @header-top-margin */ /* This number is arbitrary, but happens to align the navigation with the logo */
     right: 10em;
 
     border-right: 0.1em solid rgb(239, 239, 239);
     padding-right: 0.4375em;
   }
-
   #header.has-account .primary {
     right: 6em;
   }
@@ -1363,13 +1366,34 @@
   #header .join {
     margin: 0.4375em 0 0 0;
     position: absolute;
-    top: 2.25em;
+    top: 2.7em; /* @header-top-margin */
     right: 2.25em;
-    color: rgb(153, 153, 153);
+    color: rgb(178, 178, 178);
     font-style: italic;
   }
   #header .join a {
     font-style: normal;
+  }
+
+  @media (max-width: 44.9em) {
+    #header h2 + p {
+      margin-top: 1.75em;
+      font-size: 0.75em;
+    }
+    #header .join,
+    #header .primary,
+    #header .account {
+      top: 1.25em;
+    }
+  }
+
+
+  /* OPTIONAL: Add a little space around the word “or” */
+  #header .join a:first-child {
+    margin-right: 0.125em;
+  }
+  #header .join a:last-child {
+    margin-left: 0.125em;
   }
 
   #header .account .options {
@@ -1768,7 +1792,7 @@
     }
   }
 
-  @media (min-width: 70em) {
+  @media (min-width: 66.5625em) { /* @max-page-width */
 
     /* @column-container */
     #content > .container:after {
@@ -1853,7 +1877,7 @@
       box-sizing      : border-box;
     }
   }
-  @media (min-width: 70em) {
+  @media (min-width: 66.5625em) { /* @max-page-width */
     .test #content > .container:after {
       content: "";
       display: table;
@@ -1919,7 +1943,7 @@
     box-sizing      : border-box;
   }
 
-  @media (min-width: 70em) {
+  @media (min-width: 66.5625em) { /* @max-page-width */
     .join-intro {
       border-top-left-radius  : 0.25em;
       border-top-right-radius : 0.25em;
@@ -1927,7 +1951,7 @@
   }
 
   body > .join-intro {
-    max-width: 70em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin: 0 auto;
   }
 
@@ -2782,7 +2806,7 @@
     margin-bottom: 1.75em;
   }
 
-  @media (min-width: 70em) {
+  @media (min-width: 66.5625em) { /* @max-page-width */
 
     /* @column-container */
     #content .header + .featured:after {
@@ -2811,7 +2835,7 @@
     }
   }
 
-  @media (min-width: 70em) {
+  @media (min-width: 66.5625em) { /* @max-page-width */
     .topic > .featured {
       position: relative;
     }
