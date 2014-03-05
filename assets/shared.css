@@ -4098,6 +4098,7 @@
   }
   .feedback a {
     color: inherit;
+    font-size: 0.875em;
   }
   .feedback a:hover,
   .feedback a:active,
