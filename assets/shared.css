@@ -1990,21 +1990,24 @@
     font-weight: bold;
     font-size: 2em;
     color: rgb(136, 137, 137);
+    padding-left: 0.875em; /* @line-height / 2 */
   }
   .connect-facebook .container {
-    background: transparent url(shared/misc/friends-alpha.png) no-repeat 50% 5.25em; /* @line-height x 3 */
+    background: transparent url(shared/misc/friends.jpg) no-repeat 50% 5.25em; /* @line-height x 3 */
 
     min-height: 34.875em; /* image-height(474px) + 5.25em */
     max-width: 66.5625em; /* @max-page-width */
     margin: 0 auto;
   }
-  .connect-facebook .container div {
+  .connect-facebook .container > a {
     background: white;
     border: 0.3125em solid rgb(239, 239, 239);
     box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
     display: table;
     margin: 9em auto 0;
     padding: 1.75em 2.625em 2.625em; /* @line-height x 1.5 */
+    text-decoration: none;
+    color: inherit;
   }
   .connect-facebook p:first-child {
     font-size: 1.5em;
