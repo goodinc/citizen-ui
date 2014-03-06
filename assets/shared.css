@@ -1655,6 +1655,10 @@
     margin-right: 0;
     margin-bottom: 0;
   }
+  #footer section h2,
+  #footer section h2 + p {
+    display: inline;
+  }
   #footer h2 {
     font-size: inherit;
     font-family: inherit;
@@ -1663,9 +1667,9 @@
   #footer ul,
   #footer p {
     font-size: 0.75em;
-    margin-top: 1.5em;
+    margin-top: 1.1666666667em;
   }
-  #footer p {
+  #footer p:last-child {
 
     /* KLUDGE: Reduce the amount of space above the copyright statement. */
     margin-top: -1.75em;
@@ -1678,7 +1682,7 @@
     margin-left: 0;
     padding-left: 0;
   }
-  #footer li.rss       a,
+  #footer p.rss        a,
   #footer li.facebook  a,
   #footer li.twitter   a,
   #footer li.instagram a,
@@ -1692,8 +1696,13 @@
     width: 2em;
     height: 2em;
   }
-  #footer li.rss       a {
+  #footer p.rss       a {
     background-image: url(shared/social/rss.svg);
+    opacity: 0.25;
+    vertical-align: 0;
+    background-size: auto 0.75em;
+    width: 1.5em;
+    height: 1em;
   }
   #footer li.facebook  a {
     background-image: url(shared/social/facebook.svg);
