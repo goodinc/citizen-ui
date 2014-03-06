@@ -869,18 +869,6 @@
     -moz-transform    : rotate(45deg);
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
-
-    /*
-    background: transparent url(shared/misc/pointer.svg) no-repeat bottom;
-    background-size: auto 1em;
-    position: absolute;
-    margin-top: 0.0625em;
-    top: -1em;
-    left: 50%;
-    margin-left: -1em;
-    width: 2em;
-    height: 1em;
-    */
   }
   .scripted-do form.do    h6 + p button,
   .scripted-do form.doing h6 + p button,
@@ -1185,7 +1173,7 @@
   #header h2 a {
     vertical-align: middle;
     display: inline-block;
-    background: url(shared/misc/good.svg) no-repeat;
+    background: url(shared/header/good.svg) no-repeat;
     background-size: contain;
 
     width:  6.250em; /* image-width(100px) / @font-size(16px) */
@@ -1445,7 +1433,7 @@
   @media (min-width: 60em) {
     #header .search h4 {
       font-size: inherit;
-      background: transparent url(shared/misc/lense.svg) no-repeat center;
+      background: transparent url(shared/header/lense.svg) no-repeat center;
       background-size: auto 1em;
       border: 1px solid transparent;
       margin: 0;
@@ -1520,7 +1508,7 @@
   @media (max-width: 59.9em) {
     #header .primary h3 {
       font-size: inherit;
-      background: transparent url(shared/misc/nav.svg) no-repeat center;
+      background: transparent url(shared/header/nav.svg) no-repeat center;
       background-size: auto 1em;
       border: 1px solid transparent;
       margin: 0;
@@ -1993,7 +1981,7 @@
     padding-left: 0.875em; /* @line-height / 2 */
   }
   .connect-facebook .container {
-    background: transparent url(shared/misc/friends.jpg) no-repeat 50% 5.25em; /* @line-height x 3 */
+    background: transparent url(shared/home/friends.jpg) no-repeat 50% 5.25em; /* @line-height x 3 */
 
     min-height: 34.875em; /* image-height(474px) + 5.25em */
     max-width: 66.5625em; /* @max-page-width */
@@ -2055,6 +2043,12 @@
     background: rgb(88, 175, 130);
     border: 1px solid rgb(92, 157, 124);
     padding: 1.75em;
+  }
+  .join-intro form:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
   }
   .join-intro form p:first-of-type {
     font-weight: bold;
@@ -3793,8 +3787,8 @@
     left: 50%;
     background: black;
     background: rgba(0, 0, 0, 0.75);
-    background-image: url(shared/misc/slideshow.png);
-    background-image: url(shared/misc/slideshow.svg), none;
+    background-image: url(shared/post/slideshow.png);
+    background-image: url(shared/post/slideshow.svg), none;
     background-position: 1em 50%;
     background-repeat: no-repeat;
     padding: 0.5em 1em 0.5em 3em;
@@ -4054,7 +4048,7 @@
     text-transform: uppercase;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
     line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
-    background: transparent url(shared/misc/target.svg) no-repeat left;
+    background: transparent url(shared/post/target.svg) no-repeat left;
     background-size: 1.6363636364em auto; /* image-size(18px) / font-size(0.6875em) */
     padding-left: 2.25em;
   }
