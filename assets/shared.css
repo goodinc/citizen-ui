@@ -1739,6 +1739,10 @@
       width: 100%;
       top: 3.875em;
     }
+    #header .primary.summary .options {
+      left: -9999px;
+      width: auto;
+    }
   }
 
 
