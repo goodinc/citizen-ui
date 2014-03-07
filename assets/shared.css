@@ -843,6 +843,7 @@
     font-size: inherit;
     color: white;
   }
+
   .scripted-do form.do    h6 + p,
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
@@ -961,6 +962,96 @@
     }
   }
 
+  /* OPTIONAL: Add icons before the buttons */
+
+  /* Vote */
+  .vote button:before {
+
+    /* @good-icons */
+    font-family: "Good Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    margin-left: -2em;
+
+    content: "\e002"; /* @icon-vote */
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  .vote button {
+    margin-left: 2em;
+  }
+
+  /* Do */
+  .scripted-do form.do    h6:before,
+  .scripted-do form.doing h6:before,
+  .scripted-do form.done  h6:before {
+    content: "";
+    display: block;
+    width: 1em;
+    position: absolute;
+    margin-left: -3.25em;
+  }
+
+  .scripted-do form.do    h6:before {
+    background-color: rgb(124, 227, 162);
+    border-radius: 1em;
+    height: 1em;
+    margin-top: 0.25em;
+  }
+  .scripted-do form.doing h6:before {
+    background-color: rgb(130, 242, 206);
+    background: transparent url(shared/icons/doing.svg) no-repeat center;
+    background-size: contain;
+    height: 2em;
+    margin-top: -0.25em;
+  }
+  .scripted-do form.done  h6:before {
+    background-color: rgb(64, 198, 149);
+    background: transparent url(shared/icons/done.svg) no-repeat center;
+    background-size: contain;
+    height: 2em;
+    margin-top: -0.25em;
+  }
+  .scripted-do form.do    h6,
+  .scripted-do form.doing h6,
+  .scripted-do form.done  h6 {
+    margin-left: 2em;
+  }
+
+  /*
+  .scripted-do form.do    h6:before:hover,
+  .scripted-do form.do    h6:before:active,
+  .scripted-do form.do    h6:before:focus {
+    background-color: rgb(64, 198, 131);
+  }
+  .scripted-do form.doing h6:before:hover,
+  .scripted-do form.doing h6:before:active,
+  .scripted-do form.doing h6:before:focus {
+    background-color: rgb(110, 222, 186);
+  }
+  .scripted-do form.done  h6:before:hover,
+  .scripted-do form.done  h6:before:active,
+  .scripted-do form.done  h6:before:focus {
+    background-color: rgb(80, 167, 135);
+  }
+  */
 
 
   /* =Loading
@@ -3699,9 +3790,30 @@
     }
   }
 
+  /* OPTIONAL: Make the buttons on the post page a little smaller. */
   .post > header form.do,
   .post > header form.vote {
     text-align: right;
+  }
+
+  /* OPTIONAL: Make the buttons on the post page a little smaller. */
+  .post > header form.do    h6,
+  .post > footer form.do    h6,
+  .post > header form.do    p,
+  .post > footer form.do    p,
+  .post > header form.doing h6,
+  .post > footer form.doing h6,
+  .post > header form.doing p,
+  .post > footer form.doing p,
+  .post > header form.done  h6,
+  .post > footer form.done  h6,
+  .post > header form.done  p,
+  .post > footer form.done  p,
+  .post > header form.vote  p,
+  .post > footer form.vote  p,
+  .post > header form.voted p,
+  .post > footer form.voted p {
+    font-size: 0.75em;
   }
 
   .post > article {
