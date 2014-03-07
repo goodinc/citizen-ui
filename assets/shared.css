@@ -542,8 +542,8 @@
   section.message {
     padding: 1.5em;
     font-size: 1.1em;
-    background: #fffce7;
-    border: 3px solid #f3efd1;
+    background: rgb(255, 252, 231);
+    border: 3px solid rgb(243, 239, 209);
   }
   section.message h1 {
     font-size: inherit;
@@ -570,6 +570,27 @@
   section.message.success p,
   section.message.success li {
     color: rgb(91, 152, 94);
+  }
+  section.message.empty h1,
+  section.message.empty p {
+    display: block;
+  }
+  section.message.empty h1 {
+    font-family: "FreightText Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-weight: inherit;
+
+    /* @h2 */
+    font-size: 2.25em;
+    line-height: 0.7777777778em; /* @line-height / 2.25 */
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  section.message.empty h1 + p {
+    margin-top: 0.875em; /* @line-height / 2 */
+    padding-top: 1.75em; /* @line-height */
+    border-top: 1px solid rgb(243, 239, 209);
   }
   section.message a {
     color: inherit;
