@@ -1892,8 +1892,8 @@
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    padding: 1.1666666667em 0; /* @line-height(1.75em) / 2 / font-size(0.75em) */
-    padding-bottom: 0.75em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
+    padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
+    padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
     margin-left: 1.1666666667em;
     margin-right: 1.1666666667em;
   }
