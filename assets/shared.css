@@ -1185,9 +1185,9 @@
   #header ~ #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(221, 221, 221);
-    padding-top: 2em;
-    padding-bottom: 3em;
+    border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */
+    padding-top: 1.75em;   /* @line-height */
+    padding-bottom: 3.5em; /* @line-height x 2 */
   }
   #footer {
     margin-top: 0;
@@ -1195,12 +1195,13 @@
   #footer {
 
     /* @separator */
-    border-top: 0.1em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */
     padding-top: 2em;
 
     padding-bottom: 1.5em;
   }
 
+  body > nav.sub > .container,
   #header  > .container,
   #content > .container,
   #footer  > .container {
@@ -1217,6 +1218,7 @@
       padding-top: 2.25em;
       padding-bottom: 2.25em;
     }
+    body > nav.sub > .container,
     #header  > .container,
     #content > .container,
     #footer  > .container {
@@ -1529,7 +1531,7 @@
     }
     #header .primary h4 {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
     }
     #header .primary li a {
       display: inline-block;
@@ -1839,6 +1841,94 @@
   }
 
 
+/* =Sub Nav
+  ----------------------------------------------- */
+  body > nav {
+    background: white;
+    margin: 0;
+    border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */;
+  }
+  body > nav:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  body > nav > .container {
+    max-width: 66.5625em; /* @max-page-width */
+    margin: 0 auto;
+  }
+  body > nav.sub ul,
+  body > nav.sub li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  body > nav.sub p,
+  body > nav.sub ul,
+  body > nav.sub li {
+    display: inline;
+  }
+  body > nav.sub ul {
+    margin-left  : -0.875em; /* @line-height / 2 */
+  }
+  body > nav.sub p {
+    margin-right  : -0.875em; /* @line-height / 2 */
+  }
+  body > nav.sub li {
+    display: inline;
+  }
+  body > nav.sub li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right-width: 0;
+  }
+  body > nav.sub a {
+    color: rgb(102, 103, 104);
+    font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    font-size: 0.75em; /* 12px / @font-size */
+    line-height: 2.3333333333em; /* @line-height(1.75em) / font-size(0.75em) */
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.1666666667em 0; /* @line-height(1.75em) / 2 / font-size(0.75em) */
+    padding-bottom: 0.75em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
+    margin-left: 1.1666666667em;
+    margin-right: 1.1666666667em;
+  }
+  body > nav.sub .active a {
+    color: rgb(0, 1, 2); /* @black */
+    border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
+  }
+  body > nav.sub .rss a {
+    color: rgb(221, 223, 227);
+  }
+  body > nav.sub a:hover,
+  body > nav.sub a:active,
+  body > nav.sub a:focus {
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+  body > nav.sub .rss {
+    margin-top: 0;
+    margin-bottom: 0;
+    float: right;
+  }
+  body > nav.sub .rss a:after {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 0.75em;
+    width: 1em;
+    height: 0.75em;
+    vertical-align: 0;
+    margin-left: 0.5em;
+
+    background-image: url(shared/social/rss-221-223-227.svg);
+  }
+
+
   /* =Content
   ----------------------------------------------- */
   #content {
@@ -1848,19 +1938,19 @@
   #content .header {
     margin-bottom: 2.25em;
   }
-  nav.sub {
+  #content nav.sub {
     margin-top: 2.25em;
     background: rgb(218, 220, 224);
     max-width: none;
   }
 
-  nav.sub ul,
-  nav.sub li {
+  #content nav.sub ul,
+  #content nav.sub li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  nav.sub a {
+  #content nav.sub a {
     background: rgb(218, 220, 224);
     color: white;
     font-weight: bold;
@@ -1872,35 +1962,35 @@
     border-style: solid;
     border-color: rgb(233, 233, 235);
   }
-  nav.sub .active a {
+  #content nav.sub .active a {
     background-color: rgb(178, 178, 178);
   }
-  nav.sub a:hover,
-  nav.sub a:active,
-  nav.sub a:focus {
+  #content nav.sub a:hover,
+  #content nav.sub a:active,
+  #content nav.sub a:focus {
     background-color: rgb(200, 200, 200);
   }
 
-  nav.sub dt {
+  #content nav.sub dt {
     padding: 0 1.5em;
   }
 
   @media (min-width: 40em) {
-    nav.sub ul,
-    nav.sub li,
-    nav.sub form,
-    nav.sub form p,
-    nav.sub dl,
-    nav.sub dt,
-    nav.sub dd {
+    #content nav.sub ul,
+    #content nav.sub li,
+    #content nav.sub form,
+    #content nav.sub form p,
+    #content nav.sub dl,
+    #content nav.sub dt,
+    #content nav.sub dd {
       display: inline;
     }
 
-    nav.sub {
+    #content nav.sub {
       position: relative;
     }
 
-    nav.sub a {
+    #content nav.sub a {
       display: inline-block;
       border-width: 0 1px 0 0;
       border-radius: 0;
@@ -1908,18 +1998,18 @@
 
     /* KLUDGE: Attempt to hide the whitespace to the left of the button.
     (It might be better to use floats.) */
-    nav.sub form {
+    #content nav.sub form {
       display: inline-block;
       margin: 0;
       background-color: rgb(135, 233, 184);
       border-right: 1px solid rgb(233, 233, 235);
     }
-    nav.sub form button {
+    #content nav.sub form button {
       border-radius: 0;
       border-color: transparent;
     }
 
-    nav.sub dt {
+    #content nav.sub dt {
       position: absolute;
       top: -1.5em;
       text-align: center;
@@ -1927,12 +2017,12 @@
       color: rgb(101, 102, 102); /* @steel */
       padding: 0;
     }
-    nav.sub dd a {
+    #content nav.sub dd a {
       min-width: 3.5em;
       text-align: center;
     }
-    nav.sub dt,
-    nav.sub dd {
+    #content nav.sub dt,
+    #content nav.sub dd {
       margin: 0;
       display: inline-block;
     }
@@ -3590,12 +3680,17 @@
     clear: both;
   }
 
-  .activity-header h1,
-  .activity-header h2 {
+  .home h1,
+  .topic .activity-header h1,
+  .topic .activity-header h2 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
+  .home  h1 + .activity-list {
+    margin-top: 0;
+  }
+
   .activity-header ul,
   .activity-header li {
     list-style: none;
