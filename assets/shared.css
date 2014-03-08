@@ -1718,6 +1718,7 @@
     }
     #header .primary.scripted h3 {
       background-color: white;
+      background-image: url(shared/header/close.svg);
       border-color: rgb(139, 139, 139);
       cursor: pointer;
       position: relative;
@@ -1726,6 +1727,7 @@
     #header .primary.summary h3 {
       background-color: transparent;
       border-color: transparent;
+      background-image: url(shared/header/nav.svg);
     }
   }
 
