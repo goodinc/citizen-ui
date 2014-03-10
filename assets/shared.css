@@ -1213,11 +1213,13 @@
   }
 
   /* On large screens, fill the available vertical space */
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header > .container {
       padding-top: 2.25em;
       padding-bottom: 2.25em;
     }
+  }
+  @media (min-width: 40em) {
     body > nav.sub > .container,
     #header  > .container,
     #content > .container,
@@ -1246,6 +1248,14 @@
   #header {
     margin-top: 0
   }
+  #header > .container {
+    position: relative;
+  }
+  #header > .container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   #header nav ul,
   #header nav li {
     list-style: none;
@@ -1253,30 +1263,7 @@
     padding-left: 0;
   }
 
-  #header .join a {
-    color: rgb(51, 153, 255);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  #header .join a:hover,
-  #header .join a:active,
-  #header .join a:focus {
-    text-decoration: underline;
-  }
-
-  #header .primary {
-    margin-bottom: 0;
-  }
-  @media (max-width: 59.9em) {
-    #header .search {
-      padding: 0.875em 1.75em 1.75em;
-    }
-  }
-  #header .search,
-  #header .search form {
-    margin-top: 0;
-  }
-
+  /* Logotype */
   #header h2 {
     font-size: inherit;
 
@@ -1297,42 +1284,99 @@
     text-indent: -9999px;
     overflow: hidden;
   }
-
-  @media (max-width: 44.9em) {
-    #header h2 a {
-      width:  4em; /* image-width(64px) / @font-size(16px) */
-      height: 2.1875em; /* image-height(35px) / @font-size(16px) */
-    }
+  #header h2 + p {
+    font-weight: bold;
+    margin-bottom: 0;
+    /*
+    border-top: 0.1em solid rgb(221, 221, 221);
+    */
+    padding-top: 1em;
   }
-
-  @media (min-width: 55em) {
+  @media (min-width: 30em) {
     #header h2,
     #header h2 + p {
       display: inline-block;
     }
     #header h2 {
       vertical-align: top;
+      margin-right: 1.75em;
+    }
+    #header h2 + p {
+      padding-top: 0;
+      border-top-width: 0;
+    }
+  }
+  @media (min-width: 65em) {
+    #header h2 {
       margin-right: 6.25em;
     }
   }
 
-
-  #header h2 + p {
-    font-weight: bold;
-    margin-bottom: 0;
+  @media (max-width: 64.9em) {
+    #header h2 + p {
+      font-size: 0.75em;
+      margin-top: 0.5em; /* @line-height(1.75em) x 3/2 / font-size(0.75em) */
+    }
   }
+
+  @media (max-width: 38.9em) {
+    #header h2 + p {
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  /* OPTIONAL: Make the tag line fit on small screens */
+  @media (max-width: 64.9em) {
+    #header h2 a {
+      width:  4em; /* image-width(64px) / @font-size(16px) */
+      height: 2.1875em; /* image-height(35px) / @font-size(16px) */
+    }
+  }
+
   #footer h2 a {
     color: rgb(37, 139, 245); /* @ocean */
     font-weight: bold;
     font-style: normal;
   }
 
+
+  #header .primary {
+    margin-bottom: 0;
+  }
+  @media (min-width: 65em) {
+    #header .primary {
+      margin-top: 1.75em;
+    }
+  }
+
+  /*
+  @media (max-width: 59.9em) {
+    #header .search {
+      padding: 0.875em 1.75em 1.75em;
+    }
+  }
+
+  #header .search,
+  #header .search form {
+    margin-top: 0;
+  }
+  */
+
+  /* Search */
   #header .search label span {
+    font-size: 0.875em; /* 14px / @font-size(16px) */
     color: rgb(101, 102, 102); /* @steel */
   }
   #header .search input {
+    width: 10em;
     max-width: 100%;
     border-radius: none;
+  }
+  @media (min-width: 30em) {
+    #header .search input {
+      width: 14em;
+    }
   }
 
   #header .search button {
@@ -1342,59 +1386,42 @@
 
 
 
-  #header > .container:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
+  /* Options */
   #header .options {
     color: rgb(101, 102, 102); /* @steel */
   }
   #header .options ul {
     margin-bottom: 0;
   }
-
-  #header .account .options li {
-    font-size: 0.875em; /* 14px / @font-size(16px) */
-  }
-  @media (max-width: 59.9em) {
-    #header .primary .options li {
-      font-size: 0.875em; /* 14px / @font-size(16px) */
-    }
-  }
-
-  #header .account .options li a {
-    display: block;
-    padding: 0.875em 1.75em;
-    border-bottom: 0.1em solid rgb(221, 221, 221);
-  }
-  #header .account .options ul:last-child li:last-child a {
-    border-bottom-width: 0;
-  }
-
-  @media (max-width: 59.9em) {
-    #header .primary .options li a {
-      display: block;
-      padding: 0.875em 1.75em;
-      border-bottom: 0.1em solid rgb(221, 221, 221);
-    }
-    #header .primary .options ul:last-child li:last-child a {
-      border-bottom-width: 0;
-    }
-  }
-
   #header .options li a {
+    display: block;
+    padding: 0.875em 0;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    border-top: 0.1em solid rgb(221, 221, 221);
     color: rgb(101, 102, 102); /* @steel */
     text-decoration: none;
-      font-weight: bold;
+    font-weight: bold;
+  }
+  #header .primary .options li:first-child a {
+    border-top-width: 0;
   }
   #header .options li a:hover,
   #header .options li a:active,
   #header .options li a:focus {
     color: rgb(113, 179, 247); /* @link-color */
   }
+  #header .search {
+    border-top: 0.1em solid rgb(221, 221, 221);
+    margin-top: 0;
+    padding-top: 0.875em;
+  }
+  #header.has-account .search {
+    margin-bottom: 0;
+  }
 
+
+  /*
   @media (max-width: 59.9em) {
     #header .options {
       min-width: 14em;
@@ -1405,19 +1432,13 @@
       min-width: 19em;
     }
   }
-  #header .search input {
-    width: 10em;
-  }
-  @media (min-width: 30em) {
-    #header .search input {
-      width: 14em;
-    }
-  }
   @media (min-width: 30em) and (max-width: 59.9em) {
     #header .primary .options {
       min-width: 24em;
     }
   }
+  */
+
 
   #header .account h3 a {
     display: block;
@@ -1427,65 +1448,36 @@
     border: 1px solid rgb(42, 43, 44);
   }
 
-  /* OPTIONAL: Only show the options when hovering over the navigation */
-  #header > .container {
-    position: relative;
-  }
-  #header .account {
-    clear: both;
-    padding-top: 1.5em;
-  }
-
-  #header .account,
-  #header .primary {
-    clear: none;
-    position: absolute;
-    top: 1.5em;
-    right: 1.5em;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  #header .account {
-    position: absolute;
-    top: 2.7em;
-    right: 2.25em;
-  }
-
-  #header .primary {
-    margin: 0;
-    position: absolute;
-    top: 2.7em; /* @header-top-margin */ /* This number is arbitrary, but happens to align the navigation with the logo */
-    right: 10em;
-
-    border-right: 0.1em solid rgb(239, 239, 239);
-    padding-right: 0.4375em;
-  }
-  #header.has-account .primary {
-    right: 6em;
-  }
-
+  /* Join */
   #header .join {
     margin: 0.4375em 0 0 0;
     position: absolute;
-    top: 2.7em; /* @header-top-margin */
-    right: 2.25em;
+    top: 1.25em;
+    right: 6em;
     color: rgb(178, 178, 178);
     font-style: italic;
   }
+  @media (min-width: 50em) {
+    #header .join {
+      right: 16em;
+    }
+  }
+  @media (min-width: 65em) {
+    #header .join {
+      right: auto;
+      left: 39em;
+    }
+  }
   #header .join a {
     font-style: normal;
+    color: rgb(51, 153, 255);
+    text-decoration: none;
+    font-weight: bold;
   }
-
-  @media (max-width: 44.9em) {
-    #header h2 + p {
-      margin-top: 1.75em;
-      font-size: 0.75em;
-    }
-    #header .join,
-    #header .primary,
-    #header .account {
-      top: 1.25em;
-    }
+  #header .join a:hover,
+  #header .join a:active,
+  #header .join a:focus {
+    text-decoration: underline;
   }
 
   /* OPTIONAL: Add a little space around the word “or” */
@@ -1496,136 +1488,131 @@
     margin-left: 0.125em;
   }
 
-  #header .account .options {
-    position: absolute;
-    left: -9999px;
-    z-index: 9999;
-    background: white;
-    border: 1px solid rgb(139, 139, 139);
-    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-  }
-
   #header .account h3 {
-    margin-bottom: 0;
-  }
-  #header .account .options {
-    width: 13em;
-  }
-  #header .account:hover .options {
-    left: auto;
-    right: 0;
+    margin: 0;
+    position: absolute;
+    top: 1.25em;
+    right: 6em;
+    font-size: inherit;
   }
 
-  @media (min-width: 60em) {
-    #header .primary h3 {
-      position: absolute;
-      left: -9999px;
+  @media (min-width: 65em) {
+    #header .join,
+    #header .account h3 {
+      top: 2.7em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
+    }
+  }
+  @media (min-width: 50em) {
+    #header .account h3 {
+      right: 15.75em;
     }
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 50em) {
     #header .primary ul,
-    #header .primary li,
-    #header .primary section {
+    #header .primary li {
       display: inline;
     }
     #header .primary h4 {
       display: inline-block;
       vertical-align: top;
     }
+    #header .primary ul {
+      margin: 0;
+      position: absolute;
+      top: 1.25em;
+      right: 5em;
+
+      /*
+      border-right: 0.1em solid rgb(239, 239, 239);
+      padding-right: 0.4375em;
+      */
+    }
     #header .primary li a {
       display: inline-block;
       text-decoration: none;
       font-weight: bold;
+      font-size: inherit;
       line-height: 1.5em;
       padding: 0.5625em 0.875em;
       color: rgb(101, 102, 102);
       border-radius: 0.125em;
+      border-width: 0;
+    }
+  }
+  @media (min-width: 65em) {
+    #header .primary ul {
+      top: 2.7em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
     }
   }
 
-  @media (min-width: 60em) {
-    #header .search h4 {
-      font-size: inherit;
-      background: transparent url(shared/header/lense.svg) no-repeat center;
-      background-size: auto 1em;
-      border: 1px solid transparent;
+  /* These headlines are redundant */
+  #header .primary h3,
+  #header .search h4 {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  #header .search form {
+    margin-top: 0;
+  }
+
+  /* OPTIONAL: Present the account navigation as a dropdown */
+  .scripted-nav #header .account {
+    margin-top: 0;
+  }
+  .scripted-nav #header .account.active {
+    margin-top: 0.875em;
+  }
+  .scripted-nav #header .account .options {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .scripted-nav #header .account.active .options {
+    position: static;
+    left: auto;
+  }
+  .scripted-nav #header .account .options li:first-child a {
+    border-top-width: 0;
+  }
+  @media (min-width: 40em) {
+    .scripted-nav #header .primary h4 {
+      top: 2.7em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
+    }
+  }
+  .scripted-nav #header .primary.active .options {
+    position: static;
+    left: auto;
+  }
+
+  /* OPTIONAL: Present the primary navigation as a drop-down (on small screens) */
+  @media (max-width: 49.9em) {
+    .scripted-nav #header .primary {
       margin: 0;
-
-      width  : 2.5em; /* account-image-width(40px) / font-size(16px) */
-      height : 2.5em;
-
-      /* @hidden-accessible-text */
-      text-indent: -9999px;
-      overflow: hidden;
     }
-    #header .search:hover h4,
-    #header .search:active h4,
-    #header .search:focus h4 {
-      background-color: white;
-      border-color: rgb(139, 139, 139);
-    }
-
-    #header .search form {
+    .scripted-nav #header .primary .options {
+      /* @hidden-accessible */
       position: absolute;
       left: -9999px;
-      z-index: 9999;
-      background: white;
-      border: 1px solid rgb(139, 139, 139);
-      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-      padding: 1.75em;
     }
-    #header .search form {
-      width: 20em;
-    }
-    #header .search:hover form {
+    .scripted-nav #header .primary.active .options {
+      margin-top: 0.875em;
+      position: static;
       left: auto;
-      right: 0;
-      margin-top: -1px; /* Compensate for the border */
     }
-    #header .search:hover form {
-      margin-right: 0.4375em;
-    }
-  }
-
-  /* OPTIONAL: Make the search behave like a dropdown */
-  @media (min-width: 60em) {
-    #header .search.scripted form {
-      transition: opacity 0.2s;
+    .scripted-nav #header .primary h3 {
       position: absolute;
       left: auto;
-      right: 0;
-      opacity: 1;
-      margin-top: -1px; /* Compensate for the border */
-    }
-    #header .search.scripted form {
-      margin-right: 0.4375em;
-    }
-    #header .search.summary form {
-      left: -9999px;
-      right: auto;
-      opacity: 0;
-    }
-    #header .search.scripted h4 {
-      background-color: white;
-      border-color: rgb(139, 139, 139);
-      cursor: pointer;
-      position: relative;
-      z-index: 99999;
-    }
-    #header .search.summary h4 {
-      background-color: transparent;
-      border-color: transparent;
-    }
-  }
+      right: 2.25em;
+      top: 1.25em;
 
-  @media (max-width: 59.9em) {
-    #header .primary h3 {
       font-size: inherit;
       background: transparent url(shared/header/nav.svg) no-repeat center;
       background-size: auto 1em;
       border: 1px solid transparent;
       margin: 0;
+      cursor: pointer;
 
       width  : 2.5em; /* account-image-width(40px) / font-size(16px) */
       height : 2.5em;
@@ -1634,121 +1621,61 @@
       text-indent: -9999px;
       overflow: hidden;
     }
-    #header .search h4 {
+  }
 
+  /* OPTIONAL: Present the search form as a drop-down (on mid-size and larger screens) */
+  @media (min-width: 50em) {
+    .scripted-nav #header .primary {
+      margin-top: 0;
+    }
+    .scripted-nav #header .primary.active {
+      margin-top: 1.75em;
+    }
+    .scripted-nav #header .search {
+      border-top-width: 0;
+      padding-top: 0;
+    }
+    .scripted-nav #header .active .search {
+      /*
+      border-top: 0.1em solid rgb(221, 221, 221);
+      */
+      margin-top: 0;
+      padding-top: 0.875em;
+    }
+    .scripted-nav #header .search form {
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
     }
-    #header .primary .options {
-      position: absolute;
-      left: -9999px;
-      z-index: 9999;
-      background: white;
-      border: 1px solid rgb(139, 139, 139);
-      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-    }
-    #header .primary h3:hover,
-    #header .primary h3:active,
-    #header .primary h3:focus {
-      background-color: white;
-      border-color: rgb(139, 139, 139);
-    }
-    #header .primary:hover  .options {
-      left: auto;
-      right: 0;
-      margin-top: -1px; /* Compensate for the border */
-    }
-    #header .primary:hover .options {
-      margin-right: 0.4375em;
-    }
-  }
-
-  @media (max-width: 44.9em) {
-    #header .primary {
+    .scripted-nav #header .active .search form {
       position: static;
+      left: auto;
     }
-    #header .primary h3 {
-      margin: 0;
-      position: absolute;
-      top: 1.25em;
-      right: 10em;
-
-      border-right: 0.1em solid rgb(239, 239, 239);
-      padding-right: 0.4375em;
-    }
-    #header.has-account .primary h3 {
-      right: 6em;
-    }
-    #header .primary:hover .options {
-      left: -1px;
-      right: auto;
-      width: 100%;
-      top: 3.875em;
-    }
-  }
-
-  /* OPTIONAL: Make the account navigation behave like a dropdown */
-  #header .account.scripted .options {
-    transition: opacity 0.2s;
-    position: absolute;
-    left: auto;
-    right: 0;
-    opacity: 1;
-    margin-top: -1px; /* Compensate for the border */
-  }
-  #header .account.summary .options {
-    left: -9999px;
-    right: auto;
-    opacity: 0;
-  }
-
-  /* OPTIONAL: Make the primary navigation behave like a dropdown */
-  @media (max-width: 59.9em) {
-    #header .primary.scripted .options {
-      transition: opacity 0.2s;
+    .scripted-nav #header .primary h4 {
       position: absolute;
       left: auto;
-      right: 0;
-      opacity: 1;
-      margin-top: -1px; /* Compensate for the border */
-    }
-    #header .primary.scripted .options {
-      margin-right: 0.4375em;
-    }
-    #header .primary.summary .options {
-      left: -9999px;
-      right: auto;
-      opacity: 0;
-    }
-    #header .primary.scripted h3 {
-      background-color: white;
-      background-image: url(shared/header/close.svg);
-      border-color: rgb(139, 139, 139);
+      right: 2.25em;
+      top: 1.25em;
+
+      font-size: inherit;
+      background: transparent url(shared/header/lense.svg) no-repeat center;
+      background-size: auto 1em;
+      border: 1px solid transparent;
+      margin: 0;
       cursor: pointer;
-      position: relative;
-      z-index: 99999;
-    }
-    #header .primary.summary h3 {
-      background-color: transparent;
-      border-color: transparent;
-      background-image: url(shared/header/nav.svg);
+
+      width  : 2.5em; /* account-image-width(40px) / font-size(16px) */
+      height : 2.5em;
+      text-align: left;
+
+      /* @hidden-accessible-text */
+      text-indent: -9999px;
+      overflow: hidden;
     }
   }
-
-  @media (max-width: 44.9em) {
-    #header .primary.scripted h3 {
-      position: absolute;
-    }
-    #header .primary.scripted .options {
-      left: -1px;
-      right: auto;
-      width: 100%;
-      top: 3.875em;
-    }
-    #header .primary.summary .options {
-      left: -9999px;
-      width: auto;
+  @media (min-width: 65em) {
+    .scripted-nav #header .primary h4 {
+      top: 2.7em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
     }
   }
 
@@ -2908,6 +2835,7 @@
   }
 
   /* OPTIONAL: Only show the topics for one item at a time */
+  /*
   html:hover .activity-item .tags {
     opacity: 0;
     transition: opacity 0.2s;
@@ -2915,10 +2843,12 @@
   html:hover .activity-item:hover .tags {
     opacity: 1;
   }
+  */
 
   /* OPTIONAL: Light up the social icons for an item, when hovering over it */
 
   /* Off */
+  /*
   html:hover .activity-item .meta .dos,
   html:hover .activity-item .meta .votes,
   html:hover .activity-item .meta .comments {
@@ -2935,8 +2865,10 @@
     color: rgb(222, 222, 222);
     transition: color 0.2s;
   }
+  */
 
   /* Over */
+  /*
   html:hover .activity-item:hover .meta .dos,
   html:hover .activity-item:hover .meta .votes,
   html:hover .activity-item:hover .meta .comments {
@@ -2946,14 +2878,14 @@
     color: rgb(83, 231, 185);
   }
   html:hover .activity-item:hover .meta .votes abbr:before {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247);*/ /* @link-color */ /*
   }
   html:hover .activity-item:hover .meta .comments abbr:before {
     color: rgb(255, 223, 145);
   }
   html:hover .activity-item:hover section.tags h4:before {
     color: rgb(247, 105, 100);
-  }
+  }*/
 
   /* OPTIONAL: Move the primary source up a little */
   .activity-item > .source:first-child {

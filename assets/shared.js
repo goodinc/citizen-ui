@@ -6,16 +6,11 @@
   ----------------------------------------------- */
   function start() {
 
-    // OPTIONAL: Show drop-down content on press (instead of hover)
-    if (document.querySelector) {
-      new DropDown(document.querySelector("#header .primary"));
-      new DropDown(document.querySelector("#header .account"));
-      new DropDown(document.querySelector("#header .search"));
-    }
+    // OPTIONAL: Present the header navigation as dropdowns
+    new NavDropDown();
 
-    // OPTIONAL: Present the do buttons as drop-downs
+    // OPTIONAL: Present the do buttons as dropdowns
     new DoDropDown();
-
 
     // OPTIONAL: Hide redundant labels in browsers that support the placeholder attribute.
     // http://stackoverflow.com/questions/8263891/simple-way-to-check-if-placeholder-is-supported
@@ -48,68 +43,106 @@
     }
 
   }
+  function closest(element, nodeName) {
+
+    // If the element is the target
+    if (nodeName === element.nodeName.toLowerCase()) {
+      return element;
+    } else {
+      if (element.parentNode) return closest(element.parentNode, nodeName);
+    }
+
+  }
 
 
-  /* =DropDown
+  /* =NavDropDown
   ----------------------------------------------- */
-  var DropDown = function() {};
+  var NavDropDown = function() {};
 
   (function() {
 
-    if (!document.addEventListener || !document.querySelector) return;
+    if (!document.addEventListener) return;
 
-    DropDown = function(element) {
+    NavDropDown = function() {
 
-      if (!element) return;
+      var active; // The currently active element
 
-      var headline = element.querySelector("h3");
-      if (!headline) {
-        headline = element.querySelector("h4");
+      function hide(element) {
+
+        // KLUDGE: Wait a brief moment before responding to a new event
+        // (to work around an issue in Firefox where clicking a link triggers a focus event)
+        if (element._data__NavDropDown_lately) return;
+        element._data__NavDropDown_lately = true;
+        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
+
+        element.className = element.className.replace(/active/g, "");
+        if (active === element) active = undefined;
       }
 
-      if (!headline) return;
+      function show(element) {
 
-      var detailsShowing;
+        // KLUDGE: Wait a brief moment before responding to a new event
+        // (to work around an issue in Firefox where clicking a link triggers a focus event)
+        if (element._data__NavDropDown_lately) return;
+        element._data__NavDropDown_lately = true;
+        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
 
-      function hideDetails() {
-        if (element.className.indexOf("summary") < 0) {
-          element.className += " summary";
+        if (element.className.indexOf("active") < 0) {
+          element.className += " active";
         }
-        detailsShowing = false;
+        active = element;
       }
 
-      function showDetails() {
-        element.className = element.className.replace(/summary/g, "");
-        detailsShowing = true;
-      }
+      function toggle(e) {
+        console.log("toggle");
+        var target = e.target;
+        var name = target.nodeName.toLowerCase();
 
-      function toggle() {
-        if (detailsShowing) hideDetails();
-        else showDetails();
-      }
-
-      hideDetails();
-
-      headline.addEventListener("click", function(e) {
-        toggle();
-        e.preventDefault();
-      }, false);
-
-      element.className += " scripted";
-
-      document.addEventListener("click", function(e) {
-        if (!within(e.target, element)) {
-          hideDetails();
+        // If a dropdown is currently open and it’s not the target, close it
+        /*
+        if (active) {
+          if (!within(e.target, active)) {
+            hide(active);
+          }
         }
-      }, false);
+        */
 
-      document.addEventListener("focus", function(e) {
-        if (within(e.target, element)) {
-          showDetails();
-        } else {
-          hideDetails();
+        // If the target is link or an image
+        if (name == "a"   ||
+            name == "img" ||
+            name == "h3"  ||
+            name == "h4"  ) {
+
+          var nav = closest(target, "nav");
+
+          // If the target is within the “primary” or “account” nav elements
+          if (nav && (nav.className.indexOf("primary") >= 0 ||
+                      nav.className.indexOf("account") >= 0 )) {
+
+            var headline = closest(target, "h3") || closest(target, "h4");
+
+            if (headline) {
+              e.preventDefault();
+            }
+
+            // Toggle the dropdown
+            if (headline && nav.className.indexOf("active") >= 0) {
+              hide(nav);
+            } else {
+              show(nav);
+            }
+          }
         }
-      }, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+      }
+
+      var responded = false;
+      document.addEventListener("click", toggle, false);
+      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+
+
+      // Style the dropdowns
+      var html = document.getElementsByTagName("html")[0];
+      html.className += " scripted-nav";
 
     };
       
@@ -123,17 +156,6 @@
   (function() {
 
     if (!document.addEventListener) return;
-
-    function closest(element, nodeName) {
-
-      // If the element is the target
-      if (nodeName === element.nodeName.toLowerCase()) {
-        return element;
-      } else {
-        if (element.parentNode) return closest(element.parentNode, nodeName);
-      }
-
-    }
 
     DoDropDown = function() {
 
