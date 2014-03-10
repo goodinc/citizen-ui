@@ -1677,6 +1677,9 @@
       border-right: 0.1em solid rgb(239, 239, 239);
       padding-right: 0.4375em;
     }
+    #header.has-account .primary h3 {
+      right: 6em;
+    }
     #header .primary:hover .options {
       left: -1px;
       right: auto;
