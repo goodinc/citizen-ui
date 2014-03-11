@@ -99,13 +99,11 @@
         var name = target.nodeName.toLowerCase();
 
         // If a dropdown is currently open and it’s not the target, close it
-        /*
         if (active) {
           if (!within(e.target, active)) {
             hide(active);
           }
         }
-        */
 
         // If the target is link or an image
         if (name == "a"   ||

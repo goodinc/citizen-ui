@@ -1373,9 +1373,14 @@
     max-width: 100%;
     border-radius: none;
   }
-  @media (min-width: 30em) {
+  @media (min-width: 25em) {
     #header .search input {
       width: 14em;
+    }
+  }
+  @media (min-width: 30em) {
+    #header .search input {
+      width: 20em;
     }
   }
 
@@ -1419,7 +1424,6 @@
   #header.has-account .search {
     margin-bottom: 0;
   }
-
 
   /*
   @media (max-width: 59.9em) {
@@ -1678,6 +1682,44 @@
       top: 2.7em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
     }
   }
+  @media (min-width: 50em) {
+    .scripted-nav #header .primary.active,
+    .scripted-nav #header .account.active {
+      margin-top: 0;
+    }
+    .scripted-nav #header .active .search {
+      padding-top: 0;
+    }
+    .scripted-nav #header .active .search h4 {
+      background-color: white;
+      background-image: url(shared/header/close.svg);
+      border: 1px solid rgb(139, 139, 139);
+    }
+    .scripted-nav #header .account.active .options,
+    .scripted-nav #header .active .search form {
+      position: absolute;
+      top: 3.75em;
+      right: 2.25em;
+
+      /* @dropdown */
+      background: white;
+      border: 1px solid rgb(139, 139, 139);
+      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+      padding: 0.5em 0.875em 0.875em;
+
+      z-index: 9999; /* @ininity */
+    }
+    .scripted-nav #header .account.active .options {
+      right: 15.75em;
+    }
+  }
+  @media (min-width: 65em) {
+    .scripted-nav #header .account.active .options,
+    .scripted-nav #header .active .search form {
+      top: 5.25em;
+    }
+  }
+
 
 
   /* =Footer
@@ -2836,11 +2878,11 @@
 
   /* OPTIONAL: Only show the topics for one item at a time */
   /*
-  html:hover .activity-item .tags {
+  main:hover .activity-item .tags {
     opacity: 0;
     transition: opacity 0.2s;
   }
-  html:hover .activity-item:hover .tags {
+  main:hover .activity-item:hover .tags {
     opacity: 1;
   }
   */
@@ -2848,44 +2890,41 @@
   /* OPTIONAL: Light up the social icons for an item, when hovering over it */
 
   /* Off */
-  /*
-  html:hover .activity-item .meta .dos,
-  html:hover .activity-item .meta .votes,
-  html:hover .activity-item .meta .comments {
+  main:hover .activity-item .meta .dos,
+  main:hover .activity-item .meta .votes,
+  main:hover .activity-item .meta .comments {
     color: rgb(190, 190, 190);
     transition: color 0.2s;
   }
-  html:hover .activity-item .meta .dos      abbr:before,
-  html:hover .activity-item .meta .votes    abbr:before,
-  html:hover .activity-item .meta .comments abbr:before {
+  main:hover .activity-item .meta .dos      abbr:before,
+  main:hover .activity-item .meta .votes    abbr:before,
+  main:hover .activity-item .meta .comments abbr:before {
     color: rgb(236, 236, 236);
     transition: color 0.2s;
   }
-  html:hover .activity-item section.tags h4:before {
+  main:hover .activity-item section.tags h4:before {
     color: rgb(222, 222, 222);
     transition: color 0.2s;
   }
-  */
 
   /* Over */
-  /*
-  html:hover .activity-item:hover .meta .dos,
-  html:hover .activity-item:hover .meta .votes,
-  html:hover .activity-item:hover .meta .comments {
+  main:hover .activity-item:hover .meta .dos,
+  main:hover .activity-item:hover .meta .votes,
+  main:hover .activity-item:hover .meta .comments {
     color: rgb(153, 153, 153);
   }
-  html:hover .activity-item:hover .meta .dos abbr:before {
+  main:hover .activity-item:hover .meta .dos abbr:before {
     color: rgb(83, 231, 185);
   }
-  html:hover .activity-item:hover .meta .votes abbr:before {
-    color: rgb(113, 179, 247);*/ /* @link-color */ /*
+  main:hover .activity-item:hover .meta .votes abbr:before {
+    color: rgb(113, 179, 247); /* @link-color */
   }
-  html:hover .activity-item:hover .meta .comments abbr:before {
+  main:hover .activity-item:hover .meta .comments abbr:before {
     color: rgb(255, 223, 145);
   }
-  html:hover .activity-item:hover section.tags h4:before {
+  main:hover .activity-item:hover section.tags h4:before {
     color: rgb(247, 105, 100);
-  }*/
+  }
 
   /* OPTIONAL: Move the primary source up a little */
   .activity-item > .source:first-child {
@@ -4659,7 +4698,7 @@
   }
 
   /* Only show the admin options for one item at a time */
-  html:hover .activity-item ~ .feed-edit-controls {
+  main:hover .activity-item ~ .feed-edit-controls {
     opacity: 0;
   }
   html:hover li:hover .activity-item ~ .feed-edit-controls {
