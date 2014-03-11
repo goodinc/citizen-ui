@@ -1920,9 +1920,6 @@
   body > nav.sub ul {
     margin-left  : -0.875em; /* @line-height / 2 */
   }
-  body > nav.sub p {
-    margin-right  : -0.875em; /* @line-height / 2 */
-  }
   body > nav.sub li {
     display: inline;
   }
@@ -1947,6 +1944,9 @@
   @media (min-width: 30em) {
     body > nav.sub a {
       margin-right: 1.1666666667em;
+    }
+    body > nav.sub p {
+      margin-right  : -0.875em; /* @line-height / 2 */
     }
   }
   body > nav.sub .active a {
