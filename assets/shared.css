@@ -848,7 +848,7 @@
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
     position: absolute;
-    z-index: 9999;
+    z-index: 1;
     background: white;
     text-align: center;
     border: 0.125em solid rgb(139, 139, 139);
@@ -1771,7 +1771,7 @@
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
       padding: 0.25em 1.125em;
 
-      z-index: 9999; /* @ininity */
+      z-index: 1;
     }
     .scripted-nav #header .active .search form {
       padding-top: 0.75em;
@@ -4800,5 +4800,22 @@
   }
   html:hover li:hover .activity-item ~ .feed-edit-controls {
     opacity: 1;
+  }
+
+
+/* =Registration Modal
+  -----------------------------------------------
+  KLUDGE: We should move these into the registration style sheet.
+  ----------------------------------------------- */
+
+  /* Remove the margin below the header */
+  #registration-modal-box .dialog header.start_now {
+    margin-bottom: 0;
+  }
+
+  /* Use the correct font for the main headline */
+  #registration-modal-box .dialog header.start_now h1,
+  #registration-modal-box .dialog header .welcome_back {
+    font-family: inherit;
   }
 

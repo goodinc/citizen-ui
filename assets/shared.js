@@ -94,9 +94,15 @@
       }
 
       function toggle(e) {
-        console.log("toggle");
         var target = e.target;
         var name = target.nodeName.toLowerCase();
+
+        // If a dropdown is currently open and it’s not the target, close it
+        if (active) {
+          if (!within(e.target, active)) {
+            hide(active);
+          }
+        }
 
         // If the target is link or an image
         if (name == "a"   ||
@@ -116,13 +122,6 @@
               e.preventDefault();
             }
 
-            // If a dropdown is currently open and it’s not the target, close it
-            if (active) {
-              if (!within(e.target, active)) {
-                hide(active);
-              }
-            }
-
             // Toggle the dropdown
             if (headline && nav.className.indexOf("active") >= 0) {
               hide(nav);
@@ -133,7 +132,6 @@
         }
       }
 
-      var responded = false;
       document.addEventListener("click", toggle, false);
       document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
