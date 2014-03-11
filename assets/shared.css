@@ -1943,7 +1943,11 @@
     padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
     padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
     margin-left: 1.1666666667em;
-    margin-right: 1.1666666667em;
+  }
+  @media (min-width: 30em) {
+    body > nav.sub a {
+      margin-right: 1.1666666667em;
+    }
   }
   body > nav.sub .active a {
     color: rgb(0, 1, 2); /* @black */
@@ -1961,6 +1965,13 @@
     margin-top: 0;
     margin-bottom: 0;
     float: right;
+  }
+  @media (max-width: 29.9em) {
+    body > nav.sub .rss abbr {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
   }
   body > nav.sub .rss a:after {
     content: "";
