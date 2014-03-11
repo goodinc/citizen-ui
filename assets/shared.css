@@ -1574,13 +1574,34 @@
     left: -9999px;
   }
   .scripted-nav #header .account.active .options {
+    margin-top: 1.75em;
     position: static;
     left: auto;
+    background: white;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: rgb(139, 139, 139);
+    padding: 0.25em 0 0.25em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    margin-bottom: -1.5em;
+  }
+  .scripted-nav #header .account.active .options a {
+    padding-left: 1.7142857143em; /* 1.5em / 0.875em */
+    padding-right: 1.7142857143em;
   }
   .scripted-nav #header .account .options li:first-child a {
     border-top-width: 0;
   }
   @media (min-width: 40em) {
+    .scripted-nav #header .account.active .options {
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
+    .scripted-nav #header .account.active .options a {
+      padding-left: 2.5714285714em; /* 2.25em / 0.875em */
+      padding-right: 2.5714285714em;
+    }
     .scripted-nav #header .primary h4 {
       top: 2.7em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
     }
@@ -1601,10 +1622,27 @@
       left: -9999px;
     }
     .scripted-nav #header .primary.active .options {
-      margin-top: 0.875em;
+      margin-top: 1.75em;
       position: static;
       left: auto;
+      background: white;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: rgb(139, 139, 139);
+      padding: 0.25em 0 1.5em;
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+      margin-bottom: -1.5em;
     }
+    .scripted-nav #header .primary.active .search {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
+    .scripted-nav #header .primary.active .options a {
+      padding-left: 2.5714285714em; /* 2.25em / 0.875em */
+      padding-right: 2.5714285714em;
+    }
+
     .scripted-nav #header .primary h3 {
       position: absolute;
       left: auto;
@@ -1624,6 +1662,31 @@
       /* @hidden-accessible-text */
       text-indent: -9999px;
       overflow: hidden;
+    }
+    /*
+    .scripted-nav #header .primary.active h3 {
+      background-color: white;
+      background-image: url(shared/header/close.svg);
+      border: 1px solid rgb(139, 139, 139);
+    }
+    */
+  }
+  @media (max-width: 39.9em) {
+
+    .scripted-nav #header .primary.active .options {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+    .scripted-nav #header .primary.active .search {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+    .scripted-nav #header .primary.active .options a {
+      padding-left: 1.7142857143em; /* 1.5em / 0.875em */
+      padding-right: 1.7142857143em;
+    }
+    .scripted-nav #header .primary h3 {
+      right: 1.5em;
     }
   }
 
@@ -1684,8 +1747,9 @@
   }
   @media (min-width: 50em) {
     .scripted-nav #header .primary.active,
-    .scripted-nav #header .account.active {
-      margin-top: 0;
+    .scripted-nav #header .account.active,
+    .scripted-nav #header .account.active .options {
+      margin: 0;
     }
     .scripted-nav #header .active .search {
       padding-top: 0;
@@ -1705,12 +1769,24 @@
       background: white;
       border: 1px solid rgb(139, 139, 139);
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-      padding: 0.5em 0.875em 0.875em;
+      padding: 0.25em 1.125em;
 
       z-index: 9999; /* @ininity */
     }
+    .scripted-nav #header .active .search form {
+      padding-top: 0.75em;
+      padding-bottom: 1.125em;
+    }
     .scripted-nav #header .account.active .options {
       right: 15.75em;
+    }
+    .scripted-nav #header .account.active .options ul {
+      margin-left: -1.125em;
+      margin-right: -1.125em;
+    }
+    .scripted-nav #header .account.active .options a {
+      padding-left: 1.25em;
+      padding-right: 1.25em;
     }
   }
   @media (min-width: 65em) {
