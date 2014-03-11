@@ -1787,6 +1787,7 @@
     .scripted-nav #header .account.active .options a {
       padding-left: 1.25em;
       padding-right: 1.25em;
+      min-width: 15em;
     }
   }
   @media (min-width: 65em) {
@@ -2304,12 +2305,6 @@
     margin: 0 auto;
   }
 
-  @media (max-width: 59.9em) {
-    .join-intro {
-      margin-left: -2.25em; /* body-padding */
-      margin-right: -2.25em;
-    }
-  }
   .join-intro h1 {
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-size: 3.75em; /* 60px / 16px */
@@ -2346,6 +2341,20 @@
   .supports-placeholder .join-intro label span {
     position: absolute;
     left: -9999px;
+  }
+  @media (max-width: 59.9em) {
+    .join-intro {
+      margin-left: -2.25em; /* body-padding */
+      margin-right: -2.25em;
+    }
+    .join-intro h1 {
+      font-size: 2.25em;
+    }
+    .join-intro form {
+      margin-left: -3em;
+      margin-right: -3em;
+      margin-bottom: -1.5em;
+    }
   }
   @media (min-width: 40em) {
     .join-intro p.text {
@@ -2432,12 +2441,13 @@
 
   /* Icons */
   .meta .dos      abbr,
-  .meta .votes abbr,
+  .meta .votes    abbr,
   .meta .comments abbr {
     font-size: 0.75em; /* 12px / @font-size */
+    border-bottom-width: 0;
   }
   .meta .dos      abbr:before,
-  .meta .votes abbr:before,
+  .meta .votes    abbr:before,
   .meta .comments abbr:before {
 
     /* @good-icons */
@@ -2479,6 +2489,9 @@
   .activity-item .time {
     color: rgb(204, 204, 204); /* @magnesium */
     font-size: 0.75em; /* 12px / @font-size */
+  }
+  .activity-item .time abbr {
+    border-bottom-width: 0;
   }
 
 
