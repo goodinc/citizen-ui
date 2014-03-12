@@ -54,6 +54,15 @@
 
   }
 
+  // http://stackoverflow.com/questions/3437786/how-to-get-web-page-size-browser-window-size-screen-size-in-a-cross-browser-wa
+  function windowWidth() {
+    var w = window;
+    var d = document;
+    var e = d.documentElement;
+    var g = d.getElementsByTagName('body')[0];
+    return w.innerWidth || e.clientWidth || g.clientWidth;
+  }
+
 
   /* =NavDropDown
   ----------------------------------------------- */
@@ -110,10 +119,13 @@
         var target = e.target;
         var name = target.nodeName.toLowerCase();
 
-        // If a dropdown is currently open and it’s not the target, close it
-        if (active) {
-          if (!within(target, active)) {
-            hide(active);
+        // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
+        if (windowWidth() >= 900) { // This number is arbitrary, but happens to be a little larger than
+                                    // the media query used to switch between inline and positioned dropdowns
+          if (active) {
+            if (!within(target, active)) {
+              hide(active);
+            }
           }
         }
 
@@ -130,6 +142,13 @@
           // If the target is within the “primary” or “account” nav elements
           if (nav && (nav.className.indexOf("primary") >= 0 ||
                       nav.className.indexOf("account") >= 0 )) {
+
+            // If a dropdown is currently open and it’s not the target, close it
+            if (active) {
+              if (!within(target, active)) {
+                hide(active);
+              }
+            }
 
             var headline = closest(target, "h3") || closest(target, "h4");
 
