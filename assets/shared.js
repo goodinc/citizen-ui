@@ -77,9 +77,15 @@
 
         element.className = element.className.replace(/active/g, "");
         if (active === element) active = undefined;
+
+        // KLUDGE: For the search form
+        var section = element.querySelector("section");
+        if (section && section.className.indexOf("search") >= 0) {
+          section.className = section.className.replace(/active/g, "");
+        }
       }
 
-      function show(element) {
+      function show(element, target) {
 
         // KLUDGE: Wait a brief moment before responding to a new event
         // (to work around an issue in Firefox where clicking a link triggers a focus event)
@@ -91,24 +97,33 @@
           element.className += " active";
         }
         active = element;
+
+        // KLUDGE: For the search form
+        var section = closest(target, "section");
+        if (section && section.className.indexOf("search") >= 0 && section.className.indexOf("active") < 0) {
+          section.className += " active";
+        }
       }
 
       function toggle(e) {
+
         var target = e.target;
         var name = target.nodeName.toLowerCase();
 
         // If a dropdown is currently open and it’s not the target, close it
         if (active) {
-          if (!within(e.target, active)) {
+          if (!within(target, active)) {
             hide(active);
           }
         }
 
         // If the target is link or an image
-        if (name == "a"   ||
-            name == "img" ||
-            name == "h3"  ||
-            name == "h4"  ) {
+        if (name == "a"      ||
+            name == "img"    ||
+            name == "h3"     ||
+            name == "h4"     ||
+            name == "input"  ||
+            name == "button"  ) {
 
           var nav = closest(target, "nav");
 
@@ -126,7 +141,7 @@
             if (headline && nav.className.indexOf("active") >= 0) {
               hide(nav);
             } else {
-              show(nav);
+              show(nav, target);
             }
           }
         }

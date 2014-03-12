@@ -1754,15 +1754,20 @@
     .scripted-nav #header .active .search {
       padding-top: 0;
     }
-    .scripted-nav #header .active .search h4 {
+    .scripted-nav #header .active .search.active h4 {
       background-color: white;
       background-image: url(shared/header/close.svg);
       border: 1px solid rgb(139, 139, 139);
     }
-    .scripted-nav #header .account.active .options,
     .scripted-nav #header .active .search form {
       position: absolute;
+      left: -9999px;
+    }
+    .scripted-nav #header .account.active .options,
+    .scripted-nav #header .active .search.active form {
+      position: absolute;
       top: 3.75em;
+      left: auto;
       right: 2.25em;
 
       /* @dropdown */
@@ -1773,7 +1778,7 @@
 
       z-index: 1;
     }
-    .scripted-nav #header .active .search form {
+    .scripted-nav #header .active .search.active form {
       padding-top: 0.75em;
       padding-bottom: 1.125em;
     }
@@ -1792,7 +1797,7 @@
   }
   @media (min-width: 65em) {
     .scripted-nav #header .account.active .options,
-    .scripted-nav #header .active .search form {
+    .scripted-nav #header .active .search.active form {
       top: 5.25em;
     }
   }
