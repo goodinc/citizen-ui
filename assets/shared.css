@@ -547,9 +547,9 @@
   /* =Messages
   ----------------------------------------------- */
   section.message {
-    padding: 1.5em;
+    padding: 2.625em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231);
-    border: 3px solid rgb(243, 239, 209);
+    border: 0.1875em solid rgb(243, 239, 209);
   }
   section.message h1 {
     font-size: inherit;
