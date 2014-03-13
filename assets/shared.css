@@ -548,7 +548,6 @@
   ----------------------------------------------- */
   section.message {
     padding: 1.5em;
-    font-size: 1.1em;
     background: rgb(255, 252, 231);
     border: 3px solid rgb(243, 239, 209);
   }
@@ -556,11 +555,14 @@
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
-    margin-right: 0.25em;
   }
   section.message h1,
   section.message p {
     display: inline;
+  }
+  section.message h1:after {
+    content: " — ";
+    font-weight: normal;
   }
   section.message.error {
     background: rgb(253, 235, 230);
@@ -593,6 +595,9 @@
 
     /* Add to the line-height to make multi-line headlines easier to read. */
     line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+  }
+  section.message.empty h1:after {
+    content: "";
   }
   section.message.empty h1 + p {
     margin-top: 0.875em; /* @line-height / 2 */
@@ -1281,7 +1286,8 @@
   #header h2 a {
     vertical-align: middle;
     display: inline-block;
-    background: url(shared/header/good.svg) no-repeat;
+    background: url(shared/header/good.png) no-repeat;
+    background-image: url(shared/header/good.svg), none;
     background-size: contain;
 
     width:  6.250em; /* image-width(100px) / @font-size(16px) */
@@ -1866,7 +1872,8 @@
     height: 2em;
   }
   #footer p.rss       a {
-    background-image: url(shared/social/rss.svg);
+    background-image: url(shared/social/rss.png);
+    background-image: url(shared/social/rss.svg), none;
     opacity: 0.25;
     vertical-align: 0;
     background-size: auto 0.75em;
@@ -1874,16 +1881,20 @@
     height: 1em;
   }
   #footer li.facebook  a {
-    background-image: url(shared/social/facebook.svg);
+    background-image: url(shared/social/facebook.png);
+    background-image: url(shared/social/facebook.svg), none;
   }
   #footer li.twitter   a {
-    background-image: url(shared/social/twitter.svg);
+    background-image: url(shared/social/twitter.png);
+    background-image: url(shared/social/twitter.svg), none;
   }
   #footer li.instagram a  {
-    background-image: url(shared/social/instagram.svg);
+    background-image: url(shared/social/instagram.png);
+    background-image: url(shared/social/instagram.svg), none;
   }
   #footer li.tumblr    a {
-    background-image: url(shared/social/tumblr.svg);
+    background-image: url(shared/social/tumblr.png);
+    background-image: url(shared/social/tumblr.svg), none;
   }
   #footer li a {
     text-decoration: none;
@@ -2301,8 +2312,6 @@
     background-color: rgb(105, 206, 155);
     padding: 1.5em 3em;
     color: white;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
   }
 
   @media (min-width: 66.5625em) { /* @max-page-width */
@@ -2312,9 +2321,15 @@
     }
   }
 
+  body > .message,
   body > .join-intro {
     max-width: 66.5625em; /* @max-page-width */
     margin: 0 auto;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+  }
+  body > .message {
+    margin-bottom: 0.875em; /* @line-height / 2 */
   }
 
   .join-intro h1 {
@@ -3159,6 +3174,7 @@
   .activity-list .ad {
     margin-bottom: 1.75em; /* @line-height */
   }
+  aside .fb-recommendations,
   aside div.ad {
     margin-bottom : 0.875em; /* @line-height / 2 */
   }
