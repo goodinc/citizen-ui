@@ -1957,6 +1957,7 @@
     padding-right: 0;
     border-right-width: 0;
   }
+  body > nav.sub .rss a,
   body > nav.sub li a {
     color: rgb(102, 103, 104);
     font-family: "Brandon Grot W01 Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
@@ -1971,6 +1972,7 @@
     margin-left: 0.55em;
   }
   @media (min-width: 30em) {
+    body > nav.sub .rss a,
     body > nav.sub li a {
       margin-left: 1.1666666667em;
       margin-right: 1.1666666667em;
