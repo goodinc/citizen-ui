@@ -608,6 +608,11 @@
     color: inherit;
   }
 
+  /* OPTIONAL: Add some space above the message if it appears within the sub navigation */
+  body > nav .message {
+    margin-top: 0.875em; /* @line-height / 2 */
+  }
+
   .activity-list li > .message.success:last-child {
     margin-bottom: 0.875em; /* @line-height / 2 */
   }
@@ -2321,15 +2326,11 @@
     }
   }
 
-  body > .message,
   body > .join-intro {
     max-width: 66.5625em; /* @max-page-width */
     margin: 0 auto;
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
-  }
-  body > .message {
-    margin-bottom: 0.875em; /* @line-height / 2 */
   }
 
   .join-intro h1 {
