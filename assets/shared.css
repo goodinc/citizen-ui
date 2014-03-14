@@ -1344,7 +1344,7 @@
     }
   }
 
-  /* OPTIONAL: Make the tag line fit on small screens */
+  /* OPTIONAL: Make the logotype fit on small screens */
   @media (max-width: 64.9em) {
     #header h2 a {
       width:  4em; /* image-width(64px) / @font-size(16px) */
@@ -1835,6 +1835,16 @@
     margin-right: 0;
     margin-bottom: 0;
   }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    /* @primary-column */
+    #footer section:first-child {
+      width: 69%;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
   #footer section h2,
   #footer section h2 + p {
     display: inline;
@@ -1888,18 +1898,22 @@
   #footer li.facebook  a {
     background-image: url(shared/social/facebook.png);
     background-image: url(shared/social/facebook.svg), none;
+    width: 1em; /* 12px / 12px */
   }
   #footer li.twitter   a {
     background-image: url(shared/social/twitter.png);
     background-image: url(shared/social/twitter.svg), none;
+    width: 2em; /* 24px / 12px */
   }
   #footer li.instagram a  {
     background-image: url(shared/social/instagram.png);
     background-image: url(shared/social/instagram.svg), none;
+    width: 2em; /* 24px / 12px */
   }
   #footer li.tumblr    a {
     background-image: url(shared/social/tumblr.png);
     background-image: url(shared/social/tumblr.svg), none;
+    width: 1.1666666666em; /* 14px / 16px */
   }
   #footer li a {
     text-decoration: none;
@@ -4495,12 +4509,34 @@
   .feedback a {
     color: inherit;
     font-size: 0.875em;
+    text-decoration: none;
   }
   .feedback a:hover,
   .feedback a:active,
   .feedback a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    text-decoration: underline;
   }
+
+  .feedback .message  a:before,
+  .feedback .question a:before {
+    content: "";
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.4375em;
+  }
+  .feedback .message a:before {
+    background-image: url(shared/icons/envelope.svg);
+  }
+
+  .feedback .question a:before {
+    background-image: url(shared/icons/question.svg);
+  }
+
 
   p.ad {
     max-width: none;
