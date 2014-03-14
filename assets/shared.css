@@ -2759,7 +2759,7 @@
   .activity-item .link:hover,
   .activity-item .follow:hover {
     background: white;
-    border-color: rgb(153, 153, 153); /* $aluminum */
+    border-color: rgb(153, 153, 153); /* @aluminum */
   }
 
 
@@ -3018,7 +3018,7 @@
 
     content: "\e000"; /* @icon-triangle */
     color: rgb(34, 155, 246);
-    font-size: 0.9375em; /* 15px / $font_size */
+    font-size: 0.9375em; /* 15px / @font-size */
 
     position: absolute;
     top: 0;
@@ -3182,7 +3182,7 @@
   .featured .activity-item .link h3 .image {
     float: left;
     margin: 0;
-    margin-right: 0.83333333333333em; /* $line_height / @font-size(16px) */
+    margin-right: 0.83333333333333em; /* @line-height / @font-size(16px) */
   }
 
 
@@ -3191,9 +3191,14 @@
   .activity-list .ad {
     margin-bottom: 1.75em; /* @line-height */
   }
-  aside .fb-recommendations,
-  aside div.ad {
-    margin-bottom : 0.875em; /* @line-height / 2 */
+  aside p.ad img {
+    display: block;
+  }
+  aside p.ad,
+  aside div.ad,
+  aside .feedback,
+  aside .fb-recommendations {
+    margin-bottom : 1.3125em; /* @line-height x 3/4 */
   }
 
 
@@ -3286,7 +3291,7 @@
   .featured .activity-item.do h3 img {
     border: 5px solid rgb(203, 238, 218);
     border-radius: 200px;
-    margin: 0 auto 1.25em; /* $line_height */
+    margin: 0 auto 1.25em; /* @line-height */
     display: block;
   }
   .featured .activity-item.do form {
@@ -3297,7 +3302,7 @@
 /* =Activity List
   ----------------------------------------------- */
   ul.activity-list {
-    margin-top: 1.25em; /* $line_height */
+    margin-top: 1.25em; /* @line-height */
   }
   ul.activity-list,
   ul.activity-list > li {
@@ -3321,7 +3326,7 @@
 /* =Follow List
   ----------------------------------------------- */
   .follow-list {
-    margin-top: 1.25em; /* $line_height */
+    margin-top: 1.25em; /* @line-height */
   }
   .follow-list,
   .follow-list > li {
@@ -3494,7 +3499,7 @@
 /* =Comment List
   ----------------------------------------------- */
   .comment-list {
-    margin-top: 1.25em; /* $line_height */
+    margin-top: 1.25em; /* @line-height */
   }
   .comment-list,
   .comment-list > li {
@@ -4222,7 +4227,7 @@
     margin-top: 1.2em;
   }
   .post > footer .tags:after {
-    /* $clearfix */
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -4483,6 +4488,12 @@
     background: rgb(249, 249, 250);
     border: 3px solid rgb(224, 224, 225);
   }
+  .promotion h2 {
+    margin-bottom: 0;
+  }
+  .promotion ul {
+    margin-top: 0;
+  }
   .promotion ul,
   .promotion li {
     list-style: none;
@@ -4501,10 +4512,10 @@
     color: white;
   }
   .feedback h2 {
-    font-size: 1.25em;
+    font-size: 1.5em;
     line-height: inherit;
-    font-family: "TradeGothicW01-BoldCn20 675334", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade (Trade Gothic Bold Condensed) */
-    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bold;
   }
   .feedback a {
     color: inherit;
