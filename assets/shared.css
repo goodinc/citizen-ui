@@ -302,7 +302,8 @@
     border-top: 1px solid rgb(221, 223, 227);
     position: relative;
     padding: 1.25em 1.25em 0;
-    text-align: right;
+    text-align: center;
+    margin-bottom: 1.75em; /* @line-height */
   }
   .pagination:after {
     /* @clearfix */
@@ -312,14 +313,17 @@
   }
   .pagination ul,
   .pagination li {
-    display: inline;
     list-style: none;
     margin: 0;
     padding-left: 0;
   }
-  .pagination ul + ul {
-    display: block;
-    text-align: center;
+  .pagination ul {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pagination li {
+    display: inline-block;
   }
   .pagination li a {
     color: rgb(153, 153, 153);
@@ -329,9 +333,6 @@
   .pagination li a:active,
   .pagination li a:focus {
     color: rgb(49, 144, 242);
-  }
-  .pagination li {
-    display: inline;
   }
   .pagination a {
     display: inline-block;
@@ -370,6 +371,38 @@
     color: rgb(42, 43, 44);
   }
   .pagination .previous {
+    margin-right : 0.875em;
+  }
+  .pagination .next {
+    float: right;
+    margin-left  : 0.875em;
+  }
+  @media (max-width: 39.9em) {
+    .pagination {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .pagination li {
+      font-size: 0.75em; /* 14px / @font-size */
+    }
+    .pagination .previous {
+      margin-right : 0.4375em;
+    }
+    .pagination .next {
+      margin-left  : 0.4375em;
+    }
+    .pagination a {
+      padding: 0.4375em;
+    }
+  }
+  .pagination .next:last-child {
+    margin-left: 0;
+  }
+  .pagination .previous:first-child:last-child {
+    margin-right: 0;
+  }
+  /*
+  .pagination .previous {
     float: left;
     margin-right: 1.75em;
   }
@@ -377,6 +410,7 @@
     float: right;
     margin-left: 1.75em;
   }
+  */
 
 
   /* =Text Sections
@@ -3933,9 +3967,11 @@
   }
   .post > article .facebook  a:after {
     background-image: url(shared/social/facebook-218-198-71.svg);
+    width: 1em; /* 12px / 12px */
   }
   .post > article .twitter   a:after {
     background-image: url(shared/social/twitter-218-198-71.svg);
+    width: 2em; /* 24px / 12px */
   }
 
   .post > article .share a {
