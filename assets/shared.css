@@ -1878,7 +1878,7 @@
   @media (min-width: 66.5625em) { /* @max-page-width */
     /* @primary-column */
     #footer section:first-child {
-      width: 69%;
+      width: 69.25%;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
@@ -2195,7 +2195,7 @@
     #content .has-aside {
       margin-top: 0;
       float: left;
-      width: 70%;
+      width: 69.25%;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
@@ -3281,7 +3281,7 @@
     .topic > .featured > section {
       margin-top: 0;
       float: left;
-      width: 70%;
+      width: 69.25%;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
