@@ -2092,9 +2092,11 @@
     margin-bottom: 2.25em;
   }
   #content nav.sub {
-    margin-top: 2.25em;
-    background: rgb(218, 220, 224);
+    margin-top: 1.75em;
     max-width: none;
+    color: rgb(102, 102, 102); /* @steel */
+    padding-bottom: 1.75em; /* @line-height */
+    border-bottom: 0.1em solid rgb(215, 216, 217);
   }
 
   #content nav.sub ul,
@@ -2104,81 +2106,71 @@
     padding-left: 0;
   }
   #content nav.sub a {
-    background: rgb(218, 220, 224);
-    color: white;
     font-weight: bold;
     text-decoration: none;
     display: block;
-    padding: 0.75em 1.5em;
-
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: rgb(233, 233, 235);
+    padding: 0.75em 0;
   }
   #content nav.sub .active a {
-    background-color: rgb(178, 178, 178);
+    color: inherit;
   }
   #content nav.sub a:hover,
   #content nav.sub a:active,
   #content nav.sub a:focus {
-    background-color: rgb(200, 200, 200);
+    color: rgb(113, 179, 247); /* @link-color */
+  }
+
+  #content nav.sub dd a {
+    color: rgb(0, 1, 2); /* @midnight */
+    border-bottom: 0.4166666667em solid transparent;
+  }
+  #content nav.sub dd.active a {
+    color: rgb(0, 1, 2);  /* @midnight */
+    border-bottom-color: rgb(0, 1, 2); /* @black */
   }
 
   #content nav.sub dt {
-    padding: 0 1.5em;
+    font-size: 0.75em; /* 12px / @font-size */
+    font-variant: normal;
+    text-transform: uppercase;
+  }
+  #content nav.sub li,
+  #content nav.sub dd {
+    font-size: 0.875em; /* 14px / @font-size */
+    padding-right: 0.95em;
+    border-right: 0.1em solid rgb(215, 216, 217);
+    margin-right: 0.55em;
+  }
+  #content nav.sub li:last-child,
+  #content nav.sub dd:last-child {
+    padding-right: 0;
+    border-right-width: 0;
+    margin-right: 0;
   }
 
-  @media (min-width: 40em) {
-    #content nav.sub ul,
-    #content nav.sub li,
-    #content nav.sub form,
-    #content nav.sub form p,
-    #content nav.sub dl,
-    #content nav.sub dt,
-    #content nav.sub dd {
-      display: inline;
-    }
+  #content nav.sub ul,
+  #content nav.sub li,
+  #content nav.sub form,
+  #content nav.sub form p,
+  #content nav.sub dl,
+  #content nav.sub dt,
+  #content nav.sub dd {
+    display: inline;
+  }
 
-    #content nav.sub {
-      position: relative;
-    }
+  #content nav.sub {
+    position: relative;
+  }
 
-    #content nav.sub a {
-      display: inline-block;
-      border-width: 0 1px 0 0;
-      border-radius: 0;
-    }
+  #content nav.sub a {
+    display: inline-block;
+    border-width: 0 1px 0 0;
+    border-radius: 0;
+  }
 
-    /* KLUDGE: Attempt to hide the whitespace to the left of the button.
-    (It might be better to use floats.) */
-    #content nav.sub form {
-      display: inline-block;
-      margin: 0;
-      background-color: rgb(135, 233, 184);
-      border-right: 1px solid rgb(233, 233, 235);
-    }
-    #content nav.sub form button {
-      border-radius: 0;
-      border-color: transparent;
-    }
-
-    #content nav.sub dt {
-      position: absolute;
-      top: -1.5em;
-      text-align: center;
-      min-width: 6.5em;
-      color: rgb(101, 102, 102); /* @steel */
-      padding: 0;
-    }
-    #content nav.sub dd a {
-      min-width: 3.5em;
-      text-align: center;
-    }
-    #content nav.sub dt,
-    #content nav.sub dd {
-      margin: 0;
-      display: inline-block;
-    }
+  #content nav.sub form {
+    margin-top: -0.21875em;
+    float: right;
   }
 
   @media (min-width: 66.5625em) { /* @max-page-width */
@@ -3798,14 +3790,17 @@
   .topic .header h1 {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
-    color: rgb(69, 71, 71);
-    font-size: 3.875em; /* 62px / @font-size(16px) */
+    color: rgb(0, 1, 2); /* @midnight */
+    margin-bottom: 0;
+    font-size: 2.25em;
+    text-align: center;
   }
+
   .topic .header h1 a {
     display: block;
     color: inherit;
     text-decoration: inherit;
-    border: 0.05em solid rgb(101, 102, 102); /* @steel */
+    border: 0.1em solid rgb(51, 52, 53);
     padding: 0.75em;
   }
   .topic .header.has-image h1 a {
@@ -3826,9 +3821,16 @@
     color: rgb(101, 102, 102); /* @steel */
     font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
-  @media (min-width: 30em) {
+  @media (min-width: 40em) {
     .topic .header {
       position: relative;
+    }
+    .topic .header h1 {
+      font-size: 3.875em; /* 62px / @font-size(16px) */
+      text-align: left;
+    }
+    .topic .header h1 a {
+      border-width: 0.05em;
     }
     .topic .header .add {
       margin: 0;
