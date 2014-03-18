@@ -2005,11 +2005,6 @@
   body > nav.sub li {
     display: inline;
   }
-  body > nav.sub li:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right-width: 0;
-  }
   body > nav.sub .rss a,
   body > nav.sub li a {
     color: rgb(102, 103, 104);
@@ -2088,9 +2083,6 @@
     background: rgb(253, 254, 255);
   }
 
-  #content .header {
-    margin-bottom: 2.25em;
-  }
   #content nav.sub {
     margin-top: 1.75em;
     max-width: none;
@@ -2169,7 +2161,6 @@
   }
 
   #content nav.sub form {
-    margin-top: -0.21875em;
     float: right;
   }
 
@@ -3187,6 +3178,10 @@
 /* =Featured Article
   ----------------------------------------------- */
 
+  .featured .activity-item {
+    padding-bottom: 0;
+  }
+
   /* OPTIONAL: Make the featured source image smaller */
   .featured .activity-item > .source:first-child img {
     width: 30px;
@@ -3195,10 +3190,19 @@
     margin-right: 0.625em;
   }
 
-  /* OPTIONAL: Make the headline bigger */
-  .featured .activity-item h3 {
-    font-size: 2.25em; /* 36px / 16px */
+  @media (max-width: 39.9em) {
+    .featured .activity-item h3 .image img {
+      width: 5em; /* target-image-size(120px) / font-size(24px) */
+      height: auto;
+    }
   }
+  @media (min-width: 40em) {
+    /* OPTIONAL: Make the headline bigger */
+    .featured .activity-item h3 {
+      font-size: 2.25em; /* 36px / 16px */
+    }  
+  }
+
 
   /* OPTIONAL: Don’t use the usual “link” style */
   .featured .activity-item .link {
@@ -3288,16 +3292,22 @@
     }
   }
 
+  .topic > .featured > section + section {
+    margin-top: 1.75em; /* @line-height */
+    border-top: 0.1em solid rgb(218, 220, 224);
+    padding-top: 1.75em; /* @line-height */
+  }
+
   @media (min-width: 66.5625em) { /* @max-page-width */
     .topic > .featured {
       position: relative;
-    }
-
-    .topic .featured {
-      margin-bottom: 3.5em;
+      padding-bottom: 0.875em;
+      margin-bottom: 1.75em;
     }
     .topic > .featured > section + section {
-      margin-top: -3.5em;
+      border-top-width: 0;
+      padding-top: 0;
+      margin-top: -2.625em;
     }
   }
 
@@ -3827,7 +3837,6 @@
     }
     .topic .header h1 {
       font-size: 3.875em; /* 62px / @font-size(16px) */
-      text-align: left;
     }
     .topic .header h1 a {
       border-width: 0.05em;
@@ -3862,6 +3871,17 @@
     position: absolute;
     left: -9999px;
   }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    .topic .activity-header {
+      position: relative;
+      top: -0.21875em;
+    }
+  }
+
+  .topic .activity-header nav {
+    margin-top: 0;
+  }
   .home  h1 + .activity-list {
     margin-top: 0;
   }
@@ -3887,22 +3907,40 @@
   }
   .activity-header li {
     display: inline;
-    margin-right: 1.15em;
-    padding-right: 1.55em;
-    border-right: 0.1em solid rgb(217, 217, 217);
   }
-  .activity-header li:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right-width: 0;
-  }
+  .activity-header .rss a,
   .activity-header li a {
-    color: rgb(153, 153, 153);
-    font-weight: bold;
+    color: rgb(102, 103, 104);
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    font-size: 0.75em; /* 12px / @font-size */
+    line-height: 2.3333333333em; /* @line-height(1.75em) / font-size(0.75em) */
+    text-transform: uppercase;
     text-decoration: none;
+    display: inline-block;
+    padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
+    padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
+    margin-left: 0.55em;
+  }
+  @media (min-width: 30em) {
+    .activity-header .rss a,
+    .activity-header li a {
+      margin-left: 1.1666666667em;
+      margin-right: 1.1666666667em;
+    }
+    .activity-header li:last-child a {
+      margin-right: 0;
+    }
+    .activity-header ul {
+      margin-left  : -0.875em; /* @line-height / 2 */
+    }
+    .activity-header p {
+      margin-right  : -0.875em; /* @line-height / 2 */
+    }
   }
   .activity-header li.active a {
-    color: black;
+    color: rgb(0, 1, 2); /* @black */
+    border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
   }
   .activity-header li a:hover,
   .activity-header li a:active,
