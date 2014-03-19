@@ -2097,21 +2097,7 @@
     padding-bottom: 0.875em; /* @line-height / 2 */
     border-bottom: 0.1em solid rgb(215, 216, 217);
     margin-bottom: 1.75em;
-  }
-
-  /* OPTIONAL: Make more space for the follow button */
-  #content .topic nav.sub {
-    padding-bottom: 1.75em; /* @line-height */
-  }
-
-  /* OPTIONAL: Make the navigation fit nicely on small screens */
-  @media (max-width: 24.9em) {
-    #content nav.sub {
-      margin-left  : -1.5em;
-      margin-right : -1.5em;
-      padding-left: 1.5em;
-      padding-right: 1.5em;
-    }
+    position: relative;
   }
 
   #content nav.sub ul,
@@ -2155,38 +2141,48 @@
     font-size: 0.875em; /* 14px / @font-size */
   }
 
-  @media (min-width: 25em) {
-    #content nav.sub ul,
-    #content nav.sub li,
-    #content nav.sub dt,
-    #content nav.sub dd {
-      display: inline;
+  @media (max-width: 24.9em) {
+    #content nav.sub form {
+      font-size: 0.75em;
     }
-    #content nav.sub li,
-    #content nav.sub dd {
-      padding-right: 1.25em;
-      border-right: 0.1em solid rgb(215, 216, 217);
-      margin-right: 0.85em;
-    }
+  }
+
+  #content nav.sub ul,
+  #content nav.sub li,
+  #content nav.sub dt,
+  #content nav.sub dd {
+    display: inline;
+  }
+  #content nav.sub li,
+  #content nav.sub dd {
+    padding-right: 1.25em;
+    border-right: 0.1em solid rgb(215, 216, 217);
+    margin-right: 0.85em;
+  }
+
+  /* KLUDGE: The space between elements in the HTML is a little different on topic pages */
+  #content .topic nav.sub dd {
+    padding-right: 1em;
+    margin-right: 1.25em;
+  }
+
+  /* OPTIONAL: Attempt to get the topic navigation to fit on small screens */
+  @media (max-width: 24.9em) {
     #content .topic nav.sub dd {
-      padding-right: 1em;
-      margin-right: 1.25em;
-    }
-    #content nav.sub li:last-child,
-    #content nav.sub dd:last-child {
-      padding-right: 0;
-      border-right-width: 0;
-      margin-right: 0;
-    }
-    #content nav.sub a {
-      padding: 0.75em 0;
+      padding-right: 0.4em;
+      margin-right: 0.625em;
     }
   }
 
-  #content nav.sub {
-    position: relative;
+  #content nav.sub li:last-child,
+  #content nav.sub dd:last-child {
+    padding-right: 0;
+    border-right-width: 0;
+    margin-right: 0;
   }
-
+  #content nav.sub a {
+    padding: 0.75em 0;
+  }
   #content nav.sub a {
     display: inline-block;
     border-width: 0 1px 0 0;
@@ -2197,6 +2193,25 @@
     margin-top: 0;
     float: right;
   }
+
+  /* OPTIONAL: Make more space for the follow button */
+  #content .topic nav.sub {
+    padding-bottom: 1.75em; /* @line-height */
+  }
+
+  /* OPTIONAL: Make the navigation fit nicely on small screens */
+  @media (max-width: 24.9em) {
+    #content nav.sub {
+      margin-left  : -1.5em;
+      margin-right : -1.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
+
+
+
+
 
   @media (min-width: 66.5625em) { /* @max-page-width */
 
