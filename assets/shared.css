@@ -2118,7 +2118,6 @@
     font-weight: bold;
     text-decoration: none;
     display: block;
-    padding: 0.75em 0;
   }
   #content nav.sub .active a {
     color: inherit;
@@ -2139,32 +2138,39 @@
   }
 
   #content nav.sub dt {
+    margin-top: 1.75em;
     font-size: 0.75em; /* 12px / @font-size */
     font-variant: normal;
     text-transform: uppercase;
   }
+
   #content nav.sub li,
   #content nav.sub dd {
     font-size: 0.875em; /* 14px / @font-size */
-    padding-right: 1em;
-    border-right: 0.1em solid rgb(215, 216, 217);
-    margin-right: 1.25em;
-  }
-  #content nav.sub li:last-child,
-  #content nav.sub dd:last-child {
-    padding-right: 0;
-    border-right-width: 0;
-    margin-right: 0;
   }
 
-  #content nav.sub ul,
-  #content nav.sub li,
-  #content nav.sub form,
-  #content nav.sub form p,
-  #content nav.sub dl,
-  #content nav.sub dt,
-  #content nav.sub dd {
-    display: inline;
+  @media (min-width: 25em) {
+    #content nav.sub ul,
+    #content nav.sub li,
+    #content nav.sub dt,
+    #content nav.sub dd {
+      display: inline;
+    }
+    #content nav.sub li,
+    #content nav.sub dd {
+      padding-right: 1em;
+      border-right: 0.1em solid rgb(215, 216, 217);
+      margin-right: 1.25em;
+    }
+    #content nav.sub li:last-child,
+    #content nav.sub dd:last-child {
+      padding-right: 0;
+      border-right-width: 0;
+      margin-right: 0;
+    }
+    #content nav.sub a {
+      padding: 0.75em 0;
+    }
   }
 
   #content nav.sub {
@@ -3376,12 +3382,6 @@
   .featured .activity-item.do h3 {
     font-size: 1.25em;
     text-align: center;
-  }
-
-  @media (min-width: 50em) {
-    .featured .activity-item.do h3 {
-      text-align: left;
-    }
   }
 
   .featured .activity-item.do h3 a {
