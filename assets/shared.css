@@ -918,7 +918,7 @@
   .scripted-do form.do    h6 + p,
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
-    left: -9999px; 
+    left: -9999px;
     opacity: 0;
     transition: opacity 0.2s;
   }
@@ -3196,7 +3196,7 @@
     /* OPTIONAL: Make the headline bigger */
     .featured .activity-item h3 {
       font-size: 2.25em; /* 36px / 16px */
-    }  
+    }
 
     /* Featured posts have a larger image */
     .featured .activity-item .post .has-image + .meta {
@@ -3999,9 +3999,9 @@
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 1em;
+    background-size: auto 0.75em;
     width: 1em;
-    height: 1em;
+    height: 0.75em;
     vertical-align: 0;
     margin-left: 0.5em;
 
