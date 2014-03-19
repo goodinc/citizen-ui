@@ -2094,8 +2094,14 @@
     margin-top: 1.75em;
     max-width: none;
     color: rgb(102, 102, 102); /* @steel */
-    padding-bottom: 1.75em; /* @line-height */
+    padding-bottom: 0.875em; /* @line-height / 2 */
     border-bottom: 0.1em solid rgb(215, 216, 217);
+    margin-bottom: 1.75em;
+  }
+
+  /* OPTIONAL: Make more space for the follow button */
+  #content .topic nav.sub {
+    padding-bottom: 1.75em; /* @line-height */
   }
 
   /* OPTIONAL: Make the navigation fit nicely on small screens */
@@ -2158,8 +2164,12 @@
     }
     #content nav.sub li,
     #content nav.sub dd {
-      padding-right: 1em;
+      padding-right: 1.25em;
       border-right: 0.1em solid rgb(215, 216, 217);
+      margin-right: 0.85em;
+    }
+    #content .topic nav.sub dd {
+      padding-right: 1em;
       margin-right: 1.25em;
     }
     #content nav.sub li:last-child,
@@ -2466,13 +2476,6 @@
       display: inline-block;
       margin-bottom: 0;
     }
-  }
-
-
-/* =Join / Sign Up
-  ----------------------------------------------- */
-  h1 + h2.action {
-    font-size: inherit;
   }
 
 
@@ -3576,15 +3579,18 @@
   #content aside + .has-aside,
   #content aside + .has-aside + aside {
     /* @separator */
+    /*
     margin-top: 2.95em;
+    */
   }
-  #content        .has-aside > section + section,
   #content > .container > section + section,
   #content > .container > aside   + section {
 
     /* @separator */
+    /*
     margin-top: 2.95em;
     padding-top: 2.95em;
+    */
   }
 
 
@@ -3760,6 +3766,10 @@
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
+  .member .header {
+    margin-bottom: 1.75em;
+  }
+
   @media (min-width: 40em) {
     .member .header {
       border: 0.1em solid rgb(239, 239, 239);
@@ -4730,8 +4740,25 @@
   ----------------------------------------------- */
 
 
+/* =Join / Sign In
+  ----------------------------------------------- */
+  .sign-in h2.action {
+    font-size: inherit;
+  }
+
+  /* OPTIONAL: Add more space between the sections on the sign up / join pages 
+  (TBD: Should this be a general style, applied to a common element like .section?) */
+  .sign-in section,
+  .sign-in aside {
+    margin-top: 3.5em; /* @line-height x 2*/
+  }
+
+
 /* =Explore
   ----------------------------------------------- */
+  .explore + .explore {
+    margin-top: 3.5em; /* @line-height x 2 */
+  }
   .explore h1 {
     /* @h2 */
     font-size: 2.25em;
@@ -4786,6 +4813,12 @@
     color: rgb(238, 130, 105); /* @salmon */
   }
 
+
+/* =Search Results
+  ----------------------------------------------- */
+  .search-results section + section {
+    margin-top: 3.5em; /* @line-height x 2 */
+  }
 
 
   /* =Testing
