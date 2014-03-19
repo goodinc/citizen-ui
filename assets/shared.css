@@ -1344,7 +1344,7 @@
   #header h2 a:hover,
   #header h2 a:active,
   #header h2 a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
+    color: rgb(113, 179, 247); /* @sky */
   }
   #header h2 + p {
     font-weight: bold;
