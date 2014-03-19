@@ -2129,9 +2129,9 @@
   #content nav.sub li,
   #content nav.sub dd {
     font-size: 0.875em; /* 14px / @font-size */
-    padding-right: 0.95em;
+    padding-right: 1em;
     border-right: 0.1em solid rgb(215, 216, 217);
-    margin-right: 0.55em;
+    margin-right: 1.25em;
   }
   #content nav.sub li:last-child,
   #content nav.sub dd:last-child {
@@ -2161,6 +2161,7 @@
   }
 
   #content nav.sub form {
+    margin-top: 0;
     float: right;
   }
 
@@ -2619,11 +2620,6 @@
   @media (min-width: 40em) { /* @medium-size */
     .activity-item .post .has-image + .meta {
       margin-left: 7.5em; /* image.width(120px) / @font-size(16px) */
-    }
-
-    /* Featured posts have a larger image */
-    .featured .activity-item .post .has-image + .meta {
-      margin-left: 16.875em; /* image.width(270px) / @font-size(16px) */
     }
   }
 
@@ -3190,17 +3186,22 @@
     margin-right: 0.625em;
   }
 
-  @media (max-width: 39.9em) {
+  @media (max-width: 54.9em) {
     .featured .activity-item h3 .image img {
       width: 5em; /* target-image-size(120px) / font-size(24px) */
       height: auto;
     }
   }
-  @media (min-width: 40em) {
+  @media (min-width: 55em) {
     /* OPTIONAL: Make the headline bigger */
     .featured .activity-item h3 {
       font-size: 2.25em; /* 36px / 16px */
     }  
+
+    /* Featured posts have a larger image */
+    .featured .activity-item .post .has-image + .meta {
+      margin-left: 16.875em; /* image.width(270px) / @font-size(16px) */
+    }
   }
 
 
@@ -3263,7 +3264,7 @@
     margin-bottom: 1.75em;
   }
 
-  @media (min-width: 66.5625em) { /* @max-page-width */
+  @media (min-width: 50em) { /* @topic-featured-width */
 
     /* @column-container */
     #content .header + .featured:after {
@@ -3277,7 +3278,7 @@
     .topic > .featured > section {
       margin-top: 0;
       float: left;
-      width: 69.25%;
+      width: 58%;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
@@ -3292,29 +3293,44 @@
     }
   }
 
+  @media (min-width: 55em) {
+    .topic > .featured > section {
+      width: 62%;
+    }
+  }
+
+  @media (min-width: 60em) {
+    .topic > .featured > section {
+      width: 65%;
+    }
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+
+    /* @primary-column */
+    .topic > .featured > section {
+      width: 69.25%;
+    }
+  }
+
   .topic > .featured > section + section {
     margin-top: 1.75em; /* @line-height */
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 1.75em; /* @line-height */
   }
 
-  @media (min-width: 66.5625em) { /* @max-page-width */
-    .topic > .featured {
-      position: relative;
-      padding-bottom: 0.875em;
-      margin-bottom: 1.75em;
-    }
+  @media (min-width: 50em) { /* @topic-featured-width */
     .topic > .featured > section + section {
       border-top-width: 0;
       padding-top: 0;
-      margin-top: -2.625em;
+      margin-top: -2.75em;
     }
   }
 
   .featured .activity-item.do {
     background: rgb(246, 255, 250);
-    border: 6px solid rgb(233, 249, 240);
-    padding: 14px;
+    border: 0.375em solid rgb(233, 249, 240);
+    padding: 1.3125em; /* @line-height x 3/4*/
   }
 
   /* KLUDGE: Remove the space above the section in featured do’s
@@ -3325,7 +3341,15 @@
 
   .featured .activity-item.do h3 {
     font-size: 1.25em;
+    text-align: center;
   }
+
+  @media (min-width: 50em) {
+    .featured .activity-item.do h3 {
+      text-align: left;
+    }
+  }
+
   .featured .activity-item.do h3 a {
     display: block;
   }
@@ -3709,11 +3733,10 @@
     }
   }
 
-  .member .header nav {
-    margin-top: 4.5em;
-    margin-left: -1.5em;
-    margin-right: -1.5em;
-    margin-bottom: -1.5em;
+  #content .member .header nav.sub {
+    margin-top: 1.75em;
+    padding-bottom: 0;
+    border-bottom-width: 0;
   }
   .member .header h1 {
     font-family: inherit;
@@ -3805,7 +3828,6 @@
     font-size: 2.25em;
     text-align: center;
   }
-
   .topic .header h1 a {
     display: block;
     color: inherit;
@@ -3813,12 +3835,13 @@
     border: 0.1em solid rgb(51, 52, 53);
     padding: 0.75em;
   }
-  .topic .header.has-image h1 a {
+  .topic .header h1.has-image a {
     border-width: 0;
     padding: 0;
   }
-  .topic .header.has-image h1 img {
+  .topic .header h1.has-image img {
     max-width: none;
+    display: block;
   }
   .topic .header h1 a[href]:hover,
   .topic .header h1 a[href]:active,
@@ -3826,31 +3849,30 @@
     border-color: rgb(113, 179, 247); /* @link-color */
     color: rgb(113, 179, 247); /* @link-color */
   }
-  .topic .header .add a {
-    font-weight: bold;
-    color: rgb(101, 102, 102); /* @steel */
-    font-size: 0.6875em; /* 11px / @font-size(16px) */
+
+  /* KLUDGE: Support the old image maps on pages like this one: http://www.good.is/los-angeles */
+  .topic .header a.image-map {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
+
+  .topic .header > p {
+    color: rgb(238, 130, 105); /* @salmon */
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+    text-align: center;
+  }
+
   @media (min-width: 40em) {
     .topic .header {
       position: relative;
+      margin-bottom: 1.75em; /* @line-height */
     }
     .topic .header h1 {
       font-size: 3.875em; /* 62px / @font-size(16px) */
     }
     .topic .header h1 a {
       border-width: 0.05em;
-    }
-    .topic .header .add {
-      margin: 0;
-      position: absolute;
-
-      line-height : 5em;   /* This is about the same as the height of the main headline */
-      top         : 2.5em; /* This is about the same as the padding around the main headline */
-
-      border-left: 0.1em solid rgb(139, 139, 139);
-      padding-left : 3em;
-      right        : 3em;
     }
   }
 
@@ -3873,9 +3895,27 @@
   }
 
   @media (min-width: 66.5625em) { /* @max-page-width */
-    .topic .activity-header {
-      position: relative;
-      top: -0.21875em;
+    .topic > .featured {
+      margin-bottom: 5em;
+      border-bottom-color: transparent;
+    }
+    #content .topic .activity-header {
+      border-top: 0.1em solid rgb(218, 220, 224);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      margin: -5em 0 0 0;
+    }
+    .topic .activity-header > .container {
+      max-width: 66.5625em; /* @max-page-width */
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .topic .activity-list {
+      margin-top: 0;
     }
   }
 
@@ -4609,6 +4649,7 @@
     text-decoration: underline;
   }
 
+  /*
   .feedback .message  a:before,
   .feedback .question a:before {
     content: "";
@@ -4628,6 +4669,7 @@
   .feedback .question a:before {
     background-image: url(shared/icons/question.svg);
   }
+  */
 
 
   p.ad {
@@ -4711,7 +4753,7 @@
     color: rgb(113, 179, 247); /* @link-color */
   }
   .explore .connect {
-    color: rgb(238, 130, 105);
+    color: rgb(238, 130, 105); /* @salmon */
   }
 
 
