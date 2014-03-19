@@ -2141,12 +2141,6 @@
     font-size: 0.875em; /* 14px / @font-size */
   }
 
-  @media (max-width: 24.9em) {
-    #content nav.sub form {
-      font-size: 0.75em;
-    }
-  }
-
   #content nav.sub ul,
   #content nav.sub li,
   #content nav.sub dt,
@@ -2158,6 +2152,22 @@
     padding-right: 1.25em;
     border-right: 0.1em solid rgb(215, 216, 217);
     margin-right: 0.85em;
+  }
+  #content nav.sub li:last-child,
+  #content nav.sub dd:last-child {
+    padding-right: 0;
+    border-right-width: 0;
+    margin-right: 0;
+  }
+  #content nav.sub a {
+    padding: 0.75em 0;
+    display: inline-block;
+    border-width: 0 1px 0 0;
+    border-radius: 0;
+  }
+  #content nav.sub form {
+    margin-top: 0;
+    float: right;
   }
 
   /* KLUDGE: The space between elements in the HTML is a little different on topic pages */
@@ -2172,26 +2182,10 @@
       padding-right: 0.4em;
       margin-right: 0.625em;
     }
-  }
-
-  #content nav.sub li:last-child,
-  #content nav.sub dd:last-child {
-    padding-right: 0;
-    border-right-width: 0;
-    margin-right: 0;
-  }
-  #content nav.sub a {
-    padding: 0.75em 0;
-  }
-  #content nav.sub a {
-    display: inline-block;
-    border-width: 0 1px 0 0;
-    border-radius: 0;
-  }
-
-  #content nav.sub form {
-    margin-top: 0;
-    float: right;
+    #content .topic nav.sub form {
+      margin-top: 0.25em;
+      font-size: 0.75em;
+    }
   }
 
   /* OPTIONAL: Make more space for the follow button */
@@ -2208,9 +2202,6 @@
       padding-right: 1.5em;
     }
   }
-
-
-
 
 
   @media (min-width: 66.5625em) { /* @max-page-width */
