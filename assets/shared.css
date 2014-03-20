@@ -509,7 +509,7 @@
     margin: 0;
     font-size: inherit;
     font-family: inherit;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(56, 52, 68);
 
     /* TRICKY: Some browsers don’t allow line height to be
     adjusted on text fields, so assume a line height of “normal”
@@ -1262,9 +1262,9 @@
 
     /* @separator */
     border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */
-    padding-top: 2em;
+    padding-top: 1.75em; /* @line-height */
 
-    padding-bottom: 1.5em;
+    padding-bottom: 3.5em; /* @line-height x 2 */
   }
 
   body > nav.sub > .container,
@@ -3292,7 +3292,7 @@
   .topic .featured {
     border-bottom: 0.1em solid rgb(218, 220, 224);
   }
-  .topic > .featured > section + section {
+  .topic .featured > .featured-do {
     margin-bottom: 1.75em;
   }
 
@@ -3323,7 +3323,7 @@
     }
 
     /* @aside-column */
-    .topic > .featured > section + section {
+    .topic > .featured > .featured-do {
       margin-top: 0;
       float: right;
       width: 18.75em; /* ad-unit-width(300px) / @font-size(16px) */
@@ -3352,7 +3352,7 @@
     }
   }
 
-  .topic > .featured > section + section {
+  .topic > .featured > .featured-do {
     margin-top: 1.75em; /* @line-height */
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 1.75em; /* @line-height */
@@ -3360,7 +3360,7 @@
 
   /* OPTIONAL: Make the featured items fit nicely on small screens */
   @media (max-width: 24.9em) {
-    .topic > .featured > section + section {
+    .topic > .featured > .featured-do {
       margin-left  : -1.5em;
       margin-right : -1.5em;
       padding-left: 1.5em;
@@ -3369,7 +3369,7 @@
   }
 
   @media (min-width: 50em) { /* @topic-featured-width */
-    .topic > .featured > section + section {
+    .topic > .featured > .featured-do {
       border-top-width: 0;
       padding-top: 0;
       margin-top: -2.75em;
@@ -4817,6 +4817,31 @@
   }
   .explore .connect {
     color: rgb(238, 130, 105); /* @salmon */
+  }
+
+
+/* =Explore
+  ----------------------------------------------- */
+  .profile-form label > span:first-child {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    color: rgb(238, 130, 105); /* @salmon */
+  }
+  .profile-form textarea {
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    font-size: 2.5em; /* 40px / @font-size(16px) */
+    max-width: 18em; /* 45em / 2.5em */
+    height: 4.75em;
+    padding: 0.25em;
+  }
+  @media (min-width: 40em) {
+    .profile-form textarea {
+      height: 2.5em;
+    }
+  }
+  .profile-form .skills input {
+    max-width: 45em;
   }
 
 
