@@ -1,8 +1,7 @@
+
 /*-----------------------------------------------
     Shared Styles (for all screen sizes)
   ----------------------------------------------- */
-
-
 
   /* =Fonts
   -----------------------------------------------
@@ -12,7 +11,10 @@
   @font-face {
     font-family: "GOOD";
     src: url(shared/good.eot);
-    src: url(shared/good.eot?#iefix) format('eot'), url(shared/good.woff) format('woff'), url(shared/good.ttf) format('truetype'), url(shared/good.svg#good) format('svg');
+    src: url(shared/good.eot?#iefix) format("eot"),
+         url(shared/good.woff)       format("woff"),
+         url(shared/good.ttf)        format("truetype"),
+         url(shared/good.svg#good)   format("svg");
     font-weight: bold;
     font-style: normal;
   }
@@ -20,7 +22,10 @@
   @font-face {
     font-family: "Good Icons";
     src: url(shared/icons.eot);
-    src: url(shared/icons.eot?#iefix) format('eot'), url(shared/icons.woff) format('woff'), url(shared/icons.ttf) format('truetype'), url(shared/icons.svg#icons) format('svg');
+    src: url(shared/icons.eot?#iefix) format("eot"),
+         url(shared/icons.woff)       format("woff"),
+         url(shared/icons.ttf)        format("truetype"),
+         url(shared/icons.svg#icons)  format("svg");
     font-weight: normal;
     font-style: normal;
   }
@@ -28,7 +33,10 @@
   @font-face {
     font-family: "App Icons";
     src: url(shared/app-icons.eot);
-    src: url(shared/app-icons.eot?#iefix) format('eot'), url(shared/app-icons.woff) format('woff'), url(shared/app-icons.ttf) format('truetype'), url(shared/app-icons.svg#app-icons) format('svg');
+    src: url(shared/app-icons.eot?#iefix)    format("eot"),
+         url(shared/app-icons.woff)          format("woff"),
+         url(shared/app-icons.ttf)           format("truetype"),
+         url(shared/app-icons.svg#app-icons) format("svg");
     font-weight: normal;
     font-style: normal;
   }
@@ -45,10 +53,10 @@
   @font-face {
     font-family: "Brandon Grotesque Bold";
     src: url(third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot);
-    src: url(third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot?#iefix) format('eot'),
-         url(third-party/4f2d0548-c7dc-459b-a2e0/e86656a10ded.woff) format('woff'),
-         url(third-party/dc21d9e5-516f-4e7e-9a84/7be79a44c2dd.ttf) format('truetype'),
-         url(third-party/a9bdb836-ee14-494d-8c69/5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992) format('svg');
+    src: url(third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot?#iefix) format("eot"),
+         url(third-party/4f2d0548-c7dc-459b-a2e0/e86656a10ded.woff)       format("woff"),
+         url(third-party/dc21d9e5-516f-4e7e-9a84/7be79a44c2dd.ttf)        format("truetype"),
+         url(third-party/a9bdb836-ee14-494d-8c69/5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992) format("svg");
     font-weight: normal;
     font-style: normal;
   }
@@ -56,10 +64,10 @@
   @font-face {
     font-family: "Freight Text Light";
     src: url(third-party/2c61d060-b821-44b0-9ef3/df033ba73b29.eot);
-    src: url(third-party/2c61d060-b821-44b0-9ef3/df033ba73b29.eot?#iefix) format('eot'),
-         url(third-party/1c750263-86c6-4341-a6e9/1b1a01cf0cd4.woff) format('woff'),
-         url(third-party/bf3cfac2-4b5a-4e19-9287/91528eef23a6.ttf) format('truetype'),
-         url(third-party/981e61ba-ddc5-4e86-9332/ce6d21a55161.svg#981e61ba-ddc5-4e86-9332-ce6d21a55161) format('svg');
+    src: url(third-party/2c61d060-b821-44b0-9ef3/df033ba73b29.eot?#iefix) format("eot"),
+         url(third-party/1c750263-86c6-4341-a6e9/1b1a01cf0cd4.woff)       format("woff"),
+         url(third-party/bf3cfac2-4b5a-4e19-9287/91528eef23a6.ttf)        format("truetype"),
+         url(third-party/981e61ba-ddc5-4e86-9332/ce6d21a55161.svg#981e61ba-ddc5-4e86-9332-ce6d21a55161) format("svg");
     font-weight: normal;
     font-style: normal;
   }
@@ -67,13 +75,14 @@
   @font-face {
     font-family: "Trade Gothic Bold Condensed";
     src: url(third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot);
-    src: url(third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot?#iefix) format('eot'),
-         url(third-party/5fdc935e-9e30-442a-bbe9/8d887b858471.woff) format('woff'),
-         url(third-party/616c4c87-a077-43f4-a9f4/f01267c13818.ttf) format('truetype'),
-         url(third-party/c901ad5f-a842-4549-a1f4/583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169) format('svg');
+    src: url(third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot?#iefix) format("eot"),
+         url(third-party/5fdc935e-9e30-442a-bbe9/8d887b858471.woff)       format("woff"),
+         url(third-party/616c4c87-a077-43f4-a9f4/f01267c13818.ttf)        format("truetype"),
+         url(third-party/c901ad5f-a842-4549-a1f4/583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169) format("svg");
     font-weight: normal;
     font-style: normal;
   }
+
 
 
   /* =Elements
@@ -237,7 +246,6 @@
       font-size: 1.75em;
     }
   }
-
 
   dt {
     margin-top: 0.75em;
@@ -718,7 +726,10 @@
     border: 0.1em solid rgba(0, 0, 0, 0.15);
     text-decoration: none;
     font-weight: bold;
-    border-radius: 0.25em;
+
+    /* TODO: Consider changing this to an em value, and adjusting it
+    if the font size is changed (just like margins and line heights). */
+    border-radius: 2px;
 
     line-height: 1.5em;
     padding: 0.75em 1.5em;
@@ -1459,24 +1470,6 @@
   #header.has-account .search {
     margin-bottom: 0;
   }
-
-  /*
-  @media (max-width: 59.9em) {
-    #header .options {
-      min-width: 14em;
-    }
-  }
-  @media (min-width: 25em) {
-    #header .search .options {
-      min-width: 19em;
-    }
-  }
-  @media (min-width: 30em) and (max-width: 59.9em) {
-    #header .primary .options {
-      min-width: 24em;
-    }
-  }
-  */
 
 
   #header .account h3 a {
