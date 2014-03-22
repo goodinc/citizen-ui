@@ -345,7 +345,7 @@
   }
   .pagination a {
     display: inline-block;
-    padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
+    padding: 0.5625em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83);
     text-decoration: none;
   }
@@ -353,6 +353,7 @@
   .pagination .previous a {
     font-weight: bold;
 
+    padding: 0.5625em 1.25em; /* @button-padding */
     border: 0.1em solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25em;
   }
@@ -691,6 +692,17 @@
     color: #f33;
   }
 
+  body > section.message {
+    /* @header */
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 1.75em;
+  }
+
   /*
   .activity-item .message.success {
     background-color: rgb(58, 58, 58);
@@ -731,8 +743,8 @@
     if the font size is changed (just like margins and line heights). */
     border-radius: 2px;
 
-    line-height: 1.5em;
-    padding: 0.75em 1.5em;
+    line-height: 1.6875em;
+    padding: 0.5625em 1.25em;
     transition: color 0.2s, background-color 0.2s, opacity 0.2s;
   }
   button[disabled] {
@@ -1230,12 +1242,17 @@
     padding-top: 1.25em;
     padding-bottom: 1.25em;
   }
+  .topic-featured,
   #header ~ #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */
+    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
     padding-top: 1.75em;   /* @line-height */
-    padding-bottom: 3.5em; /* @line-height x 2 */
+    padding-bottom: 3.5em; /* @line-height x 2*/
+  }
+  .topic-featured {
+    padding-top: 1.3125em;   /* @line-height / 2 x 3 */
+    padding-bottom: 1.75em; /* @line-height */
   }
   #footer {
     margin-top: 0;
@@ -1243,13 +1260,15 @@
   #footer {
 
     /* @separator */
-    border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */
+    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
     padding-top: 1.75em; /* @line-height */
 
     padding-bottom: 3.5em; /* @line-height x 2 */
   }
 
-  body > nav.sub > .container,
+  .topic-featured > .container,
+  body * nav.sub .container,
+  body > nav.sub .container,
   #header  > .container,
   #content > .container,
   #footer  > .container {
@@ -1268,7 +1287,9 @@
     }
   }
   @media (min-width: 40em) {
-    body > nav.sub > .container,
+    .topic-featured > .container,
+    body * nav.sub .container,
+    body > nav.sub .container,
     #header  > .container,
     #content > .container,
     #footer  > .container {
@@ -1352,9 +1373,11 @@
       border-top-width: 0;
     }
   }
+
+  /* OPTIONAL: Line up with the large type on member pages */
   @media (min-width: 65em) {
     #header h2 {
-      margin-right: 6.25em;
+      margin-right: 6.875em; /* @line-height x 7.5 - logotype.width(6.25em) */
     }
   }
 
@@ -1948,7 +1971,7 @@
   body > nav {
     background: white;
     margin: 0;
-    border-top: 0.1em solid rgb(233, 234, 235); /* @mercury */;
+    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */;
   }
   body > nav:after {
     /* @clearfix */
@@ -2051,130 +2074,119 @@
 
   /* =Content
   ----------------------------------------------- */
+  .topic-featured,
   #content {
     background: rgb(253, 254, 255);
   }
 
-  #content nav.sub {
+  body * nav.sub {
     margin-top: 1.75em;
     max-width: none;
     color: rgb(102, 103, 104);
-    padding-bottom: 0.875em; /* @line-height / 2 */
-    border-bottom: 0.1em solid rgb(215, 216, 217);
-    margin-bottom: 1.75em;
     position: relative;
   }
 
-  /* TBD: Should the navigation have a bottom border by default? */
-  #content .topic nav.sub {
-    border-bottom-width: 0;
-    margin-bottom: 0;
-  }
-
-  #content nav.sub ul,
-  #content nav.sub li {
+  body * nav.sub ul,
+  body * nav.sub li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  #content nav.sub a {
+  body * nav.sub a {
     text-decoration: none;
     display: block;
   }
-  #content nav.sub .active a {
+  body * nav.sub .active a {
     color: inherit;
   }
-  #content nav.sub a:hover,
-  #content nav.sub a:active,
-  #content nav.sub a:focus {
+  body * nav.sub a:hover,
+  body * nav.sub a:active,
+  body * nav.sub a:focus {
     color: rgb(113, 179, 247); /* @link-color */
   }
 
-  #content nav.sub dd a {
+  body * nav.sub dd a {
     font-weight: bold;
     color: rgb(102, 103, 104);
     color: rgb(0, 1, 2);  /* @midnight */
     border-bottom: 0.4166666667em solid transparent;
   }
 
-  #content nav.sub dt.active {
+  body * nav.sub dt.active {
    /* color: rgb(0, 1, 2);*/  /* @midnight */
   }
-  #content nav.sub dd.active a {
+  body * nav.sub dd.active a {
     color: rgb(0, 1, 2);  /* @midnight */
     border-bottom-color: rgb(0, 1, 2); /* @black */
   }
 
-  #content nav.sub dt {
+  body * nav.sub dt {
     margin-top: 1.75em;
     font-size: 0.75em; /* 12px / @font-size */
     font-variant: normal;
     text-transform: uppercase;
   }
 
-  #content nav.sub li,
-  #content nav.sub dd {
+  body * nav.sub li,
+  body * nav.sub dd {
     font-size: 0.875em; /* 14px / @font-size */
   }
 
-  #content nav.sub ul,
-  #content nav.sub li,
-  #content nav.sub dt,
-  #content nav.sub dd {
+  body * nav.sub ul,
+  body * nav.sub li,
+  body * nav.sub dt,
+  body * nav.sub dd {
     display: inline;
   }
-  #content nav.sub li,
-  #content nav.sub dd {
+  body * nav.sub li,
+  body * nav.sub dd {
     padding-right: 1em;
     border-right: 0.1em solid rgb(215, 216, 217);
     margin-right: 1.25em;
   }
-  #content nav.sub li:last-child,
-  #content nav.sub dd:last-child {
+  body * nav.sub li:last-child,
+  body * nav.sub dd:last-child {
     padding-right: 0;
     border-right-width: 0;
     margin-right: 0;
   }
-  #content nav.sub a {
+  body * nav.sub a {
     padding: 0.75em 0;
     display: inline-block;
     border-width: 0 1px 0 0;
     border-radius: 0;
   }
-  #content nav.sub form {
+  body * nav.sub form {
     margin-top: 0;
-    float: right;
+    float: left;
+    margin-right: 1.75em;
   }
 
   /* OPTIONAL: Attempt to get the topic navigation to fit on small screens */
   @media (max-width: 24.9em) {
-    #content .topic nav.sub dd {
+    body .topic-header nav.sub dd {
       padding-right: 0.4em;
       margin-right: 0.625em;
     }
-    #content .topic nav.sub form {
+    body .topic-header nav.sub form {
       margin-top: 0.25em;
       font-size: 0.75em;
     }
   }
 
-  #content nav.sub a {
+  body * nav.sub a {
     color: inherit;
-  }
-  #content nav.sub a strong {
     border-bottom: 0.4166666667em solid transparent;
     padding: 0.75em 0;
   }
-  #content nav.sub .active a {
+  body * nav.sub .active a {
     color: rgb(0, 1, 2);  /* @midnight */
-  }
-  #content nav.sub .active a strong {
     border-bottom-color: rgb(0, 1, 2); /* @black */
   }
-  #content nav.sub li {
+  body * nav.sub li {
     font-weight: bold;
   }
-  #content nav.sub li span {
+  body * nav.sub li span {
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     margin-top: 1.75em;
     font-size: 0.8571428571em; /* 12px / 14px */
@@ -2183,13 +2195,13 @@
   }
 
   /* OPTIONAL: Make more space for the follow button */
-  #content .topic nav.sub {
+  body .topic-header nav.sub {
     padding-bottom: 1.75em; /* @line-height */
   }
 
   /* OPTIONAL: Make the navigation fit nicely on small screens */
   @media (max-width: 24.9em) {
-    #content nav.sub {
+    body * nav.sub {
       margin-left  : -1.5em;
       margin-right : -1.5em;
       padding-left: 1.5em;
@@ -2197,6 +2209,20 @@
     }
   }
 
+  /* OPTIONAL: Hide the main headline on home, topic, and member pages
+  (since they’re redundant with the navigation) */
+  body > nav     ~ #content .has-aside:first-child > h1:first-child,
+  .topic-header  ~ #content .has-aside:first-child > h1:first-child,
+  .member-header ~ #content .has-aside:first-child > h1:first-child {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  body > nav     ~ #content .has-aside:first-child > h1:first-child + *,
+  .topic-header  ~ #content .has-aside:first-child > h1:first-child + *,
+  .member-header ~ #content .has-aside:first-child > h1:first-child + * {
+    margin-top: 0;
+  }
 
   @media (min-width: 66.5625em) { /* @max-page-width */
 
@@ -2220,6 +2246,7 @@
     #content .has-aside .comments,
     #content .has-aside .popular-posts,
     #content .has-aside .activity > header,
+    #content .has-aside .follow-list,
     #content .has-aside .activity-list,
     #content .has-aside .pagination {
       margin-right: -1.75em;
@@ -2638,7 +2665,7 @@
     text-overflow: ellipsis;
   }
 
-  .featured .activity-item .post h3 small {
+  .topic-featured .activity-item .post h3 small {
     font-size: 0.33333333333333em; /* 12px / 36px */
   }
 
@@ -2924,7 +2951,7 @@
     margin-right: -0.3125em;
   }
 
-  .featured .activity-item.do .meta {
+  .topic-featured .activity-item.do .meta {
     margin-top: 1.5em;
     display: inline;
     float: right;
@@ -3189,7 +3216,7 @@
     }
 
     /* OPTIONAL: Don’t line up with the source if this is a feature */
-    .featured .activity-item > .time + .post {
+    .topic-featured .activity-item > .time + .post {
       margin-top: 2.5em; /* @line-height(20px) / 2 */
       margin-left: -1.25em; /* @line-height(20px) */
       margin-right: 0;
@@ -3201,12 +3228,15 @@
 /* =Featured Article
   ----------------------------------------------- */
 
-  .featured .activity-item {
+  .topic-featured {
+    margin-bottom: 0;
+  }
+  .topic-featured .activity-item {
     padding-bottom: 0;
   }
 
   /* OPTIONAL: Make the featured source image smaller */
-  .featured .activity-item > .source:first-child img {
+  .topic-featured .activity-item > .source:first-child img {
     width: 2.5em; /* 30px / @font-size(16px) */
     height: auto;
     margin-left: -1.66666666666667em; /* 20px / 12px */
@@ -3214,35 +3244,35 @@
   }
 
   @media (max-width: 54.9em) {
-    .featured .activity-item h3 .image img {
+    .topic-featured .activity-item h3 .image img {
       width: 5em; /* target-image-size(120px) / font-size(24px) */
       height: auto;
     }
   }
   @media (min-width: 55em) {
     /* OPTIONAL: Make the headline bigger */
-    .featured .activity-item h3 {
+    .topic-featured .activity-item h3 {
       font-size: 2.25em; /* 36px / 16px */
     }
 
     /* Featured posts have a larger image */
-    .featured .activity-item .post .has-image + .meta {
+    .topic-featured .activity-item .post .has-image + .meta {
       margin-left: 16.875em; /* image.width(270px) / @font-size(16px) */
     }
   }
 
 
   /* OPTIONAL: Don’t use the usual “link” style */
-  .featured .activity-item .link {
+  .topic-featured .activity-item .link {
     padding: 0;
     border-width: 0;
     background: transparent;
   }
-  .featured .activity-item .link .has-image:after {
+  .topic-featured .activity-item .link .has-image:after {
     display: none;
     clear: none;
   }
-  .featured .activity-item .link h3 .image {
+  .topic-featured .activity-item .link h3 .image {
     float: left;
     margin: 0;
     margin-right: 0.83333333333333em; /* @line-height / @font-size(16px) */
@@ -3270,15 +3300,15 @@
 
   .activity > header h1,
   .activity > header h2,
-  .topic > .featured h2,
-  .topic > .featured > section > h3,
+  .topic-featured h2,
+  .topic-featured > .container > section > h3,
   .topic > header + section > header > h2 { /* followers */
     font-family: inherit;
     font-weight: bold;
   }
   .activity > header h1,
   .activity > header h2,
-  .topic > .featured h2,
+  .topic-featured h2,
   .topic > header + section > header > h2 { /* followers */
     font-size: 1.875em; /* 30px / @font-size(16px) */
   }
@@ -3287,17 +3317,10 @@
     margin-bottom: 1.75em;
   }
 
-  /* OPTIONAL: Make the header fit nicely on small screens */
-  @media (max-width: 24.9em) {
-    .topic .featured {
-      border-bottom-width: 0;
-    }
-  }
-
   @media (min-width: 50em) { /* @topic-featured-width */
 
     /* @column-container */
-    #content .header + .featured:after {
+    .topic-featured:after {
       /* @clearfix */
       content: "";
       display: table;
@@ -3305,7 +3328,7 @@
     }
 
     /* @primary-column */
-    .topic > .featured > section {
+    .topic-featured > .container > section {
       margin-top: 0;
       float: left;
       width: 58%;
@@ -3314,7 +3337,7 @@
     }
 
     /* @aside-column */
-    .topic > .featured > .featured-do {
+    .topic-featured > .container > .activity-item ~ .featured-do {
       margin-top: 0;
       float: right;
       width: 18.75em; /* ad-unit-width(300px) / @font-size(16px) */
@@ -3324,13 +3347,13 @@
   }
 
   @media (min-width: 55em) {
-    .topic > .featured > section {
+    .topic-featured > .container > section {
       width: 62%;
     }
   }
 
   @media (min-width: 60em) {
-    .topic > .featured > section {
+    .topic-featured > .container > section {
       width: 65%;
     }
   }
@@ -3338,12 +3361,12 @@
   @media (min-width: 66.5625em) { /* @max-page-width */
 
     /* @primary-column */
-    .topic > .featured > section {
+    .topic-featured > .container > section {
       width: 69.25%;
     }
   }
 
-  .topic > .featured > .featured-do {
+  .topic-featured > .container > .featured-do {
     margin-top: 1.75em; /* @line-height */
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 1.75em; /* @line-height */
@@ -3351,7 +3374,7 @@
 
   /* OPTIONAL: Make the featured items fit nicely on small screens */
   @media (max-width: 24.9em) {
-    .topic > .featured > .featured-do {
+    .topic-featured > .container > .featured-do {
       margin-left  : -1.5em;
       margin-right : -1.5em;
       padding-left: 1.5em;
@@ -3360,18 +3383,18 @@
   }
 
   @media (min-width: 50em) { /* @topic-featured-width */
-    .topic > .featured > .featured-do {
+    .topic-featured > .container > .featured-do {
       border-top-width: 0;
       padding-top: 0;
     }
 
     /* OPTIONAL: Line the features up horizontally */
-    .topic > .featured > .activity-item ~ .featured-do {
+    .topic-featured > .container > .activity-item ~ .featured-do {
       margin-top: -2.75em;
     }
   }
 
-  .featured .activity-item.do {
+  .topic-featured .activity-item.do {
     background: rgb(246, 255, 250);
     border: 0.375em solid rgb(233, 249, 240);
     padding: 1.3125em; /* @line-height x 3/4*/
@@ -3379,25 +3402,25 @@
 
   /* KLUDGE: Remove the space above the section in featured do’s
   (It would be better to remove the section element altogether.) */
-  .featured .activity-item.do section {
+  .topic-featured .activity-item.do section {
     margin-top: 0;
   }
 
-  .featured .activity-item.do h3 {
+  .topic-featured .activity-item.do h3 {
     font-size: 1.25em;
     text-align: center;
   }
 
-  .featured .activity-item.do h3 a {
+  .topic-featured .activity-item.do h3 a {
     display: block;
   }
-  .featured .activity-item.do h3 img {
+  .topic-featured .activity-item.do h3 img {
     border: 0.25em solid rgb(203, 238, 218);
     border-radius: 100%;
     margin: 0 auto 1.25em; /* @line-height */
     display: block;
   }
-  .featured .activity-item.do form {
+  .topic-featured .activity-item.do form {
     float: left;
   }
 
@@ -3769,22 +3792,15 @@
 
 
 
-/* =Member
+/* =Member Header
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
-  .member .header {
+  .member-header {
+    margin-top: 0;
     margin-bottom: 1.75em;
   }
-
-  @media (min-width: 40em) {
-    .member .header {
-      border: 0.1em solid rgb(239, 239, 239);
-      padding: 1.75em; /* @line-height */
-    }
-  }
-
-  #content .member .header nav.sub {
+  #content .member-header nav.sub {
     margin-top: 1.75em;
     padding-bottom: 0;
     border-bottom-width: 0;
@@ -3793,101 +3809,174 @@
     padding-top: 0.875em;
   }
 
-  .member .header h1 {
+  .member-header h1 {
     font-family: inherit;
     font-weight: bold;
     font-size: inherit;
+    line-height: 1.75em; /* @line-height */
+    margin-top: 0em;
+    margin-bottom: 0.875em;
   }
-  .member .header h1 img {
+  .member-header h1 img {
     display: block;
-    margin-bottom: 0.75em; /* @line-height / 2 */
+    margin-bottom: 0.875em; /* @line-height / 2 */
+
+    /* OPTIONAL: Adjust to the vertical rythm by compensating for the image’s height of 130px (the image would ideally be 140px) */
+    margin-bottom: 0.625em; /* 0.875 + (10px / @font-size) */
   }
-  .member .header h1 a {
+  .member-header h1 a {
     display: block;
     color: inherit;
     text-decoration: inherit;
   }
-  .member .header h1 a[href]:hover,
-  .member .header h1 a[href]:active,
-  .member .header h1 a[href]:focus {
+  .member-header h1 a[href]:hover,
+  .member-header h1 a[href]:active,
+  .member-header h1 a[href]:focus {
     color: rgb(113, 179, 247); /* @link-color */
   }
-  .member .header h1 + form {
-    margin-top: 1.5em; /* @line-height */
+  .member-header h1 + form {
+    margin-top: 1.75em; /* @line-height */
   }
-  .member .header .introduction {
+  .member-header .introduction {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    padding-bottom: 0.25em;
-    border-bottom: 0.05em solid rgb(218, 220, 224);
 
     /* @h1 */
     font-size: 3em;
-    line-height   : 1em; /* @line-height x 2 / 3 */
-    margin-top    : 1em;
-    margin-bottom : 0.5em;
+    line-height   : 1.1666666667em; /* @line-height x 2 / 3 */
+    margin-top    : 0.5833333334em;
+
+    border-bottom: 0.02083333333em solid rgb(218, 220, 224);
+    padding-bottom: 0.5833333334em;
+    margin-bottom : 0.5833333334em;
+
+    /* @h2 */
+    font-size: 2.25em;
+    line-height: 0.7777777778em; /* @line-height / 2.25 */
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
+
+    border-bottom: 0.02777777778em solid rgb(218, 220, 224);
+    padding-bottom: 0.7777777778em;
+    margin-bottom : 0.7777777778em;
   }
-  .member .header .skills {
+  .member-header .skills {
     font-style: italic;
+    font-size: 0.875em;        /* 14px / @font-size */
+    line-height: 2;            /* @line-height / 0.875 */
+    margin-top: 2em;
   }
-  .member .header .details dt,
-  .member .header .details dd {
+  .member-header .details dt,
+  .member-header .details dd {
     display: inline;
   }
-  .member .header .details dt:after {
+  .member-header .details dt:after {
     content: ":";
   }
-  .member .header .details dd {
+  .member-header .details dd {
     margin-right: 1.5em;
   }
-  .member .header .details dd {
+  .member-header .details dd {
     font-size: 0.875em; /* 14px / @font-size(16px) */
   }
-  .member .header .details dd,
-  .member .header .details dd a {
+  .member-header .details dd,
+  .member-header .details dd a {
     color: rgb(101, 102, 102); /* @steel */
     text-decoration: none;
   }
-  .member .header .details dd a:hover,
-  .member .header .details dd a:active,
-  .member .header .details dd a:focus {
+  .member-header .details dd a:hover,
+  .member-header .details dd a:active,
+  .member-header .details dd a:focus {
     color: rgb(153, 153, 153);
   }
 
+  .member-header > div {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 2.625em;
+    background: white;
+
+    /* @header */
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    .member-header > div {
+      border-width: 0.1em;
+    }
+  }
+
   @media (min-width: 40em) {
-    .member .header .introduction {
+    .member-header .basics {
+      text-align: center;
+    }
+    .member-header > div:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .member-header .introduction {
+      margin-top: 0;
+      min-height: 2.3333333334em;
+      padding-bottom: 0.375em; /* 18px / 48px */
+      margin-bottom: 10px;
+
+      min-height: 3.1111111112em; /* .introduction.line-height x 2 */
+      padding-bottom: 0.5em; /* 18px / 36px*/
+      margin-bottom: 0.2777777778em; /* 10px / 36px*/
+    }
+    .member-header dl {
+      margin-top: 2.1875em; /* @line-height / 4 x 5 */
+    }
+    .member-header .skills {
       margin-top: 0;
     }
-    .member .header .basics {
-      display: inline-block;
-      vertical-align: middle;
-      width: 25%;
-      margin-right: 5%;
+    .member-header .basics {
+      float: left;
     }
-    .member .header .details {
-      display: inline-block;
-      vertical-align: middle;
-      width: 65%;
+    .member-header .details {
+      margin-left: 10.5em;
     }
   }
 
-  .member .has-aside > h1 {
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 1.875em; /* 30px / @font-size(16px) */
-    margin-bottom: 1em;
-  }
 
 
-
-/* =Topic
+/* =Topic Header
   -----------------------------------------------
   -----------------------------------------------
   ----------------------------------------------- */
-  .topic .header > div {
-    border: 0.1875em solid rgb(51, 52, 53); /* 3px / @font-size */
-    padding: 1.5625em; /* @line-height - 0.1875em */
+  .topic-header {
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  .topic .header h1 {
+  .topic-header > div {
+    border-width: 0.1875em 0;
+    border-style: solid;
+    border-color: rgb(51, 52, 53); /* 3px / @font-size */
+    padding: 1.5625em; /* @line-height - 0.1875em */
+    background: white;
+
+    /* @header */
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    .topic-header > div {
+      border-width: 0.1875em;
+    }
+  }
+
+  .topic-header h1 {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
     color: rgb(0, 1, 2); /* @midnight */
@@ -3897,51 +3986,42 @@
     text-align: center;
   }
   @media (min-width: 40em) {
-    .topic .header {
-      position: relative;
-      margin-bottom: 0;
-    }
-    .topic .header > div {
+    .topic-header > div {
       padding: 3.3125em; /* @line-height x 2 - 0.1875em */
     }
-    .topic .header h1 {
+    .topic-header h1 {
       font-size: 3.75em; /* 60px / @font-size */
       line-height: 0.9333333333;
     }
-    .topic > .featured {
-      border-top: 0.1em solid rgb(215, 216, 217);
-      margin-top: 0;
-      padding-top: 1.75em;
-    }
   }
-  .topic .header h1 a {
+  .topic-header h1 a {
     display: block;
     color: inherit;
     text-decoration: inherit;
   }
-  .topic .header h1.has-image a {
+  .topic-header h1.has-image a {
     border-width: 0;
     padding: 0;
   }
-  .topic .header h1.has-image img {
+  .topic-header h1.has-image img {
     max-width: none;
     display: block;
   }
-  .topic .header h1 a[href]:hover,
-  .topic .header h1 a[href]:active,
-  .topic .header h1 a[href]:focus {
+  .topic-header h1 a[href]:hover,
+  .topic-header h1 a[href]:active,
+  .topic-header h1 a[href]:focus {
     border-color: rgb(113, 179, 247); /* @link-color */
     color: rgb(113, 179, 247); /* @link-color */
   }
 
   /* KLUDGE: Support the old image maps on pages like this one: http://www.good.is/los-angeles */
-  .topic .header a.image-map {
+  .topic-header a.image-map {
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .topic .header > div p {
+  .topic-header > div p {
     margin-top: 0;
     color: rgb(238, 130, 105); /* @salmon */
     font-size: 0.875em;        /* 14px / @font-size */
@@ -3949,139 +4029,6 @@
     text-align: center;
   }
 
-  .home > h1,
-  .topic .activity > header h1,
-  .topic .activity > header h2 {
-    /* @hidden-accessible */
-    position: absolute;
-    left: -9999px;
-  }
-
-  #content .topic .activity > header {
-    border-top: 0.1em solid rgb(218, 220, 224);
-
-    /* OPTIONAL: Adjust to the vertical rythm */
-    margin-bottom: 2.1875em; /* 35px / @font-size */
-  }
-
-  @media (min-width: 66.5625em) { /* @max-page-width */
-    #content .topic .activity,
-    #content .topic .activity + aside {
-      margin-top: 5.25em; /* @line-height x 3 */
-    }
-    #content .topic .activity > header {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      padding: 0;
-      margin: -5.25em 0 0 0; /* @line-height x 3 */
-    }
-    .topic .activity > header > .container {
-      max-width: 66.5625em; /* @max-page-width */
-      padding-left: 2.25em;
-      padding-right: 2.25em;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .topic .activity-list {
-      margin-top: 0;
-    }
-  }
-
-  .topic .activity > header nav {
-    margin-top: 0;
-  }
-  .home  h1 + .activity-list {
-    margin-top: 0;
-  }
-
-  .activity > header:after {
-    /* @clearfix */
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .activity > header ul,
-  .activity > header li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .activity > header p a {
-    font-size: 0.75em;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  .activity > header p a:hover,
-  .activity > header p a:active,
-  .activity > header p a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
-  }
-  .activity > header ul {
-    display: inline;
-  }
-  .activity > header li {
-    display: inline;
-  }
-  .activity > header .rss a,
-  .activity > header li a {
-    color: rgb(102, 103, 104);
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
-    font-weight: normal;
-    font-size: 0.75em; /* 12px / @font-size */
-    line-height: 2.3333333333em; /* @line-height(1.75em) / font-size(0.75em) */
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
-    padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
-    margin-left: 0.55em;
-  }
-  @media (min-width: 30em) {
-    .activity > header li a {
-      margin-left: 1.1666666667em;
-      margin-right: 1.1666666667em;
-    }
-    .activity > header li:last-child a {
-      margin-right: 0;
-    }
-    .activity > header ul {
-      margin-left  : -0.875em; /* @line-height / 2 */
-    }
-    .activity > header p {
-      margin-right  : -0.875em; /* @line-height / 2 */
-    }
-  }
-  .activity > header li.active a {
-    color: rgb(0, 1, 2); /* @black */
-    border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
-  }
-  .activity > header li a:hover,
-  .activity > header li a:active,
-  .activity > header li a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
-  }
-  .activity > header p.rss {
-    margin: 0;
-    float: right;
-  }
-  .activity > header .rss a {
-    color: rgb(221, 223, 227);
-  }
-  .activity > header .rss a:after {
-    content: "";
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 0.75em;
-    width: 1em;
-    height: 0.75em;
-    vertical-align: 0;
-    margin-left: 0.5em;
-
-    background-image: url(shared/social/rss-221-223-227.svg);
-  }
 
 
 /* =Post
@@ -4954,7 +4901,7 @@
 
 /* =Explore
   ----------------------------------------------- */
-  .profile-form label > span:first-child {
+  .experimental .profile-form label > span:first-child {
     font-variant: small-caps;
     text-transform: lowercase;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
@@ -4969,7 +4916,7 @@
   }
   @media (min-width: 40em) {
     .profile-form textarea {
-      height: 2.5em;
+      height: 3.5em;
     }
   }
   .profile-form .skills input {
