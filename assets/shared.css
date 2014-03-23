@@ -2080,10 +2080,13 @@
   }
 
   body * nav.sub {
-    margin-top: 1.75em;
     max-width: none;
     color: rgb(102, 103, 104);
     position: relative;
+  }
+
+  body #content nav.sub {
+    margin-bottom: 1.75em;
   }
 
   body * nav.sub ul,
@@ -2092,111 +2095,75 @@
     margin-left: 0;
     padding-left: 0;
   }
-  body * nav.sub a {
-    text-decoration: none;
-    display: block;
+  body * nav.sub ul {
+    margin: 0;
+    font-size: 0.875em;        /* 14px / @font-size */
+    line-height: 2em;          /* @line-height / 0.875 */
   }
-  body * nav.sub .active a {
+  body * nav.sub ul:first-child {
+    margin-left: -1em;
+  }
+  body * nav.sub li {
+    display: inline;
+    border-right: 0.1em solid rgb(215, 216, 217);
+    margin-left: 0.2em;
+  }
+  body * nav.sub li:first-child {
+    margin-left: 0;
+  }
+  body * nav.sub li:last-child {
+    border-right-width: 0;
+  }
+
+  body * nav.sub a {
     color: inherit;
+    font-weight: bold;
+    padding: 0.5em 1em 0 1em;
+    text-decoration: none;
+    display: inline-block;
   }
   body * nav.sub a:hover,
   body * nav.sub a:active,
   body * nav.sub a:focus {
     color: rgb(113, 179, 247); /* @link-color */
   }
-
-  body * nav.sub dd a {
-    font-weight: bold;
-    color: rgb(102, 103, 104);
-    color: rgb(0, 1, 2);  /* @midnight */
-    border-bottom: 0.4166666667em solid transparent;
+  body * nav.sub a:after {
+    content: "";
+    display: block;
+    padding-bottom: 0.1428571429em;
+    border-bottom: 0.3571428571em solid transparent;
   }
-
-  body * nav.sub dt.active {
-   /* color: rgb(0, 1, 2);*/  /* @midnight */
-  }
-  body * nav.sub dd.active a {
+  body * nav.sub .active a {
     color: rgb(0, 1, 2);  /* @midnight */
+  }
+  body * nav.sub .active a:after {
     border-bottom-color: rgb(0, 1, 2); /* @black */
   }
-
-  body * nav.sub dt {
-    margin-top: 1.75em;
-    font-size: 0.75em; /* 12px / @font-size */
-    font-variant: normal;
+  body * nav.sub li span {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-size: 0.8571428571em; /* 12px / 14px */
     text-transform: uppercase;
+    font-weight: normal;
   }
 
-  body * nav.sub li,
-  body * nav.sub dd {
-    font-size: 0.875em; /* 14px / @font-size */
-  }
-
-  body * nav.sub ul,
-  body * nav.sub li,
-  body * nav.sub dt,
-  body * nav.sub dd {
-    display: inline;
-  }
-  body * nav.sub li,
-  body * nav.sub dd {
-    padding-right: 1em;
-    border-right: 0.1em solid rgb(215, 216, 217);
-    margin-right: 1.25em;
-  }
-  body * nav.sub li:last-child,
-  body * nav.sub dd:last-child {
-    padding-right: 0;
-    border-right-width: 0;
-    margin-right: 0;
-  }
-  body * nav.sub a {
-    padding: 0.75em 0;
-    display: inline-block;
-    border-width: 0 1px 0 0;
-    border-radius: 0;
-  }
   body * nav.sub form {
-    margin-top: 0;
+    margin: -0.1em 1.75em -0.1em 0;
     float: left;
-    margin-right: 1.75em;
   }
 
   /* OPTIONAL: Attempt to get the topic navigation to fit on small screens */
   @media (max-width: 24.9em) {
-    body .topic-header nav.sub dd {
-      padding-right: 0.4em;
-      margin-right: 0.625em;
-    }
     body .topic-header nav.sub form {
       margin-top: 0.25em;
       font-size: 0.75em;
     }
   }
 
-  body * nav.sub a {
-    color: inherit;
-    border-bottom: 0.4166666667em solid transparent;
-    padding: 0.75em 0;
-  }
-  body * nav.sub .active a {
-    color: rgb(0, 1, 2);  /* @midnight */
-    border-bottom-color: rgb(0, 1, 2); /* @black */
-  }
-  body * nav.sub li {
-    font-weight: bold;
-  }
-  body * nav.sub li span {
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
-    margin-top: 1.75em;
-    font-size: 0.8571428571em; /* 12px / 14px */
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-
   /* OPTIONAL: Make more space for the follow button */
-  body .topic-header nav.sub {
-    padding-bottom: 1.75em; /* @line-height */
+  .topic-header  nav.sub,
+  .member-header nav.sub {
+    margin-top    : 1.3125em; /* @line-height / 4 x 3 */
+    margin-bottom : 1.3125em; /* @line-height / 4 x 3 */
   }
 
   /* OPTIONAL: Make the navigation fit nicely on small screens */
@@ -3797,8 +3764,8 @@
   -----------------------------------------------
   ----------------------------------------------- */
   .member-header {
-    margin-top: 0;
-    margin-bottom: 1.75em;
+    margin-top    : 0;
+    margin-bottom : 0;
   }
   #content .member-header nav.sub {
     margin-top: 1.75em;
@@ -3813,9 +3780,9 @@
     font-family: inherit;
     font-weight: bold;
     font-size: inherit;
-    line-height: 1.75em; /* @line-height */
+    line-height: 1.3125em; /* @line-height / 4 x 3 */
     margin-top: 0em;
-    margin-bottom: 0.875em;
+    margin-bottom: 1.3125em;
   }
   .member-header h1 img {
     display: block;
@@ -3833,9 +3800,6 @@
   .member-header h1 a[href]:active,
   .member-header h1 a[href]:focus {
     color: rgb(113, 179, 247); /* @link-color */
-  }
-  .member-header h1 + form {
-    margin-top: 1.75em; /* @line-height */
   }
   .member-header .introduction {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
@@ -3932,13 +3896,14 @@
       margin-bottom: 0.2777777778em; /* 10px / 36px*/
     }
     .member-header dl {
-      margin-top: 2.1875em; /* @line-height / 4 x 5 */
+      margin-top: 1.3125em; /* @line-height / 2 x 3 */
     }
     .member-header .skills {
       margin-top: 0;
     }
     .member-header .basics {
       float: left;
+      width: 8.125em;
     }
     .member-header .details {
       margin-left: 10.5em;
@@ -3970,13 +3935,24 @@
     margin-right: auto;
   }
 
+  .topic-header > h1.has-image {
+    font-size: inherit;
+
+    /* @header */
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: 66.5625em) { /* @max-page-width */
     .topic-header > div {
       border-width: 0.1875em;
     }
   }
 
-  .topic-header h1 {
+  .topic-header > div h1 {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
     color: rgb(0, 1, 2); /* @midnight */
@@ -3989,7 +3965,7 @@
     .topic-header > div {
       padding: 3.3125em; /* @line-height x 2 - 0.1875em */
     }
-    .topic-header h1 {
+    .topic-header > div h1 {
       font-size: 3.75em; /* 60px / @font-size */
       line-height: 0.9333333333;
     }
