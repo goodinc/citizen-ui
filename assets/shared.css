@@ -1881,6 +1881,10 @@
     font-size: 0.75em;
     margin-top: 1.1666666667em;
   }
+  #footer section + section ul {
+    margin-top: 0.65625em;
+    font-size: inherit;
+  }
   #footer p:last-child {
 
     /* KLUDGE: Reduce the amount of space above the copyright statement. */
@@ -1912,10 +1916,6 @@
     background-size: auto 0.75em;
     width: 1.5em;
     height: 1em;
-  }
-  #footer section + section ul {
-    margin-top: 0.65625em;
-    font-size: inherit;
   }
   #footer li.facebook  a,
   #footer li.twitter   a,
@@ -4574,6 +4574,17 @@
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
+
+  /* OPTIONAL: Only show the admin options for one item at a time */
+  main:hover .activity-item ~ footer.options {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  html:hover li:hover .activity-item ~ footer.options {
+    opacity: 1;
+  }
+
   .activity-list footer.options a,
   .activity-list footer.options button {
     font-size: 0.75em;
@@ -4733,29 +4744,6 @@
   .feedback a:focus {
     text-decoration: underline;
   }
-
-  /*
-  .feedback .message  a:before,
-  .feedback .question a:before {
-    content: "";
-    display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    margin-right: 0.4375em;
-  }
-  .feedback .message a:before {
-    background-image: url(shared/icons/envelope.svg);
-  }
-
-  .feedback .question a:before {
-    background-image: url(shared/icons/question.svg);
-  }
-  */
-
 
   p.ad {
     max-width: none;
@@ -5000,175 +4988,6 @@
   .comment-list article .delete button:active:before,
   .comment-list article .delete button:focus:before {
     color: rgb(255, 102, 102);
-  }
-
-  /* =Post Buttons
-  ----------------------------------------------- */
-  .inline-edit-controls {
-    text-align: right;
-    margin-bottom: 12px;
-    float: left;
-  }
-  .inline-edit-controls input[type=submit] {
-    background-color: white;
-  }
-  .inline-edit-controls a,
-  .inline-edit-controls input[type=submit] {
-    font-size: 10px;
-    font-weight: bold;
-    color: #8b8b8b;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
-  .inline-edit-controls a:hover,
-  .inline-edit-controls input[type=submit]:hover {
-    color: #ee8269;
-  }
-  .inline-edit-controls span {
-    font-size: 10px;
-    font-weight: bold;
-    color: #ee8269;
-  }
-  .inline-edit-controls #delete_bookmark_js,
-  .inline-edit-controls #admin_edit_js,
-  .inline-edit-controls #spam_flag {
-    margin-left: 12px;
-    display: inline-block;
-  }
-  .inline-edit-controls #delete_bookmark_js {
-    margin-left: 0
-  }
-  .inline-edit-controls #admin_edit_js a {
-    margin-left: 12px;
-  }
-
-
-/* =Facebook Invite
-  ----------------------------------------------- */
-
-  /* line 163, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
-  .fb_invite_container {
-    padding: 0.875em 1.75em;
-    color: white;
-    font-weight: normal;
-    font-size: 14px;
-    background: #2a2b2c;
-    position: relative;
-    /* display: none; */
-  }
-  /* line 172, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
-  .fb_invite_container strong {
-    font-weight: bold;
-  }
-  /* line 174, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
-  .fb_invite_container .fb_invite {
-    display: inline-block;
-    margin-left: 15px;
-  }
-  /* line 178, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
-  .fb_invite_container .fb_invite .invite-friends {
-    font-size: 12px;
-    height: 37px;
-    line-height: 37px;
-    background: #6bb4f1;
-    color: white;
-    display: block;
-    padding: 0px 22px 0px 22px;
-    font-weight: bold;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px;
-    cursor: pointer;
-  }
-  /* line 190, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
-  .fb_invite_container .fb_invite .invite-friends:hover {
-    background: #59a1dd;
-  }
-  /* line 196, ../../app/assets/stylesheets/views/posts/_todo.css.scss */
-  .fb_invite_container .close {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    cursor: pointer;
-  }
-
-
-/* =Activity List Buttons
-  ----------------------------------------------- */
-  /* line 890, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
-  .feed-edit-controls {
-    display: none;
-    line-height: 30px;
-    border-top: 1px solid #dadce0;
-    background-color: #f7f7f7;
-    text-align: right;
-    padding-right: 12px;
-  }
-  /* line 897, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
-  .feed-edit-controls span {
-    font-size: 10px;
-    font-weight: bold;
-    color: #ee8269;
-    margin-left: 12px;
-  }
-  /* line 903, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
-  .inline-edit-controls a,
-  .inline-edit-controls input[type=submit],
-  .feed-edit-controls a,
-  .feed-edit-controls input[type=submit] {
-    font-size: 10px;
-    font-weight: bold;
-    font-family: inherit;
-    color: #8b8b8b;
-    background: transparent;
-    cursor: pointer;
-    margin-left: 12px;
-    border-width: 0;
-    text-decoration: none;
-    padding: 0;
-  }
-  /* line 910, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
-  .inline-edit-controls a:hover,
-  .inline-edit-controls input[type=submit]:hover,
-  .feed-edit-controls a:hover,
-  .feed-edit-controls input[type=submit]:hover {
-    color: #ee8269;
-  }
-  /* line 914, ../../app/assets/stylesheets/views/shared/_feed_item.css.scss */
-  .feed-edit-controls .edit_feed_item,
-  .feed-edit-controls .delete_feed_item,
-  .feed-edit-controls .flag_feed_item {
-    display: inline-block;
-  }
-
-  /* TBD: Combine this set of rules with the one above? */
-  .feed-edit-controls,
-  .inline-edit-controls {
-    border-width: 0;
-    background-color: rgb(245, 245, 245);
-    padding: 0.3em 1.5em 0.2em 0.2em;
-    line-height: 1.2em;
-  }
-
-  .activity-item ~ .feed-edit-controls {
-    float: right;
-    margin-top: -1.7em;
-    transition: opacity 0.2s;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Only show the admin options for one item at a time */
-  main:hover .activity-item ~ .feed-edit-controls {
-    opacity: 0;
-  }
-  html:hover li:hover .activity-item ~ .feed-edit-controls {
-    opacity: 1;
   }
 
 
