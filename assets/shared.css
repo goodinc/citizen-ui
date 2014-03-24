@@ -1905,8 +1905,8 @@
     height: 2em;
   }
   #footer p.rss       a {
-    background-image: url(shared/social/rss.png);
-    background-image: url(shared/social/rss.svg), none;
+    background-image: url(shared/icons/rss.png);
+    background-image: url(shared/icons/rss.svg), none;
     opacity: 0.25;
     vertical-align: 0;
     background-size: auto 0.75em;
@@ -2046,7 +2046,7 @@
     vertical-align: 0;
     margin-left: 0.5em;
 
-    background-image: url(shared/social/rss-221-223-227.svg);
+    background-image: url(shared/icons/rss-221-223-227.svg);
   }
   @media (max-width: 29.9em) {
     body > nav.sub .rss a:after {
