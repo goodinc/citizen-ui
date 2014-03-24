@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0">
   <defs>
     <font horiz-adv-x="46">
 
-      <font-face units-per-em="135" descent="-6" alphabetic="0"></font-face>
+      <font-face units-per-em="135" descent="-6" alphabetic="0" />
 
       <missing-glyph horiz-adv-x="0" />
 
@@ -26,4 +27,4 @@
 
     </font>
   </defs>
-</svg> 
+</svg>
