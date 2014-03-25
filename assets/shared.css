@@ -85,13 +85,13 @@
     color: rgb(42, 43, 44); /* @text-color */
   }
   a {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @sky */
     transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
   }
   a:hover,
   a:active,
   a:focus {
-    color: rgb(153, 153, 153); /* @link-hover-color */
+    color: rgb(47, 132, 218); /* @ocean */
     text-decoration: none;
   }
 
@@ -296,7 +296,7 @@
   /* =Paging
   ----------------------------------------------- */
   .pagination {
-    border-top: 1px solid rgb(221, 223, 227);
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
     padding: 1.25em 1.25em 0;
     text-align: center;
@@ -329,7 +329,7 @@
   .pagination li a:hover,
   .pagination li a:active,
   .pagination li a:focus {
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .pagination a {
     display: inline-block;
@@ -346,7 +346,7 @@
     border-radius: 0.25em;
   }
   .pagination .next a {
-    background-color: rgb(113, 179, 247); /* @link-color */
+    background-color: rgb(113, 179, 247); /* @sky */
     color: white;
   }
   .pagination .next a:hover,
@@ -437,7 +437,7 @@
   ul.headlines li > a:hover  h2,
   ul.headlines li > a:active h2,
   ul.headlines li > a:focus  h2 {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   ul.headlines li:after {
     /* @clearfix */
@@ -720,7 +720,7 @@
     display: inline-block;
     font-size: inherit;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
-    background-color: rgb(113, 179, 247); /* @link-color */
+    background-color: rgb(113, 179, 247); /* @sky */
     color: white;
     cursor: pointer;
     border: 0.1em solid rgba(0, 0, 0, 0.15);
@@ -752,7 +752,7 @@
 
   /* Vote */
   .vote button {
-    background-color: rgb(113, 179, 247); /* @link-color */
+    background-color: rgb(113, 179, 247); /* @sky */
   }
   .voted button {
     background-color: rgb(49, 144, 242);
@@ -973,7 +973,7 @@
   .scripted-do form.done  h6 + p button:hover,
   .scripted-do form.done  h6 + p button:active,
   .scripted-do form.done  h6 + p button:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @sky */
   }
 
   /* OPTIONAL: Center the drop-down */
@@ -1040,7 +1040,7 @@
     margin-left: -2em;
 
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @sky */
   }
   .vote button {
     margin-left: 2em;
@@ -1050,32 +1050,35 @@
   .scripted-do form.do    h6:before,
   .scripted-do form.doing h6:before,
   .scripted-do form.done  h6:before {
-    content: "";
-    display: block;
-    width: 1em;
-    position: absolute;
-    margin-left: -3.25em;
-  }
 
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.4375em;
+    position: absolute;
+    margin-left: -2.5em;
+  }
   .scripted-do form.do    h6:before {
-    background-color: rgb(124, 227, 162);
-    border-radius: 1em;
-    height: 1em;
-    margin-top: 0.25em;
+    content: "\e604"; /* @icon-doing */
+    color: rgb(124, 227, 162); /* @moss */
   }
   .scripted-do form.doing h6:before {
-    background-color: rgb(130, 242, 206);
-    background: transparent url(shared/icons/doing.svg) no-repeat center;
-    background-size: contain;
-    height: 2em;
-    margin-top: -0.25em;
+    content: "\e616"; /* @icon-doing */
+    color: rgb(130, 242, 206); /* @spindrift */
   }
   .scripted-do form.done  h6:before {
-    background-color: rgb(64, 198, 149);
-    background: transparent url(shared/icons/done.svg) no-repeat center;
-    background-size: contain;
-    height: 2em;
-    margin-top: -0.25em;
+    content: "\e615"; /* @icon-done */
+    color: rgb(64, 198, 149); /* @clover */
   }
   .scripted-do form.do    h6,
   .scripted-do form.doing h6,
@@ -1335,7 +1338,7 @@
   #header h2 a:hover,
   #header h2 a:active,
   #header h2 a:focus {
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   #header h2 + p {
     font-weight: bold;
@@ -1392,9 +1395,9 @@
   }
 
   #footer h2 a {
-    color: rgb(37, 139, 245); /* @ocean */
     font-weight: bold;
     font-style: normal;
+    text-decoration: none;
   }
 
 
@@ -1471,7 +1474,7 @@
   #header .options li a:hover,
   #header .options li a:active,
   #header .options li a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   #header .search {
     border-top: 0.1em solid rgb(221, 221, 221);
@@ -1521,7 +1524,7 @@
   #header .join a:hover,
   #header .join a:active,
   #header .join a:focus {
-    text-decoration: underline;
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* OPTIONAL: Add a little space around the word “or” */
@@ -1876,8 +1879,7 @@
     font-family: inherit;
     font-weight: bold;
   }
-  #footer ul,
-  #footer p {
+  #footer ul {
     font-size: 0.75em;
     margin-top: 1.1666666667em;
   }
@@ -1886,6 +1888,7 @@
     font-size: inherit;
   }
   #footer p:last-child {
+    font-size: 0.75em;
 
     /* KLUDGE: Reduce the amount of space above the copyright statement. */
     margin-top: -1.75em;
@@ -1898,25 +1901,11 @@
     margin-left: 0;
     padding-left: 0;
   }
-  #footer p.rss        a {
-    display: inline-block;
-    text-indent: -9999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 1.25em;
-    width: 2em;
-    height: 2em;
+  #footer li {
+    display: inline;
+    margin-right: 1em;
   }
-  #footer p.rss       a {
-    background-image: url(shared/icons/rss.png);
-    background-image: url(shared/icons/rss.svg), none;
-    opacity: 0.25;
-    vertical-align: 0;
-    background-size: auto 0.75em;
-    width: 1.5em;
-    height: 1em;
-  }
+  #footer p.rss        a,
   #footer li.facebook  a,
   #footer li.twitter   a,
   #footer li.instagram a,
@@ -1937,20 +1926,30 @@
     font-weight: normal;
     line-height: 1
   }
-  #footer li a {
+  #footer p.rss {
+    margin-left: 0.25em;
+  }
+  #footer p.rss a {
+    color: rgb(204, 204, 204);
+    font-size: 0.75em;
+  }
+  #footer p.rss a:hover,
+  #footer p.rss a:active,
+  #footer p.rss a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  #footer p.rss a,
+  #footer li    a {
     text-decoration: none;
+  }
+  #footer li a {
     color: inherit;
     font-weight: bold;
   }
   #footer li a:hover,
   #footer li a:active,
   #footer li a:focus {
-    color: rgb(178, 178, 178);
-  }
-
-  #footer li {
-    display: inline;
-    margin-right: 1em;
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -2023,30 +2022,40 @@
     border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
   }
   body > nav.sub .rss a {
-    color: rgb(221, 223, 227);
+    color: rgb(221, 223, 227); /* @silver-blue */
+  }
+  body > nav.sub .rss a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 0.875em;
+    content: "\e610"; /* @icon-rss */
+    color: rgb(221, 223, 227); /* @silver-blue */
+    margin-left: 0.875em;
+    transition: color 0.2s;
   }
   body > nav.sub a:hover,
   body > nav.sub a:active,
-  body > nav.sub a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+  body > nav.sub a:focus,
+  body > nav.sub .rss a:hover:after,
+  body > nav.sub .rss a:active:after,
+  body > nav.sub .rss a:focus:after {
+    color: rgb(47, 132, 218); /* @ocean */
   }
   body > nav.sub .rss {
     margin-top: 0;
     margin-bottom: 0;
     float: right;
-  }
-  body > nav.sub .rss a:after {
-    content: "";
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 0.75em;
-    width: 1em;
-    height: 0.75em;
-    vertical-align: 0;
-    margin-left: 0.5em;
-
-    background-image: url(shared/icons/rss-221-223-227.svg);
   }
   @media (max-width: 29.9em) {
     body > nav.sub .rss a:after {
@@ -2113,7 +2122,7 @@
   body * nav.sub a:hover,
   body * nav.sub a:active,
   body * nav.sub a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   body * nav.sub a:after {
     content: "";
@@ -2212,7 +2221,7 @@
 
     #content .has-aside {
       padding-right: 1.75em;
-      border-right: 1px solid rgb(221, 223, 227);
+      border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
     }
 
     /* @aside-column */
@@ -2489,7 +2498,7 @@
   .activity-item a:hover,
   .activity-item a:active,
   .activity-item a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Headlines */
@@ -2511,7 +2520,7 @@
   .activity-item h3 a:hover,
   .activity-item h3 a:hover,
   .activity-item h3 a:hover {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Icons */
@@ -2553,7 +2562,7 @@
   }
   .meta .votes abbr:before {
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @sky */
   }
   .meta .comments abbr:before {
     content: "\e601"; /* @icon-comment */
@@ -2584,7 +2593,7 @@
   .activity-item .more a:hover,
   .activity-item .more a:active,
   .activity-item .more a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -2865,7 +2874,7 @@
   .activity-item .comment p a:hover,
   .activity-item .comment p a:active,
   .activity-item .comment p a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* OPTIONAL: Reduce the space between the headline and the commment */
@@ -2887,7 +2896,7 @@
   .activity-item .source a:hover,
   .activity-item .source a:hover,
   .activity-item .source a:hover {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -2942,7 +2951,7 @@
   .activity-item .meta a:hover,
   .activity-item .meta a:active,
   .activity-item .meta a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -3008,7 +3017,7 @@
   .activity-item section.tags a:hover,
   .activity-item section.tags a:active,
   .activity-item section.tags a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -3098,7 +3107,7 @@
     color: rgb(83, 231, 185);
   }
   main:hover .activity-item:hover .meta .votes abbr:before {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* sky */
   }
   main:hover .activity-item:hover .meta .comments abbr:before {
     color: rgb(255, 223, 145);
@@ -3439,7 +3448,7 @@
   .follow-list a:hover,
   .follow-list a:active,
   .follow-list a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Headlines */
@@ -3456,7 +3465,7 @@
   .follow-list h3 a:hover,
   .follow-list h3 a:hover,
   .follow-list h3 a:hover {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -3613,7 +3622,7 @@
   .comment-list a:hover,
   .comment-list a:active,
   .comment-list a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Headlines */
@@ -3651,7 +3660,7 @@
   .comment-list + .more a:hover,
   .comment-list + .more a:active,
   .comment-list + .more a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -3701,7 +3710,7 @@
   .comment-list article > p a:hover,
   .comment-list article > p a:active,
   .comment-list article > p a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   .supports-placeholder .comments label > span:first-child {
@@ -3788,7 +3797,7 @@
   .member-header h1 a[href]:hover,
   .member-header h1 a[href]:active,
   .member-header h1 a[href]:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .member-header .introduction {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
@@ -3824,8 +3833,22 @@
   .member-header .details dd {
     display: inline;
   }
-  .member-header .details dt:after {
-    content: ":";
+  .member-header .details dt {
+    font-size: 0.75em;
+    font-weight: bold;
+    font-variant: normal;
+    text-transform: none;
+
+    /* @icon-ligatures */
+    font-family: "Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /* Enable Ligatures */
+    -webkit-font-feature-settings: "liga";
+       -moz-font-feature-settings: "liga=1";
+       -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+         -o-font-feature-settings: "liga";
+            font-feature-settings: "liga";
   }
   .member-header .details dd {
     margin-right: 1.5em;
@@ -3953,8 +3976,8 @@
   .topic-header h1 a[href]:hover,
   .topic-header h1 a[href]:active,
   .topic-header h1 a[href]:focus {
-    border-color: rgb(113, 179, 247); /* @link-color */
-    color: rgb(113, 179, 247); /* @link-color */
+    border-color:rgb(47, 132, 218); /* @ocean */
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* KLUDGE: Support the old image maps on pages like this one: http://www.good.is/los-angeles */
@@ -4090,7 +4113,7 @@
   }
   .post > header .vote abbr:before {
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @sky */
   }
 
   .post > header {
@@ -4206,6 +4229,15 @@
     color: rgb(101, 102, 102); /* @steel */
   }
 
+  .post > article h1      a:hover,
+  .post > article h1      a:active,
+  .post > article h1      a:focus,
+  .post > article .source a:hover,
+  .post > article .source a:active,
+  .post > article .source a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
   .post > article h1 img {
     display: block;
     margin-bottom: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
@@ -4225,8 +4257,8 @@
   .post > article h1      a:focus,
   .post > article .source a:hover,
   .post > article .source a:active,
-  .post > article .source a:focus {
-    color: rgb(113, 179, 247); /* @link-color */
+  .post > article .source a:focus {=
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .post > article p {
     line-height: 1.875; /* 30px / @font-size(16px) */
@@ -4235,44 +4267,61 @@
 
 /* =Slideshow
   ----------------------------------------------- */
-  .post > article figure.slideshow {
+  .slideshow {
     margin-bottom: 1.5em;
   }
-  .post > article figure.slideshow a {
+  .slideshow a {
     display: block;
-    border: 10px solid black;
+    border: 0.625em solid rgb(0, 1, 2); /* @midnight */
     position: relative;
-    background: black;
+    background: rgb(0, 1, 2); /* @midnight */
   }
-  .post > article figure.slideshow a img {
+  .slideshow a img {
     transition: opacity 0.2s;
   }
-  .post > article figure.slideshow a:hover  img,
-  .post > article figure.slideshow a:active img,
-  .post > article figure.slideshow a:focus  img {
+  .slideshow a:hover  img,
+  .slideshow a:active img,
+  .slideshow a:focus  img {
     opacity: 0.6;
   }
-  .post > article figure.slideshow p {
+  .slideshow p {
     position: absolute;
     top: 50%;
     left: 50%;
-    background: black;
-    background: rgba(0, 0, 0, 0.75);
-    background-image: url(shared/post/slideshow.png);
-    background-image: url(shared/post/slideshow.svg), none;
-    background-position: 1em 50%;
-    background-repeat: no-repeat;
-    padding: 0.5em 1em 0.5em 3em;
+    background:  rgb(0, 1, 2);       /* @midnight */
+    background: rgba(0, 1, 2, 0.75); /* @midnight */
+    padding: 0.5em 1em 0.5em 1.25em;
     color: rgb(204, 204, 204);
     border-radius: 1.5em;
     margin-top: -1em;
     margin-left: -7em;
     font-weight: bold;
   }
-  .post > article figure.slideshow img {
-    display: block;
-    max-width: 100% !important;
-    margin: 0 !important;
+  .slideshow p:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    font-size: 1.25em;
+    line-height: 1;
+    margin-right: 0.65em;
+    vertical-align: middle;
+  }
+  .slideshow img {
+    margin: 0;
   }
 
 
@@ -4633,9 +4682,27 @@
     text-transform: uppercase;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
     line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
-    background: transparent url(shared/post/target.svg) no-repeat left;
-    background-size: 1.6363636364em auto; /* image-size(18px) / font-size(0.6875em) */
-    padding-left: 2.25em;
+  }
+  .discussion h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-active */
+    content: "\e614";
+
+    font-size: 1.65em;
+    margin-right: 0.4375em;
+    vertical-align: top;
   }
   .discussion h3 {
     font-size: inherit;
@@ -4650,7 +4717,7 @@
   .discussion h3 a:hover,
   .discussion h3 a:active,
   .discussion h3 a:focus {
-    color: rgb(153, 153, 153); /* @link-hover-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .discussion h3 img {
     display: block;
@@ -4840,7 +4907,7 @@
     color: rgb(99, 221, 144);
   }
   .explore .vote {
-    color: rgb(113, 179, 247); /* @link-color */
+    color: rgb(113, 179, 247); /* @sky */
   }
   .explore .connect {
     color: rgb(238, 130, 105); /* @salmon */

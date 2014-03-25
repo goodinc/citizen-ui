@@ -2,6 +2,8 @@
 This file contains the original icons, from Adobe Illustrator:
 icons.original.svg
 
+It also contains the lowercase and uppercase alphabet of “Brandon Grotesque Bold” (a-z and A-Z) as a fallback for browsers that don’t support ligatures.
+
 
 --
 To add symbols to the font files (icons.ttf, icons.eot, etc…):
