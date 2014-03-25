@@ -772,7 +772,7 @@
 
   /* Follow */
   .follow button {
-    background-color: rgb(124, 227, 162);
+    background-color: rgb(124, 227, 162); /* @moss */
   }
   .follow button:hover,
   .follow button:active,
@@ -791,7 +791,7 @@
   /* Do */
   .scripted-do form.do h6,
   .do button {
-    background-color: rgb(124, 227, 162);
+    background-color: rgb(124, 227, 162); /* @moss */
   }
   .scripted-do form.do h6:hover,
   .scripted-do form.do h6:active,
@@ -1066,7 +1066,7 @@
 
     font-size: 1.4375em;
     position: absolute;
-    margin-left: -2.5em;
+    margin-left: -2.25em;
   }
   .scripted-do form.do    h6:before {
     content: "\e604"; /* @icon-doing */
@@ -2551,7 +2551,7 @@
 
     display: inline-block;
     vertical-align: middle;
-    margin-right: 0.375em;
+    margin-right: 0.25em;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
