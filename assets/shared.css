@@ -3926,6 +3926,7 @@
     border-color: rgb(51, 52, 53); /* 3px / @font-size */
     padding: 1.5625em; /* @line-height - 0.1875em */
     background: white;
+    text-align: center;
   }
 
   .topic-header > h1.has-image {
@@ -3946,7 +3947,6 @@
     margin-bottom: 0;
     font-size: 2.25em;
     line-height: 1.5555555556; /* (@line-height x 2) / 2.25 */
-    text-align: center;
   }
   @media (min-width: 40em) {
     .topic-header > .container > div {
@@ -3992,11 +3992,10 @@
     color: rgb(238, 130, 105); /* @salmon */
     font-size: 0.875em;        /* 14px / @font-size */
     line-height: 2;            /* @line-height / 0.875 */
-    text-align: center;
   }
 
   /* OPTIONAL: Make featured topics look fancy */
-  .topic-header > .container > .featured {
+  .disabled .topic-header > .container > .featured {
     border-color: rgb(113, 179, 247); /* @blueberry */
     border-color: rgb(240, 106, 101); /* @pink */
     border-color: rgb(248, 131, 63); /* @orange */
@@ -4004,9 +4003,8 @@
   }
   .topic-header > .container > .featured h1 {
     margin-top: 0;
-    text-align: left;
   }
-  .topic-header > .container > .featured a {
+  .disabled .topic-header > .container > .featured a {
     color: rgb(113, 179, 247); /* @blueberry */
     color: rgb(240, 106, 101); /* @pink */
     color: rgb(248, 131, 63); /* @orange */
@@ -4016,9 +4014,14 @@
     color: rgb(70, 70, 70); /* @iron */
     text-align: left;
   }
-  .topic-header > .container > .featured img {
-    margin-top: -0.875em;
-    float: right;
+  @media (min-width: 30em) {
+    .topic-header > .container > .featured {
+      text-align: left;
+    }
+    .topic-header > .container > .featured img {
+      margin-top: -0.875em;
+      float: right;
+    }
   }
 
 
