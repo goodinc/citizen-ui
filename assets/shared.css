@@ -3835,23 +3835,46 @@
   .member-header .details dd {
     display: inline;
   }
-  .member-header .details dt {
-    font-size: 0.75em;
-    font-weight: bold;
+  .member-header .details dt:after {
+    content: ":";
+  }
+
+  .member-header .details dt.location,
+  .member-header .details dt.twitter,
+  .member-header .details dt.website {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .member-header .details dt.location + dd:before,
+  .member-header .details dt.twitter  + dd a:before,
+  .member-header .details dt.website  + dd a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
     font-variant: normal;
     text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-ligatures */
-    font-family: "Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    /* Enable Ligatures */
-    -webkit-font-feature-settings: "liga";
-       -moz-font-feature-settings: "liga=1";
-       -moz-font-feature-settings: "liga";
-        -ms-font-feature-settings: "liga" 1;
-         -o-font-feature-settings: "liga";
-            font-feature-settings: "liga";
+    font-size: 1.25em;
+    margin-right: 0.25em;
   }
+  .member-header .details dt.location + dd:before {
+    content: "\e618"; /* @icon-location */
+  }
+  .member-header .details dt.twitter  + dd a:before {
+    content: "\e60f"; /* @icon-twitter */
+  }
+  .member-header .details dt.website  + dd a:before {
+    content: "\e614"; /* @icon-active */
+  }
+
   .member-header .details dd {
     margin-right: 1.5em;
   }
@@ -3866,7 +3889,7 @@
   .member-header .details dd a:hover,
   .member-header .details dd a:active,
   .member-header .details dd a:focus {
-    color: rgb(153, 153, 153);
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
   .member-header > .container > div {
