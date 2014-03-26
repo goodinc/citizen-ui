@@ -85,7 +85,7 @@
     color: rgb(42, 43, 44); /* @text-color */
   }
   a {
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(113, 179, 247); /* @blueberry */
     transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
   }
   a:hover,
@@ -346,7 +346,7 @@
     border-radius: 0.25em;
   }
   .pagination .next a {
-    background-color: rgb(113, 179, 247); /* @sky */
+    background-color: rgb(113, 179, 247); /* @blueberry */
     color: white;
   }
   .pagination .next a:hover,
@@ -720,7 +720,7 @@
     display: inline-block;
     font-size: inherit;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
-    background-color: rgb(113, 179, 247); /* @sky */
+    background-color: rgb(113, 179, 247); /* @blueberry */
     color: white;
     cursor: pointer;
     border: 0.1em solid rgba(0, 0, 0, 0.15);
@@ -752,7 +752,7 @@
 
   /* Vote */
   .vote button {
-    background-color: rgb(113, 179, 247); /* @sky */
+    background-color: rgb(113, 179, 247); /* @blueberry */
   }
   .voted button {
     background-color: rgb(49, 144, 242);
@@ -973,7 +973,7 @@
   .scripted-do form.done  h6 + p button:hover,
   .scripted-do form.done  h6 + p button:active,
   .scripted-do form.done  h6 + p button:focus {
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(113, 179, 247); /* @blueberry */
   }
 
   /* OPTIONAL: Center the drop-down */
@@ -1040,7 +1040,7 @@
     margin-left: -2em;
 
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(113, 179, 247); /* @blueberry */
   }
   .vote button {
     margin-left: 2em;
@@ -1922,7 +1922,7 @@
          -o-font-feature-settings: "liga";
             font-feature-settings: "liga";
 
-    color: rgb(70, 71, 72);
+    color: rgb(70, 70, 70); /* @iron */
     font-weight: normal;
     line-height: 1
   }
@@ -2558,15 +2558,15 @@
   }
   .meta .dos abbr:before {
     content: "\e604"; /* @icon-do */
-    color: rgb(83, 231, 185);
+    color: rgb(83, 231, 185); /* @kiwi */
   }
   .meta .votes abbr:before {
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(113, 179, 247); /* @blueberry */
   }
   .meta .comments abbr:before {
     content: "\e601"; /* @icon-comment */
-    color: rgb(255, 223, 145);
+    color: rgb(255, 223, 145); /* @banana */
   }
 
   /* Time */
@@ -2990,7 +2990,7 @@
 
     content: "\e603"; /* @icon-tag */
 
-    color: rgb(247, 105, 100);
+    color: rgb(247, 105, 100); /* @strawberry */
     font-size: 0.9375em; /* 15px / @font-size */
   }
 
@@ -3104,16 +3104,16 @@
     color: rgb(153, 153, 153);
   }
   main:hover .activity-item:hover .meta .dos abbr:before {
-    color: rgb(83, 231, 185);
+    color: rgb(83, 231, 185); /* @kiwi */
   }
   main:hover .activity-item:hover .meta .votes abbr:before {
-    color: rgb(113, 179, 247); /* sky */
+    color: rgb(113, 179, 247); /* @blueberry */
   }
   main:hover .activity-item:hover .meta .comments abbr:before {
-    color: rgb(255, 223, 145);
+    color: rgb(255, 223, 145); /* @banana */
   }
   main:hover .activity-item:hover section.tags h4:before {
-    color: rgb(247, 105, 100);
+    color: rgb(247, 105, 100); /* @strawberry */
   }
 
   /* OPTIONAL: Move the primary source up a little */
@@ -3995,6 +3995,31 @@
     text-align: center;
   }
 
+  /* OPTIONAL: Make featured topics look fancy */
+  .topic-header > .container > .featured {
+    border-color: rgb(113, 179, 247); /* @blueberry */
+    border-color: rgb(240, 106, 101); /* @pink */
+    border-color: rgb(248, 131, 63); /* @orange */
+    border-color: rgb(14, 83, 125); /* @blue */
+  }
+  .topic-header > .container > .featured h1 {
+    margin-top: 0;
+    text-align: left;
+  }
+  .topic-header > .container > .featured a {
+    color: rgb(113, 179, 247); /* @blueberry */
+    color: rgb(240, 106, 101); /* @pink */
+    color: rgb(248, 131, 63); /* @orange */
+    color: rgb(14, 83, 125); /* @blue */
+  }
+  .topic-header > .container > .featured p {
+    color: rgb(70, 70, 70); /* @iron */
+    text-align: left;
+  }
+  .topic-header > .container > .featured img {
+    margin-top: -0.875em;
+    float: right;
+  }
 
 
 /* =Post
@@ -4109,11 +4134,11 @@
 
   .post > header .do abbr:before {
     content: "\e604"; /* @icon-do */
-    color: rgb(83, 231, 185);
+    color: rgb(83, 231, 185); /* @kiwi */
   }
   .post > header .vote abbr:before {
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(113, 179, 247); /* @blueberry */
   }
 
   .post > header {
@@ -4370,7 +4395,7 @@
 
     content: "\e603"; /* @icon-tag */
 
-    color: rgb(247, 105, 100);
+    color: rgb(247, 105, 100); /* @strawberry */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
   }
@@ -4907,7 +4932,7 @@
     color: rgb(99, 221, 144);
   }
   .explore .vote {
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(113, 179, 247); /* @blueberry */
   }
   .explore .connect {
     color: rgb(238, 130, 105); /* @salmon */
