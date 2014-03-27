@@ -610,7 +610,7 @@
   }
   section.message.success {
     background: rgb(230, 253, 235);
-    border-color: rgb(204, 251, 204);
+    border-color: rgb(184, 231, 184);
   }
   section.message.success p,
   section.message.success li {
