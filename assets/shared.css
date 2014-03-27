@@ -2016,20 +2016,16 @@
     display: inline-block;
     padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
     padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
+  }
+  body > nav.sub li a {
     margin-right: 0.55em;
   }
   @media (min-width: 30em) {
-    body > nav.sub .rss a,
     body > nav.sub li a {
       margin-right: 2.3333333334em;
     }
     body > nav.sub li:last-child a {
       margin-right: 0;
-    }
-  }
-  @media (min-width: 30em) {
-    body > nav.sub p {
-      margin-right  : -0.875em; /* @line-height / 2 */
     }
   }
   body > nav.sub .active a {
