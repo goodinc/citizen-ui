@@ -1534,7 +1534,6 @@
   }
   #header .join a {
     font-style: normal;
-    color: rgb(51, 153, 255);
     text-decoration: none;
     font-weight: bold;
   }
@@ -2002,9 +2001,6 @@
   body > nav.sub li {
     display: inline;
   }
-  body > nav.sub ul {
-    margin-left  : -0.4125em;
-  }
   body > nav.sub li {
     display: inline;
   }
@@ -2020,20 +2016,18 @@
     display: inline-block;
     padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
     padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
-    margin-left: 0.55em;
+    margin-right: 0.55em;
   }
   @media (min-width: 30em) {
     body > nav.sub .rss a,
     body > nav.sub li a {
-      margin-left: 1.1666666667em;
-      margin-right: 1.1666666667em;
+      margin-right: 2.3333333334em;
     }
     body > nav.sub li:last-child a {
       margin-right: 0;
     }
-    body > nav.sub ul {
-      margin-left  : -0.875em; /* @line-height / 2 */
-    }
+  }
+  @media (min-width: 30em) {
     body > nav.sub p {
       margin-right  : -0.875em; /* @line-height / 2 */
     }
@@ -3348,14 +3342,27 @@
   aside p.ad img {
     display: block;
   }
-  aside p.ad,
   aside div.ad,
   aside .promotion,
   aside .fb-recommendations {
+    margin-top : 1.3125em; /* @line-height x 3/4 */
     margin-bottom : 1.3125em; /* @line-height x 3/4 */
   }
-  aside .promotion + .promotion {
-    margin-top: 1.3125em; /* @line-height x 3/4 */
+  aside div.ad:first-child,
+  aside .promotion:first-child,
+  aside .fb-recommendations:first-child {
+    margin-top: 0;
+  }
+
+  /* TEMPORARY: These only appear in the prototype */
+  aside p.ad,
+  aside section.facebook {
+    margin-top : 1.3125em; /* @line-height x 3/4 */
+    margin-bottom : 1.3125em; /* @line-height x 3/4 */
+  }
+  aside p.ad:first-child,
+  aside section.facebook:first-child {
+    margin-top: 0;
   }
 
 
@@ -4065,17 +4072,6 @@
     text-align: center;
   }
 
-  .topic-header > h1.has-image {
-    font-size: inherit;
-
-    /* @header */
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
-    max-width: 66.5625em; /* @max-page-width */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .topic-header > .container > div h1 {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
@@ -4471,6 +4467,7 @@
   }
 
   .post > footer .tags {
+    margin-top: 0.875em; /* @line-height / 2 */
     background: rgb(247, 247, 247);
     padding: 1.5em;
   }
@@ -4690,6 +4687,7 @@
   .post > footer .vote,
   .post > footer .voted,
   .post > footer .votes {
+    margin-top: 0.875em; /* @line-height / 2 */
     display: inline-block;
   }
 
@@ -5037,13 +5035,6 @@
   ----------------------------------------------- */
   .sign-in h2.action {
     font-size: inherit;
-  }
-
-  /* OPTIONAL: Add more space between the sections on the sign up / join pages 
-  (TBD: Should this be a general style, applied to a common element like .section?) */
-  .sign-in section,
-  .sign-in aside {
-    margin-top: 3.5em; /* @line-height x 2*/
   }
 
 
