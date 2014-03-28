@@ -3971,17 +3971,34 @@
   .member-header > .container {
     position: relative;
   }
-  .member-header .action {
-    margin-top: 1.75em;
-  }
+  /*
   @media (min-width: 30em) {
     .member-header .action {
       margin-top: 0;
       position: absolute;
-      top: 2.25em;
-      right: 5em;
+      top: 0;
+      right: 0;
+    }
+    .member-header > div {
+      position: relative;
     }
   }
+  @media (min-width: 65em) {
+    .member-header div.options {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  */
+
+  .member-header .action {
+    margin-top: 1.75em;
+  }
+  .member-header div.options {
+    margin-top: 3.5em;
+  }
+
   #content .member-header nav.sub {
     margin-top: 1.75em;
     padding-bottom: 0;
@@ -4844,37 +4861,46 @@
     margin-top: 1.75em; /* @line-height */
   }
 
+  .member-header .options,
   footer.options {
     text-align: right;
   }
+  .member-header .options p,
   footer.options p {
     float: left;
     margin: 0;
   }
+  .member-header .options ul,
+  .member-header .options li,
   footer.options ul,
   footer.options li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
+  .member-header .options li,
+  .member-header .options li form,
   footer.options li,
   footer.options li form {
     display: inline;
   }
+  .member-header .options ul,
   footer.options ul {
     margin-top: 0;
   }
+  .member-header .options li,
   footer.options li {
     margin-right: 0.4375em;
   }
+  .member-header .options li:last-child,
   footer.options li:last-child {
     margin-right: 0;
   }
 
-  footer.options .edit   a,
-  footer.options .flag   button,
-  footer.options .spam   button,
-  footer.options .delete button {
+  .options .edit   a,
+  .options .flag   button,
+  .options .spam   button,
+  .options .delete button {
     background-color: transparent;
     border-width: 0;
     font-weight: inherit;
@@ -4885,10 +4911,10 @@
     text-decoration: none;
   }
 
-  footer.options .edit        a:before,
-  footer.options .flag   button:before,
-  footer.options .spam   button:before,
-  footer.options .delete button:before {
+  .options .edit        a:before,
+  .options .flag   button:before,
+  .options .spam   button:before,
+  .options .delete button:before {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -4906,34 +4932,34 @@
     color: rgb(229, 229, 229);
   }
 
-  footer.options .edit a:before {
+  .options .edit a:before {
     content: "\e609"; /* @icon-edit */
   }
-  footer.options .flag button:before {
+  .options .flag button:before {
     content: "\e607"; /* @icon-flag */
   }
-  footer.options .spam button:before {
+  .options .spam button:before {
     content: "\e608"; /* @icon-ban */
   }
-  footer.options .delete button:before {
+  .options .delete button:before {
     content: "\e60a"; /* @icon-delete */
   }
 
-  footer.options .edit a:hover:before,
-  footer.options .edit a:active:before,
-  footer.options .edit a:focus:before {
+  .options .edit a:hover:before,
+  .options .edit a:active:before,
+  .options .edit a:focus:before {
     color: rgb(49, 144, 242);
   }
 
-  footer.options .flag   button:hover:before,
-  footer.options .flag   button:active:before,
-  footer.options .flag   button:focus:before,
-  footer.options .spam   button:hover:before,
-  footer.options .spam   button:active:before,
-  footer.options .spam   button:focus:before,
-  footer.options .delete button:hover:before,
-  footer.options .delete button:active:before,
-  footer.options .delete button:focus:before {
+  .options .flag   button:hover:before,
+  .options .flag   button:active:before,
+  .options .flag   button:focus:before,
+  .options .spam   button:hover:before,
+  .options .spam   button:active:before,
+  .options .spam   button:focus:before,
+  .options .delete button:hover:before,
+  .options .delete button:active:before,
+  .options .delete button:focus:before {
     color: rgb(255, 102, 102);
   }
 
