@@ -795,15 +795,21 @@
   }
   .vote  button,
   .voted button {
-    padding: 0.5em 1em;
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     font-weight: normal;
-    font-size: 1.2em;
   }
   .vote button:hover,
   .vote button:active,
   .vote button:focus {
     background-color: rgb(49, 144, 242);
+  }
+
+  /* OPTIONAL: Adjust the font size, for readability */
+  .vote  button,
+  .voted button {
+    font-size: 1.2em;
+    line-height: 1.40625em;
+    padding: 0.46875em 1.0416666667em;
   }
 
   /* Follow */
@@ -1062,7 +1068,7 @@
     color: rgb(113, 179, 247); /* @sky */
   }
   .vote button {
-    margin-left: 2em;
+    margin-left: 1.5em;
   }
 
   /* Do */
@@ -4296,8 +4302,6 @@
     color: rgb(113, 179, 247); /* @sky */
   }
 
-  .post > header .link,
-  .post > header .do,
   .post > header .doing,
   .post > header .done,
   .post > header .dos,
@@ -4306,10 +4310,41 @@
   .post > header .votes {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .post > header .link,
+  .post > header .do,
+  .post > header .doing,
+  .post > header .done,
+  .post > header .dos,
+  .post > header .vote,
+  .post > header .voted,
+  .post > header .votes {
     display: inline-block;
+    float: none;
+  }
+  .post > header h2.do,
+  .post > header h2.link {
+    margin-right: 0.55em;
+    border-right: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
+    padding-right: 1em;
+    line-height: 1;
+  }
+  .post > header .dos,
+  .post > header .votes {
+    margin-right: 0.875em;
   }
 
   /* OPTIONAL: Position the button on the right */
+  .post > header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .post > header .dos,
+  .post > header .votes {
+    margin-right: 0;
+  }
   .post > header form.do,
   .post > header form.doing,
   .post > header form.done,
@@ -4318,19 +4353,24 @@
     float: right;
     margin-top: -0.15em;
   }
-  .post > header form.vote,
-  .post > header form.voted {
-    margin-top: -0.375em;
-  }
 
-  .post > header .dos   h2,
-  .post > header .votes h2 {
-    margin-left: 0.875em;
-    border-left: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
-    padding-left: 0.875em;
+  /* OPTIONAL: Hide redundant features in the header, so they don’t wrap to the next line. */
+  @media (max-width: 25em) {
+    .post > header form {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
   }
-
-  @media (max-width: 40em) {
+  @media (max-width: 45em) {
+    .post > header .dos   ul,
+    .post > header .votes ul {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+  @media (min-width: 65em) and (max-width: 70em) {
     .post > header .dos   ul,
     .post > header .votes ul {
       /* @hidden-accessible */
@@ -4360,6 +4400,7 @@
   }
 
   .post > article {
+    margin-top: 1.75em;
     border-width: 0.1em 0;
     padding: 1.75em 0;
     border-style: solid;
@@ -4514,7 +4555,7 @@
       border-style: solid;
       border-color: rgb(218, 220, 224); /* @article-border-color */
       border-width: 0 0.1em 0.1em;
-      padding: 1.3125em 3.5em 1.75em; /* @line-height x 2 */
+      padding: 0.875em 3.5em 1.75em; /* @line-height x 2 */
     }
     .post > footer .tags {
       margin-left: -3.5em;
