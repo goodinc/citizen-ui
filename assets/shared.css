@@ -3033,7 +3033,7 @@
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
-    margin-right: 0.75em;
+    margin-right: 0.15em;
     color: rgb(153, 153, 153); /* @aluminum */
   }
 
@@ -3050,6 +3050,15 @@
 
   .activity-item .meta a {
     color: inherit;
+  }
+  .activity-item .meta .dos      a,
+  .activity-item .meta .votes    a,
+  .activity-item .meta .comments a {
+    color: inherit;
+    border: 0.1em solid rgb(244, 244, 244);
+    border-radius: 0.25em;
+    background: rgb(253, 253, 253);
+    padding: 0.25em 0.75em 0.375em;
   }
   .activity-item .meta a:hover,
   .activity-item .meta a:active,
@@ -3479,9 +3488,19 @@
   }
 
   .topic-featured .activity-item.do {
+    margin-top: 0;
     background: rgb(246, 255, 250);
     border: 0.375em solid rgb(233, 249, 240);
     padding: 1.3125em; /* @line-height x 3/4*/
+  }
+  .topic-featured .activity-item.do .meta .comments {
+    margin-left: 0.75em;
+  }
+  .topic-featured .activity-item.do .meta .dos      a,
+  .topic-featured .activity-item.do .meta .comments a {
+    background-color: transparent;
+    padding: 0;
+    border-width: 0;
   }
 
   /* KLUDGE: Remove the space above the section in featured do’s
