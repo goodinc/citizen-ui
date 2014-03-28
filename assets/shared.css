@@ -682,6 +682,9 @@
     margin-top: 0.875em; /* @line-height / 2 */
   }
 
+  .activity-list li > .message.success {
+    margin-top: 0;
+  }
   .activity-list li > .message.success:last-child {
     margin-bottom: 0.875em; /* @line-height / 2 */
   }
@@ -1226,6 +1229,23 @@
     -webkit-animation : innerspin 2s infinite linear;
        -moz-animation : innerspin 2s infinite linear;
             animation : innerspin 2s infinite linear;
+  }
+
+  .activity-item .meta a.progress {
+    position: relative;
+  }
+  .activity-item .meta a.progress abbr {
+    color: transparent;
+  }
+  .activity-item .meta a.progress abbr:before {
+    color: transparent;
+  }
+  .activity-item .meta a .loading {
+    position: absolute;
+    margin-top: -0.9375em;
+    margin-left: -0.9375em;
+    top: 50%;
+    left: 50%;
   }
 
   /* OPTIONAL: Center the loading indicator, when it appears after pagination */
@@ -3844,6 +3864,7 @@
   .comment-list + .more {
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 1.25em; /* @line-height(20px) */
+    padding-bottom: 1.25em
   }
   .comment-list ul {
     margin-top: 0;
