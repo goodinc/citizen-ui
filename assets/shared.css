@@ -3838,15 +3838,15 @@
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
     padding-top: 1.25em;
+    margin-bottom: 0;
   }
   .comment-list article,
   .comment-list + .more {
-    margin-top: 1.25em; /* @line-height(20px) */
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 1.25em; /* @line-height(20px) */
   }
-  .comment-list article + article {
-    margin-top: 1.25em; /* @line-height(20px) */
+  .comment-list ul {
+    margin-top: 0;
   }
 
   .comment-list article > h3 img {
@@ -3883,18 +3883,39 @@
     display: none;
   }
 
-  @media (min-width: 25em) {
+  @media (min-width: 40em) {
     .comment-list article {
       border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
       position: relative;
       padding: 1.25em; /* @line-height(20px) */
     }
-    .comment-list article {
+
+    .comment-list li article {
       padding-left: 5.625em; /* 90px / 16px */
     }
-    .comment-list article + article {
+    .comment-list li li article {
       padding-left: 10em; /* 160px / 16px */
     }
+    .comment-list li li li article {
+      padding-left: 14.375em; /* 230px / 16px */
+    }
+    .comment-list li li li li article {
+      padding-left: 18.75em; /* 300px / 16px */
+    }
+
+    .comment-list li article {
+      padding-left: 5.625em; /* 90px / 16px */
+    }
+    .comment-list li li article {
+      padding-left: 7.5em; /* 120px / 16px */
+    }
+    .comment-list li li li article {
+      padding-left: 9.375em; /* 150px / 16px */
+    }
+    .comment-list li li li li article {
+      padding-left: 11.25em; /* 180px / 16px */
+    }
+
     .comment-list article > h3 img {
       float: none;
       vertical-align: -3.25em;
