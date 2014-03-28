@@ -2313,8 +2313,8 @@
       box-sizing      : border-box;
     }
 
-    #content .has-aside .comments,
-    #content .has-aside .popular-posts,
+    #content .has-aside > .comments,
+    #content .has-aside > .popular-posts,
     #content .has-aside .activity > header,
     #content .has-aside .follow-list,
     #content .has-aside .activity-list,
