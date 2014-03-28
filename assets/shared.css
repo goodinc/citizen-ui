@@ -1231,13 +1231,13 @@
             animation : innerspin 2s infinite linear;
   }
 
-  .activity-item .meta a.progress {
+  .activity-item .meta a.loading-container {
     position: relative;
   }
-  .activity-item .meta a.progress abbr {
+  .activity-item .meta a.loading-container abbr {
     color: transparent;
   }
-  .activity-item .meta a.progress abbr:before {
+  .activity-item .meta a.loading-container abbr:before {
     color: transparent;
   }
   .activity-item .meta a .loading {
