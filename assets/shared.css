@@ -2165,6 +2165,12 @@
     body .topic-header nav.sub form {
       margin-top: 0.25em;
       font-size: 0.75em;
+      margin-right: 0;
+      float: none;
+    }
+    body * nav.sub ul {
+      margin-top: 0.875em;
+      margin-left: -0.875em;
     }
   }
 
@@ -2768,7 +2774,7 @@
 
   .activity-item form {
     font-size: 0.75em;
-    margin-top: 2.3333333333em; /* @line-height / 0.75 */
+    margin-top: 2.0416666666em; /* @line-height / 0.75 */
     float: left;
   }
 
@@ -2789,6 +2795,7 @@
     float: right;
     border-right-width: 0;
     margin-left: 0.9375em; /* @image-margin */
+    margin-bottom: 0.875em;
 
     /* OPTIONAL: Move the image up and to the right a little */
     margin-top   : -0.20833333333333em; /* @line-height(20px) / font-size(24px) x 1/4 */
@@ -2819,11 +2826,26 @@
   }
 
   /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
-  @media (min-width: 50em) {
+  @media (max-width: 29.9em) {
+    .activity-item .tags {
+      margin-left: 0.875em;
+    }
+    .activity-item .do .tags {
+      margin-right: 7em;
+    }
+    .scripted-do .activity-item .do     form,
+                 .activity-item .follow form {
+      position: absolute;
+      margin-top: 0;
+      bottom: -0.5em;
+      right: 1.75em;
+    }
+  }
+  @media (min-width: 30em) {
 
     /* Make space for the buttons */
     .activity-item .do h3 {
-      margin-right: 5em;
+      margin-right: 4em;
     }
     .activity-item .follow h3,
     .activity-item .follow h3           + .introduction,
@@ -3038,6 +3060,13 @@
   .activity-item .meta a {
     color: inherit;
   }
+  .activity-item .meta .dos,
+  .activity-item .meta .votes,
+  .activity-item .meta .comments {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0.375em;
+  }
   .activity-item .meta .dos      a,
   .activity-item .meta .votes    a,
   .activity-item .meta .comments a {
@@ -3045,7 +3074,8 @@
     border: 0.1em solid rgb(244, 244, 244);
     border-radius: 0.25em;
     background: rgb(253, 253, 253);
-    padding: 0.25em 0.75em 0.375em;
+    padding: 0.1em 0.75em 0.225em;
+    display: inline-block;
   }
   .activity-item .meta a:hover,
   .activity-item .meta a:active,
@@ -3057,11 +3087,11 @@
 /* =Tags
   ----------------------------------------------- */
   .activity-item .tags {
-    margin-top: 0.875em; /* @line-height / 2 */
+    margin-top: 0.4375em; /* @line-height / 4 */
   }
   @media (min-width: 30em) {
     .activity-item section.tags {
-      margin: 0;
+      margin: 0 0 0 0.875em;
       display: inline;
       float: right;
     }
@@ -3134,7 +3164,6 @@
     position: relative;
     padding: 2.5em 1.25em; /* @line-height(20px) x 2    @line-height(20px) */
   }
-
   @media (max-width: 24.9em) {
     .activity-item {
       margin-left  : -1.5em; /* @line-height(20px) */
@@ -4794,7 +4823,7 @@
     margin-top: 0;
   }
   footer.options li {
-    margin-right: 1em;
+    margin-right: 0.4375em;
   }
   footer.options li:last-child {
     margin-right: 0;
@@ -4866,21 +4895,34 @@
     color: rgb(255, 102, 102);
   }
 
-  .activity-list > li {
+  /* OPTIONAL: Make the admin options take up less space */
+  .activity-list .activity-item {
+    margin-bottom: 0;
+  }
+  .activity-item ~ footer.options {
+    margin-top: -1.75em;
+    margin-bottom: 0.875em;
     position: relative;
   }
-  .activity-list footer.options {
-    margin-top: -2.5em;
-    position: absolute;
-    width: 100%;
-    padding: 0 1.25em;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
+
+  @media (min-width: 30em) {
+    .activity-list > li {
+      position: relative;
+    }
+    .activity-list footer.options {
+      margin-top: -2.25em;
+      margin-bottom: 0;
+      position: absolute;
+      width: 100%;
+      padding: 0 1.25em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
   }
+
 
   /* OPTIONAL: Only show the admin options for one item at a time */
   main:hover .activity-item ~ footer.options {
-    position: absolute;
     opacity: 0;
     transition: opacity 0.2s;
   }
