@@ -1023,25 +1023,9 @@
   .scripted-do form.done  h6 + p button {
     min-width: 11em;
   }
-  @media (max-width: 49.9em) {
-    .scripted-do form.do.active    h6 + p,
-    .scripted-do form.doing.active h6 + p,
-    .scripted-do form.done.active  h6 + p {
-      right: 0;
-    }
-  }
-  @media (min-width: 50em) {
-    .scripted-do form.do.active    h6 + p,
-    .scripted-do form.doing.active h6 + p,
-    .scripted-do form.done.active  h6 + p {
-      right: -3em;
-    }
-  }
-
-  /* On featured items, the drop-down always appears on the left. */
-  .scripted-do .featured form.do.active    h6 + p,
-  .scripted-do .featured form.doing.active h6 + p,
-  .scripted-do .featured form.done.active  h6 + p {
+  .scripted-do form.do.active    h6 + p,
+  .scripted-do form.doing.active h6 + p,
+  .scripted-do form.done.active  h6 + p {
     right: -3em;
   }
 
@@ -2587,10 +2571,6 @@
     clear: both;
   }
 
-  .activity-item section,
-  .activity-item article {
-    margin-top: 1.5em; /* @line-height */
-  }
   .activity-item p {
     margin-top    : 0.75em; /* @line-height / 2 */
     margin-bottom : 0.75em;
@@ -2783,6 +2763,7 @@
   .activity-item form {
     font-size: 0.75em;
     margin-top: 2.3333333333em; /* @line-height / 0.75 */
+    float: left;
   }
 
 
@@ -3067,12 +3048,17 @@
   }
 
 
-/* =Topics
+/* =Tags
   ----------------------------------------------- */
-  .activity-item section.tags {
-    margin: 0;
-    display: inline;
-    float: right;
+  .activity-item .tags {
+    margin-top: 0.875em; /* @line-height / 2 */
+  }
+  @media (min-width: 30em) {
+    .activity-item section.tags {
+      margin: 0;
+      display: inline;
+      float: right;
+    }
   }
   .activity-item section.tags h4 {
     margin: 0;
@@ -3118,10 +3104,12 @@
     display: inline;
   }
   .activity-item section.tags li {
-    display: inline;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 1em;
   }
-  .activity-item section.tags li + li {
-    margin-left: 1em;
+  .activity-item section.tags li:last-child {
+    margin-right: 0;
   }
   .activity-item section.tags a {
     color: rgb(153, 153, 153); /* @aluminum */
@@ -4308,12 +4296,6 @@
     color: rgb(113, 179, 247); /* @sky */
   }
 
-  .post > header {
-    width: 100%;
-    display: table;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
-  }
   .post > header .link,
   .post > header .do,
   .post > header .doing,
@@ -4323,11 +4305,25 @@
   .post > header .voted,
   .post > header .votes {
     margin-top: 0;
-    display: table-cell;
-    vertical-align: middle;
     margin-bottom: 0;
+    display: inline-block;
   }
-  .post > header .dos h2,
+
+  /* OPTIONAL: Position the button on the right */
+  .post > header form.do,
+  .post > header form.doing,
+  .post > header form.done,
+  .post > header form.vote,
+  .post > header form.voted {
+    float: right;
+    margin-top: -0.15em;
+  }
+  .post > header form.vote,
+  .post > header form.voted {
+    margin-top: -0.375em;
+  }
+
+  .post > header .dos   h2,
   .post > header .votes h2 {
     margin-left: 0.875em;
     border-left: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
@@ -4341,12 +4337,6 @@
       position: absolute;
       left: -9999px;
     }
-  }
-
-  /* OPTIONAL: Make the buttons on the post page a little smaller. */
-  .post > header form.do,
-  .post > header form.vote {
-    text-align: right;
   }
 
   /* OPTIONAL: Make the buttons on the post page a little smaller. */
@@ -4589,9 +4579,6 @@
     margin-right: 0.5em;
   }
 
-  .post > footer .tags ul {
-    margin-top: 1.2em;
-  }
   .post > footer .tags:after {
     /* @clearfix */
     content: "";
@@ -4600,7 +4587,7 @@
   }
   .post > footer .tags li {
     float: left;
-    margin: 0.5em 0.5em 0 0;
+    margin: 0 0.375em 0.375em 0;
   }
   .post > footer .tags a {
     display: inline-block;
@@ -4721,6 +4708,17 @@
   .post > footer .votes {
     margin-top: 0.875em; /* @line-height / 2 */
     display: inline-block;
+  }
+
+  @media (min-width: 35em) {
+    /* OPTIONAL: Position count on the right */
+    .post > footer .dos,
+    .post > footer .votes {
+      float: right;
+    }
+    .post > footer .tags {
+      clear: both;
+    }
   }
 
   .post article form.secondary {
