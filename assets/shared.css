@@ -4044,13 +4044,6 @@
   }
   */
 
-  .member-header .action {
-    margin-top: 1.75em;
-  }
-  .member-header div.options {
-    margin-top: 3.5em;
-  }
-
   #content .member-header nav.sub {
     margin-top: 1.75em;
     padding-bottom: 0;
@@ -4913,11 +4906,21 @@
     margin-top: 1.75em; /* @line-height */
   }
 
+  .member-header .options {
+    margin-top    :  1.3125em;
+    margin-bottom : -1.3125em;
+  }
+  @media (min-width: 65em) {
+    .member-header .options {
+      margin-top: 0;
+    }
+  }
+
+
   .member-header .options,
   footer.options {
     text-align: right;
   }
-  .member-header .options p,
   footer.options p {
     float: left;
     margin: 0;
@@ -4930,6 +4933,8 @@
     margin-left: 0;
     padding-left: 0;
   }
+  .member-header .options p,
+  .member-header .options ul,
   .member-header .options li,
   .member-header .options li form,
   footer.options li,
@@ -4940,6 +4945,7 @@
   footer.options ul {
     margin-top: 0;
   }
+  .member-header .options p,
   .member-header .options li,
   footer.options li {
     margin-right: 0.4375em;
