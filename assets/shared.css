@@ -3344,10 +3344,11 @@
     border-width: 0 1px 1px 1px;
   }
 
-  @media (max-width: 30em) {
+  /* OPTIONAL: Make the member images about half their usual size on small screens */
+  @media (max-width: 29.9em) {
     .activity-item > .source:first-child img {
-      width: 30px;
-      height: 30px;
+      width  : 2.5em; /* 30px / font-size(12px) */
+      height : 2.5em;
     }
   }
 
@@ -4610,6 +4611,12 @@
   .post > article p {
     line-height: 1.875; /* 30px / @font-size(16px) */
   }
+
+  /* TBD: Should we add a height attribute to the iframe instead? */
+  .post > article iframe {
+    height: 505px;
+  }
+
 
 
 /* =Slideshow
