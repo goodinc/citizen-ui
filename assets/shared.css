@@ -677,6 +677,50 @@
     color: inherit;
   }
 
+  /* OPTIONAL: Add a close button to success messages */
+  .message.success {
+    position: relative;
+  }
+  .message.success .hide {
+    margin-top: 1.75em;
+    display: block;
+  }
+  @media (min-width: 30em) {
+    .message.success {
+      padding-right: 8.75em;
+    }
+    .message.success .hide {
+      position: absolute;
+      top: 2.625em;
+      right: 2.625em;
+      margin: 0;
+    }
+  }
+
+  .message.success .hide a {
+    text-decoration: none;
+  }
+  .message.success .hide a:hover,
+  .message.success .hide a:active,
+  .message.success .hide a:focus {
+    color: black;
+  }
+  .message.success .hide a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+    margin-right: 0.375em;
+  }
+
   /* OPTIONAL: Add some space above the message if it appears within the sub navigation */
   body > nav .message {
     margin-top: 0.875em; /* @line-height / 2 */
@@ -3297,6 +3341,13 @@
     border-color: rgb(221, 223, 227); /* @silver-blue */
     border-style: solid;
     border-width: 0 1px 1px 1px;
+  }
+
+  @media (max-width: 30em) {
+    .activity-item > .source:first-child img {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   /* OPTIONAL: Position the time in the top right corner */
