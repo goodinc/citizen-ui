@@ -4932,6 +4932,20 @@
     }
   }
 
+  /* OPTIONAL: Position the edit button in the top right corner, on large screens */
+  .member-header .action a {
+    font-size: 0.75em;
+  }
+  @media (min-width: 65em) {
+    .member-header .introduction {
+      margin-right: 3em;
+    }
+    .member-header .action {
+      position: absolute;
+      top: 0;
+      right: 4em;
+    }
+  }
 
   .member-header .options,
   footer.options {
