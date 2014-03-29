@@ -1482,6 +1482,7 @@
     font-weight: bold;
     font-style: normal;
     text-decoration: none;
+    margin-left: 0.75em;
   }
 
 
@@ -4563,6 +4564,28 @@
     color: inherit;
     text-decoration: inherit;
   }
+  .post > article header .action {
+    font-size: 0.75em;
+    margin-top: 0;
+    margin-bottom: 2.3333333333em; /* @line-height / 0.75 */
+  }
+  .post > article header .edit a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+
+    margin-right: 0.375em;
+    content: "\e609"; /* @icon-edit */
+  }
   .post > article .source {
     color: rgb(153, 153, 153); /* @activity-source */
     font-size: 0.75em;
@@ -5452,8 +5475,21 @@
     font-weight: normal;
     letter-spacing: 0.05em;
   }
+  .explore .follow-list form {
+    position: static;
+    text-align: inherit;
+    margin-top: 0.875em;
+  }
   .explore .follow-list {
-    max-width: 33em;
+    margin-top: 3.5em;
+  }
+  .explore .follow-list li {
+    border-width: 0;
+    padding: 0;
+    margin-bottom: 3.5em;
+  }
+  .explore .follow-list li h3 {
+    margin-right: 0;
   }
   .explore .follow-list img {
     border-radius: 100%;
@@ -5463,13 +5499,8 @@
     font-size: 3em;
     line-height   : 1.1666666667em; /* @line-height x 2 / 3 */
     margin-top    : 1.1666666667em;
-    margin-bottom : 0;
+    margin-bottom : 0.2916666667em;
     display: table;
-    border-bottom: 0.1em solid transparent;
-  }
-  .explore .headlines a:hover  h3,
-  .explore .headlines a:active h3,
-  .explore .headlines a:focus  h3 {
     border-bottom: 0.1em solid;
   }
   .explore .post {
@@ -5484,9 +5515,29 @@
   .explore .connect {
     color: rgb(238, 130, 105); /* @salmon */
   }
+  .explore .follow-list li > a {
+    color: inherit;
+  }
+  .explore .follow-list li > a:hover  h3,
+  .explore .follow-list li > a:active h3,
+  .explore .follow-list li > a:focus  h3 {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .explore .follow-list a p {
+    font-size: 0.75em;
+  }
+
+  /* OPTIONAL: Make the page more compact, on large screens */
+  @media (min-width: 40em) {
+    .explore .follow-list li {
+      display: inline-block;
+      width: 19em;
+      vertical-align: top;
+    }
+  }
 
 
-/* =Explore
+/* =Profile Form
   ----------------------------------------------- */
   .experimental .profile-form label > span:first-child {
     font-variant: small-caps;
