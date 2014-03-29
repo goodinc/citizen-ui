@@ -616,7 +616,7 @@
   /* =Messages
   ----------------------------------------------- */
   section.message {
-    padding: 2.625em; /* @line-height x 3 / 2 */
+    padding: 1.375em 2.625em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231);
     border: 0.1875em solid rgb(243, 239, 209);
   }
@@ -681,7 +681,7 @@
   .message.success {
     position: relative;
   }
-  .message.success .hide {
+  .message.success .close {
     margin-top: 1.75em;
     display: block;
   }
@@ -689,23 +689,24 @@
     .message.success {
       padding-right: 8.75em;
     }
-    .message.success .hide {
+    .message.success .close {
       position: absolute;
-      top: 2.625em;
+      top: 1.375em;
       right: 2.625em;
       margin: 0;
     }
   }
 
-  .message.success .hide a {
+  .message.success .close a {
     text-decoration: none;
+    display: block;
   }
-  .message.success .hide a:hover,
-  .message.success .hide a:active,
-  .message.success .hide a:focus {
+  .message.success .close a:hover,
+  .message.success .close a:active,
+  .message.success .close a:focus {
     color: black;
   }
-  .message.success .hide a:before {
+  .message.success .close a:after {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -718,7 +719,7 @@
     -moz-osx-font-smoothing: grayscale;
 
     content: "\e60a"; /* @icon-delete */
-    margin-right: 0.375em;
+    margin-left: 0.375em;
   }
 
   /* OPTIONAL: Add some space above the message if it appears within the sub navigation */
