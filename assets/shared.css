@@ -4487,6 +4487,15 @@
     margin-top: -0.15em;
   }
 
+  /* Support multiple form elements, wrapped in a container */
+  .post > header .todo_actions {
+    float: right;
+    margin-top: -0.15em;
+  }
+  .post > header .todo_actions form {
+    margin-bottom: 0;
+  }
+
   /* OPTIONAL: Hide redundant features in the header, so they don’t wrap to the next line. */
   @media (max-width: 25em) {
     .post > header form {
@@ -4940,6 +4949,9 @@
   footer.options li,
   footer.options li form {
     display: inline;
+  }
+  .member-header .options p {
+    float: none;
   }
   .member-header .options ul,
   footer.options ul {
