@@ -4241,6 +4241,8 @@
     .member-header > .container > div {
       border-width: 0.1em;
       padding: 2.625em;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -4510,6 +4512,7 @@
   .post > header .dos,
   .post > header .votes {
     margin-right: 0;
+    margin-bottom: 1.75em; /* @line-height */
   }
   .post > header form.do,
   .post > header form.doing,
@@ -4518,6 +4521,7 @@
   .post > header form.voted {
     float: right;
     margin-top: -0.15em;
+    margin-bottom: 1.75em; /* @line-height */
   }
 
   /* Support multiple form elements, wrapped in a container */
@@ -4529,7 +4533,7 @@
     margin-bottom: 0;
   }
 
-  /* OPTIONAL: Hide redundant features in the header, so they don’t wrap to the next line. */
+  /* OPTIONAL: Hide redundant features in the header, so they won’t wrap to the next line. */
   @media (max-width: 25em) {
     .post > header form {
       /* @hidden-accessible */
@@ -4538,14 +4542,6 @@
     }
   }
   @media (max-width: 45em) {
-    .post > header .dos   ul,
-    .post > header .votes ul {
-      /* @hidden-accessible */
-      position: absolute;
-      left: -9999px;
-    }
-  }
-  @media (min-width: 65em) and (max-width: 70em) {
     .post > header .dos   ul,
     .post > header .votes ul {
       /* @hidden-accessible */
@@ -4774,7 +4770,7 @@
       border-style: solid;
       border-color: rgb(218, 220, 224); /* @article-border-color */
       border-width: 0.1em 0.1em 0;
-      padding: 1.75em 3.5em 1.75em; /* @line-height x 2 */
+      padding: 1.75em 3.5em 0; /* @line-height x 2 */
     }
     .post > footer {
       margin-top: 0;
@@ -5626,6 +5622,8 @@
     .profile-form form {
       border-width: 0.1em;
       padding: 1.75em; /* @line-height */
+      margin-left: 0;
+      margin-right: 0;
     }
     .profile-form .basics,
     .profile-form .details {
