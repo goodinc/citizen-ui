@@ -580,13 +580,6 @@
     display: block;
   }
 
-  form .prefix {
-    font-weight: bold;
-  }
-  form .prefix:after {
-    content: "…";
-  }
-
   form .error input[type="text"],
   form .error input[type="email"],
   form .error input[type="phone"],
@@ -4132,6 +4125,9 @@
     left: -9999px;
   }
 
+  .profile-form p.location label:before,
+  .profile-form p.twitter  label:before,
+  .profile-form p.website  label:before,
   .member-header .details dt.location + dd:before,
   .member-header .details dt.twitter  + dd a:before,
   .member-header .details dt.website  + dd a:before {
@@ -4147,16 +4143,22 @@
     /* For better font rendering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
+  }
+  .member-header .details dt.location + dd:before,
+  .member-header .details dt.twitter  + dd a:before,
+  .member-header .details dt.website  + dd a:before {
     font-size: 1.25em;
     margin-right: 0.25em;
   }
+  .profile-form p.location label:before,
   .member-header .details dt.location + dd:before {
     content: "\e618"; /* @icon-location */
   }
+  .profile-form p.twitter  label:before,
   .member-header .details dt.twitter  + dd a:before {
     content: "\e60f"; /* @icon-twitter */
   }
+  .profile-form p.website  label:before,
   .member-header .details dt.website  + dd a:before {
     content: "\e614"; /* @icon-active */
   }
@@ -5560,12 +5562,6 @@
 
 /* =Profile Form
   ----------------------------------------------- */
-  .experimental .profile-form label > span:first-child {
-    font-variant: small-caps;
-    text-transform: lowercase;
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
-    color: rgb(238, 130, 105); /* @salmon */
-  }
   .profile-form textarea {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 2.5em; /* 40px / @font-size(16px) */
@@ -5573,13 +5569,79 @@
     height: 4.75em;
     padding: 0.25em;
   }
-  @media (min-width: 40em) {
+  .profile-form .skills input {
+    max-width: 38em;
+    font-style: italic;
+  }
+  .profile-form .basics,
+  .profile-form .details {
+    margin-top: 0.875em; /* @line-height / 2 */
+    padding-bottom: 1.75em;
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  .profile-form .note {
+    text-align: right;
+    padding-bottom: 0.4375em;
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  .profile-form .prefix {
+    color: ;
+  }
+  .profile-form .prefix:after {
+    content: "…";
+  }
+
+  /* OPTIONAL: Make the form more compact on large screens */
+  @media (min-width: 45em) {
+    .profile-form {
+      border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+      padding: 1.75em;
+    }
+    .profile-form .basics,
+    .profile-form .details {
+      margin-top: 0;
+      padding-bottom: 0;
+      border-bottom-width: 0;
+    }
+    .profile-form .basics {
+      float: left;
+      width: 35%;
+    }
+    .profile-form .details {
+      margin-left: 40%;
+      padding-left: 1.75em;
+      border-left: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    }
+    .profile-form .submit {
+      border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+      padding-top: 1.75em;
+      padding-left: 40%;
+    }
+  }
+  @media (min-width: 50em) {
+    .profile-form .basics {
+      width: 30%;
+    }
+    .profile-form .details {
+      margin-left: 35%;
+    }
+    .profile-form .submit {
+      padding-left: 35%;
+    }
+  }
+  @media (min-width: 60em) {
     .profile-form textarea {
       height: 3.5em;
     }
-  }
-  .profile-form .skills input {
-    max-width: 45em;
+    .profile-form .basics {
+      width: 20%;
+    }
+    .profile-form .details {
+      margin-left: 25%;
+    }
+    .profile-form .submit {
+      padding-left: 25%;
+    }
   }
 
 
