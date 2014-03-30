@@ -4632,14 +4632,12 @@
     margin-bottom: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
   }
 
-  @media (min-width: 30em) {
-    .post > article h1 img {
-      float: right;
-      margin-left: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
-    }
-    .post > article .share {
-      clear: both;
-    }
+  .post > article h1 img {
+    float: right;
+    margin-left: 0.7368421053em; /* @line-height(1.75) / font-size(2.375) */
+  }
+  .post > article .share {
+    clear: both;
   }
   .post > article h1      a:hover,
   .post > article h1      a:active,
@@ -4656,6 +4654,17 @@
   /* TBD: Should we add a height attribute to the iframe instead? */
   .post > article iframe {
     height: 505px;
+  }
+
+  /* OPTIONAL: Make the headline and image fit nicely on small screens */
+  @media (max-width: 39.9em) {
+    .post > article h1 {
+      font-size: 1.5em;
+    }
+    .post > article h1 img {
+      width: 5em;
+      height: 5em;
+    }
   }
 
 
