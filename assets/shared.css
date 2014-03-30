@@ -2908,8 +2908,7 @@
     .activity-item .do .tags {
       margin-right: 7em;
     }
-    .scripted-do .activity-item .do     form,
-                 .activity-item .follow form {
+    .scripted-do .activity-item .do form {
       position: absolute;
       margin-top: 0;
       bottom: -0.5em;
@@ -5665,7 +5664,7 @@
   ----------------------------------------------- */
 
   body.pattern {
-    padding: 3em 1.5em 6em;=
+    padding: 3em 1.5em 6em;
     background: rgb(253, 254, 255); /* @snow */
   }
   body.pattern > section + section {
