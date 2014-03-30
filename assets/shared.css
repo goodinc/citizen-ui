@@ -4152,6 +4152,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .profile-form p.location label:before,
+  .profile-form p.twitter  label:before,
+  .profile-form p.website  label:before {
+    margin-right: 0.25em;
+  }
   .member-header .details dt.location + dd:before,
   .member-header .details dt.twitter  + dd a:before,
   .member-header .details dt.website  + dd a:before {
@@ -5167,13 +5172,6 @@
     color: rgb(153, 153, 153);
   }
 
-  .post > footer .do,
-  .post > footer .doing,
-  .post > footer .done,
-  .post > footer .vote,
-  .post > footer .voted {
-    margin-right: 3.5em; /* @line-height x 2 */
-  }
   .post > footer .do    h2,
   .post > footer .doing h2,
   .post > footer .done  h2,
