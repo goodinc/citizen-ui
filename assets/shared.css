@@ -4189,14 +4189,16 @@
   }
 
   .member-header > .container > div {
-    border-width: 0.1em;
+    border-width: 0.1em 0;
     border-style: solid;
     border-color: rgb(218, 220, 224);
-    padding: 2.625em;
-    background: white;
+    padding: 2.625em 1.5em;
+    background: rgb(253, 254, 255); /* @snow */
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
 
-  @media (min-width: 40em) {
+  @media (min-width: 30em) {
     .member-header .basics {
       text-align: center;
     }
@@ -4227,6 +4229,13 @@
     }
     .member-header .details {
       margin-left: 10.5em;
+    }
+  }
+
+  @media (min-width: 40em) {
+    .member-header > .container > div {
+      border-width: 0.1em;
+      padding: 2.625em;
     }
   }
 
