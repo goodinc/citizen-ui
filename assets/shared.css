@@ -4532,8 +4532,10 @@
   .post > header .todo_actions {
     float: right;
     margin-top: -0.15em;
+    margin-bottom: 1.75em; /* @line-height */
   }
   .post > header .todo_actions form {
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -4771,12 +4773,17 @@
     margin-top: 0.875em; /* @line-height / 2 */
     background: rgb(247, 247, 247);
     padding: 1.5em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
-  .post-container > .post > footer .tags {
-    padding: 3em;
-    margin-left: -3em;
-    margin-right: -3em;
-    margin-bottom: -3em;
+
+  @media (min-width: 40em) {
+    .post > footer .tags {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
   }
 
   /* OPTIONAL: Add a border around the article on large screens */
@@ -4975,16 +4982,13 @@
       margin-right: 0.875em;
     }
 
-    /* KLUDGE: Give the list of voters or doers a maximum width on large screens */
-    /*
+    /* TBD: Support a maximum width for voters on large screens (See _voter_facepile.html.slim) */
     .post > header .dos   ul,
     .post > header .votes ul {
       margin-top: 0;
       display: inline-block;
       vertical-align: top;
-      width: 10em;
     }
-    */
   }
 
   .post > footer .do,
@@ -4996,6 +5000,21 @@
   .post > footer .votes {
     margin-top: 0.875em; /* @line-height / 2 */
     display: inline-block;
+    vertical-align: top;
+  }
+  .post > footer .do,
+  .post > footer .doing,
+  .post > footer .done,
+  .post > footer .vote,
+  .post > footer .voted {
+    margin-right: 0.875em; /* @line-height / 2 */
+  }
+
+  /* Support multiple form elements, wrapped in a container */
+  .post > footer .todo_actions {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0.875em; /* @line-height / 2 */
   }
 
   @media (min-width: 35em) {
