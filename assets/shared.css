@@ -4427,6 +4427,9 @@
     content: "\e60f"; /* @icon-twitter */
   }
 
+  .post > header {
+    margin-bottom: 0;
+  }
   .post > header .do   abbr,
   .post > header .vote abbr {
     font-size: 2.375em; /* 38px / @font-size(16px) */
@@ -4534,13 +4537,6 @@
   }
 
   /* OPTIONAL: Hide redundant features in the header, so they won’t wrap to the next line. */
-  @media (max-width: 25em) {
-    .post > header form {
-      /* @hidden-accessible */
-      position: absolute;
-      left: -9999px;
-    }
-  }
   @media (max-width: 45em) {
     .post > header .dos   ul,
     .post > header .votes ul {
@@ -4571,7 +4567,7 @@
   }
 
   .post > article {
-    margin-top: 1.75em;
+    margin-top: 0;
     border-width: 0.1em 0;
     padding: 1.75em 0;
     border-style: solid;
@@ -4766,7 +4762,6 @@
   /* OPTIONAL: Add a border around the article on large screens */
   @media (min-width: 50em) {
     .post > header {
-      margin-bottom: 0;
       border-style: solid;
       border-color: rgb(218, 220, 224); /* @article-border-color */
       border-width: 0.1em 0.1em 0;
@@ -4788,7 +4783,6 @@
       padding-bottom: 2.25em;
     }
     .post > article {
-      margin-top: 0;
       margin-bottom: 0;
       border-width: 0 0.1em 0;
       padding: 0 3.5em 0 3.5em; /* @line-height x 2 */
