@@ -580,6 +580,13 @@
     display: block;
   }
 
+  form .prefix {
+    font-weight: bold;
+  }
+  form .prefix:after {
+    content: "…";
+  }
+
   form .error input[type="text"],
   form .error input[type="email"],
   form .error input[type="phone"],
