@@ -2900,21 +2900,22 @@
     clear: both;
   }
 
-  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
+  /* OPTIONAL: Position the buttons in the bottom right corner on small screens */
   @media (max-width: 29.9em) {
     .activity-item .tags {
       margin-left: 0.875em;
     }
-    .activity-item .do .tags {
+    .activity-item .do .meta.has-tags .tags {
       margin-right: 7em;
     }
-    .scripted-do .activity-item .do form {
+    .scripted-do .activity-item .do .meta.has-tags ~ form {
       position: absolute;
       margin-top: 0;
       bottom: -0.5em;
       right: 1.75em;
     }
   }
+  /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
   @media (min-width: 30em) {
 
     /* Make space for the buttons */
