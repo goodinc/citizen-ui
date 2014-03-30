@@ -1331,6 +1331,9 @@
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
+  #header ~ #content.minimal {
+    border-top-width: 0;
+  }
   .topic-featured {
     padding-top    : 1.3125em; /* @line-height / 4 x 3 */
     padding-bottom : 2.625em;  /* @line-height / 2 x 3 */
@@ -2347,7 +2350,13 @@
   ----------------------------------------------- */
   .topic-featured,
   #content {
-    background: rgb(253, 254, 255);
+    background: rgb(253, 254, 255); /* @snow */
+  }
+  #content.minimal {
+    background: transparent;
+  }
+  #content.minimal ~ #footer {
+    border-top-width: 0;
   }
 
   @media (min-height: 50em) {
@@ -5562,16 +5571,23 @@
 
 /* =Profile Form
   ----------------------------------------------- */
+
+  .profile-form form {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @blue-gray */
+    padding: 1.75em; /* @line-height */
+    background: rgb(253, 254, 255); /* @snow */
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+
   .profile-form textarea {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 2.5em; /* 40px / @font-size(16px) */
-    max-width: 18em; /* 45em / 2.5em */
+    max-width: none;
     height: 4.75em;
     padding: 0.25em;
-  }
-  .profile-form .skills input {
-    max-width: 38em;
-    font-style: italic;
   }
   .profile-form .basics,
   .profile-form .details {
@@ -5581,21 +5597,20 @@
   }
   .profile-form .note {
     text-align: right;
-    padding-bottom: 0.4375em;
-    border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
   }
-  .profile-form .prefix {
-    color: ;
+  .profile-form .skills input {
+    max-width: none;
+    font-style: italic;
   }
   .profile-form .prefix:after {
     content: "…";
   }
 
   /* OPTIONAL: Make the form more compact on large screens */
-  @media (min-width: 45em) {
-    .profile-form {
-      border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
-      padding: 1.75em;
+  @media (min-width: 40em) {
+    .profile-form form {
+      border-width: 0.1em;
+      padding: 1.75em; /* @line-height */
     }
     .profile-form .basics,
     .profile-form .details {
@@ -5605,42 +5620,25 @@
     }
     .profile-form .basics {
       float: left;
-      width: 35%;
+      width: 14em;
     }
     .profile-form .details {
-      margin-left: 40%;
+      margin-left: 15.75em;
       padding-left: 1.75em;
       border-left: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     }
     .profile-form .submit {
       border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
       padding-top: 1.75em;
-      padding-left: 40%;
-    }
-  }
-  @media (min-width: 50em) {
-    .profile-form .basics {
-      width: 30%;
-    }
-    .profile-form .details {
-      margin-left: 35%;
-    }
-    .profile-form .submit {
-      padding-left: 35%;
+      padding-left: 17.5em;
     }
   }
   @media (min-width: 60em) {
     .profile-form textarea {
       height: 3.5em;
     }
-    .profile-form .basics {
-      width: 20%;
-    }
-    .profile-form .details {
-      margin-left: 25%;
-    }
-    .profile-form .submit {
-      padding-left: 25%;
+    .profile-form .skills input {
+      max-width: 41.5em;
     }
   }
 
@@ -5658,8 +5656,8 @@
   ----------------------------------------------- */
 
   body.pattern {
-    padding: 3em 1.5em 6em;
-    background: rgb(253, 254, 255);
+    padding: 3em 1.5em 6em;=
+    background: rgb(253, 254, 255); /* @snow */
   }
   body.pattern > section + section {
     margin-top: 3em;
