@@ -5597,7 +5597,7 @@
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 2.5em; /* 40px / @font-size(16px) */
     max-width: none;
-    height: 4.75em;
+    height: 7em;
     padding: 0.25em;
   }
   .profile-form .basics,
@@ -5646,12 +5646,12 @@
       padding-left: 17.5em;
     }
   }
-  @media (min-width: 60em) {
+  @media (min-width: 70em) {
     .profile-form textarea {
       height: 3.5em;
     }
     .profile-form .skills input {
-      max-width: 41.5em;
+      max-width: 38.5em; /* This number is arbitrary, but happens to make the field fit on one line with the prefix */
     }
   }
 
