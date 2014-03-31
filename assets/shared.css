@@ -3957,7 +3957,7 @@
     color: rgb(101, 102, 102); /* @steel */
   }
 
-  .post .comments .submit {
+  .comments .submit {
     margin-top: 1em;
     font-size: 0.875em; /* 14px / @font-size */
   }
