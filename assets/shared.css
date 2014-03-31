@@ -1276,6 +1276,7 @@
             animation : innerspin 2s infinite linear;
   }
 
+  /*
   .activity-item .meta a.loading-container {
     position: relative;
   }
@@ -1292,6 +1293,7 @@
     top: 50%;
     left: 50%;
   }
+  */
 
   /* OPTIONAL: Center the loading indicator, when it appears after pagination */
   .pagination + .loading {
@@ -3138,6 +3140,75 @@
   .activity-item .meta a {
     color: inherit;
   }
+
+  .meta form.vote,
+  .meta form.voted {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+  }
+  .meta form.vote  button,
+  .meta form.voted button {
+    /*
+    color: inherit;
+    border: 0.1em solid rgb(244, 244, 244);
+    background: rgb(253, 253, 253);
+    */
+    border-radius: 0.25em;
+    font-family: inherit;
+    font-size: 0.75em;
+    padding: 0.65em 1em;
+    display: inline-block;
+    margin-left: 0;
+
+    border: 0.1em solid rgb(244, 244, 244);
+    background: rgb(253, 253, 253);
+    color: rgb(153, 153, 153);
+  }
+  .meta .vote  button:before,
+  .meta .voted button:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+    margin-left: 0;
+    position: static;
+
+    content: "\e602"; /* @icon-vote */
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .meta form.vote  button:hover,
+  .meta form.vote  button:active,
+  .meta form.vote  button:focus,
+  .meta form.voted button {
+    background-color: rgb(49, 144, 242);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: white;
+  }
+  .meta form.vote  button:hover:before,
+  .meta form.vote  button:active:before,
+  .meta form.vote  button:focus:before,
+  .meta form.voted button:before {
+    color: white;
+  }
+
+
+
   .activity-item .meta .dos,
   .activity-item .meta .votes,
   .activity-item .meta .comments {
@@ -5442,10 +5513,8 @@
     margin-right: auto;
   }
   .dialog form {
-    background: rgb(249, 249, 249);
     padding: 1.75em;
     border: 0.1em solid rgb(218, 220, 224);
-    border-radius: 0.15em;
   }
   .dialog > section h2 {
     font-family: inherit;
