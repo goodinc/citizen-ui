@@ -2355,6 +2355,9 @@
   #content.minimal {
     background: transparent;
   }
+  #content.minimal > .container {
+    min-height: 0;
+  }
   #content.minimal ~ #footer {
     border-top-width: 0;
   }
@@ -5418,7 +5421,7 @@
   ----------------------------------------------
   (A page with a small amount of content.)
   ----------------------------------------------- */
-  body > .dialog {
+  .dialog {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -5431,27 +5434,27 @@
     border-radius: 0.25em;
     */
   }
-  body > .dialog > form,
-  body > .dialog > section {
+  .dialog > form,
+  .dialog > section {
     max-width: 28em;
     margin-top: 3.5em;
     margin-left: auto;
     margin-right: auto;
   }
-  body > .dialog form {
-    background: white;
+  .dialog form {
+    background: rgb(249, 249, 249);
     padding: 1.75em;
     border: 0.1em solid rgb(218, 220, 224);
-    border-radius: 0.25em;
+    border-radius: 0.15em;
   }
-  body > .dialog > section h2 {
+  .dialog > section h2 {
     font-family: inherit;
     font-weight: bold;
     font-size: inherit;
     line-height: inherit;
   }
-  body > .dialog h1 {
-    /* @h2 */
+  .dialog h1 {
+    /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
 
@@ -5465,7 +5468,7 @@
     font-family: inherit;
     font-weight: bold;
   }
-  body > .dialog h1 + .facebook.action {
+  .dialog h1 + .facebook.action {
     margin-top: 3.5em;
   }
   .facebook.action {
@@ -5490,48 +5493,48 @@
 
     content: "\e60d"; /* @icon-facebook */
   }
-  body > .dialog form {
+  .dialog form {
     max-width: 25em;
     margin-left: auto;
     margin-right: auto;
   }
-  body > .dialog form input[type="email"],
-  body > .dialog form input[type="text"],
-  body > .dialog form input[type="password"] {
+  .dialog form input[type="email"],
+  .dialog form input[type="text"],
+  .dialog form input[type="password"] {
     max-width: none;
   }
-  body > .dialog form p {
+  .dialog form p {
     text-align: left;
   }
-  body > .dialog form p.submit {
+  .dialog form p.submit {
     text-align: center;
   }
 
   /* Forgot password */
-  body > .dialog form + p {
+  .dialog form + p {
     margin-top: 1.75em; /* @line-height */
   }
 
-  body > .dialog aside {
+  .dialog aside {
     /*
     padding-top: 1.75em;
     border-top: 0.1em solid rgb(218, 220, 224);
     */
   }
-  body > .dialog aside h2 {
+  .dialog aside h2 {
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
   }
-  body > .dialog aside h2,
-  body > .dialog aside p {
+  .dialog aside h2,
+  .dialog aside p {
     display: inline;
     font-weight: bold;
   }
 
   #content .dialog {
     background: white;
-    padding: 1.75em;
+    padding: 1.75em 1.75em 3.5em;
     border: 0.1em solid rgb(218, 220, 224);
     border-radius: 0.25em;
   }
