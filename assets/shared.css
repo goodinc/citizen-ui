@@ -5505,15 +5505,9 @@
     border-radius: 0.25em;
     */
   }
-  .dialog > form,
-  .dialog > section {
-    max-width: 28em;
-    margin-top: 3.5em;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .dialog form {
     padding: 1.75em;
+    background: white;
     border: 0.1em solid rgb(218, 220, 224);
   }
   .dialog > section h2 {
@@ -5602,10 +5596,15 @@
   }
 
   #content .dialog {
-    background: white;
+    background: rgb(253, 254, 255);
     padding: 1.75em 1.75em 3.5em;
     border: 0.1em solid rgb(218, 220, 224);
     border-radius: 0.25em;
+    max-width: 32em;
+  }
+  #content .dialog form {
+    background-color: transparent;
+    border-color: transparent;
   }
 
 
