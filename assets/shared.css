@@ -2863,10 +2863,11 @@
     border-bottom: 9px transparent solid;
   }
 
-  .activity-item form {
+  .activity-item form.do,
+  .activity-item form.doing,
+  .activity-item form.done {
     font-size: 0.75em;
-    margin-top: 2.0416666666em; /* @line-height / 0.75 */
-    float: left;
+    float: right;
   }
 
 
@@ -2920,15 +2921,6 @@
   @media (max-width: 29.9em) {
     .activity-item .tags {
       margin-left: 0.875em;
-    }
-    .activity-item .do .meta.has-tags .tags {
-      margin-right: 7em;
-    }
-    .scripted-do .activity-item .do .meta.has-tags ~ form {
-      position: absolute;
-      margin-top: 0;
-      bottom: -0.5em;
-      right: 1.75em;
     }
   }
   /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
@@ -3119,9 +3111,9 @@
   }
 
   .topic-featured .activity-item.do .meta {
-    margin-top: 1.5em;
     display: inline;
     float: right;
+    margin-top: 0.65em;
   }
   .activity-item .post .meta:after {
     /* @clearfix */
@@ -3158,8 +3150,22 @@
     margin-bottom: 0;
     font-size: inherit;
   }
+
+  /* KLUDGE: This should share styles with comments and dos */
+  .activity-item .meta form.vote,
+  .activity-item .meta form.voted {
+    display: inline-block;
+    margin: 0 0 0.375em 0;
+    vertical-align: top;
+  }
+  .activity-item .meta form.vote  p,
+  .activity-item .meta form.voted p {
+    margin-right: 0;
+  }
+
   .meta .vote  button,
   .meta .voted button {
+
     /*
     color: inherit;
     border: 0.1em solid rgb(244, 244, 244);
@@ -3168,7 +3174,8 @@
     border-radius: 0.25em;
     font-family: inherit;
     font-size: 0.75em;
-    padding: 0.8em 1em 0.6em;
+    line-height: 1.2em;
+    padding: 0.75em 0.75em 0.7em;
     display: inline-block;
     margin-left: 0;
 
@@ -3739,7 +3746,9 @@
     display: block;
   }
   .topic-featured .activity-item.do form {
-    float: left;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
   }
 
 
