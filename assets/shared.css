@@ -4986,7 +4986,7 @@
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83);
     background: rgb(252, 252, 252);
-    border: 1px solid rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240); /* @bright-mercury */
     text-decoration: none;
   }
 
@@ -5693,6 +5693,10 @@
   }
 
   /* Introduction */
+  .explore + .explore {
+    border-top: 0.1em solid rgb(240, 240, 240); /* @bright-mercury */
+    padding-top: 3.5em;
+  }
   .explore .introduction {
     margin-top: 3.5em;
     margin-bottom: 5.25em;
@@ -5710,7 +5714,7 @@
     height: 6.25em;
     width: 0.375em;
     margin: 1.75em auto;
-    background: rgb(242, 242, 242);
+    background: rgb(240, 240, 240); /* @bright-mercury */
   }
   .explore .introduction h3 {
     /* @h1 */
@@ -5768,7 +5772,6 @@
   }
 
   @media (min-width: 65em) {
-
     .explore .introduction img,
     .explore .introduction h3,
     .explore .introduction p {
@@ -5777,47 +5780,27 @@
       display: inline-block;
       width: 33%;
     }
+    .explore .introduction {
+      margin-top: 5.25em;
+    }
     .explore .introduction li {
       margin-top: 0;
     }
     .explore .introduction li + li:before {
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 3.5em;
       clear: both;
     }
-    .explore .introduction li.join:before {
-      margin-bottom: 1.75em;
-    }
-
-    /*
     .explore .introduction img {
       margin-top: -3.5em;
       float: left;
     }
-    */
-
-    /*
-    .explore .introduction img {
-      margin-top: -1.75em;
-      float: left;
-    }
-    .explore .introduction h3 {
-      margin-left: 309px;
-      margin-right: 309px;
-    }
-    .explore .introduction p {
-      margin-top: -5.25em;
-      width: 309px;
-      height: 309px;
+    .explore .introduction li:nth-child(2n) img {
       float: right;
     }
-    .explore .join h3 {
-      float: none;
+    .explore .introduction li:nth-child(2n) h3 {
+      float: right;
     }
-    .explore .introduction li + li:before {
-      clear: both;
-    }
-    */
   }
 
 
