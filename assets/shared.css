@@ -3141,14 +3141,14 @@
     color: inherit;
   }
 
-  .meta form.vote,
-  .meta form.voted {
+  .activity-item .meta form.vote,
+  .activity-item .meta form.voted {
     margin-top: 0;
     margin-bottom: 0;
     font-size: inherit;
   }
-  .meta form.vote  button,
-  .meta form.voted button {
+  .meta .vote  button,
+  .meta .voted button {
     /*
     color: inherit;
     border: 0.1em solid rgb(244, 244, 244);
