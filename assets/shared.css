@@ -1276,17 +1276,28 @@
             animation : innerspin 2s infinite linear;
   }
 
-  /*
-  .activity-item .meta a.loading-container {
+  /* OPTIONAL: Position the loading indicator above the form */
+  form.loading {
     position: relative;
+    display: inline-block;
   }
-  .activity-item .meta a.loading-container abbr {
-    color: transparent;
+  form.loading:before,
+  form.loading:after {
+    top: 50%;
+    left: 50%;
   }
-  .activity-item .meta a.loading-container abbr:before {
-    color: transparent;
+  form.loading:before {
+    position: absolute;
+    margin-top: -0.875em;
+    margin-left: -0.875em;
   }
-  .activity-item .meta a .loading {
+  form.loading:after {
+    position: absolute;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  /*
+  .form.loading .loading {
     position: absolute;
     margin-top: -0.9375em;
     margin-left: -0.9375em;
@@ -3205,6 +3216,19 @@
   .meta form.vote  button:focus:before,
   .meta form.voted button:before {
     color: white;
+  }
+
+  .meta .vote.loading button {
+    color: transparent;
+  }
+  .meta .vote.loading button:hover,
+  .meta .vote.loading button:focus,
+  .meta .vote.loading button:active {
+    border: 0.1em solid rgb(244, 244, 244);
+    background: rgb(253, 253, 253);
+  }
+  .meta .vote.loading button:before {
+    color: transparent;
   }
 
 

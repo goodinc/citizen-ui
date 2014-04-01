@@ -90,12 +90,22 @@
   <form action="" method="post" class="voted">
     <p><button type="submit" disabled="disabled">It’s GOOD</button></p>
   </form>
+</section>
 
+<section>
   <div class="meta">
 
     <!-- Post with no votes -->
     <form action="" method="post" class="vote">
-      <p class="votes">
+      <p>
+        <button type="submit" title="Promote this">
+          Think it’s good?
+        </button>
+      </p>
+    </form>
+
+    <form action="" method="post" class="vote loading">
+      <p>
         <button type="submit" title="Promote this">
           Think it’s good?
         </button>
@@ -103,12 +113,18 @@
     </form>
 
     <form action="" method="post" class="voted">
-      <p class="votes">
+      <p>
         <button type="submit" title="1 person thinks this is good" disabled="disabled">
           1
         </button>
       </p>
     </form>
+
+  </div>
+</section>
+
+<section>
+  <div class="meta">
 
     <form action="" method="post" class="vote">
       <p>
@@ -118,8 +134,16 @@
       </p>
     </form>
 
+    <form action="" method="post" class="vote loading">
+      <p>
+        <button type="submit" title="12 people think this is good">
+          12
+        </button>
+      </p>
+    </form>
+
     <form action="" method="post" class="voted">
-      <p class="votes">
+      <p>
         <button type="submit" title="13 people thinks this is good" disabled="disabled">
           13
         </button>
