@@ -5492,52 +5492,63 @@
   ----------------------------------------------
   (A page with a small amount of content.)
   ----------------------------------------------- */
-  .dialog {
+  #content .dialog {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @blue-gray */
+    padding: 1.75em; /* @line-height */
+    background: rgb(253, 254, 255); /* @snow */
+    margin-left: -1.5em;
+    margin-right: -1.5em;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3.5em;
-    /*
-    max-width: 35em;
-    background: white;
-    padding: 1.75em 2.625em;
-    border: 0.1em solid rgb(218, 220, 224);
-    border-radius: 0.25em;
-    */
   }
-  .dialog form {
-    padding: 1.75em;
-    background: white;
-    border: 0.1em solid rgb(218, 220, 224);
+
+  /* OPTIONAL: Make the form more compact on large screens */
+  @media (min-width: 40em) {
+    #content .dialog {
+      border-width: 0.1em;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 28em;
+    }
   }
-  .dialog > section h2 {
-    font-family: inherit;
-    font-weight: bold;
-    font-size: inherit;
-    line-height: inherit;
-  }
-  .dialog h1 {
+
+  #content .dialog h1 {
     /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
 
-    /*
-    border-bottom: 0.05em solid rgb(218, 220, 224);
-    padding-bottom: 1.1666666667em;
-    margin-bottom: 1.75em;
-    */
     margin-bottom : 0.3888888889em;
 
     font-family: inherit;
     font-weight: bold;
   }
-  .dialog h1 + .facebook.action {
+  #content .dialog form {
+    margin-top: 1.75em; /* @line-height */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25em;
+  }
+  #content .dialog form input[type="email"],
+  #content .dialog form input[type="text"],
+  #content .dialog form input[type="password"] {
+    max-width: none;
+  }
+  #content .dialog form p {
+    text-align: left;
+  }
+  #content .dialog form p.submit {
+    text-align: center;
+  }
+
+  /* Join / Sign In */
+  #content .dialog h1 + .facebook.action {
     margin-top: 3.5em;
   }
-  .facebook.action {
+  #content .facebook.action {
     font-size: inherit;
   }
-  .facebook.action a:after {
+  #content .facebook.action a:after {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -5556,55 +5567,27 @@
 
     content: "\e60d"; /* @icon-facebook */
   }
-  .dialog form {
-    max-width: 25em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .dialog form input[type="email"],
-  .dialog form input[type="text"],
-  .dialog form input[type="password"] {
-    max-width: none;
-  }
-  .dialog form p {
-    text-align: left;
-  }
-  .dialog form p.submit {
-    text-align: center;
+  #content .dialog > section h2 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    line-height: inherit;
   }
 
   /* Forgot password */
-  .dialog form + p {
+  #content .dialog form + p {
     margin-top: 1.75em; /* @line-height */
   }
 
-  .dialog aside {
-    /*
-    padding-top: 1.75em;
-    border-top: 0.1em solid rgb(218, 220, 224);
-    */
-  }
-  .dialog aside h2 {
+  #content .dialog aside h2 {
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
   }
-  .dialog aside h2,
-  .dialog aside p {
+  #content .dialog aside h2,
+  #content .dialog aside p {
     display: inline;
     font-weight: bold;
-  }
-
-  #content .dialog {
-    background: rgb(253, 254, 255);
-    padding: 1.75em 1.75em 3.5em;
-    border: 0.1em solid rgb(218, 220, 224);
-    border-radius: 0.25em;
-    max-width: 32em;
-  }
-  #content .dialog form {
-    background-color: transparent;
-    border-color: transparent;
   }
 
 
