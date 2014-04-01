@@ -5626,9 +5626,6 @@
 
 /* =Explore
   ----------------------------------------------- */
-  .explore {
-    text-align: center;
-  }
   .explore + .explore {
     margin-top: 3.5em; /* @line-height x 2 */
   }
@@ -5771,6 +5768,7 @@
     color: white;
   }
 
+  /* OPTIONAL: Make the introduction take up less vertical space on large screens. */
   @media (min-width: 65em) {
     .explore .introduction img,
     .explore .introduction h3,
