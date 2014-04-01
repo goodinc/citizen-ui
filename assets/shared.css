@@ -2819,10 +2819,6 @@
     text-overflow: ellipsis;
   }
 
-  .topic-featured .activity-item .post h3 small {
-    font-size: 0.33333333333333em; /* 12px / 36px */
-  }
-
   /* OPTIONAL: Line up with the headline */
   @media (min-width: 40em) { /* @medium-size */
     .activity-item .post .has-image + .meta {
@@ -3172,7 +3168,7 @@
     border-radius: 0.25em;
     font-family: inherit;
     font-size: 0.75em;
-    padding: 0.65em 1em;
+    padding: 0.8em 1em 0.6em;
     display: inline-block;
     margin-left: 0;
 
@@ -3200,7 +3196,7 @@
 
     display: inline-block;
     vertical-align: middle;
-    margin-right: 0.25em;
+    margin-right: 0.1em;
     margin-left: 0;
     position: static;
 
@@ -3528,6 +3524,13 @@
     margin-right: 0.625em;
   }
 
+  /* OPTIONAL: Line up with the headline */
+  @media (min-width: 40em) { /* @medium-size */
+    .topic-featured .activity-item .post .has-image + .meta {
+      margin-left: 8.75em; /* image.width(120px) / @font-size(16px) */
+    }
+  }
+
   @media (max-width: 54.9em) {
     .topic-featured .activity-item h3 .image img {
       width: 5em; /* target-image-size(120px) / font-size(24px) */
@@ -3538,6 +3541,10 @@
     /* OPTIONAL: Make the headline bigger */
     .topic-featured .activity-item h3 {
       font-size: 2.25em; /* 36px / 16px */
+    }
+
+    .topic-featured .activity-item .post h3 small {
+      font-size: 0.33333333333333em; /* 12px / 36px */
     }
 
     /* Featured posts have a larger image */
