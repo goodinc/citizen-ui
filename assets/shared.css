@@ -5694,6 +5694,8 @@
 
   /* Introduction */
   .explore .introduction {
+    margin-top: 3.5em;
+    margin-bottom: 5.25em;
     text-align: center;
   }
   .explore .introduction,
@@ -5702,13 +5704,18 @@
     margin-left: 0;
     padding-left: 0;
   }
-  .explore .introduction li {
-    margin-top: 3.5em;
-    margin-bottom: 5.25em;
+  .explore .introduction li + li:before {
+    content: "";
+    display: block;
+    height: 6.25em;
+    width: 0.375em;
+    margin: 1.75em auto;
+    background: rgb(242, 242, 242);
   }
   .explore .introduction h3 {
     /* @h1 */
     font-size: 4.5em;
+    font-family: inherit;
     line-height   : 1.1666666667em; /* @line-height x 3 / 4.5em */
     margin-top    : 0;
     margin-bottom : 0.3888888889em;
@@ -5746,15 +5753,18 @@
   }
   .explore .join a {
     color: rgb(0, 1, 2); /* @midnight */
-    border: 0.1em solid;
+    border: 0.15em solid;
     text-decoration: none;
-    padding: 0.5375em 0.75em 0.3375em;
+    font-size: 0.875em;
+    font-weight: bold;
+    padding: 0.675em 1.5em;
     display: block;
   }
   .explore .join a:hover,
   .explore .join a:active,
   .explore .join a:focus {
-    background: rgb(47, 132, 218); /* @ocean */
+    background   : rgb(47, 132, 218); /* @ocean */
+    border-color : rgb(47, 132, 218); /* @ocean */
     color: white;
   }
 
