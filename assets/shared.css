@@ -5719,9 +5719,8 @@
     line-height   : 1.1666666667em; /* @line-height x 3 / 4.5em */
     margin-top    : 0;
     margin-bottom : 0.3888888889em;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  .explore .introduction h3 span {
     border-bottom: 0.1em solid;
   }
   .explore .introduction p {
@@ -5758,7 +5757,7 @@
     font-size: 0.875em;
     font-weight: bold;
     padding: 0.675em 1.5em;
-    display: block;
+    display: inline-block;
   }
   .explore .join a:hover,
   .explore .join a:active,
@@ -5766,6 +5765,59 @@
     background   : rgb(47, 132, 218); /* @ocean */
     border-color : rgb(47, 132, 218); /* @ocean */
     color: white;
+  }
+
+  @media (min-width: 65em) {
+
+    .explore .introduction img,
+    .explore .introduction h3,
+    .explore .introduction p {
+      margin: 0;
+      vertical-align: middle;
+      display: inline-block;
+      width: 33%;
+    }
+    .explore .introduction li {
+      margin-top: 0;
+    }
+    .explore .introduction li + li:before {
+      margin-top: 0;
+      margin-bottom: 0;
+      clear: both;
+    }
+    .explore .introduction li.join:before {
+      margin-bottom: 1.75em;
+    }
+
+    /*
+    .explore .introduction img {
+      margin-top: -3.5em;
+      float: left;
+    }
+    */
+
+    /*
+    .explore .introduction img {
+      margin-top: -1.75em;
+      float: left;
+    }
+    .explore .introduction h3 {
+      margin-left: 309px;
+      margin-right: 309px;
+    }
+    .explore .introduction p {
+      margin-top: -5.25em;
+      width: 309px;
+      height: 309px;
+      float: right;
+    }
+    .explore .join h3 {
+      float: none;
+    }
+    .explore .introduction li + li:before {
+      clear: both;
+    }
+    */
   }
 
 
