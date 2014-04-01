@@ -5626,6 +5626,9 @@
 
 /* =Explore
   ----------------------------------------------- */
+  .explore {
+    text-align: center;
+  }
   .explore + .explore {
     margin-top: 3.5em; /* @line-height x 2 */
   }
@@ -5662,6 +5665,7 @@
     border-width: 0;
     padding: 0;
     margin-bottom: 3.5em;
+    text-align: left;
   }
   .explore .follow-list li h3 {
     margin-right: 0;
@@ -5682,12 +5686,10 @@
   }
 
   /* OPTIONAL: Make the page more compact, on large screens */
-  @media (min-width: 40em) {
-    .explore .follow-list li {
-      display: inline-block;
-      width: 19em;
-      vertical-align: top;
-    }
+  .explore .follow-list li {
+    display: inline-block;
+    width: 19em;
+    vertical-align: top;
   }
 
   /* Introduction */
@@ -5701,10 +5703,8 @@
     padding-left: 0;
   }
   .explore .introduction li {
-    margin-top: 7em;
-  }
-  .explore .introduction img {
-
+    margin-top: 3.5em;
+    margin-bottom: 5.25em;
   }
   .explore .introduction h3 {
     /* @h1 */
@@ -5719,6 +5719,9 @@
   }
   .explore .introduction p {
     font-weight: bold;
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
 
     /* @h3*/
     font-size: 1.5em;
