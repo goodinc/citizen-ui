@@ -874,12 +874,12 @@
     background-color: rgb(64, 198, 131);
   }
   .following button {
-    background-color: rgb(219, 220, 224);
+    background-color: rgb(64, 198, 149);
   }
   .following button:hover,
   .following button:active,
   .following button:focus {
-    background: rgb(200, 200, 200);
+    background: rgb(255, 105, 105);
   }
 
   /* Do */
