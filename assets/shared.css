@@ -2435,6 +2435,23 @@
   /* =Experimental
   ----------------------------------------------- */
 
+  li aside.ads {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  aside.ads {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+
+  @media (min-width: 40em) {
+    aside.ads {
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+    }
+  }
+
   /* Show or hide ads, depending on the screen size. */
   .w728.h90,
   .w468.h60,
@@ -2455,13 +2472,13 @@
     display: none;
   }
 
-  @media (min-width: 15em) {
+  @media (min-width: 300px) { /* 300px */
     .w300.h50 {
       display: block;
     }
   }
 
-  @media (min-width: 32.25em) {
+  @media (min-width: 468px) { /* 468px */
     .w728.h90,
     .w300.h50 {
       display: none;
@@ -2471,7 +2488,7 @@
     }
   }
 
-  @media (min-width: 50em) {
+  @media (min-width: 728px) { /* 728px */
     .w468.h60,
     .w300.h50 {
       display: none;
