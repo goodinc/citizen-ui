@@ -2523,11 +2523,15 @@
 
   @media (min-width: 40em) and (max-width: 66.5625em) { /* @max-page-width */
     aside .promotion,
-    aside .facebook {
+    aside section.facebook,
+    aside .fb-recommendations {
       text-align: left;
       vertical-align: top;
       display: inline-block;
-      margin-right: 1.5em;
+      margin-top: 0 !important;
+      margin-bottom: 1.75em !important;
+      margin-left: 0.5em !important;
+      margin-right: 0.5em !important;
       width: 18.75em;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
