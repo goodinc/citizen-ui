@@ -2455,6 +2455,12 @@
     display: none;
   }
 
+  @media (min-width: 15em) {
+    .w300.h50 {
+      display: block;
+    }
+  }
+
   @media (min-width: 32.25em) {
     .w728.h90,
     .w300.h50 {
