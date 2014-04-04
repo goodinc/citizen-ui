@@ -2513,18 +2513,25 @@
 
   }
 
-  .has-aside + aside {
-    text-align: center;
+  @media (max-width: 66.5625em) { /* @max-page-width */
+    .has-aside + aside {
+      text-align: center;
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
   }
-  aside .promotion,
-  aside .facebook {
-    text-align: left;
-    vertical-align: top;
-    display: inline-block;
-    margin-right: 1.5em;
-    width: 18.75em;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
+
+  @media (min-width: 40em) and (max-width: 66.5625em) { /* @max-page-width */
+    aside .promotion,
+    aside .facebook {
+      text-align: left;
+      vertical-align: top;
+      display: inline-block;
+      margin-right: 1.5em;
+      width: 18.75em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
   }
 
   /*
