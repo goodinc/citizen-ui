@@ -2434,6 +2434,72 @@
 
   /* =Experimental
   ----------------------------------------------- */
+
+  /* Show or hide ads, depending on the screen size. */
+  .w728.h90,
+  .w468.h60,
+  .w300.h50 {
+    text-align: center;
+  }
+
+  .post .w728.h90,
+  .post .w468.h60,
+  .post .w300.h50 {
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
+  }
+
+  .w728.h90,
+  .w468.h60,
+  aside .ad {
+    display: none;
+  }
+
+  @media (min-width: 32.25em) {
+    
+  }
+
+  @media (min-width: 32.25em) {
+    .w728.h90,
+    .w300.h50 {
+      display: none;
+    }
+    .w468.h60 {
+      display: block;
+    }
+  }
+
+  @media (min-width: 50em) {
+    .w468.h60,
+    .w300.h50 {
+      display: none;
+    }
+    .w728.h90 {
+      display: block;
+    }
+  }
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+
+    .w468.h60,
+    .w300.h50 {
+      display: none;
+    }
+    aside .ad {
+      display: block;
+    }
+
+    /* OPTIONAL: Hide the ads in the activity list */
+    .post > footer  + .w728.h90,
+    .post .comments + .w728.h90,
+    .follow-list      .w728.h90,
+    .activity-list    .w728.h90 {
+      display: none;
+    }
+
+  }
+
+
   /*
   aside.ad,
   aside.facebook,
