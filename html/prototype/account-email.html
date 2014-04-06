@@ -97,7 +97,7 @@
       </header>
 
       <form action="" method="post">
-        <p><button type="submit">Unsubscribe from all emails</button></p>
+        <p class="warning"><button type="submit">Unsubscribe from all emails</button></p>
       </form>
 
       <form action="" method="post">
@@ -106,25 +106,19 @@
           <ul>
             <li>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Someone follows me</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" />
-                <span>Someone follows me</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Someone comments on my post</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Someone replies to my comment</span>
               </label>
             </li>
@@ -132,34 +126,35 @@
         </fieldset>
 
         <fieldset>
-          <legend>GOOD Newsletters</legend>
-          <ul class="headlines">
+          <legend>GOOD HQ Updates</legend>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" /> Keep me posted on the latest happenings at GOOD HQ
+            </label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>GOOD Digest</legend>
+          <p>A roundup of the most popular things to learn and do</p>
+          <ul>
             <li>
-              <h3>
-                <label>
-                  <input type="checkbox" />
-                  <span>GOOD HQ Updates</span>
-                </label>
-              </h3>
-              <p>Keeping you posted on the latest happenings at GOOD HQ</p>
+              <label>
+                <input type="radio" name="digest" value="daily" checked="checked" />
+                <span>Daily</span>
+              </label>
             </li>
             <li>
-              <h3>
-                <label>
-                  <input type="checkbox" />
-                  <span>The Daily GOOD</span>
-                </label>
-              </h3>
-              <p>Daily handpicked things to learn and do</p>
+              <label>
+                <input type="radio" name="digest" value="weekly" />
+                <span>Weekly</span>
+              </label>
             </li>
             <li>
-              <h3>
-                <label>
-                  <input type="checkbox" />
-                  <span>Weekly Digest</span>
-                </label>
-              </h3>
-              <p>Weekly roundup of the most popular things to learn and do that week</p>
+              <label>
+                <input type="radio" name="digest" value="none" />
+                <span>I don’t want this</span>
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -175,7 +170,7 @@
             </li>
             <li>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Los Angeles, California</span>
               </label>
             </li>

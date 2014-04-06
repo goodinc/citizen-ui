@@ -407,80 +407,6 @@
   .pagination .previous:first-child:last-child {
     margin-right: 0;
   }
-  /*
-  .pagination .previous {
-    float: left;
-    margin-right: 1.75em;
-  }
-  .pagination .next {
-    float: right;
-    margin-left: 1.75em;
-  }
-  */
-
-
-
-  /* =Text Sections
-  ----------------------------------------------- */
-
-
-  /* =Headlines
-  ----------------------------------------------- */
-  ul.headlines,
-  ul.headlines li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  ul.headlines li {
-    margin-top: 0.875em; /* @line-height / 2 */
-  }
-  ul.headlines li:first-child {
-    margin-top: 0;
-  }
-  ul.headlines li > a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-  ul.headlines li > a h2 {
-    text-decoration: underline;
-  }
-  ul.headlines li > a:hover  h2,
-  ul.headlines li > a:active h2,
-  ul.headlines li > a:focus  h2 {
-    color: rgb(47, 132, 218); /* @ocean */
-  }
-  ul.headlines li:after {
-    /* @clearfix */
-    content: "";
-    display: table;
-    clear: both;
-  }
-  ul.headlines h3 {
-    margin-bottom: 0;
-  }
-  ul.headlines h3 + p {
-    margin-top: 0;
-  }
-
-  /* OPTIONAL: Make the manage account form easier to read. */
-  form ul.headlines li {
-    margin-left: 1.5em;
-  }
-  form ul.headlines li h3 {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    font-style: italic;
-    position: relative;
-  }
-  form ul.headlines li h3 input[type="checkbox"] {
-    margin: 0;
-    position: absolute;
-    top: 0.75em;
-    left: -1.75em;
-  }
 
 
   /* =Application
@@ -559,6 +485,9 @@
 
   form .submit {
     margin-top: 1.75em; /* @line-height */
+  }
+  form fieldset + .submit {
+    margin-top: 2.625em; /* @line-height x 3/2 */
   }
 
   form ul,
@@ -2466,21 +2395,21 @@
     margin-bottom: 1.75em;
   }
 
-  .w728.h90,
-  .w468.h60,
-  aside .ad {
-    display: none;
-  }
-
+  /* Switch between ads in a set, based on width
+  ----------------------------------------------- */
   @media (min-width: 300px) { /* 300px */
+    .w468.h60,
+    .w728.h90 {
+      display: none;
+    }
     .w300.h50 {
       display: block;
     }
   }
 
   @media (min-width: 468px) { /* 468px */
-    .w728.h90,
-    .w300.h50 {
+    .w300.h50,
+    .w728.h90 {
       display: none;
     }
     .w468.h60 {
@@ -2489,29 +2418,34 @@
   }
 
   @media (min-width: 728px) { /* 728px */
-    .w468.h60,
-    .w300.h50 {
-      display: none;
-    }
-    .w728.h90 {
-      display: block;
-    }
-  }
-
-  @media (min-width: 66.5625em) { /* @max-page-width */
-
-    .w468.h60,
     .w300.h50,
-    .w728.h90 {
+    .w468.h60 {
       display: none;
     }
+    .w728.h90 {
+      display: block;
+    }
+  }
 
-    .has-aside .last .w728.h90,
-    .has-aside + aside .ad {
+  /* Switch between ads in a set, based on height
+  ----------------------------------------------- */
+    .w300.h600 {
+      display: none;
+    }
+    .w300.h250 {
       display: block;
     }
 
+  @media (min-height: 600px) { /* 600px */
+    .w300.h600 + .w300.h250 {
+      display: none;
+    }
+    .w300.h600 {
+      display: block;
+    }
   }
+
+
 
   @media (max-width: 66.5625em) { /* @max-page-width */
     .has-aside + aside {
@@ -2537,6 +2471,38 @@
       box-sizing      : border-box;
     }
   }
+
+
+
+
+  @media (max-width: 66.5625em) { /* @max-page-width */
+    .has-aside .s1,
+    .has-aside .s2,
+    .has-aside .s3 {
+      display: block;
+    }
+    .has-aside + aside .s1,
+    .has-aside + aside .s2,
+    .has-aside + aside .s3  {
+      display: none;
+    }
+  }
+
+
+  @media (min-width: 66.5625em) { /* @max-page-width */
+    .has-aside .s1,
+    .has-aside .s2,
+    .has-aside .s3 {
+      display: none;
+    }
+    .has-aside + aside .s1,
+    .has-aside + aside .s2,
+    .has-aside + aside .s3  {
+      display: block;
+    }
+  }
+
+
 
   /*
   aside.ad,
