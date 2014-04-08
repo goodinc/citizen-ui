@@ -637,19 +637,19 @@
     color: inherit;
   }
 
-  /* OPTIONAL: Add a close button to success messages */
-  .message.success {
+  /* OPTIONAL: Add a close button to messages */
+  section.message {
     position: relative;
   }
-  .message.success .close {
+  section.message .close {
     margin-top: 1.75em;
     display: block;
   }
   @media (min-width: 30em) {
-    .message.success {
+    section.message {
       padding-right: 8.75em;
     }
-    .message.success .close {
+    section.message .close {
       position: absolute;
       top: 1.375em;
       right: 2.625em;
@@ -657,16 +657,16 @@
     }
   }
 
-  .message.success .close a {
+  section.message .close a {
     text-decoration: none;
     display: block;
   }
-  .message.success .close a:hover,
-  .message.success .close a:active,
-  .message.success .close a:focus {
+  section.message .close a:hover,
+  section.message .close a:active,
+  section.message .close a:focus {
     color: black;
   }
-  .message.success .close a:after {
+  section.message .close a:after {
     /* @icons */
     font-family: "Icons";
     speak: none;
