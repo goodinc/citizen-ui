@@ -725,7 +725,6 @@
   }
 
   body > section.message {
-    /* @header */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
     max-width: 66.5625em; /* @max-page-width */
@@ -733,6 +732,9 @@
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 1.75em;
+  }
+  body > section.message:first-child {
+    margin-bottom: 0;
   }
 
   /*
@@ -751,6 +753,35 @@
   .activity-item .message.success a {
     text-decoration: underline;
   }
+
+
+  /* TBD: If all of the messages have been updated with a container, these could be the default styles. */
+  section.message.has-container {
+    padding: 0;
+  }
+  section.message > .container {
+    padding: 1.375em 2.625em; /* @line-height x 3 / 2 */
+    position: relative;
+  }
+  @media (min-width: 30em) {
+    section.message.has-container {
+      padding-right: 0;
+    }
+    section.message > .container {
+      padding-right: 8.75em;
+    }
+  }
+  body > section.message.has-container {
+    max-width: none;
+  }
+  body > section.message > .container {
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 71.8125em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 
 
   /* =Links & Buttons
@@ -2245,18 +2276,19 @@
 
   /* OPTIONAL: Hide the main headline on home, topic, and member pages
   (since they’re redundant with the navigation) */
-  body > nav.sub    ~ #content .home h1,
-  body > header.sub ~ #content       h1,
-  .topic-header     ~ #content       h1,
-  .member-header    ~ #content       h1 {
+  /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
+  body > nav.sub    ~ #content > .container > .home   > h1:first-child,
+  body > header.sub ~ #content > .container > section > h1:first-child,
+  .topic-header     ~ #content > .container > section > h1:first-child,
+  .member-header    ~ #content > .container > section > h1:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  body > nav.sub    ~ #content .home h1 + *,
-  body > header.sub ~ #content       h1 + *,
-  .topic-header     ~ #content       h1 + *,
-  .member-header    ~ #content       h1 + * {
+  body > nav.sub    ~ #content > .container > .home   > h1 + *,
+  body > header.sub ~ #content > .container > section > h1 + *,
+  .topic-header     ~ #content > .container > section > h1 + *,
+  .member-header    ~ #content > .container > section > h1 + * {
     margin-top: 0;
   }
 
