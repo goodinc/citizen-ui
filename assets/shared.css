@@ -753,6 +753,7 @@
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     color: rgb(153, 153, 102);
   }
+  section.message.tip h1,
   section.message.tip p {
     font-size: 0.875em;
   }
@@ -780,9 +781,9 @@
   }
 
   section.message.tip .close.primary {
+    margin-top: 0.875em;
     position: static;
     display: block;
-    text-align: right;
   }
   section.message.tip .close.primary a {
     color: rgb(47, 132, 218); /* @ocean */
