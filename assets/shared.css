@@ -745,9 +745,19 @@
   /* TODO: Update all of the messages with a container and multiple close buttons, and make these the default styles. */
   section.message.tip {
     padding: 0;
+    line-height: 1.5;
+  }
+  section.message.tip h1 strong {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    color: rgb(153, 153, 102);
+  }
+  section.message.tip p {
+    font-size: 0.875em;
   }
   section.message.tip > .container {
-    padding: 1.375em 2.625em; /* @line-height x 3 / 2 */
+    padding: 0.875em 2.625em; /* @line-height x 3 / 2 */
     position: relative;
   }
   @media (min-width: 30em) {
@@ -771,8 +781,8 @@
 
   section.message.tip .close.primary {
     position: static;
-    display: inline;
-    margin-left: 1.75em;
+    display: block;
+    text-align: right;
   }
   section.message.tip .close.primary a {
     color: rgb(47, 132, 218); /* @ocean */
@@ -787,6 +797,20 @@
   }
   section.message.tip .close.primary a:after {
     content: "";
+  }
+
+
+  section.message.tip .close.secondary {
+    display: none;
+  }
+  @media (min-width: 30em) {
+    section.message.tip .close.secondary {
+      display: block;
+    }
+  }
+
+  section.message.tip .close.secondary a {
+    color: rgb(153, 153, 102);
   }
   section.message.tip .close.secondary a span {
     /* @hidden-accessible */
