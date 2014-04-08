@@ -589,9 +589,8 @@
   section.message p {
     display: inline;
   }
-  section.message h1:after {
+  section.message p:before {
     content: " — ";
-    font-weight: normal;
   }
   section.message.error {
     background: rgb(253, 235, 230);
@@ -625,7 +624,7 @@
     /* Add to the line-height to make multi-line headlines easier to read. */
     line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
-  section.message.empty h1:after {
+  section.message.empty p:before {
     content: "";
   }
   section.message.empty h1 + p {
@@ -657,16 +656,19 @@
     }
   }
 
-  section.message .close a {
+  section.message p.close:before {
+    content: "";
+  }
+  section.message p.close a {
     text-decoration: none;
     display: block;
   }
-  section.message .close a:hover,
-  section.message .close a:active,
-  section.message .close a:focus {
+  section.message p.close a:hover,
+  section.message p.close a:active,
+  section.message p.close a:focus {
     color: black;
   }
-  section.message .close a:after {
+  section.message p.close a:after {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -708,8 +710,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-
-
     font-size: 2.25em; /* 36px / @font-size(16px) */
     margin-right: 0.5em;
     color: rgb(229, 229, 229);
@@ -737,25 +737,12 @@
     margin-bottom: 0;
   }
 
-  /*
-  .activity-item .message.success {
-    background-color: rgb(58, 58, 58);
-    border-color: black;
-    color: white;
-    padding-top: 0.875em;
-    padding-bottom: 0.875em;
-    border-width: 0;
-  }
-  .activity-item .message.success p {
-    color: inherit;
-  }
-  */
   .activity-item .message.success a {
     text-decoration: underline;
   }
 
 
-  /* TBD: If all of the messages have been updated with a container, these could be the default styles. */
+  /* TODO: Update all of the messages with a container, and make these the default styles. */
   section.message.has-container {
     padding: 0;
   }
