@@ -61,7 +61,7 @@
       <div class="options">
         <ul>
           <li><a href="member.html">View Profile</a></li>
-          <li><a href="member-edit.html">Manage Account</a></li>
+          <li><a href="account-email.html">Account Settings</a></li>
           <li><a href="friends.html">Find &amp; Invite Friends</a></li>
           <li><a href="sign-out.html">Sign Out</a></li>
         </ul>
@@ -73,39 +73,37 @@
 
 <header class="sub">
   <div class="container">
-    <h1>Account Settings</h1>
-
-    <nav class="sub">
-      <ul>
-        <li>
-          <a href="member-edit.html">Profile</a>
-        </li>
-        <li>
-          <a href="account-email.html">Email Address</a>
-        </li>
-        <li class="active">
-          <a href="account-preferences.html">Email Preferences</a>
-        </li>
-        <li>
-          <a href="account-password.html">Password</a>
-        </li>
-        <li>
-          <a href="http://news.good.is/subscriptions/new">GOOD Magazine</a>
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <h1>Account Settings</h1>
+    </div>
   </div>
 </header>
+
+<nav class="sub">
+  <div class="container">
+    <ul>
+      <li>
+        <a href="account-email.html">Email Address</a>
+      </li>
+      <li class="active">
+        <a href="account-preferences.html">Email Preferences</a>
+      </li>
+      <li>
+        <a href="account-password.html">Password</a>
+      </li>
+      <li>
+        <a href="http://news.good.is/subscriptions/new">GOOD Magazine Subscription</a>
+      </li>
+    </ul>
+    <p>Want to make changes to your profile? <a href="member-edit.html">Edit profile</a></p>
+  </div>
+</nav>
 
 <main id="content">
   <div class="container">
 
-    <section>
+    <section class="form">
       <h1>Email Preferences</h1>
-
-      <form action="" method="post">
-        <p><button type="submit">Unsubscribe from all emails</button></p>
-      </form>
 
       <form action="" method="post">
         <fieldset>
@@ -143,24 +141,24 @@
 
         <fieldset>
           <legend>GOOD Digest</legend>
-          <p>A roundup of the most popular things to learn and do</p>
+          <p class="note">A roundup of the most popular things to learn and do</p>
           <ul>
             <li>
               <label>
                 <input type="radio" name="digest" value="daily" checked="checked" />
-                <span>Daily</span>
+                <span>Send daily</span>
               </label>
             </li>
             <li>
               <label>
                 <input type="radio" name="digest" value="weekly" />
-                <span>Weekly</span>
+                <span>Send weekly</span>
               </label>
             </li>
             <li>
               <label>
                 <input type="radio" name="digest" value="none" />
-                <span>I don’t want this</span>
+                <span>Please don’t send</span>
               </label>
             </li>
           </ul>
@@ -191,6 +189,11 @@
         </fieldset>
 
         <p class="submit"><button type="submit">Save Changes</button></p>
+      </form>
+
+      <form action="" method="post" class="secondary">
+        <p>Don’t want to receive any emails?</p>
+        <p><button type="submit">Unsubscribe from all</button></p>
       </form>
 
     </section>

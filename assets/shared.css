@@ -492,6 +492,23 @@
 
   form + form {
     margin-top: 2.625em; /* @line-height x 3/2 */
+    border-width: 0;
+    border-top: 0.1em solid rgb(239, 239, 239);
+    position: relative;
+    padding: 1.75em 0 0 0;
+  }
+
+  /* For the email preferences page */
+  @media (min-width: 40em) {
+    form + form.secondary {
+      text-align: right;
+    }
+    form + form.secondary p {
+      display: inline;
+    }
+    form + form.secondary p + p {
+      margin-left: 0.875em;
+    }
   }
 
   form ul,
@@ -2046,6 +2063,10 @@
     padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
     padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
   }
+  body > nav.sub p {
+    float: right;
+    font-size: 0.875em;
+  }
   body > nav.sub li a {
     margin-right: 0.55em;
   }
@@ -2229,9 +2250,10 @@
     position: absolute;
     left: -9999px;
   }
-  body > nav.sub ~ #content .home h1 + *,
-  .topic-header  ~ #content       h1 + *,
-  .member-header ~ #content       h1 + * {
+  body > nav.sub    ~ #content .home h1 + *,
+  body > header.sub ~ #content       h1 + *,
+  .topic-header     ~ #content       h1 + *,
+  .member-header    ~ #content       h1 + * {
     margin-top: 0;
   }
 
@@ -4392,6 +4414,46 @@
   }
 
 
+/* =Sub Header
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  body > header.sub {
+    margin-top: 0;
+  }
+  body > header.sub > .container > div {
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.5625em; /* @line-height - 0.1875em */
+    background: white;
+    text-align: center;
+  }
+  body > header.sub > .container > div h1 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    color: rgb(0, 1, 2); /* @midnight */
+    margin-bottom: 0;
+    font-size: 2.25em;
+    line-height: 1.5555555556; /* (@line-height x 2) / 2.25 */
+  }
+
+  /* KLUDGE: Add space between the header and navigation
+  (It might make more sense to give the nav some margin by default.) */
+  body > header.sub + nav.sub {
+    margin-top: 1.75em;
+  }
+
+  @media (min-width: 40em) {
+    body > header.sub > .container > div {
+      padding: 3.3125em; /* @line-height x 2 - 0.1875em */
+    }
+    body > header.sub > .container > div h1 {
+      font-size: 3em; /* 60px / @font-size */
+      line-height: 0.9333333333;
+    }
+  }
+
 
 /* =Topic Header
   -----------------------------------------------
@@ -5848,19 +5910,35 @@
   }
 
 
-/* =Profile Form
+/* =Account Settings
   ----------------------------------------------- */
-
+  @media (min-width: 40em) {
+    section.form {
+      border-width: 0.1em;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @blue-gray */
+      padding: 1.75em; /* @line-height */
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  @media (min-width: 40em) {
+    .profile-form form {
+      border-width: 0.1em;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @blue-gray */
+      padding: 1.75em; /* @line-height */
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
   .profile-form form {
-    border-width: 0.1em 0;
-    border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
-    padding: 1.75em; /* @line-height */
     background: rgb(253, 254, 255); /* @snow */
-    margin-left: -1.5em;
-    margin-right: -1.5em;
   }
 
+
+/* =Profile Form
+  ----------------------------------------------- */
   .profile-form textarea {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 2.5em; /* 40px / @font-size(16px) */
@@ -5870,9 +5948,11 @@
   }
   .profile-form .basics,
   .profile-form .details {
-    margin-top: 0.875em; /* @line-height / 2 */
     padding-bottom: 1.75em;
     border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+  }
+  .profile-form .details {
+    margin-top: 0.875em; /* @line-height / 2 */
   }
   .profile-form .note {
     text-align: right;
@@ -5887,12 +5967,6 @@
 
   /* OPTIONAL: Make the form more compact on large screens */
   @media (min-width: 40em) {
-    .profile-form form {
-      border-width: 0.1em;
-      padding: 1.75em; /* @line-height */
-      margin-left: 0;
-      margin-right: 0;
-    }
     .profile-form .basics,
     .profile-form .details {
       margin-top: 0;
