@@ -742,6 +742,8 @@
   }
 
 
+  /* =Site Introduction
+  ----------------------------------------------- */
   /* TODO: Update all of the messages with a container and multiple close buttons, and make these the default styles. */
   section.message.tip {
     padding: 0;
@@ -758,7 +760,7 @@
     font-size: 0.875em;
   }
   section.message.tip > .container {
-    padding: 0.875em 2.625em; /* @line-height x 3 / 2 */
+    padding: 0.875em 2.25em 0.875em 1.5em;
     position: relative;
   }
   @media (min-width: 30em) {
@@ -766,11 +768,19 @@
       padding-right: 0;
     }
     section.message.tip > .container {
-      padding-right: 8.75em;
+      position: relative;
+    }
+  }
+  @media (min-width: 40em) {
+    section.message.tip > .container {
+      padding-left: 2.25em;
     }
   }
   body > section.message.tip {
     max-width: none;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
   }
   body > section.message.tip > .container {
     -moz-box-sizing : border-box;
@@ -780,6 +790,9 @@
     margin-right: auto;
   }
 
+  section.message.tip a {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
   section.message.tip .close.primary {
     margin-top: 0.875em;
     position: static;
@@ -788,7 +801,6 @@
   section.message.tip .close.primary a {
     color: rgb(47, 132, 218); /* @ocean */
     display: inline;
-    font-size: 0.875em;
     text-decoration: underline;
   }
   section.message.tip .close.primary a:hover,
@@ -800,13 +812,21 @@
     content: "";
   }
 
-
   section.message.tip .close.secondary {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+    margin: 0;
   }
-  @media (min-width: 30em) {
+
+  @media (min-width: 40em) {
+    section.message.tip > .container {
+      padding-right: 4.75em;
+    }
     section.message.tip .close.secondary {
-      display: block;
+      top: 1.25em;
+      right: 3em;
     }
   }
 
@@ -819,6 +839,19 @@
     left: -9999px;
   }
 
+  section.message.tip .close.primary,
+  section.message.tip .close.secondary {
+    display: none;
+  }
+
+  /* OPTIONAL: Show the close buttons if they’re scripted */
+  .scripted-hide-button section.message.tip .close.primary,
+  .scripted-hide-button section.message.tip .close.secondary {
+    display: block;
+  }
+  .hide-community-intro-tip section.message.tip {
+    display: none;
+  }
 
 
   /* =Links & Buttons

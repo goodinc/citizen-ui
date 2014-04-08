@@ -6,6 +6,9 @@
   ----------------------------------------------- */
   function start() {
 
+    // OPTIONAL: Add a button to hide application messages
+    new HideButton();
+
     // OPTIONAL: Present the header navigation as dropdowns
     new NavDropDown();
 
@@ -62,6 +65,53 @@
     var g = d.getElementsByTagName('body')[0];
     return w.innerWidth || e.clientWidth || g.clientWidth;
   }
+
+
+  /* =HideButton
+  ----------------------------------------------- */
+  var HideButton = function() {};
+
+  (function() {
+
+    if (!window.localStorage || !document.addEventListener) return;
+
+    HideButton = function() {
+
+      var storageName = "community-intro-tip";
+      storageName = storageName.replace(/-/g, "_");
+
+      // Hide the messages
+      function hide(e) {
+        if (localStorage[storageName]) {
+          var html = document.getElementsByTagName("html")[0];
+          html.className += " hide-" + storageName.replace(/_/g, "-");
+        }
+      }
+
+      // Save the user’s preference
+      function save(e) {
+        var target = e.target;
+        var name = target.nodeName.toLowerCase();
+        var p = closest(e.target, "p");
+        if (p && p.className.indexOf("close") >= 0) {
+          var section = closest(e.target, "section");
+          if (section && section.id == "community-intro-tip") {
+            localStorage[storageName] = "hidden";
+            hide();
+            e.preventDefault();
+          }
+        }
+      }
+
+      hide();
+      document.addEventListener("click", save, false);
+
+      // Show the close buttons
+      var html = document.getElementsByTagName("html")[0];
+      html.className += " scripted-hide-button";
+    }
+
+  })();
 
 
   /* =NavDropDown
