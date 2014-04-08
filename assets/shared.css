@@ -742,31 +742,56 @@
   }
 
 
-  /* TODO: Update all of the messages with a container, and make these the default styles. */
-  section.message.has-container {
+  /* TODO: Update all of the messages with a container and multiple close buttons, and make these the default styles. */
+  section.message.tip {
     padding: 0;
   }
-  section.message > .container {
+  section.message.tip > .container {
     padding: 1.375em 2.625em; /* @line-height x 3 / 2 */
     position: relative;
   }
   @media (min-width: 30em) {
-    section.message.has-container {
+    section.message.tip {
       padding-right: 0;
     }
-    section.message > .container {
+    section.message.tip > .container {
       padding-right: 8.75em;
     }
   }
-  body > section.message.has-container {
+  body > section.message.tip {
     max-width: none;
   }
-  body > section.message > .container {
+  body > section.message.tip > .container {
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
     max-width: 71.8125em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
+  }
+
+  section.message.tip .close.primary {
+    position: static;
+    display: inline;
+    margin-left: 1.75em;
+  }
+  section.message.tip .close.primary a {
+    color: rgb(47, 132, 218); /* @ocean */
+    display: inline;
+    font-size: 0.875em;
+    text-decoration: underline;
+  }
+  section.message.tip .close.primary a:hover,
+  section.message.tip .close.primary a:active,
+  section.message.tip .close.primary a:focus {
+    text-decoration: none;
+  }
+  section.message.tip .close.primary a:after {
+    content: "";
+  }
+  section.message.tip .close.secondary a span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
   }
 
 
@@ -2083,7 +2108,7 @@
   }
 
   /* For the “Want to make changes to your profile?” note, in the account settings section */
-  body > nav.sub > .container > ul + p {
+  body > nav.sub .note {
     float: right;
     font-size: 0.875em;
   }
