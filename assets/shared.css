@@ -539,9 +539,6 @@
   form .error input[type="phone"],
   form .error input[type="password"] {
     border-color: rgb(255, 200, 200);
-    font-weight: bold;
-    color: rgb(249, 154, 152);
-    text-decoration: underline;
   }
   form .error-message {
     color: rgb(225, 51, 51);
@@ -862,20 +859,35 @@
   section.message.tip .details p:first-child:before {
     content: "";
   }
+  .message.has-details .show {
+    display: none;
+  }
 
-  .scripted-show-details .details {
+  .scripted-show-details .message.has-details .show {
+    display: inline;
+  }
+
+  /* Hide details */
+  .scripted-show-details .message .details {
     position: absolute;
     left: -9999px;
   }
-  .scripted-show-details .show-details .show {
-    display: none;
+
+  /* Make the headline appear pressable */
+  .scripted-show-details .message.has-details h1 {
+    cursor: pointer;
   }
-  .scripted-show-details .show-details .details {
+
+  /* Show details */
+  .scripted-show-details .message.show-details .details {
     position: static;
     left: auto;
   }
-  .scripted-show-details .has-details h1 {
-    cursor: pointer;
+  .scripted-show-details .message.show-details .show {
+    display: none;
+  }
+  .scripted-show-details .message.has-details.show-details h1 {
+    cursor: default;
   }
 
 
