@@ -874,7 +874,7 @@
     position: static;
     left: auto;
   }
-  .scripted-show-details h1 {
+  .scripted-show-details .has-details h1 {
     cursor: pointer;
   }
 
