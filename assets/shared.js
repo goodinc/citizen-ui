@@ -85,7 +85,7 @@
         var target = e.target;
         var name = target.nodeName.toLowerCase();
         var p = closest(e.target, "p");
-        if (p && p.className.indexOf("show") >= 0) {
+        if ((p && p.className.indexOf("show") >= 0) || closest(e.target, "h1")) {
           var section = closest(e.target, "section");
 
           if (section && section.className.indexOf("has-details") >= 0) {
