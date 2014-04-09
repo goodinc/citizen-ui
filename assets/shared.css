@@ -845,12 +845,34 @@
   }
 
   /* OPTIONAL: Show the close buttons if they’re scripted */
-  .scripted-hide-button section.message.tip .close.primary,
-  .scripted-hide-button section.message.tip .close.secondary {
+  .scripted-hide-tip section.message.tip .close.primary,
+  .scripted-hide-tip section.message.tip .close.secondary {
     display: block;
   }
-  .hide-community-intro-tip section.message.tip {
+
+  /* OPTIONAL: Hide the community intro, if the user has pressed the “Hide” button */
+  .hide-community-intro #community-intro {
     display: none;
+  }
+
+  /* OPTIONAL: Hide the details by default */
+  section.message.tip .details {
+    display: inline;
+  }
+
+  .scripted-show-details .details {
+    position: absolute;
+    left: -9999px;
+  }
+  .scripted-show-details .show-details .show {
+    display: none;
+  }
+  .scripted-show-details .show-details .details {
+    position: static;
+    left: auto;
+  }
+  .scripted-show-details h1 {
+    cursor: pointer;
   }
 
 

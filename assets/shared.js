@@ -6,8 +6,11 @@
   ----------------------------------------------- */
   function start() {
 
-    // OPTIONAL: Add a button to hide application messages
-    new HideButton();
+    // OPTIONAL: Add a button to show more details
+    new ShowDetails();
+
+    // OPTIONAL: Add a button to hide tip messages
+    new HideTip();
 
     // OPTIONAL: Present the header navigation as dropdowns
     new NavDropDown();
@@ -67,24 +70,62 @@
   }
 
 
-  /* =HideButton
+  /* =ShowDetails
   ----------------------------------------------- */
-  var HideButton = function() {};
+  var ShowDetails = function() {};
+
+  (function() {
+
+    if (!document.addEventListener) return;
+
+    ShowDetails = function() {
+
+      // Save the user’s preference
+      function show(e) {
+        var target = e.target;
+        var name = target.nodeName.toLowerCase();
+        var p = closest(e.target, "p");
+        if (p && p.className.indexOf("show") >= 0) {
+          var section = closest(e.target, "section");
+
+          if (section && section.className.indexOf("has-details") >= 0) {
+            section.className += " show-details";
+            e.preventDefault();
+          }
+        }
+      }
+
+      document.addEventListener("click", show, false);
+
+      // Show buttons
+      var html = document.getElementsByTagName("html")[0];
+      html.className += " scripted-show-details";
+    }
+
+  })();
+
+
+  /* =HideTip
+  -----------------------------------------------
+  NOTE: This currently only supports a single tip (the community introduction)
+  ----------------------------------------------- */
+  var HideTip = function() {};
 
   (function() {
 
     if (!window.localStorage || !document.addEventListener) return;
 
-    HideButton = function() {
+    HideTip = function() {
 
-      var storageName = "community-intro-tip";
-      storageName = storageName.replace(/-/g, "_");
+      // TODO: Find a way to get this id from the HTML
+      var id = "community-intro";
+      var storageName = "hide_" + id.replace(/-/g, "_");
 
       // Hide the messages
       function hide(e) {
         if (localStorage[storageName]) {
           var html = document.getElementsByTagName("html")[0];
-          html.className += " hide-" + storageName.replace(/_/g, "-");
+          html.className += " hide-" + id;
         }
       }
 
@@ -95,7 +136,9 @@
         var p = closest(e.target, "p");
         if (p && p.className.indexOf("close") >= 0) {
           var section = closest(e.target, "section");
-          if (section && section.id == "community-intro-tip") {
+
+          // TODO: Support multiple storage names
+          if (section && section.id == id) {
             localStorage[storageName] = "hidden";
             hide();
             e.preventDefault();
@@ -108,7 +151,7 @@
 
       // Show the close buttons
       var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-hide-button";
+      html.className += " scripted-hide-tip";
     }
 
   })();
