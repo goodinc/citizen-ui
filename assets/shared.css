@@ -857,7 +857,10 @@
 
   /* OPTIONAL: Hide the details by default */
   section.message.tip .details {
-    display: inline;
+    margin-top: 0.75em;
+  }
+  section.message.tip .details p:first-child:before {
+    content: "";
   }
 
   .scripted-show-details .details {
