@@ -57,104 +57,107 @@
   </div><!-- /.container -->
 </header>
 
+<header class="sub">
+  <div class="container">
+    <div>
+      <h1>You searched for <mark>“dinosaur”</mark></h1>
+    </div>
+  </div><!-- /.container -->
+</header>
+
+<nav class="sub">
+  <div class="container">
+    <ul>
+      <li>
+        <a href="search.html">All Results</a>
+      </li>
+      <li>
+        <a href="search-posts.html">Posts</a>
+      </li>
+      <li class="active">
+        <a href="search-topics.html">Topics</a>
+      </li>
+      <li>
+        <a href="search-members.html">Members</a>
+      </li>
+    </ul>
+  </div><!-- /.container -->
+</nav>
+
 <main id="content">
   <div class="container">
 
-    <section class="search-results">
+    <section>
+      <h1>Topics</h1>
 
-      <header class="header">
-        <h1>You searched for <mark>“dinosaur”</mark></h1>
+      <ul class="follow-list">
+        <li>
+          <h3>
+            <a href=""><mark>Dinosaurs</mark></a>
+          </h3>
+          <div class="meta">
+            <p>200 Posts</p>
+            <p>10 Followers</p>
+          </div>
+          <form action="" method="post" class="following">
+            <p><button type="submit" title="Unfollow">Following</button></p>
+          </form>
+        </li>
+        <li>
+          <h3>
+            <a href="/coworking">Coworking</a>
+          </h3>
+          <div class="meta">
+            <p>29 Posts</p>
+            <p>10 Followers</p>
+          </div>
+          <form action="" method="post" class="follow">
+            <p><button type="submit">Follow</button></p>
+          </form>
+        </li>
+        <li>
+          <h3>
+            <a href="">Prehistoric</a>
+          </h3>
+          <div class="meta">
+            <p>150 Posts</p>
+            <p>8 Followers</p>
+          </div>
+          <form action="" method="post" class="follow">
+            <p><button type="submit">Follow</button></p>
+          </form>
+        </li>
+      </ul>
 
-        <nav class="sub">
-          <ul>
-            <li>
-              <a href="search.html">All</a>
-            </li>
-            <li>
-              <a href="search-posts.html">Posts</a>
-            </li>
-            <li class="active">
-              <a href="search-topics.html">Topics</a>
-            </li>
-            <li>
-              <a href="search-members.html">Members</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <section>
-        <h2>Topics</h2>
-
-        <ul class="follow-list">
-          <li>
-            <h3>
-              <a href=""><mark>Dinosaurs</mark></a>
-            </h3>
-            <div class="meta">
-              <p>200 Posts</p>
-              <p>10 Followers</p>
-            </div>
-            <form action="" method="post" class="following">
-              <p><button type="submit" title="Unfollow">Following</button></p>
-            </form>
+      <nav class="pagination">
+        <ul>
+          <li class="next">
+            <a href="" title="Next Page">Next</a>
           </li>
-          <li>
-            <h3>
-              <a href="/coworking">Coworking</a>
-            </h3>
-            <div class="meta">
-              <p>29 Posts</p>
-              <p>10 Followers</p>
-            </div>
-            <form action="" method="post" class="follow">
-              <p><button type="submit">Follow</button></p>
-            </form>
+          <li class="previous">
+            <a href="" title="Previous Page">Prev</a>
           </li>
-          <li>
-            <h3>
-              <a href="">Prehistoric</a>
-            </h3>
-            <div class="meta">
-              <p>150 Posts</p>
-              <p>8 Followers</p>
-            </div>
-            <form action="" method="post" class="follow">
-              <p><button type="submit">Follow</button></p>
-            </form>
-          </li>
+
+          <li><a href="" title="Page 1">1</a></li>
+          <li class="active"><a href="" title="Page 2">2</a></li>
+          <li><a href="" title="Page 3">3</a></li>
+          <li><a href="" title="Page 4">4</a></li>
+          <li><a href="" title="Page 5">5</a></li>
         </ul>
+      </nav>
+    </section>
 
-        <nav class="pagination">
-          <ul>
-            <li class="next">
-              <a href="" title="Next Page">Next</a>
-            </li>
-            <li class="previous">
-              <a href="" title="Previous Page">Prev</a>
-            </li>
-
-            <li><a href="" title="Page 1">1</a></li>
-            <li class="active"><a href="" title="Page 2">2</a></li>
-            <li><a href="" title="Page 3">3</a></li>
-            <li><a href="" title="Page 4">4</a></li>
-            <li><a href="" title="Page 5">5</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <section>
-        <form action="" method="get">
-          <h2>Search Again</h2>
-          <p>
-            <label>
-              <span>Find topics, members, or keywords…</span><br />
-              <input name="q" type="search" placeholder="What are you looking for?" value="dinosaur" />
-            </label>
-            <button type="submit">Search</button>
-          </p>
-        </form>
-      </section>
+    <section>
+      <form action="" method="get">
+        <h2>Search Again</h2>
+        <p>
+          <label>
+            <span>Find topics, members, or keywords…</span><br />
+            <input name="q" type="search" placeholder="What are you looking for?" value="dinosaur" />
+          </label>
+          <button type="submit">Search</button>
+        </p>
+      </form>
     </section>
 
   </div><!-- /.container -->
