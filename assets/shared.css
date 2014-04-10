@@ -490,15 +490,14 @@
     margin-top: 2.625em; /* @line-height x 3/2 */
   }
 
-  form + form {
+  /* For the email preferences page */
+  form + form.secondary {
     margin-top: 2.625em; /* @line-height x 3/2 */
     border-width: 0;
     border-top: 0.1em solid rgb(239, 239, 239);
     position: relative;
     padding: 1.75em 0 0 0;
   }
-
-  /* For the email preferences page */
   @media (min-width: 40em) {
     form + form.secondary {
       text-align: right;
@@ -654,7 +653,7 @@
   }
 
   section.message p.close:before {
-    content: "";
+    display: none;
   }
   section.message p.close a {
     text-decoration: none;
@@ -730,9 +729,6 @@
     margin-top: 0;
     margin-bottom: 1.75em;
   }
-  body > section.message:first-child {
-    margin-bottom: 0;
-  }
 
   .activity-item .message.success a {
     text-decoration: underline;
@@ -751,6 +747,9 @@
     font-weight: normal;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     color: rgb(153, 153, 102);
+  }
+  section.message.tip h1 strong:after {
+    content: ":";
   }
   section.message.tip h1,
   section.message.tip p {
@@ -778,11 +777,12 @@
     border-top-width: 0;
     border-right-width: 0;
     border-left-width: 0;
+    margin-bottom: 0;
   }
   body > section.message.tip > .container {
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
-    max-width: 71.8125em; /* @max-page-width */
+    max-width: 71.0625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -857,7 +857,7 @@
     margin-top: 0.75em;
   }
   section.message.tip .details p:first-child:before {
-    content: "";
+    display: none;
   }
   .message.has-details .show {
     display: none;
@@ -975,6 +975,25 @@
   .following button:focus {
     background: rgb(255, 105, 105);
   }
+
+  .following button:hover,
+  .following button:active,
+  .following button:focus {
+    color: transparent;
+  }
+  .following button:before {
+    transition: color 0.2s;
+    content: "Unfollow";
+    color: transparent;
+    position: absolute;
+    margin-left: 0.2em;
+  }
+  .following button:hover:before,
+  .following button:active:before,
+  .following button:focus:before {
+    color: white;
+  }
+
 
   /* Do */
   .scripted-do form.do h6,
@@ -1526,10 +1545,10 @@
   /* Logotype */
   #header h2 {
     font-size: inherit;
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-bottom: 0;
   }
   #header h2 a {
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: rgb(0, 1, 2); /* @midnight */
     font-size: 4.5em;
@@ -2058,7 +2077,6 @@
     display: inline-block;
     vertical-align: top;
     margin-top: 0;
-    margin-bottom: 3em;
   }
   #footer section:last-child {
     margin-right: 0;
@@ -2091,12 +2109,8 @@
     margin-top: 0.65625em;
     font-size: inherit;
   }
-  #footer p:last-child {
+  #footer > .container > p:last-child {
     font-size: 0.75em;
-
-    /* KLUDGE: Reduce the amount of space above the copyright statement. */
-    margin-top: -1.75em;
-
     color: rgb(153, 153, 153); /* @aluminum */
   }
   #footer ul,
@@ -3008,7 +3022,7 @@
 
   /* OPTIONAL: Line up with the headline */
   @media (min-width: 40em) { /* @medium-size */
-    .activity-item .post .has-image + .meta {
+    .activity-item .post .has-image ~ .meta {
       margin-left: 7.5em; /* image.width(120px) / @font-size(16px) */
     }
   }
@@ -3058,6 +3072,42 @@
     font-size: 0.75em;
   }
 
+  /* EXPERIMENTAL: Show a special icon above the image, if it’s a link to another website.
+  .activity-item .link h3 .image:before {
+    content: "";
+    position: absolute;
+    top  : 50%;
+    left : 50%;
+    width  : 1.5em;
+    height : 1.5em;
+    margin-left : -0.875em;
+    margin-top  : -0.875em;
+    border: 0.125em solid black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    background: black;
+
+    -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+         -o-border-radius: 100%;
+            border-radius: 100%;
+  }
+  .activity-item .link h3 .image:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent url(shared/link.svg) no-repeat center;
+    background-size: 0.9em auto;
+    top: 0;
+    left: 0;
+  }
+  .activity-item .link .image:before,
+  .activity-item .link .image:after {
+    font-size: 0.75em;
+  }
+  */
 
   .activity-item form {
     font-size: 0.75em;
@@ -3066,6 +3116,39 @@
   .activity-item form.doing,
   .activity-item form.done {
     float: right;
+  }
+
+  /* SHIM: Support multiple form elements, wrapped in a container */
+  .activity-item .todo_actions {
+    margin-top: 0.875em; /* @line-height / 2 */
+    float: right;
+  }
+  .topic-featured .activity-item .todo_actions {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Make the follow button look nice on small screens. */
+  .follow-list > li > form {
+    margin-top: 1.1666666667em; /* @line-height / 2 / 0.75 */
+  }
+  .follow-list > li > div.form { /* SHIM: Support multiple form elements, wrapped in a container */
+    margin-top: 0.875em; /* @line-height / 2 */
+  }
+  @media (min-width: 40em) {
+    .follow-list > li > form {
+      margin-top: 0;
+    }
+    .follow-list > li > div.form {
+      margin-top: 0;
+    }
+  }
+  .follow-list > li > h3.has-image ~ form {
+    margin-left: 7.5em; /* 5.625 / 0.75 */
+  }
+  .follow-list > li > h3.has-image ~ div.form {
+    margin-left: 5.625em;
   }
 
 
@@ -3085,7 +3168,7 @@
     float: right;
     border-right-width: 0;
     margin-left: 0.9375em; /* @image-margin */
-    margin-bottom: 0.875em;
+    margin-bottom: 0.4375em; /* @line-height / 4 */
 
     /* OPTIONAL: Move the image up and to the right a little */
     margin-top   : -0.20833333333333em; /* @line-height(20px) / font-size(24px) x 1/4 */
@@ -4162,6 +4245,12 @@
     color: rgb(101, 102, 102); /* @steel */
   }
 
+  .comments textarea {
+    max-width: 98%;
+  }
+  .comments > form {
+    margin-right: 1.25em;
+  }
   .comments .submit {
     margin-top: 1em;
     font-size: 0.875em; /* 14px / @font-size */
@@ -4227,6 +4316,9 @@
     /* For an example, see Kevin Van Lierop’s commment in this article: http://www.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
     word-wrap     : break-word; /* Currently supported in most browsers */
     overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
+  }
+  .comment-list article > p {
+    max-width: 33em;
   }
   .comment-list article > p a {
     color: rgb(102, 153, 204);
@@ -5335,12 +5427,20 @@
     margin-right: 0.875em; /* @line-height / 2 */
   }
 
-  /* Support multiple form elements, wrapped in a container */
+  /* SHIM: Support multiple form elements, wrapped in a container */
   .post > footer .todo_actions {
     display: inline-block;
     vertical-align: top;
     margin-right: 0.875em; /* @line-height / 2 */
   }
+
+  /* SHIM: Support a backbone container wrapped around the DOs or Votes count. */
+  /*
+  .post > footer .dos   > div,
+  .post > footer .votes > div {
+    display: inline-block;
+  }
+  */
 
   @media (min-width: 35em) {
     /* OPTIONAL: Position count on the right */
@@ -5604,6 +5704,7 @@
   }
   .discussion h3 {
     font-size: inherit;
+    line-height: 1.3125em; /* @line-height x 3/4 */
     font-family: inherit;
     font-weight: bold;
     text-align: center;
