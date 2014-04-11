@@ -3469,6 +3469,9 @@
     color: white;
   }
 
+  /* OPTIONAL: Make the loading icon look nice, if it’s applied
+  to the vote count in a feed or the vote button on a post page. */
+  .vote.loading button,
   .meta .vote.loading button {
     color: transparent;
   }
@@ -3478,11 +3481,24 @@
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(253, 253, 253);
   }
+  .vote.loading button:before,
   .meta .vote.loading button:before {
     color: transparent;
   }
-
-
+  .vote.loading:before {
+    border-color: white;
+  }
+  .vote.loading:after {
+    border-right-color: white;
+    border-bottom-color: white;
+  }
+  .meta .vote.loading:before {
+    color: rgb(101, 102, 102);
+  }
+  .meta .vote.loading:after {
+    border-right-color: rgb(101, 102, 102);
+    border-bottom-color: rgb(101, 102, 102);
+  }
 
   .activity-item .meta .dos,
   .activity-item .meta .votes,
