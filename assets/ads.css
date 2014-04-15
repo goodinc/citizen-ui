@@ -167,9 +167,6 @@
   .has-aside .s3 {
     display: block;
   }
-  .has-aside + aside {
-    display: none;
-  }
 
   .has-aside .ads.has-multiple .ad + .ad {
     display: none;
@@ -182,9 +179,6 @@
   }
 
   @media (min-width: 66.5625em) { /* @max-page-width */
-    .has-aside + aside {
-      display: block;
-    }
     .has-aside .s1,
     .has-aside .s2,
     .has-aside .s3 {

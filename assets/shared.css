@@ -104,13 +104,6 @@
     width: 100%;
   }
 
-  /* KLUDGE: Prevent the facebook recommendations from appearing too wide on small screens */
-  .fb-recommendations,
-  .fb-recommendations span,
-  .fb-recommendations iframe {
-    width: 100% !important;
-  }
-
   a img {
     border-width: 0;
   }
@@ -6193,3 +6186,89 @@
     font-family: inherit;
   }
 
+
+  /* =Shim
+  -----------------------------------------------
+  This section is for experimental or temporary styles that
+  were written (perhaps in a hurry) to fix a bug, or get
+  a new site feature released quickly.
+
+  If possible, these should be optimized or corrected
+  and moved out of this area.
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+
+  /* OPTIONAL: Center advertisements that appear in the main content area. */
+  .ad.leaderboard,
+  .ad.middleboard,
+  .ad.baseboard {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* OPTIONAL: Collapse the left and right margin, on small screens */
+  .activity-list > li.ad-container,
+  .ad-container {
+    margin-bottom : 1.75em;
+    margin-left   : -1.5em; /* @page-margin */
+    margin-right  : -1.5em;
+  }
+  @media (min-width: 40em) {
+    .activity-list > li.ad-container,
+    .ad-container {
+      margin-left  : -2.25em; /* @wide-page-margin */
+      margin-right : -2.25em;
+    }
+  }
+
+  /* OPTIONAL: Add more space between paging and advertising. */
+  .pagination + .ad-container {
+    margin-top: 2.625em; /* @line-height x 1.5 */
+  }
+
+  /* OPTIONAL: Remove the border above the ad, if it appears in a follow-list */
+  .follow-list > li.ad-container {
+    border-width: 0;
+    padding: 0;
+  }
+
+  /* OPTIONAL: Make ads take up the full width of the window on small screens */
+  @media (max-width: 66.5625em) { /* @max-page-width */
+    .has-aside + aside {
+      text-align: center;
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+    }
+  }
+
+  /* OPTIONAL: Center the ads on medium size screens */
+  @media (min-width: 40em) and (max-width: 66.5625em) { /* @max-page-width */
+    .has-aside + aside .ad,
+    aside .promotion,
+    aside section.facebook,
+    aside .fb-recommendations {
+      text-align: left;
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 0 !important;
+      margin-bottom: 1.75em !important;
+      margin-left: 0.5em !important;
+      margin-right: 0.5em !important;
+    }
+    .has-aside + aside .ad,
+    aside .promotion,
+    aside section.facebook,
+    aside .fb-recommendations {
+      width: 18.75em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+  }
+
+  /* OPTIONAL: Prevent the facebook recommendations from appearing too wide on small screens */
+  .fb-recommendations,
+  .fb-recommendations span,
+  .fb-recommendations iframe {
+    max-width: 100% !important;
+  }
