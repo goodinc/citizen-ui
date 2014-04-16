@@ -735,16 +735,27 @@
     padding: 0;
     line-height: 1.5;
   }
-  section.message.tip h1 strong {
+  section.message.tip h1,
+  section.message.tip h2 {
+    font-family: inherit;
+    font-weight: bold;
+    line-height: inherit;
+    margin-bottom: 0;
+    display: inline;
+  }
+  section.message.tip h1 strong,
+  section.message.tip h2 strong {
     text-transform: uppercase;
     font-weight: normal;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     color: rgb(153, 153, 102);
   }
-  section.message.tip h1 strong:after {
+  section.message.tip h1 strong:after,
+  section.message.tip h2 strong:after {
     content: ":";
   }
   section.message.tip h1,
+  section.message.tip h2,
   section.message.tip p {
     font-size: 0.875em;
   }
@@ -837,7 +848,7 @@
   /* OPTIONAL: Show the close buttons if they’re scripted */
   .scripted-hide-tip section.message.tip .close.primary,
   .scripted-hide-tip section.message.tip .close.secondary {
-    display: block;
+    display: block !important;
   }
 
   /* OPTIONAL: Hide the community intro, if the user has pressed the “Hide” button */
@@ -857,7 +868,7 @@
   }
 
   .scripted-show-details .message.has-details .show {
-    display: inline;
+    display: inline !important;
   }
 
   /* Hide details */
@@ -877,7 +888,7 @@
     left: auto;
   }
   .scripted-show-details .message.show-details .show {
-    display: none;
+    display: none !important;
   }
   .scripted-show-details .message.has-details.show-details h1 {
     cursor: default;
@@ -3537,13 +3548,16 @@
     border-color: rgb(221, 223, 227); /* @silver-blue */
     border-style: solid;
     border-width: 0 1px 1px 1px;
+    display: inline-block;
+    width: 5em; /* 60px / font-size(12px) */
+    height: 5em;
   }
 
   /* OPTIONAL: Make the member images about half their usual size on small screens */
   @media (max-width: 29.9em) {
     .activity-item > .source:first-child img {
       width  : 2.5em; /* 30px / font-size(12px) */
-      height : auto;
+      height : 2.5em;
     }
   }
 
@@ -3606,7 +3620,7 @@
   /* OPTIONAL: Make the featured source image smaller */
   .topic-featured .activity-item > .source:first-child img {
     width: 2.5em; /* 30px / @font-size(16px) */
-    height: auto;
+    height: 2.5em;
     margin-left: -1.66666666666667em; /* 20px / 12px */
     margin-right: 0.625em;
   }
@@ -6201,7 +6215,7 @@
 
   /* OPTIONAL: Center advertisements that appear in the main content area. */
   .ad.leaderboard,
-  .ad.middleboard,
+  .ad[class*=middleboard],
   .ad.baseboard {
     margin-left: auto;
     margin-right: auto;
