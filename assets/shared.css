@@ -3316,19 +3316,27 @@
   .meta .vote.loading button:before {
     color: transparent;
   }
-  .vote.loading:before {
+  .vote.loading:before,
+  .vote.loading:after {
     border-color: white;
   }
+  .vote.loading:before {
+    border-right-color: transparent;
+  }
   .vote.loading:after {
-    border-right-color: white;
-    border-bottom-color: white;
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+  .meta .vote.loading:before,
+  .meta .vote.loading:after {
+    border-color: rgb(101, 102, 102);
   }
   .meta .vote.loading:before {
-    color: rgb(101, 102, 102);
+    border-right-color: transparent;
   }
   .meta .vote.loading:after {
-    border-right-color: rgb(101, 102, 102);
-    border-bottom-color: rgb(101, 102, 102);
+    border-left-color: transparent;
+    border-top-color: transparent;
   }
 
   .activity-item .meta .dos,
