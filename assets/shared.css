@@ -2447,23 +2447,23 @@
 
   /* =Social
   ----------------------------------------------- */
-  aside .social h2 {
+  .social.promotion h2 {
     /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
     margin-bottom : 0.5833333334em;
   }
-  aside .social ul,
-  aside .social li {
+  .social.promotion ul,
+  .social.promotion li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  aside .social li {
+  .social.promotion li {
     display: inline;
     margin-right: 1em;
   }
-  aside .social a {
+  .social.promotion a {
     text-decoration: none;
 
     /* @icon-ligatures */
@@ -2481,9 +2481,9 @@
     font-weight: normal;
     font-size: 1.25em;
   }
-  aside .social a:hover,
-  aside .social a:active,
-  aside .social a:focus {
+  .social.promotion a:hover,
+  .social.promotion a:active,
+  .social.promotion a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
 
@@ -5701,6 +5701,14 @@
   ----------------------------------------------
   (A page with a small amount of content.)
   ----------------------------------------------- */
+
+  /* SHIM: These rules are prefixed with #content to
+  avoid clashing with the .dialog element in the
+  join form (if it appears in an overlay).
+
+  If that form is moved to a standalone page,
+  these rules can be safely unprefixed. */
+
   #content .dialog {
     border-width: 0.1em 0;
     border-style: solid;
