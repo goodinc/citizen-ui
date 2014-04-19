@@ -123,7 +123,7 @@
 
   /* Margins */
   h1, h2, h3, h4, h5, h6, p, ol, ul, dl, form, table, blockquote, fieldset,
-  header, footer, section, article, aside, nav {
+  header, footer, section, article, aside, nav, figure {
     margin-top    : 0.875em; /* @line-height / 2 */
     margin-bottom : 0.875em;
   }
@@ -252,12 +252,25 @@
     margin-right: 0;
   }
   figure .image {
+    /*
     background: rgb(249, 249, 249);
-    border: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    border: 1px solid rgb(218, 220, 224);*/ /* @blue-gray */
   }
+  /*
   figure img {
     display: block;
     margin: 0 auto;
+  }
+  */
+  figure .image {
+  }
+  figure img {
+    /*
+    border-width: 0 0 0.5em 0.5em;
+    border-style: solid;
+    border-color: rgb(227, 228, 229);
+    */
+    box-shadow: -0.5em 0.5em 0 rgb(227, 228, 229);
   }
   figcaption {
     font-size: 0.75em;
@@ -4144,7 +4157,6 @@
   .comments form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
-
   .comments form .images li img {
     display: block;
     margin-bottom: 0.4375em; /* @line-height / 4 */
