@@ -503,6 +503,7 @@
     }
   }
 
+  form ol,
   form ul,
   form li {
     list-style: none;
@@ -1038,16 +1039,16 @@
   }
 
   /* Secondary */
-  .comments button,
+  .comments .submit button,
   .secondary.action  a,
   .secondary .action a,
   .secondary button {
     background-color: rgb(239, 239, 239);
     color: rgb(101, 102, 102); /* @steel */
   }
-  .comments button:hover,
-  .comments button:active,
-  .comments button:focus,
+  .comments .submit button:hover,
+  .comments .submit button:active,
+  .comments .submit button:focus,
   .secondary.action a:hover,
   .secondary.action a:active,
   .secondary.action a:focus,
@@ -4109,9 +4110,53 @@
   .comments > form {
     margin-right: 1.25em;
   }
-  .comments .submit {
-    margin-top: 1em;
+  .comments button {
     font-size: 0.875em; /* 14px / @font-size */
+  }
+
+  /*
+  .comments form .avatar {
+    position: absolute;
+    margin-left: -2.625em;
+  }
+  */
+  .comments form .images li {
+    display: block;
+    position: relative;
+  }
+  .comments form .images li + li {
+    margin-top: 1.75em;
+  }
+  .comments form .images li span {
+    /* @hidden-accessible */
+    /*
+    position: absolute;
+    left: -9999px;
+    */
+    display: block;
+    padding: 0.21875em 0.65625em;
+    position: absolute;
+    top: 0;
+    color: white;
+    background: black;
+    background: rgb(0, 0, 0, 0.5);
+  }
+  .comments form .submit {
+    margin-bottom: 1.75em; /* @line-height */
+  }
+
+  .comments form .images li img {
+    display: block;
+    margin-bottom: 0.4375em; /* @line-height / 4 */
+  }
+
+  .supports-placeholder .comments .text label > span:first-child {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .supports-placeholder .comments .text label br {
+    display: none;
   }
 
 
@@ -4187,13 +4232,14 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-  .supports-placeholder .comments label > span:first-child {
+  .comment-list form {
+    margin-top: 1.75em;
+  }
+
+  .comment-list form h4 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
-  }
-  .supports-placeholder .comments label br {
-    display: none;
   }
 
   @media (min-width: 40em) {
@@ -4239,17 +4285,7 @@
     .comment-list article > h3 + p {
       margin-top: -1.75em;
     }
-
-    .comment-list form {
-      margin-top: 1.5em;
-    }
-    .comment-list form h4 {
-      /* @hidden-accessible */
-      position: absolute;
-      left: -9999px;
-    }
   }
-
 
 
 /* =Member Header
@@ -6302,3 +6338,4 @@
   .fb-recommendations iframe {
     max-width: 100% !important;
   }
+
