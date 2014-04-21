@@ -4127,39 +4127,56 @@
     font-size: 0.875em; /* 14px / @font-size */
   }
 
-  /*
   .comments form .avatar {
     position: absolute;
-    margin-left: -2.625em;
   }
-  */
+  .comments form .avatar + p {
+    margin-left: 2.625em;
+  }
   .comments form .images li {
     display: block;
     position: relative;
+    background: rgb(249, 249, 249);
+    border: 0.1em solid rgb(204, 204, 204);
+    border-radius: 0.25em;
+    padding: 0.4375em 0.4375em 0.4375em 0.875em;
+    max-width: 33em;
   }
   .comments form .images li + li {
-    margin-top: 1.75em;
+    margin-top: 0.875em;
   }
-  .comments form .images li span {
+  .comments form .images button {
+    background: rgb(153, 153, 153); /* @aluminum */
+    padding: 0.2em 0.5em 0.1em;
+    float: right;
+    font-size: 0.75em;
+  }
+  .comments form .images button span {
     /* @hidden-accessible */
-    /*
     position: absolute;
     left: -9999px;
-    */
-    display: block;
-    padding: 0.21875em 0.65625em;
-    position: absolute;
-    top: 0;
-    color: white;
-    background: black;
-    background: rgb(0, 0, 0, 0.5);
+  }
+  .comments form .images button:after {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
   }
   .comments form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
   .comments form .images li img {
-    display: block;
-    margin-bottom: 0.4375em; /* @line-height / 4 */
+    vertical-align: middle;
+    margin-right: 0.4375em;
   }
 
   .supports-placeholder .comments .text label > span:first-child {
