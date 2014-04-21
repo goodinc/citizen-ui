@@ -4127,10 +4127,16 @@
     font-size: 0.875em; /* 14px / @font-size */
   }
 
+  .comments form .container {
+    border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    padding: 0.875em;
+    border-radius: 0.25em;
+  }
   .comments form .avatar {
     position: absolute;
   }
   .comments form .avatar + p {
+    margin-top: 0;
     margin-left: 2.625em;
   }
   .comments form .images li {
