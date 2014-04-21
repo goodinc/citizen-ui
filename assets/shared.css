@@ -525,6 +525,7 @@
     display: block;
   }
 
+  form .error textarea,
   form .error input[type="text"],
   form .error input[type="email"],
   form .error input[type="phone"],
