@@ -4184,7 +4184,7 @@
   }
   .comments form .file label {
     display: inline-block;
-    padding: 0.4375em;
+    padding: 0.328125em;
     border-radius: 0.25em;
     max-width: 33em;
     -moz-box-sizing : border-box;
@@ -4192,6 +4192,14 @@
     border: 0.1em solid rgb(153, 153, 153); /* @aluminum */
     line-height: 1;
     position: relative;
+    cursor: pointer;
+    border-color: transparent;
+    opacity: 0.25;
+    transition: opacity 0.2s, border-color 0.2s;
+  }
+  .comments form .file label:hover {
+    opacity: 1;
+    border-color: rgb(153, 153, 153);
   }
   .comments form .file label br {
     display: none;
@@ -4271,16 +4279,21 @@
     display: none;
   }
 
-  .comments form ol + .file {
-    margin-top: -3.25em;
-  }
-  .comments form ol + .file .note,
-  .comments form ol + .file .error-message {
-    margin-top: 1.75em;
+  /* OPTIONAL: Attempt to align the picture button with the uploaded pictures. */
+  @media (min-width: 50em) {
+    .comments form ol + .file {
+      margin-top: -3em;
+    }
+    .comments form ol + .file .note,
+    .comments form ol + .file .error-message {
+      margin-top: 1.75em;
+    }
   }
 
   .comments form .file.disabled label {
     opacity: 0.25;
+    border-color: transparent;
+    cursor: default;
   }
   .comments form .file.disabled label:hover > span:first-child {
     opacity: 0;
@@ -4288,6 +4301,9 @@
 
 
 /* TEMPORARY */
+  .comments form ol label {
+    cursor: pointer;
+  }
   .comments form ol input[type="file"] {
     position: absolute;
     left: -9999px;
