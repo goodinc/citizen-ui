@@ -4103,9 +4103,23 @@
     color: rgb(101, 102, 102); /* @steel */
   }
 
+
+/* =Comment Form
+  ----------------------------------------------- */
   .comments textarea {
     max-width: 98%;
+    height: 10.5em;
   }
+  @media (min-width: 40em) {
+    .comments .inactive textarea {
+    height: 2.1875em; /* @line-height x 5/4 */
+      max-width: 80%;
+    }
+    .comments .inactive p.text + .file {
+      margin-top: -3.5em;
+    }
+  }
+
   .comments > form {
     margin-right: 1.25em;
   }
@@ -4131,13 +4145,19 @@
     background: rgb(249, 249, 249);
     border: 0.1em solid rgb(204, 204, 204);
     border-radius: 0.25em;
-    padding: 0.4375em 0.4375em 0.4375em 0.875em;
+    padding: 0.4375em;
     max-width: 30em;
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
   .comments form .images li + li {
     margin-top: 0.875em;
+  }
+  .comments form .images img {
+    height: 1.75em;
+    width: auto;
+    border-radius: 0.25em;
+    vertical-align: middle;
   }
   .comments form .images button {
     background: rgb(153, 153, 153); /* @aluminum */
@@ -4279,17 +4299,6 @@
     display: none;
   }
 
-  /* OPTIONAL: Attempt to align the picture button with the uploaded pictures. */
-  @media (min-width: 50em) {
-    .comments form ol + .file {
-      margin-top: -3em;
-    }
-    .comments form ol + .file .note,
-    .comments form ol + .file .error-message {
-      margin-top: 1.75em;
-    }
-  }
-
   .comments form .file.disabled label {
     opacity: 0.25;
     border-color: transparent;
@@ -4297,19 +4306,6 @@
   }
   .comments form .file.disabled label:hover > span:first-child {
     opacity: 0;
-  }
-
-
-/* TEMPORARY */
-  .comments form ol label {
-    cursor: pointer;
-  }
-  .comments form ol input[type="file"] {
-    position: absolute;
-    left: -9999px;
-  }
-  .comments form ol input[type="file"]:focus {
-    position: static;
   }
 
 
@@ -4353,9 +4349,6 @@
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 1.25em; /* @line-height(20px) */
     padding-bottom: 1.25em
-  }
-  .comment-list ul {
-    margin-top: 0;
   }
 
   .comment-list article > h3 img {
@@ -6302,16 +6295,16 @@
   -----------------------------------------------
   ----------------------------------------------- */
 
-  .comment-list article footer ul,
-  .comment-list article footer ul li {
+  .comment-list article footer > ul,
+  .comment-list article footer > ul li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .comment-list article footer ul {
+  .comment-list article footer > ul {
     text-align: right;
   }
-  .comment-list article footer ul li {
+  .comment-list article footer > ul li {
     display: inline;
     margin-right: 1em;
     color: rgb(101, 102, 102); /* @steel */
