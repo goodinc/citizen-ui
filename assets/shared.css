@@ -252,7 +252,7 @@
     margin-right: 0;
   }
   figure img {
-    box-shadow: -0.5em 0.5em 0 rgb(227, 228, 229);
+    box-shadow: 0.5em 0.5em 0 rgb(227, 228, 229);
   }
   figcaption {
     font-size: 0.75em;
