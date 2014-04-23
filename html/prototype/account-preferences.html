@@ -131,35 +131,34 @@
         </fieldset>
 
         <fieldset>
-          <legend>GOOD HQ Updates</legend>
-          <p>
-            <label>
-              <input type="checkbox" checked="checked" /> Keep me posted on the latest happenings at GOOD HQ
-            </label>
-          </p>
-        </fieldset>
-
-        <fieldset>
-          <legend>GOOD Digest</legend>
-          <p class="note">A roundup of the most popular things to learn and do</p>
-          <ul>
+          <legend>GOOD Newsletters</legend>
+          <ul class="headlines">
             <li>
-              <label>
-                <input type="radio" name="digest" value="daily" checked="checked" />
-                <span>Send daily</span>
-              </label>
+              <h3>
+                <label>
+                  <input type="checkbox" />
+                  <span>GOOD HQ Updates</span>
+                </label>
+              </h3>
+              <p class="note">Keeping you posted on the latest happenings at GOOD HQ</p>
             </li>
             <li>
-              <label>
-                <input type="radio" name="digest" value="weekly" />
-                <span>Send weekly</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="digest" value="none" />
-                <span>Please don’t send</span>
-              </label>
+              <h3>
+                <label>
+                  <input type="checkbox" name="send_digest" value="1" checked="checked" />
+                  <span>GOOD Digest</span>
+                </label>
+              </h3>
+              <p class="note">Choose a daily or weekly roundup of top links shared by GOOD members</p>
+              <p class="frequency">
+                <label>
+                  <span>Send me the</span><br />
+                  <select name="digest">
+                    <option value="daily">Daily GOOD</option>
+                    <option value="weekly">Weekly GOOD</option>
+                  </select>
+                </label>
+              </p>
             </li>
           </ul>
         </fieldset>
