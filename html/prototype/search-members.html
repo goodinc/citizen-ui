@@ -57,12 +57,18 @@
   </div><!-- /.container -->
 </header>
 
-<header class="sub">
+<header class="search-header">
   <div class="container">
-    <div>
-      <h1>You searched for <mark>“dinosaur”</mark></h1>
-    </div>
-  </div><!-- /.container -->
+    <form action="" method="get">
+      <h1>
+        <label>
+          <span>You searched for…</span>
+          <input name="q" type="search" placeholder="What are you looking for?" value="dinosaur" />
+        </label>
+        <button type="submit">Search</button>
+      </h1>
+    </form>
+  </div>
 </header>
 
 <nav class="sub">
@@ -86,19 +92,6 @@
 
 <main id="content">
   <div class="container">
-
-    <section class="search-again">
-      <form action="" method="get">
-        <h2>Search Again</h2>
-        <p>
-          <label>
-            <span>Find topics, members, or keywords…</span><br />
-            <input name="q" type="search" placeholder="What are you looking for?" value="dinosaur" />
-          </label>
-          <button type="submit">Search</button>
-        </p>
-      </form>
-    </section>
 
     <section>
       <h1>Members</h1>
@@ -304,7 +297,7 @@
         <h2>Search Again</h2>
         <p>
           <label>
-            <span>Find topics, members, or keywords…</span><br />
+            <span><strong>Search</strong> for topics, members or keywords…</span>
             <input name="q" type="search" placeholder="What are you looking for?" value="dinosaur" />
           </label>
           <button type="submit">Search</button>

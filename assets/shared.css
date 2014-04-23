@@ -1506,6 +1506,7 @@
 
   body > header.sub > .container,
   body > nav.sub    > .container,
+  .search-header    > .container,
   .topic-header     > .container,
   .topic-featured   > .container,
   .member-header    > .container,
@@ -2441,6 +2442,7 @@
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
   body > nav.sub    ~ #content > .container > .home   > h1:first-child,
   body > header.sub ~ #content > .container > section > h1:first-child,
+  .search-header    ~ #content > .container > section > h1:first-child,
   .topic-header     ~ #content > .container > section > h1:first-child,
   .member-header    ~ #content > .container > section > h1:first-child {
     /* @hidden-accessible */
@@ -3893,9 +3895,6 @@
 
 /* =Activity List
   ----------------------------------------------- */
-  ul.activity-list {
-    margin-top: 1.25em; /* @line-height */
-  }
   ul.activity-list,
   ul.activity-list > li {
     list-style: none;
@@ -6304,9 +6303,125 @@
 
 /* =Search Results
   ----------------------------------------------- */
-  .search-results section + section {
-    margin-top: 3.5em; /* @line-height x 2 */
+  .search-header {
+    margin-top: 0;
+    margin-bottom: 1.75em;
   }
+  .search-header .container h1 {
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.75em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.5625em;
+    background: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .search-header h1 {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .search-header label > span:first-child {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+  .search-again  label > span:first-child,
+  .search-header label > span:first-child {
+    display: block;
+  }
+
+  .search-again {
+    text-align: center;
+  }
+  .search-again {
+    margin-top: 7em;
+    margin-bottom: 3.5em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.75em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search-again h2 {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .search-again p {
+    margin-top: 0;
+  }
+
+  .search-again  button,
+  .search-header button {
+    margin-top: 0.875em;
+    font-size: 0.875em;
+    padding: 0.3em 1em;
+  }
+
+
+  @media (min-width: 60em) {
+    .search-again  label > span:first-child,
+    .search-header label > span:first-child {
+      display: inline;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    .search-again  button,
+    .search-header button {
+      margin-top: 0;
+    }
+  }
+
+  .search-summary:first-child {
+    margin-top: 0.875em;
+  }
+  .search-summary h2 {
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-bottom : 0.5833333334em;
+  }
+  .search-summary .follow-list {
+    margin-bottom: 0;
+  }
+  .search-summary .action {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    margin-top: 0;
+    position: relative;
+    padding: 2em 1.4285714286em 0;
+    font-size: 0.875em;
+  }
+
+  @media (min-width: 60em) {
+    .search-summary {
+      margin-top: 0.875em;
+      width: 43%;
+      float: left;
+      border-width: 0.1em;
+      border-style: solid;
+      border-color: rgb(218, 220, 224);
+      padding: 1.75em;
+    }
+    .search-summary + .search-summary {
+      float: right;
+    }
+    .search-summary > ul > li {
+      min-height: 7em;
+    }
+    .search-summary + .search-summary + section {
+      clear: both;
+      padding-top: 1.75em;
+    }
+    .search-summary .action {
+      margin-top: 0;
+    }
+  }
+
 
 
   /* =Testing
