@@ -2222,8 +2222,15 @@
 
   /* For the “Want to make changes to your profile?” note, in the account settings section */
   body > nav.sub .note {
-    float: right;
+    display: block;
     font-size: 0.875em;
+    margin-bottom: 0.875em; /* @line-height / 2 */
+  }
+
+  @media (min-width: 30em) {
+    body > nav.sub .note {
+      float: right;
+    }
   }
 
   body > nav.sub li a {

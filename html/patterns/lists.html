@@ -923,7 +923,7 @@
             <span>Attach Image</span><br />
             <input type="file" name="image[]" />
           </label>
-          <strong class="error-message">Oops! Can’t accept that file type. Please try again with a JPG or PNG image.</strong>
+          <strong class="error-message">Oops! Nice pic, but it's just not our (file) type. Please try uploading a .jpg or .png image.</strong>
         </p>
       </div><!-- /.container -->
       <p class="submit">
@@ -931,6 +931,27 @@
       </p>
     </form>
 
+    <form action="" method="post">
+      <div class="container">
+        <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div><!-- /.container -->
+      <p class="submit">
+        <button type="submit">Post</button>
+      </p>
+      <p><strong class="error-message">Drawing a blank? To post a comment, please enter some text or upload an image.</strong></p>
+    </form>
 
     <ul class="comment-list">
       <li>
@@ -1018,7 +1039,10 @@
             <input type="file" name="image[]" disabled="disabled" />
           </label>
           <br />
-          <em class="note">You’ve uploaded the maximum number of images. Nice!</em>
+          <!--
+          <em class="note">Ready to post! You can't add any more images to this comment. More to share? You can post a slideshow from the "Post" menu.</em>
+        -->
+          <em class="note">Ready to post! You’ve uploaded the maximum number of images.</em>
         </p>
       </div><!-- /.container -->
       <p class="submit">
