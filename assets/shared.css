@@ -2442,7 +2442,7 @@
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
   body > nav.sub    ~ #content > .container > .home   > h1:first-child,
   body > header.sub ~ #content > .container > section > h1:first-child,
-  .search-header    ~ #content > .container > section > h1:first-child,
+  .search-header    ~ #content > .container > .search-results > h1:first-child,
   .topic-header     ~ #content > .container > section > h1:first-child,
   .member-header    ~ #content > .container > section > h1:first-child {
     /* @hidden-accessible */
@@ -2842,7 +2842,6 @@
 
 /* =More Link
   ----------------------------------------------- */
-  .search-summary .more,
   .activity-item .more {
     padding-left: 0.625em; /* 10px / @font-size */
     margin-top: 1.5em;
