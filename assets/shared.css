@@ -526,16 +526,37 @@
   }
 
   form .error textarea,
-  form .error input[type="text"],
-  form .error input[type="email"],
-  form .error input[type="phone"],
-  form .error input[type="password"] {
+  form .error input {
     border-color: rgb(255, 200, 200);
   }
+  form .success textarea,
+  form .success input {
+    border-color: rgb(184, 231, 184);
+  }
+  form .success label:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e606"; /* @icon-approve */
+    margin-left: 0.375em;
+
+    color: rgb(184, 231, 184);
+    color: rgb(91, 152, 94);
+    color: rgb(133, 191, 133);
+  }
+
   form .error-message {
     color: rgb(225, 51, 51);
     font-weight: normal;
-    display: block;
+    margin-left: 0.4375em;
   }
 
   fieldset {

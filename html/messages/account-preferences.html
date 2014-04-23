@@ -61,8 +61,7 @@
       <div class="options">
         <ul>
           <li><a href="member.html">View Profile</a></li>
-          <li><a href="account.html">Manage Account</a></li>
-          <li><a href="member-edit.html">Edit Profile</a></li>
+          <li><a href="account-email.html">Account Settings</a></li>
           <li><a href="friends.html">Find &amp; Invite Friends</a></li>
           <li><a href="sign-out.html">Sign Out</a></li>
         </ul>
@@ -78,33 +77,39 @@
   <p class="close"><a href="" title="Close this message">Close</a></p>
 </section>
 
+<header class="sub">
+  <div class="container">
+    <div>
+      <h1>Account Settings</h1>
+    </div>
+  </div>
+</header>
+
+<nav class="sub">
+  <div class="container">
+    <ul>
+      <li>
+        <a href="account-password.html">Account Password</a>
+      </li>
+      <li>
+        <a href="account-email.html">Account Email</a>
+      </li>
+      <li class="active">
+        <a href="account-preferences.html">Email Preferences</a>
+      </li>
+      <li>
+        <a href="http://news.good.is/subscriptions/new">GOOD Magazine Subscription</a>
+      </li>
+    </ul>
+    <p class="note">Want to make changes to your profile? <a href="member-edit.html">Edit profile</a></p>
+  </div>
+</nav>
+
 <main id="content">
   <div class="container">
 
-    <section>
-
-      <header class="header">
-        <h1>Account Settings</h1>
-        <p>Looking to edit your profile? <a href="member-edit.html">Do that here</a></p>
-
-        <nav class="sub">
-          <ul>
-            <li>
-              <a href="account.html">Account</a>
-            </li>
-            <li class="active">
-              <a href="account-email.html">Email Preferences</a>
-            </li>
-            <li>
-              <a href="http://news.good.is/subscriptions/new">GOOD Magazine</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <form action="" method="post">
-        <p><button type="submit">Unsubscribe from all emails</button></p>
-      </form>
+    <section class="form">
+      <h1>Email Preferences</h1>
 
       <form action="" method="post">
         <fieldset>
@@ -112,25 +117,19 @@
           <ul>
             <li>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Someone follows me</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" />
-                <span>Someone follows me</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Someone comments on my post</span>
               </label>
             </li>
             <li>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Someone replies to my comment</span>
               </label>
             </li>
@@ -147,25 +146,25 @@
                   <span>GOOD HQ Updates</span>
                 </label>
               </h3>
-              <p>Keeping you posted on the latest happenings at GOOD HQ</p>
+              <p class="note">Keeping you posted on the latest happenings at GOOD HQ</p>
             </li>
             <li>
               <h3>
                 <label>
-                  <input type="checkbox" />
-                  <span>The Daily GOOD</span>
+                  <input type="checkbox" name="send_digest" value="1" checked="checked" />
+                  <span>GOOD Digest</span>
                 </label>
               </h3>
-              <p>Daily handpicked things to learn and do</p>
-            </li>
-            <li>
-              <h3>
+              <p class="note">Choose a daily or weekly roundup of top links shared by GOOD members</p>
+              <p class="frequency">
                 <label>
-                  <input type="checkbox" />
-                  <span>Weekly Digest</span>
+                  <span>Send me the</span><br />
+                  <select name="digest">
+                    <option value="daily">Daily GOOD</option>
+                    <option value="weekly">Weekly GOOD</option>
+                  </select>
                 </label>
-              </h3>
-              <p>Weekly roundup of the most popular things to learn and do that week</p>
+              </p>
             </li>
           </ul>
         </fieldset>
@@ -181,7 +180,7 @@
             </li>
             <li>
               <label>
-                <input type="checkbox" />
+                <input type="checkbox" checked="checked" />
                 <span>Los Angeles, California</span>
               </label>
             </li>
@@ -194,7 +193,12 @@
           </ul>
         </fieldset>
 
-        <p><button type="submit">Save Settings</button></p>
+        <p class="submit"><button type="submit">Save Changes</button></p>
+      </form>
+
+      <form action="" method="post" class="secondary">
+        <p>Don’t want to receive any emails?</p>
+        <p><button type="submit">Unsubscribe from all</button></p>
       </form>
 
     </section>
