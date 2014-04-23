@@ -2842,18 +2842,27 @@
 
 /* =More Link
   ----------------------------------------------- */
+  .search-summary .more,
   .activity-item .more {
     padding-left: 0.625em; /* 10px / @font-size */
     margin-top: 1.5em;
   }
-  .activity-item .more a {
+  .search-summary .more {
+    margin-top: -0.875em;
+  }
+  .search-summary .more a,
+  .activity-item .more  a {
     color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
     font-size: 0.875em; /* 14px / @font-size */
+    text-decoration: none;
   }
-  .activity-item .more a:hover,
-  .activity-item .more a:active,
-  .activity-item .more a:focus {
+  .search-summary .more a:hover,
+  .search-summary .more a:active,
+  .search-summary .more a:focus,
+  .activity-item .more  a:hover,
+  .activity-item .more  a:active,
+  .activity-item .more  a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
 
@@ -3046,8 +3055,12 @@
   }
 
   /* OPTIONAL: Reset the margin, since the image is on the right. */
-  .activity-item .link .has-image + .meta {
+  .activity-item .link .has-image ~ .meta {
     margin-left: 0;
+  }
+  .activity-item .excerpt {
+    margin-top: -1em;
+    font-size: 0.875em;
   }
 
   .activity-item section.link,
@@ -4062,8 +4075,6 @@
       padding-right: 0;
     }
   }
-
-
 
   #content aside + .has-aside,
   #content aside + .has-aside + aside {
@@ -6419,6 +6430,16 @@
     }
     .search-summary .action {
       margin-top: 0;
+    }
+
+    /* OPTIONAL: Reduce the usual padding on the left and right. */
+    .follow-list li {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .follow-list h3 img {
+      margin-top: 0;
+      margin-left: 0;
     }
   }
 
