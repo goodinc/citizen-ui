@@ -489,14 +489,23 @@
     position: relative;
     padding: 1.75em 0 0 0;
   }
+  form + form.secondary h2 {
+    font-size: 0.875em;
+    font-family: inherit;
+    line-height: inherit;
+  }
+  form + form.secondary p {
+    font-size: 0.875em;
+  }
   @media (min-width: 40em) {
     form + form.secondary {
       text-align: right;
     }
+    form + form.secondary h2,
     form + form.secondary p {
       display: inline;
     }
-    form + form.secondary p + p {
+    form + form.secondary p {
       margin-left: 0.875em;
     }
   }
