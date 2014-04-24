@@ -691,11 +691,13 @@
   section.message .close a {
     color: inherit;
   }
+
+  /* OPTIONAL: If there’s enough space, position the close button in the top-right corner. */
   @media (min-width: 30em) {
-    section.message {
+    body > section.message {
       padding-right: 8.75em;
     }
-    section.message .close {
+    body > section.message .close {
       position: absolute;
       top: 1.375em;
       right: 2.625em;
@@ -5995,7 +5997,7 @@
     }
   }
 
-  #content .dialog h1 {
+  #content .dialog > h1 {
     /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
@@ -6071,25 +6073,21 @@
     font-weight: bold;
     font-size: 0.875em; /* 12px / 16px */
   }
-  #content .dialog section,
-  #content .dialog aside {
+  #content .dialog > section,
+  #content .dialog > aside {
     margin-top: 2.625em; /* @line-height x 3/2 */
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     padding-top: 1.75em;
   }
-  #content .dialog aside h2 {
+  #content .dialog > aside h2 {
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
   }
-  #content .dialog aside h2,
-  #content .dialog aside p {
+  #content .dialog > aside h2,
+  #content .dialog > aside p {
     display: inline;
     font-weight: bold;
-  }
-
-  .dialog .note {
-
   }
 
 
