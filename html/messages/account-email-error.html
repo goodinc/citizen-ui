@@ -170,11 +170,38 @@
         <p class="error">
           <label>
             <span>Confirm new email</span><br />
-            <input type="email" name="email_confirm" value="miyasaki@yahoo.comm" />
-            <strong class="error-message">Please enter the same email address as above.</strong>
+            <input type="email" name="email_confirm" />
+            <strong class="error-message">Please confirm your email address.</strong>
           </label>
         </p>
         <p class="submit"><button type="submit">Save Changes</button></p>
+      </form>
+
+    </section>
+
+    <section class="form">
+      <h1>Email Address</h1>
+
+      <p>We currently are sending updates to <strong>agusechague@ghibli.com</strong></p>
+
+      <form action="../messages/account-email.html" method="post">
+        <p class="error">
+          <label>
+            <span>New email</span><br />
+            <input type="email" name="email" value="miyasaki@yahoo.com" />
+          </label>
+        </p>
+        <p class="error">
+          <label>
+            <span>Confirm new email</span><br />
+            <input type="email" name="email_confirm" value="miyasaki@yahoo.comm" />
+          </label>
+        </p>
+        <p class="submit"><button type="submit">Save Changes</button></p>
+        <section class="message error">
+          <h1>Oops!</h1>
+          <p>The email addresses you entered don’t match.</p>
+        </section>
       </form>
 
     </section>
