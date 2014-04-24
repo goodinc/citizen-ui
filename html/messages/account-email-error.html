@@ -185,23 +185,23 @@
       <p>We currently are sending updates to <strong>agusechague@ghibli.com</strong></p>
 
       <form action="../messages/account-email.html" method="post">
-        <p>
+        <p class="error">
           <label>
             <span>New email</span><br />
             <input type="email" name="email" value="miyasaki@yahoo.com" />
           </label>
         </p>
-        <p>
+        <p class="error">
           <label>
             <span>Confirm new email</span><br />
             <input type="email" name="email_confirm" value="miyasaki@yahoo.comm" />
           </label>
         </p>
-        <p class="submit"><button type="submit">Save Changes</button></p>
         <section class="message error">
           <h1>Oops!</h1>
           <p>Those email addresses don’t match.</p>
         </section>
+        <p class="submit"><button type="submit">Save Changes</button></p>
       </form>
 
     </section>

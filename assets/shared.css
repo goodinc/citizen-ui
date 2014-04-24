@@ -569,6 +569,12 @@
     color: rgb(225, 51, 51);
     font-weight: normal;
     display: block;
+    font-size: 0.875em; /* 14px / @font-size(16px) */
+  }
+
+  /* OPTIONAL: Reduce the space above an error message, if it appears just after a field. */
+  form p + section.message {
+    margin-top: 1.75em;
   }
 
   fieldset {

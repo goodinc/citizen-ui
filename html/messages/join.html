@@ -66,7 +66,7 @@
       <h1>Join GOOD to connect and share</h1>
 
       <section>
-        <h2>Log in with Facebook and find friends on GOOD?</h2>
+        <h2>Log in with Facebook to find friends on GOOD</h2>
         <p class="action facebook"><a href="">Log in with Facebook</a></p>
         <p class="note">We will never post anything to Facebook without your permission!</p>
       </section>
@@ -136,8 +136,8 @@
             <label>
               <span>Your Email Address</span><br />
               <input type="email" name="email" value="miyasaki@gmail.com" />
-              <strong class="error-message">Aw, shucks. That email address has already been taken. Try another?</strong>
             </label>
+            <strong class="error-message">Email address already registered. <a href="sign-in.html">Would you like to sign in?</a></strong>
           </p>
           <p>
             <label>
@@ -434,25 +434,25 @@
               <input type="text" value="hayao" />
             </label>
           </p>
-          <p>
+          <p class="error">
             <label>
               <span>Set Your Password</span><br />
               <input type="password" name="password" value="123456" />
             </label>
           </p>
-          <p>
+          <p class="error">
             <label>
               <span>Confirm Your Password</span><br />
               <input type="password" name="password_confirm" value="112233" />
             </label>
           </p>
-          <p class="submit">
-            <button type="submit">Join</button>
-          </p>
           <section class="message error">
             <h1>Oops!</h1>
             <p>Your passwords don’t match.</p>
           </section>
+          <p class="submit">
+            <button type="submit">Join</button>
+          </p>
           <p>
             <label>
               <input type="checkbox" checked="checked" />
