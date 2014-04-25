@@ -1533,6 +1533,7 @@
   }
   #header ~ #content.minimal {
     border-top-width: 0;
+    padding-top: 0;
   }
   .topic-featured {
     padding-top    : 1.3125em; /* @line-height / 4 x 3 */
@@ -5986,20 +5987,38 @@
     border-width: 0.1em 0;
     border-style: solid;
     border-color: rgb(218, 220, 224); /* @blue-gray */
-    padding: 1.75em; /* @line-height */
+    padding: 1.75em 1.5em; /* @line-height */
     background: rgb(253, 254, 255); /* @snow */
     margin-left: -1.5em;
     margin-right: -1.5em;
     text-align: center;
   }
 
+  /* OPTIONAL: Make the borders between sections extend all the way to the edge. */
+  #content .dialog > .back,
+  #content .dialog > section {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
   /* OPTIONAL: Make the form more compact on large screens */
-  @media (min-width: 40em) {
+  @media (min-width: 30em) {
     #content .dialog {
       border-width: 0.1em;
       margin-left: auto;
       margin-right: auto;
       max-width: 28em;
+      padding: 1.75em 2.25em 2.25em; /* @line-height */
+    }
+
+    #content .dialog > .back,
+    #content .dialog > section {
+      margin-left: -2.25em;
+      margin-right: -2.25em;
+      padding-left: 2.25em;
+      padding-right: 2.25em;
     }
   }
 
@@ -6008,6 +6027,7 @@
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
 
+    margin-top: 0;
     margin-bottom : 0.3888888889em;
 
     font-family: inherit;
@@ -6015,29 +6035,44 @@
   }
   #content .dialog form {
     margin-top: 1.75em; /* @line-height */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 25em;
   }
   #content .dialog form input[type="email"],
   #content .dialog form input[type="text"],
   #content .dialog form input[type="password"] {
     max-width: none;
   }
-  #content .dialog form p {
+  #content .dialog form p,
+  #content .dialog form ul {
     text-align: left;
   }
-  #content .dialog form p.submit {
-    text-align: center;
+  #content .dialog form .submit + p {
+    margin-top: 1.75em; /* @line-height */
   }
 
   /* Join / Sign In */
   #content .dialog .facebook.action {
-    margin-top    : 1.75em;
-    margin-bottom : 1.75em;
+    margin-top    : 0.875em; /* @line-height / 2 */
+    margin-bottom : 0.875em;
     font-size: inherit;
   }
-  #content .facebook.action a:after {
+  #content .dialog .facebook.action:first-child {
+    margin-top: 0;
+  }
+  #content .facebook.action a {
+    background-color: rgb(59, 89, 152); /* @blueberry */
+    font-size: 0.875em;
+    display: block;
+    max-width: 17em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  #content .facebook.action a:hover,
+  #content .facebook.action a:active,
+  #content .facebook.action a:focus {
+    background-color: rgb(39, 69, 132);
+  }
+  #content .facebook.action a:before {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -6051,10 +6086,18 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    font-size: 1.5em;
-    margin-left: 0.5em;
+    font-size: 1.25em;
+    margin-right: 0.5em;
+
+    background: white;
+    border-radius: 0.1em;
+    padding: 0.25em 0 0 0.25em;
 
     content: "\e60d"; /* @icon-facebook */
+    color: rgb(59, 89, 152); /* @blueberry */
+
+    position: absolute;
+    left: 0.5em;
   }
   #content .dialog > section h2 {
     font-family: inherit;
@@ -6070,8 +6113,9 @@
 
   #content .dialog .back {
     border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
-    padding-bottom: 1.75em;
-    margin-bottom: 2.625em; /* @line-height x 3/2 */
+    margin-top: -1.3125em; /* @line-height x 3/4 */
+    padding-bottom: 0.4375em; /* @line-height x 1/4 */
+    margin-bottom: 1.75em;
     text-align: left;
   }
   #content .dialog .back a {
@@ -6079,11 +6123,16 @@
     font-weight: bold;
     font-size: 0.875em; /* 12px / 16px */
   }
-  #content .dialog > section,
-  #content .dialog > aside {
-    margin-top: 2.625em; /* @line-height x 3/2 */
+  #content .dialog > section {
+    margin-top: 1.75em; /* @line-height / 2 */
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     padding-top: 1.75em;
+  }
+  #content .dialog > aside {
+    margin-top: 2.25em;
+  }
+  #content .dialog > aside a {
+    text-decoration: none;
   }
   #content .dialog > aside h2 {
     font-size: inherit;
@@ -6093,7 +6142,24 @@
   #content .dialog > aside h2,
   #content .dialog > aside p {
     display: inline;
-    font-weight: bold;
+    font-size: 0.875em; /* 14px / @font-size */
+    line-height: 2em;   /* @line-height / 0.875 */
+  }
+  #content .dialog > aside > a {
+    display: block;
+    color: inherit;
+    background: rgb(249, 249, 250); /* @bright-white */
+    border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    padding: 0.4375em 0.875em; /* @line-height / 4 */
+  }
+  #content .dialog > aside > a p {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s;
+  }
+  #content .dialog > aside > a:hover  p,
+  #content .dialog > aside > a:active p,
+  #content .dialog > aside > a:focus  p {
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
