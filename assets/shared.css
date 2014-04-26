@@ -6069,22 +6069,20 @@
   }
 
   /* Join / Sign In */
-  #content .dialog .facebook.action {
-    margin-top    : 0.875em; /* @line-height / 2 */
-    margin-bottom : 0.875em;
-    font-size: inherit;
-  }
-  #content .dialog .facebook.action:first-child {
-    margin-top: 0;
-  }
   #content .facebook.action a {
     background-color: rgb(59, 89, 152); /* @blueberry */
     font-size: 0.875em;
-    display: block;
-    max-width: 17em;
+  }
+  #content .dialog .facebook.action {
+    margin-top    : 0.875em; /* @line-height / 2 */
+    margin-bottom : 0.875em;
+  }
+  #content .dialog .facebook.action a {
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+  }
+  #content .dialog .facebook.action:first-child {
+    margin-top: 0;
   }
   #content .facebook.action a:hover,
   #content .facebook.action a:active,
@@ -6106,7 +6104,7 @@
     -moz-osx-font-smoothing: grayscale;
 
     font-size: 1.25em;
-    margin-right: 0.5em;
+    margin-right: 1em;
 
     background: white;
     border-radius: 0.1em;
@@ -6115,8 +6113,19 @@
     content: "\e60d"; /* @icon-facebook */
     color: rgb(59, 89, 152); /* @blueberry */
 
-    position: absolute;
-    left: 0.5em;
+  }
+  @media (min-width: 30em) {
+    #content .facebook.action a {
+      position: relative;
+      text-align: center;
+      display: block;
+      max-width: 17em;
+    }
+    #content .facebook.action a:before {
+      position: absolute;
+      left: 0.5em;
+      margin-right: 0;
+    }
   }
   #content .dialog > section h2 {
     font-family: inherit;
