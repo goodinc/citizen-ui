@@ -4213,20 +4213,6 @@
 
 /* =Comment Form
   ----------------------------------------------- */
-  .comments textarea {
-    max-width: 98%;
-    height: 10.5em;
-  }
-  @media (min-width: 40em) {
-    .comments .inactive textarea {
-    height: 2.1875em; /* @line-height x 5/4 */
-      max-width: 80%;
-    }
-    .comments .inactive p.text + .file {
-      margin-top: -3.5em;
-    }
-  }
-
   .comments > form {
     margin-right: 1.25em;
   }
@@ -4236,20 +4222,49 @@
 
   .comments form .container {
     border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
-    padding: 0.875em;
     border-radius: 0.25em;
+    position: relative;
   }
   .comments form .avatar {
     position: absolute;
+    top: 0.625em; /* 10px / 16px */
+    left: 0.625em;
+    margin: 0;
   }
-  .comments form .avatar + p {
+  .comments form .text {
     margin-top: 0;
-    margin-left: 2.625em;
+    margin-left: 3.125em; /* 50px / 16px*/
+    margin-bottom: 0;
+  }
+  .comments form .text label {
+    display: block;
+    border-width: 0 0 0 0.1em;
+    border-style: dotted;
+    border-color: rgb(238, 238, 238);
+    padding-bottom: 0;
+  }
+  .comments form textarea {
+    border-width: 0;
+    background: transparent;
+    max-width: 100%;
+    height: 10.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 1.375;
+  }
+  .comments form .images,
+  .comments form .file {
+    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    margin: 0;
+    padding: 0.875em;
+  }
+  .comments form .images {
+    background: rgb(249, 249, 249);
   }
   .comments form .images li {
     display: block;
     position: relative;
-    background: rgb(249, 249, 249);
+    background: white;
     border: 0.1em solid rgb(204, 204, 204);
     border-radius: 0.25em;
     padding: 0.4375em;
@@ -4260,7 +4275,8 @@
   .comments form .images li + li {
     margin-top: 0.875em;
   }
-  .comments form .images img {
+  .comments form .images li img {
+    margin-right: 0.4375em;
     height: 1.75em;
     width: auto;
     border-radius: 0.25em;
@@ -4304,9 +4320,6 @@
     clear: both;
   }
   .comments form .file {
-    margin-top: 0;
-    margin-bottom: 0;
-    float: right;
     text-align: right;
   }
   .comments form .file label {
@@ -4392,10 +4405,6 @@
   .comments form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
-  .comments form .images li img {
-    vertical-align: middle;
-    margin-right: 0.4375em;
-  }
 
   .supports-placeholder .comments .text label > span:first-child {
     /* @hidden-accessible */
@@ -4415,6 +4424,21 @@
     opacity: 0;
   }
 
+  /* OPTIONAL: Make the comments form that appears at the
+  top look more compact, if it hasn’t been interacted with. */
+  @media (min-width: 40em) {
+    .comments .inactive textarea {
+      height: 3.125em; /* 50px / 16px  */
+    }
+    .comments .inactive p.text + .file {
+      float: right;
+      border-top-width: 0;
+      padding-top: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      margin: -2.5em 0 0 0;
+    }
+  }
 
 
 /* =More Link
