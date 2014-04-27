@@ -116,9 +116,33 @@
         <p class="error">
           <label>
             <span>New email</span><br />
+            <input type="email" name="email" value="" />
+          </label>
+          <strong class="error-message">Please enter your new email address.</strong>
+        </p>
+        <p>
+          <label>
+            <span>Confirm new email</span><br />
+            <input type="email" name="email_confirm" />
+          </label>
+        </p>
+        <p class="submit"><button type="submit">Save Changes</button></p>
+      </form>
+
+    </section>
+
+    <section class="form">
+      <h1>Email Address</h1>
+
+      <p>We currently are sending updates to <strong>agusechague@ghibli.com</strong></p>
+
+      <form action="../messages/account-email.html" method="post">
+        <p class="error">
+          <label>
+            <span>New email</span><br />
             <input type="email" name="email" value="miyasaki@ gmail.com" />
           </label>
-          <strong class="error-message">Please enter a valid email address.</strong>
+          <strong class="error-message">Oops! That email address isn’t valid</strong>
         </p>
         <p>
           <label>
