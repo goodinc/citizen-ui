@@ -4248,16 +4248,21 @@
     background: transparent;
     max-width: 100%;
     height: 10.5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top    : 0.875em; /* @line-height / 2 */
+    padding-bottom : 0.875em;
     line-height: 1.375;
   }
+
+  /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
+  .comments form > .container > .note,
+  .comments form > .container > .error-message,
   .comments form .images,
   .comments form .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
   }
+
   .comments form .images {
     background: rgb(249, 249, 249);
   }
@@ -4282,6 +4287,8 @@
     height: 2.5em; /* 30px / 12px */
     width: auto;
     float: left;
+    border-top-left-radius    : 0.25em;
+    border-bottom-left-radius : 0.25em;
   }
   .comments form .images button {
     background: rgb(153, 153, 153); /* @aluminum */
@@ -4430,18 +4437,25 @@
   .comments form .file.disabled label:hover > span:first-child {
     opacity: 0;
   }
+
+  /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
+  .comments form > .container > p.error-message span,
+  .comments form > .container > p.note span,
   .comments form .file .error-message,
   .comments form .file .note {
+    display: block;
     margin-top: 0;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
     border-radius: 0.25em;
     padding: 0.4375em;
     text-align: center;
   }
+  .comments form > .container > p.error-message span,
   .comments form .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
+  .comments form > .container > p.note span,
   .comments form .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
