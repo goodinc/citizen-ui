@@ -287,7 +287,7 @@
 
   /* Search Results */
   mark {
-    background-color: rgb(255, 249, 207);
+    background-color: rgb(255, 255, 204);
     padding: 0.25em;
   }
 
@@ -1241,7 +1241,7 @@
   .scripted-do form.do    h6 + p button + button,
   .scripted-do form.doing h6 + p button + button,
   .scripted-do form.done  h6 + p button + button {
-    border-top: 1px solid rgb(204, 204, 204);
+    border-top: 1px solid rgb(204, 204, 204); /* @magnesium */
   }
   .scripted-do form.doing button[name*="remove"],
   .scripted-do form.done  button[name*="remove"] {
@@ -2236,7 +2236,7 @@
     margin-left: 0.25em;
   }
   #footer p.rss a {
-    color: rgb(204, 204, 204);
+    color: rgb(204, 204, 204); /* @magnesium */
     font-size: 0.75em;
   }
   #footer p.rss a:hover,
@@ -4256,7 +4256,7 @@
   .comments form .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin: 0;
-    padding: 0.875em;
+    padding: 0.625em; /* 10px / 16px */
   }
   .comments form .images {
     background: rgb(249, 249, 249);
@@ -4265,28 +4265,32 @@
     display: block;
     position: relative;
     background: white;
-    border: 0.1em solid rgb(204, 204, 204);
+    border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
     border-radius: 0.25em;
-    padding: 0.4375em;
-    max-width: 30em;
+    max-width: 40em;
+    font-size: 0.75em; /* 12px / 16px */
+    line-height: 2.5em; /* 30px / 12px */
+    color: rgb(101, 102, 102); /* @steel */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
   .comments form .images li + li {
-    margin-top: 0.875em;
+    margin-top: 0.625em; /* 10px / 16px */
   }
   .comments form .images li img {
-    margin-right: 0.4375em;
-    height: 1.75em;
+    margin-right: 0.625em; /* 10px / 16px */
+    height: 2.5em; /* 30px / 12px */
     width: auto;
-    border-radius: 0.25em;
-    vertical-align: middle;
+    float: left;
   }
   .comments form .images button {
     background: rgb(153, 153, 153); /* @aluminum */
-    padding: 0.2em 0.5em 0.1em;
     float: right;
-    font-size: 0.75em;
+
+    /* These values are arbitrary. They happen to make the button appear
+    centered within the item, and the “X” appear centered within the button.*/
+    padding: 0.2em 0.5em;
+    margin: 0.35em;
   }
   .comments form .images button:hover,
   .comments form .images button:active,
@@ -4356,7 +4360,7 @@
   .comments form .file label > span:first-child {
     font-size: 0.75em;
     position: absolute;
-    background: rgb(51, 51, 51);
+    background: rgb(51, 51, 51); /* @tungsten */
     color: rgb(253, 253, 253);
     bottom: 0;
     margin-bottom: 4em;
@@ -4371,7 +4375,7 @@
   .comments form .file label > span:first-child:before {
     content: "";
     display: block;
-    background: rgb(51, 51, 51);
+    background: rgb(51, 51, 51); /* @tungsten */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -4416,12 +4420,36 @@
   }
 
   .comments form .file.disabled label {
-    opacity: 0.25;
-    border-color: transparent;
-    cursor: default;
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .comments form .file.disabled br {
+    display: none;
   }
   .comments form .file.disabled label:hover > span:first-child {
     opacity: 0;
+  }
+  .comments form .file .error-message,
+  .comments form .file .note {
+    margin-top: 0;
+    border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
+    border-radius: 0.25em;
+    padding: 0.4375em;
+    text-align: center;
+  }
+  .comments form .file .error-message {
+    background: rgb(253, 235, 230);
+    border-color: rgb(251, 204, 204);
+  }
+  .comments form .file .note {
+    background-color: rgb(255, 255, 204);
+    font-style: normal;
+    color: rgb(51, 51, 51); /* @tungsten */
+  }
+
+  .comments form .message {
+    margin-top: 0.875em;
   }
 
   /* OPTIONAL: Make the comments form that appears at the
@@ -4843,9 +4871,9 @@
   }
 
   .topic-header > .container > div {
-    border-width: 0.1875em;
+    border-width: 0.1875em; /* 3px / @font-size */
     border-style: solid;
-    border-color: rgb(51, 52, 53); /* 3px / @font-size */
+    border-color: rgb(51, 51, 51); /* @tungsten */
     padding: 1.5625em; /* @line-height - 0.1875em */
     background: white;
     text-align: center;
@@ -5311,7 +5339,7 @@
     background:  rgb(0, 1, 2);       /* @midnight */
     background: rgba(0, 1, 2, 0.75); /* @midnight */
     padding: 0.5em 1em 0.5em 1.25em;
-    color: rgb(204, 204, 204);
+    color: rgb(204, 204, 204); /* @magnesium */
     border-radius: 1.5em;
     margin-top: -1em;
     margin-left: -7em;
