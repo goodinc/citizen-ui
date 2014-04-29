@@ -2498,22 +2498,22 @@
     }
   }
 
-  /* OPTIONAL: Hide the main headline on home, topic, and member pages
+  /* OPTIONAL: Hide the main headline on home, topic, member, and account pages
   (since they’re redundant with the navigation) */
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
-  body > nav.sub    ~ #content > .container > .home   > h1:first-child,
-  body > header.sub ~ #content > .container > section > h1:first-child,
+  body > nav.sub    ~ #content > .container > .home    > h1:first-child,
+  body > header.sub ~ #content > .container > .form    > h1:first-child,
   .search-header    ~ #content > .container > .search-results > h1:first-child,
-  .topic-header     ~ #content > .container > section > h1:first-child,
-  .member-header    ~ #content > .container > section > h1:first-child {
+  .topic-header     ~ #content > .container > section  > h1:first-child,
+  .member-header    ~ #content > .container > section  > h1:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  body > nav.sub    ~ #content > .container > .home   > h1 + *,
-  body > header.sub ~ #content > .container > section > h1 + *,
-  .topic-header     ~ #content > .container > section > h1 + *,
-  .member-header    ~ #content > .container > section > h1 + * {
+  body > nav.sub    ~ #content > .container > .home    > h1 + *,
+  body > header.sub ~ #content > .container > .form    > h1 + *,
+  .topic-header     ~ #content > .container > section  > h1 + *,
+  .member-header    ~ #content > .container > section  > h1 + * {
     margin-top: 0;
   }
 
@@ -6258,6 +6258,8 @@
 
 
 /* =Explore
+  -----------------------------------------------
+  These styles apply to the Explore, Find Friends and Join Confirmation pages
   ----------------------------------------------- */
   .explore {
     text-align: center;
@@ -6274,12 +6276,17 @@
     /* Add to the line-height to make multi-line headlines easier to read. */
     line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
-  .explore h1 + h2 {
+  .explore h2 {
     /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
     margin-top    : 0.5833333334em;
     margin-bottom : 0.5833333334em;
+  }
+  .explore .action + h2 {
+    border-top: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    padding-top: 1.75em; /* @line-height */
+    margin-top: 2.3333333334em; /* @line-height / font-size(1.5) x 2 */
   }
   .explore h1 strong {
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
