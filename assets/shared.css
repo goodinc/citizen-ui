@@ -4243,7 +4243,7 @@
     border-color: rgb(238, 238, 238);
     padding-bottom: 0;
   }
-  .comments form textarea {
+  .comments form .text textarea {
     border-width: 0;
     background: transparent;
     max-width: 100%;
@@ -4417,6 +4417,16 @@
     margin-bottom: 1.75em; /* @line-height */
   }
 
+/* TEMPORARY: These rules apply to the old comments form and can be removed once the new one is in production. */
+.supports-placeholder .comments form > p label > span:first-child {
+  /* @hidden-accessible */
+  position: absolute;
+  left: -9999px;
+}
+.supports-placeholder .comments form > p label br {
+  display: none;
+}
+
   .supports-placeholder .comments .text label > span:first-child {
     /* @hidden-accessible */
     position: absolute;
@@ -4469,7 +4479,7 @@
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
   @media (min-width: 40em) {
-    .comments .inactive textarea {
+    .comments .inactive .text textarea {
       height: 3.125em; /* 50px / 16px  */
     }
     .comments .inactive p.text + .file {

@@ -822,6 +822,18 @@
   <section class="comments" id="discuss">
     <h2>Comment List</h2>
 
+    <form method="post" capture-template="CommentForm" backbone-view="CommentForm">
+      <p>
+        <label><span>Share your thoughts or insights...</span><br><textarea name="comment" placeholder="Share your thoughts or insights..."></textarea></label>
+      </p>
+      <p class="submit">
+        <button type="submit" data-registration-trigger="comment">Post</button><span class="cancel" style="display: none;"> or <a href="">Cancel</a></span>
+      </p>
+      <p class="loading" style="display: none;">
+        Posting comment...
+      </p>
+    </form>
+
     <form action="" method="post" class="inactive">
       <div class="container">
         <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
