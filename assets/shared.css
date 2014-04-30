@@ -6342,7 +6342,7 @@
   .explore .follow-list li {
     border-width: 0;
     padding: 0;
-    margin-bottom: 3.5em;
+    margin-bottom: 2.625em; /* @line-height x 3/2 */
     text-align: left;
   }
   .explore .follow-list li h3 {
@@ -6369,35 +6369,32 @@
   }
 
   /* OPTIONAL: Make the page more compact, on large screens */
-  .explore .follow-list li {
-    display: inline-block;
-    width: 19em;
-    margin-left: 1em;
-    margin-right: 1em;
-    vertical-align: top;
+  @media (min-width: 35em) {
+    .explore .follow-list li {
+      display: inline-block;
+      width: 30em;
+      margin-left: 1em;
+      margin-right: 1em;
+      vertical-align: top;
+    }
   }
 
-  @media (min-width: 45em) {
+  @media (min-width: 65em) {
     .explore .follow-list {
       display: inline-block;
       vertical-align: top;
-      width: 21em;
+      width: 30em;
       margin-right: 2em;
     }
     .explore .follow-list + .follow-list {
       margin-right: 0;
     }
-  }
-
-  @media (min-width: 70em) {
-    .explore .follow-list {
-      width: 43em;
-    }
-    .explore .follow-list + .follow-list {
-      width: 21em;
+    .explore .follow-list li {
+      min-height: 8.75em;
+      margin-bottom: 1.75em;
+      width: 28em;
     }
   }
-
 
   /* Introduction */
   .explore + .explore {
