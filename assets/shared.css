@@ -4874,16 +4874,6 @@
     margin-top: 1.75em;
   }
 
-  @media (min-width: 40em) {
-    body > header.sub > .container > div {
-      padding: 3.3125em; /* @line-height x 2 - 0.1875em */
-    }
-    body > header.sub > .container > div h1 {
-      font-size: 3em; /* 60px / @font-size */
-      line-height: 0.9333333333;
-    }
-  }
-
 
 /* =Topic Header
   -----------------------------------------------
@@ -6575,11 +6565,7 @@
     border-width: 0.1em;
     border-style: solid;
     border-color: rgb(218, 220, 224);
-    padding: 1.75em;
-    border-width: 0.1em;
-    border-style: solid;
-    border-color: rgb(218, 220, 224);
-    padding: 1.5625em;
+    padding: 2.25em;
     background: rgb(255, 255, 255);
     text-align: center;
   }
