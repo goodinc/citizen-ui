@@ -4233,23 +4233,28 @@
   }
   .comments form .text {
     margin-top: 0;
-    margin-left: 3.125em; /* 50px / 16px*/
     margin-bottom: 0;
   }
   .comments form .text label {
     display: block;
+    padding-bottom: 0;
+    border-width: 0;
+  }
+
+  /* Make space for the user’s avatar. (It will be present if they’re signed in.) */
+  .comments form .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
     border-color: rgb(238, 238, 238);
-    padding-bottom: 0;
+    margin-left: 3.125em; /* 50px / 16px*/
   }
+
   .comments form .text textarea {
     border-width: 0;
     background: transparent;
     max-width: 100%;
     height: 10.5em;
-    padding-top    : 0.875em; /* @line-height / 2 */
-    padding-bottom : 0.875em;
+    padding: 0.875em; /* @line-height / 2 */
     line-height: 1.375;
   }
 
@@ -4488,7 +4493,7 @@
       padding-top: 0;
       padding-left: 0;
       padding-bottom: 0;
-      margin: -2.5em 0 0 0;
+      margin: -2.6em 0 0 0;
     }
   }
 
@@ -6314,11 +6319,19 @@
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     font-weight: normal;
     letter-spacing: 0.05em;
+
+    /* KLUDGE: Attempt to align the bottom of logo with the text around it. */
+    vertical-align: -0.025em;
   }
   .explore .follow-list form {
     position: static;
     text-align: inherit;
     margin-top: 0.875em;
+  }
+  .explore .follow-list h3 + .introduction {
+    /* @introduction */
+    margin-top: 0.4375em;
+    margin-right: 0;
   }
   .explore .follow-list {
     margin-top: 3.5em;
@@ -6334,6 +6347,8 @@
   }
   .explore .follow-list img {
     border-radius: 100%;
+    margin-top: 0.5em;
+    margin-left: 0;
   }
   .explore .follow-list li > a {
     color: inherit;
@@ -6344,13 +6359,18 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
   .explore .follow-list a p {
-    font-size: 0.75em;
+    /* @introduction */
+    margin-top: 0.4375em;
+    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
+    line-height: 1.35em;
   }
 
   /* OPTIONAL: Make the page more compact, on large screens */
   .explore .follow-list li {
     display: inline-block;
     width: 19em;
+    margin-left: 1em;
+    margin-right: 1em;
     vertical-align: top;
   }
 
@@ -6359,18 +6379,18 @@
     border-top: 0.1em solid rgb(240, 240, 240); /* @bright-mercury */
     padding-top: 3.5em;
   }
-  .explore .introduction {
+  .explore > ul.introduction {
     margin-top: 3.5em;
     margin-bottom: 5.25em;
     text-align: center;
   }
-  .explore .introduction,
-  .explore .introduction li {
+  .explore > ul.introduction,
+  .explore > ul.introduction li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .explore .introduction li + li:before {
+  .explore > ul.introduction li + li:before {
     content: "";
     display: block;
     height: 6.25em;
@@ -6378,7 +6398,7 @@
     margin: 1.75em auto;
     background: rgb(240, 240, 240); /* @bright-mercury */
   }
-  .explore .introduction h3 {
+  .explore > ul.introduction h3 {
     /* @h1 */
     font-size: 4.5em;
     font-family: inherit;
@@ -6386,10 +6406,10 @@
     margin-top    : 0;
     margin-bottom : 0.3888888889em;
   }
-  .explore .introduction h3 span {
+  .explore > ul.introduction h3 span {
     border-bottom: 0.1em solid;
   }
-  .explore .introduction p {
+  .explore > ul.introduction p {
     font-weight: bold;
     max-width: 33em;
     margin-left: auto;
@@ -6435,33 +6455,33 @@
 
   /* OPTIONAL: Make the introduction take up less vertical space on large screens. */
   @media (min-width: 65em) {
-    .explore .introduction img,
-    .explore .introduction h3,
-    .explore .introduction p {
+    .explore > ul.introduction img,
+    .explore > ul.introduction h3,
+    .explore > ul.introduction p {
       margin: 0;
       vertical-align: middle;
       display: inline-block;
       width: 33%;
     }
-    .explore .introduction {
+    .explore > ul.introduction {
       margin-top: 5.25em;
     }
-    .explore .introduction li {
+    .explore > ul.introduction li {
       margin-top: 0;
     }
-    .explore .introduction li + li:before {
+    .explore > ul.introduction li + li:before {
       margin-top: 0;
       margin-bottom: 3.5em;
       clear: both;
     }
-    .explore .introduction img {
+    .explore > ul.introduction img {
       margin-top: -3.5em;
       float: left;
     }
-    .explore .introduction li:nth-child(2n) img {
+    .explore > ul.introduction li:nth-child(2n) img {
       float: right;
     }
-    .explore .introduction li:nth-child(2n) h3 {
+    .explore > ul.introduction li:nth-child(2n) h3 {
       float: right;
     }
   }
