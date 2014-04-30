@@ -6291,9 +6291,6 @@
   .explore {
     text-align: center;
   }
-  .explore + .explore {
-    margin-top: 3.5em; /* @line-height x 2 */
-  }
   .explore h1 {
     /* @h2 */
     font-size: 2.25em;
@@ -6350,7 +6347,7 @@
   }
   .explore .follow-list img {
     border-radius: 100%;
-    margin-top: 0.5em;
+    margin-top: 0;
     margin-left: 0;
   }
   .explore .follow-list li > a {
@@ -6387,17 +6384,34 @@
       margin-right: 2em;
     }
     .explore .follow-list + .follow-list {
+      width: 20em;
+    }
+    .explore .follow-list + .follow-list {
       margin-right: 0;
+    }
+    .explore .follow-list li:last-child p {
+      max-width: 20em;
+    }
+    .explore .follow-list li {
+      width: 30em;
+    }
+    .explore .follow-list + .follow-list li {
+      width: 20em;
     }
     .explore .follow-list li {
       min-height: 8.75em;
       margin-bottom: 1.75em;
       width: 28em;
     }
+    .explore .follow-list li:last-child {
+      min-height: 0;
+      margin-bottom: 0;
+    }
   }
 
   /* Introduction */
   .explore + .explore {
+    margin-top: 3.5em; /* @line-height x 2 */
     border-top: 0.1em solid rgb(240, 240, 240); /* @bright-mercury */
     padding-top: 3.5em;
   }
