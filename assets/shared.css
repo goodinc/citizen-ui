@@ -6366,46 +6366,41 @@
   }
 
   /* OPTIONAL: Make the page more compact, on large screens */
-  @media (min-width: 35em) {
+  @media (min-width: 30em) {
     .explore .follow-list li {
       display: inline-block;
-      width: 30em;
-      margin-left: 1em;
-      margin-right: 1em;
-      vertical-align: top;
+      width: 25em;
     }
   }
-
-  @media (min-width: 65em) {
+  @media (min-width: 45em) {
     .explore .follow-list {
       display: inline-block;
+      width: 46%;
+      margin-right: 2%;
       vertical-align: top;
-      width: 30em;
-      margin-right: 2em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
     }
     .explore .follow-list + .follow-list {
-      width: 20em;
-    }
-    .explore .follow-list + .follow-list {
+      margin-left: 2%;
       margin-right: 0;
     }
-    .explore .follow-list li:last-child p {
-      max-width: 20em;
-    }
     .explore .follow-list li {
-      width: 30em;
-    }
-    .explore .follow-list + .follow-list li {
-      width: 20em;
-    }
-    .explore .follow-list li {
+      display: block;
+      width: auto;
       min-height: 8.75em;
       margin-bottom: 1.75em;
-      width: 28em;
     }
     .explore .follow-list li:last-child {
       min-height: 0;
       margin-bottom: 0;
+    }
+  }
+  @media (min-width: 55em) {
+    .explore .follow-list + .follow-list {
+      width: 40%;
+      margin-left: 2%;
+      margin-right: 0;
     }
   }
 
