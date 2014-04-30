@@ -6328,6 +6328,9 @@
     text-align: inherit;
     margin-top: 0.875em;
   }
+  .follow-list h3 img {
+    margin-right: 0.625em; /* 10px / @font-size */
+  }
   .explore .follow-list h3 + .introduction {
     /* @introduction */
     margin-top: 0.4375em;
@@ -6373,6 +6376,28 @@
     margin-right: 1em;
     vertical-align: top;
   }
+
+  @media (min-width: 45em) {
+    .explore .follow-list {
+      display: inline-block;
+      vertical-align: top;
+      width: 21em;
+      margin-right: 2em;
+    }
+    .explore .follow-list + .follow-list {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 70em) {
+    .explore .follow-list {
+      width: 43em;
+    }
+    .explore .follow-list + .follow-list {
+      width: 21em;
+    }
+  }
+
 
   /* Introduction */
   .explore + .explore {
