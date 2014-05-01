@@ -6714,7 +6714,8 @@
     .search-summary > ul > li {
       min-height: 7em;
     }
-    .search-posts {
+    .search-summary + .search-posts,
+    .search-summary + .search-again {
       clear: both;
       padding-top: 1.75em;
     }
