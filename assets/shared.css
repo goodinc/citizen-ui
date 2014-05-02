@@ -6365,15 +6365,45 @@
     line-height: 1.35em;
   }
 
+  /* Sometimes the Explore page has recommended action at the bottom. */
+  .explore .follow-list + .action {
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+  }
+
+  .explore .facebook.action a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .explore ul.action {
+    margin-top: 1.75em;
+  }
+  .explore ul.action,
+  .explore ul.action li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .explore ul.action li {
+    display: inline;
+  }
+  .explore ul.action li + li {
+    margin-left: 1.75em;
+  }
+
   /* OPTIONAL: Make the page more compact, on large screens */
   @media (min-width: 30em) {
     .explore .follow-list li {
       display: inline-block;
       width: 25em;
+      margin-left: 1em;
+      margin-right: 1em;
+      vertical-align: top;
     }
   }
   @media (min-width: 45em) {
-    .explore .follow-list {
+    .explore.featured .follow-list {
       display: inline-block;
       width: 46%;
       margin-right: 2%;
@@ -6381,23 +6411,23 @@
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
-    .explore .follow-list + .follow-list {
+    .explore.featured .follow-list + .follow-list {
       margin-left: 2%;
       margin-right: 0;
     }
-    .explore .follow-list li {
+    .explore.featured .follow-list li {
       display: block;
       width: auto;
       min-height: 8.75em;
       margin-bottom: 1.75em;
     }
-    .explore .follow-list li:last-child {
+    .explore.featured .follow-list li:last-child {
       min-height: 0;
       margin-bottom: 0;
     }
   }
   @media (min-width: 55em) {
-    .explore .follow-list + .follow-list {
+    .explore.featured .follow-list + .follow-list {
       width: 40%;
       margin-left: 2%;
       margin-right: 0;
@@ -6636,10 +6666,6 @@
   }
 
   .search-again {
-    text-align: center;
-  }
-  .search-again {
-    margin-top: 7em;
     margin-bottom: 3.5em;
     border-width: 0.1em;
     border-style: solid;
@@ -6647,6 +6673,11 @@
     padding: 1.75em;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+  }
+  .search-summary + .search-again,
+  .search-posts   + .search-again {
+    margin-top: 7em;
   }
   .search-again h2 {
     /* @hidden-accessible */
