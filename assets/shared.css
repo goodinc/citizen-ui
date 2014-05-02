@@ -4486,6 +4486,7 @@
   @media (min-width: 40em) {
     .comments .inactive .text textarea {
       height: 3.125em; /* 50px / 16px  */
+      resize: none; /* Prevent the resize handle from overlapping with the upload button. */
     }
     .comments .inactive p.text + .file {
       float: right;
