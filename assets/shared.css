@@ -6450,6 +6450,17 @@
     border-top: 0.1em solid rgb(240, 240, 240); /* @bright-mercury */
     padding-top: 3.5em;
   }
+
+  /* KLUDGE: Reduce the space between sections if the first section is hidden using JavaScript.
+
+    (TBD: Can we remove the element altogether using JavaScript?
+    Would it be better to use a separate class name like “empty”?) */
+  .explore.ng-hide + .explore {
+    margin-top: 0;
+    border-top-width: 0;
+    padding-top: 0;
+  }
+
   .explore > ul.introduction {
     margin-top: 3.5em;
     margin-bottom: 5.25em;
