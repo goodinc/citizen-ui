@@ -6295,10 +6295,12 @@
   -----------------------------------------------
   These styles apply to the Explore, Find Friends and Join Confirmation pages
   ----------------------------------------------- */
-  .explore {
+  .explore,
+  .invite-friends {
     text-align: center;
   }
-  .explore h1 {
+  .explore h1,
+  .invite-friends h1 {
     /* @h2 */
     font-size: 2.25em;
     line-height   : 0.7777777778em; /* @line-height / 2.25 */
@@ -6307,7 +6309,8 @@
     /* Add to the line-height to make multi-line headlines easier to read. */
     line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
-  .explore h2 {
+  .explore h2,
+  .invite-friends h2 {
     /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
@@ -6555,6 +6558,33 @@
   }
 
 
+/* =Invite Friends
+  ----------------------------------------------- */
+  .supports-placeholder .search-friends label span {
+    position: absolute;
+    left: -9999px;
+  }
+  .invite-friends h1 {
+    margin-bottom: 0;
+  }
+  .invite-friends h1 + p {
+    margin-top: 0;
+  }
+  .invite-friends {
+    max-width: 33em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .invite-friends .follow-list {
+    margin-top: 3.5em;
+    text-align: left;
+  }
+  .invite-friends .facebook.action a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 /* =Account Settings
   ----------------------------------------------- */
   @media (min-width: 40em) {
@@ -6686,7 +6716,8 @@
   .search-posts   + .search-again {
     margin-top: 7em;
   }
-  .search-again h2 {
+  .search-again   h2,
+  .search-friends h2 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
@@ -6695,8 +6726,9 @@
     margin-top: 0;
   }
 
-  .search-again  button,
-  .search-header button {
+  .search-friends button,
+  .search-again   button,
+  .search-header  button {
     margin-top: 0.875em;
     font-size: 0.875em;
     padding: 0.3em 1em;
