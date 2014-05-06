@@ -3710,8 +3710,8 @@
     right: 1.66666666666667em; /* 20px / 12px */
   }
 
-  .activity-item > .time + .post,
-  .activity-item > .time + .follow {
+  .activity-item > .post,
+  .activity-item > .follow {
     margin-top: 2.5em;
   }
 
@@ -3727,10 +3727,12 @@
     }
 
     /* OPTIONAL: Move the first follow or post up a little */
-    .activity-item > .time + .post,
-    .activity-item > .time + .follow {
+    .activity-item > .post,
+    .activity-item > .follow {
       margin-top: 1em;
     }
+
+    /* For the popular posts section on detail pages. */
     .activity-item > .time:first-child + .post,
     .activity-item > .time:first-child + .follow {
       margin-top: 0;
