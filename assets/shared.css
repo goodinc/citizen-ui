@@ -307,6 +307,20 @@
     margin-top: 1.3125em;
     margin-bottom: 0;
   }
+
+  @media (min-width: 60em) {
+    header.sub div {
+      position: relative;
+    }
+    header.sub div .skip {
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      top: 1.3125em;
+      right: 1.75em;
+    }
+  }
+
   .pagination:after {
     /* @clearfix */
     content: "";
@@ -4065,8 +4079,8 @@
     .follow-list form {
       position: absolute;
       margin-top: 0;
-      top: 1.5em;
-      right: 1.5em;
+      top: 2em;
+      right: 1.75em;
       text-align: right;
     }
   }
@@ -4121,9 +4135,6 @@
 
     /* OPTIONAL: Line up with the headline */
     margin-left: 5.625em; /* image.width(90px) / @font-size(16px) */
-
-    /* OPTIONAL: Line up with the follow button */
-    margin-right: -0.3125em;
   }
 
 
@@ -4872,6 +4883,7 @@
     text-align: center;
   }
   body > header.sub > .container > div h1 {
+    margin-top: 0;
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
     color: rgb(0, 1, 2); /* @midnight */
@@ -6336,7 +6348,7 @@
     margin-top: 0.875em;
   }
   .follow-list h3 img {
-    margin-right: 0.625em; /* 10px / @font-size */
+    margin-right: 0.9375em; /* 15px / @font-size */
   }
   .explore .follow-list h3 + .introduction {
     /* @introduction */
