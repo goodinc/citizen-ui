@@ -292,28 +292,39 @@
   }
 
 
-  /* =Avatars
+  /* =Letter Avatars
   ----------------------------------------------- */
-  .sky,
-  .banana,
-  .tangerine {
+  .image  .sky,
+  .image  .banana,
+  .image  .tangerine,
+  .avatar .sky,
+  .avatar .banana,
+  .avatar .tangerine {
     display: inline-block;
     width  : 0.0625em; /* 10 / @font-size */
     height : 0.0625em;
     vertical-align: middle;
   }
-  .sky {
+  .image  .sky,
+  .avatar .sky {
     background: rgb(116, 235, 231);
   }
-  .banana {
+  .image  .banana,
+  .avatar .banana {
     background: rgb(250, 193, 66);
   }
-  .tangerine {
+  .image  .tangerine,
+  .avatar .tangerine {
     background: rgb(249, 124, 86);
   }
-  .sky[data-content]:after,
-  .banana[data-content]:after,
-  .tangerine[data-content]:after {
+
+  /* Letters */
+  .image        .sky[data-content]:after,
+  .image     .banana[data-content]:after,
+  .image  .tangerine[data-content]:after,
+  .avatar       .sky[data-content]:after,
+  .avatar    .banana[data-content]:after,
+  .avatar .tangerine[data-content]:after {
     display: block;
     content: attr(data-content);
     speak: none;
@@ -327,9 +338,14 @@
     line-height : 1.5em;
     text-align: center;
   }
-  .sky       span,
-  .banana    span,
-  .tangerine span {
+
+  /* Simulate the “alt” attribute for images. */
+  .image  .sky       span,
+  .image  .banana    span,
+  .image  .tangerine span,
+  .avatar .sky       span,
+  .avatar .banana    span,
+  .avatar .tangerine span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
@@ -3276,6 +3292,11 @@
     margin-bottom: 0;
   }
 
+  .activity-item .follow .has-image ~ .meta {
+
+    /* OPTIONAL: Line up with the headline */
+    margin-left: 5.8333333333em; /* image.width(70px) / font-size(12px) */
+  }
   .activity-item .follow .has-image ~ .introduction {
 
     /* OPTIONAL: Line up with the headline */
@@ -3752,9 +3773,9 @@
       width  : 1.875em; /* 30px / @font-size */
       height : 1.875em;
     }
-    .activity-item > .source:first-child .sky,
-    .activity-item > .source:first-child .banana,
-    .activity-item > .source:first-child .tangerine {
+    .activity-item > .source:first-child .image .sky,
+    .activity-item > .source:first-child .image .banana,
+    .activity-item > .source:first-child .image .tangerine {
       font-size: 30em !important;
     }
   }
@@ -4852,7 +4873,8 @@
     display: table;
     clear: both;
   }
-  .member-header h1 img {
+  .member-header h1 img,
+  .member-header h1 .image {
     float: left;
     margin-right: 1.3125em;
     margin-bottom: 0;
@@ -6055,7 +6077,7 @@
     color: rgb(47, 132, 218); /* @deep-blue */
   }
   .discussion li img,
-  .discussion li .avatar {
+  .discussion li .image {
     float: right;
     position: relative;
     font-size: 1.4545454545em; /* @font-size / 11px */
