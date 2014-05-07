@@ -292,6 +292,50 @@
   }
 
 
+  /* =Avatars
+  ----------------------------------------------- */
+  .sky,
+  .banana,
+  .tangerine {
+    display: inline-block;
+    width  : 0.0625em; /* 10 / @font-size */
+    height : 0.0625em;
+    vertical-align: middle;
+  }
+  .sky {
+    background: rgb(116, 235, 231);
+  }
+  .banana {
+    background: rgb(250, 193, 66);
+  }
+  .tangerine {
+    background: rgb(249, 124, 86);
+  }
+  .sky[data-content]:after,
+  .banana[data-content]:after,
+  .tangerine[data-content]:after {
+    display: block;
+    content: attr(data-content);
+    speak: none;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.04166666667em; /* 2/3 / @font-size */
+    width       : 1.5em;
+    line-height : 1.5em;
+    text-align: center;
+  }
+  .sky       span,
+  .banana    span,
+  .tangerine span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+
   /* =Paging
   ----------------------------------------------- */
   .pagination {
@@ -3260,11 +3304,14 @@
   .activity-item .comment h3 a {
     margin-right: 0.375em;
   }
-  .activity-item .comment h3 img {
+  .activity-item .comment h3 img,
+  .activity-item .comment h3 .image {
     vertical-align: middle;
-    margin-right: 0.5em;
+    margin-right: 0.375em; /* 6px / @font-size */
 
-    margin-left: -3.33333333333333em; /* (@line-height(20px) x 2) / 12px */
+    font-size: 1.3333333333em; /* @font-size(16px) / font-size(12px) */
+
+    margin-left: -2.5em; /* (line-height(20px) x 2) / @font-size */
   }
   .activity-item .comment p {
     color: black;
@@ -3680,24 +3727,34 @@
     }
   }
 
-  .activity-item > .source:first-child img {
+  .activity-item > .source:first-child img,
+  .activity-item > .source:first-child .image {
     vertical-align: top;
-    margin-top: -1em; /* 12px / 12px */
-    margin-left: -1.66666666666667em; /* 20px / 12px */
-    margin-right: 1.25em;
+    margin-top: -0.75em; /* 12px / @font-size */
+    margin-left: -1.25em; /* 20px / @font-size */
+    margin-right: 1em; /* @font-size */
     border-color: rgb(221, 223, 227); /* @silver-blue */
     border-style: solid;
     border-width: 0 1px 1px 1px;
     display: inline-block;
-    width: 5em; /* 60px / font-size(12px) */
-    height: 5em;
+
+    font-size: 1.3333333333em; /* @font-size(16px) / font-size(12px) */
+  }
+  .activity-item > .source:first-child img {
+    width: 3.75em; /* 60px / @font-size */
+    height: 3.75em;
   }
 
   /* OPTIONAL: Make the member images about half their usual size on small screens */
   @media (max-width: 29.9em) {
     .activity-item > .source:first-child img {
-      width  : 2.5em; /* 30px / font-size(12px) */
-      height : 2.5em;
+      width  : 1.875em; /* 30px / @font-size */
+      height : 1.875em;
+    }
+    .activity-item > .source:first-child .sky,
+    .activity-item > .source:first-child .banana,
+    .activity-item > .source:first-child .tangerine {
+      font-size: 30em !important;
     }
   }
 
@@ -4110,7 +4167,8 @@
 
 /* =Follow (topic or person)
   ----------------------------------------------- */
-  .follow-list h3 img {
+  .follow-list h3 img,
+  .follow-list h3 .image {
     display: block;
     float: left;
     margin-right: 0.9375em; /* @image-margin */
@@ -4249,6 +4307,7 @@
     top: 0.625em; /* 10px / 16px */
     left: 0.625em;
     margin: 0;
+    line-height: 1;
   }
   .comments form .text {
     margin-top: 0;
@@ -4559,9 +4618,12 @@
     padding-bottom: 1.25em
   }
 
-  .comment-list article > h3 img {
+  .comment-list article > h3 img,
+  .comment-list article > h3 .image {
     float: left;
-    margin-right: 0.5em;
+    line-height: 1em;
+    font-size: 1.3333333333em; /* @font-size / 12px */
+    margin-right: 0.375em; /* 6px / @font-size */
   }
   .comment-list article > h3 a {
     margin-right: 0.375em;
@@ -4605,40 +4667,34 @@
     }
 
     .comment-list li article {
-      padding-left: 5.625em; /* 90px / 16px */
+      padding-left: 5.625em;  /* 90px / @font-size */
     }
     .comment-list li li article {
-      padding-left: 10em; /* 160px / 16px */
+      padding-left: 10em;     /* 160px / @font-size */
     }
     .comment-list li li li article {
-      padding-left: 14.375em; /* 230px / 16px */
+      padding-left: 14.375em; /* 230px / @font-size */
     }
     .comment-list li li li li article {
-      padding-left: 18.75em; /* 300px / 16px */
+      padding-left: 18.75em;  /* 300px / @font-size */
     }
 
     .comment-list li article {
-      padding-left: 5.625em; /* 90px / 16px */
+      padding-left: 5.625em;  /* 90px / @font-size */
     }
     .comment-list li li article {
-      padding-left: 7.5em; /* 120px / 16px */
+      padding-left: 7.5em;    /* 120px / @font-size */
     }
     .comment-list li li li article {
-      padding-left: 9.375em; /* 150px / 16px */
+      padding-left: 9.375em;  /* 150px / @font-size */
     }
     .comment-list li li li li article {
-      padding-left: 11.25em; /* 180px / 16px */
+      padding-left: 11.25em;  /* 180px / @font-size */
     }
 
-    .comment-list article > h3 img {
-      float: none;
-      vertical-align: -3.25em;
-      margin-left: -5.83333333333333em; /* 70px / 12px */
-    }
-
-    /* OPTIONAL: Reduce the space between the headline and the commment */
-    .comment-list article > h3 + p {
-      margin-top: -1.75em;
+    .comment-list article > h3 img,
+    .comment-list article > h3 .image {
+      margin-left: -4.375em;  /* 70px / @font-size */
     }
   }
 
@@ -4825,7 +4881,8 @@
       float: left;
       width: 8.125em;
     }
-    .member-header h1 img {
+    .member-header h1 img,
+    .member-header h1 .image {
       display: block;
       float: none;
       margin-bottom: 0.875em; /* @line-height / 2 */
@@ -5287,9 +5344,13 @@
     color: rgb(153, 153, 153); /* @activity-source */
     font-size: 0.75em;
   }
+  .post > article .source img,
+  .post > article .source .image {
+    font-size: 1.3333333333em; /* @font-size / 12px */
+    margin-right: 0.375em; /* 6px / @font-size */
+  }
   .post > article .source img {
     vertical-align: middle;
-    margin-right: 0.5em;
   }
   .post > article .source a {
     /* @activity-source-link */
@@ -5991,11 +6052,14 @@
   .discussion li a:focus {
     color: rgb(47, 132, 218); /* @deep-blue */
   }
-  .discussion li img {
+  .discussion li img,
+  .discussion li .avatar {
     float: right;
     position: relative;
-    top: -0.5em;
-    margin-left: 0.5em;
+    font-size: 1.4545454545em; /* @font-size / 11px */
+    top: -0.175em;
+    margin-left: 0.375em;
+    line-height: 1;
   }
   .discussion .more {
     text-align: center;
@@ -6349,7 +6413,8 @@
     text-align: inherit;
     margin-top: 0.875em;
   }
-  .follow-list h3 img {
+  .follow-list h3 img,
+  .follow-list h3 .image {
     margin-right: 0.9375em; /* 15px / @font-size */
   }
   .explore .follow-list h3 + .introduction {
@@ -6369,10 +6434,16 @@
   .explore .follow-list li h3 {
     margin-right: 0;
   }
-  .explore .follow-list img {
+  .explore .follow-list img,
+  .explore .follow-list .image {
     border-radius: 100%;
     margin-top: 0;
     margin-left: 0;
+  }
+  .explore .follow-list .image .sky,
+  .explore .follow-list .image .banana,
+  .explore .follow-list .image .tangerine {
+    border-radius: 100%;
   }
   .explore .follow-list li > a {
     color: inherit;
