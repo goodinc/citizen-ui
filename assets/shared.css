@@ -3737,6 +3737,7 @@
     border-style: solid;
     border-width: 0 1px 1px 1px;
     display: inline-block;
+    line-height: 1;
 
     font-size: 1.3333333333em; /* @font-size(16px) / font-size(12px) */
   }
@@ -3817,10 +3818,11 @@
   }
 
   /* OPTIONAL: Make the featured source image smaller */
-  .topic-featured .activity-item > .source:first-child img {
-    width: 2.5em; /* 30px / @font-size(16px) */
-    height: 2.5em;
-    margin-left: -1.66666666666667em; /* 20px / 12px */
+  .topic-featured .activity-item > .source:first-child img,
+  .topic-featured .activity-item > .source:first-child .image {
+    width: 1.875em; /* 30px / @font-size(16px) */
+    height: 1.875em;
+    margin-left: -1.25em; /* 20px / @font-size */
     margin-right: 0.625em;
   }
 
@@ -6894,7 +6896,8 @@
       padding-left: 0;
       padding-right: 0;
     }
-    .follow-list h3 img {
+    .follow-list h3 img,
+    .follow-list h3 .image {
       margin-top: 0;
       margin-left: 0;
     }
