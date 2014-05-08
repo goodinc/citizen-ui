@@ -317,19 +317,19 @@
   }
 
   .avatar .size25 {
-    font-size: 1.0416666667em; /* 2/3 x 25 / @font-size */
+    font-size: 1.0416666667em; /* 2/3 x 25px / @font-size */
   }
   .avatar .size30 {
-    font-size: 1.25em;         /* 2/3 x 30 / @font-size */
+    font-size: 1.25em;         /* 2/3 x 30px / @font-size */
   }
   .avatar .size60 {
-    font-size: 2.5em;          /* 2/3 x 60 / @font-size */
+    font-size: 2.5em;          /* 2/3 x 60px / @font-size */
   }
   .avatar .size80 {
-    font-size: 3.3333333333em; /* 2/3 x 80 / @font-size */
+    font-size: 3.3333333333em; /* 2/3 x 80px / @font-size */
   }
   .avatar .size130 {
-    font-size: 5.4166666667em; /* 2/3 x 130 / @font-size */
+    font-size: 5.4166666667em; /* 2/3 x 130px / @font-size */
   }
 
   .avatar [data-content]:after {
@@ -3779,7 +3779,7 @@
     .activity-item > .source:first-child .avatar .sky,
     .activity-item > .source:first-child .avatar .banana,
     .activity-item > .source:first-child .avatar .tangerine {
-      font-size: 1.25em;
+      font-size: 1.25em; /* 2/3 x 30px / @font-size */
     }
   }
 
