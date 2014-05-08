@@ -297,6 +297,7 @@
   .avatar > span {
     display: inline-block;
     background: rgb(153, 153, 153);
+    color: white;
     width       : 1.5em;
     line-height : 1.5em;
   }
@@ -335,7 +336,6 @@
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
-    color: white;
     text-align: center;
   }
 
@@ -5343,6 +5343,7 @@
     margin-top: 0;
     margin-bottom: 2.3333333333em; /* @line-height / 0.75 */
   }
+  .member-header .details .edit a:before,
   .post > article header .edit a:before {
     /* @icons */
     font-family: "Icons";
