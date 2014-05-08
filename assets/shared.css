@@ -294,13 +294,8 @@
 
   /* =Avatars
   ----------------------------------------------- */
-
-  .avatar {
-    display: inline-block;
-    vertical-align: middle;
-  }
   .avatar > span {
-    display: block;
+    display: inline-block;
     background: rgb(153, 153, 153);
     width       : 1.5em;
     line-height : 1.5em;
@@ -4908,14 +4903,12 @@
     }
     .member-header h1 img,
     .member-header h1 .avatar {
+      display: block;
       float: none;
       margin-bottom: 0.875em; /* @line-height / 2 */
 
       /* OPTIONAL: Adjust to the vertical rythm by compensating for the image’s height of 130px (the image would ideally be 140px) */
       margin-bottom: 0.625em; /* 0.875 + (10px / @font-size) */
-    }
-    .member-header h1 img {
-      display: block;
     }
     .member-header .details {
       margin-left: 10.5em;
@@ -5705,7 +5698,11 @@
   .post > footer .dos   img,
   .post > footer .votes img,
   .post > header .dos   img,
-  .post > header .votes img {
+  .post > header .votes img,
+  .post > footer .dos   .avatar > span,
+  .post > footer .votes .avatar > span,
+  .post > header .dos   .avatar > span,
+  .post > header .votes .avatar > span {
     vertical-align: middle;
   }
 
@@ -6728,6 +6725,17 @@
   }
   .profile-form form {
     background: rgb(253, 254, 255); /* @snow */
+  }
+
+  /* OPTIONAL: Adjust to the vertical rythm. */
+  .profile-form .file label img,
+  .profile-form .file label .avatar {
+    display: block;
+    margin-bottom: 0.625em; /* (@line-height(28px) x 5) - 130px / @font-size */
+  }
+  .profile-form .file label br,
+  .profile-form .file label br {
+    display: none;
   }
 
 
