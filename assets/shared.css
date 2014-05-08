@@ -123,7 +123,7 @@
 
   /* Margins */
   h1, h2, h3, h4, h5, h6, p, ol, ul, dl, form, table, blockquote, fieldset,
-  header, footer, section, article, aside, nav, figure {
+  header, footer, section, article, aside, nav, figure, pre {
     margin-top    : 0.875em; /* @line-height / 2 */
     margin-bottom : 0.875em;
   }
@@ -292,39 +292,47 @@
   }
 
 
-  /* =Letter Avatars
+  /* =Avatars
   ----------------------------------------------- */
-  .image  .sky,
-  .image  .banana,
-  .image  .tangerine,
-  .avatar .sky,
-  .avatar .banana,
-  .avatar .tangerine {
+
+  .avatar {
     display: inline-block;
-    width  : 0.0625em; /* 10 / @font-size */
-    height : 0.0625em;
     vertical-align: middle;
   }
-  .image  .sky,
+  .avatar > span {
+    display: block;
+    background: rgb(153, 153, 153);
+    width       : 1.5em;
+    line-height : 1.5em;
+  }
+
   .avatar .sky {
     background: rgb(116, 235, 231);
   }
-  .image  .banana,
   .avatar .banana {
     background: rgb(250, 193, 66);
   }
-  .image  .tangerine,
   .avatar .tangerine {
     background: rgb(249, 124, 86);
   }
 
-  /* Letters */
-  .image        .sky[data-content]:after,
-  .image     .banana[data-content]:after,
-  .image  .tangerine[data-content]:after,
-  .avatar       .sky[data-content]:after,
-  .avatar    .banana[data-content]:after,
-  .avatar .tangerine[data-content]:after {
+  .avatar .size25 {
+    font-size: 1.0416666667em; /* 2/3 x 25 / @font-size */
+  }
+  .avatar .size30 {
+    font-size: 1.25em;         /* 2/3 x 30 / @font-size */
+  }
+  .avatar .size60 {
+    font-size: 2.5em;          /* 2/3 x 60 / @font-size */
+  }
+  .avatar .size80 {
+    font-size: 3.3333333333em; /* 2/3 x 80 / @font-size */
+  }
+  .avatar .size130 {
+    font-size: 5.4166666667em; /* 2/3 x 130 / @font-size */
+  }
+
+  .avatar [data-content]:after {
     display: block;
     content: attr(data-content);
     speak: none;
@@ -333,19 +341,10 @@
     font-style: normal;
     text-transform: uppercase;
     color: white;
-    font-size: 0.04166666667em; /* 2/3 / @font-size */
-    width       : 1.5em;
-    line-height : 1.5em;
     text-align: center;
   }
 
-  /* Simulate the “alt” attribute for images. */
-  .image  .sky       span,
-  .image  .banana    span,
-  .image  .tangerine span,
-  .avatar .sky       span,
-  .avatar .banana    span,
-  .avatar .tangerine span {
+  .avatar .name {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
@@ -504,6 +503,10 @@
   form label > span {
     font-size: 0.9375em;
     line-height: 1.6em; /* @line-height / 0.9375 */
+  }
+  form label > .avatar {
+    font-size: inherit;
+    line-height: 1;
   }
   form .text label > span {
     display: block;
@@ -3326,7 +3329,7 @@
     margin-right: 0.375em;
   }
   .activity-item .comment h3 img,
-  .activity-item .comment h3 .image {
+  .activity-item .comment h3 .avatar {
     vertical-align: middle;
     margin-right: 0.375em; /* 6px / @font-size */
 
@@ -3749,7 +3752,7 @@
   }
 
   .activity-item > .source:first-child img,
-  .activity-item > .source:first-child .image {
+  .activity-item > .source:first-child .avatar {
     vertical-align: top;
     margin-top: -0.75em; /* 12px / @font-size */
     margin-left: -1.25em; /* 20px / @font-size */
@@ -3773,10 +3776,10 @@
       width  : 1.875em; /* 30px / @font-size */
       height : 1.875em;
     }
-    .activity-item > .source:first-child .image .sky,
-    .activity-item > .source:first-child .image .banana,
-    .activity-item > .source:first-child .image .tangerine {
-      font-size: 30em !important;
+    .activity-item > .source:first-child .avatar .sky,
+    .activity-item > .source:first-child .avatar .banana,
+    .activity-item > .source:first-child .avatar .tangerine {
+      font-size: 1.25em;
     }
   }
 
@@ -3840,7 +3843,7 @@
 
   /* OPTIONAL: Make the featured source image smaller */
   .topic-featured .activity-item > .source:first-child img,
-  .topic-featured .activity-item > .source:first-child .image {
+  .topic-featured .activity-item > .source:first-child .avatar {
     width: 1.875em; /* 30px / @font-size(16px) */
     height: 1.875em;
     margin-left: -1.25em; /* 20px / @font-size */
@@ -4191,7 +4194,7 @@
 /* =Follow (topic or person)
   ----------------------------------------------- */
   .follow-list h3 img,
-  .follow-list h3 .image {
+  .follow-list h3 .avatar {
     display: block;
     float: left;
     margin-right: 0.9375em; /* @image-margin */
@@ -4642,7 +4645,7 @@
   }
 
   .comment-list article > h3 img,
-  .comment-list article > h3 .image {
+  .comment-list article > h3 .avatar {
     float: left;
     line-height: 1em;
     font-size: 1.3333333333em; /* @font-size / 12px */
@@ -4716,7 +4719,7 @@
     }
 
     .comment-list article > h3 img,
-    .comment-list article > h3 .image {
+    .comment-list article > h3 .avatar {
       margin-left: -4.375em;  /* 70px / @font-size */
     }
   }
@@ -4874,7 +4877,7 @@
     clear: both;
   }
   .member-header h1 img,
-  .member-header h1 .image {
+  .member-header h1 .avatar {
     float: left;
     margin-right: 1.3125em;
     margin-bottom: 0;
@@ -4906,13 +4909,15 @@
       width: 8.125em;
     }
     .member-header h1 img,
-    .member-header h1 .image {
-      display: block;
+    .member-header h1 .avatar {
       float: none;
       margin-bottom: 0.875em; /* @line-height / 2 */
 
       /* OPTIONAL: Adjust to the vertical rythm by compensating for the image’s height of 130px (the image would ideally be 140px) */
       margin-bottom: 0.625em; /* 0.875 + (10px / @font-size) */
+    }
+    .member-header h1 img {
+      display: block;
     }
     .member-header .details {
       margin-left: 10.5em;
@@ -5369,7 +5374,7 @@
     font-size: 0.75em;
   }
   .post > article .source img,
-  .post > article .source .image {
+  .post > article .source .avatar {
     font-size: 1.3333333333em; /* @font-size / 12px */
     margin-right: 0.375em; /* 6px / @font-size */
   }
@@ -6438,7 +6443,7 @@
     margin-top: 0.875em;
   }
   .follow-list h3 img,
-  .follow-list h3 .image {
+  .follow-list h3 .avatar {
     margin-right: 0.9375em; /* 15px / @font-size */
   }
   .explore .follow-list h3 + .introduction {
@@ -6459,15 +6464,11 @@
     margin-right: 0;
   }
   .explore .follow-list img,
-  .explore .follow-list .image {
-    border-radius: 100%;
+  .explore .follow-list .avatar {
     margin-top: 0;
     margin-left: 0;
-  }
-  .explore .follow-list .image .sky,
-  .explore .follow-list .image .banana,
-  .explore .follow-list .image .tangerine {
     border-radius: 100%;
+    overflow: hidden;
   }
   .explore .follow-list li > a {
     color: inherit;
@@ -6919,7 +6920,7 @@
       padding-right: 0;
     }
     .follow-list h3 img,
-    .follow-list h3 .image {
+    .follow-list h3 .avatar {
       margin-top: 0;
       margin-left: 0;
     }
