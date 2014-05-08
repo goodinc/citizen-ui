@@ -3776,9 +3776,7 @@
       width  : 1.875em; /* 30px / @font-size */
       height : 1.875em;
     }
-    .activity-item > .source:first-child .avatar .sky,
-    .activity-item > .source:first-child .avatar .banana,
-    .activity-item > .source:first-child .avatar .tangerine {
+    .activity-item > .source:first-child .avatar > span {
       font-size: 1.25em; /* 2/3 x 30px / @font-size */
     }
   }
