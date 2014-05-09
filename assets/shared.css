@@ -4753,6 +4753,9 @@
   .member-header h1 a[href]:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
+  .member-header .basics form {
+    margin-bottom: 0;
+  }
   .member-header .basics button {
     font-size: 0.75em;
   }
@@ -7087,7 +7090,6 @@
   /* OPTIONAL: Collapse the left and right margin, on small screens */
   .activity-list > li.ad-container,
   .ad-container {
-    margin-bottom : 1.75em;
     margin-left   : -1.5em; /* @page-margin */
     margin-right  : -1.5em;
   }
