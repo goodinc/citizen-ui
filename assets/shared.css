@@ -3900,14 +3900,10 @@
   }
   aside div.ad,
   aside .promotion,
+  aside .discussion,
   aside .fb-recommendations {
-    margin-top : 1.3125em; /* @line-height x 3/4 */
-    margin-bottom : 1.3125em; /* @line-height x 3/4 */
-  }
-  aside div.ad:first-child,
-  aside .promotion:first-child,
-  aside .fb-recommendations:first-child {
     margin-top: 0;
+    margin-bottom : 1.75em; /* @line-height */
   }
 
   /* TEMPORARY: These only appear in the prototype */
@@ -5410,6 +5406,11 @@
   }
   .post > article p {
     line-height: 1.875; /* 30px / @font-size(16px) */
+  }
+
+  /* OPTIONAL: Add a little more space between the location/date and the video */
+  .post > article dl + iframe {
+    margin-top: 1.75em;
   }
 
   /* TBD: Should we add a height attribute to the iframe instead? */
