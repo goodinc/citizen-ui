@@ -4994,26 +4994,9 @@
     color: inherit;
     text-decoration: inherit;
   }
-  .topic-header h1.has-image {
-    position: relative;
-  }
-  .topic-header h1.has-image a {
-    border-width: 0;
-    padding: 0;
-  }
-  .topic-header h1.has-image img {
-    max-width: 716px; /* image.width(1075px) x 2/3 */
-    display: block;
-  }
-  @media (min-width: 49.25em) { /* 716px / @font-size(16px) */
-    .topic-header h1.has-image img {
-      max-width: 100%;
-    }
-  }
   .topic-header h1 a[href]:hover,
   .topic-header h1 a[href]:active,
   .topic-header h1 a[href]:focus {
-    border-color:rgb(47, 132, 218); /* @ocean */
     color: rgb(47, 132, 218); /* @ocean */
   }
 
@@ -5029,36 +5012,6 @@
     color: rgb(238, 130, 105); /* @salmon */
     font-size: 0.875em;        /* 14px / @font-size */
     line-height: 2;            /* @line-height / 0.875 */
-  }
-
-  /* OPTIONAL: Make featured topics look fancy */
-  .disabled .topic-header > .container > .featured {
-    border-color: rgb(113, 179, 247); /* @sky */
-    border-color: rgb(240, 106, 101); /* @pink */
-    border-color: rgb(248, 131, 63); /* @orange */
-    border-color: rgb(14, 83, 125); /* @blue */
-  }
-  .topic-header > .container > .featured h1 {
-    margin-top: 0;
-  }
-  .disabled .topic-header > .container > .featured a {
-    color: rgb(113, 179, 247); /* @sky */
-    color: rgb(240, 106, 101); /* @pink */
-    color: rgb(248, 131, 63); /* @orange */
-    color: rgb(14, 83, 125); /* @blue */
-  }
-  .topic-header > .container > .featured p {
-    color: rgb(70, 70, 70); /* @iron */
-    text-align: left;
-  }
-  @media (min-width: 30em) {
-    .topic-header > .container > .featured {
-      text-align: left;
-    }
-    .topic-header > .container > .featured img {
-      margin-top: -0.875em;
-      float: right;
-    }
   }
 
 
