@@ -605,7 +605,7 @@
     margin-right: 1.5em;
   }
 
-  #content .dialog .note,
+  .dialog .note,
   form .note,
   form label em {
     color: rgb(153, 153, 153);
@@ -757,7 +757,7 @@
     line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
   section.message.empty p:before {
-    content: "";
+    content: normal;
   }
   section.message.empty h1 + p {
     margin-top: 0.875em; /* @line-height / 2 */
@@ -1694,6 +1694,7 @@
     position: relative;
   }
   #header > .container:after {
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -4063,11 +4064,7 @@
     margin-left: 0;
     padding-left: 0;
   }
-  /*
-  ul.activity-list > li {
-    max-width: 48em;
-  }
-  */
+
 
 
 /* =Follow Item
@@ -4133,7 +4130,6 @@
 
 /* =More Link
   ----------------------------------------------- */
-
 
   /* OPTIONAL: Position the buttons in the top right corner on medium-size screens and up */
   @media (min-width: 40em) { /* @medium-size */
@@ -4221,23 +4217,6 @@
       padding-left: 0;
       padding-right: 0;
     }
-  }
-
-  #content aside + .has-aside,
-  #content aside + .has-aside + aside {
-    /* @separator */
-    /*
-    margin-top: 2.95em;
-    */
-  }
-  #content > .container > section + section,
-  #content > .container > aside   + section {
-
-    /* @separator */
-    /*
-    margin-top: 2.95em;
-    padding-top: 2.95em;
-    */
   }
 
 
@@ -4510,7 +4489,7 @@
     margin-bottom: 1.75em; /* @line-height */
   }
 
-/* TEMPORARY: These rules apply to the old comments form and can be removed once the new one is in production. */
+/* TEMPORARY: These rules apply to the old comments form and can be removed once the new one (with images) is in production. */
 .supports-placeholder .comments form > p label > span:first-child {
   /* @hidden-accessible */
   position: absolute;
@@ -4604,7 +4583,6 @@
   .comment-list + .more a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
-
 
 
 
@@ -4707,6 +4685,7 @@
       margin-left: -4.375em;  /* 70px / @font-size */
     }
   }
+
 
 
 /* =Member Header
@@ -4859,6 +4838,7 @@
   }
 
   .member-header .basics:after {
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -4875,6 +4855,7 @@
       text-align: center;
     }
     .member-header > .container > div:after {
+      /* @clearfix */
       content: "";
       display: table;
       clear: both;
@@ -4970,6 +4951,7 @@
   body > header.sub + nav.sub {
     margin-top: 1.75em;
   }
+
 
 
 /* =Topic Header
@@ -5080,6 +5062,7 @@
   }
 
 
+
 /* =Post
   -----------------------------------------------
   -----------------------------------------------
@@ -5100,16 +5083,6 @@
   .post > article .share li {
     display: inline;
   }
-  /*
-  .post > header form h2 button {
-    background-color: transparent;
-    color: inherit;
-    padding: 0;
-  }
-  */
-
-
-
   .post > article .share a {
     display: inline-block;
     background-color: rgb(255, 249, 208);
@@ -5237,6 +5210,7 @@
 
   /* OPTIONAL: Position the button on the right */
   .post > header:after {
+    /* @clearfix */
     content: "";
     display: table;
     clear: both;
@@ -5431,7 +5405,6 @@
       height: auto;
     }
   }
-
 
 
 /* =Slideshow
@@ -5758,14 +5731,6 @@
     vertical-align: top;
     margin-right: 0.875em; /* @line-height / 2 */
   }
-
-  /* SHIM: Support a backbone container wrapped around the DOs or Votes count. */
-  /*
-  .post > footer .dos   > div,
-  .post > footer .votes > div {
-    display: inline-block;
-  }
-  */
 
   @media (min-width: 35em) {
     /* OPTIONAL: Position count on the right */
@@ -6171,15 +6136,7 @@
   ----------------------------------------------
   (A page with a small amount of content.)
   ----------------------------------------------- */
-
-  /* SHIM: These rules are prefixed with #content to
-  avoid clashing with the .dialog element in the
-  join form (if it appears in an overlay).
-
-  If that form is moved to a standalone page,
-  these rules can be safely unprefixed. */
-
-  #content .dialog {
+  .dialog {
     border-width: 0.1em 0;
     border-style: solid;
     border-color: rgb(218, 220, 224); /* @blue-gray */
@@ -6191,8 +6148,8 @@
   }
 
   /* OPTIONAL: Make the borders between sections extend all the way to the edge. */
-  #content .dialog > .back,
-  #content .dialog > section {
+  .dialog > .back,
+  .dialog > section {
     margin-left: -1.5em;
     margin-right: -1.5em;
     padding-left: 1.5em;
@@ -6201,7 +6158,7 @@
 
   /* OPTIONAL: Make the form more compact on large screens */
   @media (min-width: 30em) {
-    #content .dialog {
+    .dialog {
       border-width: 0.1em;
       margin-left: auto;
       margin-right: auto;
@@ -6209,19 +6166,19 @@
       padding: 1.75em 2.25em 2.25em; /* @line-height */
     }
 
-    #content .dialog > .back,
-    #content .dialog > section {
+    .dialog > .back,
+    .dialog > section {
       margin-left: -2.25em;
       margin-right: -2.25em;
       padding-left: 2.25em;
       padding-right: 2.25em;
     }
-    #content .dialog > .back {
+    .dialog > .back {
       padding-left: 1.25em;
     }
   }
 
-  #content .dialog > h1 {
+  .dialog > h1 {
     /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
@@ -6232,44 +6189,44 @@
     font-family: inherit;
     font-weight: bold;
   }
-  #content .dialog form {
+  .dialog form {
     margin-top: 1.75em; /* @line-height */
   }
-  #content .dialog form input[type="email"],
-  #content .dialog form input[type="text"],
-  #content .dialog form input[type="password"] {
+  .dialog form input[type="email"],
+  .dialog form input[type="text"],
+  .dialog form input[type="password"] {
     max-width: none;
   }
-  #content .dialog form p,
-  #content .dialog form ul {
+  .dialog form p,
+  .dialog form ul {
     text-align: left;
   }
-  #content .dialog form .submit + p {
+  .dialog form .submit + p {
     margin-top: 1.75em; /* @line-height */
   }
 
   /* Join / Sign In */
-  #content .facebook.action a {
+  .facebook.action a {
     background-color: rgb(59, 89, 152); /* @blueberry */
     font-size: 0.875em;
   }
-  #content .dialog .facebook.action {
+  .dialog .facebook.action {
     margin-top    : 0.875em; /* @line-height / 2 */
     margin-bottom : 0.875em;
   }
-  #content .dialog .facebook.action a {
+  .dialog .facebook.action a {
     margin-left: auto;
     margin-right: auto;
   }
-  #content .dialog .facebook.action:first-child {
+  .dialog .facebook.action:first-child {
     margin-top: 0;
   }
-  #content .facebook.action a:hover,
-  #content .facebook.action a:active,
-  #content .facebook.action a:focus {
+  .facebook.action a:hover,
+  .facebook.action a:active,
+  .facebook.action a:focus {
     background-color: rgb(39, 69, 132);
   }
-  #content .facebook.action a:before {
+  .facebook.action a:before {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -6295,19 +6252,19 @@
 
   }
   @media (min-width: 30em) {
-    #content .facebook.action a {
+    .facebook.action a {
       position: relative;
       text-align: center;
       display: block;
       max-width: 17em;
     }
-    #content .facebook.action a:before {
+    .facebook.action a:before {
       position: absolute;
       left: 0.5em;
       margin-right: 0;
     }
   }
-  #content .dialog > section h2 {
+  .dialog > section h2 {
     font-family: inherit;
     font-weight: bold;
     font-size: inherit;
@@ -6315,79 +6272,79 @@
   }
 
   /* Forgot password */
-  #content .dialog form + p {
+  .dialog form + p {
     margin-top: 1.75em; /* @line-height */
   }
 
-  #content .dialog .back {
+  .dialog .back {
     border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin-top: -1.3125em; /* @line-height x 3/4 */
     padding-bottom: 0.4375em; /* @line-height x 1/4 */
     margin-bottom: 1.75em;
     text-align: left;
   }
-  #content .dialog .back a {
+  .dialog .back a {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.875em; /* 12px / 16px */
   }
-  #content .dialog > section {
+  .dialog > section {
     margin-top: 1.75em; /* @line-height / 2 */
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     padding-top: 1.75em;
   }
-  #content .dialog > aside {
+  .dialog > aside {
     margin-top: 2.25em;
   }
-  #content .dialog > aside a {
+  .dialog > aside a {
     text-decoration: none;
   }
-  #content .dialog > aside h2 {
+  .dialog > aside h2 {
     font-size: inherit;
     line-height: inherit;
     font-family: inherit;
   }
-  #content .dialog > aside h2,
-  #content .dialog > aside p {
+  .dialog > aside h2,
+  .dialog > aside p {
     display: inline;
     font-size: 0.875em; /* 14px / @font-size */
     line-height: 2em;   /* @line-height / 0.875 */
   }
-  #content .dialog > aside > a {
+  .dialog > aside > a {
     display: block;
     color: inherit;
     background: rgb(249, 249, 250); /* @bright-white */
     border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     padding: 0.4375em 0.875em; /* @line-height / 4 */
   }
-  #content .dialog > aside > a p {
+  .dialog > aside > a p {
     color: rgb(113, 179, 247); /* @sky */
     transition: color 0.2s;
   }
-  #content .dialog > aside > a:hover  p,
-  #content .dialog > aside > a:active p,
-  #content .dialog > aside > a:focus  p {
+  .dialog > aside > a:hover  p,
+  .dialog > aside > a:active p,
+  .dialog > aside > a:focus  p {
     color: rgb(47, 132, 218); /* @ocean */
   }
-  #content .dialog form .checkbox {
+  .dialog form .checkbox {
     line-height: 1.2;
   }
-  #content .dialog form .checkbox label > span {
+  .dialog form .checkbox label > span {
     font-size: 0.875em; /* 14px / @font-size */
   }
 
   /* OPTIONAL: Hang the checkbox to the left of the text, on the join page. */
-  #content .dialog form .checkbox {
+  .dialog form .checkbox {
     padding-top: 0.4375em;
     padding-left: 1.75em;
     padding-right: 1.75em;
   }
-  #content .dialog form .checkbox input[type="checkbox"] {
+  .dialog form .checkbox input[type="checkbox"] {
     position: absolute;
     margin-left: -1.75em;
     margin-top: 0.6em;
   }
-  #content .dialog form .checkbox + .note {
+  .dialog form .checkbox + .note {
     padding-left  : 2em; /* 1.75em / font-size(0.875em) */
     padding-right : 2em;
   }
