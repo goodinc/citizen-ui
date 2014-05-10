@@ -5419,20 +5419,6 @@
     margin: 0;
   }
 
-  .post article figure ol,
-  .post article figure li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .post article figure ol {
-    margin-top: 1.75em;
-    margin-bottom: 1.75em;
-  }
-  .post article figure li {
-    margin-bottom: 0.875em;
-  }
-
   .post > footer .tags {
     margin-top: 0.875em; /* @line-height / 2 */
     background: rgb(247, 247, 247);
