@@ -4985,7 +4985,7 @@
     color: rgb(0, 1, 2); /* @midnight */
     margin-bottom: 0;
     font-size: 2.25em;
-    line-height: 1.5555555556; /* (@line-height x 2) / 2.25 */
+    line-height: 1;
   }
   @media (min-width: 40em) {
     .topic-header > .container > div {
@@ -4993,7 +4993,6 @@
     }
     .topic-header > .container > div h1 {
       font-size: 3.75em; /* 60px / @font-size */
-      line-height: 0.9333333333;
     }
   }
   .topic-header h1 a {
@@ -5491,6 +5490,16 @@
     margin-top: 1.75em;
     padding-top: 1.75em;
     border-top: 0.1em solid rgb(218, 220, 224); /* @article-border-color */
+  }
+  .post > .comments      h2,
+  .post > .popular-posts h2 {
+    /* @h2 */
+    font-size: 2.25em;
+    line-height   : 0.7777777778em; /* @line-height / 2.25 */
+    margin-bottom : 0.3888888889em;
+
+    /* Add to the line-height to make multi-line headlines easier to read. */
+    line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
 
   form .submit a {
