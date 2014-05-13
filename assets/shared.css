@@ -3515,10 +3515,20 @@
   .meta form.vote   button:hover abbr,
   .meta form.active button:hover abbr,
   .meta form.focus  button:hover abbr,
-  .meta form.voted button abbr {
+  .meta form.voted  button       abbr {
     border-color: rgb(51, 51, 51);
     border-color: rgba(0, 0, 0, 0.15);
   }
+
+  /* KLUDGE: Hide the icon for voted buttons, in a backward-compatible way.
+  (Once the buttons have been updated to the latest HTML, this selector can be simplified) */
+  .meta form.voted button[title="Undo"] {
+    padding-left: 1em;
+  }
+  .meta form.voted button[title="Undo"]:before {
+    display: none;
+  }
+
 
   /* OPTIONAL: Make the loading icon look nice, if it’s applied
   to the vote count in a feed or the vote button on a post page. */
