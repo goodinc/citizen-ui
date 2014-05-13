@@ -6010,7 +6010,7 @@
     color: rgb(47, 132, 218); /* @deep-blue */
   }
   .discussion li img,
-  .discussion li .image {
+  .discussion li .avatar {
     float: right;
     position: relative;
     font-size: 1.4545454545em; /* @font-size / 11px */
