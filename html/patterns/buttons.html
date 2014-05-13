@@ -67,18 +67,6 @@
   </form>
 </section>
 
-<!--
-<section id="follow">
-  <h2>Update</h2>
-
-  <p class="action edit"><a href="">Edit</a></p>
-
-  <form action="" method="post" class="update">
-    <p><button type="submit">Save</button></p>
-  </form>
-</section>
--->
-
 <section id="vote">
   <h2>Vote</h2>
 
@@ -90,20 +78,18 @@
     <p><button type="submit">It’s GOOD</button></p>
   </form>
 
-  <!-- Currently we don’t support unvoting. -->
   <form action="" method="post" class="voted">
-    <p><button type="submit" disabled="disabled">It’s GOOD</button></p>
+    <p><button type="submit" title="Undo">It’s GOOD</button></p>
   </form>
 </section>
 
 <section>
   <div class="meta">
 
-    <!-- Post with no votes -->
     <form action="" method="post" class="vote">
       <p>
         <button type="submit" title="Promote this">
-          Think it’s good?
+          It’s GOOD
         </button>
       </p>
     </form>
@@ -111,15 +97,15 @@
     <form action="" method="post" class="vote loading">
       <p>
         <button type="submit" title="Promote this">
-          Think it’s good?
+          It’s GOOD
         </button>
       </p>
     </form>
 
     <form action="" method="post" class="voted">
       <p>
-        <button type="submit" title="1 person thinks this is good" disabled="disabled">
-          1
+        <button type="submit" title="Undo">
+          It’s GOOD <abbr title="1 person thinks this is good">1</abbr>
         </button>
       </p>
     </form>
@@ -132,24 +118,24 @@
 
     <form action="" method="post" class="vote">
       <p>
-        <button type="submit" title="12 people think this is good">
-          12
+        <button type="submit" title="Promote this">
+          It’s GOOD <abbr title="24 people think this is good">24</abbr>
         </button>
       </p>
     </form>
 
     <form action="" method="post" class="vote loading">
       <p>
-        <button type="submit" title="12 people think this is good">
-          12
+        <button type="submit" title="Promote this">
+          It’s GOOD <abbr title="24 people think this is good">24</abbr>
         </button>
       </p>
     </form>
 
     <form action="" method="post" class="voted">
       <p>
-        <button type="submit" title="13 people thinks this is good" disabled="disabled">
-          13
+        <button type="submit" title="Undo">
+          It’s GOOD <abbr title="25 people think this is good">25</abbr>
         </button>
       </p>
     </form>
@@ -179,7 +165,7 @@
   <form action="" method="post" class="done">
     <h6>Done</h6>
     <p>
-      <button type="submit" name="remove" value="1">Remove</button>
+      <button type="submit" name="remove" value="1">Undo</button>
     </p>
   </form>
 

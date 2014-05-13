@@ -422,7 +422,7 @@
   .pagination .next a:hover,
   .pagination .next a:active,
   .pagination .next a:focus {
-    background-color: rgb(49, 144, 242);
+    background-color: rgb(49, 144, 242); /* @deep-ocean */
     color: white;
   }
   .pagination li.active a {
@@ -1078,7 +1078,7 @@
   button:hover,
   button:active,
   button:focus {
-    background-color: rgb(49, 144, 242);
+    background-color: rgb(49, 144, 242); /* @deep-ocean */
   }
 
   button[disabled] {
@@ -1093,7 +1093,7 @@
     background-color: rgb(113, 179, 247); /* @sky */
   }
   .voted button {
-    background-color: rgb(49, 144, 242);
+    background-color: rgb(49, 144, 242); /* @deep-ocean */
   }
   .vote  button,
   .voted button {
@@ -1107,7 +1107,12 @@
   .vote button:hover,
   .vote button:active,
   .vote button:focus {
-    background-color: rgb(49, 144, 242);
+    background-color: rgb(49, 144, 242); /* @deep-ocean */
+  }
+  .voted button:hover,
+  .voted button:active,
+  .voted button:focus {
+    background-color: rgb(19, 114, 212); /* @deep-dark-ocean */
   }
 
   /* OPTIONAL: Adjust the font size, for readability */
@@ -3433,12 +3438,6 @@
 
   .meta .vote  button,
   .meta .voted button {
-
-    /*
-    color: inherit;
-    border: 0.1em solid rgb(244, 244, 244);
-    background: rgb(253, 253, 253);
-    */
     border-radius: 0.25em;
     font-family: inherit;
     font-size: 0.75em;
@@ -3450,6 +3449,7 @@
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(253, 253, 253);
     color: rgb(153, 153, 153);
+    font-weight: bold;
   }
   .meta .vote  button:before,
   .meta .voted button:before {
@@ -3482,9 +3482,14 @@
   .meta form.vote  button:active,
   .meta form.vote  button:focus,
   .meta form.voted button {
-    background-color: rgb(49, 144, 242);
+    background-color: rgb(49, 144, 242); /* @deep-ocean */
     border-color: rgba(0, 0, 0, 0.15);
     color: white;
+  }
+  .meta form.voted button:hover,
+  .meta form.voted button:active,
+  .meta form.voted button:focus {
+    background-color: rgb(19, 114, 212); /* @deep-dark-ocean */
   }
   .meta form.vote  button:hover:before,
   .meta form.vote  button:active:before,
@@ -3493,11 +3498,37 @@
     color: white;
   }
 
+  .meta form.vote  button abbr,
+  .meta form.voted button abbr {
+    display: inline-block;
+    border-width: 0 0 0 0.1em;
+    border-style: solid;
+    border-color: rgb(244, 244, 244);
+    padding-left : 0.6em;
+    margin-left  : 0.45em;
+    margin-top: -0.75em;
+    padding-top: 0.75em;
+    margin-bottom: -0.8em;
+    padding-bottom: 0.8em;
+    transition: border-color 0.2s;
+  }
+  .meta form.vote   button:hover abbr,
+  .meta form.active button:hover abbr,
+  .meta form.focus  button:hover abbr,
+  .meta form.voted button abbr {
+    border-color: rgb(51, 51, 51);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
   /* OPTIONAL: Make the loading icon look nice, if it’s applied
   to the vote count in a feed or the vote button on a post page. */
-  .vote.loading button,
+        .vote.loading button,
   .meta .vote.loading button {
     color: transparent;
+  }
+        .vote.loading button abbr,
+  .meta .vote.loading button abbr {
+    border-width: 0;
   }
   .meta .vote.loading button:hover,
   .meta .vote.loading button:focus,
@@ -3505,7 +3536,6 @@
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(253, 253, 253);
   }
-  .vote.loading button:before,
   .meta .vote.loading button:before {
     color: transparent;
   }
@@ -3532,6 +3562,8 @@
     border-top-color: transparent;
   }
 
+
+  /* OPTIONAL: Make links look like buttons. */
   .activity-item .meta .dos,
   .activity-item .meta .votes,
   .activity-item .meta .comments {
@@ -5796,7 +5828,7 @@
   .options .reply a:hover:before,
   .options .reply a:active:before,
   .options .reply a:focus:before {
-    color: rgb(49, 144, 242);
+    color: rgb(49, 144, 242); /* @deep-ocean */
   }
 
   .options .flag   button:hover:before,
