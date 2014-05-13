@@ -3885,35 +3885,6 @@
   }
 
 
-/* =Ad
-  ----------------------------------------------- */
-  .follow-list   .ad,
-  .activity-list .ad {
-    margin-bottom: 1.75em; /* @line-height */
-  }
-  aside p.ad img {
-    display: block;
-  }
-  aside div.ad,
-  aside .promotion,
-  aside .discussion,
-  aside .fb-recommendations {
-    margin-top: 0;
-    margin-bottom : 1.75em; /* @line-height */
-  }
-
-  /* TEMPORARY: These only appear in the prototype */
-  aside p.ad,
-  aside section.facebook {
-    margin-top : 1.3125em; /* @line-height x 3/4 */
-    margin-bottom : 1.3125em; /* @line-height x 3/4 */
-  }
-  aside p.ad:first-child,
-  aside section.facebook:first-child {
-    margin-top: 0;
-  }
-
-
 /* =Featured Do
   ----------------------------------------------- */
 
@@ -4584,12 +4555,6 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-
-
-/* =Units
-  -----------------------------------------------
-  -----------------------------------------------
-  ----------------------------------------------- */
 
 /* =Comment
   ----------------------------------------------- */
@@ -5359,66 +5324,6 @@
     }
   }
 
-
-/* =Slideshow
-  ----------------------------------------------- */
-  .slideshow {
-    margin-bottom: 1.5em;
-  }
-  .slideshow a {
-    display: block;
-    border: 0.625em solid rgb(0, 1, 2); /* @midnight */
-    position: relative;
-    background: rgb(0, 1, 2); /* @midnight */
-  }
-  .slideshow a img {
-    transition: opacity 0.2s;
-  }
-  .slideshow a:hover  img,
-  .slideshow a:active img,
-  .slideshow a:focus  img {
-    opacity: 0.6;
-  }
-  .slideshow p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background:  rgb(0, 1, 2);       /* @midnight */
-    background: rgba(0, 1, 2, 0.75); /* @midnight */
-    padding: 0.5em 1em 0.5em 1.25em;
-    color: rgb(204, 204, 204); /* @magnesium */
-    border-radius: 1.5em;
-    margin-top: -1em;
-    margin-left: -7em;
-    font-weight: bold;
-  }
-  .slideshow p:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    /* @icon-launch */
-    content: "\e612";
-
-    font-size: 1.25em;
-    line-height: 1;
-    margin-right: 0.65em;
-    vertical-align: middle;
-  }
-  .slideshow img {
-    margin: 0;
-  }
-
   .post > footer .tags {
     margin-top: 0.875em; /* @line-height / 2 */
     background: rgb(247, 247, 247);
@@ -5718,18 +5623,86 @@
     }
   }
 
+
+/* =Slideshow (Launch Button)
+  ----------------------------------------------- */
+  .slideshow {
+    margin-bottom: 1.5em;
+  }
+  .slideshow a {
+    display: block;
+    border: 0.625em solid rgb(0, 1, 2); /* @midnight */
+    position: relative;
+    background: rgb(0, 1, 2); /* @midnight */
+  }
+  .slideshow a img {
+    transition: opacity 0.2s;
+  }
+  .slideshow a:hover  img,
+  .slideshow a:active img,
+  .slideshow a:focus  img {
+    opacity: 0.6;
+  }
+  .slideshow p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background:  rgb(0, 1, 2);       /* @midnight */
+    background: rgba(0, 1, 2, 0.75); /* @midnight */
+    padding: 0.5em 1em 0.5em 1.25em;
+    color: rgb(204, 204, 204); /* @magnesium */
+    border-radius: 1.5em;
+    margin-top: -1em;
+    margin-left: -7em;
+    font-weight: bold;
+  }
+  .slideshow p:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    font-size: 1.25em;
+    line-height: 1;
+    margin-right: 0.65em;
+    vertical-align: middle;
+  }
+  .slideshow img {
+    margin: 0;
+  }
+
+
+/* =Options
+  ----------------------------------------------- */
+
   .member-header .options,
+  .comment-list  .options,
   footer.options {
     text-align: right;
   }
+  .comment-list .options .reply,
   footer.options p {
     float: left;
     margin: 0;
   }
   .member-header .options ul,
   .member-header .options li,
-  footer.options ul,
-  footer.options li {
+  .comment-list  .options,
+  .comment-list  .options li,
+  footer.options          ul,
+  footer.options          li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -5738,28 +5711,34 @@
   .member-header .options ul,
   .member-header .options li,
   .member-header .options li form,
-  footer.options li,
-  footer.options li form {
+  .comment-list  .options li,
+  .comment-list  .options form,
+  footer.options          li,
+  footer.options          li form {
     display: inline;
   }
   .member-header .options p {
     float: none;
   }
   .member-header .options ul,
-  footer.options ul {
+  .comment-list  .options ul,
+  footer.options          ul {
     margin-top: 0;
   }
   .member-header .options p,
   .member-header .options li,
+  .comment-list  .options li,
   footer.options li {
     margin-right: 0.4375em;
   }
   .member-header .options li:last-child,
-  footer.options li:last-child {
+  .comment-list  .options li:last-child,
+  footer.options          li:last-child {
     margin-right: 0;
   }
 
   .options .edit   a,
+  .options .reply  a,
   .options .flag   button,
   .options .spam   button,
   .options .delete button {
@@ -5774,6 +5753,7 @@
   }
 
   .options .edit        a:before,
+  .options .reply       a:before,
   .options .flag   button:before,
   .options .spam   button:before,
   .options .delete button:before {
@@ -5797,6 +5777,9 @@
   .options .edit a:before {
     content: "\e609"; /* @icon-edit */
   }
+  .options .reply a:before {
+    content: "\e605"; /* @icon-reply */
+  }
   .options .flag button:before {
     content: "\e607"; /* @icon-flag */
   }
@@ -5807,9 +5790,12 @@
     content: "\e60a"; /* @icon-delete */
   }
 
-  .options .edit a:hover:before,
-  .options .edit a:active:before,
-  .options .edit a:focus:before {
+  .options .edit  a:hover:before,
+  .options .edit  a:active:before,
+  .options .edit  a:focus:before,
+  .options .reply a:hover:before,
+  .options .reply a:active:before,
+  .options .reply a:focus:before {
     color: rgb(49, 144, 242);
   }
 
@@ -5824,6 +5810,7 @@
   .options .delete button:focus:before {
     color: rgb(255, 102, 102);
   }
+
 
   /* OPTIONAL: Make the admin options take up less space */
   .activity-list .activity-item {
@@ -5889,7 +5876,7 @@
     margin-top: 0;
     padding-top: 0;
   }
-
+ 
 
 
 /* =Promotion
@@ -6757,7 +6744,6 @@
     padding: 0.3em 1em;
   }
 
-
   @media (min-width: 60em) {
     .search-again  label > span:first-child,
     .search-header label > span:first-child {
@@ -6829,130 +6815,22 @@
   }
 
 
-
-  /* =Testing
-  -----------------------------------------------
-  -----------------------------------------------
+/* =Advertising
   ----------------------------------------------- */
-
-  body.pattern {
-    padding: 3.5em 1.75em 7em;
-    background: rgb(253, 254, 255); /* @snow */
+  .follow-list   .ad,
+  .activity-list .ad {
+    margin-bottom: 1.75em; /* @line-height */
   }
-  /*
-  body.test-type {
-    background: white url(shared/test/rule.svg) top left repeat;
-    background-size: auto 1.5em;
+  aside p.ad img {
+    display: block;
   }
-  */
-
-
-
-  /* =Admin
-  -----------------------------------------------
-  -----------------------------------------------
-  ----------------------------------------------- */
-
-  .comment-list article footer > ul,
-  .comment-list article footer > ul li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
+  aside div.ad,
+  aside .promotion,
+  aside .discussion,
+  aside .fb-recommendations {
+    margin-top: 0;
+    margin-bottom : 1.75em; /* @line-height */
   }
-  .comment-list article footer > ul {
-    text-align: right;
-  }
-  .comment-list article footer > ul li {
-    display: inline;
-    margin-right: 1em;
-    color: rgb(101, 102, 102); /* @steel */
-  }
-  .comment-list article footer .reply {
-    float: left;
-  }
-
-  .comment-list article footer .reply       a:before,
-  .comment-list article footer .flag   button:before,
-  .comment-list article footer .delete button:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 0.9375em; /* 15px / @font-size(16px) */
-    margin-right: 0.375em;
-    color: rgb(229, 229, 229);
-    transition: color 0.2s;
-  }
-
-  .comment-list article footer .reply a {
-    color: inherit;
-    text-decoration: inherit;
-    font-size: 0.875em; /* 14px / @font-size(16px) */
-  }
-  .comment-list article footer .flag form,
-  .comment-list article footer .delete form {
-    display: inline;
-  }
-  .comment-list article footer .flag button,
-  .comment-list article footer .delete button {
-    background-color: transparent;
-    border-width: 0;
-    font-weight: inherit;
-    color: inherit;
-    margin: 0;
-    padding: 0;
-    font-size: 0.875em; /* 14px / @font-size(16px) */
-  }
-
-  .comment-list article .reply a:before {
-    content: "\e605"; /* @icon-reply */
-  }
-
-  .comment-list article .flag button:before {
-    content: "\e607"; /* @icon-flag */
-  }
-
-  .comment-list article .delete button:before {
-    content: "\e60a"; /* @icon-delete */
-  }
-
-  .comment-list article .reply a:hover:before,
-  .comment-list article .reply a:active:before,
-  .comment-list article .reply a:focus:before {
-    color: rgb(49, 144, 242);
-  }
-
-  .comment-list article .flag button:hover:before,
-  .comment-list article .flag button:active:before,
-  .comment-list article .flag button:focus:before {
-    color: rgb(255, 102, 102);
-  }
-  .comment-list article .delete button:hover:before,
-  .comment-list article .delete button:active:before,
-  .comment-list article .delete button:focus:before {
-    color: rgb(255, 102, 102);
-  }
-
-
-
-  /* =Shim
-  -----------------------------------------------
-  This section is for experimental or temporary styles that
-  were written (perhaps in a hurry) to fix a bug, or get
-  a new site feature released quickly.
-
-  If possible, these should be optimized or corrected
-  and moved out of this area.
-  -----------------------------------------------
-  -----------------------------------------------
-  ----------------------------------------------- */
 
   /* OPTIONAL: Center advertisements that appear in the main content area. */
   .ad.leaderboard,
@@ -7020,6 +6898,40 @@
       box-sizing      : border-box;
     }
   }
+
+
+/* TEMPORARY: These only appear in the prototype */
+  aside p.ad,
+  aside section.facebook {
+    margin-top : 1.3125em; /* @line-height x 3/4 */
+    margin-bottom : 1.3125em; /* @line-height x 3/4 */
+  }
+  aside p.ad:first-child,
+  aside section.facebook:first-child {
+    margin-top: 0;
+  }
+
+
+  /* =Pattern Pages
+  ----------------------------------------------- */
+  body.pattern {
+    padding: 3.5em 1.75em 7em;
+    background: rgb(253, 254, 255); /* @snow */
+  }
+
+
+
+  /* =Shim
+  -----------------------------------------------
+  -----------------------------------------------
+  -----------------------------------------------
+  This section is for experimental or temporary styles that
+  were written (perhaps in a hurry) to fix a bug, or get
+  a new site feature released quickly.
+
+  If possible, these should be optimized or corrected
+  and moved out of this area.
+  ----------------------------------------------- */
 
   /* OPTIONAL: Prevent the facebook recommendations from appearing too wide on small screens */
   .fb-recommendations,
