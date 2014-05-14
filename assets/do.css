@@ -745,6 +745,14 @@
     font-size: 0.875em;
   }
 
+  /* The content has a <div> element around it, in this case. */
+  main#content {
+    margin-top: 0;
+    border-top: 0.1em solid rgb(233, 233, 233);
+    padding-top: 1.75em;
+    padding-bottom: 3.5em;
+  }
+
   body > section.message,
   section.message {
     padding-left: 1.5em;
@@ -752,6 +760,8 @@
     max-width: 45em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   /* OPTIONAL: If there’s enough space, position the close button in the top-right corner. */
