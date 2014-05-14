@@ -4,6 +4,38 @@
   ----------------------------------------------- */
 
 
+/* =New
+  ----------------------------------------------- */
+  .do-new .text input {
+    max-width: 30em;
+  }
+  .do-new .mark-done {
+    border: 0.1em solid rgb(203, 203, 203);
+    background: rgb(249, 249, 250);
+    padding: 0.875em 0 0;
+    border-radius: 0.25em;
+  }
+  .do-new .mark-done .checkbox {
+    padding-left: 0.875em;
+    padding-right: 0.875em;
+    font-weight: bold;
+  }
+  .do-new .mark-done .do-story {
+    margin-top: 1.75em;
+  }
+  .do-new .mark-done .do-story > .container {
+    -webkit-border-top-right-radius : 0;
+    -webkit-border-top-left-radius  : 0;
+       -moz-border-radius-topright  : 0;
+       -moz-border-radius-topleft   : 0;
+            border-top-right-radius : 0;
+            border-top-left-radius  : 0;
+  }
+  .do-new .submit button {
+
+  }
+
+
 /* =Story
   ----------------------------------------------- */
   .do-story > .container {

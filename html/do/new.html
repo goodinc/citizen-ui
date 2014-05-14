@@ -102,66 +102,71 @@
           <label>
             <span>Add tags</span><br />
             <input type="text" name="title" placeholder="For example: Design, Culture Jamming, Changemakers" />
-            <em class="note">Comma separated, spaces are OK</em>
-          </label>
-        </p>
-        <p class="checkbox">
-          <label>
-            <input type="checkbox" />
-            <span>Mark as done?</span>
+            <em class="note">Comma separated. Spaces are OK.</em>
           </label>
         </p>
 
-        <section class="do-story">
-          <div class="container">
-            <h2>Add your story</h2>
-            <p>Optional</p>
-            <fieldset>
-              <div class="container">
-                <h6 class="avatar">
-                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
-                </h6>
-                <p class="text">
-                  <label>
-                    <span>What happened when you last did this?</span><br />
-                    <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
-                  </label>
-                </p>
-                <ol class="images">
-                  <li>
-                    <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
-                    <span>bikes.jpg</span>
-                    <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
-                  </li>
-                  <li>
-                    <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
-                    <span>road.jpg</span>
-                    <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
-                  </li>
-                  <li>
-                    <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/262/325/original/le-tour-baguette-bike-e1383079350740-425x445.jpg" alt="" />
-                    <span>festival.jpg</span>
-                    <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
-                  </li>
-                </ol>
-                <p class="file disabled">
-                  <label>
-                    <span>Attach Image</span><br />
-                    <input type="file" name="image[]" disabled="disabled" />
-                  </label>
-                  <br />
-                  <em class="note">Ready to post! You’ve uploaded the maximum number of images.</em>
-                </p>
-                <p class="checkbox">
-                  <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>Yes, share this to Facebook.</span>
-                  </label>
-                </p>
-              </div><!-- /.container -->
-            </fieldset>
-          </div><!-- /.container -->
-        </section>
+        <div class="mark-done">
+
+          <p class="checkbox">
+            <label>
+              <input type="checkbox" />
+              <span>Mark as done?</span>
+            </label>
+          </p>
+
+          <section class="do-story">
+            <div class="container">
+              <h2>Add your story</h2>
+              <p>Optional</p>
+              <fieldset>
+                <div class="container">
+                  <h6 class="avatar">
+                    <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
+                  </h6>
+                  <p class="text">
+                    <label>
+                      <span>What happened when you last did this?</span><br />
+                      <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
+                    </label>
+                  </p>
+                  <ol class="images">
+                    <li>
+                      <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
+                      <span>bikes.jpg</span>
+                      <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
+                    </li>
+                    <li>
+                      <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
+                      <span>road.jpg</span>
+                      <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
+                    </li>
+                    <li>
+                      <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/262/325/original/le-tour-baguette-bike-e1383079350740-425x445.jpg" alt="" />
+                      <span>festival.jpg</span>
+                      <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
+                    </li>
+                  </ol>
+                  <p class="file disabled">
+                    <label>
+                      <span>Attach Image</span><br />
+                      <input type="file" name="image[]" disabled="disabled" />
+                    </label>
+                    <br />
+                    <em class="note">Ready to post! You’ve uploaded the maximum number of images.</em>
+                  </p>
+                  <p class="checkbox">
+                    <label>
+                      <input type="checkbox" checked="checked" />
+                      <span>Yes, share this to Facebook.</span>
+                    </label>
+                  </p>
+                </div><!-- /.container -->
+              </fieldset>
+            </div><!-- /.container -->
+          </section>
+
+        </div>
 
         <ul class="submit">
           <li><button type="submit">Post</button></li>
