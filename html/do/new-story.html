@@ -107,12 +107,46 @@
         </p>
 
         <div class="mark-done">
+
           <p class="checkbox">
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" checked="checked" />
               <span>Mark as done?</span>
             </label>
           </p>
+
+          <section class="do-story">
+            <div class="container">
+              <h2>Add your story</h2>
+              <p>Optional</p>
+              <fieldset class="inactive">
+                <div class="container">
+                  <h6 class="avatar">
+                    <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
+                  </h6>
+                  <p class="text">
+                    <label>
+                      <span>What happened when you last did this?</span><br />
+                      <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
+                    </label>
+                  </p>
+                  <p class="file disabled">
+                    <label>
+                      <span>Attach Image</span><br />
+                      <input type="file" name="image[]" disabled="disabled" />
+                    </label>
+                  </p>
+                </div><!-- /.container -->
+                <p class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Yes, share this to Facebook.</span>
+                  </label>
+                </p>
+              </fieldset>
+            </div><!-- /.container -->
+          </section>
+
         </div>
 
         <ul class="submit">
