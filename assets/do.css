@@ -107,16 +107,17 @@
   .do-new .mark-done {
     border: 0.1em solid rgb(203, 203, 203);
     background: rgb(249, 249, 250);
-    padding: 0.875em 0 0;
+    padding: 0.875em 0;
     border-radius: 0.25em;
   }
-  .do-new .mark-done .checkbox {
+  .do-new .mark-done > .checkbox {
     padding-left: 0.875em;
     padding-right: 0.875em;
     font-weight: bold;
   }
   .do-new .mark-done .do-story {
-    margin-top: 1.75em;
+    margin-top: 1.3125em;
+    margin-bottom: -0.875em;
   }
   .do-new .mark-done .do-story > .container {
     -webkit-border-top-right-radius : 0;
@@ -125,9 +126,6 @@
        -moz-border-radius-topleft   : 0;
             border-top-right-radius : 0;
             border-top-left-radius  : 0;
-  }
-  .do-new .submit button {
-
   }
 
 
@@ -177,7 +175,6 @@
 
   .do-story form     .container,
   .do-story fieldset .container {
-    border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     border-radius: 0.25em;
     position: relative;
     background: white;
@@ -226,12 +223,10 @@
   .do-story form > .container > .error-message,
   .do-story form .images,
   .do-story form .file,
-  .do-story form .checkbox,
   .do-story fieldset > .container > .note,
   .do-story fieldset > .container > .error-message,
   .do-story fieldset .images,
-  .do-story fieldset .file,
-  .do-story fieldset .checkbox {
+  .do-story fieldset .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
@@ -417,13 +412,11 @@
   .do-story form > .container > p.error-message span,
   .do-story form > .container > p.note span,
   .do-story form .file .error-message,
-  .do-story form .file .note,
-  .do-story form .file .checkbox,
+  .do-story form .file .note
   .do-story fieldset > .container > p.error-message span,
   .do-story fieldset > .container > p.note span,
   .do-story fieldset .file .error-message,
-  .do-story fieldset .file .note,
-  .do-story fieldset .file .checkbox {
+  .do-story fieldset .file .note {
     display: block;
     margin-top: 0;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
@@ -474,6 +467,9 @@
   .do-story .submit a {
     color: white;
   }
+  .do-story .checkbox {
+    color: white;
+  }
 
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
@@ -490,6 +486,13 @@
       padding-bottom: 0;
       margin: -2.6em 0 0 0;
     }
+  }
+
+  .do-story .inactive .checkbox,
+  .do-story .inactive .submit {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
   }
 
 

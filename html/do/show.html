@@ -124,38 +124,19 @@
             <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
           </label>
         </p>
-        <ol class="images">
-          <li>
-            <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
-            <span>bikes.jpg</span>
-            <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
-          </li>
-          <li>
-            <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
-            <span>road.jpg</span>
-            <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
-          </li>
-          <li>
-            <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/262/325/original/le-tour-baguette-bike-e1383079350740-425x445.jpg" alt="" />
-            <span>festival.jpg</span>
-            <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
-          </li>
-        </ol>
-        <p class="file disabled">
+        <p class="file">
           <label>
             <span>Attach Image</span><br />
             <input type="file" name="image[]" disabled="disabled" />
           </label>
-          <br />
-          <em class="note">Ready to post! You’ve uploaded the maximum number of images.</em>
-        </p>
-        <p class="checkbox">
-          <label>
-            <input type="checkbox" checked="checked" />
-            <span>Yes, share this to Facebook.</span>
-          </label>
         </p>
       </div><!-- /.container -->
+      <p class="checkbox">
+        <label>
+          <input type="checkbox" />
+          <span>Yes, share this to Facebook.</span>
+        </label>
+      </p>
       <ul class="submit">
         <li><button type="submit">Post</button></li>
         <li><a href="">Cancel</a></li>
