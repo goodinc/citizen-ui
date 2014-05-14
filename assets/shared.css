@@ -1717,7 +1717,7 @@
     margin-bottom: 0;
   }
   #header h2 a {
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     text-decoration: none;
     color: rgb(0, 1, 2); /* @midnight */
     font-size: 4.5em;
@@ -6359,7 +6359,7 @@
     margin-top: 2.3333333334em; /* @line-height / font-size(1.5) x 2 */
   }
   .explore h1 strong {
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     font-weight: normal;
     letter-spacing: 0.05em;
 
