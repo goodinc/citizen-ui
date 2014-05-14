@@ -115,6 +115,7 @@
         <section class="do-story">
           <div class="container">
             <h2>Add your story</h2>
+            <p>Optional</p>
             <fieldset>
               <div class="container">
                 <h6 class="avatar">
@@ -143,11 +144,13 @@
                     <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
                   </li>
                 </ol>
-                <p class="file">
+                <p class="file disabled">
                   <label>
                     <span>Attach Image</span><br />
-                    <input type="file" name="image[]" />
+                    <input type="file" name="image[]" disabled="disabled" />
                   </label>
+                  <br />
+                  <em class="note">Ready to post! You’ve uploaded the maximum number of images.</em>
                 </p>
                 <p class="checkbox">
                   <label>

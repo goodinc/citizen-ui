@@ -6,6 +6,34 @@
 
 /* =Story
   ----------------------------------------------- */
+  .do-story > .container {
+    background: rgb(62, 197, 149);
+    padding: 0.875em 0.875em 1.3125em;
+    border-radius: 0.25em;
+  }
+  .do-story h2 {
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+  }
+  .do-story h2 + p {
+    color: white;
+    margin-left: 0.5em;
+    text-transform: lowercase;
+    font-size: 0.875em;
+  }
+  .do-story h2 + p:before {
+    content: "(";
+  }
+  .do-story h2 + p:after {
+    content: ")";
+  }
+  .do-story h2,
+  .do-story h2 + p {
+    display: inline;
+  }
+
   .do-story button {
     font-size: 0.875em; /* 14px / @font-size */
   }
@@ -15,6 +43,12 @@
     border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     border-radius: 0.25em;
     position: relative;
+    background: white;
+  }
+  .do-story fieldset {
+    margin-top: 0.875em;
+    padding-top: 0;
+    border-top-width: 0;
   }
   .do-story .avatar {
     position: absolute;
@@ -55,10 +89,12 @@
   .do-story form > .container > .error-message,
   .do-story form .images,
   .do-story form .file,
+  .do-story form .checkbox,
   .do-story fieldset > .container > .note,
   .do-story fieldset > .container > .error-message,
   .do-story fieldset .images,
-  .do-story fieldset .file {
+  .do-story fieldset .file,
+  .do-story fieldset .checkbox {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
@@ -228,15 +264,15 @@
     display: none;
   }
 
-  .do-story form .file.disabled label {
+  .do-story .file.disabled label {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .do-story form .file.disabled br {
+  .do-story .file.disabled br {
     display: none;
   }
-  .do-story form .file.disabled label:hover > span:first-child {
+  .do-story .file.disabled label:hover > span:first-child {
     opacity: 0;
   }
 
@@ -244,7 +280,13 @@
   .do-story form > .container > p.error-message span,
   .do-story form > .container > p.note span,
   .do-story form .file .error-message,
-  .do-story form .file .note {
+  .do-story form .file .note,
+  .do-story form .file .checkbox,
+  .do-story fieldset > .container > p.error-message span,
+  .do-story fieldset > .container > p.note span,
+  .do-story fieldset .file .error-message,
+  .do-story fieldset .file .note,
+  .do-story fieldset .file .checkbox {
     display: block;
     margin-top: 0;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
@@ -253,18 +295,22 @@
     text-align: center;
   }
   .do-story form > .container > p.error-message span,
-  .do-story form .file .error-message {
+  .do-story form .file .error-message,
+  .do-story fieldset > .container > p.error-message span,
+  .do-story fieldset .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
   .do-story form > .container > p.note span,
-  .do-story form .file .note {
+  .do-story form .file .note,
+  .do-story fieldset > .container > p.note span,
+  .do-story fieldset .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
   }
 
-  .do-story form .message {
+  .do-story .message {
     margin-top: 0.875em;
   }
 
