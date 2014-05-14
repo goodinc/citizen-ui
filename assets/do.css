@@ -143,6 +143,9 @@
   .do-new .text input {
     max-width: 30em;
   }
+  .do-new .text input[name*="title"] {
+    font-weight: bold;
+  }
   .do-new .mark-done {
     border: 0.1em solid rgb(203, 203, 203);
     background: rgb(249, 249, 250);
@@ -153,6 +156,12 @@
     padding-left: 0.875em;
     padding-right: 0.875em;
     font-weight: bold;
+  }
+  .do-new .mark-done > .checkbox         label span {
+    color: rgb(62, 197, 149);
+  }
+  .do-new .mark-done > .checkbox.checked label span {
+    color: inherit;
   }
   .do-new .mark-done .do-story {
     margin-top: 1.3125em;
@@ -176,15 +185,41 @@
     border: 0.1875em solid rgb(243, 239, 209);
     border-radius: 0.5em;
   }
+
   @media (min-width: 65em) {
     .tip {
       margin: 0;
       position: absolute;
-      width: 13em;
       top: 0;
-      right: -14em;
+      right: 0;
     }
-    .tip h2:before {
+    .tip .container {
+      position: absolute;
+      top: -1em;
+      width: 11em;
+      right: -15em;
+    }
+
+    .tip .container:before {
+      content: "";
+      display: block;
+      background: rgb(255, 252, 231);
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top: 1em;
+      left: -0.75em;
+      border-width: 0 0 0.1875em 0.1875em;
+      border-style: solid;
+      border-color: rgb(243, 239, 209);
+
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -o-transform      : rotate(45deg);
+      transform         : rotate(45deg);
+    }
+
+    .tip:before {
       content: "i";
       font-style: italic;
       font-weight: bold;
@@ -197,24 +232,9 @@
       line-height: 1.5em;
       text-align: center;
       margin-right: 0.5em;
-    }
-    /*
-    .tip .container:before {
-      display: block;
-      background: rgb(255, 252, 231);
-      border: 0.1875em solid rgb(243, 239, 209);
-      width: 1em;
-      height: 1em;
       position: absolute;
-      top: 1em;
-      left: -1em;
-
-      -webkit-transform : rotate(45deg);
-      -moz-transform    : rotate(45deg);
-      -o-transform      : rotate(45deg);
-      transform         : rotate(45deg);
+      right: 0;
     }
-    */
   }
   .tip h2 {
     font-size: inherit;
@@ -228,31 +248,16 @@
   }
 
   /* OPTIONAL: Hide the tip if it’s inactive */
+  .tip.inactive {
+    cursor: pointer;
+  }
   .tip.inactive .container {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .tip.inactive:before {
-    content: "i";
-    font-style: italic;
-    font-weight: bold;
-    font-family: Georgia, Times, "Times New Roman", serif;
-    background: rgb(204, 204, 204);
-    border-radius: 100%;
-    color: white;
-    display: inline-block;
-    width: 1.5em;
-    line-height: 1.5em;
-    text-align: center;
-    margin-right: 0.5em;
-  }
-  @media (min-width: 65em) {
-    .tip.inactive {
-      right: 0;
-      width: auto;
-    }
-  }
+
+
 
 
 /* =Story
@@ -587,11 +592,22 @@
   .do-story .submit {
     margin-bottom: 0.4375em;
   }
-  .do-new   .submit a {
-    color: inherit;
+  .do-new .submit {
+    border-top: 1px solid rgb(225, 225, 225);
+    padding-top: 1.3125em;
+  }
+  .do-new .submit button {
+    font-size: 0.875em;
+  }
+  .do-new .submit a {
+    color: rgb(153, 153, 153);
+    float: right;
+    margin-right: 0.4375em;
   }
   .do-story .submit a {
     color: white;
+    float: right;
+    margin-right: 0.4375em;
   }
   .do-story .checkbox {
     color: white;
@@ -745,11 +761,11 @@
     font-size: 0.875em;
   }
 
-  /* The content has a <div> element around it, in this case. */
-  main#content {
+  #content,
+  #header ~ #content {
     margin-top: 0;
     border-top: 0.1em solid rgb(233, 233, 233);
-    padding-top: 1.75em;
+    padding-top: 2.625em;
     padding-bottom: 3.5em;
   }
 
