@@ -679,3 +679,49 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
+
+  /* =Tip
+  ----------------------------------------------- */
+  .tip .container {
+    padding: 1.375em; /* @line-height x 3 / 2 */
+    background: rgb(255, 252, 231);
+    border: 0.1875em solid rgb(243, 239, 209);
+  }
+  .tip.inactive .container {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  @media (min-width: 70em) {
+    .tip:before {
+      content: "i";
+      font-style: italic;
+      font-weight: bold;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      background: rgb(204, 204, 204);
+      padding: 0 0.7em;
+      border-radius: 100%;
+      color: white;
+      float: right;
+      margin-top: -1.75em;
+    }
+    main#content > .container {
+      position: relative;
+    }
+    .tip .container {
+      position: absolute;
+      width: 10em;
+      top: 0;
+      right: -12.5em;
+    }
+  }
+  .tip h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .tip p {
+    font-size: 0.875em;
+    color: rgb(102, 102, 102);
+  }
+
