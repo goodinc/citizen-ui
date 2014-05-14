@@ -5,6 +5,7 @@
 
   main#content > .container {
     padding-bottom: 7em;
+    max-width: 46.5625em; /* @max-page-width */
   }
 
 
@@ -13,7 +14,7 @@
   .do-header > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 66.5625em; /* @max-page-width */
+    max-width: 46.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -23,7 +24,6 @@
     border-color: rgb(218, 220, 224);
     padding: 1.5625em; /* @line-height - 0.1875em */
     background: white;
-    text-align: center;
   }
   .do-header > .container > div h1 {
     margin-top: 0;
@@ -35,14 +35,19 @@
     background: black;
     color: white;
     border-radius: 100%;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
     padding: 0.5em;
+    display: inline-block;
+    vertical-align: 50%;
+    margin: 0 0.5em 0 0;
   }
   .do-header h1 {
     font-family: inherit;
     font-weight: bold;
+    display: inline;
+  }
+  .do-header .tags {
+    font-size: 0.75em;
+    margin-bottom: 0;
   }
   .do-header .tags h2 {
     font-family: inherit;
@@ -51,6 +56,10 @@
     text-transform: lowercase;
     color: rgb(153, 153, 153);
     display: inline;
+    margin-right: 0.5em;
+  }
+  .do-header .tags h2:after {
+    content: ": ";
   }
   .do-header .tags ul,
   .do-header .tags li {
@@ -67,16 +76,27 @@
     text-decoration: none;
     font-weight: bold;
   }
-  .do-header > .container {
-    position: relative;
-  }
   .do-header form.do,
   .do-header form.doing,
   .do-header form.done {
-    position: absolute;
-    top: 0.5em;
-    right: 3em;
+    font-size: 0.875em;
   }
+  @media (min-width: 40em) {
+    .do-header > .container {
+      position: relative;
+    }
+    .do-header > .container > div {
+      padding-right: 7em;
+    }
+    .do-header form.do,
+    .do-header form.doing,
+    .do-header form.done {
+      position: absolute;
+      top: 0.5em;
+      right: 3em;
+    }
+  }
+
 
 
 /* =New
@@ -115,9 +135,10 @@
   ----------------------------------------------- */
 
   .do-header + .do-story {
+    margin-top: 0;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 66.5625em; /* @max-page-width */
+    max-width: 46.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -430,6 +451,30 @@
     margin-top: 0.875em;
   }
 
+  .do-new   .submit button,
+  .do-story .submit button {
+    background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .do-new   .submit button:hover,
+  .do-new   .submit button:active,
+  .do-new   .submit button:focus,
+  .do-story .submit button:hover,
+  .do-story .submit button:active,
+  .do-story .submit button:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+  .do-story .submit {
+    margin-bottom: 0;
+  }
+  .do-new   .submit a {
+    color: inherit;
+  }
+  .do-story .submit a {
+    color: white;
+  }
+
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
   @media (min-width: 40em) {
@@ -498,10 +543,40 @@
 
 /* =Message
   ----------------------------------------------- */
+  /*
   .message .share {
     display: inline;
     margin-left: 1.75em;
   }
+  */
+  .message .share {
+    margin-bottom: 0;
+  }
+
+  body > section.message,
+  section.message {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    max-width: 46.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* OPTIONAL: If there’s enough space, position the close button in the top-right corner. */
+  @media (min-width: 30em) {
+    body > section.message,
+    section.message {
+      padding-right: 8.75em;
+    }
+    body > section.message .close,
+    section.message .close {
+      position: absolute;
+      top: 1.375em;
+      right: 2.625em;
+      margin: 0;
+    }
+  }
+
 
 
 /* =Share
