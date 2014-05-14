@@ -5,7 +5,7 @@
 
   main#content > .container {
     padding-bottom: 7em;
-    max-width: 46.5625em; /* @max-page-width */
+    max-width: 45em; /* @max-page-width */
   }
 
 
@@ -14,7 +14,7 @@
   .do-header > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 46.5625em; /* @max-page-width */
+    max-width: 45em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -101,6 +101,26 @@
 
 /* =New
   ----------------------------------------------- */
+  .do-new {
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .do-new header {
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(225, 225, 225);
+  }
+  .do-new h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  .do-new label span em {
+    font-style: normal;
+    color: rgb(102, 102, 102);
+  }
   .do-new .text input {
     max-width: 30em;
   }
@@ -129,6 +149,93 @@
   }
 
 
+  /* =Tip
+  ----------------------------------------------- */
+  .tip .container {
+    padding: 1.375em; /* @line-height x 3 / 2 */
+    background: rgb(255, 252, 231);
+    border: 0.1875em solid rgb(243, 239, 209);
+    border-radius: 0.5em;
+  }
+  @media (min-width: 65em) {
+    .tip {
+      margin: 0;
+      position: absolute;
+      width: 13em;
+      top: 0;
+      right: -14em;
+    }
+    .tip h2:before {
+      content: "i";
+      font-style: italic;
+      font-weight: bold;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      background: rgb(204, 204, 204);
+      border-radius: 100%;
+      color: white;
+      display: inline-block;
+      width: 1.5em;
+      line-height: 1.5em;
+      text-align: center;
+      margin-right: 0.5em;
+    }
+    /*
+    .tip .container:before {
+      display: block;
+      background: rgb(255, 252, 231);
+      border: 0.1875em solid rgb(243, 239, 209);
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top: 1em;
+      left: -1em;
+
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -o-transform      : rotate(45deg);
+      transform         : rotate(45deg);
+    }
+    */
+  }
+  .tip h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .tip p {
+    font-size: 0.875em;
+    color: rgb(102, 102, 102);
+    line-height: 1.3;
+  }
+
+  /* OPTIONAL: Hide the tip if it’s inactive */
+  .tip.inactive .container {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .tip.inactive:before {
+    content: "i";
+    font-style: italic;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    background: rgb(204, 204, 204);
+    border-radius: 100%;
+    color: white;
+    display: inline-block;
+    width: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    margin-right: 0.5em;
+  }
+  @media (min-width: 65em) {
+    .tip.inactive {
+      right: 0;
+      width: auto;
+    }
+  }
+
+
 /* =Story
   ----------------------------------------------- */
 
@@ -136,7 +243,7 @@
     margin-top: 0;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 46.5625em; /* @max-page-width */
+    max-width: 45em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -496,19 +603,6 @@
   }
 
 
-/* =New
-  ----------------------------------------------- */
-  .do-new header {
-    padding-bottom: 1em;
-    border-bottom: 1px solid rgb(225, 225, 225);
-  }
-  .do-new h1 {
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 1.5em;
-  }
-
-
 /* =Stories
   ----------------------------------------------- */
   .do-comments h1 {
@@ -560,7 +654,7 @@
   section.message {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 46.5625em; /* @max-page-width */
+    max-width: 45em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -677,51 +771,5 @@
   footer.meta a:active,
   footer.meta a:focus {
     color: rgb(47, 132, 218); /* @ocean */
-  }
-
-
-  /* =Tip
-  ----------------------------------------------- */
-  .tip .container {
-    padding: 1.375em; /* @line-height x 3 / 2 */
-    background: rgb(255, 252, 231);
-    border: 0.1875em solid rgb(243, 239, 209);
-  }
-  .tip.inactive .container {
-    /* @hidden-accessible */
-    position: absolute;
-    left: -9999px;
-  }
-  @media (min-width: 70em) {
-    .tip:before {
-      content: "i";
-      font-style: italic;
-      font-weight: bold;
-      font-family: Georgia, Times, "Times New Roman", serif;
-      background: rgb(204, 204, 204);
-      padding: 0 0.7em;
-      border-radius: 100%;
-      color: white;
-      float: right;
-      margin-top: -1.75em;
-    }
-    main#content > .container {
-      position: relative;
-    }
-    .tip .container {
-      position: absolute;
-      width: 10em;
-      top: 0;
-      right: -12.5em;
-    }
-  }
-  .tip h2 {
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: bold;
-  }
-  .tip p {
-    font-size: 0.875em;
-    color: rgb(102, 102, 102);
   }
 
