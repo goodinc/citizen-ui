@@ -22,7 +22,7 @@
     border-width: 0.1em;
     border-style: solid;
     border-color: rgb(218, 220, 224);
-    padding: 1.5625em; /* @line-height - 0.1875em */
+    padding: 1em;
     background: white;
   }
   .do-header > .container > div h1 {
@@ -35,10 +35,28 @@
     background: black;
     color: white;
     border-radius: 100%;
-    padding: 0.5em;
+    width: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
     display: inline-block;
-    vertical-align: 50%;
+    vertical-align: 25%;
     margin: 0 0.5em 0 0;
+  }
+  .do-comments:after {
+    content: "DO";
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    text-transform: uppercase;
+    font-size: 0.75em;
+    background: rgb(204, 204, 204);
+    color: white;
+    border-radius: 100%;
+    width: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.25em;
   }
   .do-header h1 {
     font-family: inherit;
@@ -48,6 +66,7 @@
   .do-header .tags {
     font-size: 0.75em;
     margin-bottom: 0;
+    margin-left: 4.5em;
   }
   .do-header .tags h2 {
     font-family: inherit;
@@ -250,7 +269,7 @@
 
   .do-story > .container {
     background: rgb(62, 197, 149);
-    padding: 0.875em 0.875em 1.3125em;
+    padding: 0.875em;
     border-radius: 0.25em;
   }
   .do-story h2 {
@@ -566,7 +585,7 @@
     color: rgb(42, 43, 44);
   }
   .do-story .submit {
-    margin-bottom: 0;
+    margin-bottom: 0.4375em;
   }
   .do-new   .submit a {
     color: inherit;
@@ -603,7 +622,7 @@
   }
 
 
-/* =Stories
+/* =Comments
   ----------------------------------------------- */
   .do-comments h1 {
     font-size: inherit;
@@ -611,12 +630,40 @@
     text-transform: uppercase;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
   }
+  .do-comments h1:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    font-size: 1.25em;
+    line-height: 1;
+    margin-right: 0.4375em;
+    vertical-align: middle;
+  }
+  .do-comments,
+  .do-comments header {
+    padding-bottom: 0.875em;
+    border-bottom: 0.1em solid rgb(233, 233, 233);
+  }
   .do-comments h1,
   .do-comments h1 + p {
     display: inline;
   }
   .do-comments h1 + p {
-    margin-left: 0.5em;
+    margin-left: 0.4375em;
     color: rgb(153, 153, 153);
   }
   .do-comments h1 + p:before {
@@ -637,6 +684,31 @@
     margin-top: 0;
   }
 
+  /* Article */
+  .do-comments .comment-list article {
+    border: 0.125em solid rgb(246, 246, 246);
+    border-radius: 0.25em;
+    margin: 0.875em 2.625em;
+  }
+  .do-comments .comment-list article > h3 {
+    color: rgb(102, 102, 102);
+    line-height: 1.2;
+  }
+  .do-comments .comment-list article > h3 a {
+    display: block;
+    color: black;
+    font-size: 1.3333333333em;
+  }
+  @media (min-width: 40em) {
+    .do-comments .comment-list li article {
+      padding: 1.25em;
+    }
+    .do-comments .comment-list article > h3 img,
+    .do-comments .comment-list article > h3 .avatar {
+      margin-left: 0;
+    }
+  }
+
 
 /* =Message
   ----------------------------------------------- */
@@ -646,8 +718,27 @@
     margin-left: 1.75em;
   }
   */
-  .message .share {
+
+  section.message.success {
+    padding: 1em 1.5em;
     margin-bottom: 0;
+  }
+
+  section.message .share {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 48em) {
+    section.message .share {
+      display: inline;
+      margin-left: 1em;
+    }
+  }
+
+  section.message h1,
+  section.message p,
+  section.message li {
+    font-size: 0.875em;
   }
 
   body > section.message,
@@ -669,11 +760,20 @@
     section.message .close {
       position: absolute;
       top: 1.375em;
-      right: 2.625em;
+      right: 1.5em;
       margin: 0;
     }
+    body > section.message .close span,
+    section.message .close span {
+      position: absolute;
+      left: -9999px;
+    }
   }
-
+  @media (min-width: 30em) {
+    body > section.message, section.message {
+      padding-right: 5em;
+    }
+  }
 
 
 /* =Share
@@ -686,7 +786,7 @@
   }
   .share li {
     display: inline;
-    margin-right: 1.75em;
+    margin-right: 1em;
   }
   .share a {
     text-decoration: none;
@@ -727,6 +827,17 @@
   }
   .twitter   a:before {
     content: "\e60f"; /* @icon-twitter */
+  }
+
+  .facebook a:before {
+
+    background: rgb(59, 89, 152); /* @blueberry */
+    border-radius: 0.15em;
+    padding: 0.25em 0 0 0.25em;
+
+    content: "\e60d"; /* @icon-facebook */
+    color: white;
+
   }
 
 
