@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>DO – GOOD</title>
+  <title>New – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -22,6 +22,8 @@
   <!--[if lte IE 8]>
   <script src="../../assets/modernizr.js"></script>
   <![endif]-->
+
+  <link rel="stylesheet" href="../../assets/do.css" />
 
 </head>
 <body>
@@ -79,11 +81,13 @@
       <header>
         <h1>New DO</h1>
 
+        <!--
         <section id="tip">
           <h2>Posting a DO</h2>
           <p><strong>Inspire people to take action.</strong> Share what you’ve done to live well and do good.</p>
           <p><strong>Tip</strong> keep it short and sweet!</p>
         </section>
+        -->
 
       </header>
 
@@ -96,15 +100,22 @@
         </p>
         <p class="text">
           <label>
-            <span>Add tags</span> <em class="note">Comma separated, spaces are OK</em><br />
+            <span>Add tags</span><br />
             <input type="text" name="title" placeholder="For example: Design, Culture Jamming, Changemakers" />
+            <em class="note">Comma separated, spaces are OK</em>
+          </label>
+        </p>
+        <p class="checkbox">
+          <label>
+            <input type="checkbox" />
+            <span>Mark as done?</span>
           </label>
         </p>
 
         <section class="do-story">
           <div class="container">
             <h2>Add your story</h2>
-            <fieldset class="inactive">
+            <fieldset>
               <div class="container">
                 <h6 class="avatar">
                   <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
@@ -115,6 +126,23 @@
                     <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
                   </label>
                 </p>
+                <ol class="images">
+                  <li>
+                    <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
+                    <span>bikes.jpg</span>
+                    <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
+                  </li>
+                  <li>
+                    <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
+                    <span>road.jpg</span>
+                    <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
+                  </li>
+                  <li>
+                    <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/262/325/original/le-tour-baguette-bike-e1383079350740-425x445.jpg" alt="" />
+                    <span>festival.jpg</span>
+                    <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
+                  </li>
+                </ol>
                 <p class="file">
                   <label>
                     <span>Attach Image</span><br />

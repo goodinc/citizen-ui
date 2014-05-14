@@ -1,0 +1,301 @@
+
+/*-----------------------------------------------
+    DO Styles
+  ----------------------------------------------- */
+
+
+/* =Story
+  ----------------------------------------------- */
+  .do-story button {
+    font-size: 0.875em; /* 14px / @font-size */
+  }
+
+  .do-story form     .container,
+  .do-story fieldset .container {
+    border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-radius: 0.25em;
+    position: relative;
+  }
+  .do-story .avatar {
+    position: absolute;
+    top: 0.625em; /* 10px / 16px */
+    left: 0.625em;
+    margin: 0;
+    line-height: 1;
+  }
+  .do-story .text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .do-story .text label {
+    display: block;
+    padding-bottom: 0;
+    border-width: 0;
+  }
+
+  /* Make space for the user’s avatar. (It will be present if they’re signed in.) */
+  .do-story .avatar + .text label {
+    border-width: 0 0 0 0.1em;
+    border-style: dotted;
+    border-color: rgb(238, 238, 238);
+    margin-left: 3.125em; /* 50px / 16px*/
+  }
+
+  .do-story .text textarea {
+    border-width: 0;
+    background: transparent;
+    max-width: 100%;
+    height: 10.5em;
+    padding: 0.875em; /* @line-height / 2 */
+    line-height: 1.375;
+  }
+
+  /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
+  .do-story form > .container > .note,
+  .do-story form > .container > .error-message,
+  .do-story form .images,
+  .do-story form .file,
+  .do-story fieldset > .container > .note,
+  .do-story fieldset > .container > .error-message,
+  .do-story fieldset .images,
+  .do-story fieldset .file {
+    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    margin: 0;
+    padding: 0.625em; /* 10px / 16px */
+  }
+
+  .do-story .images {
+    background: rgb(249, 249, 249);
+  }
+  .do-story .images li {
+    display: block;
+    position: relative;
+    background: white;
+    border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
+    border-radius: 0.25em;
+    max-width: 40em;
+    font-size: 0.75em; /* 12px / 16px */
+    line-height: 2.5em; /* 30px / 12px */
+    color: rgb(101, 102, 102); /* @steel */
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+  }
+  .do-story .images li + li {
+    margin-top: 0.625em; /* 10px / 16px */
+  }
+  .do-story .images li img {
+    margin-right: 0.625em; /* 10px / 16px */
+    height: 2.5em; /* 30px / 12px */
+    width: auto;
+    float: left;
+    border-top-left-radius    : 0.25em;
+    border-bottom-left-radius : 0.25em;
+  }
+  .do-story .images button {
+    background: rgb(153, 153, 153); /* @aluminum */
+    float: right;
+
+    /* These values are arbitrary. They happen to make the button appear
+    centered within the item, and the “X” appear centered within the button.*/
+    padding: 0.2em 0.5em;
+    margin: 0.35em;
+  }
+  .do-story .images button:hover,
+  .do-story .images button:active,
+  .do-story .images button:focus {
+    background: rgb(101, 102, 102); /* @steel */
+  }
+  .do-story .images button span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .do-story .images button:after {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+  }
+  .do-story form     .container:after,
+  .do-story fieldset .container:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .do-story .file {
+    text-align: right;
+  }
+  .do-story .file label {
+    display: inline-block;
+    padding: 0.328125em;
+    border-radius: 0.25em;
+    max-width: 33em;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    border: 0.1em solid rgb(153, 153, 153); /* @aluminum */
+    line-height: 1;
+    position: relative;
+    cursor: pointer;
+    border-color: transparent;
+    opacity: 0.25;
+    transition: opacity 0.2s, border-color 0.2s;
+  }
+  .do-story .file label:hover {
+    opacity: 1;
+    border-color: rgb(153, 153, 153);
+  }
+  .do-story .file label br {
+    display: none;
+  }
+  .do-story .file label:before {
+    background: transparent url(shared/comment/picture.svg) no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+  }
+  .do-story .file label > span:first-child {
+    font-size: 0.75em;
+    position: absolute;
+    background: rgb(51, 51, 51); /* @tungsten */
+    color: rgb(253, 253, 253);
+    bottom: 0;
+    margin-bottom: 4em;
+    margin-left: -4em;
+    width: 8em;
+    text-align: center;
+    padding: 0.4375em 0;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .do-story .file label > span:first-child:before {
+    content: "";
+    display: block;
+    background: rgb(51, 51, 51); /* @tungsten */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: -0.5em;
+    margin-left: -0.5em;
+    width: 1em;
+    height: 1em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+  }
+  .do-story .file label:hover  > span:first-child {
+    left: 50%;
+    opacity: 1;
+  }
+  .do-story .file label + .error-message {
+    margin-top: 0.4375em;
+  }
+  .do-story .file label > span:first-child {
+    margin-right: 0.4375em;
+  }
+  .do-story .file input {
+    position: absolute;
+    left: -9999px;
+  }
+  .do-story .file input:focus {
+    position: static;
+  }
+  .do-story .submit {
+    margin-bottom: 1.75em; /* @line-height */
+  }
+
+  .supports-placeholder .do-story .text label > span:first-child {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .supports-placeholder .do-story .text label br {
+    display: none;
+  }
+
+  .do-story form .file.disabled label {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .do-story form .file.disabled br {
+    display: none;
+  }
+  .do-story form .file.disabled label:hover > span:first-child {
+    opacity: 0;
+  }
+
+  /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
+  .do-story form > .container > p.error-message span,
+  .do-story form > .container > p.note span,
+  .do-story form .file .error-message,
+  .do-story form .file .note {
+    display: block;
+    margin-top: 0;
+    border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
+    border-radius: 0.25em;
+    padding: 0.4375em;
+    text-align: center;
+  }
+  .do-story form > .container > p.error-message span,
+  .do-story form .file .error-message {
+    background: rgb(253, 235, 230);
+    border-color: rgb(251, 204, 204);
+  }
+  .do-story form > .container > p.note span,
+  .do-story form .file .note {
+    background-color: rgb(255, 255, 204);
+    font-style: normal;
+    color: rgb(51, 51, 51); /* @tungsten */
+  }
+
+  .do-story form .message {
+    margin-top: 0.875em;
+  }
+
+  /* OPTIONAL: Make the comments form that appears at the
+  top look more compact, if it hasn’t been interacted with. */
+  @media (min-width: 40em) {
+    .do-story .inactive .text textarea {
+      height: 3.125em; /* 50px / 16px  */
+      resize: none; /* Prevent the resize handle from overlapping with the upload button. */
+    }
+    .do-story .inactive p.text + .file {
+      float: right;
+      border-top-width: 0;
+      padding-top: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      margin: -2.6em 0 0 0;
+    }
+  }
+
+
+
+/* =New
+  ----------------------------------------------- */
+  .do-new header {
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(225, 225, 225);
+  }
+  .do-new h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
