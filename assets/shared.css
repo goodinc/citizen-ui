@@ -308,6 +308,9 @@
   .avatar .tangerine {
     background: rgb(249, 124, 86);
   }
+  .current-user-vote-avatar {
+    padding-left: 5px;
+  }
 
   .avatar .size25 {
     font-size: 1.0416666667em; /* 2/3 x 25px / @font-size */
@@ -4304,7 +4307,7 @@
     border-radius: 0.25em;
     position: relative;
   }
-  .comments form .avatar {
+  .comments form h6.avatar {
     position: absolute;
     top: 0.625em; /* 10px / 16px */
     left: 0.625em;
