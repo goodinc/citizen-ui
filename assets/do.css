@@ -147,7 +147,7 @@
     color: rgb(102, 102, 102);
   }
   .do-new .text input {
-    max-width: 30em;
+    max-width: 35em;
   }
   .do-new .text input[name*="title"] {
     font-weight: bold;
@@ -173,7 +173,7 @@
   .do-new .mark-done {
     border: 0.1em solid rgb(203, 203, 203);
     background: rgb(249, 249, 250);
-    padding: 0.875em 0;
+    padding: 0.75em 0;
     border-radius: 0.25em;
   }
   .do-new .mark-done > .checkbox {
@@ -189,7 +189,7 @@
   }
   .do-new .mark-done .do-story {
     margin-top: 1.3125em;
-    margin-bottom: -0.875em;
+    margin-bottom: -0.75em;
   }
 
 
@@ -291,8 +291,8 @@
   .do-header + .do-story {
     margin-top: -0.1em;
   }
-
   .do-story > .container {
+    position: relative;
     background: rgb(62, 197, 149);
     padding: 0.875em;
     border-radius: 0.25em;
@@ -303,6 +303,27 @@
             border-top-right-radius : 0;
             border-top-left-radius  : 0;
   }
+
+  .do-story > .container:before {
+    content: "";
+    display: block;
+    background: rgb(62, 197, 149);
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: -0.5em;
+    right: 2.75em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+  }
+  .mark-done .do-story > .container:before {
+    right: auto;
+    left: 1em;
+  }
+
   .do-story h2 {
     color: white;
     font-family: inherit;
@@ -805,7 +826,7 @@
   #header ~ #content {
     margin-top: 0;
     border-top: 0.1em solid rgb(233, 233, 233);
-    padding-top: 2.625em;
+    padding-top: 1.75em;
     padding-bottom: 3.5em;
   }
 
@@ -861,6 +882,7 @@
   .share a {
     text-decoration: none;
     text-transform: lowercase;
+    font-weight: bold;
   }
   .share a:hover,
   .share a:active,
