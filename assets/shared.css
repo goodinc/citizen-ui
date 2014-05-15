@@ -3348,6 +3348,14 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
+  /* OPTIONAL: Make the links around plain text more subtle. */
+  .activity-item .comment a.text,
+  .activity-item .comment a.text:hover,
+  .activity-item .comment a.text:active,
+  .activity-item .comment a.text:focus {
+    color: inherit;
+  }
+
   /* OPTIONAL: Reduce the space between the headline and the commment */
   .activity-item .comment h3.has-image + p {
     margin-top: 0;
@@ -4645,14 +4653,6 @@
   .comment-list article > p a:active,
   .comment-list article > p a:focus {
     color: rgb(47, 132, 218); /* @ocean */
-  }
-
-  /* OPTIONAL: Make the links around plain text more subtle. */
-  .comment-list article > p a.text,
-  .comment-list article > p a.text:hover,
-  .comment-list article > p a.text:active,
-  .comment-list article > p a.text:focus {
-    color: inherit;
   }
 
   .comment-list form {
