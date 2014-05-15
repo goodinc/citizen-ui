@@ -11,6 +11,9 @@
 
 /* =Header
   ----------------------------------------------- */
+  .do-header {
+    margin-bottom: 0;
+  }
   .do-header > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
@@ -66,7 +69,6 @@
   .do-header .tags {
     font-size: 0.75em;
     margin-bottom: 0;
-    margin-left: 4.5em;
   }
   .do-header .tags h2 {
     font-family: inherit;
@@ -105,7 +107,11 @@
       position: relative;
     }
     .do-header > .container > div {
-      padding-right: 7em;
+      padding-left: 4.75em;
+      padding-right: 8.75em;
+    }
+    .do-header h2.do {
+      margin-left: -3.5em;
     }
     .do-header form.do,
     .do-header form.doing,
@@ -147,19 +153,19 @@
     font-weight: bold;
   }
 
-  ::-webkit-input-placeholder { /* WebKit browsers */
+  .do-new > form > .text ::-webkit-input-placeholder { /* WebKit browsers */
     color: rgb(204, 204, 204);
     font-weight: normal;
   }
-  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  .do-new > form > .text:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: rgb(204, 204, 204);
     font-weight: normal;
   }
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  .do-new > form > .text::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: rgb(204, 204, 204);
     font-weight: normal;
   }
-  :-ms-input-placeholder { /* Internet Explorer 10+ */
+  .do-new > form > .text:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: rgb(204, 204, 204);
     font-weight: normal;
   }
@@ -184,14 +190,6 @@
   .do-new .mark-done .do-story {
     margin-top: 1.3125em;
     margin-bottom: -0.875em;
-  }
-  .do-new .mark-done .do-story > .container {
-    -webkit-border-top-right-radius : 0;
-    -webkit-border-top-left-radius  : 0;
-       -moz-border-radius-topright  : 0;
-       -moz-border-radius-topleft   : 0;
-            border-top-right-radius : 0;
-            border-top-left-radius  : 0;
   }
 
 
@@ -290,10 +288,20 @@
     margin-right: auto;
   }
 
+  .do-header + .do-story {
+    margin-top: -0.1em;
+  }
+
   .do-story > .container {
     background: rgb(62, 197, 149);
     padding: 0.875em;
     border-radius: 0.25em;
+    -webkit-border-top-right-radius : 0;
+    -webkit-border-top-left-radius  : 0;
+       -moz-border-radius-topright  : 0;
+       -moz-border-radius-topleft   : 0;
+            border-top-right-radius : 0;
+            border-top-left-radius  : 0;
   }
   .do-story h2 {
     color: white;
