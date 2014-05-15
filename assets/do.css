@@ -593,22 +593,30 @@
     margin-top: 0.875em;
   }
 
-  .do-new   .submit button,
+  .do-new   .submit button {
+    background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .do-new   .submit button:hover,
+  .do-new   .submit button:active,
+  .do-new   .submit button:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+
   .do-story .submit button {
     background-color: rgb(239, 239, 239);
     background-color: rgba(255, 255, 255, 0.85);
     color: rgb(101, 102, 102); /* @steel */
     border-color: transparent;
   }
-  .do-new   .submit button:hover,
-  .do-new   .submit button:active,
-  .do-new   .submit button:focus,
   .do-story .submit button:hover,
   .do-story .submit button:active,
   .do-story .submit button:focus {
     background: rgb(250, 250, 250);
     color: rgb(42, 43, 44);
   }
+
   .do-story .submit {
     margin-top: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -665,7 +673,7 @@
 /* =Comments
   ----------------------------------------------- */
   .do-comments .share {
-    font-size: 0.875em;
+    font-size: 0.75em;
   }
   .do-comments h1 {
     font-size: 0.875em;
@@ -844,7 +852,6 @@
   }
   .share a {
     text-decoration: none;
-    font-weight: bold;
     text-transform: lowercase;
   }
   .share a:hover,
@@ -892,6 +899,21 @@
     content: "\e60d"; /* @icon-facebook */
     color: white;
 
+  }
+  .meta .vote button,
+  .meta .voted button {
+    font-weight: normal;
+    color: inherit;
+  }
+  .meta .share a {
+    border: 0.1em solid rgb(244, 244, 244);
+    border-radius: 0.25em;
+    background: rgb(253, 253, 253);
+    padding: 0.4375em 1em;
+    display: inline-block;
+  }
+  .meta .share li {
+    margin-right: 0;
   }
 
 
