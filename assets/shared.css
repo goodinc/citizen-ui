@@ -4638,19 +4638,21 @@
   .comment-list article > p {
     max-width: 33em;
   }
-  .comment-list article > p a,
-  .comment-list article > p a:hover,
-  .comment-list article > p a:hover,
-  .comment-list article > p a:active {
-    color: inherit;
-  }
-  .comment-list article > p a.comment-link {
+  .comment-list article > p a {
     color: rgb(102, 153, 204);
   }
-  .comment-list article > p a.comment-link:hover,
-  .comment-list article > p a.comment-link:active,
-  .comment-list article > p a.comment-link:focus {
+  .comment-list article > p a:hover,
+  .comment-list article > p a:active,
+  .comment-list article > p a:focus {
     color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* OPTIONAL: Make the links around plain text more subtle. */
+  .comment-list article > p a.text,
+  .comment-list article > p a.text:hover,
+  .comment-list article > p a.text:active,
+  .comment-list article > p a.text:focus {
+    color: inherit;
   }
 
   .comment-list form {
