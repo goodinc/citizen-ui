@@ -146,6 +146,24 @@
   .do-new .text input[name*="title"] {
     font-weight: bold;
   }
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgb(204, 204, 204);
+    font-weight: normal;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: rgb(204, 204, 204);
+    font-weight: normal;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: rgb(204, 204, 204);
+    font-weight: normal;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: rgb(204, 204, 204);
+    font-weight: normal;
+  }
+
   .do-new .mark-done {
     border: 0.1em solid rgb(203, 203, 203);
     background: rgb(249, 249, 250);
@@ -578,7 +596,9 @@
   .do-new   .submit button,
   .do-story .submit button {
     background-color: rgb(239, 239, 239);
+    background-color: rgba(255, 255, 255, 0.85);
     color: rgb(101, 102, 102); /* @steel */
+    border-color: transparent;
   }
   .do-new   .submit button:hover,
   .do-new   .submit button:active,
@@ -590,9 +610,13 @@
     color: rgb(42, 43, 44);
   }
   .do-story .submit {
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 1.3125em;
     margin-bottom: 0.4375em;
   }
   .do-new .submit {
+    margin-top: 1.3125em;
     border-top: 1px solid rgb(225, 225, 225);
     padding-top: 1.3125em;
   }
