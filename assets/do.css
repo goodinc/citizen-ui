@@ -96,9 +96,14 @@
     content: "";
   }
   .do-header .tags a {
-    color: inherit;
+    color: rgb(102, 102, 102);
     text-decoration: none;
     font-weight: bold;
+  }
+  .do-header .tags a:hover,
+  .do-header .tags a:active,
+  .do-header .tags a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .do-header form.do,
   .do-header form.doing,
@@ -918,14 +923,14 @@
     color: rgb(178, 158, 31);
   }
 
-  .facebook a {
+  .share .facebook a {
     color: rgb(58, 88, 151) !important;
   }
-  .twitter a {
+  .share .twitter a {
     color: rgb(40, 170, 225) !important;
   }
-  .facebook  a:before,
-  .twitter   a:before {
+  .share .facebook  a:before,
+  .share .twitter   a:before {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -941,14 +946,14 @@
 
     margin-right: 0.4375em;
   }
-  .facebook  a:before {
+  .share .facebook  a:before {
     content: "\e60d"; /* @icon-facebook */
   }
-  .twitter   a:before {
+  .share .twitter   a:before {
     content: "\e60f"; /* @icon-twitter */
   }
 
-  .facebook a:before {
+  .share .facebook a:before {
 
     background: rgb(59, 89, 152); /* @blueberry */
     border-radius: 0.15em;
