@@ -117,7 +117,8 @@
     .do-header form.doing,
     .do-header form.done {
       position: absolute;
-      top: 0.5em;
+      margin-top: 0;
+      top: 1.3125em;
       right: 3em;
     }
   }
