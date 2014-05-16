@@ -2894,11 +2894,6 @@
     clear: both;
   }
 
-  .activity-item p {
-    margin-top    : 0.75em; /* @line-height / 2 */
-    margin-bottom : 0.75em;
-  }
-
   /* Links */
   .activity-item a {
     color: rgb(102, 153, 204);
@@ -2932,54 +2927,14 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-  /* Icons */
-  .meta .dos      abbr,
-  .meta .votes    abbr,
-  .meta .comments abbr {
-    font-size: 0.75em; /* 12px / @font-size */
-    border-bottom-width: 0;
-  }
-  .meta .dos      abbr:before,
-  .meta .votes    abbr:before,
-  .meta .comments abbr:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    font-size: 1.33333333333333em; /* 16px / 12px */
-
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 0.25em;
-  }
-  .meta .dos abbr:before {
-    content: "\e604"; /* @icon-do */
-    color: rgb(83, 231, 185); /* @kiwi */
-  }
-  .meta .votes abbr:before {
-    content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @sky */
-  }
-  .meta .comments abbr:before {
-    content: "\e601"; /* @icon-comment */
-    color: rgb(255, 223, 145); /* @banana */
-  }
-
   /* Time */
   .activity-item .time {
     color: rgb(204, 204, 204); /* @magnesium */
     font-size: 0.75em; /* 12px / @font-size */
   }
+
+  /* OPTIONAL: Hide abbreviations in Firefox */
+  .activity-item .meta abbr,
   .activity-item .time abbr {
     border-bottom-width: 0;
   }
@@ -3381,6 +3336,15 @@
 
 /* =Meta
   ----------------------------------------------- */
+  .meta a {
+    color: inherit;
+  }
+  .meta a:hover,
+  .meta a:active,
+  .meta a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
   .activity-item .post .meta {
     margin-top: 0.625em;
     border-top: 1px solid rgb(243, 243, 243); /* @bright-silver */
@@ -3405,12 +3369,22 @@
     display: table;
     clear: both;
   }
-  .activity-item .meta p {
+
+  .activity-item .meta p.dos,
+  .activity-item .meta p.comments {
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
     margin-right: 0.15em;
     color: rgb(153, 153, 153); /* @aluminum */
+  }
+
+  .activity-item .meta form.vote,
+  .activity-item .meta form.voted {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+    display: inline-block;
   }
 
   /* OPTIONAL: Add a line between meta items within a follow */
@@ -3424,46 +3398,39 @@
     line-height: 1;
   }
 
-  .activity-item .meta a {
-    color: inherit;
-  }
-
-  .activity-item .meta form.vote,
-  .activity-item .meta form.voted {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: inherit;
-  }
-
-  /* KLUDGE: This should share styles with comments and dos */
-  .activity-item .meta form.vote,
-  .activity-item .meta form.voted {
-    display: inline-block;
-    margin: 0 0 0.375em 0;
-    vertical-align: top;
-  }
-  .activity-item .meta form.vote  p,
-  .activity-item .meta form.voted p {
-    margin-right: 0;
-  }
-
-  .meta .vote  button,
-  .meta .voted button {
+  /* Icons */
+  .meta .dos      a,
+  .meta .comments a,
+  .meta .vote     button,
+  .meta .voted    button {
     border-radius: 0.25em;
     font-family: inherit;
     font-size: 0.75em;
     line-height: 1.2em;
-    padding: 0.75em 0.75em 0.7em;
+    padding: 0.75em 1em 0.7em;
     display: inline-block;
     margin-left: 0;
 
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(253, 253, 253);
     color: rgb(153, 153, 153);
+  }
+  .meta .dos      a:hover,
+  .meta .dos      a:active,
+  .meta .dos      a:focus,
+  .meta .comments a:hover,
+  .meta .comments a:active,
+  .meta .comments a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .meta .vote  button,
+  .meta .voted button {
     font-weight: bold;
   }
-  .meta .vote  button:before,
-  .meta .voted button:before {
+
+  .meta .dos       a:before,
+  .meta .comments  a:before,
+  .meta .vote button:before {
 
     /* @icons */
     font-family: "Icons";
@@ -3479,16 +3446,29 @@
     -moz-osx-font-smoothing: grayscale;
 
     font-size: 1.33333333333333em; /* 16px / 12px */
-
     display: inline-block;
     vertical-align: middle;
+  }
+  .meta .dos      a:before,
+  .meta .comments a:before {
+    margin-right: 0.25em;
+  }
+  .meta .dos a:before {
+    content: "\e604"; /* @icon-do */
+    color: rgb(83, 231, 185); /* @kiwi */
+  }
+  .meta .comments a:before {
+    content: "\e601"; /* @icon-comment */
+    color: rgb(255, 223, 145); /* @banana */
+  }
+  .meta .vote button:before {
     margin-right: 0.1em;
     margin-left: 0;
     position: static;
-
     content: "\e602"; /* @icon-vote */
     color: rgb(113, 179, 247); /* @sky */
   }
+
   .meta form.vote  button:hover,
   .meta form.vote  button:active,
   .meta form.vote  button:focus,
@@ -3504,8 +3484,7 @@
   }
   .meta form.vote  button:hover:before,
   .meta form.vote  button:active:before,
-  .meta form.vote  button:focus:before,
-  .meta form.voted button:before {
+  .meta form.vote  button:focus:before {
     color: white;
   }
 
@@ -3517,27 +3496,19 @@
     border-color: rgb(244, 244, 244);
     padding-left : 0.6em;
     margin-left  : 0.45em;
+    margin-right : -0.25em;
     margin-top: -0.75em;
     padding-top: 0.75em;
     margin-bottom: -0.8em;
     padding-bottom: 0.8em;
     transition: border-color 0.2s;
   }
-  .meta form.vote   button:hover abbr,
-  .meta form.active button:hover abbr,
-  .meta form.focus  button:hover abbr,
-  .meta form.voted  button       abbr {
+  .meta form.vote   button:hover  abbr,
+  .meta form.vote   button:active abbr,
+  .meta form.vote   button:focus  abbr,
+  .meta form.voted  button        abbr {
     border-color: rgb(51, 51, 51);
     border-color: rgba(0, 0, 0, 0.15);
-  }
-
-  /* KLUDGE: Hide the icon for voted buttons, in a backward-compatible way.
-  (Once the buttons have been updated to the latest HTML, this selector can be simplified) */
-  .meta form.voted button[title="Undo"] {
-    padding-left: 1em;
-  }
-  .meta form.voted button[title="Undo"]:before {
-    display: none;
   }
 
 
@@ -3583,28 +3554,31 @@
     border-top-color: transparent;
   }
 
+/* TEMPORARY: Show the icon for voted buttons that are still using the old HTML.
+  (Without the words “It’s GOOD”, the button is a little on the small side.) */
+  .meta form.voted button[disabled]:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  /* OPTIONAL: Make links look like buttons. */
-  .activity-item .meta .dos,
-  .activity-item .meta .votes,
-  .activity-item .meta .comments {
+    font-size: 1.33333333333333em; /* 16px / 12px */
     display: inline-block;
-    margin-bottom: 0.375em;
-  }
-  .activity-item .meta .dos      a,
-  .activity-item .meta .votes    a,
-  .activity-item .meta .comments a {
-    color: inherit;
-    border: 0.1em solid rgb(244, 244, 244);
-    border-radius: 0.25em;
-    background: rgb(253, 253, 253);
-    padding: 0.1em 0.75em 0.225em;
-    display: inline-block;
-  }
-  .activity-item .meta a:hover,
-  .activity-item .meta a:active,
-  .activity-item .meta a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
+    vertical-align: middle;
+
+    margin-right: 0.1em;
+    margin-left: 0;
+    position: static;
+    content: "\e602"; /* @icon-vote */
+    color: white;
   }
 
 
@@ -3616,7 +3590,6 @@
   @media (min-width: 30em) {
     .activity-item section.tags {
       margin: 0 0 0 0.875em; /* @line-height / 2 */
-      margin-top: 0.2em; /* KLUDGE: Attempt to line up with the meta data */
       display: inline;
       float: right;
     }
