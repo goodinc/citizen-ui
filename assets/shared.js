@@ -72,7 +72,6 @@
 
   /* =ShowDetails
   ----------------------------------------------- */
-  /*
   var ShowDetails = function() {};
 
   (function() {
@@ -104,14 +103,12 @@
     }
 
   })();
-  */
 
 
   /* =HideTip
   -----------------------------------------------
   NOTE: This currently only supports a single tip (the community introduction)
   ----------------------------------------------- */
-  /*
   var HideTip = function() {};
 
   (function() {
@@ -158,7 +155,6 @@
     }
 
   })();
-  */
 
 
   /* =NavDropDown
