@@ -910,9 +910,6 @@
   section.message.tip p {
     font-size: 0.875em;
   }
-  section.message.tip .details {
-    max-width: 42em;
-  }
   section.message.tip > .container {
     padding: 0.875em 2.25em 0.875em 1.5em;
     position: relative;
