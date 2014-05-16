@@ -107,7 +107,7 @@
 
   /* =HideTip
   -----------------------------------------------
-  NOTE: This currently only supports a single tip (the community introduction)
+  NOTE: This currently only supports a single tip (the video introduction)
   ----------------------------------------------- */
   var HideTip = function() {};
 
@@ -118,7 +118,7 @@
     HideTip = function() {
 
       // TODO: Find a way to get this id from the HTML
-      var id = "community-intro";
+      var id = "video-intro";
       var storageName = "hide_" + id.replace(/-/g, "_");
 
       // Hide the messages

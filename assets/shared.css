@@ -1002,8 +1002,8 @@
     display: block !important;
   }
 
-  /* OPTIONAL: Hide the community intro, if the user has pressed the “Hide” button */
-  .hide-community-intro #community-intro {
+  /* OPTIONAL: Hide the video intro, if the user has pressed the “Hide” button */
+  .hide-video-intro #video-intro {
     display: none;
   }
 
