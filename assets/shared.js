@@ -7,10 +7,10 @@
   function start() {
 
     // OPTIONAL: Add a button to show more details
-    // new ShowDetails();
+    new ShowDetails();
 
     // OPTIONAL: Add a button to hide tip messages
-    // new HideTip();
+    new HideTip();
 
     // OPTIONAL: Present the header navigation as dropdowns
     new NavDropDown();
@@ -72,7 +72,6 @@
 
   /* =ShowDetails
   ----------------------------------------------- */
-  /*
   var ShowDetails = function() {};
 
   (function() {
@@ -104,14 +103,12 @@
     }
 
   })();
-  */
 
 
   /* =HideTip
   -----------------------------------------------
-  NOTE: This currently only supports a single tip (the community introduction)
+  NOTE: This currently only supports a single tip (the video introduction)
   ----------------------------------------------- */
-  /*
   var HideTip = function() {};
 
   (function() {
@@ -121,7 +118,7 @@
     HideTip = function() {
 
       // TODO: Find a way to get this id from the HTML
-      var id = "community-intro";
+      var id = "video-intro";
       var storageName = "hide_" + id.replace(/-/g, "_");
 
       // Hide the messages
@@ -158,7 +155,6 @@
     }
 
   })();
-  */
 
 
   /* =NavDropDown
