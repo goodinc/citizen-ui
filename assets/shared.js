@@ -7,10 +7,10 @@
   function start() {
 
     // OPTIONAL: Add a button to show more details
-    // new ShowDetails();
+    new ShowDetails();
 
     // OPTIONAL: Add a button to hide tip messages
-    // new HideTip();
+    new HideTip();
 
     // OPTIONAL: Present the header navigation as dropdowns
     new NavDropDown();
