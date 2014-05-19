@@ -5023,6 +5023,22 @@
     color: inherit;
     text-decoration: inherit;
   }
+  .topic-header h1.has-image {
+    position: relative;
+  }
+  .topic-header h1.has-image a {
+    border-width: 0;
+    padding: 0;
+  }
+  .topic-header h1.has-image img {
+    max-width: 716px; /* image.width(1075px) x 2/3 */
+    display: block;
+  }
+  @media (min-width: 49.25em) { /* 716px / @font-size(16px) */
+    .topic-header h1.has-image img {
+      max-width: 100%;
+    }
+  }
   .topic-header h1 a[href]:hover,
   .topic-header h1 a[href]:active,
   .topic-header h1 a[href]:focus {
