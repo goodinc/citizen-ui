@@ -228,7 +228,7 @@
 
   /* =Tip
   ----------------------------------------------- */
-  .tip .container {
+  .do-new .tip .container {
     padding: 1.375em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231);
     border: 0.1875em solid rgb(243, 239, 209);
@@ -236,20 +236,20 @@
   }
 
   @media (min-width: 65em) {
-    .tip {
+    .do-new .tip {
       margin: 0;
       position: absolute;
       top: 0;
       right: 0;
     }
-    .tip .container {
+    .do-new .tip .container {
       position: absolute;
       top: -1em;
       width: 11em;
       right: -15em;
     }
 
-    .tip .container:before {
+    .do-new .tip .container:before {
       content: "";
       display: block;
       background: rgb(255, 252, 231);
@@ -268,7 +268,7 @@
       transform         : rotate(45deg);
     }
 
-    .tip:before {
+    .do-new .tip:before {
       content: "i";
       font-style: italic;
       font-weight: bold;
@@ -285,22 +285,22 @@
       right: 0;
     }
   }
-  .tip h2 {
+  .do-new .tip h2 {
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
   }
-  .tip p {
+  .do-new .tip p {
     font-size: 0.875em;
     color: rgb(102, 102, 102);
     line-height: 1.3;
   }
 
   /* OPTIONAL: Hide the tip if it’s inactive */
-  .tip.inactive {
+  .do-new .tip.inactive {
     cursor: pointer;
   }
-  .tip.inactive .container {
+  .do-new .tip.inactive .container {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
