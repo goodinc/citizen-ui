@@ -3524,7 +3524,7 @@
   }
         .vote.loading button abbr,
   .meta .vote.loading button abbr {
-    border-width: 0;
+    border-color: transparent;
   }
   .meta .vote.loading button:hover,
   .meta .vote.loading button:focus,
@@ -3556,6 +3556,41 @@
   .meta .vote.loading:after {
     border-left-color: transparent;
     border-top-color: transparent;
+  }
+
+  /* OPTIONAL: Indicate what action will be performed
+  when pressing the “It’s GOOD” button a second time. */
+            .voted button[title="Undo"]:hover,
+            .voted button[title="Undo"]:active,
+            .voted button[title="Undo"]:focus,
+  .meta form.voted button[title="Undo"]:hover,
+  .meta form.voted button[title="Undo"]:active,
+  .meta form.voted button[title="Undo"]:focus {
+    background: rgb(255, 105, 105);
+  }
+  form.voted button[title="Undo"]:hover,
+  form.voted button[title="Undo"]:active,
+  form.voted button[title="Undo"]:focus {
+    color: transparent;
+  }
+  form.voted button[title="Undo"]:before {
+    transition: color 0.2s;
+    content: "Undo";
+    color: transparent;
+    position: absolute;
+    margin-left: 0.875em;
+  }
+  .meta form.voted button[title="Undo"]:before {
+    margin-left: 2em;
+  }
+  form.voted button[title="Undo"]:hover:before,
+  form.voted button[title="Undo"]:active:before,
+  form.voted button[title="Undo"]:focus:before {
+    color: white;
+  }
+            .voted button[title="Undo"]:hover abbr,
+  .meta form.voted button[title="Undo"]:hover abbr {
+    border-color: transparent;
   }
 
 /* TEMPORARY: Show the icon for voted buttons that are still using the old HTML.
