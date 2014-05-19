@@ -3390,9 +3390,10 @@
     display: inline-block;
   }
 
-  /* OPTIONAL: Add a line between meta items within a follow */
+  /* OPTIONAL: Put meta items within a follow on a single line. */
   .activity-item .follow .meta p {
     margin-right: 0;
+    display: inline;
   }
   .activity-item .follow .meta p + p {
     border-left: 1px solid rgb(216, 216, 216);
