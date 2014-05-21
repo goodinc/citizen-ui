@@ -308,6 +308,9 @@
   .avatar .tangerine {
     background: rgb(249, 124, 86);
   }
+  .current-user-vote-avatar {
+    padding-left: 5px;
+  }
 
   .avatar .size25 {
     font-size: 1.0416666667em; /* 2/3 x 25px / @font-size */
@@ -857,9 +860,10 @@
     color: rgb(229, 229, 229);
     transition: color 0.2s;
 
+    /*
     background: transparent url(shared/message-shadow.png) bottom no-repeat;
     padding-bottom: 0.25em;
-
+    */
   }
   section.message.flag h1:before {
     content: "\e607"; /* @icon-flag */
@@ -940,18 +944,6 @@
     border-left-width: 0;
     margin-bottom: 0;
   }
-
-  /* SHIM: Reset the borders for tips that appear after the header
-  (Ideally, we’d limit the above styles to tips that appear before the header.) */
-  body > header ~ section.message.tip {
-    border-width: 0.1875em;
-    max-width: 66.5625em; /* @max-page-width */
-    margin-bottom: 1.75em;
-  }
-  body > header ~ section.message.tip {
-
-  }
-
   body > section.message.tip > .container {
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
