@@ -1062,6 +1062,8 @@
 
   /* =Links & Buttons
   ----------------------------------------------- */
+  .scripted-do form.following h6,
+  .scripted-do form.voted h6,
   .scripted-do form.do    h6,
   .scripted-do form.doing h6,
   .scripted-do form.done  h6,
@@ -1109,9 +1111,11 @@
   .vote button {
     background-color: rgb(113, 179, 247); /* @sky */
   }
+  .scripted-do form.voted h6,
   .voted button {
     background-color: rgb(49, 144, 242); /* @deep-ocean */
   }
+  .scripted-do form.voted h6,
   .vote  button,
   .voted button {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
@@ -1126,6 +1130,9 @@
   .vote button:focus {
     background-color: rgb(49, 144, 242); /* @deep-ocean */
   }
+  .scripted-do form.voted h6:hover,
+  .scripted-do form.voted h6:active,
+  .scripted-do form.voted h6:focus,
   .voted button:hover,
   .voted button:active,
   .voted button:focus {
@@ -1133,6 +1140,7 @@
   }
 
   /* OPTIONAL: Adjust the font size, for readability */
+  .scripted-do form.voted h6,
   .vote  button,
   .voted button {
     font-size: 1.2em;
@@ -1149,8 +1157,14 @@
   .follow button:focus {
     background-color: rgb(64, 198, 131);
   }
+  .scripted-do form.following h6,
   .following button {
     background-color: rgb(64, 198, 149);
+  }
+  .scripted-do form.following h6:hover,
+  .scripted-do form.following h6:active,
+  .scripted-do form.following h6:focus {
+    background-color: rgb(80, 167, 135);
   }
   .following button:hover,
   .following button:active,
@@ -1176,6 +1190,11 @@
     color: white;
   }
 
+  /* SHIM: Hide the hover effect inside dropdowns.
+  (This can be removed once the HTML has been updated and the hover effect is removed) */
+  .scripted-do form.following h6 + p button:before {
+    content: none;
+  }
 
   /* Do */
   .scripted-do form.do h6,
@@ -1249,7 +1268,9 @@
     background-color: rgb(247, 113, 113);
   }
 
-  /* OPTIONAL: Present the do buttons as drop-downs */
+  /* OPTIONAL: Present the do, following & voted buttons as drop-downs */
+  form.following h6,
+  form.voted h6,
   form.do    h6,
   form.doing h6,
   form.done  h6 {
@@ -1260,10 +1281,16 @@
     color: rgb(153, 153, 153);
     margin-bottom: 0;
   }
+  form.voted h6 + p,
   form.do    h6 + p,
   form.doing h6 + p,
   form.done  h6 + p {
     margin-top: 0.4375em;
+  }
+  .scripted-do form.following h6,
+  .scripted-do form.voted h6 {
+    font-style: normal;
+    color: white;
   }
   .scripted-do form.do    h6,
   .scripted-do form.doing h6,
@@ -1273,6 +1300,8 @@
     color: white;
   }
 
+  .scripted-do form.following h6 + p,
+  .scripted-do form.voted h6 + p,
   .scripted-do form.do    h6 + p,
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
@@ -1285,6 +1314,8 @@
     transition: opacity 0.2s;
     margin-top: 1em;
   }
+  .scripted-do form.following h6 + p,
+  .scripted-do form.voted h6 + p,
   .scripted-do form.do    h6 + p,
   .scripted-do form.doing h6 + p,
   .scripted-do form.done  h6 + p {
@@ -1292,12 +1323,16 @@
     opacity: 0;
     transition: opacity 0.2s;
   }
+  .scripted-do form.following.active h6 + p,
+  .scripted-do form.voted.active h6 + p,
   .scripted-do form.do.active    h6 + p,
   .scripted-do form.doing.active h6 + p,
   .scripted-do form.done.active  h6 + p {
     left: auto;
     opacity: 1;
   }
+  .scripted-do form.following h6 + p:after,
+  .scripted-do form.voted h6 + p:after,
   .scripted-do form.do    h6 + p:after,
   .scripted-do form.doing h6 + p:after,
   .scripted-do form.done  h6 + p:after {
@@ -1321,6 +1356,8 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
+  .scripted-do form.following h6 + p button,
+  .scripted-do form.voted h6 + p button,
   .scripted-do form.do    h6 + p button,
   .scripted-do form.doing h6 + p button,
   .scripted-do form.done  h6 + p button {
@@ -1335,15 +1372,30 @@
     white-space: nowrap;
     border-radius: 0;
   }
+  .scripted-do form.following h6 + p button + button,
+  .scripted-do form.voted h6 + p button + button,
   .scripted-do form.do    h6 + p button + button,
   .scripted-do form.doing h6 + p button + button,
   .scripted-do form.done  h6 + p button + button {
     border-top: 1px solid rgb(204, 204, 204); /* @magnesium */
   }
+  .scripted-do form.voted button[name*="undo"] {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+  }
+  .scripted-do form.following button[name*="unfollow"],
+  .scripted-do form.voted button[name*="undo"],
   .scripted-do form.doing button[name*="remove"],
   .scripted-do form.done  button[name*="remove"] {
     color: rgb(247, 157, 130);
   }
+  .scripted-do form.following button[name*="unfollow"]:hover,
+  .scripted-do form.following button[name*="unfollow"]:active,
+  .scripted-do form.following button[name*="unfollow"]:focus,
+  .scripted-do form.voted button[name*="undo"]:hover,
+  .scripted-do form.voted button[name*="undo"]:active,
+  .scripted-do form.voted button[name*="undo"]:focus,
   .scripted-do form.doing button[name*="remove"]:hover,
   .scripted-do form.doing button[name*="remove"]:active,
   .scripted-do form.doing button[name*="remove"]:focus,
@@ -1352,6 +1404,12 @@
   .scripted-do form.done  button[name*="remove"]:focus {
     color: rgb(247, 113, 113);
   }
+  .scripted-do form.following h6 + p button:hover,
+  .scripted-do form.following h6 + p button:active,
+  .scripted-do form.following h6 + p button:focus,
+  .scripted-do form.voted h6 + p button:hover,
+  .scripted-do form.voted h6 + p button:active,
+  .scripted-do form.voted h6 + p button:focus,
   .scripted-do form.do    h6 + p button:hover,
   .scripted-do form.do    h6 + p button:active,
   .scripted-do form.do    h6 + p button:focus,
@@ -1371,10 +1429,20 @@
     position: relative;
     text-align: right;
   }
+  .scripted-do form.following,
+  .scripted-do form.voted {
+    position: relative;
+  }
   .scripted-do form.do    h6 + p button,
   .scripted-do form.doing h6 + p button,
   .scripted-do form.done  h6 + p button {
     min-width: 11em;
+  }
+  .scripted-do form.following.active h6 + p {
+    margin-left: -0.5em;
+  }
+  .scripted-do form.voted.active h6 + p {
+    margin-left: -0.75em;
   }
   .scripted-do form.do.active    h6 + p,
   .scripted-do form.doing.active h6 + p,
@@ -3486,6 +3554,15 @@
     color: rgb(113, 179, 247); /* @sky */
   }
 
+  .scripted-do .meta form.voted h6 {
+    font-size: 0.75em;
+    line-height: 1.2em;
+    padding: 0.75em 1em;
+    border-radius: 0.25em;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .scripted-do .meta form.voted h6,
   .meta form.vote  button:hover,
   .meta form.vote  button:active,
   .meta form.vote  button:focus,
@@ -3494,6 +3571,10 @@
     border-color: rgba(0, 0, 0, 0.15);
     color: white;
   }
+
+  .scripted-do .meta form.voted h6:hover,
+  .scripted-do .meta form.voted h6:active,
+  .scripted-do .meta form.voted h6:focus,
   .meta form.voted button:hover,
   .meta form.voted button:active,
   .meta form.voted button:focus {
@@ -3505,6 +3586,7 @@
     color: white;
   }
 
+  .scripted-do .meta form.voted h6 abbr,
   .meta form.vote  button abbr,
   .meta form.voted button abbr {
     display: inline-block;
@@ -3520,6 +3602,7 @@
     padding-bottom: 0.8em;
     transition: border-color 0.2s;
   }
+  .scripted-do .meta form.voted h6 abbr,
   .meta form.vote   button:hover  abbr,
   .meta form.vote   button:active abbr,
   .meta form.vote   button:focus  abbr,
@@ -5294,6 +5377,10 @@
   .post > header form.voted p,
   .post > footer form.voted p {
     font-size: 0.75em;
+  }
+  .scripted-do .post > header form.voted h6,
+  .scripted-do .post > footer form.voted h6 {
+    font-size: 0.9em; /* 0.75em x 1.2em */
   }
 
   .post > article {

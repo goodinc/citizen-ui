@@ -78,11 +78,21 @@
     <p><button type="submit">It’s GOOD</button></p>
   </form>
 
+  <!--
   <form action="" method="post" class="voted">
     <p><button type="submit" title="Undo">It’s GOOD</button></p>
   </form>
+  -->
+
+  <form action="" method="post" class="voted">
+    <h6>It’s GOOD</h6>
+    <p>
+      <button type="submit" name="undo" value="1">Undo</button>
+    </p>
+  </form>
 </section>
 
+<!-- Buttons within an activity list are located inside a “meta” element. -->
 <section>
   <div class="meta">
 
@@ -102,11 +112,22 @@
       </p>
     </form>
 
+    <!--
     <form action="" method="post" class="voted">
       <p>
         <button type="submit" title="Undo">
           It’s GOOD <abbr title="1 person thinks this is good">1</abbr>
         </button>
+      </p>
+    </form>
+    -->
+
+    <form action="" method="post" class="voted">
+      <h6>
+        It’s GOOD <abbr title="1 person thinks this is good">1</abbr>
+      </h6>
+      <p>
+        <button type="submit" name="undo" value="1">Undo</button>
       </p>
     </form>
 
@@ -132,11 +153,22 @@
       </p>
     </form>
 
+    <!--
     <form action="" method="post" class="voted">
       <p>
         <button type="submit" title="Undo">
           It’s GOOD <abbr title="25 people think this is good">25</abbr>
         </button>
+      </p>
+    </form>
+    -->
+
+    <form action="" method="post" class="voted">
+      <h6>
+        It’s GOOD <abbr title="25 people think this is good">25</abbr>
+      </h6>
+      <p>
+        <button type="submit" name="undo" value="1">Undo</button>
       </p>
     </form>
 
@@ -165,7 +197,7 @@
   <form action="" method="post" class="done">
     <h6>Done</h6>
     <p>
-      <button type="submit" name="remove" value="1">Undo</button>
+      <button type="submit" name="remove" value="1">Remove</button>
     </p>
   </form>
 
@@ -178,8 +210,17 @@
     <p><button type="submit">Follow</button></p>
   </form>
 
+  <!--
   <form action="" method="post" class="following">
     <p><button type="submit" title="Unfollow">Following</button></p>
+  </form>
+  -->
+
+  <form action="" method="post" class="following">
+    <h6>Following</h6>
+    <p>
+      <button type="submit" name="unfollow" value="1">Unfollow</button>
+    </p>
   </form>
 </section>
 

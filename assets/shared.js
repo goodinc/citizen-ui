@@ -311,8 +311,10 @@
         if (name == "h6" || name == "button") {
           var form = closest(target, "form");
 
-          // If the target is within a “do” form
-          if (form && form.className.indexOf("do") >= 0) {
+          // If the target is within a “do” or a “voted” form
+          if (form && ( form.className.indexOf("do")        >= 0 ||
+                        form.className.indexOf("voted")     >= 0 ||
+                        form.className.indexOf("following") >= 0 )) {
 
             // Toggle the dropdown
             if (name == "h6" && form.className.indexOf("active") >= 0) {
