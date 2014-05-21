@@ -764,6 +764,22 @@
   .features {
     text-align: center;
   }
+  .features h1 {
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+
+    margin-top: 0;
+    margin-bottom : 0.3888888889em;
+
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .features h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
   .features ol {
     max-width: 42em;
     margin-left: auto;
@@ -801,7 +817,7 @@
     box-sizing: border-box;
     border: 0.1em solid rgb(218, 220, 224);
     padding: 1.75em;
-    margin: 3.5em auto;
+    margin: 1.75em auto;
   }
   .add-post label > span:first-child {
     margin-right: 0.5em;
