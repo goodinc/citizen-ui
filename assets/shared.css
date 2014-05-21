@@ -1,6 +1,6 @@
 
 /*-----------------------------------------------
-    Shared Styles (for all screen sizes)
+    Shared styles, for all pages
   ----------------------------------------------- */
 
   /* =Fonts
@@ -2598,7 +2598,6 @@
   /* OPTIONAL: Hide the main headline on home, topic, member, account, and admin pages
   (since they’re redundant with the navigation) */
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
-  body > nav.sub    ~ #content > .container > .admin          > h1:first-child,
   body > nav.sub    ~ #content > .container > .home           > h1:first-child,
   body > header.sub ~ #content > .container > .form           > h1:first-child,
   .search-header    ~ #content > .container > .search-results > h1:first-child,
@@ -2695,9 +2694,11 @@
   #content.minimal {
     background: transparent;
   }
+  /*
   #content.minimal > .container {
     min-height: 0;
   }
+  */
   #content.minimal ~ #footer {
     border-top-width: 0;
   }
