@@ -11,7 +11,7 @@
   #header           > .container,
   #content          > .container,
   #footer           > .container {
-    max-width: none;
+    max-width: 100em;
   }
 
 
@@ -32,6 +32,44 @@
     margin-left: 0;
     padding-left: 0;
   }
+
+
+  /* On large screens, fill the available vertical space */
+  /*
+  @media (min-width: 40em) and (min-height: 55em) {
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+    #header,
+    #content,
+    #footer {
+      display: table-row;
+    }
+    #header > .container,
+    #content > .container,
+    #footer > .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    #header > .container {
+      vertical-align: top;
+      height: 1px;
+    }
+    #content > .container {
+      padding-top: 0;
+    }
+    #footer > .container {
+      vertical-align: bottom;
+      height: 1px;
+      padding-bottom: 1.5em;
+    }
+  }
+  */
 
 
   /* =Messages
@@ -99,6 +137,7 @@
     display: inline-block;
   }
   .filters ul {
+    margin-top: 0;
     margin-bottom: 0;
   }
   .filters a {

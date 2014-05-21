@@ -75,27 +75,118 @@
   </div><!-- /.container -->
 </header>
 
-<main id="content" class="minimal">
+<nav class="sub">
+  <div class="container">
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="posts.html">Posts</a></li>
+      <li class="active"><a href="users.html">Users</a></li>
+      <li><a href="comments.html">Comments</a></li>
+    </ul>
+  </div><!-- /.container -->
+</nav>
+
+<main id="content">
   <div class="container">
 
-    <section class="dialog dashboard">
-      <h1>Admin Dashboard</h1>
-      <section>
-        <h2>Spam Management</h2>
+    <section class="message flag" id="tip-flagged">
+      <h1>
+        These users have been flagged as spam.
+      </h1>
+      <p>
+        You can <strong>Unflag</strong> or <strong>Mark as Spam.</strong> <span class="close primary"><a href=""><span>Hide Tip</span></a></span>
+      </p>
+      <p class="close secondary"><a href=""><span>Close message</span></a></p>
+    </section>
+
+    <section class="admin" id="users">
+      <h1>Users</h1>
+
+      <div class="filters">
+        <h2>Show</h2>
+
         <ul>
-          <li><a href="posts.html">Posts</a></li>
-          <li><a href="users.html">Users</a></li>
-          <li><a href="comments.html">Comments</a></li>
+          <li>
+            <a href="" class="active">Flagged Users</a>
+          </li>
+          <li>
+            <a href="">Spam Users</a>
+          </li>
         </ul>
-      </section>
-      <section>
-        <h2>Content Management</h2>
-        <ul>
-          <li><a href="features.html">Featured Posts</a></li>
-          <li><a href="http://news.good.is/goodadmin/posts">Post CMS</a></li>
-          <li><a href="http://cms.good.is/newsletters">Newsletter CMS</a></li>
+
+        <form action="" method="get">
+          <span class="keywords">
+            <label>
+              <span>Member</span>
+              <input id="query" name="query" placeholder="Name or username" type="text" />
+            </label>
+          </span>
+          <span class="submit">
+            <button type="submit">Search</button>
+          </span>
+        </form>
+
+      </div>
+
+      <form action="" class="table" method="post">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>
+                <span>Name</span>
+              </th>
+              <th>
+                <span>Username</span>
+              </th>
+              <th>
+                <span>Last Flagged</span>
+              </th>
+              <th class="descending">
+                <span>Flaggings</span>
+              </th>
+              <th colspan="2">
+                <span>Actions</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="check">
+                <label><input id="users_" name="users[]" type="checkbox" value="richarddenapoli" /></label>
+              </td>
+              <td class="long">
+                <span><a href="/members/richarddenapoli" target="_blank">Richard Denapoli</a></span>
+              </td>
+              <td class="long">
+                <span><a href="/members/richarddenapoli" target="_blank">richarddenapoli</a></span>
+              </td>
+              <td class="date">
+                <span>May 19, 2014 at  9:20 AM</span>
+              </td>
+              <td class="short">
+                <span>1 flaggings</span>
+              </td>
+              <td class="action approve">
+                <a href="/admin/users/richarddenapoli/preserve_ham" data-method="put" rel="nofollow"><span><span>Unflag</span></span></a>
+              </td>
+              <td class="action ban">
+                <a href="/admin/users/richarddenapoli/confirm_spam" data-method="put" rel="nofollow"><span><span>Mark as Spam</span></span></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul class="batch">
+          <li>
+            <button type="submit" name="commit" value="Mark checked as ham" class="approve">Unflag all checked</button>
+          </li>
+          <li>
+            <button type="submit" name="commit" value="Mark checked as spam" class="ban">Mark all checked as Spam</button>
+          </li>
         </ul>
-      </section>
+      </form>
+        
     </section>
 
   </div><!-- /.container -->
