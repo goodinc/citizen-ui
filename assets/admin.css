@@ -3,25 +3,22 @@
     Styles for pages in the “Admin Only” section
   ----------------------------------------------- */
 
-  /* =Containers
-  -----------------------------------------------
-  Let the page take up the full-width of the window.
-  ----------------------------------------------- */
+  /* OPTIONAL: Make the page wide enough to fit the “filter” navigation. */
   body > nav.sub    > .container,
   #header           > .container,
   #content          > .container,
   #footer           > .container {
-    max-width: 100em;
+    max-width: 75em;
   }
 
 
   /* OPTIONAL: Hide the main headlines (since they’re redundant with the navigation) */
-  .admin > h1:first-child {
+  body > nav.sub ~ #content .admin > h1:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .admin > h1 + * {
+  body > nav.sub ~ #content .admin > h1 + * {
     margin-top: 0;
   }
 
@@ -752,7 +749,6 @@
   }
 
 
-
   /* =Dashboard
   ----------------------------------------------- */
   .dialog.dashboard ul,
@@ -761,4 +757,59 @@
     margin-left: 0;
     padding-left: 0;
   }
+
+
+  /* =Features
+  ----------------------------------------------- */
+  .features {
+    text-align: center;
+  }
+  .features ol {
+    max-width: 42em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border-bottom: 0.1em solid rgb(218, 220, 224);
+    margin-bottom: 1.75em;
+  }
+  .features ol,
+  .features ol li {
+    list-style-type: decimal;
+  }
+  @media (max-width: 40em) {
+    .features ol,
+    .features ol li {
+      list-style-position: inside;
+    }
+  }
+  .features ol li {
+    border-top: 0.1em solid rgb(218, 220, 224);
+    position: relative;
+    padding: 0.875em 6em 0.875em 0;
+  }
+  .features ol li a {
+    text-decoration: none;
+  }
+  .features ol button {
+    font-size: 0.75em;
+    position: absolute;
+    top: 0.875em;
+    right: 0;
+  }
+  .add-post {
+    max-width: 42em;
+    box-sizing: border-box;
+    border: 0.1em solid rgb(218, 220, 224);
+    padding: 1.75em;
+    margin: 3.5em auto;
+  }
+  .add-post label > span:first-child {
+    margin-right: 0.5em;
+  }
+  .add-post button {
+    margin-top: 0;
+    font-size: 0.75em;
+    vertical-align: top;
+  }
+
 
