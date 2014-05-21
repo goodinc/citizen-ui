@@ -308,9 +308,6 @@
   .avatar .tangerine {
     background: rgb(249, 124, 86);
   }
-  .current-user-vote-avatar {
-    padding-left: 5px;
-  }
 
   .avatar .size25 {
     font-size: 1.0416666667em; /* 2/3 x 25px / @font-size */
@@ -836,6 +833,11 @@
     margin-bottom: 0.875em; /* @line-height / 2 */
   }
 
+  section.message.flag,
+  section.message.spam {
+    padding: 2.5em 3.75em;
+  }
+  section.message.flag h1:before,
   section.message.spam h1:before {
 
     /* @icons */
@@ -855,13 +857,17 @@
     color: rgb(229, 229, 229);
     transition: color 0.2s;
 
-    /* TODO
-    background: transparent url(/assets/admin/shadow.png) bottom no-repeat;
+    background: transparent url(shared/message-shadow.png) bottom no-repeat;
     padding-bottom: 0.25em;
-    */
 
+  }
+  section.message.flag h1:before {
+    content: "\e607"; /* @icon-flag */
+    color: rgb(255, 51, 51);
+  }
+  section.message.spam h1:before {
     content: "\e608"; /* @icon-ban */
-    color: #f33;
+    color: rgb(255, 51, 51);
   }
 
   body > section.message {
@@ -934,6 +940,18 @@
     border-left-width: 0;
     margin-bottom: 0;
   }
+
+  /* SHIM: Reset the borders for tips that appear after the header
+  (Ideally, we’d limit the above styles to tips that appear before the header.) */
+  body > header ~ section.message.tip {
+    border-width: 0.1875em;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-bottom: 1.75em;
+  }
+  body > header ~ section.message.tip {
+
+  }
+
   body > section.message.tip > .container {
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
@@ -2585,14 +2603,15 @@
     }
   }
 
-  /* OPTIONAL: Hide the main headline on home, topic, member, and account pages
+  /* OPTIONAL: Hide the main headline on home, topic, member, account, and admin pages
   (since they’re redundant with the navigation) */
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
-  body > nav.sub    ~ #content > .container > .home    > h1:first-child,
-  body > header.sub ~ #content > .container > .form    > h1:first-child,
+  body > nav.sub    ~ #content > .container > .admin          > h1:first-child,
+  body > nav.sub    ~ #content > .container > .home           > h1:first-child,
+  body > header.sub ~ #content > .container > .form           > h1:first-child,
   .search-header    ~ #content > .container > .search-results > h1:first-child,
-  .topic-header     ~ #content > .container > section  > h1:first-child,
-  .member-header    ~ #content > .container > section  > h1:first-child {
+  .topic-header     ~ #content > .container > section         > h1:first-child,
+  .member-header    ~ #content > .container > section         > h1:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;

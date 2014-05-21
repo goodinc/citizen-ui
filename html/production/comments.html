@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" lang="en" class="controller-admin/comments action-index logged-in">
+  <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+    <script type="text/javascript">
+    </script>
+    
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/assets/application-d4c8e22b84f2d8ebb811926e37425582.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://registration.good.is/stylesheets/vendor/simplemodal/basic_plain.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://registration.good.is/stylesheets/compiled/registration/registration.css" media="all" rel="stylesheet" type="text/css" /><link href="/assets/admin-949fed05a9b5e929ad186c8f3338a1c5.css" media="all" rel="stylesheet" type="text/css" /><!--[if lte IE 8]>
+    <script type="text/javascript">
+      window.location = '/ie.html';
+    </script>
+    <![endif]--><meta content="authenticity_token" name="csrf-param" />
+    <meta content="c857WrL1hH+0yrZkX9NI0nsLYhFS4HzzZUQ0ZYpf2XE=" name="csrf-token" /><link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /><script src="/assets/top-0f2065cb16ca3d8b296ab6cc7084b4e4.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function(){
+        var pageModelData = "%7B%22userSlug%22%3A%22jimthoburn%22%2C%22username%22%3A%22jimthoburn%22%2C%22userFullName%22%3A%22Jim%22%2C%22userFirstName%22%3A%22Jim%22%2C%22userLastName%22%3A%22%22%2C%22userHasFacebookId%22%3Afalse%2C%22userJoinedAt%22%3A%222014-04-28T17%3A15%3A58Z%22%2C%22userAvatarUrl%22%3A%22http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F274%2F765%2Foriginal%2Fcoat.jpg%22%2C%22userEmailAddress%22%3A%22good%40jimthoburn.com%22%2C%22userIsSpam%22%3Afalse%2C%22userJoinedDaysAgo%22%3A21%2C%22visitorType%22%3A%22Admin%22%7D";
+        good.citizen.PageModel.set(JSON.parse(decodeURIComponent(pageModelData)));
+      })();
+    </script>
+    <script src="/assets/admin-606fdb5b9e1f3f734bca45733eaf35e7.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      // fonts.com tracking
+      var MTIProjectId='f90e5d12-8fa4-47b1-a316-b233141d7f51';
+      (function() {
+        var mtiTracking = document.createElement('script');
+        mtiTracking.type='text/javascript';
+        mtiTracking.async='true';
+        mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+      })();
+    </script>
+    <meta name="keywords" content="GOOD, GOOD Magazine, Business, Creativity, Education, The GOODest" />
+    <meta name="robots" content="noodp,noydir" />
+    <link rel="publisher" href="https://plus.google.com/104087403146129498303" />
+    <title>Comments | GOOD</title>
+    <script type="text/javascript">
+      function removeRootGACookies() {
+          var ca = document.cookie.split(';'),
+              re = /^(__utm.)=/;
+          for(var i=0; i<ca.length; i++) {
+              var c = ca[i].trim();
+              var m = c.match(re)
+              if (m) {
+                // Deletes cookies only if they are on root domain, does nothing otherwise
+                document.cookie = m[1] + "=;path=/;domain=.good.is;expires=Thu, 01 Jan 1970 00:00:01 GMT;"
+              }
+          }
+      }
+      // Delete GA cookies on .good.is, this code can be removed on 6/1/2016 (GA cookies last 2 years)
+      removeRootGACookies()
+      var _gaq = _gaq || [];
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript">
+      (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+      typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+      b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+      mixpanel.init("0e8b6063e619ed095caa8bdc461cf30e", {track_pageview: false, cookie_name: 'good_mixpanel_0e8b6063e619ed095caa8bdc461cf30e'});
+      window.GOOD_previous_mixpanel_api_key = "154fb94c33b5ea7f4a492239214f498a";
+    </script>
+  </head>
+  <body backbone-view="TrackClicks">
+    <header>
+      <section>
+        <div class="logo">
+          <a href="/">GOOD</a>
+        </div>
+        <div id="logged-out-actions"></div>
+        <div class="actions">
+          <div id="login_js">
+            <a href="/members/jimthoburn" class="avatar"><img alt="Jim" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F274%2F765%2Foriginal%2Fcoat.jpg&amp;geometry=40x40%23" /></a>
+          </div>
+          <form accept-charset="UTF-8" action="/" class="search collapsed" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="c857WrL1hH+0yrZkX9NI0nsLYhFS4HzzZUQ0ZYpf2XE=" /></div>
+                <input data-search-route="/search" id="q" name="q" placeholder="What are you looking for?" type="text" /><button name="button" type="submit">Search</button><label>find topics, members, or keywords...</label>
+                <div id="search_error">
+                  We couldn't find any suggestions matching your keyword
+                </div>
+                <div class="header-spinner">
+                  <div class="outer"></div>
+                  <div class="inner"></div>
+                </div></form>
+          <div id="action_buttons">
+            <a href="/explore" class="explore">Explore</a><a href="/posts/new" class="post" data-authenticated="" data-redirect="/posts/new" data-track-event="Clicked Post" data-track-target="post" id="submission_form_button">Post</a>
+          </div>
+        </div>
+      </section>
+    </header>
+    <script type="text/javascript">
+      (function() {
+        var currentUserPanel, loggedOutPanel, notification;
+      
+        currentUserPanel = new good.citizen.views.CurrentUserPanel({
+          el: '#login_js',
+          currentUser: good.citizen.currentUser
+        });
+      
+        currentUserPanel.render();
+      
+        notification = new good.citizen.views.NotificationsView;
+      
+        $(notification.el).undelegate();
+      
+        loggedOutPanel = new good.citizen.views.LoggedOutPanel({
+          el: '#logged-out-actions',
+          currentUser: good.citizen.currentUser
+        });
+      
+        loggedOutPanel.render();
+      }).call(this);
+    </script>
+    <div class="main">
+      <section class="page">
+        <nav class="primary">
+          <ul>
+            <li><a href="/admin/posts?scope=recently_published">Posts</a></li><li><a href="/admin/users?scope=flagged">Users</a></li><li class="active"><a href="/admin/comments?scope=published">Comments</a></li>
+          </ul>
+        </nav>
+        <div class="admin-manage" id="comments">
+          
+          <h1>
+            Comments
+          </h1>
+          <div class="filters">
+            <h2>
+              Show
+            </h2>
+            <a href="/admin/comments?scope=published" class="active">Published</a>
+            <a href="/admin/comments?scope=every">All</a>
+            <a href="/admin/comments?scope=flagged">Flagged</a>
+            <a href="/admin/comments?scope=spam_users">From Spam Users</a>
+          </div>
+          <form class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <span>Comment</span>
+                  </th>
+                  <th>
+                    <span>Commenter</span>
+                  </th>
+                  <th>
+                    <span>Comment Time</span>
+                  </th>
+                  <th colspan="2">
+                    <span>Actions</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/do/don-t-wash-those-jeans-freeze-them" target="_blank">If you&#x27;re interested, you can vote for this Do in our Nest challenge. The person who submitted can win a Nest if she gets enough votes: http://homeplanet.maker.good.is/projects/freezer?position=18&amp;sort=34</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2factions%2fphotos%2f000%2f314%2f713%2foriginal%2f3593864378_6b16b45955" src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Factions%2Fphotos%2F000%2F314%2F713%2Foriginal%2F3593864378_6b16b45955.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/do/don-t-wash-those-jeans-freeze-them" target="_blank">Don't wash those jeans, freeze them</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>goodie1010</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>1 Person is doing this</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>3 Comments</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/alessandra-rizzotti" target="_blank">Alessandra Rizzotti</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 03:05 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46965?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/do/enter-habitat-for-humanity-s-photo-contest" target="_blank">Feel free to post photos in the comments of this post, too!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2factions%2fphotos%2f000%2f315%2f133%2foriginal%2finstgrm_hwphotocontesthouse_1000x1000" src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Factions%2Fphotos%2F000%2F315%2F133%2Foriginal%2FInstgrm_HWPhotoContestHouse_1000x1000.png&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/do/enter-habitat-for-humanity-s-photo-contest" target="_blank">Enter Habitat for Humanity's Photo Contest</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>HWeditor</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>2 People are doing this</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>1 Comment</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/alessandra-rizzotti" target="_blank">Alessandra Rizzotti</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 02:40 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46964?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/is-affordable-housing-a-human-right--2" target="_blank">Have you guys reached out to any homeless shelters or organizations? You could do a sharing partnership. See if they&#x27;d like to share your videos on their sites? Happy to make introductions!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f138%2foriginal%2fcategory5" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F138%2Foriginal%2FCategory5.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/is-affordable-housing-a-human-right--2" target="_blank">Is Affordable Housing a Human Right?</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>Luisa Dantas</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>3 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://landofopportunityinteractive.com/" target="_blank">Shared Link: http://landofopportunityinteractive.com/</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/alessandra-rizzotti" target="_blank">Alessandra Rizzotti</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 11:49 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46962?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/is-silence-golden-why-talking-is-essential-to-early-childhood-development" target="_blank">This goes on in every school I&#x27;ve ever worked in be it public, private, or charter. &quot;Be still and be quiet!&quot; It&#x27;s the mantra recited over and over again by teachers and staff. I work in &quot;after&quot; school programs and they do it there as well. I mean, after school or after work, does anyone want to have to continue being still and quiet? These kids, including myself, are busting at the seams to interact and socially engage with one another. This is how skills are developed - through actual practice.
+                         I&#x27;ve learned a lot myself, through professional development classes, workshops, and reading on my own, along with work experience. For some reason, a lot of professionals in the educational field simply don&#x27;t apply what they&#x27;ve learned. I&#x27;ve even experienced resistance from my co-workers when I tried to do so.
+                        It is really such a privilege to get to work with kids. They are not only so funny, smart, and delightful, but the work itself is so interesting and meaningful. 
+                        You&#x27;ve got it Alessandra, about getting ourselves and the kids into &quot;new learning environments.&quot; 
+                        Where is the joy in teaching when you&#x27;re commanding children all day to go against what they are naturally geared to do as part of their brain and childhood development?</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f315%2f122%2foriginal%2fsilence" src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F315%2F122%2Foriginal%2Fsilence.png&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/is-silence-golden-why-talking-is-essential-to-early-childhood-development" target="_blank">Is Silence Golden? Why Talking is Essential to Early Childhood Development</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>jayen6</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>2 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://bluffcityed.com/2014/05/19/is-silence-truly-golden/" target="_blank">Shared Link: http://bluffcityed.com/2014/05/19/is-silence-truly-golden/</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/terri-hammer-355" target="_blank">Terri Hammer</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 10:52 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46961?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/is-silence-golden-why-talking-is-essential-to-early-childhood-development" target="_blank">Talking to newborns and infants is absolutely important. Pointing out what they&#x27;re looking at or talking to them about their feelings is key for them learning how to understand themselves and their surroundings. I got an Early Childhood Development Certificate, and the things I learned about how brains develop in early childhood was so eye-opening. We&#x27;re even continuing to develop as adults and we can always rewire our brains- the key is putting ourselves and children in new learning environments frequently.</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f315%2f122%2foriginal%2fsilence" src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F315%2F122%2Foriginal%2Fsilence.png&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/is-silence-golden-why-talking-is-essential-to-early-childhood-development" target="_blank">Is Silence Golden? Why Talking is Essential to Early Childhood Development</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>jayen6</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>2 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://bluffcityed.com/2014/05/19/is-silence-truly-golden/" target="_blank">Shared Link: http://bluffcityed.com/2014/05/19/is-silence-truly-golden/</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/alessandra-rizzotti" target="_blank">Alessandra Rizzotti</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 09:37 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46953?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/why-one-start-up-won-t-change-the-world" target="_blank">Guidestar meets LinkedIn -- but only for social entrepreneurs!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f379%2foriginal%2f204_large" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F379%2Foriginal%2F204_large.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/why-one-start-up-won-t-change-the-world" target="_blank">Why one start-up won't 'change the world'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>Nathan Rothstein</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>6 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>4 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://www.lean.org/LeanPost/Posting.cfm?LeanPostId=204" target="_blank">Shared Link: http://www.lean.org/LeanPost/Posting.cfm?LeanPostId=204</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/alessandra-rizzotti" target="_blank">Alessandra Rizzotti</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 08:52 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46952?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/video/net-neutrality-explained-in-plain-english-video-and-it-s-probably-going-to-make-you-mad" target="_blank">Wonderful! Thank you!!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f136%2foriginal%2fsddefault" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F136%2Foriginal%2Fsddefault.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/video/net-neutrality-explained-in-plain-english-video-and-it-s-probably-going-to-make-you-mad" target="_blank">Net Neutrality Explained in Plain English (Video) and It's Probably Going to Make You Mad</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>parisladotnet</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>27 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>4 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="https://www.youtube.com/watch?v=NAxMyTwmu_M" target="_blank">Shared Link: https://www.youtube.com/watch?v=NAxMyTwmu_M</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/annaspisak" target="_blank">Anna Spisak</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 08:08 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46951?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/do/switch-up-your-search-engine-for-charity" target="_blank">Excellent concept that should be used in other industries. Good shout who ever posted this!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2factions%2fphotos%2f000%2f314%2f702%2foriginal%2fscreen_shot_2014-05-16_at_11.50.48_am" src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Factions%2Fphotos%2F000%2F314%2F702%2Foriginal%2FScreen_Shot_2014-05-16_at_11.50.48_AM.png&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/do/switch-up-your-search-engine-for-charity" target="_blank">Switch Up Your Search Engine for Charity</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>parisladotnet</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>16 People are doing this</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>6 Comments</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/jaysav" target="_blank">Jamie Saveall</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 06:21 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46950?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/video/it-s-all-about-love" target="_blank"></a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f431%2foriginal%2fmr240" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F431%2Foriginal%2FMR240.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/video/it-s-all-about-love" target="_blank">Overcoming Stigma and Discrimination: LGBT Advocates Say 'It's All About Love'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>gemma.taylor.18400</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I" target="_blank">Shared Link: https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/gemma-taylor-18400" target="_blank">Gemma Taylor</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 03:48 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46948?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/video/it-s-all-about-love" target="_blank"></a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f431%2foriginal%2fmr240" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F431%2Foriginal%2FMR240.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/video/it-s-all-about-love" target="_blank">Overcoming Stigma and Discrimination: LGBT Advocates Say 'It's All About Love'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>gemma.taylor.18400</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I" target="_blank">Shared Link: https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/gemma-taylor-18400" target="_blank">Gemma Taylor</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 03:48 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46947?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/video/it-s-all-about-love" target="_blank"></a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f431%2foriginal%2fmr240" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F431%2Foriginal%2FMR240.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/video/it-s-all-about-love" target="_blank">Overcoming Stigma and Discrimination: LGBT Advocates Say 'It's All About Love'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>gemma.taylor.18400</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I" target="_blank">Shared Link: https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/gemma-taylor-18400" target="_blank">Gemma Taylor</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 03:47 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46946?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/video/it-s-all-about-love" target="_blank"></a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f431%2foriginal%2fmr240" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F431%2Foriginal%2FMR240.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/video/it-s-all-about-love" target="_blank">Overcoming Stigma and Discrimination: LGBT Advocates Say 'It's All About Love'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>gemma.taylor.18400</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I" target="_blank">Shared Link: https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/gemma-taylor-18400" target="_blank">Gemma Taylor</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 03:46 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46945?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/video/it-s-all-about-love" target="_blank">The response to Marc and Ricardo&#x27;s story across the media and social media has been fantastic. I think in no small part that&#x27;s due to their infectious personalities and lust for life, as shown here. More pics to follow below...</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f431%2foriginal%2fmr240" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F431%2Foriginal%2FMR240.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/video/it-s-all-about-love" target="_blank">Overcoming Stigma and Discrimination: LGBT Advocates Say 'It's All About Love'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>gemma.taylor.18400</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>5 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I" target="_blank">Shared Link: https://www.youtube.com/watch?list=UUsxoS3S0BLTFYmGGjN1V6IA&amp;v=ZakjOHWh43I</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/gemma-taylor-18400" target="_blank">Gemma Taylor</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/19/14 03:46 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46944?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/10-tips-for-first-time-entrepreneurs" target="_blank">Thank you so much for the information, Alessandra. I will check out the link to the article. I am not familiar with the 2 resources you mentioned for networking events so I will check those out as well.  I&#x27;d rather give details about my company name offline- but I have a website and an associated app that I&#x27;m planning on launching next year.  It involves making eco-friendly and cruelty- free product choices. Thank you!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fpre.cloudfront.goodinc.com%2fposts%2f1379388125screenshot2013-09-16at8.21.33pm" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fpre.cloudfront.goodinc.com%2Fposts%2F1379388125ScreenShot2013-09-16at8.21.33PM.png&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/10-tips-for-first-time-entrepreneurs" target="_blank">10 Tips For First-Time Entrepreneurs</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>mckinney1</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>160 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>42 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://magazine.good.is/articles/10-tips-for-first-time-entrepreneurs" target="_blank">Shared Link: http://magazine.good.is/articles/10-tips-for-first-time-entrepreneurs</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/eques18" target="_blank">Eques18</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/18/14 08:44 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46939?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/the-drinkable-book" target="_blank">http://waterislife.com/you-wil/
+                        
+                        :)</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f908%2foriginal%2fimages" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F908%2Foriginal%2Fimages.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/the-drinkable-book" target="_blank">THE DRINKABLE BOOK!</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>AngelaHoltzen</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>0 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>2 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://www.pastemagazine.com/articles/2014/05/the-drinkable-books-pages-purify-water.html" target="_blank">Shared Link: http://www.pastemagazine.com/articles/2014/05/the-drinkable-books-pages-purify-water.html</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/angelaholtzen" target="_blank">Angela Holtzen</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/18/14 08:23 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46938?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/the-drinkable-book" target="_blank">OK Where can I buy it? and are there organizations that send them to areas with contaminated water?</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f908%2foriginal%2fimages" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F908%2Foriginal%2Fimages.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/the-drinkable-book" target="_blank">THE DRINKABLE BOOK!</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>AngelaHoltzen</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>0 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>2 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://www.pastemagazine.com/articles/2014/05/the-drinkable-books-pages-purify-water.html" target="_blank">Shared Link: http://www.pastemagazine.com/articles/2014/05/the-drinkable-books-pages-purify-water.html</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/will-dawson-1272" target="_blank">Will Dawson</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/18/14 08:15 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46937?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/on-the-house-hgtv-guru-dolls-up-retirees-apartment" target="_blank">More details of the actual story, redesign and history are on http://www.sunriseseniorliving.com/the-sunrise-difference/design.aspx</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f910%2foriginal%2fweik18-art0-g19sesr5-16a-weik18-fs-3-jpg" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F910%2Foriginal%2Fweik18-art0-g19sesr5-16a-weik18-fs-3-jpg.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/on-the-house-hgtv-guru-dolls-up-retirees-apartment" target="_blank">On the House: HGTV guru dolls up retirees’ apartment</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>nchess</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>4 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>1 Comment</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://www.dispatch.com/content/stories/home_and_garden/2014/05/18/hgtv-guru-dolls-up-retirees-apartment.html" target="_blank">Shared Link: http://www.dispatch.com/content/stories/home_and_garden/2014/05/18/hgtv-guru-dolls-up-retirees-apartment.html</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/nchess" target="_blank">Nicole Hess</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/18/14 03:34 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46936?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/why-one-start-up-won-t-change-the-world" target="_blank">Hi Alessandra,
+                        
+                        Marketers are pretty savvy at using hype and hyperbole for there own self interests. I guess it&#x27;s up to consumers to call them out on their BS. As long as we keep buying their products, it&#x27;s our own fault. 
+                        
+                        What kind of platform do you envision?</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f379%2foriginal%2f204_large" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F379%2Foriginal%2F204_large.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/why-one-start-up-won-t-change-the-world" target="_blank">Why one start-up won't 'change the world'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>Nathan Rothstein</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>6 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>4 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://www.lean.org/LeanPost/Posting.cfm?LeanPostId=204" target="_blank">Shared Link: http://www.lean.org/LeanPost/Posting.cfm?LeanPostId=204</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/john-bardos" target="_blank">John Bardos</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/18/14 12:14 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46935?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/why-one-start-up-won-t-change-the-world" target="_blank">I couldn&#x27;t believe some of the companies Nathan mentioned, like Manicube. I always thought people would be smart enough to know how to really use the terminology &quot;change the world&quot;. Ultimately, we can&#x27;t do it on our own- and neither can a startup, as Nathan says. Wish there was a platform that could make it easier to align multiple startups with their similar goals.</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fs3.amazonaws.com%2fproduction.calumet.good.is%2fbookmarks%2fphotos%2f000%2f314%2f379%2foriginal%2f204_large" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F314%2F379%2Foriginal%2F204_large.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/why-one-start-up-won-t-change-the-world" target="_blank">Why one start-up won't 'change the world'</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>Nathan Rothstein</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>6 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>4 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://www.lean.org/LeanPost/Posting.cfm?LeanPostId=204" target="_blank">Shared Link: http://www.lean.org/LeanPost/Posting.cfm?LeanPostId=204</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/alessandra-rizzotti" target="_blank">Alessandra Rizzotti</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/18/14 10:25 AM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46934?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="long">
+                    <div class="source comments">
+                      <h2>
+                        <a href="/link/why-i-dumped-my-iphone-and-why-i-m-not-going-back" target="_blank">Excellent points. I&#x27;m glad I Don&#x27;t have an iPhone, but I did make a conscious decision to limit my cell to only texts and voice. I get so frustrated with groups I notice lately who, instead of sharing each others company, are concentrating more on their little screens. It bodes ill for our personally-interactive future!</a>
+                      </h2>
+                      <div class="details">
+                        <div class="container">
+                          <div class="container has-image">
+                            <img alt="Crop?image_url=http%3a%2f%2fpre.cloudfront.goodinc.com%2fposts%2f13176910214731067532_c1e6dc1443_z" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fpre.cloudfront.goodinc.com%2Fposts%2F13176910214731067532_c1e6dc1443_z.jpg&amp;geometry=240x240%23" />
+                            <h2>
+                              <a href="/link/why-i-dumped-my-iphone-and-why-i-m-not-going-back" target="_blank">Why I Dumped My iPhone—And Why I'm Not Going Back</a>
+                            </h2>
+                            <p class="meta">
+                              by <strong>samgf</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>16 People think this is good</strong>
+                            </p>
+                            <p class="meta">
+                              <strong>4 Comments</strong>
+                            </p>
+                            <p class="link">
+                              <a href="http://magazine.good.is/articles/why-i-dumped-my-iphone-and-why-i-m-not-going-back" target="_blank">Shared Link: http://magazine.good.is/articles/why-i-dumped-my-iphone-and-why-i-m-not-going-back</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="author">
+                    <div class="source">
+                      <h2>
+                        <a href="/members/suzanne-christy" target="_blank">Suzanne Christy</a>
+                      </h2>
+                    </div>
+                  </td>
+                  <td class="date">
+                    <span>05/17/14 06:30 PM</span>
+                  </td>
+                  <td class="action ban">
+                    <a href="/admin/comments/46933?scope=published" data-method="delete" rel="nofollow"><span><span>Delete</span></span></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div style="width: 60px; height: 60px;"></div>
+          </form>
+          <div id="pager">
+            <nav class="pagination">
+                
+                
+                    <span class="page current">
+              1
+            </span>
+            
+                    <span class="page">
+              <a href="/admin/comments?page=2&amp;scope=published" rel="next">2</a>
+            </span>
+            
+                    <span class="page">
+              <a href="/admin/comments?page=3&amp;scope=published">3</a>
+            </span>
+            
+                    <span class="page">
+              <a href="/admin/comments?page=4&amp;scope=published">4</a>
+            </span>
+            
+                    <span class="page">
+              <a href="/admin/comments?page=5&amp;scope=published">5</a>
+            </span>
+            
+                    <span class="page gap">&hellip;</span>
+            
+                <span class="next">
+              <a href="/admin/comments?page=2&amp;scope=published" rel="next">Next</a>
+            </span>
+            
+                <span class="last">
+              <a href="/admin/comments?page=1653&amp;scope=published">Last &raquo;</a>
+            </span>
+            
+              </nav>
+            
+          </div>
+        </div>
+        <div class="spinner">
+          <div class="outer"></div>
+          <div class="inner"></div>
+        </div>
+      </section>
+    </div>
+    <div id="fb-root"></div><footer id="footer">
+      <div class="container">
+        <section>
+          <h2>
+            Creative Solutions for Living Well + Doing Good. 
+          </h2>
+          <ul>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/about/contact">Contact</a>
+            </li>
+            <li>
+              <a href="http://support.good.is/">Support</a>
+            </li>
+            <li>
+              <a href="/about/advertise">Advertise</a>
+            </li>
+            <li>
+              <a href="http://good.theresumator.com/">Jobs</a>
+            </li>
+            <li>
+              <a href="http://magazine.good.is">Magazine</a>
+            </li>
+            <li>
+              <a href="http://news.good.is/subscriptions/new">Subscriptions</a>
+            </li>
+            <li>
+              <a href="http://shop.good.is">Online Store</a>
+            </li>
+            <li>
+              <a href="http://www.goodcorps.com">GOOD/Corps</a>
+            </li>
+            <li>
+              <a href="/about/privacy">Privacy</a>
+            </li>
+            <li>
+              <a href="/about/terms">Terms</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            Connect with us
+          </h2>
+          <ul>
+            <li class="facebook">
+              <a href="http://www.facebook.com/GOODHQ">Facebook</a>
+            </li>
+            <li class="twitter">
+              <a href="http://twitter.com/good">Twitter</a>
+            </li>
+            <li class="instagram">
+              <a href="http://instagram.com/goodhq">Instagram</a>
+            </li>
+            <li class="tumblr">
+              <a href="http://good.tumblr.com/">Tumblr</a>
+            </li>
+          </ul>
+        </section>
+        
+        <p>
+          Copyright © 2014 GOOD Worldwide Inc
+        </p>
+      </div>
+    </footer><div class="sidebar_footer">
+      <div class="links">
+        <ul>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/about/contact">Contact</a>
+          </li>
+          <li>
+            <a href="http://support.good.is/">Support</a>
+          </li>
+          <li>
+            <a href="/about/advertise">Advertise</a>
+          </li>
+          <li>
+            <a href="http://good.theresumator.com/">Jobs</a>
+          </li>
+          <li>
+            <a href="http://news.good.is/subscriptions/new">Subscriptions</a>
+          </li>
+          <li>
+            <a href="http://shop.good.is">Online Store</a>
+          </li>
+          <li>
+            <a href="http://www.goodcorps.com">GOOD/Corps</a>
+          </li>
+          <li>
+            <a href="/about/privacy">Privacy</a>
+          </li>
+          <li>
+            <a href="/about/terms">Terms</a>
+          </li>
+          <li class="company">
+            <a href="/">GOOD Worldwide Inc © 2014</a>
+          </li>
+        </ul>
+      </div>
+    </div><script src="/assets/bottom-a8fb4a43a1b5a2687270711b3ff9ee5f.js" type="text/javascript"></script>
+    <script src="//connect.facebook.net/en_US/all.js" type="text/javascript"></script>
+    <script src="http://registration.good.is/javascripts/vendor/jquery-form/jquery.form.js" type="text/javascript"></script>
+    <script src="http://registration.good.is/javascripts/registration.js" type="text/javascript"></script>
+    <script src="http://registration.good.is/javascripts/vendor/simplemodal/jquery.simplemodal.js" type="text/javascript"></script>
+    <script src="http://registration.good.is/javascripts/parseuri.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      good.citizen.env = "production";
+      good.citizen.facebookAppId = "590727534352624";
+      good.citizen.RegistrationServer = "http://registration.good.is";
+      
+      (function(){
+        var currentUserData = "%7B%22admin%22%3Atrue%2C%22email%22%3A%22good%40jimthoburn.com%22%2C%22slug%22%3A%22jimthoburn%22%2C%22username%22%3A%22jimthoburn%22%2C%22invitation_hashed_id%22%3A%22300e38ad3c76ae8bbdeca0e2e1429135%22%2C%22first_name%22%3A%22Jim%22%2C%22last_name%22%3A%22%22%2C%22avatar_url%22%3A%22http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F274%2F765%2Foriginal%2Fcoat.jpg%22%2C%22introduction%22%3A%22Web+programmer+at+GOOD.%22%2C%22has_facebook_id%22%3Afalse%2C%22skills%22%3A%22buttons+and+knobs%22%2C%22created_at%22%3A%222013-08-14T05%3A11%3A20Z%22%2C%22joined_at%22%3A%222014-04-28T17%3A15%3A58Z%22%2C%22joined_days_ago%22%3A21%2C%22is_spam%22%3Afalse%2C%22alt_name%22%3A%22Jim%22%2C%22url%22%3Anull%2C%22bio%22%3Anull%2C%22location%22%3A%22Los+Angeles%22%2C%22twitter_url%22%3A%22%40jimthoburn%22%2C%22occupation%22%3Anull%2C%22notification_comments%22%3Atrue%2C%22facebook_id%22%3Anull%2C%22started_todos%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A5%2C%22current_scope%22%3Anull%7D%2C%22errors%22%3A%7B%7D%2C%22posts%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A0%2C%22current_scope%22%3Anull%7D%2C%22followers%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A0%2C%22current_scope%22%3Anull%7D%2C%22followed_users%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A0%2C%22current_scope%22%3Anull%7D%2C%22followed_tags%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A0%2C%22current_scope%22%3Anull%7D%2C%22completed_todos%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A0%2C%22current_scope%22%3Anull%7D%2C%22featured_actions%22%3A%7B%22current_page%22%3A1%2C%22items%22%3A%5B%5D%2C%22limit_value%22%3A0%2C%22num_pages%22%3A1%2C%22total_count%22%3A0%2C%22current_scope%22%3Anull%7D%2C%22participations%22%3Anull%2C%22communication_preference_attributes%22%3Anull%2C%22newsletter_preferences%22%3Anull%2C%22posts_count%22%3A0%2C%22followers_count%22%3A0%7D";
+        good.citizen.currentUser = new good.citizen.models.CurrentUser(JSON.parse(decodeURIComponent(currentUserData)));
+      })();
+    </script>
+    <script type="text/javascript">
+            (function() {
+              new good.citizen.views.AutocompleteSearchView({
+                el: $('#q')
+              }, {
+                autoSelect: true,
+                showPrompts: true
+              });
+            }).call(this);
+          </script><script type="text/javascript">
+    //<![CDATA[
+          (function () {
+            new good.citizen.helpers.FollowButtonLoader({
+              currentUser: good.citizen.currentUser,
+              elements: []
+            }).load();
+          }).call(this);
+    
+    //]]>
+    </script>
+    <div backbone-view="Mixpanel"></div>
+    <script type="text/javascript">
+      new good.citizen.routers.ApplicationRouter({ currentUser: good.citizen.currentUser });
+    </script>
+  <script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-3.newrelic.com","ac23ada85c","108133","dw5ZFxcLCQ1UERYCBVkIWUwGCwgMVA1NEE5dD1MGHQ==",0,623,new Date().getTime(),"","","","",""]);</script></body>
+</html>
