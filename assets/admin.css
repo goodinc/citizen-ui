@@ -26,14 +26,6 @@
   }
 
 
-  .dialog.dashboard ul,
-  .dialog.dashboard li {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-
   /* On large screens, fill the available vertical space */
   /*
   @media (min-width: 40em) and (min-height: 55em) {
@@ -285,6 +277,13 @@
     margin-top: 0;
   }
 
+  /* OPTIONAL: Remove the space between the navigation and the table on the comments page. */
+  .admin#comments .filters + form {
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+  }
+
 
   /* =Table
   ----------------------------------------------- */
@@ -423,6 +422,7 @@
   td.date .source > h2 {
     padding: 10px; /* @cell-padding */
   }
+  td .source > a,
   td .source > h2 > a {
     display: block;
     padding: 10px; /* @cell-padding */
@@ -484,6 +484,12 @@
     position: absolute;
     top: -11px;
     left: 2em;
+  }
+  td .source .details > .container h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    margin: 0;
   }
   td .source .details > .container p.meta {
     color: rgb(153, 153, 153); /* @aluminum */
@@ -731,5 +737,28 @@
   .batch button.ban:active:before,
   .batch button.ban:focus:before {
     color: rgb(255, 102, 102) !important;
+  }
+
+
+  /* =Images in Comments
+  ----------------------------------------------- */
+  td figure {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0.875em 0 0;
+  }
+  td figure img {
+    box-shadow: 0.25em 0.25em 0 rgb(227, 228, 229);
+  }
+
+
+
+  /* =Dashboard
+  ----------------------------------------------- */
+  .dialog.dashboard ul,
+  .dialog.dashboard li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
   }
 

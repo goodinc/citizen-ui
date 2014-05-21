@@ -839,6 +839,7 @@
   section.message.flag,
   section.message.spam {
     padding: 2.5em 3.75em;
+    text-align: center;
   }
   section.message.flag h1:before,
   section.message.spam h1:before {
