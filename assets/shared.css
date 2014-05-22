@@ -251,6 +251,10 @@
   figure img {
     box-shadow: 0.5em 0.5em 0 rgb(227, 228, 229);
   }
+  figure.slideshow img {
+    box-shadow: none;
+    display: block;
+  }
   figcaption {
     font-size: 0.75em;
     line-height: 1.33333333333333;
