@@ -15,8 +15,8 @@
     // OPTIONAL: Present the header navigation as dropdowns
     new NavDropDown();
 
-    // OPTIONAL: Present the do buttons as dropdowns
-    new DoDropDown();
+    // OPTIONAL: Present the do, voted, and following buttons as dropdowns
+    new ButtonDropDown();
 
     // OPTIONAL: Hide redundant labels in browsers that support the placeholder attribute.
     // http://stackoverflow.com/questions/8263891/simple-way-to-check-if-placeholder-is-supported
@@ -272,15 +272,15 @@
   })();
 
 
-  /* =DoDropDown
+  /* =ButtonDropDown
   ----------------------------------------------- */
-  var DoDropDown = function() {};
+  var ButtonDropDown = function() {};
 
   (function() {
 
     if (!document.addEventListener) return;
 
-    DoDropDown = function() {
+    ButtonDropDown = function() {
 
       var active; // The currently active element
 
@@ -311,7 +311,7 @@
         if (name == "h6" || name == "button") {
           var form = closest(target, "form");
 
-          // If the target is within a “do” or a “voted” form
+          // If the target is within a do, voted, or following form
           if (form && ( form.className.indexOf("do")        >= 0 ||
                         form.className.indexOf("voted")     >= 0 ||
                         form.className.indexOf("following") >= 0 )) {
@@ -334,6 +334,9 @@
 
       // Style the dropdowns
       var html = document.getElementsByTagName("html")[0];
+      html.className += " scripted-button-dropdown";
+
+      // TODO: Update the style sheet to use “scripted-button-dropdown” instead of “scripted-do” for selectors, and then remove this line.
       html.className += " scripted-do";
 
     };
