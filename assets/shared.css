@@ -1038,8 +1038,13 @@
 
   /* Hide details */
   .scripted-show-details .message .details {
+
+    /* @hidden-accessible */
     position: absolute;
     left: -9999px;
+
+    /* SHIM: Safari 7 on iOS seems to scale up the size of the text if its container is especially wide. */
+    width: 10em;
   }
 
   /* Make the headline appear pressable */
@@ -1049,8 +1054,12 @@
 
   /* Show details */
   .scripted-show-details .message.show-details .details {
+
+    /* @reset-hidden-accessible */
     position: static;
     left: auto;
+
+    width: auto;
   }
   .scripted-show-details .message.show-details .show {
     display: none !important;
