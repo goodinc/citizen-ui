@@ -3559,6 +3559,7 @@
     color: rgb(113, 179, 247); /* @sky */
   }
 
+  /* Mimic the size and style of the vote button */
   .scripted-do .meta form.voted h6 {
     font-size: 0.75em;
     line-height: 1.2em;
@@ -3567,6 +3568,11 @@
     font-family: inherit;
     font-weight: bold;
   }
+  .scripted-do .meta form.voted h6 + p {
+    font-size: 0.75em;
+    margin-left: 0.25em;
+  }
+
   .scripted-do .meta form.voted h6,
   .meta form.vote  button:hover,
   .meta form.vote  button:active,
