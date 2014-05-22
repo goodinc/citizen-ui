@@ -274,10 +274,11 @@
             </h3>
             <div class="meta">
               <form action="" method="post" class="voted">
+                <h6>
+                  It’s GOOD <abbr title="1 person thinks this is good">1</abbr>
+                </h6>
                 <p>
-                  <button type="submit" title="1 person thinks this is good" disabled="disabled">
-                    1
-                  </button>
+                  <button type="submit" name="undo" value="1">Undo</button>
                 </p>
               </form>
               <p class="comments">
@@ -499,10 +500,11 @@
             </h3>
             <div class="meta">
               <form action="" method="post" class="voted">
+                <h6>
+                  It’s GOOD <abbr title="8 people thinks this is good">8</abbr>
+                </h6>
                 <p>
-                  <button type="submit" title="8 people think this is good" disabled="disabled">
-                    8
-                  </button>
+                  <button type="submit" name="undo" value="1">Undo</button>
                 </p>
               </form>
               <p class="comments">
@@ -785,8 +787,11 @@
               <p>100 Followers</p>
             </div>
             <p class="introduction">I'm the boss lady at  Makeshift Society. Trouble. Maker.</p>
-            <form action="" method="post">
-              <p><button type="submit">Follow</button></p>
+            <form action="" method="post" class="following">
+              <h6>Following</h6>
+              <p>
+                <button type="submit" name="unfollow" value="1">Unfollow</button>
+              </p>
             </form>
           </section>
           <section class="follow follow-tag">
@@ -1326,8 +1331,11 @@
         <p class="introduction">My favorite dinosaur is a parasaurolophus.</p>
         <p class="location">Los Angeles</p>
 
-        <form action="" method="post" class="follow">
-          <p><button type="submit">Follow</button></p>
+        <form action="" method="post" class="following">
+          <h6>Following</h6>
+          <p>
+            <button type="submit" name="unfollow" value="1">Unfollow</button>
+          </p>
         </form>
       </li>
       <li>

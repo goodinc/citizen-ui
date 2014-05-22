@@ -1191,7 +1191,7 @@
   }
 
   /* SHIM: Hide the hover effect inside dropdowns.
-  (This can be removed once the HTML has been updated and the hover effect is removed) */
+  (This can be removed once the HTML has been updated and the hover effect is obsolete) */
   .scripted-do form.following h6 + p button:before {
     content: none;
   }
@@ -1428,10 +1428,6 @@
   .scripted-do form.done {
     position: relative;
     text-align: right;
-  }
-  .scripted-do form.following,
-  .scripted-do form.voted {
-    position: relative;
   }
   .scripted-do form.do    h6 + p button,
   .scripted-do form.doing h6 + p button,
@@ -3207,7 +3203,7 @@
     }
   }
   .follow-list > li > h3.has-image ~ form {
-    margin-left: 7.5em; /* 5.625 / 0.75 */
+    margin-left: 7.9166666667em; /* 5.9375em / 0.75em */
   }
   .follow-list > li > h3.has-image ~ div.form {
     margin-left: 5.625em;
@@ -3579,6 +3575,11 @@
   .meta form.voted button:active,
   .meta form.voted button:focus {
     background-color: rgb(19, 114, 212); /* @deep-dark-ocean */
+  }
+  /* SHIM: Override the above styles to keep the background color transparent.
+  (This can be removed once the HTML is updated and the hover style above is obsolete.) */
+  .scripted-do .meta form.voted h6 + p button {
+    background: transparent;
   }
   .meta form.vote  button:hover:before,
   .meta form.vote  button:active:before,
@@ -4332,7 +4333,7 @@
     margin-bottom: 0;
 
     /* OPTIONAL: Line up with the headline */
-    margin-left: 5.625em; /* image.width(90px) / @font-size(16px) */
+    margin-left: 5.9375em; /* image.width(95px) / @font-size(16px) */
   }
 
 
@@ -4855,8 +4856,6 @@
   }
   .member-header .basics form {
     margin-bottom: 0;
-  }
-  .member-header .basics button {
     font-size: 0.75em;
   }
   .member-header .introduction {
@@ -4976,6 +4975,10 @@
     margin-bottom: 0;
   }
 
+  .member-header h1 + form {
+    margin-left: 12.583333333em; /* image.width(151px) / @font-size(12px) */
+  }
+
   @media (min-width: 40em) {
     .member-header .basics {
       text-align: center;
@@ -5011,6 +5014,18 @@
       /* OPTIONAL: Adjust to the vertical rythm by compensating for the image’s height of 130px (the image would ideally be 140px) */
       margin-bottom: 0.625em; /* 0.875 + (10px / @font-size) */
     }
+
+    .member-header h1 + form {
+      margin-left: 0;
+    }
+
+    /* SHIM: Center the form element, so the drop-down will appear in the correct location. */
+    .scripted-do .member-header h1 + form.following {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .member-header .details {
       margin-left: 10.5em;
     }
