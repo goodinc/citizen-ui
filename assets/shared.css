@@ -3634,12 +3634,16 @@
 
   /* OPTIONAL: Make the loading icon look nice, if it’s applied
   to the vote count in a feed or the vote button on a post page. */
-        .vote.loading button,
-  .meta .vote.loading button {
+  .scripted-do       .voted.loading h6,
+  .scripted-do .meta .voted.loading h6,
+         .vote.loading button,
+  .meta  .vote.loading button{
     color: transparent;
   }
-        .vote.loading button abbr,
-  .meta .vote.loading button abbr {
+  .scripted-do       .voted.loading h6 abbr,
+  .scripted-do .meta .voted.loading h6 abbr,
+         .vote.loading button abbr,
+  .meta  .vote.loading button abbr {
     border-color: transparent;
   }
   .meta .vote.loading button:hover,
@@ -3651,14 +3655,18 @@
   .meta .vote.loading button:before {
     color: transparent;
   }
-  .vote.loading:before,
-  .vote.loading:after {
+   .vote.loading:before,
+   .vote.loading:after,
+  .voted.loading:before,
+  .voted.loading:after {
     border-color: white;
   }
-  .vote.loading:before {
+   .vote.loading:before,
+  .voted.loading:before {
     border-right-color: transparent;
   }
-  .vote.loading:after {
+   .vote.loading:after,
+  .voted.loading:after {
     border-left-color: transparent;
     border-top-color: transparent;
   }
