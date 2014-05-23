@@ -326,7 +326,7 @@
         }
 
         // If the target is a headline or a button
-        if (name == "h6" || name == "button") {
+        if (name == "h6" || name == "button" || name == "abbr") {
           var form = closest(target, "form");
 
           // If the target is within a do, voted, or following form
