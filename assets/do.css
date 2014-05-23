@@ -132,20 +132,42 @@
     border-width: 0.1em;
     border-style: solid;
     border-color: rgb(233, 233, 233);
-    padding: 1em;
+    padding: 0.875em 1.4375em 1.1875em;
     background: white;
+    position: relative;
   }
   .do-story-header > .container > div:after {
     content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     border-bottom: 0.3125em solid rgb(62, 197, 149); /* 5px / 16px */
+  }
+  .do-story-header > .container > div h1,
+  .do-story-header > .container > div h1 + p {
+    display: inline-block;
   }
   .do-story-header > .container > div h1 {
     margin-top: 0;
+    font-size: inherit;
+    line-height: 1;
+    margin-right: 0.5em;
+    border-right: 0.1em solid rgb(204, 204, 204);
+    padding-right: 0.875em;
+  }
+  .do-story-header > .container > div h1 + p {
+    color: rgb(102, 102, 102);
+    font-size: 0.75em;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    text-transform: uppercase;
+    vertical-align: middle;
   }
   .do-story-header h2.do {
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     text-transform: uppercase;
-    font-size: inherit;
+    font-size: 0.75em;
     background: black;
     color: white;
     border-radius: 100%;
@@ -153,7 +175,6 @@
     line-height: 2.5em;
     text-align: center;
     display: inline-block;
-    vertical-align: 25%;
     margin: 0 0.5em 0 0;
   }
   .do-story-header h1 {
@@ -161,17 +182,31 @@
     font-weight: bold;
     display: inline;
   }
-  @media (min-width: 40em) {
-    .do-story-header > .container {
-      position: relative;
-    }
-    .do-story-header > .container > div {
-      padding-left: 4.75em;
-      padding-right: 8.75em;
-    }
-    .do-story-header h2.do {
-      margin-left: -3.5em;
-    }
+  .do-story-header ul,
+  .do-story-header li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .do-story-header ul {
+    margin-top: 0.875em;
+    display: inline;
+    font-size: 0.75em;
+    float: right;
+  }
+  .do-story-header li {
+    display: inline;
+    margin-right: 0.5em;
+    border-right: 0.1em solid rgb(204, 204, 204);
+    padding-right: 0.875em;
+  }
+  .do-story-header li:last-child {
+    margin-right: 0;
+    border-right-width: 0;
+    padding-right: 0;
+  }
+  .do-story-header li a {
+    text-decoration: none;
   }
 
 
