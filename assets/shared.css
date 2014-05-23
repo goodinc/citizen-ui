@@ -4478,8 +4478,8 @@
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
-  .comments form > .container > .note,
-  .comments form > .container > .error-message,
+  .comments form .container > .note,
+  .comments form .container > .error-message,
   .comments form .images,
   .comments form .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
@@ -4559,34 +4559,35 @@
   }
   .comments form .file label {
     display: inline-block;
-    padding: 0.328125em;
-    border-radius: 0.25em;
     max-width: 33em;
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
-    border: 0.1em solid rgb(153, 153, 153); /* @aluminum */
-    line-height: 1;
     position: relative;
     cursor: pointer;
     border-color: transparent;
-    opacity: 0.25;
     transition: opacity 0.2s, border-color 0.2s;
-  }
-  .comments form .file label:hover {
-    opacity: 1;
-    border-color: rgb(153, 153, 153);
   }
   .comments form .file label br {
     display: none;
   }
   .comments form .file label:before {
-    background: transparent url(shared/comment/picture.svg) no-repeat;
-    background-size: contain;
+    background: transparent url(shared/comment/picture.svg) no-repeat center;
+    background-size: 1.25em auto;
     content: "";
     display: inline-block;
     width: 1.25em;
     height: 1.25em;
     vertical-align: middle;
+    opacity: 0.25;
+    transition: opacity 0.2s, border-color 0.2s;
+    padding: 0.328125em;
+    border: 0.1em solid rgb(153, 153, 153); /* @aluminum */
+    line-height: 1;
+    border-radius: 0.25em;
+  }
+  .comments form .file label:hover:before {
+    opacity: 1;
+    border-color: rgb(153, 153, 153);
   }
   .comments form .file label > span:first-child {
     font-size: 0.75em;
@@ -4636,20 +4637,11 @@
   }
   .comments form .file input:focus {
     position: static;
+    left: auto;
   }
   .comments form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
-
-/* TEMPORARY: These rules apply to the old comments form and can be removed once the new one (with images) is in production. */
-.supports-placeholder .comments form > p label > span:first-child {
-  /* @hidden-accessible */
-  position: absolute;
-  left: -9999px;
-}
-.supports-placeholder .comments form > p label br {
-  display: none;
-}
 
   .supports-placeholder .comments .text label > span:first-child {
     /* @hidden-accessible */
@@ -4673,8 +4665,8 @@
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
-  .comments form > .container > p.error-message span,
-  .comments form > .container > p.note span,
+  .comments form .container > p.error-message span,
+  .comments form .container > p.note span,
   .comments form .file .error-message,
   .comments form .file .note {
     display: block;
@@ -4684,18 +4676,17 @@
     padding: 0.4375em;
     text-align: center;
   }
-  .comments form > .container > p.error-message span,
+  .comments form .container > p.error-message span,
   .comments form .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
-  .comments form > .container > p.note span,
+  .comments form .container > p.note span,
   .comments form .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
   }
-
   .comments form .message {
     margin-top: 0.875em;
   }

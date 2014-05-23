@@ -80,22 +80,40 @@
 
     ShowDetails = function() {
 
-      // Save the user’s preference
-      function show(e) {
+      // Show the details if the .show button or the headline are pressed.
+      function handleClick(e) {
         var target = e.target;
-        var name = target.nodeName.toLowerCase();
         var p = closest(e.target, "p");
         if ((p && p.className.indexOf("show") >= 0) || closest(e.target, "h1")) {
-          var section = closest(e.target, "section");
 
+          var section = closest(e.target, "section");
           if (section && section.className.indexOf("has-details") >= 0) {
             section.className += " show-details";
             e.preventDefault();
           }
+
         }
       }
 
-      document.addEventListener("click", show, false);
+      // Show the details if any links within it are focused.
+      function handleFocus(e) {
+        var target = e.target;
+        var name = target.nodeName.toLowerCase();
+        if (name == "a") {
+          var div = closest(e.target, "div");
+          if (div.className.indexOf("details") >= 0) {
+
+            var section = closest(e.target, "section");
+            if (section && section.className.indexOf("has-details") >= 0) {
+              section.className += " show-details";
+            }
+
+          }
+        }
+      }
+
+      document.addEventListener("click", handleClick, false);
+      document.addEventListener("focus", handleFocus, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
       // Show buttons
       var html = document.getElementsByTagName("html")[0];
