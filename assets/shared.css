@@ -4593,7 +4593,6 @@
     box-sizing      : border-box;
     position: relative;
     cursor: pointer;
-    border-color: transparent;
     transition: opacity 0.2s, border-color 0.2s;
   }
   .comments form .file label br {
@@ -4613,6 +4612,7 @@
     border: 0.1em solid rgb(153, 153, 153); /* @aluminum */
     line-height: 1;
     border-radius: 0.25em;
+    border-color: transparent;
   }
   .comments form .file label:hover:before {
     opacity: 1;
