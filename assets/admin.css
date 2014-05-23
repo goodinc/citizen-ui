@@ -133,9 +133,9 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: inline-block;
-    line-height: 46px;
-    height: 44px;
-    padding: 0 30px;
+    line-height: 36px;
+    height: 34px;
+    padding: 0 20px;
     border: 1px solid rgb(227, 229, 232);
     background: white;
     color: rgb(153, 153, 153);
@@ -144,6 +144,7 @@
     margin-bottom: -1px;
     transition: color 0.2s;
     text-decoration: none;
+    font-size: 0.875em;
   }
   .filters a:hover,
   .filters a:active,
@@ -162,6 +163,7 @@
     border-top: 1px solid rgb(239, 239, 239);
     padding-top: 20px;
     margin: 0 0 20px;
+    font-size: 0.875em;
   }
   .filters form label span {
     margin: 0 15px;
@@ -186,7 +188,7 @@
     width: 20em;
     color: black;
     width: auto;
-    padding: 14px 13px 11px;
+    padding: 9px 13px 6px;
     vertical-align: middle;
     line-height: normal;
   }
@@ -200,9 +202,8 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     color: rgb(178, 178, 178);
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 10px;
     width: 125px;
     border: 1px solid rgb(218, 220, 224);
     border-radius: 4px;
@@ -214,7 +215,7 @@
     background-size: 11px auto;
     background-repeat: no-repeat;
     font-weight: bold;
-    padding: 11px 13px;
+    padding: 6px 8px;
     vertical-align: middle;
     margin: 0;
     line-height: normal;
@@ -236,24 +237,17 @@
     right: 20%;
   }
   .filters form .submit button {
-    font-size: 1em;
+    font-size: 0.875em;
     cursor: pointer;
     display: inline-block;
-    padding-top: 1.1em;
-    padding-bottom: 0.9em;
-    padding-left: 2em;
-    padding-right: 2em;
     color: white;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
     font-weight: bold;
     vertical-align: middle;
     border-radius: 4px;
-    padding: 13px 35px;
     position: relative;
     top: -1px;
     margin-left: 10px;
-    font-size: 14px;
     line-height: normal;
     vertical-align: middle;
     transition: background-color 0.2s;
@@ -274,7 +268,8 @@
     margin-top: 0;
   }
 
-  /* OPTIONAL: Remove the space between the navigation and the table on the comments page. */
+  /* OPTIONAL: Remove the space between the navigation and the table on the comments and stories pages. */
+  .admin#stories  .filters + form,
   .admin#comments .filters + form {
     margin-top: 0;
     position: relative;
@@ -761,9 +756,6 @@
 
   /* =Features
   ----------------------------------------------- */
-  .features {
-    text-align: center;
-  }
   .features h1 {
     /* @h3 */
     font-size: 1.5em;
@@ -782,21 +774,13 @@
   }
   .features ol {
     max-width: 42em;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
     border-bottom: 0.1em solid rgb(218, 220, 224);
     margin-bottom: 1.75em;
   }
   .features ol,
   .features ol li {
     list-style-type: decimal;
-  }
-  @media (max-width: 40em) {
-    .features ol,
-    .features ol li {
-      list-style-position: inside;
-    }
+    list-style-position: inside;
   }
   .features ol li {
     border-top: 0.1em solid rgb(218, 220, 224);
@@ -817,7 +801,7 @@
     box-sizing: border-box;
     border: 0.1em solid rgb(218, 220, 224);
     padding: 1.75em;
-    margin: 1.75em auto;
+    margin: 1.75em 0;
   }
   .add-post label > span:first-child {
     margin-right: 0.5em;
