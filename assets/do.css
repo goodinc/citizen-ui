@@ -137,6 +137,12 @@
     position: relative;
   }
   .do-story-header > .container > div:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .do-story-header > .container > div:before {
     content: "";
     display: block;
     position: absolute;
@@ -189,10 +195,14 @@
     padding-left: 0;
   }
   .do-story-header ul {
-    margin-top: 0.875em;
-    display: inline;
     font-size: 0.75em;
-    float: right;
+  }
+  @media (min-width: 40em) {
+    .do-story-header ul {
+      margin-top: 0.875em;
+      display: inline;
+      float: right;
+    }
   }
   .do-story-header li {
     display: inline;
@@ -930,6 +940,25 @@
   .do-story-header ~ .do-comments .comment-list article {
     margin: 1.75em 0 0 0;
   }
+  .do-story-header ~ .do-comments .comment-list article:before {
+    content: "";
+    display: block;
+    background: white;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: -1.125em;
+    left: 50%;
+    margin-left: -1em;
+    border-width: 0.125em 0 0 0.125em;
+    border-style: solid;
+    border-color: rgb(246, 246, 246);
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+  }
   .do-comments h1,
   .do-comments h1 + p {
     display: inline;
@@ -967,10 +996,30 @@
     color: rgb(102, 102, 102);
     line-height: 1.2;
   }
+  .do-comments .comment-list article > h3 + p {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 0.1em solid rgb(246, 246, 246);
+  }
+  .do-comments .comment-list article > p + figure {
+    margin-top: 0.875em;
+    padding-top: 0.875em;
+    border-top: 0.1em solid rgb(246, 246, 246);
+  }
+  .do-comments .comment-list article > h3 a img {
+    float: none;
+    vertical-align: middle;
+  }
   .do-comments .comment-list article > h3 a {
-    display: block;
-    color: black;
     font-size: 1.3333333333em;
+    font-weight: normal;
+  }
+  .do-comments .comment-list article > h3 a span {
+    color: black;
+    font-weight: bold;
+  }
+  .do-comments .comment-list article > h3 time {
+    float: right;
   }
   @media (min-width: 40em) {
     .do-comments .comment-list li article {
