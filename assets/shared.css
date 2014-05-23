@@ -3818,6 +3818,27 @@
   }
 
 
+/* =Figure
+  ----------------------------------------------- */
+  .activity-item figure {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 0.4375em;
+    margin-bottom: 0.875em;
+    vertical-align: top;
+  }
+  .activity-item figure:last-child {
+    margin-right: 0;
+  }
+  .activity-item figure .image,
+  .activity-item figure img {
+    display: inline;
+  }
+  .activity-item figure img {
+    box-shadow: 0.25em 0.25em 0 rgb(227, 228, 229);
+  }
+
+
 /* =Activity Item
   ----------------------------------------------- */
   .activity-item {
