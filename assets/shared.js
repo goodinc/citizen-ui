@@ -352,7 +352,7 @@
 
       // Style the dropdowns
       var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-button-dropdown";
+      html.className += " scripted-button";
 
       // TODO: Update the style sheet to use “scripted-button-dropdown” instead of “scripted-do” for selectors, and then remove this line.
       html.className += " scripted-do";
