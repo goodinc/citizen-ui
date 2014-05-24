@@ -1079,7 +1079,14 @@
   .do-comments .comment-list article {
     border: 0.125em solid rgb(246, 246, 246);
     border-radius: 0.25em;
-    margin: 0.875em 2.625em;
+  }
+  .do-comments .comment-list article {
+    margin: 0.875em 0;
+  }
+  @media (min-width: 40em) {
+    .do-comments .comment-list article {
+      margin: 0.875em 2.625em;
+    }
   }
   .do-comments .comment-list article > h3 {
     color: rgb(102, 102, 102);
@@ -1110,15 +1117,13 @@
   .do-comments .comment-list article > h3 time {
     float: right;
   }
-  @media (min-width: 40em) {
-    .do-comments .comment-list li article {
-      padding: 1.25em;
-      background: white;
-    }
-    .do-comments .comment-list article > h3 img,
-    .do-comments .comment-list article > h3 .avatar {
-      margin-left: 0;
-    }
+  .do-comments .comment-list li article {
+    padding: 1.25em;
+    background: white;
+  }
+  .do-comments .comment-list article > h3 img,
+  .do-comments .comment-list article > h3 .avatar {
+    margin-left: 0;
   }
 
 
@@ -1298,6 +1303,12 @@
     padding-top: 0.875em;
     border-top: 0.1em solid rgb(246, 246, 246);
   }
+  footer.meta:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
   footer.meta form,
   footer.meta p {
     margin-top: 0;
@@ -1306,9 +1317,11 @@
   footer.meta p a {
     vertical-align: middle;
   }
-  footer.meta ul {
-    display: inline;
-    float: right;
+  @media (min-width: 40em) {
+    footer.meta ul {
+      display: inline;
+      float: right;
+    }
   }
   footer.meta .dos,
   footer.meta .votes,
