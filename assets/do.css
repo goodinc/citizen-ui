@@ -477,6 +477,28 @@
     position: relative;
     z-index: 1;
   }
+  .do-sub-nav li.story a:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    font-size: 1.25em;
+    line-height: 1;
+    margin-right: 0.4375em;
+    vertical-align: middle;
+  }
   .do-sub-nav li.active a {
     background: rgb(62, 197, 149);
     color: white;
@@ -518,6 +540,7 @@
             border-top-left-radius  : 0;
   }
   .do-story > .container form {
+    margin-top: 0;
     position: relative;
   }
 
