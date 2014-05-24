@@ -134,7 +134,6 @@
     border-top-right-radius: 10px;
     display: inline-block;
     line-height: 36px;
-    height: 34px;
     padding: 0 20px;
     border: 1px solid rgb(227, 229, 232);
     background: white;
@@ -166,7 +165,7 @@
     font-size: 0.875em;
   }
   .filters form label span {
-    margin: 0 15px;
+    margin: 0 0.5em;
   }
   .filters form .select label {
     padding-bottom: 0;
@@ -179,19 +178,6 @@
     position: relative;
     display: inline-block;
   }
-  .filters form input[type="text"] {
-    color: rgb(42, 43, 44);
-    border: 1px solid rgb(218, 220, 224);
-    background: rgb(253, 253, 253);
-    border-radius: 4px;
-    margin: 0;
-    width: 20em;
-    color: black;
-    width: auto;
-    padding: 9px 13px 6px;
-    vertical-align: middle;
-    line-height: normal;
-  }
   .filters form .date input {
     width: 8em;
   }
@@ -199,58 +185,14 @@
     width: 20em;
   }
   .filters form select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    color: rgb(178, 178, 178);
-    font-size: 14px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 125px;
-    border: 1px solid rgb(218, 220, 224);
-    border-radius: 4px;
-    color: black;
-    background-color: rgb(249, 249, 249); /* $silver */
-    /* Data URI encoded from: /assets/admin/down.svg */
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iNTAuMDU4cHgiIHZpZXdCb3g9IjAgMCAxMDAgNTAuMDU4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgNTAuMDU4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5bGluZSBwb2ludHM9IjAsMCAxMDAsMCA1MCw1MC4wNTggMC40MDQsMC41MiAiLz4NCjwvc3ZnPg0K);
-    background-position: 90% 50%;
-    background-size: 11px auto;
-    background-repeat: no-repeat;
-    font-weight: bold;
-    padding: 6px 8px;
-    vertical-align: middle;
-    margin: 0;
-    line-height: normal;
-    width: 10em;
-  }
-  .filters form .select:after {
-    position: absolute;
-    top: 0;
-  }
-  .filters form .select:after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    border-width: 0 0 0 1px;
-    border-style: solid;
-    border-color: rgb(233, 234, 236);
-    top: 0;
-    right: 20%;
+    font-size: 1.1428571429em; /* 16px / 14px */
   }
   .filters form .submit button {
+    margin-top: 0;
     font-size: 0.875em;
-    cursor: pointer;
-    display: inline-block;
-    color: white;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    vertical-align: middle;
-    border-radius: 4px;
-    position: relative;
-    top: -1px;
-    margin-left: 10px;
-    line-height: normal;
-    vertical-align: middle;
-    transition: background-color 0.2s;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    vertical-align: top;
   }
   .filters form .submit button {
     background-color: rgb(69, 71, 71);
