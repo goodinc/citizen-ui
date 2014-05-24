@@ -3,11 +3,6 @@
     DO Styles
   ----------------------------------------------- */
 
-  main#content > .container {
-    padding-bottom: 7em;
-    max-width: 45em; /* @max-page-width */
-  }
-
 
 /* =Header
   ----------------------------------------------- */
@@ -17,7 +12,7 @@
   .do-header > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 45em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -124,7 +119,7 @@
   .do-story-header > .container {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 45em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -445,7 +440,7 @@
     margin-bottom: 0;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 45em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -517,7 +512,7 @@
     margin-top: 0;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 45em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
   }
@@ -1183,7 +1178,7 @@
   section.message {
     padding-left: 1.5em;
     padding-right: 1.5em;
-    max-width: 45em; /* @max-page-width */
+    max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
     -moz-box-sizing: border-box;
