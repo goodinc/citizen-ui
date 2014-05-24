@@ -672,6 +672,14 @@
   .batch button.ban:focus:before {
     color: rgb(255, 102, 102) !important;
   }
+  .batch button.delete:before {
+    content: "\e60a"; /* @icon-delete */
+  }
+  .batch button.delete:hover:before,
+  .batch button.delete:active:before,
+  .batch button.delete:focus:before {
+    color: rgb(255, 102, 102) !important;
+  }
 
 
   /* =Images in Comments
