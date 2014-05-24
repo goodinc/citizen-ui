@@ -93,8 +93,9 @@
   <div class="container">
     <div>
       <h2 class="do">Do</h2>
-      <h1>Bike to work</h1>
+      <h1>Introduce yourself to your neighbors</h1>
 
+      <!--
       <section class="tags">
         <h2>Tagged</h2>
         <ul>
@@ -103,9 +104,10 @@
           <li><a href="">Transportation</a></li>
         </ul>
       </section>
+      -->
 
-      <form action="" method="post" class="do">
-        <h6>Do It</h6>
+      <form action="" method="post" class="done">
+        <h6>Done</h6>
         <p>
           <button type="submit" name="remove" value="1">Remove</button>
         </p>
@@ -113,6 +115,15 @@
     </div>
   </div><!-- /.container -->
 </header>
+
+<nav class="do-sub-nav">
+  <div class="container">
+    <ul>
+      <li class="active"><a href="">Add your story</a></li>
+      <li><a href="">View Details</a></li>
+    </ul>
+  </div><!-- /.container -->
+</nav>
 
 <section class="do-story">
   <div class="container">
@@ -131,7 +142,7 @@
         <p class="file">
           <label>
             <span>Attach Image</span><br />
-            <input type="file" name="image[]" disabled="disabled" />
+            <input type="file" name="image[]" />
           </label>
         </p>
       </div><!-- /.container -->
