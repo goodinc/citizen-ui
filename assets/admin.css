@@ -13,7 +13,7 @@
 
 
   /* OPTIONAL: Hide the main headlines (since they’re redundant with the navigation) */
-  body > nav.sub ~ #content .admin > h1:first-child {
+  body > nav.sub ~ #content .admin > h1 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;

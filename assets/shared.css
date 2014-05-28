@@ -840,12 +840,12 @@
     margin-bottom: 0.875em; /* @line-height / 2 */
   }
 
-  section.message.flag,
+  section.message.flagged,
   section.message.spam {
     padding: 2.5em 3.75em;
     text-align: center;
   }
-  section.message.flag h1:before,
+  section.message.flagged h1:before,
   section.message.spam h1:before {
 
     /* @icons */
@@ -865,12 +865,10 @@
     color: rgb(229, 229, 229);
     transition: color 0.2s;
 
-    /*
     background: transparent url(shared/message-shadow.png) bottom no-repeat;
     padding-bottom: 0.25em;
-    */
   }
-  section.message.flag h1:before {
+  section.message.flagged h1:before {
     content: "\e607"; /* @icon-flag */
     color: rgb(255, 51, 51);
   }
@@ -3508,6 +3506,7 @@
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(253, 253, 253);
     color: rgb(153, 153, 153);
+    font-weight: bold;
   }
   .meta .dos      a:hover,
   .meta .dos      a:active,
@@ -3516,10 +3515,6 @@
   .meta .comments a:active,
   .meta .comments a:focus {
     color: rgb(47, 132, 218); /* @ocean */
-  }
-  .meta .vote  button,
-  .meta .voted button {
-    font-weight: bold;
   }
 
   .meta .dos       a:before,
