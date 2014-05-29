@@ -5462,7 +5462,7 @@
     margin-top: 0;
     margin-bottom: 2.3333333333em; /* @line-height / 0.75 */
   }
-  .account-form .edit a:before,
+  .account-form .summary .action span:before,
   .member-header .details .edit a:before,
   .post > article header .edit a:before {
     /* @icons */
@@ -6843,7 +6843,15 @@
   .account-form .submit {
     font-size: 0.875em;
   }
-  .account-form .edit {
+  .account-form .summary > a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 1.75em;
+    margin: -1.75em;
+  }
+  .account-form .summary .action {
+    margin-top: 0;
     font-size: 0.75em;
   }
   .account-form > section + section {
@@ -6880,14 +6888,10 @@
       margin-right: 0.875em;
       min-width: 10em; /* Attempt to make the headlines an even width (so they’ll line up nicely). */
     }
-    .account-form .summary .edit {
-      margin-top: 0;
+    .account-form .summary .action {
       position: absolute;
-      top: 0;
+      top: 2em;
       right: 0;
-    }
-    .account-form section + .summary .edit {
-      top: 2.3333333333em;
     }
   }
 
