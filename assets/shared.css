@@ -6867,16 +6867,18 @@
       margin-right : 0;
     }
   }
-  @media (min-width: 50em) {
+  @media (min-width: 55em) {
     .account-form .summary {
       position: relative;
     }
     .account-form .summary h1,
     .account-form .summary p {
-      display: inline;
+      margin: 0;
+      display: inline-block;
     }
     .account-form .summary h1 {
       margin-right: 0.875em;
+      min-width: 10em; /* Attempt to make the headlines an even width (so they’ll line up nicely). */
     }
     .account-form .summary .edit {
       margin-top: 0;
