@@ -650,12 +650,12 @@
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
-  .do-story form > .container > .note,
-  .do-story form > .container > .error-message,
+  .do-story form .container > .note,
+  .do-story form .container > .error-message,
   .do-story form .images,
   .do-story form .file,
-  .do-story fieldset > .container > .note,
-  .do-story fieldset > .container > .error-message,
+  .do-story fieldset .container > .note,
+  .do-story fieldset .container > .error-message,
   .do-story fieldset .images,
   .do-story fieldset .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */

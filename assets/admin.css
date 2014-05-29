@@ -361,10 +361,17 @@
     display: block;
     padding: 10px; /* @cell-padding */
   }
-  td .source.comments > h2 > a {
+  td .source.comments > a > p {
     font-weight: normal;
     font-size: 14px;
   }
+
+/* TEMPORARY: This can be removed once the HTML has been updated to use paragraphs instead of headlines */
+td .source.comments > h2 > a {
+  font-weight: normal;
+  font-size: 14px;
+}
+
   td .source .details {
     /* Reset */
     font-size: 16px;
