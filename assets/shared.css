@@ -2487,7 +2487,7 @@
     padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
   }
 
-  /* For the “Want to make changes to your profile?” note, in the account settings section */
+  /* For the “Make changes to profile?” note, in the account settings section */
   body > nav.sub .note {
     display: block;
     font-size: 0.875em;
@@ -6836,9 +6836,6 @@
 
 /* =Account Settings
   ----------------------------------------------- */
-  .account-form {
-    max-width: 50em;
-  }
   .account-form h1 {
     font-size: inherit;
     line-height: inherit;
@@ -6861,6 +6858,9 @@
   .account-form .summary > a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
+  .account-form .submit {
+    font-size: 0.875em;
+  }
   .account-form .summary .action {
     margin-top: 0;
     font-size: 0.75em;
@@ -6879,11 +6879,11 @@
       border-color: rgb(218, 220, 224); /* @blue-gray */
       background: rgb(253, 254, 255); /* @snow */
       padding: 1.75em; /* @line-height */
-      margin-left  : -1.5em;
-      margin-right : -1.5em;
       border-width: 0.1em;
-      margin-left  : 0;
-      margin-right : 0;
+      max-width: 50em;
+      margin-top: 1.75em;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   @media (min-width: 55em) {
