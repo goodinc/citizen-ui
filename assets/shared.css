@@ -668,11 +668,14 @@
   }
 
   fieldset {
-    margin-top: 1.75em; /* @line-height */
     border-width: 0;
-    border-top: 0.1em solid rgb(239, 239, 239);
+    padding: 0;
     position: relative;
-    padding: 1.75em 0 0 0;
+
+    /* @fieldset */
+    margin-top: 1.75em; /* @line-height */
+    border-top: 0.1em solid rgb(239, 239, 239);
+    padding-top: 1.75em;
   }
   fieldset:first-child {
     border-top-width: 0;
@@ -5459,6 +5462,7 @@
     margin-top: 0;
     margin-bottom: 2.3333333333em; /* @line-height / 0.75 */
   }
+  .account-form .edit a:before,
   .member-header .details .edit a:before,
   .post > article header .edit a:before {
     /* @icons */
@@ -6826,6 +6830,68 @@
 
 /* =Account Settings
   ----------------------------------------------- */
+  .account-form h1 {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .account-form h1 + p {
+    margin-top: 0.4375em; /* @line-height x 1/4 */
+  }
+  .account-form .submit {
+    font-size: 0.875em;
+  }
+  .account-form .edit {
+    font-size: 0.75em;
+  }
+  .account-form > section + section {
+    /* @fieldset */
+    margin-top: 1.75em; /* @line-height */
+    border-top: 0.1em solid rgb(239, 239, 239);
+    padding-top: 1.75em;
+  }
+
+  @media (min-width: 40em) {
+    .account-form {
+      border-width: 0.1em 0;
+      border-style: solid;
+      border-color: rgb(218, 220, 224); /* @blue-gray */
+      background: rgb(253, 254, 255); /* @snow */
+      padding: 1.75em; /* @line-height */
+      margin-left  : -1.5em;
+      margin-right : -1.5em;
+      border-width: 0.1em;
+      margin-left  : 0;
+      margin-right : 0;
+    }
+  }
+  @media (min-width: 50em) {
+    .account-form .summary {
+      position: relative;
+    }
+    .account-form .summary h1,
+    .account-form .summary p {
+      display: inline;
+    }
+    .account-form .summary h1 {
+      margin-right: 0.875em;
+    }
+    .account-form .summary .edit {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .account-form section + .summary .edit {
+      top: 2.3333333333em;
+    }
+  }
+
+
+/* =Email Preferences
+  ----------------------------------------------- */
   @media (min-width: 40em) {
     section.form {
       border-width: 0.1em;
@@ -6836,6 +6902,10 @@
       margin-right: 0;
     }
   }
+
+
+/* =Edit Profile
+  ----------------------------------------------- */
   .profile-form form {
     border-width: 0.1em 0;
     border-style: solid;
@@ -6863,10 +6933,6 @@
   .profile-form .file label br {
     display: none;
   }
-
-
-/* =Profile Form
-  ----------------------------------------------- */
   .profile-form textarea {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 2.5em; /* 40px / @font-size(16px) */
