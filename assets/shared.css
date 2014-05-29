@@ -6836,21 +6836,24 @@
       margin-right: 0;
     }
   }
+  .profile-form form {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224); /* @blue-gray */
+    background: rgb(253, 254, 255); /* @snow */
+    padding: 1.75em; /* @line-height */
+    margin-left  : -1.5em;
+    margin-right : -1.5em;
+  }
   @media (min-width: 40em) {
     .profile-form form {
       border-width: 0.1em;
-      border-style: solid;
-      border-color: rgb(218, 220, 224); /* @blue-gray */
-      padding: 1.75em; /* @line-height */
-      margin-left: 0;
-      margin-right: 0;
+      margin-left  : 0;
+      margin-right : 0;
     }
   }
-  .profile-form form {
-    background: rgb(253, 254, 255); /* @snow */
-  }
 
-  /* OPTIONAL: Adjust to the vertical rythm. */
+  /* OPTIONAL: Adjust to the vertical rhythm. */
   .profile-form .file label img,
   .profile-form .file label .avatar {
     display: block;
