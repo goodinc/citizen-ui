@@ -6845,6 +6845,7 @@
   }
   .account-form h1 + p {
     margin-top: 0.4375em; /* @line-height x 1/4 */
+    color: rgb(102, 102, 102);
   }
   .account-form .summary > a {
     display: block;
@@ -6881,7 +6882,7 @@
       padding: 1.75em; /* @line-height */
       border-width: 0.1em;
       max-width: 50em;
-      margin-top: 1.75em;
+      margin-top: 0;
       margin-left: auto;
       margin-right: auto;
     }
@@ -6906,6 +6907,22 @@
       right: 0;
     }
   }
+
+  .account-form {
+    padding: 0;
+    border-width: 0;
+  }
+  .account-form > section {
+    /* @fieldset */
+    border: 0.1em solid rgb(218, 220, 224);
+    padding: 1.75em;
+  }
+  @media (min-width: 55em) {
+    .account-form .summary .action {
+      right: 2em;
+    }
+  }
+
 
 
 /* =Email Preferences
