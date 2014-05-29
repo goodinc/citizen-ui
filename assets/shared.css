@@ -6836,6 +6836,11 @@
 
 /* =Account Settings
   ----------------------------------------------- */
+  .account-form {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .account-form h1 {
     font-size: inherit;
     line-height: inherit;
@@ -6866,27 +6871,18 @@
     margin-top: 0;
     font-size: 0.75em;
   }
+  .account-form > section {
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1.75em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .account-form > section + section {
-    /* @fieldset */
-    margin-top: 1.75em; /* @line-height */
-    border-top: 0.1em solid rgb(218, 220, 224);
-    padding-top: 1.75em;
+    border-top-width: 0;
   }
 
-  @media (min-width: 40em) {
-    .account-form {
-      border-width: 0.1em 0;
-      border-style: solid;
-      border-color: rgb(218, 220, 224); /* @blue-gray */
-      background: rgb(253, 254, 255); /* @snow */
-      padding: 1.75em; /* @line-height */
-      border-width: 0.1em;
-      max-width: 50em;
-      margin-top: 0;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
   @media (min-width: 55em) {
     .account-form .summary {
       position: relative;
@@ -6908,23 +6904,7 @@
     }
   }
 
-  .account-form {
-    padding: 0;
-    border-width: 0;
-  }
-  .account-form > section {
-    /* @fieldset */
-    border: 0.1em solid rgb(218, 220, 224);
-    padding: 1.75em;
-  }
-  .account-form > section,
-  .account-form > section + section {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .account-form > section + section {
-    border-top-width: 0;
-  }
+  /* KLUDGE: This should be combined with the styles above. */
   @media (min-width: 55em) {
     .account-form .summary .action {
       right: 2em;
