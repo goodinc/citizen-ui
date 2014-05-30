@@ -549,7 +549,7 @@
     font-weight: bold;
     text-transform: lowercase;
     padding: 0.5em 1em;
-    color: rgb(153, 153, 153);
+    color: rgb(62, 197, 149); /* @fern */
     border-top: 1px solid transparent;
     margin-top: -1px;
     position: relative;
@@ -602,9 +602,9 @@
     font-style: italic;
     font-weight: bold;
     font-family: Georgia, Times, "Times New Roman", serif;
-    border: 0.1em solid rgb(204, 204, 204);
+    border: 0.1em solid rgb(62, 197, 149); /* @fern */
     border-radius: 100%;
-    color: rgb(204, 204, 204);
+    color: rgb(62, 197, 149); /* @fern */
     display: inline-block;
     width: 1.4em;
     line-height: 1.4em;
@@ -658,8 +658,8 @@
     padding: 1.75em;
   }
 
-  .do-story > .container  form:before,
-  .do-story > .container > div:before {
+  .do-story   > .container  form:before,
+  .do-details > .container > div:before {
     content: "";
     display: block;
     background: white;
@@ -675,6 +675,10 @@
     transform         : rotate(45deg);
     right: auto;
     left: 4.375em;
+  }
+  .do-details > .container > div:before {
+    left: 12.5em;
+    background-color: rgb(168, 237, 213);
   }
   .mark-done .do-story > .container form:before {
     content: none;
