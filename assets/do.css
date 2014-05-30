@@ -30,6 +30,7 @@
   .do-header > .container > div h1 {
     margin-top: 0.2916666667em; /* line-height / 4 */
     margin-bottom: 0;
+    display: inline;
   }
   .do-header h2.do {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
@@ -42,7 +43,7 @@
     line-height: 2.25em;
     text-align: center;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: 35%;
     margin: 0 0.5em 0 0;
   }
   .do-header .sponsor {
@@ -53,24 +54,38 @@
     vertical-align: middle;
   }
   .do-header .tags {
-    font-size: 0.875em;
+    font-size: 0.75em;
     margin-bottom: 0;
-    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
-    text-transform: uppercase;
-    display: inline;
   }
-  .do-header .tags,
+  .do-header .tags h2 {
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    text-transform: lowercase;
+    color: rgb(153, 153, 153);
+    display: inline;
+    margin-right: 0.5em;
+  }
+  .do-header .tags h2:after {
+    content: ": ";
+  }
+  .do-header .tags ul,
   .do-header .tags li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
     display: inline;
   }
+  .do-header .tags li:after {
+    content: ", ";
+  }
+  .do-header .tags li:last-child:after {
+    content: "";
+  }
   .do-header .tags a {
-    color: inherit;
+    color: rgb(102, 102, 102);
     text-decoration: none;
-    border: 0.1em solid;
-    padding: 0.21875em 0.875em;
+    font-weight: bold;
   }
   .do-header .tags a:hover,
   .do-header .tags a:active,
@@ -91,14 +106,18 @@
       position: relative;
     }
     .do-header > .container > div {
+      padding-left: 4.75em;
       padding-right: 8.75em;
+    }
+    .do-header h2.do {
+      margin-left: -3.5em;
     }
     .do-header form.do,
     .do-header form.doing,
     .do-header form.done {
       position: absolute;
-      margin-top: -1.4285714286em; /* 40px / 14px / 2 */
-      top: 50%;
+      margin-top: 0;
+      top: 1.3125em;
       right: 3em;
     }
 
