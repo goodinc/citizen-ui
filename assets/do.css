@@ -21,11 +21,12 @@
     border-width: 0.1em;
     border-style: solid;
     border-color: rgb(218, 220, 224);
-    padding: 1em 1em 2em;
+    padding: 1em;
     background: white;
   }
   .do-header > .container > div h1 {
-    margin-top: 0;
+    margin-top: 0.2916666667em; /* line-height / 4 */
+    margin-bottom: 0;
   }
   .do-header h2.do {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
@@ -87,11 +88,7 @@
       position: relative;
     }
     .do-header > .container > div {
-      padding-left: 4.75em;
       padding-right: 8.75em;
-    }
-    .do-header h2.do {
-      margin-left: -3.25em;
     }
     .do-header form.do,
     .do-header form.doing,
@@ -537,8 +534,13 @@
     margin-left: 0;
     padding-left: 0;
   }
+  .do-sub-nav ul,
   .do-sub-nav li {
     display: inline;
+  }
+  .do-sub-nav ul.share {
+    margin: 0;
+    float: right;
   }
   .do-sub-nav li a {
     font-size: 0.875em;
@@ -580,15 +582,35 @@
     color: white;
     border-top-color: rgb(62, 197, 149); /* @fern */
   }
+  .do-details h2,
   .do-sub-nav + .do-story h2 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
+  .do-details h2 + p {
+    margin-top: 0;
+  }
+
+  .do-sub-nav .details a:before {
+    content: "i";
+    font-style: italic;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    border: 0.1em solid rgb(204, 204, 204);
+    border-radius: 100%;
+    color: rgb(204, 204, 204);
+    display: inline-block;
+    width: 1.4em;
+    line-height: 1.4em;
+    text-align: center;
+    margin-right: 0.4375em;
+  }
 
 
 /* =Story
   ----------------------------------------------- */
+  .do-details,
   .do-header ~ .do-story {
     margin-top: 0;
     padding-left: 1.5em;
@@ -598,12 +620,13 @@
     margin-right: auto;
   }
 
-  .do-header + .do-story {
+  .do-details {
     margin-top: -0.0625em;
     position: relative;
     z-index: 1;
   }
-  .do-story > .container {
+  .do-story   > .container,
+  .do-details > .container {
     position: relative;
     background: rgb(62, 197, 149); /* @fern */
     padding: 0.875em;
@@ -615,12 +638,19 @@
             border-top-right-radius : 0;
             border-top-left-radius  : 0;
   }
-  .do-story > .container form {
+  .do-story   > .container form,
+  .do-details > .container > div {
     margin-top: 0;
     position: relative;
   }
+  .do-details > .container > div {
+    background: rgb(168, 237, 213);
+    border-radius: 0.25em;
+    padding: 1.75em;
+  }
 
-  .do-story > .container form:before {
+  .do-story > .container  form:before,
+  .do-story > .container > div:before {
     content: "";
     display: block;
     background: white;
