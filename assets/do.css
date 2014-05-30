@@ -94,8 +94,8 @@
     .do-header form.doing,
     .do-header form.done {
       position: absolute;
-      margin-top: 0;
-      top: 1.3125em;
+      margin-top: -1.4285714286em; /* 40px / 14px / 2 */
+      top: 50%;
       right: 3em;
     }
 
@@ -900,6 +900,7 @@
   .do-story .file label > span:first-child {
     font-size: 0.75em;
     position: absolute;
+    z-index: 9999; /* @infinity */
     background: rgb(51, 51, 51); /* @tungsten */
     color: rgb(253, 253, 253);
     bottom: 0;
