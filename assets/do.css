@@ -10,7 +10,8 @@
     margin-top: 0.875em;
     margin-bottom: 0;
   }
-  #header + .do-header {
+  #header + .do-header,
+  #header + div .do-header {
     margin-top: 0;
   }
   .do-header > .container {
@@ -1496,6 +1497,28 @@
   footer.meta a:active,
   footer.meta a:focus {
     color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+/* =Empty Message
+  ----------------------------------------------- */
+  section.message.empty {
+    margin-bottom: 1.75em;
+  }
+  section.message.empty h1 {
+    font-family: inherit;
+    text-transform: none;
+    font-variant: normal;
+    font-weight: bold;
+
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-bottom : 0.5833333334em;
+  }
+  section.message.empty a {
+    font-weight: bold;
+    text-decoration: none;
   }
 
 
