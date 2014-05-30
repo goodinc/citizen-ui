@@ -6259,15 +6259,17 @@
   }
 
   .feedback {
-    background-color: rgb(58, 58, 58);
-    border-color: black;
-    color: white;
+    background: rgb(255, 252, 231);
+    border: 0.1875em solid rgb(243, 239, 209);
   }
   .feedback h2 {
     font-size: 1.5em;
-    line-height: inherit;
     font-family: inherit;
     font-weight: bold;
+    margin-bottom: 0.4375em;
+  }
+  .feedback ul {
+    color: rgb(102, 102, 102);
   }
   .feedback a {
     color: inherit;
