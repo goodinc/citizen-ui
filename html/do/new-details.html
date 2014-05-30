@@ -81,35 +81,40 @@
       <header>
         <h1>New DO</h1>
 
-        <section class="tip inactive">
+        <section class="tip">
           <div class="container">
-            <h2>Posting a DO</h2>
-            <p><strong>Inspire people to take action.</strong> Share what you’ve done to live well and do good.</p>
-            <p><strong>Tip:</strong> keep it short and sweet!</p>
+            <h2>What is a DO?</h2>
+            <p>A DO is a creative action you or anyone can take towards a better self and a better world.</p>
+            <p>Share what you’ve done to live well and do good.</p>
           </div>
         </section>
       </header>
 
-      <form method="post">
+      <form action="new" method="post">
         <p class="text">
           <label>
             <span>What is your DO?</span><br />
-            <input type="text" name="title" placeholder="For example: Introduce yourself to your neighbors" />
+            <input type="text" name="title" placeholder="ex. Bike to work" />
           </label>
         </p>
         <p class="text">
           <label>
             <span>Add tags <em>(comma separated. spaces are OK.)</em></span><br />
-            <input type="text" name="tags" placeholder="For example: Design, Culture Jamming, Changemakers" />
+            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
+          </label>
+        </p>
+        <p class="text details active">
+          <label>
+            <span>Add details <em>(optional)</em></span><br />
+            <textarea placeholder="Enter additional info… "></textarea>
           </label>
         </p>
 
         <div class="mark-done">
-
-          <p class="checkbox checked">
+          <p class="checkbox">
             <label>
-              <input type="checkbox" checked="checked" />
-              <span>Done!</span>
+              <input type="checkbox" />
+              <span>Done?</span>
             </label>
           </p>
 

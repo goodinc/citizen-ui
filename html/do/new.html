@@ -83,9 +83,9 @@
 
         <section class="tip">
           <div class="container">
-            <h2>Posting a DO</h2>
-            <p><strong>Inspire people to take action.</strong> Share what you’ve done to live well and do good.</p>
-            <p><strong>Tip:</strong> keep it short and sweet!</p>
+            <h2>What is a DO?</h2>
+            <p>A DO is a creative action you or anyone can take towards a better self and a better world.</p>
+            <p>Share what you’ve done to live well and do good.</p>
           </div>
         </section>
       </header>
@@ -94,13 +94,19 @@
         <p class="text">
           <label>
             <span>What is your DO?</span><br />
-            <input type="text" name="title" placeholder="For example: Introduce yourself to your neighbors" />
+            <input type="text" name="title" placeholder="ex. Bike to work" />
           </label>
         </p>
         <p class="text">
           <label>
             <span>Add tags <em>(comma separated. spaces are OK.)</em></span><br />
-            <input type="text" name="tags" placeholder="For example: Design, Culture Jamming, Changemakers" />
+            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
+          </label>
+        </p>
+        <p class="text details inactive">
+          <label>
+            <span>Add details <em>(optional)</em></span><br />
+            <textarea placeholder="Enter additional info… "></textarea>
           </label>
         </p>
 
@@ -108,9 +114,42 @@
           <p class="checkbox">
             <label>
               <input type="checkbox" />
-              <span>Mark as done?</span>
+              <span>Done?</span>
             </label>
           </p>
+
+          <section class="do-story">
+            <div class="container">
+              <h2>Add your story</h2>
+              <p>Optional</p>
+              <fieldset class="inactive">
+                <div class="container">
+                  <h6 class="avatar">
+                    <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
+                  </h6>
+                  <p class="text">
+                    <label>
+                      <span>What happened when you last did this?</span><br />
+                      <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
+                    </label>
+                  </p>
+                  <p class="file">
+                    <label>
+                      <span>Attach Image</span><br />
+                      <input type="file" name="image[]" />
+                    </label>
+                  </p>
+                </div><!-- /.container -->
+                <p class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Yes, share this to Facebook.</span>
+                  </label>
+                </p>
+              </fieldset>
+            </div><!-- /.container -->
+          </section>
+
         </div>
 
         <ul class="submit">

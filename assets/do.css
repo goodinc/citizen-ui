@@ -7,6 +7,7 @@
 /* =Header
   ----------------------------------------------- */
   .do-header {
+    margin-top: 0;
     margin-bottom: 0;
   }
   .do-header > .container {
@@ -98,7 +99,7 @@
       padding-right: 8.75em;
     }
     .do-header h2.do {
-      margin-left: -3.5em;
+      margin-left: -3.25em;
     }
     .do-header form.do,
     .do-header form.doing,
@@ -107,6 +108,14 @@
       margin-top: 0;
       top: 1.3125em;
       right: 3em;
+    }
+
+    .do-header .share {
+      position: absolute;
+      margin-bottom: 0;
+      bottom: 1.3125em;
+      right: 3em;
+      font-size: 0.75em;
     }
   }
 
@@ -144,7 +153,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    border-bottom: 0.3125em solid rgb(62, 197, 149); /* 5px / 16px */
+    border-bottom: 0.3125em solid rgb(62, 197, 149); /* @fern */ /* 5px / 16px */
   }
   .do-story-header > .container > div h1,
   .do-story-header > .container > div h1 + p {
@@ -277,11 +286,17 @@
     font-size: 1.5em;
     margin-bottom: 0;
   }
+  .do-new form label > span {
+    font-size: inherit;
+  }
   .do-new label span em {
+    font-size: 0.75em;
     font-style: normal;
     color: rgb(102, 102, 102);
+    margin-left: 0.4375em;
   }
-  .do-new .text input {
+  .do-new .text input,
+  .do-new .text textarea {
     max-width: 35em;
   }
   .do-new .text input[name*="title"] {
@@ -316,12 +331,68 @@
     padding-right: 0.875em;
     font-weight: bold;
   }
-  .do-new .mark-done > .checkbox         label span {
-    color: rgb(62, 197, 149);
+
+  .do-new .details.active   label span,
+  .do-new .details.inactive label span {
+    color: rgb(62, 197, 149); /* @fern */
+    font-weight: bold;
+    position: relative;
   }
-  .do-new .mark-done > .checkbox.checked label span {
-    color: inherit;
+  .do-new .details.inactive label span {
+    cursor: pointer;
   }
+  .do-new .details.active   label span em,
+  .do-new .details.inactive label span em {
+    font-weight: normal;
+  }
+
+  .do-new .details.active   label span:before,
+  .do-new .details.inactive label span:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e600"; /* @icon-corner */
+
+    font-size: 0.5em;
+    display: inline-block;
+    margin-right: 1em;
+    -webkit-transform : translateX(-0.5em) rotate(45deg);
+    -moz-transform    : translateX(-0.5em) rotate(45deg);
+    -o-transform      : translateX(-0.5em) rotate(45deg);
+    transform         : translateX(-0.5em) rotate(45deg);
+  }
+  .do-new .details.active   label span:before {
+    -webkit-transform : translateY(-0.5em) rotate(135deg);
+    -moz-transform    : translateY(-0.5em) rotate(135deg);
+    -o-transform      : translateY(-0.5em) rotate(135deg);
+    transform         : translateY(-0.5em) rotate(135deg);
+  }
+  .do-new .details.inactive textarea {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .do-new .details.active,
+  .do-new .details.inactive {
+    margin-bottom: 1.3125em;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    padding-bottom: 0.875em;
+  }
+  .do-new .details.active {
+    padding-bottom: 0.5em;
+  }
+
   .do-new .mark-done > .checkbox.checked label:before {
     /* @icons */
     font-family: "Icons";
@@ -334,7 +405,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background: rgb(62, 197, 149);
+    background: rgb(62, 197, 149); /* @fern */
     content: "\e606"; /* @icon-approve */
     color: white;
     border-radius: 100%;
@@ -354,79 +425,93 @@
 
   /* =Tip
   ----------------------------------------------- */
-  .do-new .tip .container {
+  .tip .container {
     padding: 1.375em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231);
     border: 0.1875em solid rgb(243, 239, 209);
     border-radius: 0.5em;
+    position: relative;
+  }
+  .tip .container:before {
+    content: "";
+    display: block;
+    background: rgb(255, 252, 231);
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: -0.75em;
+    border-width: 0 0 0.1875em 0.1875em;
+    border-style: solid;
+    border-color: rgb(243, 239, 209);
+
+    -webkit-transform : rotate(135deg);
+    -moz-transform    : rotate(135deg);
+    -o-transform      : rotate(135deg);
+    transform         : rotate(135deg);
+  }
+  .tip:before {
+    content: "i";
+    font-style: italic;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    background: rgb(204, 204, 204);
+    border-radius: 100%;
+    color: white;
+    display: inline-block;
+    width: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+  }
+  .tip:before {
+    position: absolute;
+    top: 0;
+    right: 1em;
   }
 
   @media (min-width: 65em) {
-    .do-new .tip {
+    .tip {
       margin: 0;
       position: absolute;
       top: 0;
       right: 0;
     }
-    .do-new .tip .container {
+    .tip .container {
       position: absolute;
       top: -1em;
       width: 11em;
       right: -15em;
     }
-
-    .do-new .tip .container:before {
-      content: "";
-      display: block;
-      background: rgb(255, 252, 231);
-      width: 1em;
-      height: 1em;
-      position: absolute;
+    .tip .container:before {
       top: 1em;
+      right: auto;
       left: -0.75em;
-      border-width: 0 0 0.1875em 0.1875em;
-      border-style: solid;
-      border-color: rgb(243, 239, 209);
-
       -webkit-transform : rotate(45deg);
       -moz-transform    : rotate(45deg);
       -o-transform      : rotate(45deg);
       transform         : rotate(45deg);
     }
-
-    .do-new .tip:before {
-      content: "i";
-      font-style: italic;
-      font-weight: bold;
-      font-family: Georgia, Times, "Times New Roman", serif;
-      background: rgb(204, 204, 204);
-      border-radius: 100%;
-      color: white;
-      display: inline-block;
-      width: 1.5em;
-      line-height: 1.5em;
-      text-align: center;
+    .tip:before {
       margin-right: 0.5em;
-      position: absolute;
       right: 0;
     }
   }
-  .do-new .tip h2 {
+  .tip h2 {
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
   }
-  .do-new .tip p {
+  .tip p {
     font-size: 0.875em;
     color: rgb(102, 102, 102);
     line-height: 1.3;
   }
 
   /* OPTIONAL: Hide the tip if it’s inactive */
-  .do-new .tip.inactive {
+  .tip {
     cursor: pointer;
   }
-  .do-new .tip.inactive .container {
+  .tip.inactive .container {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
@@ -436,6 +521,10 @@
 /* =Sub Nav
   ----------------------------------------------- */
   .do-sub-nav {
+    /* Reset */
+    background-color: transparent;
+    border-top-width: 0;
+
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 1.5em;
@@ -495,9 +584,9 @@
     vertical-align: middle;
   }
   .do-sub-nav li.active a {
-    background: rgb(62, 197, 149);
+    background: rgb(62, 197, 149); /* @fern */
     color: white;
-    border-top-color: rgb(62, 197, 149);
+    border-top-color: rgb(62, 197, 149); /* @fern */
   }
   .do-sub-nav + .do-story h2 {
     /* @hidden-accessible */
@@ -524,7 +613,7 @@
   }
   .do-story > .container {
     position: relative;
-    background: rgb(62, 197, 149);
+    background: rgb(62, 197, 149); /* @fern */
     padding: 0.875em;
     border-radius: 0.25em;
     -webkit-border-top-right-radius : 0;
@@ -562,7 +651,7 @@
   .mark-done .do-story > .container:before {
     content: "";
     display: block;
-    background: rgb(62, 197, 149);
+    background: rgb(62, 197, 149); /* @fern */
     width: 1em;
     height: 1em;
     position: absolute;
@@ -585,9 +674,9 @@
   }
   .do-story h2 + p {
     color: white;
-    margin-left: 0.5em;
+    margin-left: 0.4375em;
     text-transform: lowercase;
-    font-size: 0.875em;
+    font-size: 0.75em;
   }
   .do-story h2 + p:before {
     content: "(";
@@ -1064,17 +1153,6 @@
   }
   .do-comments h1 + p:after {
     content: ")";
-  }
-  .do-comments header:after {
-    /* @clearfix */
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .do-comments header .share {
-    display: inline-block;
-    float: right;
-    margin-top: 0;
   }
 
   /* Article */
