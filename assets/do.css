@@ -555,6 +555,11 @@
     position: relative;
     z-index: 1;
   }
+  .do-sub-nav li.story a {
+    border-left-width: 0.1em;
+    border-left-style: solid;
+    border-left-color: rgb(218, 220, 224);
+  }
   .do-sub-nav li.story a:before {
 
     /* @icons */
@@ -580,7 +585,7 @@
   .do-sub-nav li.active a {
     background: rgb(62, 197, 149); /* @fern */
     color: white;
-    border-top-color: rgb(62, 197, 149); /* @fern */
+    border-color: rgb(62, 197, 149); /* @fern */
   }
   .do-details h2,
   .do-sub-nav + .do-story h2 {
@@ -605,6 +610,10 @@
     line-height: 1.4em;
     text-align: center;
     margin-right: 0.4375em;
+  }
+  .do-sub-nav .details.active a:before {
+    color: white;
+    border-color: white;
   }
 
 
