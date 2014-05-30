@@ -7,8 +7,11 @@
 /* =Header
   ----------------------------------------------- */
   .do-header {
-    margin-top: 0;
+    margin-top: 0.875em;
     margin-bottom: 0;
+  }
+  #header + .do-header {
+    margin-top: 0;
   }
   .do-header > .container {
     padding-left: 1.5em;
@@ -613,10 +616,11 @@
     border-radius: 100%;
     color: rgb(62, 197, 149); /* @fern */
     display: inline-block;
-    width: 1.2em;
-    line-height: 1.2em;
+    width: 1.1428571429em;
+    line-height: 1.1428571429em;
     text-align: center;
-    margin-right: 0.4375em;
+    margin-right: 0.875em;
+    font-size: 0.875em;
   }
   .do-sub-nav .details.active a:before {
     color: white;
@@ -1088,6 +1092,9 @@
 
 /* =Comments
   ----------------------------------------------- */
+  .do-comments {
+    position: relative;
+  }
   .do-comments .share {
     margin-top: 0;
     font-size: 0.75em;
