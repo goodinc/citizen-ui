@@ -38,52 +38,44 @@
     line-height: 2.25em;
     text-align: center;
     display: inline-block;
-    vertical-align: 35%;
+    vertical-align: middle;
     margin: 0 0.5em 0 0;
   }
-  .do-header h1 {
-    font-family: inherit;
-    font-weight: bold;
+  .do-header .sponsor {
     display: inline;
+    margin-right: 0.4375em;
+  }
+  .do-header .sponsor img {
+    vertical-align: middle;
   }
   .do-header .tags {
-    font-size: 0.75em;
+    font-size: 0.875em;
     margin-bottom: 0;
-  }
-  .do-header .tags h2 {
-    font-family: inherit;
-    font-style: inherit;
-    font-size: inherit;
-    text-transform: lowercase;
-    color: rgb(153, 153, 153);
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
     display: inline;
-    margin-right: 0.5em;
   }
-  .do-header .tags h2:after {
-    content: ": ";
-  }
-  .do-header .tags ul,
+  .do-header .tags,
   .do-header .tags li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
     display: inline;
   }
-  .do-header .tags li:after {
-    content: ", ";
-  }
-  .do-header .tags li:last-child:after {
-    content: "";
-  }
   .do-header .tags a {
-    color: rgb(102, 102, 102);
+    color: inherit;
     text-decoration: none;
-    font-weight: bold;
+    border: 0.1em solid;
+    padding: 0.21875em 0.875em;
   }
   .do-header .tags a:hover,
   .do-header .tags a:active,
   .do-header .tags a:focus {
     color: rgb(47, 132, 218); /* @ocean */
+  }
+  .do-header h1 {
+    font-family: inherit;
+    font-weight: bold;
   }
   .do-header form.do,
   .do-header form.doing,
