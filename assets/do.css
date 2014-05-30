@@ -555,6 +555,14 @@
     position: relative;
     z-index: 1;
   }
+  .do-sub-nav .share li {
+    margin-right: 0;
+  }
+  .do-sub-nav .share a {
+    border-left-width: 0.1em;
+    border-left-style: solid;
+    border-left-color: rgb(218, 220, 224);
+  }
   .do-sub-nav li.story a {
     border-left-width: 0.1em;
     border-left-style: solid;
@@ -577,9 +585,8 @@
     /* @icon-launch */
     content: "\e612";
 
-    font-size: 1.25em;
     line-height: 1;
-    margin-right: 0.4375em;
+    margin-right: 0.875em;
     vertical-align: middle;
   }
   .do-sub-nav li.active a {
@@ -606,8 +613,8 @@
     border-radius: 100%;
     color: rgb(62, 197, 149); /* @fern */
     display: inline-block;
-    width: 1.4em;
-    line-height: 1.4em;
+    width: 1.2em;
+    line-height: 1.2em;
     text-align: center;
     margin-right: 0.4375em;
   }
