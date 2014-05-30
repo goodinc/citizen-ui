@@ -537,13 +537,23 @@
     margin-left: 0;
     padding-left: 0;
   }
-  .do-sub-nav ul,
   .do-sub-nav li {
     display: inline;
   }
-  .do-sub-nav ul.share {
+  .do-sub-nav ul {
     margin: 0;
-    float: right;
+  }
+  .do-sub-nav ul.share {
+    border-bottom: 0.1em solid rgb(218, 220, 224);
+  }
+  @media (min-width: 40em) {
+    .do-sub-nav ul {
+      display: inline;
+    }
+    .do-sub-nav ul.share {
+      float: right;
+      border-bottom-width: 0;
+    }
   }
   .do-sub-nav li a {
     font-size: 0.875em;
@@ -1408,10 +1418,6 @@
     color: white;
 
   }
-  .meta .vote button,
-  .meta .voted button {
-    color: inherit;
-  }
   .meta .share a {
     border: 0.1em solid rgb(244, 244, 244);
     border-radius: 0.25em;
@@ -1460,7 +1466,7 @@
   footer.meta .dos      a,
   footer.meta .votes    a,
   footer.meta .comments a {
-    color: inherit;
+    color: rgb(153, 153, 153);
     border: 0.1em solid rgb(244, 244, 244);
     border-radius: 0.25em;
     background: rgb(253, 253, 253);
