@@ -1164,8 +1164,7 @@
     padding-bottom: 0.875em;
     border-bottom: 0.1em solid rgb(233, 233, 233);
   }
-  section.comments:after,
-  .do-comments:after {
+  section.comments:after {
     content: "DO";
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
@@ -1504,6 +1503,8 @@
   ----------------------------------------------- */
   section.message.empty {
     margin-bottom: 1.75em;
+    background: rgb(246, 246, 246);
+    border-width: 0;
   }
   section.message.empty h1 {
     font-family: inherit;
@@ -1520,6 +1521,12 @@
     font-weight: bold;
     text-decoration: none;
   }
+  section.message.empty h1 + p:after {
+    content: none;
+  }
+  section.message.empty h1 + p {
+    border-top-color: rgb(224, 224, 224);
+  }
 
 
 /* =Feedback
@@ -1531,4 +1538,12 @@
   }
   .feedback ul {
     color: rgb(102, 102, 102);
+  }
+  .feedback a {
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .feedback a:hover,
+  .feedback a:active,
+  .feedback a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
