@@ -6,11 +6,11 @@
   ----------------------------------------------- */
   function start() {
 
-    // OPTIONAL: Add a button to show more details
-    new ShowDetails();
+    // OPTIONAL: Add a button to show more details to the sitewide message
+    //new ShowDetails();
 
-    // OPTIONAL: Add a button to hide tip messages
-    new HideTip();
+    // OPTIONAL: Add a button to hide the sitewide message
+    //new HideTip();
 
     // OPTIONAL: Present the header navigation as dropdowns
     new NavDropDown();
@@ -72,6 +72,7 @@
 
   /* =ShowDetails
   ----------------------------------------------- */
+  /*
   var ShowDetails = function() {};
 
   (function() {
@@ -121,12 +122,14 @@
     }
 
   })();
+  */
 
 
   /* =HideTip
   -----------------------------------------------
   NOTE: This currently only supports a single tip (the video introduction)
   ----------------------------------------------- */
+  /*
   var HideTip = function() {};
 
   (function() {
@@ -173,6 +176,7 @@
     }
 
   })();
+  */
 
 
   /* =NavDropDown
