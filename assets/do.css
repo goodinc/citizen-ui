@@ -53,7 +53,7 @@
     line-height: 2.25em;
     text-align: center;
     display: inline-block;
-    vertical-align: 35%;
+    vertical-align: 20%;
     margin: 0 0.5em 0 0;
   }
   .do-header .sponsor {
@@ -118,9 +118,12 @@
     .do-header > .container > div {
       padding-left: 4.75em;
       padding-right: 8.75em;
+      position: relative;
     }
     .do-header h2.do {
-      margin-left: -3.5em;
+      position: absolute;
+      top: 1.5em;
+      left: 1.5em;
     }
     .do-header form.do,
     .do-header form.doing,
@@ -292,11 +295,18 @@
 /* =New
   ----------------------------------------------- */
   .do-new {
-    max-width: 35em;
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
   }
+
+  /* OPTIONAL: Limit the width of the form, for readability */
+  @media (min-width: 40em) {
+    .do-new {
+      max-width: 35em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   .do-new header {
     padding-bottom: 1em;
     border-bottom: 1px solid rgb(225, 225, 225);
@@ -307,7 +317,7 @@
     font-size: 1.5em;
     margin-bottom: 0;
   }
-  .do-new form label > span {
+  .do-new form label > span:first-child {
     font-size: inherit;
   }
   .do-new label span em {
@@ -364,22 +374,22 @@
     font-weight: bold;
   }
 
-  .do-new .details.active   label span,
-  .do-new .details.inactive label span {
+  .do-new .details.active   label > span:first-child,
+  .do-new .details.inactive label > span:first-child {
     color: rgb(62, 197, 149); /* @fern */
     font-weight: bold;
     position: relative;
   }
-  .do-new .details.inactive label span {
+  .do-new .details.inactive label > span:first-child {
     cursor: pointer;
   }
-  .do-new .details.active   label span em,
-  .do-new .details.inactive label span em {
+  .do-new .details.active   label > span:first-child em,
+  .do-new .details.inactive label > span:first-child em {
     font-weight: normal;
   }
 
-  .do-new .details.active   label span:before,
-  .do-new .details.inactive label span:before {
+  .do-new .details.active   label > span:first-child:before,
+  .do-new .details.inactive label > span:first-child:before {
 
     /* @icons */
     font-family: "Icons";
@@ -404,25 +414,29 @@
     -o-transform      : translateX(-0.5em) rotate(45deg);
     transform         : translateX(-0.5em) rotate(45deg);
   }
-  .do-new .details.active   label span:before {
+  .do-new .details.active   label > span:first-child:before {
     -webkit-transform : translateY(-0.5em) rotate(135deg);
     -moz-transform    : translateY(-0.5em) rotate(135deg);
     -o-transform      : translateY(-0.5em) rotate(135deg);
     transform         : translateY(-0.5em) rotate(135deg);
   }
-  .do-new .details.inactive textarea {
+  .do-new .details.inactive textarea,
+  .do-new .details.inactive .note {
+    /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
 
-  .do-new .details.active,
-  .do-new .details.inactive {
-    margin-bottom: 1.3125em;
-    border-bottom: 1px solid rgb(225, 225, 225);
-    padding-bottom: 0.875em;
-  }
-  .do-new .details.active {
-    padding-bottom: 0.5em;
+  @media (min-width: 40em) {
+    .do-new .details.active,
+    .do-new .details.inactive {
+      margin-bottom: 1.3125em;
+      border-bottom: 1px solid rgb(225, 225, 225);
+      padding-bottom: 0.875em;
+    }
+    .do-new .details.active {
+      padding-bottom: 0.5em;
+    }
   }
 
   .do-new .mark-done > .checkbox.checked label:before {
@@ -1118,11 +1132,14 @@
     padding-top: 1.3125em;
     margin-bottom: 0.4375em;
   }
-  .do-new .submit {
-    margin-top: 1.3125em;
-    border-top: 1px solid rgb(225, 225, 225);
-    padding-top: 1.3125em;
+  @media (min-width: 40em) {
+    .do-new .submit {
+      margin-top: 1.3125em;
+      border-top: 1px solid rgb(225, 225, 225);
+      padding-top: 1.3125em;
+    }
   }
+
   .do-new .submit button {
     font-size: 0.875em;
   }

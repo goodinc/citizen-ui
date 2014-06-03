@@ -91,22 +91,24 @@
       </header>
 
       <form action="new" method="post">
-        <p class="text">
+        <p class="text error">
           <label>
             <span>What is your DO?</span><br />
             <input type="text" name="title" placeholder="ex. Bike to work" />
           </label>
+          <strong class="error-message">Please enter a title.</strong>
         </p>
-        <p class="text">
+        <p class="text error">
           <label>
-            <span>Add tags <em>comma separated. spaces are OK.</em></span><br />
+            <span>Add tags <em>(comma separated. spaces are OK.)</em></span><br />
             <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
           </label>
+          <strong class="error-message">Please enter a tag.</strong>
         </p>
-        <p class="text details inactive">
+        <p class="text details active">
           <label>
             <span>Add details <em>(optional)</em></span><br />
-            <textarea placeholder="Enter additional info… "></textarea>
+            <textarea placeholder="Enter additional info… " maxlength="1000"></textarea>
             <span class="note">Enter up to 1,000 characters of plain text. (URLs are OK.)</span>
           </label>
         </p>
