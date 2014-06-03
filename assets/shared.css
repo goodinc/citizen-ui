@@ -499,19 +499,21 @@
     display: block;
     padding-bottom: 0.7em;
   }
+  form .text label > span {
+    display: block;
+  }
+  form .text label br {
+    display: none;
+  }
   form label > .avatar {
     font-size: inherit;
     line-height: 1;
   }
-  form .text label > span {
-    display: block;
-  }
   form label > span {
     font-size: 0.875em; /* 14px / @font-size */
-    font-weight: bold;
   }
-  form .text label br {
-    display: none;
+  form label > span:first-child {
+    font-weight: bold;
   }
   input[type="text"],
   input[type="url"],
@@ -618,7 +620,7 @@
   form .note,
   form .text label > span.note,
   form label em {
-    font-size: 0.8em; /* 12px / 15px */
+    font-size: 0.8571428571em; /* 12px / 14px */
     font-style: normal;
     font-weight: normal;
     color: rgb(102, 102, 102);
@@ -711,7 +713,7 @@
   }
   form .headlines h3 ~ p {
     margin-top: 0;
-    margin-left: 1.75em;
+    margin-left: 1.7em;
   }
   form .frequency label > span:first-child {
     /* @hidden-accessible */
@@ -6513,7 +6515,6 @@
   }
   .dialog form .checkbox label > span {
     font-size: 0.875em; /* 14px / @font-size */
-    font-weight: normal;
   }
 
   /* OPTIONAL: Hang the checkbox to the left of the text, on the join page. */
