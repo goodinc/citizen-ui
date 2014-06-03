@@ -499,10 +499,6 @@
     display: block;
     padding-bottom: 0.7em;
   }
-  form label > span {
-    font-size: 0.9375em;
-    line-height: 1.6em; /* @line-height / 0.9375 */
-  }
   form label > .avatar {
     font-size: inherit;
     line-height: 1;
@@ -617,9 +613,12 @@
   .dialog .note,
   form .note,
   form label em {
-    font-size: 0.8666666667em; /* 13px / 15px */
+    font-size: 0.75em; /* 12px / 16px */
     font-style: normal;
     color: rgb(102, 102, 102);
+  }
+  form label em {
+    margin-left: 0.4375em;
   }
   form .note {
     margin-top: 0.375em;

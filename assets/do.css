@@ -317,15 +317,6 @@
     font-size: 1.5em;
     margin-bottom: 0;
   }
-  .do-new form label > span:first-child {
-    font-size: inherit;
-  }
-  .do-new label span em {
-    font-size: 0.75em;
-    font-style: normal;
-    color: rgb(102, 102, 102);
-    margin-left: 0.4375em;
-  }
   .do-new .text input,
   .do-new .text textarea {
     max-width: 35em;
