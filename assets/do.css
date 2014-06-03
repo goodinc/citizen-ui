@@ -321,9 +321,11 @@
   .do-new .text textarea {
     max-width: 35em;
   }
+  /*
   .do-new .text input[name*="title"] {
     font-weight: bold;
   }
+  */
 
   .do-new > form > .text ::-webkit-input-placeholder { /* WebKit browsers */
     color: rgb(204, 204, 204);
