@@ -1,0 +1,61 @@
+
+/*-----------------------------------------------
+    Story Styles
+  ----------------------------------------------- */
+
+  body {
+    margin: 3em;
+  }
+  body:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  figure img {
+    box-shadow: none;
+  }
+
+
+/* =Header
+  ----------------------------------------------- */
+  header.do h1,
+  header.do p {
+    display: inline;
+  }
+
+
+/* =Member
+  ----------------------------------------------- */
+  .member {
+    width: 15em;
+    float: left;
+    margin-right: 3em;
+  }
+  .member time {
+    display: block;
+  }
+
+
+/* =Story
+  ----------------------------------------------- */
+  .story {
+    width: 33em;
+    float: left;
+    margin-right: 3em;
+  }
+
+
+/* =Comments
+  ----------------------------------------------- */
+  .comments li form {
+    margin-top: 0;
+  }
+  .comments li {
+    display: inline-block;
+    width: 30em;
+    margin-right: 2em;
+    vertical-align: top;
+  }
+
+
