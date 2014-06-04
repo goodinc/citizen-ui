@@ -8,14 +8,18 @@
     font-size: 0.875em;
     vertical-align: middle;
     margin-top: 0;
+    color: rgb(153, 153, 153);
   }
   .do-header .edit a {
+    color: rgb(153, 153, 153);
+  }
+  .do-header .action.edit a {
     background-color: transparent;
     color: rgb(101, 102, 102);
     border-width: 0;
     font-weight: normal;
   }
-  .do-header .edit a:before {
+  .do-header .action.edit a:before {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -34,10 +38,13 @@
     transition: color 0.2s;
     color: rgb(229, 229, 229);
   }
-  .do-header .edit  a:hover:before,
-  .do-header .edit  a:active:before,
-  .do-header .edit  a:focus:before {
+  .do-header .action.edit  a:hover:before,
+  .do-header .action.edit  a:active:before,
+  .do-header .action.edit  a:focus:before {
     color: rgb(49, 144, 242); /* @deep-ocean */
+  }
+  .do-header a.more {
+    text-decoration: none;
   }
 
 
