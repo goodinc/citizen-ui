@@ -3,6 +3,30 @@
     DO Styles
   ----------------------------------------------- */
 
+  .do-header .edit {
+    display: inline-block;
+    font-size: 0.75em;
+    margin-left: 0.875em;
+    vertical-align: middle;
+    margin-top: 0;
+  }
+  .do-header .edit a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+
+    margin-right: 0.375em;
+    content: "\e609"; /* @icon-edit */
+  }
 
 /* =Header
   ----------------------------------------------- */
@@ -14,12 +38,17 @@
   #header + div .do-header:first-child {
     margin-top: 0;
   }
+  .do.options > .container,
   .do-header > .container {
     padding-left: 0;
     padding-right: 0;
     max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
+  }
+  .do.options > .container {
+    text-align: right;
+    padding-right: 1.5em;
   }
   .do-header > .container > div {
     border-width: 0.1em 0;
@@ -66,6 +95,9 @@
   .do-header .tags {
     font-size: 0.75em;
     margin-bottom: 0;
+    margin-top: 0;
+    border-top: 0.1em solid rgb(218, 220, 224);
+    padding-top: 0.875em;
   }
   .do-header .tags h2 {
     font-family: inherit;
@@ -117,7 +149,7 @@
     }
     .do-header > .container > div {
       padding-left: 4.75em;
-      padding-right: 8.75em;
+      padding-right: 11em;
       position: relative;
     }
     .do-header h2.do {
@@ -321,29 +353,6 @@
   .do-new .text textarea {
     max-width: 35em;
   }
-  /*
-  .do-new .text input[name*="title"] {
-    font-weight: bold;
-  }
-  */
-
-  .do-new > form > .text ::-webkit-input-placeholder { /* WebKit browsers */
-    color: rgb(204, 204, 204);
-    font-weight: normal;
-  }
-  .do-new > form > .text:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: rgb(204, 204, 204);
-    font-weight: normal;
-  }
-  .do-new > form > .text::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: rgb(204, 204, 204);
-    font-weight: normal;
-  }
-  .do-new > form > .text:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: rgb(204, 204, 204);
-    font-weight: normal;
-  }
-
   .do-new .mark-done {
     border-style: solid;
     border-color: rgb(203, 203, 203);
@@ -464,14 +473,14 @@
 
   /* =Tip
   ----------------------------------------------- */
-  .tip .container {
+  .do-new .tip .container {
     padding: 1.375em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231);
     border: 0.1875em solid rgb(243, 239, 209);
     border-radius: 0.5em;
     position: relative;
   }
-  .tip .container:before {
+  .do-new .tip .container:before {
     content: "";
     display: block;
     background: rgb(255, 252, 231);
@@ -489,7 +498,7 @@
     -o-transform      : rotate(135deg);
     transform         : rotate(135deg);
   }
-  .tip:before {
+  .do-new .tip:before {
     content: "i";
     font-style: italic;
     font-weight: bold;
@@ -502,26 +511,26 @@
     line-height: 1.5em;
     text-align: center;
   }
-  .tip:before {
+  .do-new .tip:before {
     position: absolute;
     top: 0;
     right: 1em;
   }
 
   @media (min-width: 65em) {
-    .tip {
+    .do-new .tip {
       margin: 0;
       position: absolute;
       top: 0;
       right: 0;
     }
-    .tip .container {
+    .do-new .tip .container {
       position: absolute;
       top: -1em;
       width: 11em;
       right: -15em;
     }
-    .tip .container:before {
+    .do-new .tip .container:before {
       top: 1em;
       right: auto;
       left: -0.75em;
@@ -530,27 +539,27 @@
       -o-transform      : rotate(45deg);
       transform         : rotate(45deg);
     }
-    .tip:before {
+    .do-new .tip:before {
       margin-right: 0.5em;
       right: 0;
     }
   }
-  .tip h2 {
+  .do-new .tip h2 {
     font-size: inherit;
     font-family: inherit;
     font-weight: bold;
   }
-  .tip p {
+  .do-new .tip p {
     font-size: 0.875em;
     color: rgb(102, 102, 102);
     line-height: 1.3;
   }
 
   /* OPTIONAL: Hide the tip if it’s inactive */
-  .tip {
+  .do-new .tip {
     cursor: pointer;
   }
-  .tip.inactive .container {
+  .do-new .tip.inactive .container {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
@@ -711,7 +720,6 @@
     .do-header ~ .do-story {
       padding-left: 1.5em;
       padding-right: 1.5em;
-      margin-bottom: 1.75em;
     }
   }
 
