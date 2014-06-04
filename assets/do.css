@@ -5,10 +5,15 @@
 
   .do-header .edit {
     display: inline-block;
-    font-size: 0.75em;
-    margin-left: 0.875em;
+    font-size: 0.875em;
     vertical-align: middle;
     margin-top: 0;
+  }
+  .do-header .edit a {
+    background-color: transparent;
+    color: rgb(101, 102, 102);
+    border-width: 0;
+    font-weight: normal;
   }
   .do-header .edit a:before {
     /* @icons */
@@ -26,7 +31,15 @@
 
     margin-right: 0.375em;
     content: "\e609"; /* @icon-edit */
+    transition: color 0.2s;
+    color: rgb(229, 229, 229);
   }
+  .do-header .edit  a:hover:before,
+  .do-header .edit  a:active:before,
+  .do-header .edit  a:focus:before {
+    color: rgb(49, 144, 242); /* @deep-ocean */
+  }
+
 
 /* =Header
   ----------------------------------------------- */
