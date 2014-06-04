@@ -262,6 +262,7 @@
 
   @media (min-width: 80em) {
     .member {
+      margin-left: 10em;
       width: 15em;
       float: left;
       margin-right: 3em;
@@ -276,7 +277,7 @@
   }
   @media (min-width: 80em) {
     .story {
-      width: 60em;
+      width: 50em;
       float: left;
       margin-right: 3em;
       background: white;
