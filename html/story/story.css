@@ -117,6 +117,10 @@
   .do-header {
     position: relative;
     z-index: 1;
+    margin: -3em;
+    padding: 3em;
+    background: white;
+    margin-bottom: 1px;
   }
   .do-header h3 {
     display: inline;
@@ -159,8 +163,33 @@
     display: inline;
     margin-left: 1.75em;
   }
+  .do-header .share {
+    margin-left: 2.75em;
+  }
   .do-header nav {
+    margin: 0;
     float: right;
+  }
+  .do-header nav a {
+    text-decoration: none;
+  }
+  .do-header .back a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+  }
+  .do-header .back a span {
+    position: absolute;
+    left: -9999px;
   }
 
 
@@ -208,8 +237,27 @@
 
 /* =Member
   ----------------------------------------------- */
+  .member h3 {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  .member h3 a {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .member h3 span,
   .member time {
     display: block;
+    margin-top: 0.5em;
+  }
+  .member h3 span {
+    margin-top: 0.5em;
+  }
+  .member time {
+    font-size: 0.875em;
+    color: rgb(153, 153, 153);
   }
 
   @media (min-width: 40em) {
