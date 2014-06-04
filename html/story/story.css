@@ -118,7 +118,7 @@
     position: relative;
     z-index: 1;
     margin: -3em;
-    padding: 3em;
+    padding: 1.5em 3em;
     background: white;
     margin-bottom: 1px;
   }
@@ -260,7 +260,7 @@
     color: rgb(153, 153, 153);
   }
 
-  @media (min-width: 40em) {
+  @media (min-width: 80em) {
     .member {
       width: 15em;
       float: left;
@@ -271,7 +271,10 @@
 
 /* =Story
   ----------------------------------------------- */
-  @media (min-width: 40em) {
+  .story {
+    margin-bottom: 3.5em;
+  }
+  @media (min-width: 80em) {
     .story {
       width: 60em;
       float: left;
@@ -287,7 +290,11 @@
 
 /* =Comments
   ----------------------------------------------- */
-  @media (min-width: 40em) {
+  .comments form .container,
+  .comment-list article {
+    background: white;
+  }
+  @media (min-width: 80em) {
     .comment-list > li {
       display: inline-block;
       width: 30em;

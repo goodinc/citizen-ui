@@ -110,9 +110,30 @@
 </article>
 
 <section class="comments">
-  <h2>Discuss</h2>
 
 <ul class="comment-list">
+  <li>
+    <h2>Discuss</h2>
+    <form action="" method="post" style="margin-top: 0;">
+      <div class="container">
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div>
+      <p class="submit">
+        <button type="submit">Post</button>
+      </p>
+    </form>
+  </li>
   <li>
     <article backbone-view="Comment" id="comment-43536" data-comment-id="43536" class="comment-level-1" data-comment-level="1">
       <h3 class="source has-image">
