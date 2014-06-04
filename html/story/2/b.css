@@ -1,0 +1,307 @@
+
+/*-----------------------------------------------
+    Story Styles
+  ----------------------------------------------- */
+
+  body {
+    margin: 1.5em;
+  }
+  @media (min-width: 40em) {
+    body {
+      margin: 3em;
+    }
+  }
+
+
+/* =Share
+  ----------------------------------------------- */
+  .share,
+  .share li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .share li {
+    display: inline;
+    margin-right: 1em;
+  }
+  .share a {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: bold;
+  }
+  .share a:hover,
+  .share a:active,
+  .share a:focus {
+    color: rgb(178, 158, 31);
+  }
+
+  .share .facebook a {
+    color: rgb(58, 88, 151) !important;
+  }
+  .share .twitter a {
+    color: rgb(40, 170, 225) !important;
+  }
+  .share .facebook  a:before,
+  .share .twitter   a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin-right: 0.4375em;
+  }
+  .share .facebook  a:before {
+    content: "\e60d"; /* @icon-facebook */
+  }
+  .share .twitter   a:before {
+    content: "\e60f"; /* @icon-twitter */
+  }
+
+  .share .facebook a:before {
+
+    background: rgb(59, 89, 152); /* @blueberry */
+    border-radius: 0.15em;
+    padding: 0.25em 0 0 0.25em;
+
+    content: "\e60d"; /* @icon-facebook */
+    color: white;
+
+  }
+
+
+/* =Do Header
+  ----------------------------------------------- */
+  .do-header {
+    position: relative;
+    z-index: 1;
+    margin: -3em;
+    padding: 1.5em 3em;
+    background: white;
+    margin-bottom: 1px;
+  }
+  .do-header h3 {
+    display: inline;
+    margin-right: 1.75em;
+  }
+  .do-header h3 a {
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
+    text-decoration: none;
+    color: rgb(0, 1, 2); /* @midnight */
+    font-size: 1.75em;
+    vertical-align: middle;
+  }
+  .do-header h2 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    font-size: 1em;
+    background: black;
+    color: white;
+    border-radius: 100%;
+    width: 2.25em;
+    line-height: 2.25em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 0.875em;
+  }
+  .do-header h1 {
+    display: inline;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .do-header h1 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .do-header p,
+  .do-header .share {
+    display: inline;
+    margin-left: 1.75em;
+  }
+  .do-header .share {
+    margin-left: 2.75em;
+  }
+  .do-header nav {
+    margin: 0;
+    float: right;
+  }
+  .do-header nav a {
+    text-decoration: none;
+  }
+  .do-header .back a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+  }
+  .do-header .back a span {
+    position: absolute;
+    left: -9999px;
+  }
+
+
+/* =Story Navigation
+  ----------------------------------------------- */
+  .do-story-nav {
+    background: none;
+    border-top-width: 0;
+  }
+  .do-story-nav ul,
+  .do-story-nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .do-story-nav a {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* @hidden-accessible-text */
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  .do-story-nav .next a {
+    right: 0;
+    background-image: url(next.svg);
+  }
+  .do-story-nav .previous a {
+    left: 0;
+    background-image: url(previous.svg);
+  }
+
+  @media (max-width: 29.9em) {
+    .do-story-nav a {
+      background-size: 90% auto;
+    }
+  }
+
+
+/* =Member
+  ----------------------------------------------- */
+  .story {
+    position: relative;
+  }
+  .member {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    padding: 0.875em;
+  }
+  .member h3 {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  .member h3 a {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+  }
+  .member h3 img {
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+  .member h3 span {
+    margin-top: 0.5em;
+    margin-right: 1em;
+  }
+  .member time {
+    font-size: 0.875em;
+    color: rgb(153, 153, 153);
+  }
+
+
+/* =Story
+  ----------------------------------------------- */
+  .story {
+    margin-top: -3em;
+    margin-right: -3em;
+    margin-left: -3em;
+    padding: 3em;
+  }
+  .story {
+    background: white;
+  }
+  .body {
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+/* =Images
+  ----------------------------------------------- */
+  .images {
+    text-align: center;
+  }
+  .images figure {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+  }
+  .images figure + figure {
+    margin-top: 0;
+  }
+  .images figure .image {
+    display: inline;
+  }
+  .images figure img {
+    box-shadow: none;
+    max-height: 400px;
+  }
+
+
+/* =Comments
+  ----------------------------------------------- */
+  .comments {
+    text-align: center;
+  }
+  .comments form .container {
+    background: white;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .comment-list article {
+    background: white;
+    text-align: left;
+  }
+  @media (min-width: 80em) {
+    .comment-list > li {
+      display: inline-block;
+      width: 30em;
+      margin-right: 1.75em;
+      margin-bottom: 1.75em;
+      vertical-align: top;
+    }
+  }
+
+
