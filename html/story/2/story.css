@@ -85,17 +85,18 @@
       padding-right: 2.25em;
     }
   }
-  /*
-  @media (min-width: 1000em) {
+  @media (min-width: 70em) {
+    body {
+      padding-top: 4.4em;
+    }
     .do-header {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       z-index: 1;
       width: 100%;
     }
   }
-  */
   .do-header h3 a {
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     text-decoration: none;
@@ -240,11 +241,11 @@
     padding: 0.875em 1.75em 0.875em 0.875em;
     border: 0.1em solid rgb(224, 224, 224);
   }
-  @media (min-width: 1000em) {
+  @media (min-width: 70em) {
     .member {
       position: fixed;
       top: 6.5em;
-      left: 3em;
+      left: 2.25em;
     }
   }
   .member h3 {
