@@ -1207,6 +1207,7 @@
   ----------------------------------------------- */
   .do-comments {
     position: relative;
+    margin-bottom: 0;
   }
   .do-comments .share {
     margin-top: 0;
@@ -1242,7 +1243,6 @@
     vertical-align: middle;
   }
   section.comments,
-  .do-comments,
   .do-comments header {
     padding-bottom: 0.875em;
     border-bottom: 0.1em solid rgb(233, 233, 233);
@@ -1639,3 +1639,14 @@
   .feedback a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
+
+
+/* =Advertising
+  ----------------------------------------------- */
+  .ad-container {
+    clear: both;
+    border-top: 1px solid rgb(221, 223, 227);
+    padding-top: 1.75em;
+  }
+
+
