@@ -3,15 +3,6 @@
     Story Styles
   ----------------------------------------------- */
 
-  body {
-    margin: 3em 1.5em;
-  }
-  @media (min-width: 40em) {
-    body {
-      margin: 3em;
-    }
-  }
-
 
 /* =Share
   ----------------------------------------------- */
@@ -81,26 +72,40 @@
 /* =Do Header
   ----------------------------------------------- */
   .do-header {
-    position: fixed;
-    z-index: 1;
-    margin: -3em;
-    padding: 1em 3em;
+    padding: 1em 1.5em;
     background: white;
     margin-bottom: 1px;
-    width: 100%;
-    box-sizing: border-box;
     border-bottom: 0.1em solid rgb(224, 224, 224);
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
   }
-  .do-header h3 {
-    display: inline;
-    margin-right: 1.75em;
+  @media (min-width: 40em) {
+    .do-header {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
   }
+  /*
+  @media (min-width: 1000em) {
+    .do-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+    }
+  }
+  */
   .do-header h3 a {
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     text-decoration: none;
     color: rgb(0, 1, 2); /* @midnight */
     font-size: 1.75em;
     vertical-align: middle;
+  }
+  .do-header h3 {
+    display: inline;
+    margin-right: 1.75em;
   }
   .do-header h2 {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
@@ -118,10 +123,22 @@
     margin-right: 0.875em;
   }
   .do-header h1 {
-    display: inline;
     font-family: inherit;
     font-size: 18px;
     font-weight: bold;
+  }
+  .do-header h1 {
+    border-top: 0.1em solid rgb(224, 224, 224);
+    padding-top: 0.875em;
+    margin-top: 0.875em;
+  }
+  @media (min-width: 40em) {
+    .do-header h1 {
+      border-top-width: 0;
+      padding-top: 0;
+      margin-top: 0;
+      display: inline;
+    }
   }
   .do-header h1 a {
     color: inherit;
@@ -135,9 +152,11 @@
   .do-header .share {
     margin-left: 2.75em;
   }
-  .do-header nav {
-    margin: 0;
-    display: inline;
+  @media (min-width: 60em) {
+    .do-header nav {
+      margin: 0;
+      display: inline;
+    }
   }
   .do-header nav a {
     text-decoration: none;
@@ -167,8 +186,10 @@
     padding-left: 0;
     display: inline;
   }
-  .do-header nav ul {
-    margin-left: 3em;
+  @media (min-width: 60em) {
+    .do-header nav ul {
+      margin-left: 3em;
+    }
   }
   .do-header nav li + li {
     margin-left: 0.75em;
@@ -184,38 +205,65 @@
   }
 
 
-/* =Story Navigation
+/* =Pagination
   ----------------------------------------------- */
   .pagination {
-    clear: both;
+    background: transparent;
     padding-top: 1.75em;
-    padding-bottom: 3.5em;
+    border-top-width: 0;
+    padding-bottom: 5.25em;
     margin-bottom: 0;
-    margin-left: -3em;
-    margin-right: -3em;
+  }
+
+
+/* =Story
+  ----------------------------------------------- */
+  .story {
+    margin-top: 0;
+    position: relative;
+  }
+  .story {
+    padding: 1.5em;
+  }
+  .story {
+    background: white;
+  }
+  .body {
+    margin-top: 1.75em;
   }
 
 
 /* =Member
   ----------------------------------------------- */
-  .story {
-    position: relative;
-  }
   .member {
-    text-align: center;
     background: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    top: 6.5em;
-    left: 3em;
     padding: 0.875em 1.75em 0.875em 0.875em;
     border: 0.1em solid rgb(224, 224, 224);
   }
-  .member .share {
+  @media (min-width: 1000em) {
+    .member {
+      position: fixed;
+      top: 6.5em;
+      left: 3em;
+    }
   }
-  .member h3,
-  .member .share {
+  .member h3 {
     margin: 0;
     display: inline-block;
+  }
+  .member time {
+    margin-top: 1.75em;
+    display: block;
+  }
+  @media (min-width: 40em) {
+    .member .share {
+      margin: 0;
+      display: inline-block;
+    }
+    .member time {
+      margin: 0;
+      display: inline;
+    }
   }
   .member h3 {
     margin-right: 1.5em;
@@ -243,44 +291,13 @@
   }
 
 
-/* =Story
-  ----------------------------------------------- */
-  .story {
-    margin-top: -3em;
-    margin-right: -3em;
-    margin-left: -3em;
-    padding: 0.875em;
-  }
-  .story {
-    background: white;
-  }
-  .body {
-    margin-top: 3.5em;
-    margin-bottom: 3.5em;
-    max-width: 50em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @media (min-width: 80em) {
-    .story {
-      margin: 3.5em 0;
-      width: 65%;
-      float: left;
-    }
-    .comments {
-      margin: 3.5em 0;
-      width: 25%;
-      float: right;
-      border-left: 0.1em solid rgb(224, 224, 224);
-      padding-left: 1.5em;
-    }
-  }
-
-
 /* =Images
   ----------------------------------------------- */
   .images {
     text-align: center;
+  }
+  .images figure {
+    margin: 0;
   }
   .images figure img {
     box-shadow: none;
@@ -293,6 +310,17 @@
 
 /* =Comments
   ----------------------------------------------- */
+  .comments {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .comments h2 {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+  }
+  .comments form {
+    margin-left: 1.5em;
+  }
   .comments form .container {
     background: white;
     max-width: 40em;
@@ -300,12 +328,18 @@
   .comment-list article {
     background: white;
     text-align: left;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
   .comment-list article {
     border-width: 0 0 0.1em 0;
     border-style: solid;
     border-color: rgb(224, 224, 224);
-    padding-left: 5.625em !important;
+  }
+  @media (min-width: 40em) {
+    .comment-list li li article {
+      padding-left: 5.625em;
+    }
   }
   /*
   .comment-list .comment-list article h3 img {
@@ -323,23 +357,64 @@
   .comment-list .comment-list {
     margin-top: 0;
   }
+  .comment-list li {
+    margin-bottom: 1.5em;
+  }
+  .comment-list li:last-child {
+    margin-bottom: 0;
+  }
   .comment-list .comment-list li {
     margin-bottom: 0;
   }
   .comment-list .comment-list article {
     background: rgb(235, 235, 235);
   }
-  @media (min-width: 80em) {
-    .comment-list > li {
-      display: inline-block;
-      width: 33em;
-      margin-right: 1.75em;
-      margin-bottom: 1.75em;
-      vertical-align: top;
+
+
+/* =Layout
+  ----------------------------------------------- */
+  @media (min-width: 65em) {
+    .story {
+      margin: 2.25em 0 2.25em 2.25em;
+      padding: 0.875em 0.875em 3.5em;
+      width: 55%;
+      float: left;
+    }  
+    .body {
+      max-width: 50em;
+      padding-left: 1.75em;
+      padding-right: 1.75em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .comments {
+      margin: 2.25em;
+      width: 30%;
+      float: right;
+      border-left: 0.1em solid rgb(224, 224, 224);
+    }
+    .comments > .comment-list {
+      margin-left: 1.5em;
+    }
+    .comments form .container {
+      max-width: none;
     }
   }
-
-
-
+  @media (min-width: 80em) {
+    .story {
+      width: 57%;
+    }
+    .comments {
+      width: 27%;
+    }
+  }
+  @media (min-width: 110em) {
+    .story {
+      width: 63%;
+    }
+    .comments {
+      width: 27%;
+    }
+  }
 
 
