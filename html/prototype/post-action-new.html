@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>GOOD</title>
+  <title>New – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -35,7 +35,13 @@
       <div class="options">
         <ul>
           <li><a href="explore.html">Explore</a></li>
-          <li><a href="post-new-link.html">Post</a></li>
+          <li class="post">
+            <a href="post-link-new.html">Post</a>
+            <ul>
+              <li><a href="post-action-new.html"><span>Post</span> Do</a></li>
+              <li><a href="post-link-new.html"><span>Post</span> Link</a></li>
+            </ul>
+          </li>
         </ul>
         <section role="search" class="search">
           <h4>Search</h4>
@@ -55,7 +61,7 @@
     <nav class="account">
       <h3>
         <a href="member.html">
-          <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" width="40" height="40" alt="Agus Echagüe" />
+          <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" width="40" height="40" alt="Agus Echagüe" />
         </a>
       </h3>
       <div class="options">
@@ -74,74 +80,90 @@
 <main id="content">
   <div class="container">
 
-    <header>
-      <h2>I am posting…</h2>
-      <nav class="sub">
-        <ul>
-          <li class="active">
-            <a href="post-new-link.html">Something to learn</a>
-          </li>
-          <li>
-            <a href="post-new-action.html">Something to do</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <section class="post-form">
 
-    <section class="has-aside">
-      <h1>Post something to learn</h1>
+      <header>
+        <h1>New DO</h1>
 
-      <form action="" method="post">
-        <p>
+        <section class="tip">
+          <div class="container">
+            <h2>What is a DO?</h2>
+            <p>A DO is a creative action you or anyone can take towards a better self and a better world.</p>
+            <p>Share what you’ve done to live well and do good.</p>
+          </div>
+        </section>
+      </header>
+
+      <form action="new" method="post">
+        <p class="text">
           <label>
-            <span>URL</span><br />
-            <input type="url" required="required" />
+            <span>What is your DO?</span><br />
+            <input type="text" name="title" placeholder="ex. Bike to work" />
           </label>
         </p>
-        <p>
+        <p class="text">
           <label>
-            <span>Title</span><br />
-            <input type="text" required="required" />
+            <span>Add tags <em>Comma separated. Spaces are OK.</em></span><br />
+            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
           </label>
         </p>
-        <p>
+        <p class="text details inactive">
           <label>
-            <span>Description</span><br />
-            <textarea></textarea>
+            <span>Add details <em>(Optional)</em></span><br />
+            <textarea placeholder="Enter additional info… "></textarea>
+            <span class="note">Enter up to 1,000 characters of plain text. URLs are OK.</span>
           </label>
         </p>
-        <p>
-          <label>
-            <span>Tags</span><br />
-            <input type="text" placeholder="ex. Design, Science, Politics" />
-          </label>
-          <br />
-          <span class="note"><strong>Tags</strong> provide a useful way to group related learns and dos together. Tags also make it easier for people to find your posts.</span>
-        </p>
-        <p>
-          <label>
-            <span>Pick a post thumbnail</span><br />
-            <input type="file" /><br />
-            <span class="note">Upload an image… or choose one we found below (must be at least 240x240 pixels)</span>
-          </label>
-        </p>
+
+        <div class="mark-done">
+          <p class="checkbox">
+            <label>
+              <input type="checkbox" />
+              <span>Done?</span>
+            </label>
+          </p>
+
+          <section class="do-story">
+            <div class="container">
+              <h2>Add your story</h2>
+              <p>Optional</p>
+              <fieldset class="inactive">
+                <div class="container">
+                  <h6 class="avatar">
+                    <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
+                  </h6>
+                  <p class="text">
+                    <label>
+                      <span>What happened when you last did this?</span><br />
+                      <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
+                    </label>
+                  </p>
+                  <p class="file">
+                    <label>
+                      <span>Attach Image</span><br />
+                      <input type="file" name="image[]" />
+                    </label>
+                  </p>
+                </div><!-- /.container -->
+                <p class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Yes, share this to Facebook.</span>
+                  </label>
+                </p>
+              </fieldset>
+            </div><!-- /.container -->
+          </section>
+
+        </div>
 
         <ul class="submit">
           <li><button type="submit">Post</button></li>
-          <li><a href="">Nevermind</a></li>
+          <li><a href="">Cancel</a></li>
         </ul>
       </form>
-    </section>
 
-    <aside>
-      <h2>GOOD Contributions 101</h2>
-
-      <h3>Posting a Learn</h3>
-      <p>Keep it real. Post links for others to learn from. Inspire those you respect in the GOOD community.</p>
-
-      <h3>Posting a Do</h3>
-      <p>Inspire people to take action. Post a petition, a cause you care about, or just something you think people should do.</p>
-    </aside>
+    </section><!-- /.do-new -->
 
   </div><!-- /.container -->
 </main><!-- /#content -->
@@ -149,7 +171,7 @@
 <footer id="footer">
   <div class="container">
     <section>
-      <h2>Creative Solutions for Living Well + Doing Good. <a href="join.html">Join our community</a></h2>
+      <h2>Creative Solutions for Living Well + Doing Good.</h2>
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
