@@ -126,64 +126,72 @@
               (The idea being that this class name will only be present if JavaScript
               is synchronizing the “active” class name with checked radio button.) -->
         <fieldset class="images scripted">
-          <legend>Pick a post thumbnail <em>(Optional)</em></legend>
-          <ul>
-            <li>
-              <label>
-                <input type="radio" name="image" value="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/318/757/original/4942565003_a18b7ba586_b.jpg" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F318%2F757%2Foriginal%2F4942565003_a18b7ba586_b.jpg&amp;geometry=240x240%23" width="120" height="120" alt="Image 1" />
-              </label>
-            </li>
-            <li class="active">
-              <label>
-                <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453031219_64240503ff_b_1024x1024.jpg?6349" checked="checked" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F1453031219_64240503ff_b_1024x1024.jpg%3F6349&amp;geometry=240x240%23" width="120" height="120" alt="Image 2" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453850084_335fa0fab7_b_1024x1024.jpg?6350" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F1453850084_335fa0fab7_b_1024x1024.jpg%3F6350&amp;geometry=240x240%23" width="120" height="120" alt="Image 3" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/5977660071_e189bbcb8a_b_e0d02f68-654a-4838-a505-1f4452c550e1_1024x1024.jpg?6353" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F5977660071_e189bbcb8a_b_e0d02f68-654a-4838-a505-1f4452c550e1_1024x1024.jpg%3F6353&amp;geometry=240x240%23" width="120" height="120" alt="Image 4" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/5a_1024x1024.jpg?4862" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F5a_1024x1024.jpg%3F4862&amp;geometry=240x240%23" width="120" height="120" alt="Image 5" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/6_1024x1024.jpg?4517" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F6_1024x1024.jpg%3F4517&amp;geometry=240x240%23" width="120" height="120" alt="Image 6" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/SXSWInspirationStation-30_grande.jpg?2949" />
-                <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2FSXSWInspirationStation-30_grande.jpg%3F2949&amp;geometry=240x240%23" width="120" height="120" alt="Image 7" />
-              </label>
-            </li>
-            <li class="empty">
-              <label>
-                <input type="radio" name="image" value="" />
-                <span class="pseudo-image">No Image</span>
-              </label>
-            </li>
-          </ul>
-          <p>
+          <legend>Edit post thumbnail</legend>
+
+          <h6>Current image</h6>
+          <p class="current active">
             <label>
-              <span>Upload an image</span><br />
-              <input type="file" /><br />
-              <span class="note">Image must be at least 240 pixels wide and tall.</span>
+              <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/SXSWInspirationStation-20_grande.jpg?2950" checked="checked" />
+              <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2FSXSWInspirationStation-20_grande.jpg%3F2950%3F6349&amp;geometry=240x240%23" width="120" height="120" alt="Image 2" />
             </label>
           </p>
+
+          <!--
+          <div class="options">
+            <h6>Choose an image</h6>
+            <ul>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/318/757/original/4942565003_a18b7ba586_b.jpg" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F318%2F757%2Foriginal%2F4942565003_a18b7ba586_b.jpg&amp;geometry=240x240%23" width="120" height="120" alt="Image 1" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453031219_64240503ff_b_1024x1024.jpg?6349" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F1453031219_64240503ff_b_1024x1024.jpg%3F6349&amp;geometry=240x240%23" width="120" height="120" alt="Image 2" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453850084_335fa0fab7_b_1024x1024.jpg?6350" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F1453850084_335fa0fab7_b_1024x1024.jpg%3F6350&amp;geometry=240x240%23" width="120" height="120" alt="Image 3" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/5977660071_e189bbcb8a_b_e0d02f68-654a-4838-a505-1f4452c550e1_1024x1024.jpg?6353" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F5977660071_e189bbcb8a_b_e0d02f68-654a-4838-a505-1f4452c550e1_1024x1024.jpg%3F6353&amp;geometry=240x240%23" width="120" height="120" alt="Image 4" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/5a_1024x1024.jpg?4862" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F5a_1024x1024.jpg%3F4862&amp;geometry=240x240%23" width="120" height="120" alt="Image 5" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/6_1024x1024.jpg?4517" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F6_1024x1024.jpg%3F4517&amp;geometry=240x240%23" width="120" height="120" alt="Image 6" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/SXSWInspirationStation-30_grande.jpg?2949" />
+                  <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2FSXSWInspirationStation-30_grande.jpg%3F2949&amp;geometry=240x240%23" width="120" height="120" alt="Image 7" />
+                </label>
+              </li>
+            </ul>
+            <p class="file">
+              <label>
+                <span>Or upload an image</span><br />
+                <input type="file" /><br />
+                <span class="note">Image must be at least 240 pixels wide and tall.</span>
+              </label>
+            </p>
+          </div>
+            -->
         </fieldset>
 
         <ul class="submit">

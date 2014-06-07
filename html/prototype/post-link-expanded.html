@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>New Link – GOOD</title>
+  <title>Edit Link – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -83,9 +83,9 @@
     <section class="post-form">
 
       <header>
-        <h1>Post Link</h1>
+        <h1>Edit Link</h1>
 
-        <section class="tip">
+        <section class="tip inactive">
           <div class="container">
             <h2>Posting a Link</h2>
             <p><strong>Keep it real.</strong> Post links for others to learn from. Inspire those you respect in the GOOD community.</p>
@@ -97,26 +97,26 @@
         <p class="text">
           <label>
             <span>URL</span><br />
-            <input type="url" name="url" required="required" />
+            <input type="url" name="url" value="http://anotherjennifer.com/philanthropy-friday-a-breath-of-fresh-air/" required="required" />
           </label>
         </p>
         <p class="text">
           <label>
             <span>Title</span><br />
-            <input type="text" name="title" required="required" />
+            <input type="text" name="title" value="Open Your Home for a Breath of Fresh Air " required="required" />
           </label>
         </p>
         <p class="text details">
           <label>
             <span>Description <em>(Optional)</em></span><br />
-            <textarea name="description" placeholder="Add some details about your post… "></textarea>
+            <textarea name="description" placeholder="Add some details about your post… ">The Fresh Air Fund is looking for host families this summer! Thousands of volunteer host families in rural, suburban, and small town communities across 13 states from Virginia to Maine and Canada open their hearts and homes to New York City children from low-income communities through The Fresh Air Fund’s Volunteer Host Family program. Read about Michelle Nahom's experience as a host family and find out more about volunteer opps for the summer in today's Philanthropy Friday.﻿</textarea>
             <span class="note">Enter up to 500 characters of plain text.</span>
           </label>
         </p>
         <p class="text">
           <label>
             <span>Add tags <em>Comma separated. Spaces are OK.</em></span><br />
-            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
+            <input type="text" name="tags" value="At Risk Children, Fresh Air, Fund Volunteering" placeholder="ex. biking, conscious living, design" />
           </label>
         </p>
 
@@ -126,7 +126,15 @@
               (The idea being that this class name will only be present if JavaScript
               is synchronizing the “active” class name with checked radio button.) -->
         <fieldset class="images scripted">
-          <legend>Pick a post thumbnail <em>(Optional)</em></legend>
+          <legend>Edit post thumbnail</legend>
+
+          <h6>Current image</h6>
+          <p class="current">
+            <label>
+              <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/SXSWInspirationStation-20_grande.jpg?2950"/>
+              <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2FSXSWInspirationStation-20_grande.jpg%3F2950%3F6349&amp;geometry=240x240%23" width="120" height="120" alt="Image 2" />
+            </label>
+          </p>
 
           <div class="options">
             <h6>Choose an image</h6>
@@ -137,15 +145,15 @@
                   <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F318%2F757%2Foriginal%2F4942565003_a18b7ba586_b.jpg&amp;geometry=240x240%23" width="120" height="120" alt="Image 1" />
                 </label>
               </li>
-              <li class="active">
+              <li>
                 <label>
                   <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453031219_64240503ff_b_1024x1024.jpg?6349" />
                   <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F1453031219_64240503ff_b_1024x1024.jpg%3F6349&amp;geometry=240x240%23" width="120" height="120" alt="Image 2" />
                 </label>
               </li>
-              <li>
+              <li class="active">
                 <label>
-                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453850084_335fa0fab7_b_1024x1024.jpg?6350" />
+                  <input type="radio" name="image" value="http://cdn.shopify.com/s/files/1/0345/4485/files/1453850084_335fa0fab7_b_1024x1024.jpg?6350" checked="checked"  />
                   <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0345%2F4485%2Ffiles%2F1453850084_335fa0fab7_b_1024x1024.jpg%3F6350&amp;geometry=240x240%23" width="120" height="120" alt="Image 3" />
                 </label>
               </li>
@@ -193,7 +201,7 @@
         </fieldset>
 
         <ul class="submit">
-          <li><button type="submit">Post</button></li>
+          <li><button type="submit">Save</button></li>
           <li><a href="">Cancel</a></li>
         </ul>
       </form>

@@ -7502,8 +7502,8 @@
     margin-bottom: 0.25em;
     vertical-align: top;
   }
-  .post-form .images li .pseudo-image,
-  .post-form .images li img {
+  .post-form .images .pseudo-image,
+  .post-form .images img {
     display: block;
     cursor: pointer;
     opacity: 0.8;
@@ -7516,22 +7516,71 @@
     width: 120px;
     line-height: 120px;
     text-align: center;
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(247, 157, 130);
+    color: white;
+    font-weight: bold;
   }
-  .post-form .images li input {
+  .post-form .images input[type="radio"] {
     position: absolute;
     z-index: 1;
     margin-top: 1em;
     margin-left: 1em;
   }
-  .post-form .images.scripted li input {
+  .post-form .images.scripted input[type="radio"] {
     left: -9999px;
   }
-  .post-form .images.scripted li img {
+  .post-form .images.scripted img {
     opacity: 0.7;
   }
-  .post-form .images.scripted li.active img {
+  .post-form .images.scripted .active img {
     border-color: black;
+    opacity: 1;
+  }
+  .post-form .images h6 {
+    margin-bottom: 0;
+  }
+  .post-form .images h6 + p,
+  .post-form .images h6 + ul {
+    margin-top: 0.4375em;
+  }
+  .post-form .images .file,
+  .post-form .images .options {
+    margin-top: 1.75em;
+  }
+  .post-form .images .current label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  .post-form .images.scripted .current.active label:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.5em;
+
+    content: "\e609"; /* @icon-edit */
+    background:  rgb(0, 1, 2);       /* @midnight */
+    background: rgba(0, 1, 2, 0.75); /* @midnight */
+    color: rgb(204, 204, 204); /* @magnesium */
+    position: absolute;
+    padding: 0.25em;
+    border-radius: 0.125em;
+    top: 50%;
+    left: 50%;
+    margin-left : -0.75em;
+    margin-top  : -0.75em;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .post-form .images.scripted .current.active label:hover:after {
     opacity: 1;
   }
 
