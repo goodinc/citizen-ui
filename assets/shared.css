@@ -543,10 +543,12 @@
     display: block;
     margin: 0;
 
+    line-height: 1.375;
+
     /* Give the field a width of 33em’s, but make it fit on small screens. */
     max-width: 33em;
     width: 100%;
-    height: 4.5em; /* line-height(~1.2em) + padding(0.45em) x 2 */
+    height: 9.15em; /* (line-height(1.375) x 6) + padding(0.45em) x 2 */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
@@ -613,15 +615,17 @@
   }
 
   .dialog .note,
-  form .note,
+  form    .note,
   form .text label > span.note,
-  form label em {
+  form legend em,
+  form label  em {
     font-size: 0.8571428571em; /* 12px / 14px */
     font-style: normal;
     font-weight: normal;
     color: rgb(102, 102, 102);
   }
-  form label em {
+  form legend em,
+  form label  em {
     margin-left: 0.4375em;
   }
   form .note {
@@ -676,10 +680,10 @@
     border-width: 0;
     padding: 0;
     position: relative;
+    margin-left: 0;
+    margin-right: 0;
 
-    /* @fieldset */
-    margin-top: 1.75em; /* @line-height */
-    border-top: 0.1em solid rgb(218, 220, 224);
+    margin-top: 0.875em;
     padding-top: 1.75em;
   }
   fieldset:first-child {
@@ -687,13 +691,23 @@
   }
   legend {
     position: absolute;
+    padding: 0;
     top: 0;
     left: 0;
     font-weight: bold;
   }
+  fieldset h6 {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 0.875em;
+  }
+  p + fieldset,
   fieldset + fieldset {
+    margin-top: 1.75em; /* @line-height */
+    border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 3.5em;
   }
+  p + fieldset legend,
   fieldset + fieldset legend {
     top: 1.75em;
   }
@@ -1082,11 +1096,11 @@
 
   /* =Links & Buttons
   ----------------------------------------------- */
-  .scripted-do form.following h6,
-  .scripted-do form.voted h6,
-  .scripted-do form.do    h6,
-  .scripted-do form.doing h6,
-  .scripted-do form.done  h6,
+  .scripted-button form.following h6,
+  .scripted-button form.voted h6,
+  .scripted-button form.do    h6,
+  .scripted-button form.doing h6,
+  .scripted-button form.done  h6,
   a .action span,
   .action a,
   button {
@@ -1131,11 +1145,11 @@
   .vote button {
     background-color: rgb(113, 179, 247); /* @sky */
   }
-  .scripted-do form.voted h6,
+  .scripted-button form.voted h6,
   .voted button {
     background-color: rgb(49, 144, 242); /* @deep-ocean */
   }
-  .scripted-do form.voted h6,
+  .scripted-button form.voted h6,
   .vote  button,
   .voted button {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
@@ -1150,9 +1164,9 @@
   .vote button:focus {
     background-color: rgb(49, 144, 242); /* @deep-ocean */
   }
-  .scripted-do form.voted h6:hover,
-  .scripted-do form.voted h6:active,
-  .scripted-do form.voted h6:focus,
+  .scripted-button form.voted h6:hover,
+  .scripted-button form.voted h6:active,
+  .scripted-button form.voted h6:focus,
   .voted button:hover,
   .voted button:active,
   .voted button:focus {
@@ -1160,7 +1174,7 @@
   }
 
   /* OPTIONAL: Adjust the font size, for readability */
-  .scripted-do form.voted h6,
+  .scripted-button form.voted h6,
   .vote  button,
   .voted button {
     font-size: 1.2em;
@@ -1177,13 +1191,13 @@
   .follow button:focus {
     background-color: rgb(64, 198, 131);
   }
-  .scripted-do form.following h6,
+  .scripted-button form.following h6,
   .following button {
     background-color: rgb(64, 198, 149);
   }
-  .scripted-do form.following h6:hover,
-  .scripted-do form.following h6:active,
-  .scripted-do form.following h6:focus {
+  .scripted-button form.following h6:hover,
+  .scripted-button form.following h6:active,
+  .scripted-button form.following h6:focus {
     background-color: rgb(80, 167, 135);
   }
   .following button:hover,
@@ -1212,42 +1226,42 @@
 
   /* SHIM: Hide the hover effect inside dropdowns.
   (This can be removed once the HTML has been updated and the hover effect is obsolete) */
-  .scripted-do form.following h6 + p button:before {
+  .scripted-button form.following h6 + p button:before {
     content: none;
   }
 
   /* Do */
-  .scripted-do form.do h6,
+  .scripted-button form.do h6,
   .do button {
     background-color: rgb(124, 227, 162); /* @moss */
   }
-  .scripted-do form.do h6:hover,
-  .scripted-do form.do h6:active,
-  .scripted-do form.do h6:focus,
+  .scripted-button form.do h6:hover,
+  .scripted-button form.do h6:active,
+  .scripted-button form.do h6:focus,
   .do button:hover,
   .do button:active,
   .do button:focus {
     background-color: rgb(64, 198, 131);
   }
-  .scripted-do form.doing h6,
+  .scripted-button form.doing h6,
   .doing button {
     background-color: rgb(130, 242, 206);
   }
-  .scripted-do form.doing h6:hover,
-  .scripted-do form.doing h6:active,
-  .scripted-do form.doing h6:focus,
+  .scripted-button form.doing h6:hover,
+  .scripted-button form.doing h6:active,
+  .scripted-button form.doing h6:focus,
   .doing button:hover,
   .doing button:active,
   .doing button:focus {
     background-color: rgb(110, 222, 186);
   }
-  .scripted-do form.done h6,
+  .scripted-button form.done h6,
   .done button {
     background: rgb(64, 198, 149);
   }
-  .scripted-do form.done h6:hover,
-  .scripted-do form.done h6:active,
-  .scripted-do form.done h6:focus,
+  .scripted-button form.done h6:hover,
+  .scripted-button form.done h6:active,
+  .scripted-button form.done h6:focus,
   .done button:hover,
   .done button:active,
   .done button:focus {
@@ -1311,24 +1325,24 @@
   form.done  h6 + p {
     margin-top: 0.4375em;
   }
-  .scripted-do form.following h6,
-  .scripted-do form.voted h6 {
+  .scripted-button form.following h6,
+  .scripted-button form.voted h6 {
     font-style: normal;
     color: white;
   }
-  .scripted-do form.do    h6,
-  .scripted-do form.doing h6,
-  .scripted-do form.done  h6 {
+  .scripted-button form.do    h6,
+  .scripted-button form.doing h6,
+  .scripted-button form.done  h6 {
     font-style: normal;
     font-size: inherit;
     color: white;
   }
 
-  .scripted-do form.following h6 + p,
-  .scripted-do form.voted h6 + p,
-  .scripted-do form.do    h6 + p,
-  .scripted-do form.doing h6 + p,
-  .scripted-do form.done  h6 + p {
+  .scripted-button form.following h6 + p,
+  .scripted-button form.voted h6 + p,
+  .scripted-button form.do    h6 + p,
+  .scripted-button form.doing h6 + p,
+  .scripted-button form.done  h6 + p {
     position: absolute;
     z-index: 9999; /* @infinity */
     background: white;
@@ -1338,28 +1352,28 @@
     transition: opacity 0.2s;
     margin-top: 1em;
   }
-  .scripted-do form.following h6 + p,
-  .scripted-do form.voted h6 + p,
-  .scripted-do form.do    h6 + p,
-  .scripted-do form.doing h6 + p,
-  .scripted-do form.done  h6 + p {
+  .scripted-button form.following h6 + p,
+  .scripted-button form.voted h6 + p,
+  .scripted-button form.do    h6 + p,
+  .scripted-button form.doing h6 + p,
+  .scripted-button form.done  h6 + p {
     left: -9999px;
     opacity: 0;
     transition: opacity 0.2s;
   }
-  .scripted-do form.following.active h6 + p,
-  .scripted-do form.voted.active h6 + p,
-  .scripted-do form.do.active    h6 + p,
-  .scripted-do form.doing.active h6 + p,
-  .scripted-do form.done.active  h6 + p {
+  .scripted-button form.following.active h6 + p,
+  .scripted-button form.voted.active h6 + p,
+  .scripted-button form.do.active    h6 + p,
+  .scripted-button form.doing.active h6 + p,
+  .scripted-button form.done.active  h6 + p {
     left: auto;
     opacity: 1;
   }
-  .scripted-do form.following h6 + p:after,
-  .scripted-do form.voted h6 + p:after,
-  .scripted-do form.do    h6 + p:after,
-  .scripted-do form.doing h6 + p:after,
-  .scripted-do form.done  h6 + p:after {
+  .scripted-button form.following h6 + p:after,
+  .scripted-button form.voted h6 + p:after,
+  .scripted-button form.do    h6 + p:after,
+  .scripted-button form.doing h6 + p:after,
+  .scripted-button form.done  h6 + p:after {
     display: block;
     content: "";
     background: white;
@@ -1380,11 +1394,11 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
-  .scripted-do form.following h6 + p button,
-  .scripted-do form.voted h6 + p button,
-  .scripted-do form.do    h6 + p button,
-  .scripted-do form.doing h6 + p button,
-  .scripted-do form.done  h6 + p button {
+  .scripted-button form.following h6 + p button,
+  .scripted-button form.voted h6 + p button,
+  .scripted-button form.do    h6 + p button,
+  .scripted-button form.doing h6 + p button,
+  .scripted-button form.done  h6 + p button {
     background: transparent;
     border-width: 0;
     color: rgb(101, 102, 102); /* @steel */
@@ -1396,77 +1410,77 @@
     white-space: nowrap;
     border-radius: 0;
   }
-  .scripted-do form.following h6 + p button + button,
-  .scripted-do form.voted h6 + p button + button,
-  .scripted-do form.do    h6 + p button + button,
-  .scripted-do form.doing h6 + p button + button,
-  .scripted-do form.done  h6 + p button + button {
+  .scripted-button form.following h6 + p button + button,
+  .scripted-button form.voted h6 + p button + button,
+  .scripted-button form.do    h6 + p button + button,
+  .scripted-button form.doing h6 + p button + button,
+  .scripted-button form.done  h6 + p button + button {
     border-top: 1px solid rgb(204, 204, 204); /* @magnesium */
   }
-  .scripted-do form.voted button[name*="undo"] {
+  .scripted-button form.voted button[name*="undo"] {
     font-family: inherit;
     font-weight: bold;
     font-size: inherit;
   }
-  .scripted-do form.following button[name*="unfollow"],
-  .scripted-do form.voted button[name*="undo"],
-  .scripted-do form.doing button[name*="remove"],
-  .scripted-do form.done  button[name*="remove"] {
+  .scripted-button form.following button[name*="unfollow"],
+  .scripted-button form.voted button[name*="undo"],
+  .scripted-button form.doing button[name*="remove"],
+  .scripted-button form.done  button[name*="remove"] {
     color: rgb(247, 157, 130);
   }
-  .scripted-do form.following button[name*="unfollow"]:hover,
-  .scripted-do form.following button[name*="unfollow"]:active,
-  .scripted-do form.following button[name*="unfollow"]:focus,
-  .scripted-do form.voted button[name*="undo"]:hover,
-  .scripted-do form.voted button[name*="undo"]:active,
-  .scripted-do form.voted button[name*="undo"]:focus,
-  .scripted-do form.doing button[name*="remove"]:hover,
-  .scripted-do form.doing button[name*="remove"]:active,
-  .scripted-do form.doing button[name*="remove"]:focus,
-  .scripted-do form.done  button[name*="remove"]:hover,
-  .scripted-do form.done  button[name*="remove"]:active,
-  .scripted-do form.done  button[name*="remove"]:focus {
+  .scripted-button form.following button[name*="unfollow"]:hover,
+  .scripted-button form.following button[name*="unfollow"]:active,
+  .scripted-button form.following button[name*="unfollow"]:focus,
+  .scripted-button form.voted button[name*="undo"]:hover,
+  .scripted-button form.voted button[name*="undo"]:active,
+  .scripted-button form.voted button[name*="undo"]:focus,
+  .scripted-button form.doing button[name*="remove"]:hover,
+  .scripted-button form.doing button[name*="remove"]:active,
+  .scripted-button form.doing button[name*="remove"]:focus,
+  .scripted-button form.done  button[name*="remove"]:hover,
+  .scripted-button form.done  button[name*="remove"]:active,
+  .scripted-button form.done  button[name*="remove"]:focus {
     color: rgb(247, 113, 113);
   }
-  .scripted-do form.following h6 + p button:hover,
-  .scripted-do form.following h6 + p button:active,
-  .scripted-do form.following h6 + p button:focus,
-  .scripted-do form.voted h6 + p button:hover,
-  .scripted-do form.voted h6 + p button:active,
-  .scripted-do form.voted h6 + p button:focus,
-  .scripted-do form.do    h6 + p button:hover,
-  .scripted-do form.do    h6 + p button:active,
-  .scripted-do form.do    h6 + p button:focus,
-  .scripted-do form.doing h6 + p button:hover,
-  .scripted-do form.doing h6 + p button:active,
-  .scripted-do form.doing h6 + p button:focus,
-  .scripted-do form.done  h6 + p button:hover,
-  .scripted-do form.done  h6 + p button:active,
-  .scripted-do form.done  h6 + p button:focus {
+  .scripted-button form.following h6 + p button:hover,
+  .scripted-button form.following h6 + p button:active,
+  .scripted-button form.following h6 + p button:focus,
+  .scripted-button form.voted h6 + p button:hover,
+  .scripted-button form.voted h6 + p button:active,
+  .scripted-button form.voted h6 + p button:focus,
+  .scripted-button form.do    h6 + p button:hover,
+  .scripted-button form.do    h6 + p button:active,
+  .scripted-button form.do    h6 + p button:focus,
+  .scripted-button form.doing h6 + p button:hover,
+  .scripted-button form.doing h6 + p button:active,
+  .scripted-button form.doing h6 + p button:focus,
+  .scripted-button form.done  h6 + p button:hover,
+  .scripted-button form.done  h6 + p button:active,
+  .scripted-button form.done  h6 + p button:focus {
     color: rgb(113, 179, 247); /* @sky */
   }
 
   /* OPTIONAL: Center the drop-down */
-  .scripted-do form.do,
-  .scripted-do form.doing,
-  .scripted-do form.done {
+  .scripted-button form.do,
+  .scripted-button form.doing,
+  .scripted-button form.done {
     position: relative;
     text-align: right;
   }
-  .scripted-do form.do    h6 + p button,
-  .scripted-do form.doing h6 + p button,
-  .scripted-do form.done  h6 + p button {
+  .scripted-button form.do    h6 + p button,
+  .scripted-button form.doing h6 + p button,
+  .scripted-button form.done  h6 + p button {
     min-width: 11em;
   }
-  .scripted-do form.following.active h6 + p {
+  .scripted-button form.following.active h6 + p {
     margin-left: -0.5em;
   }
-  .scripted-do form.voted.active h6 + p {
+  .scripted-button form.voted.active h6 + p {
     margin-left: -0.75em;
   }
-  .scripted-do form.do.active    h6 + p,
-  .scripted-do form.doing.active h6 + p,
-  .scripted-do form.done.active  h6 + p {
+  .scripted-button form.do.active    h6 + p,
+  .scripted-button form.doing.active h6 + p,
+  .scripted-button form.done.active  h6 + p {
     right: -3em;
   }
 
@@ -1507,9 +1521,9 @@
   }
 
   /* Do */
-  .scripted-do form.do    h6:before,
-  .scripted-do form.doing h6:before,
-  .scripted-do form.done  h6:before {
+  .scripted-button form.do    h6:before,
+  .scripted-button form.doing h6:before,
+  .scripted-button form.done  h6:before {
 
     /* @icons */
     font-family: "Icons";
@@ -1528,38 +1542,38 @@
     position: absolute;
     margin-left: -2.25em;
   }
-  .scripted-do form.do    h6:before {
+  .scripted-button form.do    h6:before {
     content: "\e604"; /* @icon-doing */
     color: rgb(124, 227, 162); /* @moss */
   }
-  .scripted-do form.doing h6:before {
+  .scripted-button form.doing h6:before {
     content: "\e616"; /* @icon-doing */
     color: rgb(130, 242, 206); /* @spindrift */
   }
-  .scripted-do form.done  h6:before {
+  .scripted-button form.done  h6:before {
     content: "\e615"; /* @icon-done */
     color: rgb(64, 198, 149); /* @clover */
   }
-  .scripted-do form.do    h6,
-  .scripted-do form.doing h6,
-  .scripted-do form.done  h6 {
+  .scripted-button form.do    h6,
+  .scripted-button form.doing h6,
+  .scripted-button form.done  h6 {
     margin-left: 2em;
   }
 
   /*
-  .scripted-do form.do    h6:before:hover,
-  .scripted-do form.do    h6:before:active,
-  .scripted-do form.do    h6:before:focus {
+  .scripted-button form.do    h6:before:hover,
+  .scripted-button form.do    h6:before:active,
+  .scripted-button form.do    h6:before:focus {
     background-color: rgb(64, 198, 131);
   }
-  .scripted-do form.doing h6:before:hover,
-  .scripted-do form.doing h6:before:active,
-  .scripted-do form.doing h6:before:focus {
+  .scripted-button form.doing h6:before:hover,
+  .scripted-button form.doing h6:before:active,
+  .scripted-button form.doing h6:before:focus {
     background-color: rgb(110, 222, 186);
   }
-  .scripted-do form.done  h6:before:hover,
-  .scripted-do form.done  h6:before:active,
-  .scripted-do form.done  h6:before:focus {
+  .scripted-button form.done  h6:before:hover,
+  .scripted-button form.done  h6:before:active,
+  .scripted-button form.done  h6:before:focus {
     background-color: rgb(80, 167, 135);
   }
   */
@@ -1904,6 +1918,23 @@
     }
   }
 
+  /* For the “Post” psuedo-button */
+  #header .primary .options .post > a {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  @media (min-width: 60em) {
+    #header .primary .options .post > a {
+      position: static;
+    }
+    #header .primary .options .post ul a span {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
   /*
   @media (max-width: 59.9em) {
     #header .search {
@@ -1944,13 +1975,12 @@
   }
 
 
-
-
   /* Options */
   #header .options {
     color: rgb(101, 102, 102); /* @steel */
   }
   #header .options ul {
+    margin-top: 0;
     margin-bottom: 0;
   }
   #header .options li a {
@@ -1962,7 +1992,7 @@
     text-decoration: none;
     font-weight: bold;
   }
-  #header .primary .options li:first-child a {
+  #header .primary .options > ul > li:first-child > a {
     border-top-width: 0;
   }
   #header .options li a:hover,
@@ -2057,8 +2087,10 @@
       display: inline-block;
       vertical-align: top;
     }
-    #header .primary ul {
+    #header .primary .options ul {
       margin: 0;
+    }
+    #header .primary .options > ul {
       position: absolute;
       top: 1.3em; /* @header-top-margin */
       right: 5em;
@@ -2068,7 +2100,7 @@
       padding-right: 0.4375em;
       */
     }
-    #header .primary li a {
+    #header .primary .options > ul > li > a {
       display: inline-block;
       text-decoration: none;
       font-weight: bold;
@@ -2076,12 +2108,15 @@
       line-height: 1.5em;
       padding: 0.5625em 0.875em;
       color: rgb(101, 102, 102);
-      border-radius: 0.125em;
-      border-width: 0;
+      border-radius: 0;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      transition: color 0.2s;
     }
   }
   @media (min-width: 65em) {
-    #header .primary ul {
+    #header .primary .options > ul {
       top: 2.65em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
     }
   }
@@ -2246,11 +2281,13 @@
       margin-top: 0;
       padding-top: 0.875em;
     }
+    .scripted-nav #header .options .post ul,
     .scripted-nav #header .search form {
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
     }
+    .scripted-nav #header .active .post.active ul,
     .scripted-nav #header .active .search form {
       position: static;
       left: auto;
@@ -2299,10 +2336,15 @@
       background-color: white;
       border: 1px solid rgb(139, 139, 139);
     }
+    .scripted-nav #header .active .post.active > a {
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(139, 139, 139);
+    }
     .scripted-nav #header .active .search form {
       position: absolute;
       left: -9999px;
     }
+    .scripted-nav #header .active .post.active ul,
     .scripted-nav #header .account.active .options,
     .scripted-nav #header .active .search.active form {
       position: absolute;
@@ -2318,6 +2360,14 @@
 
       z-index: 9999; /* @infinity */
     }
+    .scripted-nav #header .active .post.active ul {
+      padding: 0;
+      top: 2.6em;
+      right: 0;
+    }
+
+
+
     .scripted-nav #header .active .search.active form {
       padding-top: 0.75em;
       padding-bottom: 1.125em;
@@ -2329,17 +2379,90 @@
       margin-left: -1.125em;
       margin-right: -1.125em;
     }
+    .scripted-nav #header .post.active ul a,
     .scripted-nav #header .account.active .options a {
       padding-left: 1.25em;
       padding-right: 1.25em;
       min-width: 15em;
     }
+    .scripted-nav #header .post.active ul a {
+      min-width: 5em;
+    }
+
+
+
+
+
+
+/* Experimental */
+    .scripted-nav #header .active .search.active h4,
+    .scripted-nav #header .active .post.active > a {
+      border-color: transparent;
+      background-color: transparent;
+    }
+    .scripted-nav #header .active .search.active h4 {
+      background: rgba(0, 0, 0, 0) url(shared/header/lense.png) no-repeat center;
+      background-image: url(shared/header/lense.svg), none;
+      background-size: auto 1em;
+    }
+    .scripted-nav #header .active .post.active ul {
+      top: 2.9em;
+      right: -1.3em;
+    }
+    .scripted-nav #header .active .post.active ul:after,
+    .scripted-nav #header .account.active .options:after,
+    .scripted-nav #header .active .search.active form:after {
+      display: block;
+      content: "";
+      background: white;
+      border-width: 0.125em 0 0 0.125em;
+      border-style: solid;
+      border-color: rgb(139, 139, 139);
+      width: 1em;
+      height: 1em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+      position: absolute;
+      top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
+      left: 50%;
+      margin-left: -0.5em;
+      font-size: 0.875em;
+
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -o-transform      : rotate(45deg);
+      transform         : rotate(45deg);
+    }
+    .scripted-nav #header .active .search.active form:after {
+      left: auto;
+      right: 1em;
+    }
+    #header .options li a {
+      padding-top: 0.675em;
+      padding-bottom: 0.675em;
+    }
+    .scripted-nav #header .account.active .options {
+      right: 9.4em;
+    }
+
+
+
   }
   @media (min-width: 65em) {
     .scripted-nav #header .account.active .options,
     .scripted-nav #header .active .search.active form {
       top: 5.2em;
     }
+
+/* Experimental */
+    .scripted-nav #header .account.active .options {
+      top: 6.2em;
+    }
+    .scripted-nav #header .active .search.active form {
+      top: 5.5em;
+    }
+
+
   }
 
 
@@ -3000,13 +3123,7 @@
 
   /* Links */
   .activity-item a {
-    color: rgb(102, 153, 204);
     text-decoration: none;
-  }
-  .activity-item a:hover,
-  .activity-item a:active,
-  .activity-item a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Headlines */
@@ -3055,7 +3172,6 @@
   }
   .search-summary .more a,
   .activity-item .more  a {
-    color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
     font-size: 0.875em; /* 14px / @font-size */
     text-decoration: none;
@@ -3303,7 +3419,7 @@
       margin-right: 6.25em;
     }
 
-    .scripted-do .activity-item .do     form,
+    .scripted-button .activity-item .do     form,
                  .activity-item .follow form {
       position: absolute;
       margin-top: 0;
@@ -3367,6 +3483,36 @@
   }
 
 
+/* =Do with Story
+  ----------------------------------------------- */
+  .activity-item section.do.has-story h3 {
+    min-height: 0;
+  }
+
+
+/* =Story
+  ----------------------------------------------- */
+  .activity-item section.story h3 {
+    font-family: inherit;
+    font-size: 0.875em;
+    line-height: inherit;
+  }
+  .activity-item section.story h3 a {
+    color: black;
+    display: block;
+  }
+  .activity-item section.story h3 a .action {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s;
+  }
+  .activity-item section.story h3 a:hover  .action,
+  .activity-item section.story h3 a:active .action,
+  .activity-item section.story h3 a:focus  .action {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+
+
 /* =Comment
   ----------------------------------------------- */
   .activity-item .comment {
@@ -3404,6 +3550,24 @@
   .activity-item .comment p a:hover,
   .activity-item .comment p a:active,
   .activity-item .comment p a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+
+  /* TEMPORARY: Remove the space around comments that don’t have a member image.
+  (If we remove all of the member images for comments in feeds,
+  this rule can be applied more generally) */
+  .activity-item .do.has-story ~ .comment,
+  .activity-item .story        ~ .comment {
+    padding-left: 0;
+  }
+
+  .activity-item .do.has-story ~ .comment a .action {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s;
+  }
+  .activity-item .do.has-story ~ .comment a:hover  .action,
+  .activity-item .do.has-story ~ .comment a:active .action,
+  .activity-item .do.has-story ~ .comment a:focus  .action {
     color: rgb(47, 132, 218); /* @ocean */
   }
 
@@ -3572,7 +3736,7 @@
   }
 
   /* Mimic the size and style of the vote button */
-  .scripted-do .meta form.voted h6 {
+  .scripted-button .meta form.voted h6 {
     font-size: 0.75em;
     line-height: 1.2em;
     padding: 0.75em 1em;
@@ -3580,12 +3744,12 @@
     font-family: inherit;
     font-weight: bold;
   }
-  .scripted-do .meta form.voted h6 + p {
+  .scripted-button .meta form.voted h6 + p {
     font-size: 0.75em;
     margin-left: 0.25em;
   }
 
-  .scripted-do .meta form.voted h6,
+  .scripted-button .meta form.voted h6,
   .meta form.vote  button:hover,
   .meta form.vote  button:active,
   .meta form.vote  button:focus,
@@ -3595,9 +3759,9 @@
     color: white;
   }
 
-  .scripted-do .meta form.voted h6:hover,
-  .scripted-do .meta form.voted h6:active,
-  .scripted-do .meta form.voted h6:focus,
+  .scripted-button .meta form.voted h6:hover,
+  .scripted-button .meta form.voted h6:active,
+  .scripted-button .meta form.voted h6:focus,
   .meta form.voted button:hover,
   .meta form.voted button:active,
   .meta form.voted button:focus {
@@ -3605,7 +3769,7 @@
   }
   /* SHIM: Override the above styles to keep the background color transparent.
   (This can be removed once the HTML is updated and the hover style above is obsolete.) */
-  .scripted-do .meta form.voted h6 + p button {
+  .scripted-button .meta form.voted h6 + p button {
     background: transparent;
   }
   .meta form.vote  button:hover:before,
@@ -3614,7 +3778,7 @@
     color: white;
   }
 
-  .scripted-do .meta form.voted h6 abbr,
+  .scripted-button .meta form.voted h6 abbr,
   .meta form.vote  button abbr,
   .meta form.voted button abbr {
     display: inline-block;
@@ -3630,7 +3794,7 @@
     padding-bottom: 0.8em;
     transition: border-color 0.2s;
   }
-  .scripted-do .meta form.voted h6 abbr,
+  .scripted-button .meta form.voted h6 abbr,
   .meta form.vote   button:hover  abbr,
   .meta form.vote   button:active abbr,
   .meta form.vote   button:focus  abbr,
@@ -3642,14 +3806,14 @@
 
   /* OPTIONAL: Make the loading icon look nice, if it’s applied
   to the vote count in a feed or the vote button on a post page. */
-  .scripted-do       .voted.loading h6,
-  .scripted-do .meta .voted.loading h6,
+  .scripted-button       .voted.loading h6,
+  .scripted-button .meta .voted.loading h6,
          .vote.loading button,
   .meta  .vote.loading button{
     color: transparent;
   }
-  .scripted-do       .voted.loading h6 abbr,
-  .scripted-do .meta .voted.loading h6 abbr,
+  .scripted-button       .voted.loading h6 abbr,
+  .scripted-button .meta .voted.loading h6 abbr,
          .vote.loading button abbr,
   .meta  .vote.loading button abbr {
     border-color: transparent;
@@ -4511,7 +4675,6 @@
     max-width: 100%;
     height: 10.5em;
     padding: 0.875em; /* @line-height / 2 */
-    line-height: 1.375;
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
@@ -5067,7 +5230,7 @@
     }
 
     /* SHIM: Center the form element, so the drop-down will appear in the correct location. */
-    .scripted-do .member-header h1 + form.following {
+    .scripted-button .member-header h1 + form.following {
       display: table;
       margin-left: auto;
       margin-right: auto;
@@ -5440,8 +5603,8 @@
   .post > footer form.voted p {
     font-size: 0.75em;
   }
-  .scripted-do .post > header form.voted h6,
-  .scripted-do .post > footer form.voted h6 {
+  .scripted-button .post > header form.voted h6,
+  .scripted-button .post > footer form.voted h6 {
     font-size: 0.9em; /* 0.75em x 1.2em */
   }
 
@@ -6965,8 +7128,9 @@
   .profile-form textarea {
     font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
     font-size: 2.5em; /* 40px / @font-size(16px) */
+    line-height: 1.2;
     max-width: none;
-    height: 7em;
+    height: 6.4em; /* (line-height(1.375) x 4) + padding(0.45em) x 2 */
     padding: 0.25em;
   }
   .profile-form .basics,
@@ -7013,7 +7177,7 @@
   }
   @media (min-width: 70em) {
     .profile-form textarea {
-      height: 3.5em;
+      height: 3.65em; /* (line-height(1.375) x 2) + padding(0.45em) x 2 */
     }
     .profile-form .skills input {
       max-width: 38.5em; /* This number is arbitrary, but happens to make the field fit on one line with the prefix */
@@ -7042,6 +7206,7 @@
   }
   .search-header label > span:first-child {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
     text-transform: uppercase;
     font-size: 1.5em;
   }
@@ -7255,6 +7420,214 @@
   body.pattern {
     padding: 3.5em 1.75em 7em;
     background: rgb(253, 254, 255); /* @snow */
+  }
+
+
+
+  /* =Post Form
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  .post-form {
+    position: relative;
+  }
+
+  /* OPTIONAL: Limit the width of the form, for readability */
+  @media (min-width: 40em) {
+    .post-form {
+      max-width: 35em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .post-form header {
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(225, 225, 225);
+  }
+  .post-form h1 {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  .post-form .text input,
+  .post-form .text textarea {
+    max-width: 35em;
+  }
+
+  /* TBD: Make this the default styles for all submit buttons? */
+  .post-form   .submit button {
+    /*background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102);*/ /* @steel */
+  }
+  /*
+  .post-form   .submit button:hover,
+  .post-form   .submit button:active,
+  .post-form   .submit button:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+  */
+
+  @media (min-width: 40em) {
+    .post-form .submit {
+      margin-top: 1.3125em;
+      border-top: 1px solid rgb(225, 225, 225);
+      padding-top: 1.75em;
+    }
+    .post-form .submit a {
+      float: right;
+    }
+  }
+
+  /*
+  .post-form .submit button {
+    font-size: 0.875em;
+  }
+  .post-form .submit a {
+    color: rgb(153, 153, 153);
+    float: right;
+    margin-right: 0.4375em;
+  }
+  */
+
+
+  /* =Images
+  ----------------------------------------------- */
+  .post-form .images li {
+    display: inline-block;
+    position: relative;
+    margin-right: 0.125em;
+    margin-bottom: 0.25em;
+    vertical-align: top;
+  }
+  .post-form .images li .pseudo-image,
+  .post-form .images li img {
+    display: block;
+    cursor: pointer;
+    opacity: 0.8;
+    border-width: 0.25em;
+    border-style: solid;
+    border-color: white;
+    transition: border-color 0.2s, opacity 0.2s;
+  }
+  .post-form .images .pseudo-image {
+    width: 120px;
+    line-height: 120px;
+    text-align: center;
+    background-color: rgb(204, 204, 204);
+  }
+  .post-form .images li input {
+    position: absolute;
+    z-index: 1;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  .post-form .images.scripted li input {
+    left: -9999px;
+  }
+  .post-form .images.scripted li img {
+    opacity: 0.7;
+  }
+  .post-form .images.scripted li.active img {
+    border-color: black;
+    opacity: 1;
+  }
+
+
+  /* =Tip
+  ----------------------------------------------- */
+  .post-form .tip .container {
+    padding: 1.375em; /* @line-height x 3 / 2 */
+    background: rgb(255, 252, 231);
+    border: 0.1875em solid rgb(243, 239, 209);
+    border-radius: 0.5em;
+    position: relative;
+  }
+  .post-form .tip .container:before {
+    content: "";
+    display: block;
+    background: rgb(255, 252, 231);
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: -0.75em;
+    border-width: 0 0 0.1875em 0.1875em;
+    border-style: solid;
+    border-color: rgb(243, 239, 209);
+
+    -webkit-transform : rotate(135deg);
+    -moz-transform    : rotate(135deg);
+    -o-transform      : rotate(135deg);
+    transform         : rotate(135deg);
+  }
+  .post-form .tip:before {
+    content: "i";
+    font-style: italic;
+    font-weight: bold;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    background: rgb(204, 204, 204);
+    border-radius: 100%;
+    color: white;
+    display: inline-block;
+    width: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+  }
+  .post-form .tip:before {
+    position: absolute;
+    top: 0;
+    right: 1em;
+  }
+
+  @media (min-width: 65em) {
+    .post-form .tip {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .post-form .tip .container {
+      position: absolute;
+      top: -1em;
+      width: 11em;
+      right: -15em;
+    }
+    .post-form .tip .container:before {
+      top: 1em;
+      right: auto;
+      left: -0.75em;
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -o-transform      : rotate(45deg);
+      transform         : rotate(45deg);
+    }
+    .post-form .tip:before {
+      margin-right: 0.5em;
+      right: 0;
+    }
+  }
+  .post-form .tip h2 {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+  .post-form .tip p {
+    font-size: 0.875em;
+    color: rgb(102, 102, 102);
+    line-height: 1.3;
+  }
+
+  /* OPTIONAL: Hide the tip if it’s inactive */
+  .post-form .tip {
+    cursor: pointer;
+  }
+  .post-form .tip.inactive .container {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
   }
 
 
