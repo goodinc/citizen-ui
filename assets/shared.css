@@ -2114,6 +2114,11 @@
       border-color: transparent;
       transition: color 0.2s;
     }
+    #header .primary .options > ul > li > a:hover,
+    #header .primary .options > ul > li > a:active,
+    #header .primary .options > ul > li > a:focus {
+      color: rgb(47, 132, 218); /* @ocean */
+    }
   }
   @media (min-width: 65em) {
     #header .primary .options > ul {
@@ -7476,7 +7481,6 @@
     background: rgb(250, 250, 250);
     color: rgb(42, 43, 44);
   }
-
   @media (min-width: 40em) {
     .post-form .submit {
       margin-top: 1.3125em;
@@ -7487,7 +7491,6 @@
       float: right;
     }
   }
-
   .post-form .submit a {
     color: rgb(153, 153, 153);
     float: right;
