@@ -1924,7 +1924,7 @@
     position: absolute;
     left: -9999px;
   }
-  @media (min-width: 60em) {
+  @media (min-width: 40em) {
     #header .primary .options .post > a {
       position: static;
     }
@@ -1985,7 +1985,7 @@
   }
   #header .options li a {
     display: block;
-    padding: 0.875em 0;
+    padding: 0.675em 0;
     font-size: 0.875em; /* 14px / @font-size(16px) */
     border-top: 0.1em solid rgb(221, 221, 221);
     color: rgb(101, 102, 102); /* @steel */
@@ -2329,17 +2329,6 @@
     .scripted-nav #header .active .search {
       padding-top: 0;
     }
-    .scripted-nav #header .active .search.active h4 {
-      background: white url(shared/header/close.png) no-repeat center;
-      background-image: url(shared/header/close.svg), none;
-      background-size: auto 1em;
-      background-color: white;
-      border: 1px solid rgb(139, 139, 139);
-    }
-    .scripted-nav #header .active .post.active > a {
-      background-color: rgb(255, 255, 255);
-      border-color: rgb(139, 139, 139);
-    }
     .scripted-nav #header .active .search form {
       position: absolute;
       left: -9999px;
@@ -2348,7 +2337,7 @@
     .scripted-nav #header .account.active .options,
     .scripted-nav #header .active .search.active form {
       position: absolute;
-      top: 3.75em;
+      top: 4.9em;
       left: auto;
       right: 2.25em;
 
@@ -2360,52 +2349,11 @@
 
       z-index: 9999; /* @infinity */
     }
+    .scripted-nav #header .active .search.active form {
+      top: 4.15em;
+    }
     .scripted-nav #header .active .post.active ul {
       padding: 0;
-      top: 2.6em;
-      right: 0;
-    }
-
-
-
-    .scripted-nav #header .active .search.active form {
-      padding-top: 0.75em;
-      padding-bottom: 1.125em;
-    }
-    .scripted-nav #header .account.active .options {
-      right: 15.75em;
-    }
-    .scripted-nav #header .account.active .options ul {
-      margin-left: -1.125em;
-      margin-right: -1.125em;
-    }
-    .scripted-nav #header .post.active ul a,
-    .scripted-nav #header .account.active .options a {
-      padding-left: 1.25em;
-      padding-right: 1.25em;
-      min-width: 15em;
-    }
-    .scripted-nav #header .post.active ul a {
-      min-width: 5em;
-    }
-
-
-
-
-
-
-/* Experimental */
-    .scripted-nav #header .active .search.active h4,
-    .scripted-nav #header .active .post.active > a {
-      border-color: transparent;
-      background-color: transparent;
-    }
-    .scripted-nav #header .active .search.active h4 {
-      background: rgba(0, 0, 0, 0) url(shared/header/lense.png) no-repeat center;
-      background-image: url(shared/header/lense.svg), none;
-      background-size: auto 1em;
-    }
-    .scripted-nav #header .active .post.active ul {
       top: 2.9em;
       right: -1.3em;
     }
@@ -2437,32 +2385,34 @@
       left: auto;
       right: 1em;
     }
-    #header .options li a {
-      padding-top: 0.675em;
-      padding-bottom: 0.675em;
+    .scripted-nav #header .active .search.active form {
+      padding-top: 0.75em;
+      padding-bottom: 1.125em;
     }
     .scripted-nav #header .account.active .options {
       right: 9.4em;
     }
-
-
-
+    .scripted-nav #header .account.active .options ul {
+      margin-left: -1.125em;
+      margin-right: -1.125em;
+    }
+    .scripted-nav #header .post.active ul a,
+    .scripted-nav #header .account.active .options a {
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+      min-width: 15em;
+    }
+    .scripted-nav #header .post.active ul a {
+      min-width: 5em;
+    }
   }
   @media (min-width: 65em) {
-    .scripted-nav #header .account.active .options,
-    .scripted-nav #header .active .search.active form {
-      top: 5.2em;
-    }
-
-/* Experimental */
     .scripted-nav #header .account.active .options {
       top: 6.2em;
     }
     .scripted-nav #header .active .search.active form {
-      top: 5.5em;
+      top: 5.6em;
     }
-
-
   }
 
 
