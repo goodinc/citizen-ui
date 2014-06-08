@@ -4600,6 +4600,7 @@
   }
   .comment-form  h6.avatar,
   .comments form h6.avatar {
+    font-size: inherit;
     position: absolute;
     top: 0.625em; /* 10px / 16px */
     left: 0.625em;
