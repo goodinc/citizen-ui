@@ -1650,6 +1650,8 @@
     clear: both;
     border-top: 1px solid rgb(221, 223, 227);
     padding-top: 1.75em;
+    margin-left: 0;
+    margin-right: 0;
   }
 
 
