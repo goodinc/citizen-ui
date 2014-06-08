@@ -154,12 +154,6 @@
     margin-bottom  : 0.875em; /* @line-height / 2 */
   }
 
-  /* KLUDGE: Give vcards the same amount of margin as headlines (for the contact page) */
-  div.vcard {
-    margin-top     : 1.75em;  /* @line-height */
-    margin-bottom  : 0.875em; /* @line-height / 2 */
-  }
-
   h1 {
     font-size: 3em;                     /* 48px / @font-size */
     line-height   : 1.1666666667em;     /* @line-height x 2 / 3 */
@@ -1910,10 +1904,10 @@
     left: -9999px;
   }
   @media (min-width: 50em) {
-    #header .primary .options .post > a {
+    .scripted-nav #header .primary .options .post > a {
       position: static;
     }
-    #header .primary .options .post ul a span {
+    .scripted-nav #header .primary .options .post ul a span {
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
@@ -7890,5 +7884,12 @@
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 1.75em; /* @line-height */
     text-align: center;
+  }
+
+  /* SHIM: Give vcards the same amount of margin as headlines (for the contact page) */
+  /* (Consider removing the zero margin rules for first and last child elements; to simplify this and perhaps other cases.) */
+  div.vcard {
+    margin-top     : 1.75em;  /* @line-height */
+    margin-bottom  : 0.875em; /* @line-height / 2 */
   }
 
