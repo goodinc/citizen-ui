@@ -6,16 +6,10 @@
   ----------------------------------------------- */
   function start() {
 
-    // OPTIONAL: Add a button to show more details to the sitewide message
-    //new ShowDetails();
-
-    // OPTIONAL: Add a button to hide the sitewide message
-    //new HideTip();
-
-    // OPTIONAL: Present the header navigation as dropdowns
+    // OPTIONAL: Present the header navigation as dropdowns.
     new NavDropDown();
 
-    // OPTIONAL: Present the do, voted, and following buttons as dropdowns
+    // OPTIONAL: Present the do, voted, and following buttons as dropdowns.
     new ButtonDropDown();
 
     // OPTIONAL: Hide redundant labels in browsers that support the placeholder attribute.
@@ -28,6 +22,21 @@
       var html = document.getElementsByTagName("html")[0];
       html.className += " supports-placeholder";
     }
+
+
+    /* =Site Message
+    ----------------------------------------------- */
+    /*
+    NOTE: If you uncomment this, you’ll want to add a “data-site-message-id”
+    attribute to the <html> element on each page of the website. The value
+    should be a unique string for your message. For example: "do20-introduction".
+
+    // OPTIONAL: Add a button to hide the site-wide message.
+    new HideMessage();
+
+    // OPTIONAL: Add a button to show more details within the site-wide message.
+    new MessageDetails();
+    */
 
   }
 
@@ -47,8 +56,8 @@
         if (within(needle, child)) return true;
       } while (child = child.nextSibling);
     }
-
   }
+
   function closest(element, nodeName) {
 
     // If the element is the target
@@ -57,7 +66,6 @@
     } else {
       if (element.parentNode) return closest(element.parentNode, nodeName);
     }
-
   }
 
   // http://stackoverflow.com/questions/3437786/how-to-get-web-page-size-browser-window-size-screen-size-in-a-cross-browser-wa
@@ -70,16 +78,15 @@
   }
 
 
-  /* =ShowDetails
+  /* =MessageDetails
   ----------------------------------------------- */
-  /*
-  var ShowDetails = function() {};
+  var MessageDetails = function() {};
 
   (function() {
 
     if (!document.addEventListener) return;
 
-    ShowDetails = function() {
+    MessageDetails = function() {
 
       // Show the details if the .show button or the headline are pressed.
       function handleClick(e) {
@@ -118,35 +125,33 @@
 
       // Show buttons
       var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-show-details";
+      html.className += " scripted-message-details";
     }
 
   })();
-  */
 
 
-  /* =HideTip
-  -----------------------------------------------
-  NOTE: This currently only supports a single tip (the video introduction)
+  /* =HideMessage
   ----------------------------------------------- */
-  /*
-  var HideTip = function() {};
+  var HideMessage = function() {};
 
   (function() {
 
     if (!window.localStorage || !document.addEventListener) return;
 
-    HideTip = function() {
+    HideMessage = function() {
 
-      // TODO: Find a way to get this id from the HTML
-      var id = "video-intro";
+      var html = document.getElementsByTagName("html")[0];
+
+      var id = html.getAttribute("data-site-message-id");
+      if (!id) return;
+
       var storageName = "hide_" + id.replace(/-/g, "_");
 
       // Hide the messages
       function hide(e) {
         if (localStorage[storageName]) {
-          var html = document.getElementsByTagName("html")[0];
-          html.className += " hide-" + id;
+          html.className += " hide-site-message";
         }
       }
 
@@ -158,8 +163,7 @@
         if (p && p.className.indexOf("close") >= 0) {
           var section = closest(e.target, "section");
 
-          // TODO: Support multiple storage names
-          if (section && section.id == id) {
+          if (section && section.className.indexOf("site") >= 0 && section.className.indexOf("message") >= 0) {
             localStorage[storageName] = "hidden";
             hide();
             e.preventDefault();
@@ -171,12 +175,10 @@
       document.addEventListener("click", save, false);
 
       // Show the close buttons
-      var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-hide-tip";
+      html.className += " scripted-hide-message";
     }
 
   })();
-  */
 
 
   /* =NavDropDown
@@ -254,7 +256,7 @@
         if (post) {
 
           // Close the search dropdown
-          var section = element.querySelector("section.search");
+          section = element.querySelector("section.search");
           if (section) {
             section.className = section.className.replace(/active/g, "");
           }
@@ -265,7 +267,7 @@
         } else if (section && section.className.indexOf("search") >= 0 && section.className.indexOf("active") < 0) {
 
           // Close the post dropdown
-          var item = element.querySelector("li.post");
+          item = element.querySelector("li.post");
           if (item) {
             item.className = item.className.replace(/active/g, "");
           }
@@ -276,14 +278,13 @@
 
       function toggle(e) {
 
-        var target = e.target;
-        var name = target.nodeName.toLowerCase();
-
         // OPTIONAL: If the user wants to open the link in a new window, let the browser handle it.
         if (e.shiftKey || e.ctrlKey || e.altKey || e.metaKey) return;
 
+        var target = e.target;
+
         // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
-        if (windowWidth() >= 900) { // This number is arbitrary, but happens to be a little larger than
+        if (windowWidth() >= 800) { // This number is arbitrary, but happens to be a little larger than
                                     // the media query used to switch between inline and positioned dropdowns
           if (active) {
             if (!within(target, active)) {
@@ -293,6 +294,7 @@
         }
 
         // If the target is one of the elements we’re listening for
+        var name = target.nodeName.toLowerCase();
         if (name == "a"      ||
             name == "img"    ||
             name == "h3"     ||
@@ -432,9 +434,6 @@
       // Style the dropdowns
       var html = document.getElementsByTagName("html")[0];
       html.className += " scripted-button";
-
-      // TODO: Update the style sheet to use “scripted-button-dropdown” instead of “scripted-do” for selectors, and then remove this line.
-      html.className += " scripted-do";
 
     };
       

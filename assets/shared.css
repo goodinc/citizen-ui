@@ -142,14 +142,6 @@
     margin-bottom: 0;
   }
 
-  /* For readability */
-  /*
-  h1, h2, h3, h4, h5, h6, p, nav, dt, dd, li, figure,
-  .follow-list li {
-    max-width: 33em;
-  }
-  */
-
   /* Headlines
   KUDOS: http://typecast.com/blog/contrast-through-scale
 
@@ -175,22 +167,16 @@
     margin-bottom : 0.5833333334em;
   }
   h2 {
-    font-size     : 1.875em;        /* 30px / @font-size */
-    line-height   : 1.4em;          /* @line-height / 1.875 x 3/2 */
-    margin-top    : 0.9333333333em; /* @line-height / 1.875 */
-    margin-bottom : 0.4666666667em; /* @line-height / 1.875 x 1/2 */
+    font-size     : 1.875em;            /* 30px / @font-size */
+    line-height   : 1.4em;              /* @line-height / 1.875 x 3/2 */
+    margin-top    : 0.9333333333em;     /* @line-height / 1.875 */
+    margin-bottom : 0.4666666667em;     /* @line-height / 1.875 x 1/2 */
   }
   h3 {
     font-size: 1.5em;                   /* 24px / @font-size */
     line-height   : 1.1666666667em;     /* @line-height / 1.5 */
     margin-top    : 1.1666666667em;
     margin-bottom : 0.5833333334em;
-
-    /* Add to the line-height and subtract from the margin
-    to make multi-line headlines easier to read. */
-    /*
-    line-height   : 1.25em; *//* (@line-height x 1.25) / 1.5 */
-    /*margin-top    : 0.75em;*/
   }
   h4 {
     font-size: 1.3125em;                /* 21px / @font-size */
@@ -213,7 +199,6 @@
     font-style: italic;
   }
 
-  /* Experimental */
   @media (max-width: 50em) {
     h1 {
       font-size: 2.625em;
@@ -223,7 +208,6 @@
     }
   }
 
-  /* Experimental */
   @media (max-width: 30em) {
     h1 {
       font-size: 2.25em;
@@ -915,62 +899,62 @@
   }
 
 
-  /* =Site Introduction
+  /* =Site Message
   ----------------------------------------------- */
   /* TODO: Update all of the messages with a container and multiple close buttons, and make these the default styles. */
-  section.message.tip {
+  section.site.message {
     padding: 0;
     line-height: 1.5;
   }
-  section.message.tip h1,
-  section.message.tip h2 {
+  section.site.message h1,
+  section.site.message h2 {
     font-family: inherit;
     font-weight: bold;
     line-height: inherit;
     margin-bottom: 0;
     display: inline;
   }
-  section.message.tip h1 strong,
-  section.message.tip h2 strong {
+  section.site.message h1 strong,
+  section.site.message h2 strong {
     text-transform: uppercase;
     font-weight: normal;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     color: rgb(153, 153, 102);
   }
-  section.message.tip h1 strong:after,
-  section.message.tip h2 strong:after {
+  section.site.message h1 strong:after,
+  section.site.message h2 strong:after {
     content: ":";
   }
-  section.message.tip h1,
-  section.message.tip h2,
-  section.message.tip p {
+  section.site.message h1,
+  section.site.message h2,
+  section.site.message p {
     font-size: 0.875em;
   }
-  section.message.tip > .container {
+  section.site.message > .container {
     padding: 0.875em 2.25em 0.875em 1.5em;
     position: relative;
   }
   @media (min-width: 30em) {
-    section.message.tip {
+    section.site.message {
       padding-right: 0;
     }
-    section.message.tip > .container {
+    section.site.message > .container {
       position: relative;
     }
   }
   @media (min-width: 40em) {
-    section.message.tip > .container {
+    section.site.message > .container {
       padding-left: 2.25em;
     }
   }
-  body > section.message.tip {
+  body > section.site.message {
     max-width: none;
     border-top-width: 0;
     border-right-width: 0;
     border-left-width: 0;
     margin-bottom: 0;
   }
-  body > section.message.tip > .container {
+  body > section.site.message > .container {
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
     max-width: 71.0625em; /* @max-page-width */
@@ -978,91 +962,91 @@
     margin-right: auto;
   }
 
-  section.message.tip a {
+  section.site.message a {
     color: rgb(47, 132, 218); /* @ocean */
   }
-  section.message.tip .close.primary {
+  section.site.message .close.primary {
     margin-top: 0.875em;
     position: static;
     display: block;
   }
-  section.message.tip .close.primary a {
+  section.site.message .close.primary a {
     color: rgb(47, 132, 218); /* @ocean */
     display: inline;
     text-decoration: underline;
   }
-  section.message.tip .close.primary a:hover,
-  section.message.tip .close.primary a:active,
-  section.message.tip .close.primary a:focus {
+  section.site.message .close.primary a:hover,
+  section.site.message .close.primary a:active,
+  section.site.message .close.primary a:focus {
     text-decoration: none;
   }
-  section.message.tip .close.primary a:after {
+  section.site.message .close.primary a:after {
     content: "";
   }
 
-  section.message.tip .close.secondary {
+  section.site.message .close.secondary {
     display: block;
     position: absolute;
     top: 1.25em;
     right: 1.25em;
     margin: 0;
   }
-  section.message.tip .close.primary {
+  section.site.message .close.primary {
     margin-top: 1.75em;
   }
 
   @media (min-width: 40em) {
-    section.message.tip > .container {
+    section.site.message > .container {
       padding-right: 4.75em;
     }
-    section.message.tip .close.secondary {
+    section.site.message .close.secondary {
       top: 1.25em;
       right: 3em;
     }
   }
 
-  section.message.tip .close.secondary a {
+  section.site.message .close.secondary a {
     color: rgb(153, 153, 102);
   }
-  section.message.tip .close.secondary a span {
+  section.site.message .close.secondary a span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
 
-  section.message.tip .close.primary,
-  section.message.tip .close.secondary {
+  section.site.message .close.primary,
+  section.site.message .close.secondary {
     display: none;
   }
 
   /* OPTIONAL: Show the close buttons if they’re scripted */
-  .scripted-hide-tip section.message.tip .close.primary,
-  .scripted-hide-tip section.message.tip .close.secondary {
+  .scripted-hide-message section.site.message .close.primary,
+  .scripted-hide-message section.site.message .close.secondary {
     display: block !important;
   }
 
-  /* OPTIONAL: Hide the video intro, if the user has pressed the “Hide” button */
-  .hide-video-intro #video-intro {
+  /* OPTIONAL: Hide the site message, if the user has pressed the “Hide” button */
+  .hide-site-message section.site.message {
     display: none;
   }
 
   /* OPTIONAL: Hide the details by default */
-  section.message.tip .details {
+  section.site.message .details {
     margin-top: 0.75em;
   }
-  section.message.tip .details p:first-child:before {
+  section.site.message .details p:first-child:before {
     display: none;
   }
   .message.has-details .show {
     display: none;
   }
 
-  .scripted-show-details .message.has-details .show {
+  .scripted-message-details .message.has-details .show {
     display: inline !important;
   }
 
   /* Hide details */
-  .scripted-show-details .message .details {
+  .scripted-message-details .message .details {
 
     /* @hidden-accessible */
     position: absolute;
@@ -1073,12 +1057,12 @@
   }
 
   /* Make the headline appear pressable */
-  .scripted-show-details .message.has-details h1 {
+  .scripted-message-details .message.has-details h1 {
     cursor: pointer;
   }
 
   /* Show details */
-  .scripted-show-details .message.show-details .details {
+  .scripted-message-details .message.show-details .details {
 
     /* @reset-hidden-accessible */
     position: static;
@@ -1086,10 +1070,10 @@
 
     width: auto;
   }
-  .scripted-show-details .message.show-details .show {
+  .scripted-message-details .message.show-details .show {
     display: none !important;
   }
-  .scripted-show-details .message.has-details.show-details h1 {
+  .scripted-message-details .message.has-details.show-details h1 {
     cursor: default;
   }
 
@@ -1898,6 +1882,7 @@
   @media (max-width: 64.9em) {
     #header h2 a {
       font-size: 3em;
+      letter-spacing: 0.025em;
     }
   }
 
@@ -1924,7 +1909,7 @@
     position: absolute;
     left: -9999px;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     #header .primary .options .post > a {
       position: static;
     }
@@ -2090,7 +2075,7 @@
     #header .primary .options ul {
       margin: 0;
     }
-    #header .primary .options > ul {
+    .scripted-nav #header .primary .options > ul {
       position: absolute;
       top: 1.3em; /* @header-top-margin */
       right: 5em;
@@ -2100,7 +2085,7 @@
       padding-right: 0.4375em;
       */
     }
-    #header .primary .options > ul > li > a {
+    .scripted-nav #header .primary .options > ul > li > a {
       display: inline-block;
       text-decoration: none;
       font-weight: bold;
@@ -2121,7 +2106,7 @@
     }
   }
   @media (min-width: 65em) {
-    #header .primary .options > ul {
+    .scripted-nav #header .primary .options > ul {
       top: 2.65em; /* @header-top-margin / This number is arbitrary, but happens to align the navigation with the logo */
     }
   }
@@ -6741,7 +6726,7 @@
   .explore h1 strong {
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     font-weight: normal;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
 
     /* KLUDGE: Attempt to align the bottom of logo with the text around it. */
     vertical-align: -0.025em;
