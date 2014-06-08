@@ -4635,15 +4635,20 @@
   .comments > form {
     margin-right: 1.25em;
   }
-  .comments button {
+
+  .comment-form button,
+  .comments     button {
     font-size: 0.875em; /* 14px / @font-size */
   }
 
+  .comment-form  .container,
   .comments form .container {
     border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     border-radius: 0.25em;
+    background: white;
     position: relative;
   }
+  .comment-form  h6.avatar,
   .comments form h6.avatar {
     position: absolute;
     top: 0.625em; /* 10px / 16px */
@@ -4651,10 +4656,12 @@
     margin: 0;
     line-height: 1;
   }
+  .comment-form  .text,
   .comments form .text {
     margin-top: 0;
     margin-bottom: 0;
   }
+  .comment-form  .text label,
   .comments form .text label {
     display: block;
     padding-bottom: 0;
@@ -4662,6 +4669,7 @@
   }
 
   /* Make space for the user’s avatar. (It will be present if they’re signed in.) */
+  .comment-form  .avatar + .text label,
   .comments form .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
@@ -4669,6 +4677,7 @@
     margin-left: 3.125em; /* 50px / 16px*/
   }
 
+  .comment-form  .text textarea,
   .comments form .text textarea {
     border-width: 0;
     background: transparent;
@@ -4678,6 +4687,10 @@
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
+  .comment-form  .container > .note,
+  .comment-form  .container > .error-message,
+  .comment-form  .images,
+  .comment-form  .file,
   .comments form .container > .note,
   .comments form .container > .error-message,
   .comments form .images,
@@ -4687,9 +4700,11 @@
     padding: 0.625em; /* 10px / 16px */
   }
 
+  .comment-form  .images,
   .comments form .images {
     background: rgb(249, 249, 249);
   }
+  .comment-form  .images li,
   .comments form .images li {
     display: block;
     position: relative;
@@ -4703,9 +4718,11 @@
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
+  .comment-form  .images li + li,
   .comments form .images li + li {
     margin-top: 0.625em; /* 10px / 16px */
   }
+  .comment-form  .images li img,
   .comments form .images li img {
     margin-right: 0.625em; /* 10px / 16px */
     height: 2.5em; /* 30px / 12px */
@@ -4714,6 +4731,7 @@
     border-top-left-radius    : 0.25em;
     border-bottom-left-radius : 0.25em;
   }
+  .comment-form  .images button,
   .comments form .images button {
     background: rgb(153, 153, 153); /* @aluminum */
     float: right;
@@ -4723,16 +4741,21 @@
     padding: 0.2em 0.5em;
     margin: 0.35em;
   }
+  .comment-form  .images button:hover,
+  .comment-form  .images button:active,
+  .comment-form  .images button:focus,
   .comments form .images button:hover,
   .comments form .images button:active,
   .comments form .images button:focus {
     background: rgb(101, 102, 102); /* @steel */
   }
+  .comment-form  .images button span,
   .comments form .images button span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
+  .comment-form  .images button:after,
   .comments form .images button:after {
 
     /* @icons */
@@ -4748,15 +4771,18 @@
 
     content: "\e60a"; /* @icon-delete */
   }
+  .comment-form  .container:after,
   .comments form .container:after {
     /* @clearfix */
     content: "";
     display: table;
     clear: both;
   }
+  .comment-form  .file,
   .comments form .file {
     text-align: right;
   }
+  .comment-form  .file label,
   .comments form .file label {
     display: inline-block;
     max-width: 33em;
@@ -4766,9 +4792,11 @@
     cursor: pointer;
     transition: opacity 0.2s, border-color 0.2s;
   }
+  .comment-form  .file label br,
   .comments form .file label br {
     display: none;
   }
+  .comment-form  .file label:before,
   .comments form .file label:before {
     background: transparent url(shared/comment/picture.svg) no-repeat center;
     background-size: 1.25em auto;
@@ -4785,10 +4813,12 @@
     border-radius: 0.25em;
     border-color: transparent;
   }
+  .comment-form  .file label:hover:before,
   .comments form .file label:hover:before {
     opacity: 1;
     border-color: rgb(153, 153, 153);
   }
+  .comment-form  .file label > span:first-child,
   .comments form .file label > span:first-child {
     font-size: 0.75em;
     position: absolute;
@@ -4804,6 +4834,7 @@
     opacity: 0;
     transition: opacity 0.2s;
   }
+  .comment-form  .file label > span:first-child:before,
   .comments form .file label > span:first-child:before {
     content: "";
     display: block;
@@ -4821,50 +4852,65 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
+  .comment-form  .file label:hover  > span:first-child,
   .comments form .file label:hover  > span:first-child {
     left: 50%;
     opacity: 1;
   }
+  .comment-form  .file label + .error-message,
   .comments form .file label + .error-message {
     margin-top: 0.4375em;
   }
+  .comment-form  .file label > span:first-child,
   .comments form .file label > span:first-child {
     margin-right: 0.4375em;
   }
+  .comment-form  .file input,
   .comments form .file input {
     position: absolute;
     left: -9999px;
   }
+  .comment-form  .file input:focus,
   .comments form .file input:focus {
     position: static;
     left: auto;
   }
+  .comment-form  .submit,
   .comments form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
 
-  .supports-placeholder .comments .text label > span:first-child {
+  .supports-placeholder  .comment-form .text label > span:first-child,
+  .supports-placeholder .comments form .text label > span:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .supports-placeholder .comments .text label br {
+  .supports-placeholder  .comment-form .text label br,
+  .supports-placeholder .comments form .text label br {
     display: none;
   }
 
+  .comment-form  .file.disabled label,
   .comments form .file.disabled label {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
+  .comment-form  .file.disabled br,
   .comments form .file.disabled br {
     display: none;
   }
+  .comment-form  .file.disabled label:hover > span:first-child,
   .comments form .file.disabled label:hover > span:first-child {
     opacity: 0;
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
+  .comment-form  .container > p.error-message span,
+  .comment-form  .container > p.note span,
+  .comment-form  .file .error-message,
+  .comment-form  .file .note,
   .comments form .container > p.error-message span,
   .comments form .container > p.note span,
   .comments form .file .error-message,
@@ -4876,17 +4922,22 @@
     padding: 0.4375em;
     text-align: center;
   }
+  .comment-form  .container > p.error-message span,
+  .comment-form  .file .error-message,
   .comments form .container > p.error-message span,
   .comments form .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
+  .comment-form  .container > p.note span,
+  .comment-form  .file .note,
   .comments form .container > p.note span,
   .comments form .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
   }
+  .comment-form  .message,
   .comments form .message {
     margin-top: 0.875em;
   }
@@ -4894,17 +4945,24 @@
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
   @media (min-width: 40em) {
-    .comments .inactive .text textarea {
+    .comment-form.inactive  .text textarea,
+    .comments form.inactive .text textarea {
       height: 3.125em; /* 50px / 16px  */
       resize: none; /* Prevent the resize handle from overlapping with the upload button. */
     }
-    .comments .inactive p.text + .file {
+    .comment-form.inactive  p.text + .file,
+    .comments form.inactive p.text + .file {
       float: right;
       border-top-width: 0;
       padding-top: 0;
       padding-left: 0;
       padding-bottom: 0;
       margin: -2.6em 0 0 0;
+    }
+    .comment-form.inactive .checkbox {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
     }
   }
 
@@ -7495,15 +7553,15 @@
 
   /* =Images
   ----------------------------------------------- */
-  .post-form .images li {
+  .post-form fieldset.images li {
     display: inline-block;
     position: relative;
     margin-right: 0.125em;
     margin-bottom: 0.25em;
     vertical-align: top;
   }
-  .post-form .images .pseudo-image,
-  .post-form .images img {
+  .post-form fieldset.images .pseudo-image,
+  .post-form fieldset.images img {
     display: block;
     cursor: pointer;
     opacity: 0.8;
@@ -7512,7 +7570,7 @@
     border-color: white;
     transition: border-color 0.2s, opacity 0.2s;
   }
-  .post-form .images .pseudo-image {
+  .post-form fieldset.images .pseudo-image {
     width: 120px;
     line-height: 120px;
     text-align: center;
@@ -7520,39 +7578,39 @@
     color: white;
     font-weight: bold;
   }
-  .post-form .images input[type="radio"] {
+  .post-form fieldset.images input[type="radio"] {
     position: absolute;
     z-index: 1;
     margin-top: 1em;
     margin-left: 1em;
   }
-  .post-form .images.scripted input[type="radio"] {
+  .post-form fieldset.images.scripted input[type="radio"] {
     left: -9999px;
   }
-  .post-form .images.scripted img {
+  .post-form fieldset.images.scripted img {
     opacity: 0.7;
   }
-  .post-form .images.scripted .active img {
+  .post-form fieldset.images.scripted .active img {
     border-color: black;
     opacity: 1;
   }
-  .post-form .images h6 {
+  .post-form fieldset.images h6 {
     margin-bottom: 0;
   }
-  .post-form .images h6 + p,
-  .post-form .images h6 + ul {
+  .post-form fieldset.images h6 + p,
+  .post-form fieldset.images h6 + ul {
     margin-top: 0.4375em;
   }
-  .post-form .images .file,
-  .post-form .images .options {
+  .post-form fieldset.images .file,
+  .post-form fieldset.images .options {
     margin-top: 1.75em;
   }
-  .post-form .images .current label {
+  .post-form fieldset.images .current label {
     display: inline-block;
     position: relative;
     cursor: pointer;
   }
-  .post-form .images.scripted .current.active label:after {
+  .post-form fieldset.images.scripted .current.active label:after {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -7580,8 +7638,196 @@
     opacity: 0;
     transition: opacity 0.2s;
   }
-  .post-form .images.scripted .current.active label:hover:after {
+  .post-form fieldset.images.scripted .current.active label:hover:after {
     opacity: 1;
+  }
+
+
+  /* =Mark Done
+  ----------------------------------------------- */
+  .post-form .mark-done {
+    border-style: solid;
+    border-color: rgb(203, 203, 203);
+    border-width: 0.1em 0;
+    background: rgb(249, 249, 250);
+    padding: 0.75em 0;
+    margin-left  : -1.5em;
+    margin-right : -1.5em;
+  }
+  @media (min-width: 40em) {
+    .post-form .mark-done {
+      border-width: 0.1em;
+      border-radius: 0.25em;
+      margin-left  : 0;
+      margin-right : 0;
+    }
+  }
+  .post-form .mark-done > .checkbox {
+    padding-left  : 0.875em;
+    padding-right : 0.875em;
+    font-weight: bold;
+  }
+
+  .post-form .details.active   label > span:first-child,
+  .post-form .details.inactive label > span:first-child {
+    color: rgb(62, 197, 149); /* @fern */
+    font-weight: bold;
+    position: relative;
+  }
+  .post-form .details.inactive label > span:first-child {
+    cursor: pointer;
+  }
+  .post-form .details.active   label > span:first-child em,
+  .post-form .details.inactive label > span:first-child em {
+    font-weight: normal;
+  }
+
+  .post-form .details.active   label > span:first-child:before,
+  .post-form .details.inactive label > span:first-child:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e600"; /* @icon-corner */
+
+    font-size: 0.5em;
+    display: inline-block;
+    margin-right: 1em;
+    -webkit-transform : translateX(-0.5em) rotate(45deg);
+    -moz-transform    : translateX(-0.5em) rotate(45deg);
+    -o-transform      : translateX(-0.5em) rotate(45deg);
+    transform         : translateX(-0.5em) rotate(45deg);
+  }
+  .post-form .details.active   label > span:first-child:before {
+    -webkit-transform : translateY(-0.5em) rotate(135deg);
+    -moz-transform    : translateY(-0.5em) rotate(135deg);
+    -o-transform      : translateY(-0.5em) rotate(135deg);
+    transform         : translateY(-0.5em) rotate(135deg);
+  }
+  .post-form .details.inactive textarea,
+  .post-form .details.inactive .note {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+  @media (min-width: 40em) {
+    .post-form .details.active,
+    .post-form .details.inactive {
+      margin-bottom: 1.3125em;
+      border-bottom: 1px solid rgb(225, 225, 225);
+      padding-bottom: 0.875em;
+    }
+    .post-form .details.active {
+      padding-bottom: 0.5em;
+    }
+  }
+
+  .post-form .mark-done > .checkbox.checked label:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: rgb(62, 197, 149); /* @fern */
+    content: "\e606"; /* @icon-approve */
+    color: white;
+    border-radius: 100%;
+    padding: 0.5em;
+    font-size: 0.675em;
+    margin-right: 0.5em;
+  }
+  .post-form .mark-done > .checkbox.checked input {
+    position: absolute;
+    left: -9999px;
+  }
+  .post-form .story {
+    margin-top: 1.3125em;
+    margin-bottom: -0.75em;
+  }
+  .post-form .story > .container {
+    position: relative;
+    background: rgb(62, 197, 149); /* @fern */
+    padding: 1.5em;
+  }
+  @media (min-width: 40em) {
+    .post-form .story > .container {
+      padding: 0.875em;
+      -webkit-border-bottom-right-radius : 0.25em;
+      -webkit-border-bottom-left-radius  : 0.25em;
+         -moz-border-radius-bottomright  : 0.25em;
+         -moz-border-radius-bottomleft   : 0.25em;
+              border-bottom-right-radius : 0.25em;
+              border-bottom-left-radius  : 0.25em;
+    }
+  }
+  .post-form .story > .container:before {
+    content: "";
+    display: block;
+    background: rgb(62, 197, 149); /* @fern */
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: -0.5em;
+    right: 2.75em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+    right: auto;
+    left: 1em;
+  }
+  .post-form .story h2 {
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+  }
+  .post-form .story h2 + p {
+    color: white;
+    margin-left: 0.4375em;
+    text-transform: lowercase;
+    font-size: 0.75em;
+  }
+  .post-form .story h2 + p:before {
+    content: "(";
+  }
+  .post-form .story h2 + p:after {
+    content: ")";
+  }
+  .post-form .story h2,
+  .post-form .story h2 + p {
+    display: inline;
+  }
+  .post-form fieldset.comment-form {
+    margin-top: 0.875em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    border-top-width: 0;
+  }
+  .post-form .comment-form .container {
+    border-width: 0;
+  }
+  .post-form .comment-form .checkbox {
+    color: white;
   }
 
 

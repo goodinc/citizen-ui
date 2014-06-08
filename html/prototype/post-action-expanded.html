@@ -127,7 +127,7 @@
             <div class="container">
               <h2>Add your story</h2>
               <p>Optional</p>
-              <fieldset class="comment-form inactive">
+              <fieldset class="comment-form">
                 <div class="container">
                   <h6 class="avatar">
                     <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
@@ -138,11 +138,30 @@
                       <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
                     </label>
                   </p>
-                  <p class="file">
+                  <ol class="images">
+                    <li>
+                      <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
+                      <span>bikes.jpg</span>
+                      <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
+                    </li>
+                    <li>
+                      <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
+                      <span>road.jpg</span>
+                      <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
+                    </li>
+                    <li>
+                      <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/262/325/original/le-tour-baguette-bike-e1383079350740-425x445.jpg" alt="" />
+                      <span>festival.jpg</span>
+                      <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
+                    </li>
+                  </ol>
+                  <p class="file disabled">
                     <label>
                       <span>Attach Image</span><br />
                       <input type="file" name="image[]" />
                     </label>
+                    <br />
+                    <em class="note">Ready to post! You’ve uploaded the maximum number of images.</em>
                   </p>
                 </div><!-- /.container -->
                 <p class="checkbox">
