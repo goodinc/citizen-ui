@@ -27,7 +27,12 @@
 
   <style>
     .comment-list .images {
-      margin: 1.75em 0;
+      margin: 1.3125em 0;
+      max-height: 450px;
+      overflow: hidden;
+    }
+    .comment-list .images img {
+      display: block;
     }
     .comment-list .images:after {
       content: "";
@@ -36,21 +41,26 @@
     }
     .comment-list .images figure {
       margin: 0;
+    }
+    .comment-list .images.two figure,
+    .comment-list .images.three figure {
       max-width: 276px;
       float: left;
       overflow: hidden;
       margin-right: 10px;
+      max-height: 220px;
+    }
+    .comment-list .images.three figure {
       margin-bottom: 10px;
-      height: 220px;
     }
     .comment-list .images.two figure {
-      height: 450px;
+      max-height: 450px;
     }
     .comment-list .images.two figure img {
       max-width: none;
     }
     .comment-list .images.three figure:first-of-type {
-      height: 450px;
+      max-height: 450px;
     }
     .comment-list .images.three figure:first-of-type img {
       max-width: none;

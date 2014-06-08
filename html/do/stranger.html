@@ -27,31 +27,40 @@
 
   <style>
     .comment-list .images {
-      margin: 1.75em 0;
+      margin: 1.3125em 0;
+      max-height: 450px;
+      overflow: hidden;
+    }
+    .comment-list .images img {
+      display: block;
     }
     .comment-list .images:after {
       content: "";
       display: table;
       clear: both;
     }
+    .comment-list .images figure {
+      margin: 0;
+    }
     .comment-list .images.two figure,
     .comment-list .images.three figure {
-      margin: 0;
       max-width: 276px;
       float: left;
       overflow: hidden;
       margin-right: 10px;
+      max-height: 220px;
+    }
+    .comment-list .images.three figure {
       margin-bottom: 10px;
-      height: 220px;
     }
     .comment-list .images.two figure {
-      height: 450px;
+      max-height: 450px;
     }
     .comment-list .images.two figure img {
       max-width: none;
     }
     .comment-list .images.three figure:first-of-type {
-      height: 450px;
+      max-height: 450px;
     }
     .comment-list .images.three figure:first-of-type img {
       max-width: none;
@@ -290,12 +299,12 @@
                   </time>
                 </h3>
                 <div class="images two">
-                  <figure style="max-height: 250px">
+                  <figure>
                     <div class="image">
                       <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F437%2Foriginal%2Ffull_1368459607AEOLIAN_GI_01.jpg&amp;geometry=2000x2000%3E" />
                     </div>
                   </figure>
-                  <figure style="max-height: 250px">
+                  <figure>
                     <div class="image">
                       <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F438%2Foriginal%2Ffull_1368460079SarahClark_Brookyn20061.jpg&amp;geometry=2000x2000%3E" />
                     </div>
