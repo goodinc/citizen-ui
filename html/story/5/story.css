@@ -69,9 +69,7 @@
   }
 
 
-
-
-/* =Do Header
+/* =Header
   ----------------------------------------------- */
   .do-header {
     padding: 1em 1.5em;
@@ -87,7 +85,7 @@
       padding-right: 2.25em;
     }
   }
-  @media (min-width: 70em) {
+  @media (min-width: 65em) {
     body {
       padding-top: 4.4em;
     }
@@ -435,7 +433,7 @@
   }
 
 
-/* =Do Aside
+/* =Aside
   ----------------------------------------------- */
   .do-aside {
     background: white;
@@ -513,20 +511,18 @@
 /* =Layout
   ----------------------------------------------- */
   @media (min-width: 65em) {
-    .do-aside {
-      margin: 2.25em;
-      float: right;
-      width: 35%;
-      -moz-box-sizing : border-box;
-      box-sizing      : border-box;
-      margin-right: 2.25em;
-    }
     .story {
       float: left;
       margin: 2.25em 0 2.25em 2.25em;
-      width: 55%;
+      max-width: 55%;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
+    }
+    .do-header div {
+      display: inline;
+    }
+    .do-aside {
+      margin: 2.25em 2.25em 2.25em 60%;
     }
     .story > article {
       padding: 0.875em 0.875em 3.5em;
@@ -540,6 +536,40 @@
     }
     .pagination {
       clear: both;
+    }
+  }
+  @media (min-width: 75em) {
+    body {
+      text-align: center;
+    }
+    .do-header div {
+      display: block;
+      max-width: 69em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .do-header h3 {
+      position: absolute;
+      top: 0.875em;
+      left: 0.875em;
+    }
+    .story,
+    .do-aside {
+      text-align: left;
+      float: none;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .story {
+      max-width: 47em;
+    }
+    .do-aside {
+      margin-left: 2.25em;
+      max-width: 19.75em;
     }
   }
 
