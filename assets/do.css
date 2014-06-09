@@ -1655,3 +1655,89 @@
   }
 
 
+/* =Story Summaries
+  ----------------------------------------------- */
+  .comment-list.summaries .images {
+    margin: 1.3125em 0;
+  }
+  .comment-list.summaries .images:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .comment-list.summaries .images figure {
+    margin: 0;
+  }
+  .comment-list.summaries .images .pseudo-image {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  /* Two images */
+  .comment-list.summaries .images.two figure {
+    width: 49%;
+
+    float: left;
+  }
+  .comment-list.summaries .images.two figure + figure {
+    margin-left: 2%;
+  }
+  .comment-list.summaries .images.two .pseudo-image  {
+    height: 250px;
+  }
+
+  /* Three images */
+  .comment-list.summaries .images.three figure {
+    width: 49%;
+    overflow: hidden;
+
+    float: left;
+  }
+  .comment-list.summaries .images.three figure + figure {
+    margin-left: 2%;
+  }
+  .comment-list.summaries .images.three .pseudo-image {
+    height: 250px;
+  }
+  .comment-list.summaries .images.three figure:nth-child(2) .pseudo-image,
+  .comment-list.summaries .images.three figure:nth-child(3) .pseudo-image {
+    height: 120px;
+  }
+  .comment-list.summaries .images.three figure:nth-child(3) .pseudo-image {
+    margin-top: 10px;
+  }
+
+  .comment-list.summaries li:nth-child(2n) .images.two   figure,
+  .comment-list.summaries li:nth-child(2n) .images.three figure {
+    float: right;
+  }
+  .comment-list.summaries li:nth-child(2n) .images.two   figure + figure,
+  .comment-list.summaries li:nth-child(2n) .images.three figure + figure {
+    margin-left: 0;
+    margin-right: 2%;
+  }
+
+  @media (min-width: 30em) {
+    .comment-list.summaries .images .pseudo-image {
+      height: 450px;
+    }
+
+    /* Two images */
+    .comment-list.summaries .images.two .pseudo-image  {
+      height: 450px;
+    }
+
+    /* Three images */
+    .comment-list.summaries .images.three .pseudo-image {
+      height: 450px;
+    }
+    .comment-list.summaries .images.three figure:nth-child(2) .pseudo-image,
+    .comment-list.summaries .images.three figure:nth-child(3) .pseudo-image {
+      height: 220px;
+    }
+  }
+

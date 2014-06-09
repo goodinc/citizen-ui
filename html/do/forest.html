@@ -25,93 +25,6 @@
 
   <link rel="stylesheet" href="../../assets/do.css" />
 
-  <style>
-
-    .comment-list .images {
-      margin: 1.3125em 0;
-    }
-    .comment-list .images:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    .comment-list .images figure {
-      margin: 0;
-    }
-    .comment-list .images .pseudo-image {
-      display: block;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      max-width: 100%;
-      height: 250px;
-    }
-
-    /* Two images */
-    .comment-list .images.two figure {
-      width: 49%;
-
-      float: left;
-    }
-    .comment-list .images.two figure + figure {
-      margin-left: 2%;
-    }
-    .comment-list .images.two .pseudo-image  {
-      height: 250px;
-    }
-
-    /* Three images */
-    .comment-list .images.three figure {
-      width: 49%;
-      overflow: hidden;
-
-      float: left;
-    }
-    .comment-list .images.three figure + figure {
-      margin-left: 2%;
-    }
-    .comment-list .images.three .pseudo-image {
-      height: 250px;
-    }
-    .comment-list .images.three figure:nth-child(2) .pseudo-image,
-    .comment-list .images.three figure:nth-child(3) .pseudo-image {
-      height: 120px;
-    }
-    .comment-list .images.three figure:nth-child(3) .pseudo-image {
-      margin-top: 10px;
-    }
-
-    .comment-list li:nth-child(2n) .images.two   figure,
-    .comment-list li:nth-child(2n) .images.three figure {
-      float: right;
-    }
-    .comment-list li:nth-child(2n) .images.two   figure + figure,
-    .comment-list li:nth-child(2n) .images.three figure + figure {
-      margin-left: 0;
-      margin-right: 2%;
-    }
-
-    @media (min-width: 30em) {
-      .comment-list .images .pseudo-image {
-        height: 450px;
-      }
-
-      /* Two images */
-      .comment-list .images.two .pseudo-image  {
-        height: 450px;
-      }
-
-      /* Three images */
-      .comment-list .images.three .pseudo-image {
-        height: 450px;
-      }
-      .comment-list .images.three figure:nth-child(2) .pseudo-image,
-      .comment-list .images.three figure:nth-child(3) .pseudo-image {
-        height: 220px;
-      }
-    }
-  </style>
-
 </head>
 <body>
 
@@ -280,7 +193,7 @@
         <p><abbr title="7 stories have been posted">7</abbr></p>
       </header>
 
-      <ul class="comment-list">
+      <ul class="comment-list summaries">
         <li>
           <article>
             <h3 class="source has-image">
