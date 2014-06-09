@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>DO – GOOD</title>
+  <title>Make something for a stranger to find – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -28,11 +28,6 @@
   <style>
     .comment-list .images {
       margin: 1.3125em 0;
-      max-height: 450px;
-      overflow: hidden;
-    }
-    .comment-list .images img {
-      display: block;
     }
     .comment-list .images:after {
       content: "";
@@ -42,28 +37,67 @@
     .comment-list .images figure {
       margin: 0;
     }
-    .comment-list .images.two figure,
-    .comment-list .images.three figure {
-      max-width: 276px;
-      float: left;
-      overflow: hidden;
-      margin-right: 10px;
-      max-height: 220px;
+    .comment-list .images .pseudo-image {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 100%;
+      height: 250px;
     }
-    .comment-list .images.three figure {
-      margin-bottom: 10px;
-    }
+
+    /* Two images */
     .comment-list .images.two figure {
-      max-height: 450px;
+      width: 49%;
+
+      float: left;
     }
-    .comment-list .images.two figure img {
-      max-width: none;
+    .comment-list .images.two figure + figure {
+      margin-left: 2%;
     }
-    .comment-list .images.three figure:first-of-type {
-      max-height: 450px;
+    .comment-list .images.two .pseudo-image  {
+      height: 250px;
     }
-    .comment-list .images.three figure:first-of-type img {
-      max-width: none;
+
+    /* Three images */
+    .comment-list .images.three figure {
+      width: 49%;
+      overflow: hidden;
+
+      float: left;
+    }
+    .comment-list .images.three figure + figure {
+      margin-left: 2%;
+    }
+    .comment-list .images.three .pseudo-image {
+      height: 250px;
+    }
+    .comment-list .images.three figure:nth-child(2) .pseudo-image,
+    .comment-list .images.three figure:nth-child(3) .pseudo-image {
+      height: 120px;
+    }
+    .comment-list .images.three figure:nth-child(3) .pseudo-image {
+      margin-top: 10px;
+    }
+
+    @media (min-width: 30em) {
+      .comment-list .images .pseudo-image {
+        height: 450px;
+      }
+
+      /* Two images */
+      .comment-list .images.two .pseudo-image  {
+        height: 450px;
+      }
+
+      /* Three images */
+      .comment-list .images.three .pseudo-image {
+        height: 450px;
+      }
+      .comment-list .images.three figure:nth-child(2) .pseudo-image,
+      .comment-list .images.three figure:nth-child(3) .pseudo-image {
+        height: 220px;
+      }
     }
   </style>
 
@@ -141,23 +175,22 @@
 
       <h2 class="do">Do</h2>
 
-      <h1>Hang out in a forest</h1>
+      <h1>Make something for a stranger to find</h1>
 
-      <p>Bike to Work Week is May 13-17 and Bike to Work Day is Friday, May 17. Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nullam pulvinar condimentum nunc eu porttitor. Quisque cursus luctus leo… <a class="more" href="">See more</a></p>
+      <p>From the Bench Diary Project to Twitter’s mysterious @HiddenCash, people are using old-school objects and new technologies in tandem to interact with people they may never meet… <a class="more" href="">See more</a></p>
 
       <section class="tags">
         <h2>Tagged</h2>
         <ul>
-          <li><a href="">Biking</a></li>
-          <li><a href="">Change Health</a></li>
-          <li><a href="">Transportation</a></li>
+          <li><a href="">Maker</a></li>
         </ul>
       </section>
 
-      <form action="" method="post" class="done">
-        <h6>Done</h6>
+      <form action="" method="post" class="do">
+        <h6>Do It</h6>
         <p>
-          <button type="submit" name="remove" value="1">Remove</button>
+          <button type="submit" name="todo" value="1">I want to do this</button>
+          <button type="submit" name="done" value="1">I did this</button>
         </p>
       </form>
     </div>
@@ -238,6 +271,48 @@
             <li>
               <article>
                 <h3 class="source has-image">
+                  <a href="/members/aqualibrium">
+                    <img alt="" height="30" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F262%2Foriginal%2F1175391_314250695386975_1910315709_n_%281%29.png&amp;geometry=30x30%23" width="30">
+                    Aqualibrium
+                  </a>
+                  <time datetime="2014-06-08T11:12:38-07:00">
+                    5 hours ago
+                  </time>
+                </h3>
+                <div class="images three">
+                  <figure>
+                    <div class="image">
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F970%2Foriginal%2FMachine_detail_3.jpg&amp;geometry=2000x2000%3E)"></span>
+                    </div>
+                  </figure>
+                  <figure>
+                    <div class="image">
+                      <span class="pseudo-image" style="background-image: url(http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F971%2Foriginal%2FApt_1.jpg&amp;geometry=2000x2000%3E)"></span>
+                    </div>
+                  </figure>
+                  <figure>
+                    <div class="image">
+                      <span class="pseudo-image" style="background-image: url(http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F972%2Foriginal%2FKitchen_%281%29.jpg&amp;geometry=2000x2000%3E)"></span>
+                    </div>
+                  </figure>
+                </div>
+                <p>For many of us in cities, the ability to have a substantial garden and grow real organic vegetables is a joy that we don't have the opportunity to experience. Whether it is a lack of light or space… <a href="">See more</a></p>
+                <footer class="meta">
+                  <p class="comments">
+                    <a href="">
+                      <abbr title="Start a conversation">
+                        Comments
+                      </abbr>
+                    </a>
+                  </p>
+                </footer>
+              </article>
+            </li>
+
+
+            <li>
+              <article>
+                <h3 class="source has-image">
                   <a href="/members/rguerre9">
                     <img alt="" height="30" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F541%2F035%2Foriginal%2FPicture_1.jpg&amp;geometry=30x30%23" width="30">
                     Raul Guerrero
@@ -249,17 +324,17 @@
                 <div class="images three">
                   <figure>
                     <div class="image">
-                      <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F664%2Foriginal%2Fphoto-%2813%29.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F664%2Foriginal%2Fphoto-%2813%29.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F665%2Foriginal%2FFieldwork-by-Kamili-Kalist.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F665%2Foriginal%2FFieldwork-by-Kamili-Kalist.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F666%2Foriginal%2FTDP_Infographic2.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F666%2Foriginal%2FTDP_Infographic2.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                 </div>
@@ -289,7 +364,7 @@
                 <div class="images">
                   <figure>
                     <div class="image">
-                      <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F440%2Foriginal%2F2013-05-29_10.53.32.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F440%2Foriginal%2F2013-05-29_10.53.32.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                 </div>
@@ -319,12 +394,12 @@
                 <div class="images two">
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F437%2Foriginal%2Ffull_1368459607AEOLIAN_GI_01.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F437%2Foriginal%2Ffull_1368459607AEOLIAN_GI_01.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F438%2Foriginal%2Ffull_1368460079SarahClark_Brookyn20061.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F438%2Foriginal%2Ffull_1368460079SarahClark_Brookyn20061.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                 </div>
@@ -359,17 +434,17 @@
                 <div class="images three">
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F760%2Foriginal%2FDSC_0007.JPG&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F760%2Foriginal%2FDSC_0007.JPG&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F761%2Foriginal%2F10320409_10204143611137258_5678094872884005450_n.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F761%2Foriginal%2F10320409_10204143611137258_5678094872884005450_n.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F762%2Foriginal%2FDSC_0009.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F762%2Foriginal%2FDSC_0009.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                 </div>
@@ -399,7 +474,7 @@
                 <div class="images">
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F649%2Foriginal%2FArs_Longa_Vita_Brevis_Pencil.jpg&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F649%2Foriginal%2FArs_Longa_Vita_Brevis_Pencil.jpg&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                 </div>
@@ -418,72 +493,32 @@
             <li>
               <article>
                 <h3 class="source has-image">
-                  <a href="/members/ncp">
-                    <img alt="" height="30" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F333%2F608%2Foriginal%2FperiodCOVERweb666.jpg&amp;geometry=30x30%23" width="30">
-                    Neal Calvin Peterson
+                  <a href="/members/aqualibrium">
+                    <img alt="" height="30" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F262%2Foriginal%2F1175391_314250695386975_1910315709_n_%281%29.png&amp;geometry=30x30%23" width="30">
+                    Aqualibrium
                   </a>
-                  <time datetime="2014-06-03T10:29:59-07:00">
-                    3 days ago
+                  <time datetime="2014-06-08T11:12:38-07:00">
+                    5 hours ago
                   </time>
                 </h3>
                 <div class="images three">
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F454%2Foriginal%2FIMG_8823.JPG&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F454%2Foriginal%2FIMG_8823.JPG&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                   <figure>
                     <div class="image">
-                      <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F455%2Foriginal%2Fphoto.JPG&amp;geometry=2000x2000%3E" />
+                      <span class="pseudo-image" style="background-image: url(http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F455%2Foriginal%2Fphoto.JPG&amp;geometry=2000x2000%3E)"></span>
                     </div>
                   </figure>
                 </div>
                 <p>I have the good fortune of working in a building and a neighborhood teeming with creative people. A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours of 9pm - 3am you could feel our old warehouse… <a href="">See more</a></p>
-                <footer class="meta">
-                  <p class="comments">
-                    <a href="">
-                      <abbr title="Start a conversation">
-                        Comments
-                      </abbr>
-                    </a>
-                  </p>
-                </footer>
-              </article>
-            </li>
-            <li>
-              <article>
-                <h3 class="source has-image">
-                  <a href="/members/rguerre9">
-                    <img alt="" height="30" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F541%2F035%2Foriginal%2FPicture_1.jpg&amp;geometry=30x30%23" width="30">
-                    Raul Guerrero
-                  </a>
-                  <time datetime="2014-06-06T06:34:44-07:00">
-                    12 hours ago
-                  </time>
-                </h3>
-                <div class="images three">
-                  <figure>
-                    <div class="image">
-                      <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F664%2Foriginal%2Fphoto-%2813%29.jpg&amp;geometry=2000x2000%3E" />
-                    </div>
-                  </figure>
-                  <figure>
-                    <div class="image">
-                      <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F665%2Foriginal%2FFieldwork-by-Kamili-Kalist.jpg&amp;geometry=2000x2000%3E" />
-                    </div>
-                  </figure>
-                  <figure>
-                    <div class="image">
-                      <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F585%2F666%2Foriginal%2FTDP_Infographic2.jpg&amp;geometry=2000x2000%3E" />
-                    </div>
-                  </figure>
-                </div>
-                <p>With the idea of sharing my love for photography, I decided to bring 100 Kodak single-use 35mm film cameras (stuffed in every compartment of my carry-on bags) with me on my trip to Moshi, Tanzania… <a href="">See more</a></p>
                 <footer class="meta">
                   <p class="comments">
                     <a href="">
