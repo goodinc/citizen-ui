@@ -1336,8 +1336,6 @@
   .scripted-button form.doing h6 + p,
   .scripted-button form.done  h6 + p {
     left: -9999px;
-    opacity: 0;
-    transition: opacity 0.2s;
   }
   .scripted-button form.following.active h6 + p,
   .scripted-button form.voted.active h6 + p,
@@ -1345,7 +1343,6 @@
   .scripted-button form.doing.active h6 + p,
   .scripted-button form.done.active  h6 + p {
     left: auto;
-    opacity: 1;
   }
   .scripted-button form.following h6 + p:after,
   .scripted-button form.voted h6 + p:after,
