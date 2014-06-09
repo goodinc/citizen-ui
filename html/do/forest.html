@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="../../assets/do.css" />
 
   <style>
+
     .comment-list .images {
       margin: 1.3125em 0;
     }
@@ -78,6 +79,16 @@
     }
     .comment-list .images.three figure:nth-child(3) .pseudo-image {
       margin-top: 10px;
+    }
+
+    .comment-list li:nth-child(2n) .images.two   figure,
+    .comment-list li:nth-child(2n) .images.three figure {
+      float: right;
+    }
+    .comment-list li:nth-child(2n) .images.two   figure + figure,
+    .comment-list li:nth-child(2n) .images.three figure + figure {
+      margin-left: 0;
+      margin-right: 2%;
     }
 
     @media (min-width: 30em) {
