@@ -1657,6 +1657,22 @@
 
 /* =Story Summaries
   ----------------------------------------------- */
+  .comment-list.summaries article > a {
+    display: block;
+    color: inherit;
+  }
+  .comment-list.summaries article > a .action {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s;
+  }
+  .comment-list.summaries article > a:hover,
+  .comment-list.summaries article > a:active,
+  .comment-list.summaries article > a:focus,
+  .comment-list.summaries article > a:hover .action,
+  .comment-list.summaries article > a:active .action,
+  .comment-list.summaries article > a:focus .action {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
   .comment-list.summaries .images {
     margin: 1.3125em 0;
   }
