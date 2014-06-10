@@ -3104,8 +3104,7 @@
 /* =More Link
   ----------------------------------------------- */
   .activity-item .more {
-    padding-left: 0.625em; /* 10px / @font-size */
-    margin-top: 1.5em;
+    margin-top: 0.875em;
   }
   .search-summary .more {
     margin-top: -0.875em;
@@ -3428,6 +3427,11 @@
   .activity-item section.do.has-story h3 {
     min-height: 0;
   }
+  .activity-item section.do.has-story form.do,
+  .activity-item section.do.has-story form.doing,
+  .activity-item section.do.has-story form.done {
+    float: none;
+  }
 
 
 /* =Story
@@ -3436,10 +3440,48 @@
     font-family: inherit;
     font-size: 0.875em;
     line-height: inherit;
+    display: table;
+    width: 100%;
+    border: 1px solid rgb(221, 223, 227); /* @silver-blue */
   }
   .activity-item section.story h3 a {
-    padding: 10px 14px 10px 101px;
-    border: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    display: table-row;
+  }
+  .activity-item section.story h3 a > span {
+    display: table-cell;
+  }
+  .activity-item section.story h3 a > span.image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 80px;
+    float: none;
+  }
+  .activity-item section.story h3 a > span.text {
+    vertical-align: middle;
+    padding: 14px 20px;
+    height: 50px;
+  }
+  .activity-item section.story h3 a .action {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .activity-item section.story h3 a:hover  .action,
+  .activity-item section.story h3 a:active .action,
+  .activity-item section.story h3 a:focus  .action {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .activity-item section.story h3 a > span.text:first-child {
+    border-left: 20px solid rgb(245, 245, 245);
+  }
+
+
+
+
+  /*
+  .activity-item section.story h3 a {
+    padding: 10px 14px 10px 41px;
     position: relative;
     min-height: 80px;
     line-height: 20px;
@@ -3447,6 +3489,9 @@
     box-sizing      : border-box;
     color: rgb(102, 102, 102);
     display: block;
+  }
+  .activity-item section.story h3.has-image a {
+    padding-left: 101px;
   }
   .activity-item section.story h3 a .no-text {
     display: table;
@@ -3464,20 +3509,15 @@
     height: 100%;
     width: 100%;
   }
-  .activity-item section.story h3 a .action {
-    color: rgb(113, 179, 247); /* @sky */
-    transition: color 0.2s;
-  }
-  .activity-item section.story h3 a:hover  .action,
-  .activity-item section.story h3 a:active .action,
-  .activity-item section.story h3 a:focus  .action {
-    color: rgb(47, 132, 218); /* @ocean */
-  }
-  .activity-item section.story h3 .image {
+  */
+
+
+
+  .disabled .activity-item section.story h3 .image {
     position: absolute;
     top: 0;
     left: 0;
-    width  : 81px; /* typical image dimensions (80px) + border width (1px) / font size (14px) */
+    width  : 21px; /* 20px + border width (1px) / font size (14px) */
     height : 100%;
     border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
     -moz-box-sizing : border-box;
@@ -3485,7 +3525,22 @@
 
     background: rgb(245, 245, 245);
   }
-  .activity-item section.story h3 .image img {
+  .disabled .activity-item section.story h3.has-image .image {
+    background: transparent;
+    width  : 81px; /* typical image dimensions (80px) + border width (1px) / font size (14px) */
+  }
+  .disabled .activity-item section.story h3 .image > span {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+  }
+  .disabled .activity-item section.story h3 .image img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3501,9 +3556,9 @@
   }
   .activity-item .comment,
   .activity-item .comment + .more {
-    margin-top: 1.25em; /* @line-height(20px) */
+    margin-top: 0.875em;
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
-    padding-top: 1.25em; /* @line-height(20px) */
+    padding-top: 0.875em;
   }
   .activity-item .comment + .comment {
     padding-left: 5em; /* @line-height(20px) x 4 */
@@ -3545,6 +3600,7 @@
   .activity-item .story ~ .comment {
     border-top-width: 0;
     padding-top: 0;
+    margin-bottom: 0;
   }
   .activity-item .do.has-story ~ .comment a .action {
     color: rgb(113, 179, 247); /* @sky */
@@ -7968,45 +8024,45 @@
   }
 
   /* Two images */
-  .activity-list .do.has-story ~ .comment .images.two figure {
+  .activity-list .do.has-story ~ .comment .images.n2 figure {
     width: 49%;
 
     float: left;
   }
-  .activity-list .do.has-story ~ .comment .images.two figure + figure {
+  .activity-list .do.has-story ~ .comment .images.n2 figure + figure {
     margin-left: 2%;
   }
-  .activity-list .do.has-story ~ .comment .images.two .image > span  {
+  .activity-list .do.has-story ~ .comment .images.n2 .image > span  {
     height: 250px;
   }
 
   /* Three images */
-  .activity-list .do.has-story ~ .comment .images.three figure {
+  .activity-list .do.has-story ~ .comment .images.n3 figure {
     width: 49%;
     overflow: hidden;
 
     float: left;
   }
-  .activity-list .do.has-story ~ .comment .images.three figure + figure {
+  .activity-list .do.has-story ~ .comment .images.n3 figure + figure {
     margin-left: 2%;
   }
-  .activity-list .do.has-story ~ .comment .images.three .image > span {
+  .activity-list .do.has-story ~ .comment .images.n3 .image > span {
     height: 250px;
   }
-  .activity-list .do.has-story ~ .comment .images.three figure:nth-child(2) .image > span,
-  .activity-list .do.has-story ~ .comment .images.three figure:nth-child(3) .image > span {
+  .activity-list .do.has-story ~ .comment .images.n3 figure:nth-child(2) .image > span,
+  .activity-list .do.has-story ~ .comment .images.n3 figure:nth-child(3) .image > span {
     height: 120px;
   }
-  .activity-list .do.has-story ~ .comment .images.three figure:nth-child(3) .image > span {
+  .activity-list .do.has-story ~ .comment .images.n3 figure:nth-child(3) .image > span {
     margin-top: 10px;
   }
 
-  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.two   figure,
-  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.three figure {
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.n2   figure,
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.n3 figure {
     float: right;
   }
-  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.two   figure + figure,
-  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.three figure + figure {
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.n2   figure + figure,
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.n3 figure + figure {
     margin-left: 0;
     margin-right: 2%;
   }
@@ -8017,16 +8073,16 @@
     }
 
     /* Two images */
-    .activity-list .do.has-story ~ .comment .images.two .image > span  {
+    .activity-list .do.has-story ~ .comment .images.n2 .image > span  {
       height: 450px;
     }
 
     /* Three images */
-    .activity-list .do.has-story ~ .comment .images.three .image > span {
+    .activity-list .do.has-story ~ .comment .images.n3 .image > span {
       height: 450px;
     }
-    .activity-list .do.has-story ~ .comment .images.three figure:nth-child(2) .image > span,
-    .activity-list .do.has-story ~ .comment .images.three figure:nth-child(3) .image > span {
+    .activity-list .do.has-story ~ .comment .images.n3 figure:nth-child(2) .image > span,
+    .activity-list .do.has-story ~ .comment .images.n3 figure:nth-child(3) .image > span {
       height: 220px;
     }
   }

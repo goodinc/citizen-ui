@@ -86,6 +86,13 @@
       border-width: 0.1em;
     }
   }
+
+/* TODO: Add a class name of “body” to the container around the Do details, and remove these rule. */
+  .do-header > div {
+    margin-top: 0.875em;
+    margin-bottom: 0.875em;
+  }
+
   .do-header .body {
     margin-top: 0.875em;
     margin-bottom: 0.875em;
