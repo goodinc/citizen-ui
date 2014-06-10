@@ -6,11 +6,11 @@
 
 /* =Message
   ----------------------------------------------- */
-  .message.success {
+  body > .message.success {
     text-align: left;
     max-width: 71em;
-    margin-top: 1.75em;
-    margin-bottom: -0.5em;
+    margin-top: 2.25em;
+    margin-bottom: 0;
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
@@ -139,20 +139,10 @@
     font-family: inherit;
     font-size: 18px;
     font-weight: bold;
+    margin-top: 0;
+    display: inline;
   }
-  .do-header h1 {
-    border-top: 0.1em solid rgb(224, 224, 224);
-    padding-top: 0.875em;
-    margin-top: 0.875em;
-  }
-  @media (min-width: 40em) {
-    .do-header h1 {
-      border-top-width: 0;
-      padding-top: 0;
-      margin-top: 0;
-      display: inline;
-    }
-  }
+
   .do-header h1 a {
     color: inherit;
     text-decoration: none;
@@ -227,21 +217,19 @@
   .do-header nav a {
     color: rgb(62, 197, 149); /* @fern */
   }
-  @media (min-width: 40em) {
-    .do-header form.do,
-    .do-header form.doing,
-    .do-header form.done {
-      margin: 0;
-      font-size: 0.875em;
-      position: absolute;
-      top: 1em;
-      right: 6.25em;
-    }
-    .do-header .back {
-      position: absolute;
-      top: 0;
-      right: 1.3125em;
-    }
+  .do-header form.do,
+  .do-header form.doing,
+  .do-header form.done {
+    margin: 0;
+    font-size: 0.875em;
+    position: absolute;
+    top: 1em;
+    right: 6.25em;
+  }
+  .do-header .back {
+    position: absolute;
+    top: 0;
+    right: 1.3125em;
   }
 
 
@@ -542,11 +530,15 @@
       clear: both;
     }
   }
-  @media (min-width: 75em) {
+  .do-header div {
+    margin-top: 0.875em;
+  }
+  @media (min-width: 80em) {
     body {
       text-align: center;
     }
     .do-header div {
+      margin-top: 0;
       display: block;
       max-width: 69em;
       margin-left: auto;
