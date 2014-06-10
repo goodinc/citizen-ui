@@ -602,6 +602,10 @@
     font-weight: normal;
     color: rgb(102, 102, 102);
   }
+  form label textarea           + span.note,
+  form label input[type="text"] + span.note {
+    text-align: right;
+  }
   form legend em,
   form label  em {
     margin-left: 0.4375em;
@@ -7139,9 +7143,6 @@
   .profile-form .details {
     margin-top: 0.875em; /* @line-height / 2 */
   }
-  .profile-form .note {
-    text-align: right;
-  }
   .profile-form .skills input {
     max-width: none;
     font-style: italic;
@@ -7491,8 +7492,8 @@
     margin-bottom: 0.25em;
     vertical-align: top;
   }
-  .post-form fieldset.images .pseudo-image,
-  .post-form fieldset.images img {
+  .post-form fieldset.images .empty label span,
+  .post-form fieldset.images        img {
     display: block;
     cursor: pointer;
     opacity: 0.8;
@@ -7501,13 +7502,14 @@
     border-color: white;
     transition: border-color 0.2s, opacity 0.2s;
   }
-  .post-form fieldset.images .pseudo-image {
+  .post-form fieldset.images .empty label span {
     width: 120px;
     line-height: 120px;
     text-align: center;
-    background-color: rgb(247, 157, 130);
+    background-color: rgb(204, 204, 204);
     color: white;
     font-weight: bold;
+    font-size: inherit;
   }
   .post-form fieldset.images input[type="radio"] {
     position: absolute;
@@ -7521,7 +7523,8 @@
   .post-form fieldset.images.scripted img {
     opacity: 0.7;
   }
-  .post-form fieldset.images.scripted .active img {
+  .post-form fieldset.images.scripted .active.empty label span,
+  .post-form fieldset.images.scripted .active       img {
     border-color: black;
     opacity: 1;
   }
