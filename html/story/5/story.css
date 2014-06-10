@@ -401,11 +401,6 @@
     border-style: solid;
     border-color: rgb(224, 224, 224);
   }
-  @media (min-width: 40em) {
-    .comment-list li li article {
-      padding-left: 5.625em;
-    }
-  }
   /*
   .comment-list .comment-list article h3 img {
     width: 30px;
@@ -427,9 +422,6 @@
   }
   .comment-list .comment-list li {
     margin-bottom: 0;
-  }
-  .comment-list .comment-list article {
-    background: rgb(235, 235, 235);
   }
 
 
