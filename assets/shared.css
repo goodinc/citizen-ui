@@ -3438,7 +3438,7 @@
     line-height: inherit;
   }
   .activity-item section.story h3 a {
-    padding: 10px 14px 10px 95px;
+    padding: 10px 14px 10px 101px;
     border: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
     min-height: 80px;
@@ -3447,6 +3447,22 @@
     box-sizing      : border-box;
     color: rgb(102, 102, 102);
     display: block;
+  }
+  .activity-item section.story h3 a .no-text {
+    display: table;
+    height: 58px;
+    width: 100%;
+  }
+  .activity-item section.story h3 a .no-text > span {
+    display: table-row;
+    height: 100%;
+    width: 100%;
+  }
+  .activity-item section.story h3 a .no-text > span > span {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
   }
   .activity-item section.story h3 a .action {
     color: rgb(113, 179, 247); /* @sky */
