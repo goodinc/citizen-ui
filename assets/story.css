@@ -1,0 +1,580 @@
+
+/*-----------------------------------------------
+    Story Styles
+  ----------------------------------------------- */
+
+
+/* =Message
+  ----------------------------------------------- */
+  .message.success {
+    text-align: left;
+    max-width: 71em;
+    margin-top: 1.75em;
+    margin-bottom: -0.5em;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+  }
+
+
+/* =Share
+  ----------------------------------------------- */
+  .share,
+  .share li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .share li {
+    display: inline;
+    margin-right: 1em;
+  }
+  .share a {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: bold;
+  }
+  .share a:hover,
+  .share a:active,
+  .share a:focus {
+    color: rgb(178, 158, 31);
+  }
+
+  .share .facebook a {
+    color: rgb(58, 88, 151) !important;
+  }
+  .share .twitter a {
+    color: rgb(40, 170, 225) !important;
+  }
+  .share .facebook  a:before,
+  .share .twitter   a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin-right: 0.4375em;
+  }
+  .share .facebook  a:before {
+    content: "\e60d"; /* @icon-facebook */
+  }
+  .share .twitter   a:before {
+    content: "\e60f"; /* @icon-twitter */
+  }
+
+  .share .facebook a:before {
+
+    background: rgb(59, 89, 152); /* @blueberry */
+    border-radius: 0.15em;
+    padding: 0.25em 0 0 0.25em;
+
+    content: "\e60d"; /* @icon-facebook */
+    color: white;
+
+  }
+
+
+/* =Header
+  ----------------------------------------------- */
+  .do-header {
+    padding: 1em 1.5em;
+    background: white;
+    margin-bottom: 1px;
+    border-bottom: 0.1em solid rgb(224, 224, 224);
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+  }
+  @media (min-width: 40em) {
+    .do-header {
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
+  }
+  @media (min-width: 65em) {
+    body {
+      padding-top: 4.4em;
+    }
+    .do-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+    }
+  }
+  .do-header h3 a {
+    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
+    text-decoration: none;
+    color: rgb(0, 1, 2); /* @midnight */
+    font-size: 1.75em;
+    vertical-align: middle;
+  }
+  .do-header h3 {
+    display: inline;
+    margin-right: 1.75em;
+  }
+  .do-header h2 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    font-size: 1em;
+    background: black;
+    color: white;
+    border-radius: 100%;
+    width: 2.25em;
+    line-height: 2.25em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-right: 0.875em;
+  }
+  .do-header h1 {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .do-header h1 {
+    border-top: 0.1em solid rgb(224, 224, 224);
+    padding-top: 0.875em;
+    margin-top: 0.875em;
+  }
+  @media (min-width: 40em) {
+    .do-header h1 {
+      border-top-width: 0;
+      padding-top: 0;
+      margin-top: 0;
+      display: inline;
+    }
+  }
+  .do-header h1 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .do-header p,
+  .do-header .share {
+    display: inline;
+    margin-left: 1.75em;
+  }
+  .do-header .share {
+    margin-left: 2.75em;
+  }
+  @media (min-width: 60em) {
+    .do-header nav {
+      margin: 0;
+      display: inline;
+    }
+  }
+  .do-header nav   a,
+  .do-header .back a {
+    text-decoration: none;
+  }
+  .do-header .back a {
+    color: rgb(153, 153, 153);
+    padding: 0.35em 0.7em;
+    display: inline-block;
+  }
+  .do-header .back a:hover,
+  .do-header .back a:active,
+  .do-header .back a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .do-header .back a:after {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+  }
+  .do-header .back a span {
+    position: absolute;
+    left: -9999px;
+  }
+  .do-header nav ul,
+  .do-header nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+  }
+  @media (min-width: 60em) {
+    .do-header nav ul {
+      margin-left: 3em;
+    }
+  }
+  .do-header nav li + li {
+    margin-left: 0.75em;
+    padding-left: 0.875em;
+    border-left: 0.1em solid rgb(204, 204, 204);
+  }
+  .do-header nav li {
+    font-weight: bold;
+    font-size: 0.875em;
+  }
+  .do-header nav a {
+    color: rgb(62, 197, 149); /* @fern */
+  }
+  @media (min-width: 40em) {
+    .do-header form.do,
+    .do-header form.doing,
+    .do-header form.done {
+      margin: 0;
+      font-size: 0.875em;
+      position: absolute;
+      top: 1em;
+      right: 6.25em;
+    }
+    .do-header .back {
+      position: absolute;
+      top: 0;
+      right: 1.3125em;
+    }
+  }
+
+
+/* =Story
+  ----------------------------------------------- */
+  .story > article {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .story > article {
+    padding: 1.5em;
+  }
+  .story > article {
+    background: white;
+  }
+  .story > article .body {
+    margin-top: 1.75em;
+  }
+
+
+/* =Member
+  ----------------------------------------------- */
+  .member {
+    border-width: 0 0 0.1em 0;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    padding-bottom: 0.875em;
+    margin-bottom: 0.875em;
+  }
+  .member h3 {
+    margin: 0;
+    display: inline-block;
+  }
+  .member time {
+    margin-top: 1.75em;
+    display: block;
+  }
+  @media (min-width: 40em) {
+    .member .share {
+      margin: 0;
+      display: inline-block;
+    }
+    .member time {
+      margin: 0;
+      display: inline;
+    }
+  }
+  .member h3 {
+    margin-right: 1.5em;
+  }
+  .member h3 {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  .member h3 a {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+  }
+  .member h3 img {
+    vertical-align: middle;
+    margin-right: 1em;
+  }
+  .member h3 span {
+    margin-top: 0.5em;
+    margin-right: 1em;
+  }
+  .member time {
+    font-size: 0.875em;
+    color: rgb(153, 153, 153);
+  }
+  .member .comment {
+    display: inline;
+    margin-right: 1.75em;
+  }
+  .member .comment a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+  }
+  .member .comment a:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    content: "\e601"; /* @icon-comment */
+    margin-right: 0.4375em;
+  }
+  .member .options {
+    display: inline;
+    margin-top: 0.25em;
+    float: right;
+  }
+  .member:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+
+/* =Images
+  ----------------------------------------------- */
+  .images {
+    text-align: center;
+  }
+  .images figure {
+    margin: 0;
+  }
+  .images figure img {
+    box-shadow: none;
+  }
+  .images img {
+    max-height: 70vh;
+    width: auto;
+  }
+
+
+/* =Comments
+  ----------------------------------------------- */
+  .comments {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: white;
+    border-width: 0.1em 0 0 0;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    padding-top: 1.3125em;
+  }
+  .comments h2 {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+  }
+  .comments form {
+    margin-left: 1.5em;
+  }
+  .comments form .container {
+    background: white;
+    max-width: 40em;
+  }
+  .comments > .comment-list {
+    border-width: 0.1em 0 0 0;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    margin-top: 2.625em;
+    padding-top: 0.875em;
+  }
+  .comment-list article {
+    background: white;
+    text-align: left;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .comment-list article {
+    border-width: 0 0 0.1em 0;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+  }
+  /*
+  .comment-list .comment-list article h3 img {
+    width: 30px;
+    height: auto;
+  }
+  .comment-list .comment-list article h3 .avatar span {
+    font-size: 1.25em;
+  }
+  .comment-list .comment-list article > h3 img,
+  .comment-list .comment-list article > h3 .avatar {
+    margin-left: -2.15em;
+  }
+  */
+  .comment-list .comment-list {
+    margin-top: 0;
+  }
+  .comment-list li:last-child {
+    margin-bottom: 0;
+  }
+  .comment-list .comment-list li {
+    margin-bottom: 0;
+  }
+
+
+/* =Aside
+  ----------------------------------------------- */
+  .do-aside {
+    background: white;
+    padding: 0.875em;
+  }
+  .do-aside h2 {
+    font-family: inherit;
+    font-weight: bold;
+
+    /* @h5 */
+    font-size: 1.125em;                 /* 18px / @font-size */
+    line-height   : 1.33333333333333em; /* @line-height / 1.125 */
+    margin-bottom : 0;
+
+    line-height: 2.2222222222em; /* 40px / 18px */
+    border-width: 0 0 0.1em 0;
+    border-style: solid;
+    border-color: rgb(224, 224, 224);
+    padding-bottom: 0.7777777778em;
+    margin-bottom: 0.7777777778em;
+  }
+  .do-aside h2 + ul {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .do-aside ul,
+  .do-aside li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .do-aside li {
+    display: inline;
+    margin-right: 0.25em;
+  }
+  .do-aside li a {
+    text-decoration: none;
+  }
+  .do-aside form {
+    display: inline;
+    font-size: 0.75em;
+    margin-top: 0;
+    float: right;
+  }
+  .do-aside ul {
+    border-top: 0.1em solid rgb(249, 249, 250);
+    margin-top: 0.875em;
+    padding-top: 0.875em;
+  }
+  @media (min-width: 40em) {
+    .do-aside h1 {
+      border-top-width: 0;
+      padding-top: 0;
+      margin-top: 0;
+      display: inline;
+    }
+  }
+  .do-aside h1 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+/* =Pagination
+  ----------------------------------------------- */
+  .pagination {
+    background: transparent;
+    padding-top: 1.75em;
+    border-top-width: 0;
+    padding-bottom: 5.25em;
+    margin-bottom: 0;
+  }
+
+
+/* =Layout
+  ----------------------------------------------- */
+  @media (min-width: 65em) {
+    .story {
+      float: left;
+      margin: 2.25em 0 2.25em 2.25em;
+      max-width: 55%;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+    }
+    .do-header div {
+      display: inline;
+    }
+    .do-aside {
+      margin: 2.25em 2.25em 2.25em 60%;
+    }
+    .story > article {
+      padding: 0.875em 0.875em 3.5em;
+    }
+    .story > article .body {
+      max-width: 50em;
+      padding-left: 1.75em;
+      padding-right: 1.75em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pagination {
+      clear: both;
+    }
+  }
+  @media (min-width: 75em) {
+    body {
+      text-align: center;
+    }
+    .do-header div {
+      display: block;
+      max-width: 69em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .do-header h3 {
+      position: absolute;
+      top: 0.875em;
+      left: 0.875em;
+    }
+    .story,
+    .do-aside {
+      text-align: left;
+      float: none;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .story {
+      max-width: 47em;
+    }
+    .do-aside {
+      margin-left: 2.25em;
+      max-width: 19.75em;
+    }
+  }
+
+
