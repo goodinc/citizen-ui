@@ -3438,10 +3438,11 @@
     line-height: inherit;
   }
   .activity-item section.story h3 a {
-    padding: 14px 20px 14px 120px;
+    padding: 10px 14px 10px 95px;
     border: 1px solid rgb(221, 223, 227); /* @silver-blue */
     position: relative;
-    min-height: 100px;
+    min-height: 80px;
+    line-height: 20px;
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
     color: rgb(102, 102, 102);
@@ -3460,12 +3461,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    width  : 7.1428571429em; /* typical image dimensions (100px) / font size (14px) */
+    width  : 81px; /* typical image dimensions (80px) + border width (1px) / font size (14px) */
     height : 100%;
     border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
-    padding: 10px;
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
+
+    background: rgb(245, 245, 245);
   }
   .activity-item section.story h3 .image img {
     position: absolute;
@@ -3473,35 +3475,6 @@
     left: 50%;
     margin-top: -40px;
     margin-left: -40px;
-  }
-  .activity-item section.story h3 .image:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    /* @icon-launch */
-    content: "\e612";
-
-    margin-top: -0.5em;
-    margin-left: -0.5em;
-    font-size: 2em;
-    color: rgb(225, 225, 225);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    line-height: 1;
-    z-index: 1;
-  }
-  .activity-item section.story h3.has-image .image:before {
-    color: transparent;
   }
 
 
@@ -3553,6 +3526,10 @@
     padding-left: 0;
   }
 
+  .activity-item .story ~ .comment {
+    border-top-width: 0;
+    padding-top: 0;
+  }
   .activity-item .do.has-story ~ .comment a .action {
     color: rgb(113, 179, 247); /* @sky */
     transition: color 0.2s;
