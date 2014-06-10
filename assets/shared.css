@@ -7943,3 +7943,90 @@
     margin-bottom  : 0.875em; /* @line-height / 2 */
   }
 
+
+/* =Story Summaries
+  ----------------------------------------------- */
+  .activity-list .do.has-story ~ .comment .images {
+    clear: both;
+    margin: 0 0 1.3125em 0;
+  }
+  .activity-list .do.has-story ~ .comment .images:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .activity-list .do.has-story ~ .comment .images figure {
+    margin: 0;
+  }
+  .activity-list .do.has-story ~ .comment .images .image > span {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+  }
+
+  /* Two images */
+  .activity-list .do.has-story ~ .comment .images.two figure {
+    width: 49%;
+
+    float: left;
+  }
+  .activity-list .do.has-story ~ .comment .images.two figure + figure {
+    margin-left: 2%;
+  }
+  .activity-list .do.has-story ~ .comment .images.two .image > span  {
+    height: 250px;
+  }
+
+  /* Three images */
+  .activity-list .do.has-story ~ .comment .images.three figure {
+    width: 49%;
+    overflow: hidden;
+
+    float: left;
+  }
+  .activity-list .do.has-story ~ .comment .images.three figure + figure {
+    margin-left: 2%;
+  }
+  .activity-list .do.has-story ~ .comment .images.three .image > span {
+    height: 250px;
+  }
+  .activity-list .do.has-story ~ .comment .images.three figure:nth-child(2) .image > span,
+  .activity-list .do.has-story ~ .comment .images.three figure:nth-child(3) .image > span {
+    height: 120px;
+  }
+  .activity-list .do.has-story ~ .comment .images.three figure:nth-child(3) .image > span {
+    margin-top: 10px;
+  }
+
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.two   figure,
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.three figure {
+    float: right;
+  }
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.two   figure + figure,
+  .activity-list .do.has-story ~ .comment li:nth-child(2n) .images.three figure + figure {
+    margin-left: 0;
+    margin-right: 2%;
+  }
+
+  @media (min-width: 30em) {
+    .activity-list .do.has-story ~ .comment .images .image > span {
+      height: 450px;
+    }
+
+    /* Two images */
+    .activity-list .do.has-story ~ .comment .images.two .image > span  {
+      height: 450px;
+    }
+
+    /* Three images */
+    .activity-list .do.has-story ~ .comment .images.three .image > span {
+      height: 450px;
+    }
+    .activity-list .do.has-story ~ .comment .images.three figure:nth-child(2) .image > span,
+    .activity-list .do.has-story ~ .comment .images.three figure:nth-child(3) .image > span {
+      height: 220px;
+    }
+  }
