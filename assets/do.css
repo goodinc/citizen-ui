@@ -1668,9 +1668,9 @@
   .comment-list.summaries article > a:hover,
   .comment-list.summaries article > a:active,
   .comment-list.summaries article > a:focus,
-  .comment-list.summaries article > a:hover .action,
+  .comment-list.summaries article > a:hover  .action,
   .comment-list.summaries article > a:active .action,
-  .comment-list.summaries article > a:focus .action {
+  .comment-list.summaries article > a:focus  .action {
     color: rgb(47, 132, 218); /* @ocean */
   }
   .comment-list.summaries .images {
@@ -1684,7 +1684,7 @@
   .comment-list.summaries .images figure {
     margin: 0;
   }
-  .comment-list.summaries .images .pseudo-image {
+  .comment-list.summaries .images .image > span {
     display: block;
     background-repeat: no-repeat;
     background-position: center;
@@ -1702,7 +1702,7 @@
   .comment-list.summaries .images.two figure + figure {
     margin-left: 2%;
   }
-  .comment-list.summaries .images.two .pseudo-image  {
+  .comment-list.summaries .images.two .image > span  {
     height: 250px;
   }
 
@@ -1716,14 +1716,14 @@
   .comment-list.summaries .images.three figure + figure {
     margin-left: 2%;
   }
-  .comment-list.summaries .images.three .pseudo-image {
+  .comment-list.summaries .images.three .image > span {
     height: 250px;
   }
-  .comment-list.summaries .images.three figure:nth-child(2) .pseudo-image,
-  .comment-list.summaries .images.three figure:nth-child(3) .pseudo-image {
+  .comment-list.summaries .images.three figure:nth-child(2) .image > span,
+  .comment-list.summaries .images.three figure:nth-child(3) .image > span {
     height: 120px;
   }
-  .comment-list.summaries .images.three figure:nth-child(3) .pseudo-image {
+  .comment-list.summaries .images.three figure:nth-child(3) .image > span {
     margin-top: 10px;
   }
 
@@ -1738,21 +1738,21 @@
   }
 
   @media (min-width: 30em) {
-    .comment-list.summaries .images .pseudo-image {
+    .comment-list.summaries .images .image > span {
       height: 450px;
     }
 
     /* Two images */
-    .comment-list.summaries .images.two .pseudo-image  {
+    .comment-list.summaries .images.two .image > span  {
       height: 450px;
     }
 
     /* Three images */
-    .comment-list.summaries .images.three .pseudo-image {
+    .comment-list.summaries .images.three .image > span {
       height: 450px;
     }
-    .comment-list.summaries .images.three figure:nth-child(2) .pseudo-image,
-    .comment-list.summaries .images.three figure:nth-child(3) .pseudo-image {
+    .comment-list.summaries .images.three figure:nth-child(2) .image > span,
+    .comment-list.summaries .images.three figure:nth-child(3) .image > span {
       height: 220px;
     }
   }
