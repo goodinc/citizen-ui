@@ -168,7 +168,6 @@
       <ul class="activity-list">
 
 
-
         <li data-ui-scope="feed item">
           <section class="activity-item ng-scope" set-current-post="{&quot;slug&quot;:&quot;get-your-neighborday-toolkit&quot;,&quot;current_user_todo_status&quot;:&quot;started&quot;}" data-slug="get-your-neighborday-toolkit" data-title="Get Your Neighborday Toolkit">
             <p class="source has-image">
@@ -181,19 +180,13 @@
               <h3 class="">
                 <a href="/do/get-your-neighborday-toolkit" target="" rel="">Make something for a stranger to find</a>
               </h3>
-              <div class="todo_actions ng-scope" do-button="">
-                <!-- ngIf: currentPost.current_user_todo_status == "none" -->
-                <!-- ngIf: currentPost.current_user_todo_status == "started" --><form class="doing ng-scope ng-pristine ng-valid" ng-if="currentPost.current_user_todo_status == &quot;started&quot;">
-                  <h6>
-                    To Do
-                  </h6>
-                  <p>
-                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
-                  </p>
-                </form><!-- end ngIf: currentPost.current_user_todo_status == "started" -->
-                <!-- ngIf: currentPost.current_user_todo_status == "completed" -->
-              </div>
-              
+              <form action="" method="post" class="do">
+                <h6>Do It</h6>
+                <p>
+                  <button type="submit" name="todo" value="1">I want to do this</button>
+                  <button type="submit" name="done" value="1">I did this</button>
+                </p>
+              </form>
             </section>
             <article class="comment">
               <a href="">
@@ -221,8 +214,6 @@
 
 
 
-
-
         <li data-ui-scope="feed item">
           <section class="activity-item" set-current-post="{&quot;slug&quot;:&quot;20-grandmas-around-the-world-and-their-culinary-masterpieces&quot;}" data-slug="20-grandmas-around-the-world-and-their-culinary-masterpieces" data-spam="false" data-title="20 Grandmas around the world and their culinary masterpieces">
             <p class="source has-image">
@@ -234,14 +225,15 @@
             <section class="post story">
               <h3 class=" has-image">
                 <a href="">
-                  <span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F618%2Foriginal%2FCycling_Photo_1.jpg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>I started cycling a couple years ago and it has revolutionised the way I view the streets of Edinburgh, how I move around the town, how my style can be both form and function, and it's even changed how I view… <span class="action">See more</span>
+                  <span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F618%2Foriginal%2FCycling_Photo_1.jpg&amp;geometry=100x100%23" alt="" width="80" height="80" /></span>I started cycling a couple years ago and it has revolutionised the way I view the streets of Edinburgh, how I move around the town, how my style can be both form and function… <span class="action">See more</span>
                 </a>
               </h3>
-              
             </section>
             <article class="comment">
               <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46486">
-                <p>So cool. Grandmother "Power Lunches" – that's a brilliant idea!</p>
+                <p>I ride my bike to work every day. I live just outside of Los Angeles so it can be a bit hairy for the first 3 miles until I get to the bike path. My ride includes 3 miles of awesome bike path and just over 3 miles of bike lane. A total of 9.5 miles each way. I wish the bike lanes were better maintained but I am frankly just happy they are there. My first 3 miles needs a bike lane BADLY. Whittier Boulevard is a major street and its downright scary on the way home. Overall though, I love my commute and am much happier at work when I ride in versus driving in. </p>
+                <p>Bonus - I've worked out before my workout and thus am already one step ahead of everyone!</p>
+                <!--
                 <figure>
                   <div class="image">
                     <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F262%2F325%2Foriginal%2Fle-tour-baguette-bike-e1383079350740-425x445.jpg&amp;geometry=600x200%3E" alt="" />
@@ -252,6 +244,7 @@
                     <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F301%2F725%2Foriginal%2F8513936505_728089fcc4_b.jpg&amp;geometry=600x200%3E" alt="" />
                   </div>
                 </figure>
+                -->
               </a>
             </article>
             <p class="more">
@@ -275,7 +268,7 @@
             <section class="post story">
               <h3 class=" has-image">
                 <a href="">
-                  <span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F618%2Foriginal%2FCycling_Photo_1.jpg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>I started cycling a couple years ago and it has revolutionised the way I view the streets of Edinburgh, how I move around the town, how my style can be both form and function, and it's even changed how I view… <span class="action">See more</span>
+                  <span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F618%2Foriginal%2FCycling_Photo_1.jpg&amp;geometry=100x100%23" alt="" width="80" height="80" /></span>Johanna added 3 images to her story. <span class="action">See Johanna’s Story</span>
                 </a>
               </h3>
               
@@ -307,13 +300,13 @@
             <section class="post story">
               <h3>
                 <a href="">
-                  <span class="image"><img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Favatars%2F1999040%2Foriginal%2FIMG_0495.JPG%3F1357609594&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>When I moved back to midtown Sacramento, where I grew up, it magically became more difficult to drive than ride my bicycle or walk. While the central city of Sacramento has more parking than say San Francisco… <span class="action">See more</span>
+                  <span class="image"></span>When I moved back to midtown Sacramento, where I grew up, it magically became more difficult to drive than ride my bicycle or walk. While the central city of Sacramento… <span class="action">See more</span>
                 </a>
               </h3>
             </section>
             <article class="comment">
-              <p><a class="text" href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46486">Same here – I can imagine what a rewarding and fun project it must have been to document getting to know all of those women (not to mention tasting their delicious looking food afterwards!)</a></p><a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46486">
-
+              <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46486">
+                <p>Same here – I can imagine what a rewarding and fun project it must have been to document getting to know all of those women (not to mention tasting their delicious looking food afterwards!)</p>
               </a>
             </article>
             <p class="more">
