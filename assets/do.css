@@ -1715,45 +1715,45 @@
   }
 
   /* Two images */
-  .comment-list.summaries .images.two figure {
+  .comment-list.summaries .images.n2 figure {
     width: 49%;
 
     float: left;
   }
-  .comment-list.summaries .images.two figure + figure {
+  .comment-list.summaries .images.n2 figure + figure {
     margin-left: 2%;
   }
-  .comment-list.summaries .images.two .image > span  {
+  .comment-list.summaries .images.n2 .image > span  {
     height: 250px;
   }
 
   /* Three images */
-  .comment-list.summaries .images.three figure {
+  .comment-list.summaries .images.n3 figure {
     width: 49%;
     overflow: hidden;
 
     float: left;
   }
-  .comment-list.summaries .images.three figure + figure {
+  .comment-list.summaries .images.n3 figure + figure {
     margin-left: 2%;
   }
-  .comment-list.summaries .images.three .image > span {
+  .comment-list.summaries .images.n3 .image > span {
     height: 250px;
   }
-  .comment-list.summaries .images.three figure:nth-child(2) .image > span,
-  .comment-list.summaries .images.three figure:nth-child(3) .image > span {
+  .comment-list.summaries .images.n3 figure:nth-child(2) .image > span,
+  .comment-list.summaries .images.n3 figure:nth-child(3) .image > span {
     height: 120px;
   }
-  .comment-list.summaries .images.three figure:nth-child(3) .image > span {
+  .comment-list.summaries .images.n3 figure:nth-child(3) .image > span {
     margin-top: 10px;
   }
 
-  .comment-list.summaries li:nth-child(2n) .images.two   figure,
-  .comment-list.summaries li:nth-child(2n) .images.three figure {
+  .comment-list.summaries li:nth-child(2n) .images.n2   figure,
+  .comment-list.summaries li:nth-child(2n) .images.n3 figure {
     float: right;
   }
-  .comment-list.summaries li:nth-child(2n) .images.two   figure + figure,
-  .comment-list.summaries li:nth-child(2n) .images.three figure + figure {
+  .comment-list.summaries li:nth-child(2n) .images.n2   figure + figure,
+  .comment-list.summaries li:nth-child(2n) .images.n3 figure + figure {
     margin-left: 0;
     margin-right: 2%;
   }
@@ -1764,16 +1764,16 @@
     }
 
     /* Two images */
-    .comment-list.summaries .images.two .image > span  {
+    .comment-list.summaries .images.n2 .image > span  {
       height: 450px;
     }
 
     /* Three images */
-    .comment-list.summaries .images.three .image > span {
+    .comment-list.summaries .images.n3 .image > span {
       height: 450px;
     }
-    .comment-list.summaries .images.three figure:nth-child(2) .image > span,
-    .comment-list.summaries .images.three figure:nth-child(3) .image > span {
+    .comment-list.summaries .images.n3 figure:nth-child(2) .image > span,
+    .comment-list.summaries .images.n3 figure:nth-child(3) .image > span {
       height: 220px;
     }
   }
