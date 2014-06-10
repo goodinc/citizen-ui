@@ -86,6 +86,27 @@
       border-width: 0.1em;
     }
   }
+  .do-header .body {
+    margin-top: 0.875em;
+    margin-bottom: 0.875em;
+    position: relative;
+  }
+  .do-header .body.summary {
+    cursor: pointer;
+  }
+  .do-header .body.summary div {
+    max-height: 3.5em;
+    overflow: hidden;
+  }
+  .do-header .body.summary:after {
+    display: block;
+    text-align: right;
+    content: "See more…";
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .do-header .body.summary:hover:after {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
   .do-header > .container > div h1 {
     margin-top: 0.2916666667em; /* line-height / 4 */
     margin-bottom: 0;
