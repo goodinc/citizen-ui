@@ -86,13 +86,6 @@
       border-width: 0.1em;
     }
   }
-
-/* TODO: Add a class name of “body” to the container around the Do details, and remove these rule. */
-  .do-header > div {
-    margin-top: 0.875em;
-    margin-bottom: 0.875em;
-  }
-
   .do-header .body {
     margin-top: 0.875em;
     margin-bottom: 0.875em;
@@ -186,6 +179,12 @@
     font-family: inherit;
     font-weight: bold;
   }
+
+  /* SHIM: Override a style in the responsive.css intended for another context? */
+  .do-header .todo_actions {
+    display: block;
+  }
+
   .do-header form.do,
   .do-header form.doing,
   .do-header form.done {
