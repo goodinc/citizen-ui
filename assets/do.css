@@ -1756,11 +1756,11 @@
     margin-top: 10px;
   }
 
-  .comment-list.summaries li:nth-child(2n) .images.n2   figure,
+  .comment-list.summaries li:nth-child(2n) .images.n2 figure,
   .comment-list.summaries li:nth-child(2n) .images.n3 figure {
     float: right;
   }
-  .comment-list.summaries li:nth-child(2n) .images.n2   figure + figure,
+  .comment-list.summaries li:nth-child(2n) .images.n2 figure + figure,
   .comment-list.summaries li:nth-child(2n) .images.n3 figure + figure {
     margin-left: 0;
     margin-right: 2%;
