@@ -293,6 +293,9 @@
   .avatar .size30 {
     font-size: 1.25em;         /* 2/3 x 30px / @font-size */
   }
+  .avatar .size40 {
+    font-size: 1.6666666667em; /* 2/3 x 40px / @font-size */
+  }
   .avatar .size60 {
     font-size: 2.5em;          /* 2/3 x 60px / @font-size */
   }

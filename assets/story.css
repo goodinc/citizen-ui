@@ -291,12 +291,18 @@
     color: inherit;
     text-decoration: none;
   }
-  .member h3 img {
-    vertical-align: middle;
-    margin-right: 1em;
+  .member h3 a:hover,
+  .member h3 a:active,
+  .member h3 a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
-  .member h3 span {
+  .member h3 img,
+  .member h3 .avatar {
+    vertical-align: middle;
+  }
+  .member h3 > a > span:last-child {
     margin-top: 0.5em;
+    margin-left: 0.5em;
     margin-right: 1em;
   }
   .member time {
