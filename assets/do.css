@@ -1383,9 +1383,11 @@
     padding-top: 0.875em;
     border-top: 0.1em solid rgb(246, 246, 246);
   }
-  .do-comments .comment-list article > h3 a img {
+  .do-comments .comment-list article > h3 a img,
+  .do-comments .comment-list article > h3 a .avatar {
     float: none;
     vertical-align: middle;
+    font-size: inherit;
   }
   .do-comments .comment-list article > h3 a {
     font-size: 1.3333333333em;
