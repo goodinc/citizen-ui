@@ -3981,21 +3981,26 @@
   }
   .activity-item figure .image {
     display: inline-block;
+    /*
     background: black;
+    */
   }
   .activity-item .has-story ~ .comment figure .image {
     display: inline;
   }
   .activity-item figure img {
     display: block;
+    /*
     transition: opacity 0.2s;
+    */
   }
+  /*
   .activity-item a:hover  figure img,
   .activity-item a:active figure img,
   .activity-item a:focus  figure img {
     opacity: 0.6;
   }
-
+  */
 
 
 /* =Activity Item
