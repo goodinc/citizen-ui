@@ -3090,6 +3090,11 @@
   .activity-item h3 a:hover {
     color: rgb(47, 132, 218); /* @ocean */
   }
+  .activity-item .story h3 a:hover,
+  .activity-item .story h3 a:hover,
+  .activity-item .story h3 a:hover {
+    color: black;
+  }
 
   /* Time */
   .activity-item .time {
@@ -3507,17 +3512,17 @@
 
     margin-left: -2.5em; /* (line-height(20px) x 2) / @font-size */
   }
-  .activity-item .comment p {
+  .activity-item .comment > a {
+    display: block;
+    color: inherit;
+  }
+  .activity-item .comment a:hover p,
+  .activity-item .comment a:active p,
+  .activity-item .comment a:focus p {
     color: black;
+  }
+  .activity-item .comment p {
     font-size: 0.875em; /* 14px / @font-size */
-  }
-  .activity-item .comment p a {
-    color: rgb(102, 153, 204);
-  }
-  .activity-item .comment p a:hover,
-  .activity-item .comment p a:active,
-  .activity-item .comment p a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* TEMPORARY: Remove the space around comments that don’t have a member image.

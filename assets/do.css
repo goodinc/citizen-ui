@@ -1716,7 +1716,9 @@
   }
   .comment-list.summaries article > a:hover,
   .comment-list.summaries article > a:active,
-  .comment-list.summaries article > a:focus,
+  .comment-list.summaries article > a:focus {
+    color: black;
+  }
   .comment-list.summaries article > a:hover  .action,
   .comment-list.summaries article > a:active .action,
   .comment-list.summaries article > a:focus  .action {
