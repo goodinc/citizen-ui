@@ -278,9 +278,6 @@
 
       function toggle(e) {
 
-        // OPTIONAL: If the user wants to open the link in a new window, let the browser handle it.
-        if (e.shiftKey || e.ctrlKey || e.altKey || e.metaKey) return;
-
         var target = e.target;
 
         // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
