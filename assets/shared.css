@@ -534,6 +534,11 @@
     font-size: inherit;
   }
 
+  input[type="text"][disabled] {
+    opacity: 0.6;
+    background: rgb(245, 245, 245);
+  }
+
   form .submit {
     margin-top: 1.75em; /* @line-height */
   }
@@ -3551,14 +3556,6 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-  /* OPTIONAL: Make the links around plain text more subtle. */
-  .activity-item .comment a.text,
-  .activity-item .comment a.text:hover,
-  .activity-item .comment a.text:active,
-  .activity-item .comment a.text:focus {
-    color: inherit;
-  }
-
   /* OPTIONAL: Reduce the space between the headline and the commment */
   .activity-item .comment h3.has-image + p {
     margin-top: 0;
@@ -3982,13 +3979,27 @@
   .activity-item figure:last-child {
     margin-right: 0;
   }
-  .activity-item figure .image,
-  .activity-item figure img {
+  .activity-item figure .image {
+    display: inline-block;
+    /*
+    background: black;
+    */
+  }
+  .activity-item .has-story ~ .comment figure .image {
     display: inline;
   }
+  /*
   .activity-item figure img {
-    box-shadow: 0.25em 0.25em 0 rgb(227, 228, 229);
+    display: block;
+    transition: opacity 0.2s;
   }
+  .activity-item a:hover  figure img,
+  .activity-item a:active figure img,
+  .activity-item a:focus  figure img {
+    opacity: 0.6;
+  }
+  */
+
 
 
 /* =Activity Item
