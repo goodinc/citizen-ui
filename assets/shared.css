@@ -3981,14 +3981,11 @@
   }
   .activity-item figure .image {
     display: inline-block;
-    /*
     background: black;
-    */
   }
   .activity-item .has-story ~ .comment figure .image {
     display: inline;
   }
-  /*
   .activity-item figure img {
     display: block;
     transition: opacity 0.2s;
@@ -3998,7 +3995,6 @@
   .activity-item a:focus  figure img {
     opacity: 0.6;
   }
-  */
 
 
 
@@ -7963,6 +7959,7 @@
   }
   .activity-list .do.has-story ~ .comment .images figure {
     margin: 0;
+    display: block;
   }
   .activity-list .do.has-story ~ .comment .images .image > span {
     display: block;
