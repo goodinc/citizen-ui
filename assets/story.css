@@ -6,13 +6,11 @@
 
 /* =Message
   ----------------------------------------------- */
-  body > .message.success {
+  body       > .message.success,
+  body > div > .message.success {
     text-align: left;
     max-width: 71em;
-    margin-top: 2.25em;
-    margin-bottom: 0;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
+    margin-bottom: 2.25em;
   }
 
 

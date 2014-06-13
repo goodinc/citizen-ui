@@ -797,12 +797,26 @@
     color: inherit;
   }
 
+  /* TRICKY: Some pages (notably stories) are wrapped in a div element, to make scripting easier. */
+  body       > section.message,
+  body > div > section.message {
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 1.75em;
+  }
+
   /* OPTIONAL: If there’s enough space, position the close button in the top-right corner. */
   @media (min-width: 30em) {
-    body > section.message {
+    body       > section.message,
+    body > div > section.message {
       padding-right: 8.75em;
     }
-    body > section.message .close {
+    body       > section.message .close,
+    body > div > section.message .close {
       position: absolute;
       top: 1.375em;
       right: 2.625em;
@@ -885,16 +899,6 @@
   section.message.spam h1:before {
     content: "\e608"; /* @icon-ban */
     color: rgb(255, 51, 51);
-  }
-
-  body > section.message {
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
-    max-width: 66.5625em; /* @max-page-width */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 1.75em;
   }
 
   .activity-item .message.success a {
