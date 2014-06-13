@@ -89,16 +89,18 @@
     border-bottom: 0.1em solid rgb(224, 224, 224);
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
+    margin-bottom: 0;
   }
   @media (min-width: 65em) {
     .do-header {
       padding-left: 2.25em;
       padding-right: 2.25em;
+      margin-bottom: 2.25em;
     }
   }
   @media (min-width: 65em) and (min-height: 50em) {
     body {
-      padding-top: 4.4em;
+      padding-top: 6.5625em; /* header.height (69px) / @font-size (16px) + margin (2.25em) */
     }
     .do-header {
       position: fixed;
@@ -153,8 +155,9 @@
   }
   @media (min-width: 65em) {
     .do-header h3 {
-      margin-top: 0;
-      display: inline;
+      margin-top: -0.119047619em;
+      margin-bottom: -0.119047619em;
+      display: inline-block;
       vertical-align: middle;
     }
     .do-header h2 {
@@ -292,25 +295,7 @@
   .member h3 {
     margin: 0;
     display: inline-block;
-  }
-  .member time {
-    margin-top: 1.75em;
-    display: block;
-  }
-  @media (min-width: 25em) {
-    .member .share {
-      margin: 0;
-      display: inline-block;
-    }
-    .member time {
-      margin: 0;
-      display: inline;
-    }
-  }
-  .member h3 {
     margin-right: 1.5em;
-  }
-  .member h3 {
     font-family: inherit;
     font-size: inherit;
   }
@@ -334,6 +319,8 @@
     margin-right: 1em;
   }
   .member time {
+    margin-top: 1.75em;
+    display: block;
     font-size: 0.875em;
     color: rgb(153, 153, 153);
   }
@@ -372,6 +359,19 @@
     padding-top: 0.875em;
     margin-top: 0.875em;
   }
+  @media (min-width: 25em) {
+    .member .share {
+      margin: 0;
+      display: inline-block;
+    }
+    .member .share a {
+      display: inline-block;
+    }
+    .member time {
+      margin: 0;
+      display: inline;
+    }
+  }
   @media (min-width: 40em) {
     .member:after {
       content: " ";
@@ -386,7 +386,6 @@
       float: right;
     }
   }
-
 
 
 /* =Images
@@ -565,7 +564,7 @@
       display: inline;
     }
     .do-aside {
-      margin: 2.25em 2.25em 2.25em 60%;
+      margin: 0 2.25em 2.25em 60%;
     }
     .story > article {
       padding: 0.875em 0.875em 3.5em;
@@ -601,9 +600,17 @@
       margin-top: 0;
     }
   }
-  @media (min-width: 80em) {
+  @media (min-width: 85em) {
     body {
       text-align: center;
+    }
+    .do-header h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      display: block;
+      top: 0.3em;
+      left: 1em;
     }
     .do-header h3 + div {
       margin-top: 0;
@@ -612,12 +619,6 @@
       margin-left: auto;
       margin-right: auto;
       text-align: left;
-    }
-    .do-header h3 {
-      position: absolute;
-      display: block;
-      top: 0.3em;
-      left: 1em;
     }
     .story,
     .do-aside {
@@ -631,7 +632,6 @@
     }
     .story {
       width: 47em;
-      margin-top: 2.25em;
     }
     .do-aside {
       margin-left: 2.25em;
