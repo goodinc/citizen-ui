@@ -2104,7 +2104,8 @@
     }
     #header .primary .options > ul > li > a:hover,
     #header .primary .options > ul > li > a:active,
-    #header .primary .options > ul > li > a:focus {
+    #header .primary .options > ul > li > a:focus,
+    #header .primary .options > ul > li > h4:hover {
       color: rgb(47, 132, 218); /* @ocean */
     }
   }
