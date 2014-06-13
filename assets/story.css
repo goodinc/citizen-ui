@@ -561,7 +561,7 @@
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
-    .do-header div {
+    .do-header h3 + div {
       display: inline;
     }
     .do-aside {
@@ -581,18 +581,21 @@
       clear: both;
     }
   }
-  .do-header div {
+  .do-header h3 + div {
     border-top: 0.1em solid rgb(224, 224, 224);
     padding-top: 0.875em;
     margin-top: 0.875em;
   }
-  .do-header div:after {
+  .do-header h3 + div:after {
     content: "";
     display: table;
     clear: both;
   }
+  .do-header div.todo_actions {
+    display: block;
+  }
   @media (min-width: 65em) {
-    .do-header div {
+    .do-header h3 + div {
       border-top-width: 0;
       padding-top: 0;
       margin-top: 0;
@@ -602,7 +605,7 @@
     body {
       text-align: center;
     }
-    .do-header div {
+    .do-header h3 + div {
       margin-top: 0;
       display: block;
       max-width: 69em;
