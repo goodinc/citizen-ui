@@ -729,6 +729,13 @@ td .source.comments > h2 > a {
     font-family: inherit;
     font-weight: bold;
   }
+  .features > form > ol,
+  .features > form > .submit {
+    margin-left: 1.75em;
+  }
+  .features > form > .note {
+    margin-left: 2em;
+  }
   .features ol {
     max-width: 42em;
     border-bottom: 0.1em solid rgb(218, 220, 224);
@@ -761,7 +768,7 @@ td .source.comments > h2 > a {
     right: 0;
   }
   .add-post {
-    max-width: 42em;
+    max-width: 43.75em;
     box-sizing: border-box;
     border: 0.1em solid rgb(218, 220, 224);
     padding: 1.75em;
