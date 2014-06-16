@@ -82,12 +82,14 @@
 /* =Header
   ----------------------------------------------- */
   .do-header {
+    margin-top: 0;
     padding: 1em 1.5em;
     background: white;
     border-bottom: 0.1em solid rgb(224, 224, 224);
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
     margin-bottom: 0;
+    position: relative;
   }
   @media (min-width: 65em) {
     .do-header {
