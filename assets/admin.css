@@ -743,9 +743,16 @@ td .source.comments > h2 > a {
     border-top: 0.1em solid rgb(218, 220, 224);
     position: relative;
     padding: 0.875em 6em 0.875em 0;
+    list-style-position: outside;
   }
   .features ol li a {
     text-decoration: none;
+    color: inherit;
+  }
+  .features ol li a:hover,
+  .features ol li a:active,
+  .features ol li a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .features ol button {
     font-size: 0.75em;
