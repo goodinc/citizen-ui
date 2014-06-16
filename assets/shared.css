@@ -4716,6 +4716,12 @@
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
+  .comment-form  .images li:after,
+  .comments form .images li:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   .comment-form  .images li + li,
   .comments form .images li + li {
     margin-top: 0.625em; /* 10px / 16px */
