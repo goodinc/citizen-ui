@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin Prototype / Good</title>
-  <style type="text/css">    html, body, #outer-outer-container, #outer-container {
+  <style type="text/css">
+    html, body, #outer-outer-container, #outer-container {
       height: 100%;
       min-height: 100%;
     }
@@ -35,9 +36,11 @@
     a[href]:focus {
       text-decoration: underline;
     }
+    /*
     a[href]:visited {
       color: #333;
     }
+    */
     ul, li {
       margin-left: 0;
       padding-left: 0;
@@ -71,12 +74,14 @@
     li {
       color: #bbb;
     }
-    .optional a[href] {
+    .in-progress a[href] {
       color: rgb(49, 144, 242);
     }
-    .optional a[href]:visited {
+    /*
+    .in-progress a[href]:visited {
       color: rgb(153, 153, 153);
     }
+    */
   </style>
 </head>
 <body>
@@ -92,11 +97,11 @@
         <section>
           <section>
             <ul>
-              <li><a href="featured.html">Featured</a></li>
+              <li class="in-progress"><a href="featured.html">Featured</a></li>
               <li><a href="posts.html">Posts</a></li>
               <li><a href="users.html">Users</a></li>
               <li><a href="comments.html">Comments</a></li>
-              <li><a href="stories.html">Stories</a></li>
+              <li class="in-progress"><a href="stories.html">Stories</a></li>
             </ul>
           </section>
         </section>
