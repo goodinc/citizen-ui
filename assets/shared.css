@@ -7552,10 +7552,15 @@
     margin-bottom: 0.25em;
     vertical-align: top;
   }
+  .post-form fieldset.images .current label,
+  .post-form fieldset.images .current label input,
+  .post-form fieldset.images li       label,
+  .post-form fieldset.images li       label input {
+    cursor: pointer;
+  }
   .post-form fieldset.images .empty label span,
   .post-form fieldset.images        img {
     display: block;
-    cursor: pointer;
     opacity: 0.8;
     border-width: 0.25em;
     border-style: solid;
@@ -7602,7 +7607,6 @@
   .post-form fieldset.images .current label {
     display: inline-block;
     position: relative;
-    cursor: pointer;
   }
   .post-form fieldset.images.scripted .current.active label:after {
     /* @icons */
