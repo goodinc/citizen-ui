@@ -1908,13 +1908,13 @@
   }
 
   /* For the “Post” psuedo-button */
-  #header .primary .options .post > a {
+  #header .primary .options .post h4 {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
   @media (min-width: 50em) {
-    .scripted-nav #header .primary .options .post > a {
+    .scripted-nav #header .primary .options .post h4 {
       position: static;
     }
     .scripted-nav #header .primary .options .post ul a span {
