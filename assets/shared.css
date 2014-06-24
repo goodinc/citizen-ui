@@ -7988,6 +7988,7 @@
     font-weight: bold;
     display: inline-block;
     padding: 0 1em;
+    line-height: 40px;
   }
   #header.site-header nav a:hover,
   #header.site-header nav a:active,
@@ -7998,6 +7999,7 @@
   #header.site-header nav li.active a {
     background: black;
     color: white;
+    border-radius: 2px;
   }
 
   /* Logotype */
@@ -8039,12 +8041,12 @@
     padding-bottom: 0.4375em;
     margin-bottom: 0.4375em;
     margin-left: 240px;
-    padding-left: 1.5em;
+    padding-left: 1.65em;
   }
 
   #header.site-header nav ul {
     margin-right: 25px;
-    padding-left: 0.5em;
+    padding-left: 0.65em;
   }
 
   #header.site-header form,
@@ -8147,25 +8149,11 @@
     margin-right: 0.5em;
     vertical-align: middle;
   }
-  .join-promotion a {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
-    font-weight: bold;
-    color: inherit;
-    text-decoration: none;
-  }
-  .join-promotion a:hover,
-  .join-promotion a:active,
-  .join-promotion a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
-  }
   .join-promotion ul,
   .join-promotion li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-  }
-  .join-promotion li {
-    margin-left: 1em;
   }
   .join-promotion h2,
   .join-promotion p,
@@ -8174,7 +8162,19 @@
     display: inline;
   }
   .join-promotion p {
-    margin-right: 35px;
+    margin-right: 0.875em;
+  }
+  .join-promotion li {
+    margin-left: 0.4375em;
+  }
+  .join-promotion li a {
+    padding: 0.4em 1.5em;
+    background: black;
+    color: white;
+  }
+  .join-promotion li.secondary a {
+    background: white;
+    color: black;
   }
 
   #header.site-header ~ header {
