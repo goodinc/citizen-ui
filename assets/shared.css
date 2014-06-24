@@ -7945,7 +7945,11 @@
 
   #header.site-header > div {
     background: rgb(102, 204, 255);
-    padding: 10px 60px;
+    padding: 1px 60px;
+  }
+  #header.site-header.minimal > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   #header.site-header > div:after {
     content: "";
@@ -8025,6 +8029,10 @@
 
     color: white;
     font-weight: bold;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.4375em;
+    margin-bottom: 0.4375em;
+    margin-left: 240px;
   }
 
   #header.site-header nav ul {
