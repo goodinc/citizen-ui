@@ -2776,6 +2776,7 @@
     position: absolute;
     left: -9999px;
   }
+  #header.site-header ~ #content > .container > .home    > h1 + *,
   body > nav.sub    ~ #content > .container > .home    > h1 + *,
   body > header.sub ~ #content > .container > .form    > h1 + *,
   .topic-header     ~ #content > .container > section  > h1 + *,
