@@ -7946,6 +7946,9 @@
 
 
   #header.site-header > div {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgb(230, 230, 230);
     background: white;
     padding: 1px 60px;
   }
@@ -8016,6 +8019,7 @@
   #header.site-header.minimal h2 {
     font-size: 50px; /* 36px */
     float: none;
+    letter-spacing: 0.02em;
   }
   #header.site-header h2 a {
 
@@ -8088,7 +8092,9 @@
     display: block;
     margin-left: 30px;
     line-height: normal;
-    margin-bottom: 0;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
   }
   #header.site-header > ul li {
     margin-right: 0;
@@ -8099,6 +8105,12 @@
     padding: 0.875em 30px;
     font-size: 12px;
     font-weight: bold;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: rgb(230, 230, 230);
+  }
+  #header.site-header > ul li:first-child a {
+    border-left-width: 1px;
   }
   #header.site-header > ul li.active a {
     background: white;
@@ -8167,15 +8179,6 @@
   }
   .join-promotion li {
     margin-left: 0.4375em;
-  }
-  .join-promotion li a {
-    padding: 0.4em 1.5em;
-    background: black;
-    color: white;
-  }
-  .join-promotion li.secondary a {
-    background: white;
-    color: black;
   }
 
   #header.site-header ~ header {
