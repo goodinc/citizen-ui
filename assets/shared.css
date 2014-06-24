@@ -8166,6 +8166,9 @@
     margin-top: 0;
     float: right;
   }
+  .join-promotion + header {
+    margin-top: 1.75em;
+  }
 
 
 
