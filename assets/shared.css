@@ -8123,8 +8123,11 @@
   }
   #header.site-header > ul a:hover,
   #header.site-header > ul a:active,
-  #header.site-header > ul a:focus {
-    color: black;
+  #header.site-header > ul a:focus,
+  #header.site-header > ul li.active a:hover,
+  #header.site-header > ul li.active a:active,
+  #header.site-header > ul li.active a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -8161,6 +8164,9 @@
     line-height: 1;
     margin-right: 0.5em;
     vertical-align: middle;
+    background-color: white;
+    padding: 0.75em;
+    border-radius: 100%;
   }
   .join-promotion ul,
   .join-promotion li {
