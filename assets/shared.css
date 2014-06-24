@@ -2766,6 +2766,7 @@
   /* OPTIONAL: Hide the main headline on home, topic, member, account, and admin pages
   (since they’re redundant with the navigation) */
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
+  #header.site-header ~ #content > .container > .home           > h1:first-child,
   body > nav.sub    ~ #content > .container > .home           > h1:first-child,
   body > header.sub ~ #content > .container > .form           > h1:first-child,
   .search-header    ~ #content > .container > .search-results > h1:first-child,
@@ -8101,11 +8102,12 @@
     margin-bottom: 0;
     padding: 1.75em 60px;
     background: white;
+    text-align: center;
   }
   .join-promotion h2 {
     font-family: inherit;
     font-weight: bold;
-    font-size: 20px;
+    font-size: inherit;
   }
   .join-promotion h2:before {
 
@@ -8128,9 +8130,6 @@
     line-height: 1;
     margin-right: 0.5em;
     vertical-align: middle;
-  }
-  .join-promotion h2 + p {
-    font-family: Georgia, Times, "Times New Roman", serif; /* @georgia */
   }
   .join-promotion a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
@@ -8158,15 +8157,14 @@
   .join-promotion li {
     display: inline;
   }
-  .join-promotion h2 {
+  .join-promotion p {
     margin-right: 35px;
   }
 
-  .join-promotion ul {
-    margin-top: 0;
-    float: right;
+  #header.site-header ~ header {
+    margin-top: 0.875em;
   }
-  .join-promotion + header {
+  #header.site-header ~ #content.minimal {
     margin-top: 1.75em;
   }
 
