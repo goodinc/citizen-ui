@@ -8178,7 +8178,8 @@
   }
 
   #header.site-header ~ header {
-    margin-top: 0.875em;
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
   }
   #header.site-header ~ #content.minimal {
     margin-top: 1.75em;
