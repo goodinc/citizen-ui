@@ -7995,15 +7995,15 @@
       float: right;
     }
   }
-  #header.site-header nav div ul a {
+  #header.site-header nav > div > ul a {
     color: rgba(0, 0, 0, 0.4);
   }
   @media (min-width: 40em) {
-    #header.site-header nav div ul {
+    #header.site-header nav > div > ul {
       margin-right: 35px;
     }
   }
-  #header.site-header nav ul {
+  #header.site-header nav > div > ul {
     border-top: 0.1em solid black;
   }
   #header.site-header nav li a {
@@ -8013,24 +8013,24 @@
     display: block;
     padding: 0 1em;
     line-height: 40px;
+    border-radius: 2px;
+  }
+  #header.site-header nav li a:hover,
+  #header.site-header nav li a:active,
+  #header.site-header nav li a:focus {
+    background: rgb(234, 244, 254);
+  }
+  #header.site-header nav li.active a {
+    background: black;
+    color: white;
   }
   @media (min-width: 40em) {
-    #header.site-header nav ul {
+    #header.site-header nav > div > ul {
       border-top-width: 0;
     }
     #header.site-header nav li a {
       display: inline-block;
     }
-  }
-  #header.site-header nav li a:hover,
-  #header.site-header nav li a:active,
-  #header.site-header nav li a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
-  }
-  #header.site-header nav li.active a {
-    background: black;
-    color: white;
-    border-radius: 2px;
   }
 
   /* Logotype */
@@ -8106,13 +8106,13 @@
   #header.site-header .member h3 {
     font-size: inherit;
   }
-  #header.site-header.minimal > div {
+  #header.site-header > div {
     position: relative;
   }
   #header.site-header .member {
     position: absolute;
     top: 1em;
-    right: 60px;
+    right: 120px;
   }
   @media (min-width: 40em) {
     #header.site-header .member {
