@@ -7954,9 +7954,19 @@
     background: white;
     padding: 1px 60px;
   }
-  #header.site-header.minimal > div {
+  #header.site-header > div {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  @media (min-width: 40em) {
+    #header.site-header > div {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #header.site-header.minimal > div {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   #header.site-header > div:after {
     content: "";
@@ -7988,16 +7998,29 @@
   #header.site-header nav div ul a {
     color: rgba(0, 0, 0, 0.4);
   }
-  #header.site-header nav div ul {
-    margin-right: 35px;
+  @media (min-width: 40em) {
+    #header.site-header nav div ul {
+      margin-right: 35px;
+    }
+  }
+  #header.site-header nav ul {
+    border-top: 0.1em solid black;
   }
   #header.site-header nav li a {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
+    display: block;
     padding: 0 1em;
     line-height: 40px;
+  }
+  @media (min-width: 40em) {
+    #header.site-header nav ul {
+      border-top-width: 0;
+    }
+    #header.site-header nav li a {
+      display: inline-block;
+    }
   }
   #header.site-header nav li a:hover,
   #header.site-header nav li a:active,
@@ -8016,9 +8039,15 @@
     margin-bottom: 0;
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     line-height: 1;
-    font-size: 100px; /* 76px */
-    font-size: 151px; /* 115px */
-    float: left;
+    font-size: 50px; /* 36px */
+    letter-spacing: 0.02em;
+  }
+  @media (min-width: 40em) {
+    #header.site-header h2 {
+      font-size: 151px; /* 115px */
+      letter-spacing: 0;
+      float: left;
+    }
   }
   #header.site-header.minimal h2 {
     font-size: 50px; /* 36px */
@@ -8056,6 +8085,7 @@
   #header.site-header nav ul {
     padding-left: 0;
     margin-left: -1em; /* button.padding */
+    margin-bottom: 0;
   }
 
   @media (min-width: 40em) {
@@ -8074,12 +8104,27 @@
     display: inline;
   }
   #header.site-header .member h3 {
-    border-left: 1px solid black;
-    margin-left: 1.65em;
-    padding-left: 1em;
     font-size: inherit;
-    display: inline-block;
-    vertical-align: middle;
+  }
+  #header.site-header.minimal > div {
+    position: relative;
+  }
+  #header.site-header .member {
+    position: absolute;
+    top: 1em;
+    right: 60px;
+  }
+  @media (min-width: 40em) {
+    #header.site-header .member {
+      position: static;
+    }
+    #header.site-header .member h3 {
+      border-left: 1px solid black;
+      margin-left: 1.65em;
+      padding-left: 1em;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
   #header.site-header .member h3 img {
     display: block;
