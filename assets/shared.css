@@ -8197,10 +8197,10 @@
     display: block;
     padding: 0.875em 30px;
     font-size: 12px;
-    font-weight: bold;
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: rgb(230, 230, 230);
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
   }
   #header.site-header > ul li:first-child a {
     border-left-width: 1px;
