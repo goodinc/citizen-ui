@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Edit Your Profile – GOOD</title>
+  <title>New Do – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -95,74 +95,93 @@
   </div>
 </header>
 
-<main id="content" class="minimal">
+<main id="content">
   <div class="container">
 
-    <section class="profile-form">
-      <h1>Edit Your Profile</h1>
+    <section class="post-form">
 
-      <form action="../messages/member.html" method="post" novalidate="novalidate">
-        <div class="basics">
-          <p>
+      <header>
+        <h1>New Do</h1>
+
+        <section class="tip">
+          <div class="container">
+            <h2>What is a Do?</h2>
+            <p>A Do is a creative action you or anyone can take towards a better self and a better world.</p>
+            <p>Share what you’ve done to live well and do good.</p>
+          </div>
+        </section>
+      </header>
+
+      <form action="new" method="post">
+        <p class="text">
+          <label>
+            <span>What is your Do?</span><br />
+            <input type="text" name="title" placeholder="ex. Bike to work" />
+          </label>
+        </p>
+        <p class="text">
+          <label>
+            <span>Add tags <em>Comma separated. Spaces are OK.</em></span><br />
+            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
+          </label>
+        </p>
+        <p class="text details active">
+          <label>
+            <span>Add details <em>Enter up to 1,000 characters of plain text. (Optional)</em></span><br />
+            <textarea name="details" maxlength="1000" placeholder="Enter additional info… "></textarea>
+            <span class="note">1,000 characters remaining</span>
+          </label>
+        </p>
+
+        <div class="mark-done">
+          <p class="checkbox">
             <label>
-              <span>Change avatar</span><br />
-              <img alt="" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=130x130%23" /><br />
-              <input type="file" name="user[avatar]" />
+              <input type="checkbox" />
+              <span>Done?</span>
             </label>
           </p>
-          <p>
-            <label>
-              <span>First name</span><br />
-              <input type="text" name="user[first_name]" value="Agus" />
-            </label>
-          </p>
-          <p>
-            <label>
-              <span>Last name</span><br />
-              <input type="text" name="user[last_name]" value="Echague" />
-            </label>
-          </p>
+
+          <section class="story">
+            <div class="container">
+              <h2>Add your story</h2>
+              <p>Optional</p>
+              <fieldset class="comment-form">
+                <div class="container">
+                  <h6 class="avatar">
+                    <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="" width="30" height="30" />
+                  </h6>
+                  <p class="text">
+                    <label>
+                      <span>What happened when you last did this?</span><br />
+                      <textarea name="comment" placeholder="What happened when you last did this?"></textarea>
+                    </label>
+                  </p>
+                  <p class="file">
+                    <label>
+                      <span>Attach Image</span><br />
+                      <input type="file" name="image[]" />
+                    </label>
+                  </p>
+                </div><!-- /.container -->
+                <p class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                    <span>Yes, share this to Facebook.</span>
+                  </label>
+                </p>
+              </fieldset>
+            </div><!-- /.container -->
+          </section>
+
         </div>
-        <div class="details">
-          <p>
-            <label>
-              <span>About you</span><br />
-              <textarea name="user[introduction]" maxlength="70">'Be the change that you wish to see in the world.' Gandhi.</textarea>
-              <span class="note">Enter up to 70 characters</span>
-            </label>
-          </p>
-          <p class="skills">
-            <label>
-              <span>Share your skills</span><br />
-              <i class="prefix">I am good at</i> <input type="text" name="user[skills]" maxlength="100" value="marketing &amp; startups." />
-              <span class="note">Enter up to 100 characters</span>
-            </label>
-          </p>
-          <p class="location">
-            <label>
-              <span>Where are you located?</span><br />
-              <input type="text" name="user[location]" value="Australia" />
-            </label>
-          </p>
-          <p class="twitter">
-            <label>
-              <span>Have a Twitter handle?</span><br />
-              <input type="text" name="user[twitter_url]" value="agusechague" />
-            </label>
-          </p>
-          <p class="website">
-            <label>
-              <span>Have a website?</span><br />
-              <input type="url" name="user[url]" placeholder="http://" value="about.me/agusechague" />
-            </label>
-          </p>
-        </div>
+
         <ul class="submit">
-          <li><button type="submit">Save</button></li>
-          <li><a href="member.html">Cancel</a></li>
+          <li><button type="submit">Post</button></li>
+          <li><a href="">Cancel</a></li>
         </ul>
       </form>
-    </section>
+
+    </section><!-- /.do-new -->
 
   </div><!-- /.container -->
 </main><!-- /#content -->
@@ -170,7 +189,7 @@
 <footer id="footer">
   <div class="container">
     <section>
-      <h2>Creative Solutions for Living Well + Doing Good. <a href="join.html">Join our community</a></h2>
+      <h2>Creative Solutions for Living Well + Doing Good.</h2>
       <ul>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
