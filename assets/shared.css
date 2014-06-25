@@ -7958,7 +7958,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header > div {
       padding-top: 0;
       padding-bottom: 0;
@@ -7973,7 +7973,7 @@
     display: table;
     clear: both;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header nav,
     #header.site-header ul,
     #header.site-header li {
@@ -7986,7 +7986,7 @@
     vertical-align: middle;
     margin-right: 1px;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header h2 a {
       border-right: 1px solid #dddddd;
       padding-right: 35px;
@@ -7995,16 +7995,21 @@
       float: right;
     }
   }
-  #header.site-header nav div ul a {
+  #header.site-header nav > div > ul a {
     color: rgba(0, 0, 0, 0.4);
   }
-  @media (min-width: 40em) {
-    #header.site-header nav div ul {
+  @media (min-width: 65em) {
+    #header.site-header nav > div > ul {
       margin-right: 35px;
     }
   }
   #header.site-header nav ul {
     border-top: 0.1em solid black;
+  }
+  @media (min-width: 65em) {
+    #header.site-header nav > ul {
+      border-top-width: 0;
+    }
   }
   #header.site-header nav li a {
     color: black;
@@ -8013,24 +8018,24 @@
     display: block;
     padding: 0 1em;
     line-height: 40px;
+    border-radius: 2px;
   }
-  @media (min-width: 40em) {
-    #header.site-header nav ul {
+  #header.site-header nav li a:hover,
+  #header.site-header nav li a:active,
+  #header.site-header nav li a:focus {
+    background: rgb(234, 244, 254);
+  }
+  #header.site-header nav li.active a {
+    background: black;
+    color: white;
+  }
+  @media (min-width: 65em) {
+    #header.site-header nav > div > ul {
       border-top-width: 0;
     }
     #header.site-header nav li a {
       display: inline-block;
     }
-  }
-  #header.site-header nav li a:hover,
-  #header.site-header nav li a:active,
-  #header.site-header nav li a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
-  }
-  #header.site-header nav li.active a {
-    background: black;
-    color: white;
-    border-radius: 2px;
   }
 
   /* Logotype */
@@ -8041,12 +8046,15 @@
     line-height: 1;
     font-size: 50px; /* 36px */
     letter-spacing: 0.02em;
+    display: inline;
+      margin-right: 0.5em;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header h2 {
+      float: left;
+      margin-right: 0;
       font-size: 151px; /* 115px */
       letter-spacing: 0;
-      float: left;
     }
   }
   #header.site-header.minimal h2 {
@@ -8070,16 +8078,22 @@
   }
   #header.site-header h2 + p {
 
+    color: rgb(102, 102, 102);
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  @media (min-width: 65em) {
+    #header.site-header h2 + p {
+
 /* TEMPORARY: Reset */
     display: block;
 
-    color: rgb(102, 102, 102);
-    font-weight: normal;
-    border-bottom: 1px solid #dddddd;
-    padding-bottom: 0.4375em;
-    margin-bottom: 0.4375em;
-    margin-left: 240px;
-    padding-left: 1.65em;
+      margin-left: 240px;
+      padding-left: 1.65em;
+      border-bottom: 1px solid #dddddd;
+      padding-bottom: 0.4375em;
+      margin-bottom: 0.4375em;
+    }
   }
 
   #header.site-header nav ul {
@@ -8088,7 +8102,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header nav ul {
       margin-right: 25px;
       padding-left: 0.65em;
@@ -8106,15 +8120,15 @@
   #header.site-header .member h3 {
     font-size: inherit;
   }
-  #header.site-header.minimal > div {
+  #header.site-header > div {
     position: relative;
   }
   #header.site-header .member {
     position: absolute;
     top: 1em;
-    right: 60px;
+    right: 120px;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header .member {
       position: static;
     }
@@ -8143,7 +8157,7 @@
     background: rgb(246, 246, 246);
     max-width: 12em;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 65em) {
     #header.site-header input {
       width: 20em;
       max-width: none;
