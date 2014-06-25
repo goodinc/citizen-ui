@@ -7930,21 +7930,23 @@
   /* =Site Header
   -----------------------------------------------
   -----------------------------------------------
+  -----------------------------------------------
+  Because this is in a prototype stage, these rules
+  are prefixed with .site-header. This class name
+  can be removed and these rules can be simplified,
+  once the current header has been updated.
   ----------------------------------------------- */
   #header.site-header {
     line-height: 50px;
     margin-bottom: 0;
     border-bottom: 1px solid black;
   }
-
   #header.site-header ul,
   #header.site-header li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-
-
   #header.site-header > div {
     border-width: 1px 0 0 0;
     border-style: solid;
@@ -7961,31 +7963,34 @@
     display: table;
     clear: both;
   }
-
-  #header.site-header nav,
-  #header.site-header ul,
-  #header.site-header li {
-    display: inline;
+  @media (min-width: 40em) {
+    #header.site-header nav,
+    #header.site-header ul,
+    #header.site-header li {
+      display: inline;
+    }
   }
+
   #header.site-header h2 {
     display: inline-block;
     vertical-align: middle;
     margin-right: 1px;
   }
-  #header.site-header h2 a {
-    border-right: 1px solid black;
-    padding-right: 35px;
+  @media (min-width: 40em) {
+    #header.site-header h2 a {
+      border-right: 1px solid black;
+      padding-right: 35px;
+    }
+    #header.site-header nav div {
+      float: right;
+    }
   }
   #header.site-header nav div ul a {
     color: rgba(0, 0, 0, 0.4);
   }
-  #header.site-header nav div {
-    float: right;
-  }
   #header.site-header nav div ul {
     margin-right: 35px;
   }
-
   #header.site-header nav li a {
     color: black;
     text-decoration: none;
@@ -7999,7 +8004,6 @@
   #header.site-header nav li a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
-
   #header.site-header nav li.active a {
     background: black;
     color: white;
@@ -8050,8 +8054,16 @@
   }
 
   #header.site-header nav ul {
-    margin-right: 25px;
-    padding-left: 0.65em;
+    padding-left: 0;
+    margin-left: -1em; /* button.padding */
+  }
+
+  @media (min-width: 40em) {
+    #header.site-header nav ul {
+      margin-right: 25px;
+      padding-left: 0.65em;
+      margin-left: 0;
+    }
   }
 
   #header.site-header form,
@@ -8083,8 +8095,14 @@
   #header.site-header input {
     border-width: 0;
     border-radius: 2em;
-    width: 20em;
     background: rgb(246, 246, 246);
+    max-width: 12em;
+  }
+  @media (min-width: 40em) {
+    #header.site-header input {
+      width: 20em;
+      max-width: none;
+    }
   }
   #header.site-header button {
     border-width: 0;
@@ -8104,8 +8122,6 @@
     /* Data URI encoded from shared/header/lense-ocean.svg */
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9InJnYig0NywgMTMyLCAyMTgpIiBkPSJNODkuNDI2LDEwLjU3N0M4Mi42MDYsMy43NTcsNzMuNTM1LDAsNjMuODg5LDBTNDUuMTc0LDMuNzU3LDM4LjM1NCwxMC41NzdTMjcuNzc4LDI2LjQ2NSwyNy43OCwzNi4xMDgNCgljLTAuMDAyLDYuODAyLDEuOSwxMy4yOTUsNS4zOTEsMTguOTM2bC0zMC43MywzMC43M2MtMy4yNTUsMy4yNTUtMy4yNTUsOC41MjksMCwxMS43ODRDNC4wNjksOTkuMTg2LDYuMjAxLDEwMCw4LjMzMywxMDANCglzNC4yNjQtMC44MTQsNS44OTItMi40NDFsMzAuNzI5LTMwLjcyOWM1LjY0MSwzLjQ5MSwxMi4xMzcsNS4zOTMsMTguOTQsNS4zOTNjOS42NDYsMCwxOC43MTItMy43NTQsMjUuNTMyLTEwLjU3NA0KCWM2LjgyLTYuODI1LDEwLjU3OS0xNS44OTQsMTAuNTc0LTI1LjUzNEMxMDAuMDA1LDI2LjQ2OCw5Ni4yNDYsMTcuMzk2LDg5LjQyNiwxMC41Nzd6IE03Ny42NDIsNDkuODYyDQoJYy03LjMxNSw3LjMxNy0yMC4wNCw3LjMzMi0yNy40LDAuMDgxYy0wLjAzMi0wLjAzMy0wLjA0MS0wLjA3OC0wLjA3NC0wLjExMWMtMC4wMzQtMC4wMzQtMC4wOC0wLjA0My0wLjExNC0wLjA3Ng0KCWMtMy42MTEtMy42NjItNS42MDctOC40OTYtNS42MDctMTMuNjQ4YzAtNS4xOTIsMi4wMjEtMTAuMDc1LDUuNjk0LTEzLjc0OGMzLjY3LTMuNjcsOC41NTYtNS42OTQsMTMuNzQ4LTUuNjk0DQoJYzUuMTk3LDAsMTAuMDgsMi4wMjQsMTMuNzUzLDUuNjk0YzMuNjczLDMuNjczLDUuNjkxLDguNTU2LDUuNjkxLDEzLjc1M0M4My4zMzMsNDEuMzA2LDgxLjMxNSw0Ni4xODksNzcuNjQyLDQ5Ljg2MnoiLz4NCjwvc3ZnPg0K"), none;
   }
-
-
   #header.site-header > ul {
     display: block;
     margin-left: 30px;
@@ -8149,6 +8165,8 @@
   }
 
 
+/* =Join Promotion
+  ----------------------------------------------- */
   .join-promotion {
     margin-top: 0;
     margin-bottom: 0;
@@ -8209,6 +8227,7 @@
     margin-top: 1.75em;
     margin-bottom: 1.75em;
   }
+  #header.site-header ~ .do-header,
   #header.site-header ~ #content.minimal {
     margin-top: 1.75em;
   }
