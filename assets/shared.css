@@ -1729,7 +1729,7 @@
   #header ~ #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
+    /* border-top: 0.1em solid rgb(233, 233, 233);*/ /* @mercury */
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
@@ -7939,7 +7939,7 @@
   #header.site-header {
     line-height: 50px;
     margin-bottom: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #dddddd;
   }
   #header.site-header ul,
   #header.site-header li {
@@ -7988,7 +7988,7 @@
   }
   @media (min-width: 65em) {
     #header.site-header h2 a {
-      border-right: 1px solid black;
+      border-right: 1px solid #dddddd;
       padding-right: 35px;
     }
     #header.site-header nav div {
@@ -8090,7 +8090,7 @@
 
       margin-left: 240px;
       padding-left: 1.65em;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #dddddd;
       padding-bottom: 0.4375em;
       margin-bottom: 0.4375em;
     }
@@ -8133,7 +8133,7 @@
       position: static;
     }
     #header.site-header .member h3 {
-      border-left: 1px solid black;
+      border-left: 1px solid #dddddd;
       margin-left: 1.65em;
       padding-left: 1em;
       display: inline-block;
