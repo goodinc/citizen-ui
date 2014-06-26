@@ -7976,7 +7976,7 @@
       padding-right: 60px;
     }
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header > div {
       padding-top: 0;
       padding-bottom: 0;
@@ -7994,7 +7994,7 @@
   #header.site-header nav {
     margin-top: 0;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 55em) {
     #header.site-header nav,
     #header.site-header nav > ul {
       display: inline;
@@ -8003,7 +8003,7 @@
       display: inline-block;
     }
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     .scripted-header #header.site-header nav > div > ul,
     .scripted-header #header.site-header nav > div > ul > li {
       display: inline;
@@ -8015,11 +8015,13 @@
     vertical-align: middle;
     margin-right: 1px;
   }
-  @media (min-width: 65em) {
+  @media (min-width: 55em) {
     #header.site-header h2 a {
       border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-right: 35px;
     }
+  }
+  @media (min-width: 85em) {
     .scripted-header #header.site-header nav div {
       float: right;
     }
@@ -8028,7 +8030,7 @@
   #header.site-header nav > div > ul h3 {
     color: rgba(0, 0, 0, 0.4);
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header nav > div > ul {
       margin-right: 35px;
     }
@@ -8062,7 +8064,7 @@
     background: black;
     color: white;
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header nav > div > ul {
       border-top-width: 0;
     }
@@ -8082,7 +8084,7 @@
     display: inline;
       margin-right: 0.5em;
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header h2 {
       float: left;
       margin-right: 0;
@@ -8115,13 +8117,13 @@
     font-weight: normal;
     margin-bottom: 0;
   }
-  @media (max-width: 64.9em) {
+  @media (max-width: 84.9em) {
     #header h2 + p {
       position: absolute;
       left: -9999px;
     }
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header h2 + p {
 
 /* TEMPORARY: Reset */
@@ -8146,7 +8148,7 @@
     margin-left: 0;
   }
 
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header nav > ul,
     .scripted-header #header.site-header nav > div > ul {
       margin-right: 25px;
@@ -8168,7 +8170,7 @@
     position: absolute;
     left: -9999px;
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     .scripted-header #header.site-header nav .post h3 {
       position: static;
     }
@@ -8203,7 +8205,7 @@
       right: 120px;
     }
   }
-  @media (min-width: 65em) {
+  @media (min-width: 85em) {
     #header.site-header .member h3 {
       position: static;
       border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
@@ -8294,15 +8296,11 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-
-
-  @media (min-width: 65em) {
-
+  @media (min-width: 85em) {
     .scripted-header #header.site-header nav .post   h3,
     .scripted-header #header.site-header nav .member h3 {
       cursor: pointer;
     }
-
     .scripted-header #header.site-header .post,
     .scripted-header #header.site-header .member {
       position: relative;
@@ -8380,7 +8378,7 @@
   }
 
   /* Make the member navigation toggleable on small screens */
-  @media (max-width: 64.9em) {
+  @media (max-width: 84.9em) {
     .scripted-header #header.site-header nav .member ul {
       position: absolute;
       left: -9999px;
@@ -8405,12 +8403,12 @@
       right: 1.5em;
     }
   }
-  @media (min-width: 25em) and (max-width: 64.9em) {
+  @media (min-width: 25em) and (max-width: 84.9em) {
     .scripted-header #header.site-header nav > p:first-child {
       right: 60px;
     }
   }
-  @media (max-width: 64.9em) {
+  @media (max-width: 84.9em) {
     .scripted-header #header.site-header nav > p:first-child {
       left: auto;
       top: 1em;
@@ -8445,7 +8443,7 @@
       position: static;
     }
   }
-  @media (max-width: 39.9em) {
+  @media (max-width: 54.9em) {
     .scripted-header #header.site-header nav > ul {
       position: absolute;
       left: -9999px;
