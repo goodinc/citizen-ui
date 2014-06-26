@@ -409,7 +409,7 @@
         }
 
         // If the target is a headline or a link
-        if (name == "h3" || name == "img" || name == "a") {
+        if (name == "h3" || name == "img" || name == "a" || name == "p") {
           var section = closest(target, "section");
 
           // If the target is within a post or member section
@@ -431,7 +431,22 @@
             } else {
               show(section);
             }
+          } else {
+            var nav    = closest(target, "nav");
+            var header = closest(target, "header");
+            if (nav && header && header.id == "header") {
+
+              // Toggle the dropdown
+              if (name == "p" && nav.className.indexOf("active") >= 0) {
+                hide(nav);
+              } else {
+                show(nav);
+              }
+
+            }
           }
+
+
         }
 
       }
