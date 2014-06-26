@@ -8115,6 +8115,12 @@
     font-weight: normal;
     margin-bottom: 0;
   }
+  @media (max-width: 64.9em) {
+    #header h2 + p {
+      position: absolute;
+      left: -9999px;
+    }
+  }
   @media (min-width: 65em) {
     #header.site-header h2 + p {
 
