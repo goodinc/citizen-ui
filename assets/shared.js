@@ -391,6 +391,7 @@
       }
 
       function show(element) {
+        if (active) hide(active);
         if (element.className.indexOf("active") < 0) {
           element.className += " active";
         }
