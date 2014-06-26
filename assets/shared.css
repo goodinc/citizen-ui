@@ -8012,7 +8012,7 @@
   @media (min-width: 55em) {
     #header.site-header h2 a {
       border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      padding-right: 35px;
+      padding-right: 29px;
     }
   }
   @media (min-width: 85em) {
@@ -8123,11 +8123,11 @@
 /* TEMPORARY: Reset */
     display: block;
 
-      margin-left: 243px;
+      margin-left: 238px;
       padding-left: 1.65em;
       border-bottom: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      padding-bottom: 0.4375em;
-      margin-bottom: 0.4375em;
+      padding-bottom: 12px;
+      margin-bottom: 5px;
     }
   }
 
