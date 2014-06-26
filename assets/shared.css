@@ -7964,11 +7964,17 @@
     border-style: solid;
     border-color: rgb(230, 230, 230);
     background: white;
-    padding: 1px 60px;
+    padding: 1px 1.5em;
   }
   #header.site-header > div {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  @media (min-width: 40em) {
+    #header.site-header > div {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
   @media (min-width: 65em) {
     #header.site-header > div {
@@ -8177,7 +8183,12 @@
   #header.site-header .member h3 {
     position: absolute;
     top: 1em;
-    right: 120px;
+    right: 84px;
+  }
+  @media (min-width: 40em) {
+    #header.site-header .member h3 {
+      right: 120px;
+    }
   }
   @media (min-width: 65em) {
     #header.site-header .member h3 {
@@ -8378,11 +8389,20 @@
     left: -9999px;
   }
 
+  @media (max-width: 39.9em) {
+    .scripted-header #header.site-header nav > p:first-child {
+      right: 1.5em;
+    }
+  }
+  @media (min-width: 40em) and (max-width: 64.9em) {
+    .scripted-header #header.site-header nav > p:first-child {
+      right: 60px;
+    }
+  }
   @media (max-width: 64.9em) {
     .scripted-header #header.site-header nav > p:first-child {
       left: auto;
       top: 1em;
-      right: 60px;
 
       font-size: inherit;
       background: transparent url(shared/header/nav.png) no-repeat center;
