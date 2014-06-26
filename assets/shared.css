@@ -2555,6 +2555,7 @@
   body > nav.sub li {
     display: inline;
   }
+  .home > .rss a,
   body > nav.sub .rss a,
   body > nav.sub li a {
     color: rgb(102, 103, 104);
@@ -2567,6 +2568,9 @@
     display: inline-block;
     padding: 0.875em 0; /* @line-height(1.75em) / 3 x 4 / font-size(0.75em) */
     padding-bottom: 0.4583333333em; /* padding(1.1666666667em) - border-width(0.4166666667em) */
+  }
+  .home > .rss a {
+    padding: 0;
   }
 
   /* For the “Make changes to profile?” note, in the account settings section */
@@ -2605,9 +2609,11 @@
     color: rgb(0, 1, 2); /* @black */
     border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
   }
+  .home > .rss a,
   body > nav.sub .rss a {
     color: rgb(221, 223, 227); /* @silver-blue */
   }
+  .home > .rss a:after,
   body > nav.sub .rss a:after {
     /* @icons */
     font-family: "Icons";
@@ -2628,6 +2634,9 @@
     margin-left: 0.875em;
     transition: color 0.2s;
   }
+  .home > .rss a:hover,
+  .home > .rss a:active,
+  .home > .rss a:focus,
   body > nav.sub a:hover,
   body > nav.sub a:active,
   body > nav.sub a:focus,
@@ -2635,6 +2644,9 @@
   body > nav.sub .rss a:active:after,
   body > nav.sub .rss a:focus:after {
     color: rgb(47, 132, 218); /* @ocean */
+  }
+  .home > .rss {
+    text-align: right;
   }
   body > nav.sub .rss {
     margin-top: 0;
@@ -7975,9 +7987,19 @@
   }
   @media (min-width: 65em) {
     #header.site-header nav,
-    #header.site-header ul,
-    #header.site-header li {
+    #header.site-header nav > ul,
+    #header.site-header nav > ul > li,
+    #header.site-header nav > div > ul,
+    #header.site-header nav > div > ul > li {
       display: inline;
+    }
+    #header.site-header nav > div > ul > li h3 {
+      position: static;
+    }
+    #header.site-header nav .post li a span {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
     }
   }
 
@@ -7995,7 +8017,8 @@
       float: right;
     }
   }
-  #header.site-header nav > div > ul a {
+  #header.site-header nav > div > ul a,
+  #header.site-header nav > div > ul h3 {
     color: rgba(0, 0, 0, 0.4);
   }
   @media (min-width: 65em) {
@@ -8004,14 +8027,15 @@
     }
   }
   #header.site-header nav ul {
-    border-top: 0.1em solid black;
+    border-top: 0.1em solid #dddddd;
   }
   @media (min-width: 65em) {
     #header.site-header nav > ul {
       border-top-width: 0;
     }
   }
-  #header.site-header nav li a {
+  #header.site-header nav li a,
+  #header.site-header nav li h3 {
     color: black;
     text-decoration: none;
     font-weight: bold;
@@ -8020,6 +8044,7 @@
     line-height: 40px;
     border-radius: 2px;
   }
+  #header.site-header nav ul h3:hover,
   #header.site-header nav li a:hover,
   #header.site-header nav li a:active,
   #header.site-header nav li a:focus {
@@ -8101,14 +8126,66 @@
     margin-left: -1em; /* button.padding */
     margin-bottom: 0;
   }
+  #header.site-header nav ul ul {
+    margin-top: 0;
+    border-top-width: 0;
+    margin-left: 0;
+  }
 
   @media (min-width: 65em) {
-    #header.site-header nav ul {
+    #header.site-header nav > ul,
+    #header.site-header nav > div > ul {
       margin-right: 25px;
       padding-left: 0.65em;
       margin-left: 0;
     }
   }
+
+  #header.site-header nav ul h3 {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+  #header.site-header nav > p:first-child {
+    position: absolute;
+    left: auto;
+    top: 1em;
+    right: 60px;
+
+    font-size: inherit;
+    background: transparent url(shared/header/nav.png) no-repeat center;
+    background-image: url(shared/header/nav.svg), none;
+    background-size: auto 1em;
+    border: 1px solid transparent;
+    margin: 0;
+    cursor: pointer;
+
+    width  : 2.5em; /* account-image-width(40px) / font-size(16px) */
+    height : 2.5em;
+
+    /* @hidden-accessible-text */
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  #header.site-header nav > p:first-child:hover {
+    /* Data URI encoded from shared/header/nav-ocean.svg */
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iODguMjM1cHgiIHZpZXdCb3g9IjAgMCAxMDAgODguMjM1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgODguMjM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9InJnYig0NywgMTMyLCAyMTgpIiBkPSJNOTEuMTc2LDE3LjY0N0g4LjgyNEMzLjk1LDE3LjY0NywwLDEzLjY5NywwLDguODI0UzMuOTUsMCw4LjgyNCwwaDgyLjM1M0M5Ni4wNDgsMCwxMDAsMy45NSwxMDAsOC44MjQNCglTOTYuMDQ4LDE3LjY0Nyw5MS4xNzYsMTcuNjQ3eiIvPg0KPHBhdGggZmlsbD0icmdiKDQ3LCAxMzIsIDIxOCkiIGQ9Ik05MS4xNzYsNTIuOTQxSDguODI0QzMuOTUsNTIuOTQxLDAsNDguOTg5LDAsNDQuMTE4YzAtNC44NzQsMy45NS04LjgyNCw4LjgyNC04LjgyNGg4Mi4zNTMNCgljNC44NzEsMCw4LjgyNCwzLjk1LDguODI0LDguODI0QzEwMCw0OC45ODksOTYuMDQ4LDUyLjk0MSw5MS4xNzYsNTIuOTQxeiIvPg0KPHBhdGggZmlsbD0icmdiKDQ3LCAxMzIsIDIxOCkiIGQ9Ik05MS4xNzYsODguMjM1SDguODI0QzMuOTUsODguMjM1LDAsODQuMjgzLDAsNzkuNDEyczMuOTUtOC44MjQsOC44MjQtOC44MjRoODIuMzUzDQoJYzQuODcxLDAsOC44MjQsMy45NTIsOC44MjQsOC44MjRTOTYuMDQ4LDg4LjIzNSw5MS4xNzYsODguMjM1eiIvPg0KPC9zdmc+DQo="), none;
+  }
+
+  @media (min-width: 65em) {
+    #header.site-header nav > p:first-child {
+      left: -9999px;
+      right: auto;
+    }
+  }
+
 
   #header.site-header form,
   #header.site-header form p,
@@ -8123,16 +8200,14 @@
   #header.site-header > div {
     position: relative;
   }
-  #header.site-header .member {
+  #header.site-header .member h3 {
     position: absolute;
     top: 1em;
     right: 120px;
   }
   @media (min-width: 65em) {
-    #header.site-header .member {
-      position: static;
-    }
     #header.site-header .member h3 {
+      position: static;
       border-left: 1px solid #dddddd;
       margin-left: 1.65em;
       padding-left: 1em;
@@ -8224,14 +8299,88 @@
   }
 
 
+
+  @media (min-width: 65em) {
+    #header.site-header .post,
+    #header.site-header .member {
+      position: relative;
+    }
+    #header.site-header .post   ul,
+    #header.site-header .member ul {
+      position: absolute;
+      right: 0;
+
+      /* @dropdown */
+      background: white;
+      border: 1px solid rgb(139, 139, 139);
+      box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+
+      z-index: 9999; /* @infinity */
+    }
+    #header.site-header .post   ul a,
+    #header.site-header .member ul a {
+      display: block;
+      padding: 0.675em 1.25em;
+      font-size: 0.875em;
+      border-top: 0.1em solid rgb(221, 221, 221);
+      color: rgb(101, 102, 102);
+      text-decoration: none;
+      font-weight: bold;
+      line-height: 1.75em;
+    }
+    #header.site-header .post   ul:after,
+    #header.site-header .member ul:after {
+      display: block;
+      content: "";
+      background: white;
+      border-width: 0.125em 0 0 0.125em;
+      border-style: solid;
+      border-color: rgb(139, 139, 139);
+      width: 1em;
+      height: 1em;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
+      position: absolute;
+      top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
+      left: 50%;
+      margin-left: -0.5em;
+      font-size: 0.875em;
+
+      -webkit-transform : rotate(45deg);
+      -moz-transform    : rotate(45deg);
+      -o-transform      : rotate(45deg);
+      transform         : rotate(45deg);
+    }
+    #header.site-header .post ul {
+      min-width: 5em;
+      right: -0.15em;
+    }
+    #header.site-header .member ul {
+      min-width: 15em;
+    }
+    #header.site-header .member ul:after {
+      left: auto;
+      right: 1em;
+    }
+  }
+
+
 /* =Join Promotion
   ----------------------------------------------- */
   .join-promotion {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0.875em 60px;
+    padding: 1.75em 1.5em;
     background: rgb(234, 244, 254);
     text-align: center;
+  }
+  @media (min-width: 65em) {
+    .join-promotion {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 0.875em;
+      padding-bottom: 0.875em;
+    }
   }
   .join-promotion h2 {
     font-family: inherit;
@@ -8257,11 +8406,20 @@
 
     font-size: 1.25em;
     line-height: 1;
-    margin-right: 0.5em;
-    vertical-align: middle;
     background-color: white;
     padding: 0.75em;
     border-radius: 100%;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.875em;
+  }
+  @media (min-width: 30em) {
+    .join-promotion h2:before {
+      display: inline;
+      margin-right: 0.5em;
+      vertical-align: middle;
+    }
   }
   .join-promotion ul,
   .join-promotion li {
@@ -8271,7 +8429,6 @@
   }
   .join-promotion h2,
   .join-promotion p,
-  .join-promotion ul,
   .join-promotion li {
     display: inline;
   }
@@ -8280,6 +8437,11 @@
   }
   .join-promotion li {
     margin-left: 0.4375em;
+  }
+  @media (min-width: 55em) {
+    .join-promotion ul {
+      display: inline;
+    }
   }
 
   #header.site-header ~ header {
