@@ -1730,7 +1730,7 @@
     /* @separator */
     margin-top: 0;
     border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-    padding-top: 1.75em;   /* @line-height */
+    padding-top: 3.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
   #header ~ #content.minimal {
