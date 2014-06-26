@@ -8,6 +8,7 @@
 
     // OPTIONAL: Present the header navigation as dropdowns.
     new NavDropDown();
+    new HeaderDropDown();
 
     // OPTIONAL: Present the do, voted, and following buttons as dropdowns.
     new ButtonDropDown();
@@ -80,6 +81,7 @@
 
   /* =MessageDetails
   ----------------------------------------------- */
+  /*
   var MessageDetails = function() {};
 
   (function() {
@@ -129,10 +131,12 @@
     }
 
   })();
+  */
 
 
   /* =HideMessage
   ----------------------------------------------- */
+  /*
   var HideMessage = function() {};
 
   (function() {
@@ -179,6 +183,7 @@
     }
 
   })();
+  */
 
 
   /* =NavDropDown
@@ -362,6 +367,83 @@
       // Style the dropdowns
       var html = document.getElementsByTagName("html")[0];
       html.className += " scripted-nav";
+
+    };
+      
+  })();
+
+
+  /* =HeaderDropDown
+  ----------------------------------------------- */
+  var HeaderDropDown = function() {};
+
+  (function() {
+
+    if (!document.addEventListener || !document.querySelector) return;
+
+    HeaderDropDown = function() {
+
+      var active; // The currently active element
+
+      function hide(element) {
+        element.className = element.className.replace(/active/g, "");
+        if (active === element) active = undefined;
+      }
+
+      function show(element) {
+        if (element.className.indexOf("active") < 0) {
+          element.className += " active";
+        }
+        active = element;
+      }
+
+      function toggle(e) {
+        var target = e.target;
+        var name = target.nodeName.toLowerCase();
+
+        // If a dropdown is currently open and it’s not the target, close it
+        if (active) {
+          if (!within(e.target, active)) {
+            hide(active);
+          }
+        }
+
+        // If the target is a headline or a link
+        if (name == "h3" || name == "img" || name == "a") {
+          var section = closest(target, "section");
+
+          // If the target is within a post or member section
+          if (section && ( section.className.indexOf("post")      >= 0 ||
+                           section.className.indexOf("member")    >= 0 )) {
+
+            // If the target is within a headline, assume the headline is the target
+            if (name == "img") {
+              var headline = closest(target, "h3");
+              if (headline) {
+                target = headline;
+                name = "h3";
+              }
+            }
+
+            // Toggle the dropdown
+            if (name == "h3" && section.className.indexOf("active") >= 0) {
+              hide(section);
+            } else {
+              show(section);
+            }
+          }
+        }
+
+      }
+
+
+      document.addEventListener("click", toggle, false);
+      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+
+
+      // Style the dropdowns
+      var html = document.getElementsByTagName("html")[0];
+      html.className += " scripted-header";
 
     };
       

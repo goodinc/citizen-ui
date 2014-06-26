@@ -1729,7 +1729,7 @@
   #header ~ #content {
     /* @separator */
     margin-top: 0;
-    /* border-top: 0.1em solid rgb(233, 233, 233);*/ /* @mercury */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
@@ -1746,7 +1746,7 @@
     margin-top: 0;
 
     /* @separator */
-    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 1.75em; /* @line-height */
 
     padding-bottom: 3.5em; /* @line-height x 2 */
@@ -1839,7 +1839,7 @@
     font-weight: bold;
     margin-bottom: 0;
     /*
-    border-top: 0.1em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
     */
     padding-top: 1em;
   }
@@ -1976,7 +1976,7 @@
     display: block;
     padding: 0.675em 0;
     font-size: 0.875em; /* 14px / @font-size(16px) */
-    border-top: 0.1em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
     color: rgb(101, 102, 102); /* @steel */
     text-decoration: none;
     font-weight: bold;
@@ -1990,7 +1990,7 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
   #header .search {
-    border-top: 0.1em solid rgb(221, 221, 221);
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
     margin-top: 0;
     padding-top: 0.875em;
   }
@@ -2278,7 +2278,7 @@
     }
     .scripted-nav #header .active .search {
       /*
-      border-top: 0.1em solid rgb(221, 221, 221);
+      border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
       */
       margin-top: 0;
       padding-top: 0.875em;
@@ -2529,7 +2529,7 @@
   body > nav {
     background: white;
     margin: 0;
-    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */;
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */;
   }
   body > nav:after {
     /* @clearfix */
@@ -2578,7 +2578,7 @@
     display: block;
     font-size: 0.875em;
     margin-bottom: 0.875em; /* @line-height / 2 */
-    border-top: 0.1em solid rgb(233, 233, 233); /* @mercury */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
     padding-top: 0.875em;   /* @line-height / 2 */
     margin-right: -1.5em;
     margin-left: -1.5em;
@@ -7951,8 +7951,8 @@
   #header.site-header {
     line-height: 50px;
     margin-bottom: 0;
-    border-bottom: 1px solid #dddddd;
   }
+
   #header.site-header ul,
   #header.site-header li {
     list-style: none;
@@ -7989,17 +7989,9 @@
     #header.site-header nav,
     #header.site-header nav > ul,
     #header.site-header nav > ul > li,
-    #header.site-header nav > div > ul,
-    #header.site-header nav > div > ul > li {
+    .scripted-header #header.site-header nav > div > ul,
+    .scripted-header #header.site-header nav > div > ul > li {
       display: inline;
-    }
-    #header.site-header nav > div > ul > li h3 {
-      position: static;
-    }
-    #header.site-header nav .post li a span {
-      /* @hidden-accessible */
-      position: absolute;
-      left: -9999px;
     }
   }
 
@@ -8010,10 +8002,10 @@
   }
   @media (min-width: 65em) {
     #header.site-header h2 a {
-      border-right: 1px solid #dddddd;
+      border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-right: 35px;
     }
-    #header.site-header nav div {
+    .scripted-header #header.site-header nav div {
       float: right;
     }
   }
@@ -8027,7 +8019,7 @@
     }
   }
   #header.site-header nav ul {
-    border-top: 0.1em solid #dddddd;
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
   }
   @media (min-width: 65em) {
     #header.site-header nav > ul {
@@ -8115,7 +8107,7 @@
 
       margin-left: 240px;
       padding-left: 1.65em;
-      border-bottom: 1px solid #dddddd;
+      border-bottom: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-bottom: 0.4375em;
       margin-bottom: 0.4375em;
     }
@@ -8134,23 +8126,35 @@
 
   @media (min-width: 65em) {
     #header.site-header nav > ul,
-    #header.site-header nav > div > ul {
+    .scripted-header #header.site-header nav > div > ul {
       margin-right: 25px;
       padding-left: 0.65em;
       margin-left: 0;
     }
   }
 
-  #header.site-header nav ul h3 {
+  #header.site-header nav ul section {
+    display: inline;
+  }
+  #header.site-header nav .post h3 {
     font-family: inherit;
     font-size: inherit;
     font-weight: bold;
     display: inline-block;
-    cursor: pointer;
 
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
+  }
+  @media (min-width: 65em) {
+    .scripted-header #header.site-header nav .post h3 {
+      position: static;
+    }
+    .scripted-header #header.site-header nav .post li a span {
+      /* @hidden-accessible */
+      position: absolute;
+      left: -9999px;
+    }
   }
 
   #header.site-header nav > p:first-child {
@@ -8208,7 +8212,7 @@
   @media (min-width: 65em) {
     #header.site-header .member h3 {
       position: static;
-      border-left: 1px solid #dddddd;
+      border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
       margin-left: 1.65em;
       padding-left: 1em;
       display: inline-block;
@@ -8301,14 +8305,20 @@
 
 
   @media (min-width: 65em) {
-    #header.site-header .post,
-    #header.site-header .member {
+
+    .scripted-header #header.site-header nav .post   h3,
+    .scripted-header #header.site-header nav .member h3 {
+      cursor: pointer;
+    }
+
+    .scripted-header #header.site-header .post,
+    .scripted-header #header.site-header .member {
       position: relative;
     }
-    #header.site-header .post   ul,
-    #header.site-header .member ul {
+    .scripted-header #header.site-header .post   ul,
+    .scripted-header #header.site-header .member ul {
       position: absolute;
-      right: 0;
+      left: -9999px;
 
       /* @dropdown */
       background: white;
@@ -8317,19 +8327,16 @@
 
       z-index: 9999; /* @infinity */
     }
-    #header.site-header .post   ul a,
-    #header.site-header .member ul a {
-      display: block;
-      padding: 0.675em 1.25em;
-      font-size: 0.875em;
-      border-top: 0.1em solid rgb(221, 221, 221);
-      color: rgb(101, 102, 102);
-      text-decoration: none;
-      font-weight: bold;
-      line-height: 1.75em;
+    .scripted-header #header.site-header .post.active   ul,
+    .scripted-header #header.site-header .member.active ul {
+      left: auto;
+      right: 0;
     }
-    #header.site-header .post   ul:after,
-    #header.site-header .member ul:after {
+    .scripted-header #header.site-header .post.active ul {
+      right: -1em;
+    }
+    .scripted-header #header.site-header .post   ul:after,
+    .scripted-header #header.site-header .member ul:after {
       display: block;
       content: "";
       background: white;
@@ -8351,16 +8358,32 @@
       -o-transform      : rotate(45deg);
       transform         : rotate(45deg);
     }
-    #header.site-header .post ul {
+    .scripted-header #header.site-header .post ul {
       min-width: 5em;
-      right: -0.15em;
     }
-    #header.site-header .member ul {
+    .scripted-header #header.site-header .member ul {
       min-width: 15em;
     }
-    #header.site-header .member ul:after {
+    .scripted-header #header.site-header .member ul:after {
       left: auto;
       right: 1em;
+    }
+    .scripted-header #header.site-header .post   li a,
+    .scripted-header #header.site-header .member li a {
+      display: block;
+      padding: 0.675em 1.25em;
+      font-size: 0.875em;
+      border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+      color: rgb(101, 102, 102);
+      text-decoration: none;
+      font-weight: bold;
+      line-height: 1.75em;
+      position: relative;
+      z-index: 1;
+    }
+    .scripted-header #header.site-header .post   li:first-child a,
+    .scripted-header #header.site-header .member li:first-child a {
+      border-top-width: 0;
     }
   }
 
@@ -8445,14 +8468,30 @@
   }
 
   #header.site-header ~ header {
-    margin-top: 1.75em;
+    margin-top: 0;
+    padding-top: 1.75em;
     margin-bottom: 1.75em;
   }
   #header.site-header ~ .do-header,
   #header.site-header ~ #content.minimal {
-    margin-top: 1.75em;
+    margin-top: 0;
+    padding-top: 1.75em;
   }
 
+
+  .join-promotion {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgb(221, 223, 227); /* @silver-blue */
+  }
+  .join-promotion + header,
+  .join-promotion + .do-header,
+  #header ~ .join-promotion + #content.minimal,
+  #header.site-header + header,
+  #header.site-header + .do-header,
+  #header.site-header + #content.minimal {
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+  }
 
 
   /* =Shim
