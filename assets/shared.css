@@ -8011,7 +8011,7 @@
   }
   @media (min-width: 55em) {
     #header.site-header h2 a {
-      border-right: 1px solid transparent;
+      border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-right: 29px;
     }
   }
@@ -8044,8 +8044,8 @@
     text-decoration: none;
     font-weight: bold;
     display: block;
-    padding: 0 12px;
-    line-height: 36px;
+    padding: 0 1em;
+    line-height: 40px;
     border-radius: 2px;
   }
   #header.site-header nav ul h3:hover,
@@ -8123,8 +8123,8 @@
 /* TEMPORARY: Reset */
     display: block;
 
-      margin-left: 248px;
-      padding-left: 12px;
+      margin-left: 238px;
+      padding-left: 1.65em;
       border-bottom: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-bottom: 12px;
       margin-bottom: 5px;
@@ -8146,7 +8146,8 @@
     #header.site-header nav > ul,
     .scripted-header #header.site-header nav > div > ul {
       margin-right: 25px;
-      margin-left: 10px;
+      padding-left: 0.65em;
+      margin-left: 0;
     }
   }
 
