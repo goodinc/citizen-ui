@@ -8323,7 +8323,7 @@
       right: 0;
     }
     .scripted-header #header.site-header .post.active ul {
-      right: -0.35em;
+      right: -1em;
     }
     .scripted-header #header.site-header .post   ul:after,
     .scripted-header #header.site-header .member ul:after {
