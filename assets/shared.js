@@ -401,10 +401,15 @@
         var target = e.target;
         var name = target.nodeName.toLowerCase();
 
-        // If a dropdown is currently open and it’s not the target, close it
-        if (active) {
-          if (!within(e.target, active)) {
-            hide(active);
+        // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
+        if (windowWidth() >= 1050) { // This number is arbitrary, but happens to be a little larger than
+                                    // the media query used to switch between inline and positioned dropdowns
+
+          // If a dropdown is currently open and it’s not the target, close it
+          if (active) {
+            if (!within(e.target, active)) {
+              hide(active);
+            }
           }
         }
 
@@ -445,10 +450,7 @@
 
             }
           }
-
-
         }
-
       }
 
 

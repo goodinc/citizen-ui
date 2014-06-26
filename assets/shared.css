@@ -7970,7 +7970,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 25em) {
     #header.site-header > div {
       padding-left: 60px;
       padding-right: 60px;
@@ -8185,7 +8185,7 @@
     top: 1em;
     right: 84px;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 25em) {
     #header.site-header .member h3 {
       right: 120px;
     }
@@ -8217,7 +8217,7 @@
     background: rgb(246, 246, 246);
     max-width: 12em;
   }
-  @media (min-width: 65em) {
+  @media (min-width: 30em) {
     #header.site-header input {
       width: 20em;
       max-width: none;
@@ -8225,8 +8225,6 @@
   }
   #header.site-header button {
     border-width: 0;
-  }
-  #header.site-header button {
     background: transparent url(shared/header/lense.png) no-repeat center;
     background-image: url(shared/header/lense.svg), none;
     background-size: auto 1em;
@@ -8314,7 +8312,7 @@
       right: 0;
     }
     .scripted-header #header.site-header .post.active ul {
-      right: -1em;
+      right: -0.35em;
     }
     .scripted-header #header.site-header .post   ul:after,
     .scripted-header #header.site-header .member ul:after {
@@ -8389,12 +8387,12 @@
     left: -9999px;
   }
 
-  @media (max-width: 39.9em) {
+  @media (max-width: 24.9em) {
     .scripted-header #header.site-header nav > p:first-child {
       right: 1.5em;
     }
   }
-  @media (min-width: 40em) and (max-width: 64.9em) {
+  @media (min-width: 25em) and (max-width: 64.9em) {
     .scripted-header #header.site-header nav > p:first-child {
       right: 60px;
     }
