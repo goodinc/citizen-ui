@@ -7,7 +7,7 @@
   function start() {
 
     // OPTIONAL: Present the header navigation as dropdowns.
-    new NavDropDown();
+    //new NavDropDown();
     new HeaderDropDown();
 
     // OPTIONAL: Present the do, voted, and following buttons as dropdowns.
@@ -188,6 +188,7 @@
 
   /* =NavDropDown
   ----------------------------------------------- */
+  /*
   var NavDropDown = function() {};
 
   (function() {
@@ -371,6 +372,7 @@
     };
       
   })();
+  */
 
 
   /* =HeaderDropDown
@@ -403,7 +405,7 @@
         var name = target.nodeName.toLowerCase();
 
         // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
-        if (windowWidth() >= 1050) { // This number is arbitrary, but happens to be a little larger than
+        //if (windowWidth() >= 1050) { // This number is arbitrary, but happens to be a little larger than
                                     // the media query used to switch between inline and positioned dropdowns
 
           // If a dropdown is currently open and it’s not the target, close it
@@ -412,7 +414,7 @@
               hide(active);
             }
           }
-        }
+        //}
 
         // If the target is a headline or a link
         if (name == "h3" || name == "img" || name == "a" || name == "p") {
