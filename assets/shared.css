@@ -7975,6 +7975,11 @@
     background: white;
     padding: 1px 1.5em;
   }
+  @media (min-width: 40em) {
+    #header.site-header > div {
+      padding-left: 2.25em;
+    }
+  }
   #header.site-header > div {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -7987,7 +7992,7 @@
     #header.site-header.minimal > div {
       padding-top: 16px;
       padding-bottom: 16px;
-      padding-left: 1.5em;
+      padding-left: 2.25em;
     }
   }
   @media (min-width: 60em) {
@@ -8297,7 +8302,6 @@
     #header.site-header nav > ul {
       margin-top: 0.65625em;
       border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      padding-top: 0.65625em;
     }
   }
   #header.site-header nav ul ul {
