@@ -7973,22 +7973,20 @@
     padding-top: 16px;
     padding-bottom: 10px;
   }
-  @media (min-width: 25em) {
-    .temporary #header.site-header > div {
-      padding-left: 58px;
-      padding-right: 60px;
-    }
-  }
   @media (min-width: 48em) { /* @wide-header */
     #header.site-header > div {
       padding-top: 5px;
       padding-bottom: 0px;
-      padding-left: 58px;
     }
     #header.site-header.minimal > div {
       padding-top: 16px;
       padding-bottom: 10px;
       padding-left: 1.5em;
+    }
+  }
+  @media (min-width: 60em) {
+    #header.site-header > div {
+      padding-left: 58px;
     }
   }
   #header.site-header > div:after {
