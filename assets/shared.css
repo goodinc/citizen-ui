@@ -8542,7 +8542,7 @@
       margin-right: 0;
     }
     .scripted-header #header.site-header nav.active form {
-      min-width: 18em;
+      min-width: 17.5em;
     }
   }
 
@@ -8594,10 +8594,10 @@
       right: 1em;
     }
     .scripted-header #header.site-header.has-account nav.active > div > ul:after {
-      right: 5.75em;
+      right: 5.25em;
     }
     .scripted-header #header.site-header nav.active > div > ul {
-      min-width: 18em;
+      min-width: 17.5em;
     }
     .scripted-header #header.site-header nav.active > div > ul a {
       display: block;
