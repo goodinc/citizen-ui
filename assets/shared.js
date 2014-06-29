@@ -445,7 +445,7 @@
 
             // KLUDGE: Ignore clicks in the primary navigation (Featured, Popular, Newest, etc)
             var list = closest(target, "ul");
-            if (list && list.parentNode === nav && header.id == "header") {
+            if (name == "a" && list && list.parentNode === nav && header.id == "header") {
               return;
             }
 
