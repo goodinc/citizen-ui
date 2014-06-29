@@ -8038,8 +8038,9 @@
   }
   .scripted-header #header.site-header nav div {
     position: absolute;
-    top: 1.125em;
+    top: 20px;
     right: 1.5em;
+    line-height: 40px;
   }
   /*
   @media (min-width: 55em) {
@@ -8049,7 +8050,9 @@
   }
   */
   @media (min-width: 76em) { /* @very-wide-header */
-    .scripted-header #header.site-header nav > div > ul,
+    .scripted-header #header.site-header nav > div > ul {
+      display: inline-block;
+    }
     .scripted-header #header.site-header nav > div > ul > li {
       display: inline;
     }
@@ -8089,7 +8092,11 @@
   }
   @media (min-width: 76em) { /* @very-wide-header */
     #header.site-header nav > div > ul {
-      margin-right: 35px;
+      margin-right: 1em;
+      border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      padding-left: 1em;
+      margin-bottom: 0;
+      line-height: 40px;
     }
   }
   #header.site-header nav ul {
@@ -8128,7 +8135,7 @@
     #header.site-header nav > div > ul {
       border-top-width: 0;
     }
-    #header.site-header nav li a {
+    #header.site-header nav > div > ul > li > a {
       display: inline-block;
     }
   }
@@ -8166,7 +8173,7 @@
   #header.site-header h2 a {
 
 /* TEMPORARY: Reset */
-    vertical-align: baseline;
+    vertical-align: top;
     font-size: inherit;
 
     text-decoration: none;
@@ -8222,8 +8229,7 @@
   }
 
   @media (min-width: 46em) { /* @medium-header */
-    #header.site-header nav > ul,
-    .scripted-header #header.site-header nav > div > ul {
+    #header.site-header nav > ul {
       padding-left: 0.65em;
       margin-left: 0;
     }
@@ -8237,6 +8243,7 @@
     font-size: inherit;
     font-weight: bold;
     display: inline-block;
+    margin-bottom: 0;
 
     /* @hidden-accessible */
     position: absolute;
@@ -8279,14 +8286,16 @@
     }
   }
   */
-  @media (min-width: 1px) {
+  #header.site-header .member h3 {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @media (min-width: 76em) { /* @very-wide-header */
     #header.site-header .member h3 {
-      position: static;
       border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      margin-left: 1.3125em; /* @line-height x 3/4 */
-      padding-left: 0.875em;
-      display: inline-block;
-      vertical-align: middle;
+      margin-left: 0.75em;
+      padding-left: 1.75em;
     }
   }
   #header.site-header .member h3 img {
@@ -8317,6 +8326,11 @@
     background: transparent url(shared/header/lense.png) no-repeat center;
     background-image: url(shared/header/lense.svg), none;
     background-size: auto 1em;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 
     /* @hidden-accessible-text */
     text-indent: -9999px;
@@ -8460,7 +8474,7 @@
     .scripted-header #header.site-header nav.active form {
       left: auto;
       right: 0;
-      top: 193px;
+      top: 185px;
       padding-left: 0;
       margin-right: 0;
     }
@@ -8486,7 +8500,7 @@
     .scripted-header #header.site-header nav.active > div > ul {
       left: auto;
       right: 0;
-      top: 4em;
+      top: 56px;
       padding-left: 0;
       margin-right: 0;
     }
@@ -8557,12 +8571,10 @@
 
       z-index: 9999; /* @infinity */
     }
-    .scripted-header #header.site-header .post.active   ul {
+    .scripted-header #header.site-header .post.active  ul {
       left: auto;
-      right: 0;
-    }
-    .scripted-header #header.site-header .post.active ul {
-      right: -1em;
+      right: -0.75em;
+      top: 2.25em;
     }
     .scripted-header #header.site-header .post   ul:after {
       display: block;
@@ -8658,7 +8670,7 @@
 
       position: absolute;
       left: auto;
-      top: 24px;
+      top: 21px;
       right: 1.5em;
     }
     .scripted-header #header.site-header.has-account nav > p:first-child {
