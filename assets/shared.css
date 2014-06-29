@@ -8004,7 +8004,7 @@
     margin-top: 0;
   }
 
-  #header.site-header.minimal nav {
+  .scripted-header #header.site-header.minimal nav {
     margin-left: 0;
   }
   @media (min-width: 46em) { /* @medium-header */
@@ -8295,8 +8295,9 @@
 
   @media (max-width: 45.9375em) { /* @medium-header */
     #header.site-header nav > ul {
-      margin-top: 0.875em;
+      margin-top: 0.65625em;
       border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      padding-top: 0.65625em;
     }
   }
   #header.site-header nav ul ul {
