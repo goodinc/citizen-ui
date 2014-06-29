@@ -7997,16 +7997,21 @@
   #header.site-header nav {
     margin-top: 0;
   }
-  @media (min-width: 48em) { /* @wide-header */
-    #header.site-header nav {
-      margin-left: 238px;
-    }
-  }
 
   #header.site-header.minimal nav {
     margin-left: 0;
   }
+  @media (min-width: 42em) { /* @medium-header */
+    #header.site-header nav,
+    #header.site-header nav > ul {
+      display: inline;
+    }
+  }
   @media (min-width: 48em) { /* @wide-header */
+    #header.site-header nav {
+      margin-left: 238px;
+      display: block;
+    }
     #header.site-header.minimal nav,
     #header.site-header.minimal nav > ul {
       display: inline;
@@ -8057,7 +8062,7 @@
     margin-right: 1px;
   }
   */
-  @media (min-width: 48em) { /* @wide-header */
+  @media (min-width: 672px) { /* @medium-header */
     #header.site-header h2 a {
       border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-right: 29px;
@@ -8139,14 +8144,18 @@
     margin-right: 0.5em;
     display: block;
   }
-  @media (min-width: 48em) { /* @wide-header */
+  @media (min-width: 42em) { /* @medium-header */
     #header.site-header h2 {
       display: inline;
+      vertical-align: middle;
+      margin-right: 0;  
+    }
+  }
+  @media (min-width: 48em) { /* @wide-header */
+    #header.site-header h2 {
       float: left;
-      margin-right: 0;
       font-size: 154px;
       letter-spacing: 0;
-      vertical-align: middle;
     }
   }
   #header.site-header.minimal h2 {
@@ -8200,7 +8209,7 @@
     /*margin-left: -1em;*/ /* button.padding */
     margin-bottom: 0;
   }
-  @media (max-width: 47.9375em) { /* @wide-header */
+  @media (max-width: 41.9375em) { /* @medium-header */
     #header.site-header nav > ul {
       margin-top: 0.875em;
       border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
@@ -8212,7 +8221,7 @@
     margin-left: 0;
   }
 
-  @media (min-width: 48em) { /* @wide-header */
+  @media (min-width: 42em) { /* @medium-header */
     #header.site-header nav > ul,
     .scripted-header #header.site-header nav > div > ul {
       padding-left: 0.65em;
