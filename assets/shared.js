@@ -442,8 +442,14 @@
           } else {
             var nav    = closest(target, "nav");
             var header = closest(target, "header");
-            if (nav && header && header.id == "header") {
 
+            // KLUDGE: Ignore clicks in the primary navigation (Featured, Popular, Newest, etc)
+            var list = closest(target, "ul");
+            if (list && list.parentNode === nav && header.id == "header") {
+              return;
+            }
+
+            if (nav && header && header.id == "header") {
               // Toggle the dropdown
               if (name == "p" && nav.className.indexOf("active") >= 0) {
                 hide(nav);
