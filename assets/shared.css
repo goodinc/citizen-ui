@@ -1730,8 +1730,14 @@
     /* @separator */
     margin-top: 0;
     border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-    padding-top: 3.75em;   /* @line-height */
+    padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
+  }
+  @media (min-width: 50em) {
+    .topic-featured,
+    #header ~ #content {
+      padding-top: 3.5em;   /* @line-height x 2 */
+    }
   }
   #header ~ #content.minimal {
     border-top-width: 0;
@@ -8894,7 +8900,13 @@
   #header.site-header ~ .do-header,
   #header.site-header ~ #content.minimal {
     margin-top: 0;
-    padding-top: 3.5em;
+    padding-top: 1.75em;
+  }
+  @media (min-width: 50em) {
+    #header.site-header ~ .do-header,
+    #header.site-header ~ #content.minimal {
+      padding-top: 3.5em;   /* @line-height x 2 */
+    }
   }
   #header.site-header ~ .message {
     margin-top: 1.75em;
