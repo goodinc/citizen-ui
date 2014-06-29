@@ -8038,9 +8038,12 @@
   }
   .scripted-header #header.site-header nav div {
     position: absolute;
-    top: 20px;
+    top: 92px;
     right: 1.5em;
     line-height: 40px;
+  }
+  .scripted-header #header.site-header.minimal nav div {
+    top: 20px;
   }
   /*
   @media (min-width: 55em) {
@@ -8670,8 +8673,11 @@
 
       position: absolute;
       left: auto;
-      top: 21px;
+      top: 93px;
       right: 1.5em;
+    }
+    .scripted-header #header.site-header.minimal nav > p:first-child {
+      top: 21px;
     }
     .scripted-header #header.site-header.has-account nav > p:first-child {
       right: 84px;
