@@ -8038,9 +8038,14 @@
   }
   .scripted-header #header.site-header nav div {
     position: absolute;
-    top: 92px;
+    top: 20px;
     right: 1.5em;
     line-height: 40px;
+  }
+  @media (min-width: 48em) {
+    .scripted-header #header.site-header nav div {
+      top: 92px;
+    }
   }
   .scripted-header #header.site-header.minimal nav div {
     top: 20px;
@@ -8673,7 +8678,7 @@
 
       position: absolute;
       left: auto;
-      top: 93px;
+      top: 21px;
       right: 1.5em;
     }
     .scripted-header #header.site-header.minimal nav > p:first-child {
@@ -8698,6 +8703,14 @@
       position: static;
     }
     */
+  }
+  @media (min-width: 48em) and (max-width: 75.9375em) { /* @wide-header and @very-wide-header */
+    .scripted-header #header.site-header nav > p:first-child {
+      top: 93px;
+    }
+    .scripted-header #header.site-header.minimal nav > p:first-child {
+      top: 21px;
+    }
   }
   /*
   @media (max-width: 54.9em) {
