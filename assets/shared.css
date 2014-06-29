@@ -8786,17 +8786,8 @@
   .join-promotion {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 1.75em 1.5em;
+    padding: 1.3125em 1.5em;
     background: rgb(234, 244, 254);
-    text-align: center;
-  }
-  @media (min-width: 65em) {
-    .join-promotion {
-      padding-left: 60px;
-      padding-right: 60px;
-      padding-top: 0.875em;
-      padding-bottom: 0.875em;
-    }
   }
   .join-promotion h2 {
     font-family: inherit;
@@ -8829,13 +8820,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.875em;
-  }
-  @media (min-width: 30em) {
-    .join-promotion h2:before {
-      display: inline;
-      margin-right: 0.5em;
-      vertical-align: middle;
-    }
+    float: left;
+    margin-right: 0.5em;
   }
   .join-promotion ul,
   .join-promotion li {
@@ -8851,12 +8837,52 @@
   .join-promotion p {
     margin-right: 0.875em;
   }
+  .join-promotion ul {
+    font-size: 0.875em;
+    margin-left: 4em;
+  }
   .join-promotion li {
     margin-left: 0.4375em;
   }
-  @media (min-width: 55em) {
+
+  @media (min-width: 30em) and (max-width: 59.9em) {
+    .join-promotion {
+      text-align: left;
+      padding-right: 12em;
+      padding-left: 5.5em;
+      position: relative;
+      min-height: 3em;
+    }
+    .join-promotion h2:before {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+    }
+    .join-promotion ul {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+  }
+
+  @media (min-width: 60em) {
+    .join-promotion {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 0.875em;
+      padding-bottom: 0.875em;
+      text-align: center;
+    }
+    .join-promotion h2:before {
+      display: inline;
+      margin-right: 0.5em;
+      vertical-align: middle;
+      float: none;
+    }
     .join-promotion ul {
       display: inline;
+      font-size: inherit;
+      margin-left: 0;
     }
   }
 
