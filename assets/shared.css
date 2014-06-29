@@ -8277,22 +8277,21 @@
       font-size: 0.875em;
     }
   }
-  @media (max-width: 28em) {
-    #header.site-header nav > ul {
-      margin-left: -1.5em;
-      margin-right: -1.5em;
-      padding-left: 0.4375em;
-      padding-right: 0.4375em;
-    }
+  @media (max-width: 30em) {
     #header.site-header nav > ul > li > a {
       font-size: 0.75em;
       padding: 0 0.5em;
       line-height: 2;
     }
   }
-
-
-
+  @media (max-width: 22em) {
+    #header.site-header nav > ul {
+      margin-left: -1.5em;
+      margin-right: -1.5em;
+      padding-left: 0.4375em;
+      padding-right: 0.4375em;
+    }
+  }
 
   @media (max-width: 45.9375em) { /* @medium-header */
     #header.site-header nav > ul {
