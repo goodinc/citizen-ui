@@ -8127,13 +8127,33 @@
     display: block;
     padding: 0 12px;
     line-height: 36px;
-    border-radius: 2px;
   }
   #header.site-header nav ul h3:hover,
   #header.site-header nav li a:hover,
   #header.site-header nav li a:active,
   #header.site-header nav li a:focus {
     background: rgb(234, 244, 254);
+  }
+  #header.site-header nav li {
+    position: relative;
+  }
+  #header.site-header nav li.active:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 6px solid black;
+    position: absolute;
+    bottom: -17px;
+  }
+  @media (min-width: 46em) { /* @medium-header */
+    #header.site-header nav li.active:after {
+      bottom: -19px;
+    }
+  }
+  @media (min-width: 48em) { /* @wide-header */
+    #header.site-header nav li.active:after {
+      bottom: -34px;
+    }
   }
   #header.site-header nav li.active a {
     background: black;
@@ -8581,7 +8601,7 @@
     }
     .scripted-header #header.site-header .post.active  ul {
       left: auto;
-      right: -0.75em;
+      right: -1.25em;
       top: 2.25em;
     }
     .scripted-header #header.site-header .post   ul:after {
@@ -8607,7 +8627,7 @@
       transform         : rotate(45deg);
     }
     .scripted-header #header.site-header .post ul {
-      min-width: 5em;
+      min-width: 6em;
     }
     .scripted-header #header.site-header .post   li a {
       display: block;
@@ -8813,7 +8833,7 @@
   #header.site-header ~ .do-header,
   #header.site-header ~ #content.minimal {
     margin-top: 0;
-    padding-top: 1.75em;
+    padding-top: 3.5em;
   }
   #header.site-header ~ .message {
     margin-top: 1.75em;
