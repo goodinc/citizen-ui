@@ -7358,21 +7358,21 @@
     border-style: solid;
     border-color: rgb(230, 230, 230);
     background: white;
-    padding: 1px 1.5em;
+    padding: 7px 1.5em 16px 39px;
   }
-  #header > div {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  @media (min-width: 46em) {
+    #header > div {
+      padding-bottom: 6px;
+    }
   }
   @media (min-width: 48em) { /* @wide-header */
     #header > div {
       padding-top: 5px;
       padding-bottom: 0px;
+      padding-left: 1.5em;
     }
     #header.minimal > div {
-      padding-top: 16px;
-      padding-bottom: 16px;
-      padding-left: 1.5em;
+      padding: 7px 1.5em 6px 39px;
     }
   }
   @media (min-width: 60em) {
@@ -7394,19 +7394,24 @@
     margin-left: 0;
   }
   @media (min-width: 46em) { /* @medium-header */
+    #header nav {
+      margin-top: 0.5em;
+    }
+    /*
     #header nav,
     #header nav > ul {
       display: inline;
     }
+    */
   }
   @media (min-width: 48em) { /* @wide-header */
     .scripted-header #header nav {
+      margin-top: 0;
       margin-left: 238px;
       display: block;
     }
-    .scripted-header #header.minimal nav,
-    .scripted-header #header.minimal nav > ul {
-      display: inline;
+    .scripted-header #header.minimal nav {
+      margin-top: 0.5em;
     }
   }
 
@@ -7440,6 +7445,15 @@
     #header h2 a {
       border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-right: 29px;
+      margin-right: 0.2em;
+    }
+  }
+  @media (min-width: 48em) { /* @medium-header */
+    #header h2 a {
+      margin-right: 0;
+    }
+    #header.minimal h2 a {
+      margin-right: 0.2em;
     }
   }
   @media (min-width: 1px) {
@@ -7526,8 +7540,7 @@
     margin-bottom: 0;
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
     line-height: 1;
-    font-size: 50px; /* 36px */
-    letter-spacing: 0.02em;
+    font-size: 67px;
     margin-right: 0.5em;
     display: block;
   }
@@ -7543,13 +7556,10 @@
     #header h2 {
       float: left;
       font-size: 154px;
-      letter-spacing: 0;
     }
   }
   #header.minimal h2 {
-    font-size: 50px; /* 36px */
-    float: none;
-    letter-spacing: 0.02em;
+    font-size: 67px;
   }
   #header h2 a {
 
@@ -8081,7 +8091,7 @@
       top: 93px;
     }
     .scripted-header #header.minimal nav > p:first-child {
-      top: 21px;
+      top: 19px;
     }
   }
 
