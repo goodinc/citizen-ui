@@ -8436,12 +8436,16 @@
   }
   #header.site-header > ul li a {
     display: block;
-    padding: 12px 27px 10px 27px;
+    padding: 12px 28px 13px 27px;
+    line-height: 1;
     font-size: 13px;
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: rgb(230, 230, 230);
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+  }
+  #header.site-header > ul li:last-child a {
+    padding-left: 26px;
   }
   #header.site-header > ul li:first-child a {
     border-left-width: 1px;
