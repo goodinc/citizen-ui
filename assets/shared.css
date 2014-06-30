@@ -7343,6 +7343,7 @@
   -----------------------------------------------
   ----------------------------------------------- */
   #header {
+    margin-top: 0;
     line-height: 50px;
     margin-bottom: 0;
   }
@@ -8184,12 +8185,14 @@
     margin-bottom: 1.75em;
   }
   #header ~ .do-header,
+  #header ~ div .do-header,
   #header ~ #content.minimal {
     margin-top: 0;
     padding-top: 1.75em;
   }
   @media (min-width: 50em) {
     #header ~ .do-header,
+    #header ~ div .do-header,
     #header ~ #content.minimal {
       padding-top: 3.5em;   /* @line-height x 2 */
     }
@@ -8206,9 +8209,11 @@
   }
   .join-promotion + header,
   .join-promotion + .do-header,
+  .join-promotion + div .do-header,
   #header ~ .join-promotion + #content.minimal,
   #header + header,
   #header + .do-header,
+  #header + div .do-header,
   #header + #content.minimal {
     border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
   }
