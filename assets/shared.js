@@ -464,7 +464,7 @@
 
 
       document.addEventListener("click", toggle, false);
-      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+      //document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
 
       // Style the dropdowns
