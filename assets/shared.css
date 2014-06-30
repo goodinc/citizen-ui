@@ -7376,7 +7376,8 @@
     }
   }
   @media (min-width: 60em) {
-    #header > div {
+    #header > div,
+    #header.minimal > div {
       padding-left: 58px;
     }
   }
@@ -7435,7 +7436,7 @@
     }
   }
 
-  @media (min-width: 736px) { /* @medium-header */
+  @media (min-width: 46em) { /* @medium-header */
     #header h2 a {
       border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-right: 29px;
@@ -7893,15 +7894,15 @@
       z-index: 9999; /* @infinity */
 
       border-bottom-width: 0;
+      padding-left: 0;
+      margin-right: 0;
     }
     .scripted-header #header nav.active > div > ul {
       left: auto;
       right: 0;
       top: 56px;
-      padding-left: 0;
-      margin-right: 0;
     }
-    .scripted-header #header nav.active > div > ul:after {
+    .scripted-header #header nav > div > ul:after {
       display: block;
       content: "";
       background: white;
@@ -7923,17 +7924,17 @@
       -o-transform      : rotate(45deg);
       transform         : rotate(45deg);
     }
-    .scripted-header #header nav.active > div > ul:after {
+    .scripted-header #header nav > div > ul:after {
       left: auto;
       right: 1em;
     }
-    .scripted-header #header.has-account nav.active > div > ul:after {
+    .scripted-header #header.has-account nav > div > ul:after {
       right: 5.25em;
     }
-    .scripted-header #header nav.active > div > ul {
+    .scripted-header #header nav > div > ul {
       min-width: 17.5em;
     }
-    .scripted-header #header nav.active > div > ul a {
+    .scripted-header #header nav > div > ul a {
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
