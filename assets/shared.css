@@ -7480,7 +7480,7 @@
   }
   @media (min-width: 25em) {
     #header > div {
-      padding-left: 39px;
+      padding-left: 30px;
     }
   }
   @media (min-width: 48em) { /* @wide-header */
@@ -7490,7 +7490,7 @@
       padding-left: 1.5em;
     }
     #header.minimal > div {
-      padding: 7px 1.5em 6px 39px;
+      padding: 7px 1.5em 6px 30px;
     }
   }
   @media (min-width: 60em) {
