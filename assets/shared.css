@@ -7361,11 +7361,6 @@
     background: white;
     padding: 7px 1.5em 16px 39px;
   }
-  @media (min-width: 46em) {
-    #header > div {
-      padding-bottom: 6px;
-    }
-  }
   @media (min-width: 48em) { /* @wide-header */
     #header > div {
       padding-top: 5px;
@@ -7500,7 +7495,7 @@
   }
   @media (min-width: 48em) { /* @wide-header */
     #header nav li.active:after {
-      bottom: -30px;
+      bottom: -29px;
     }
   }
   #header nav li.active a {
@@ -7599,6 +7594,13 @@
     }
   }
   @media (max-width: 30em) {
+    #header nav > ul > li > a {
+      font-size: 0.875em;
+      padding: 0 0.5em;
+      line-height: 2;
+    }
+  }
+  @media (max-width: 27em) {
     #header nav > ul > li > a {
       font-size: 0.75em;
       padding: 0 0.5em;
