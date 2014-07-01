@@ -388,12 +388,25 @@
       var active; // The currently active element
 
       function hide(element) {
+
+        // KLUDGE: Wait a brief moment before responding to a new event
+        // (to work around an issue in Firefox where pressing a link triggers a focus event)
+        if (element._data__NavDropDown_lately) return;
+        element._data__NavDropDown_lately = true;
+        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
+
         element.className = element.className.replace(/active/g, "");
         if (active === element) active = undefined;
       }
 
       function show(element) {
-        if (active) hide(active);
+
+        // KLUDGE: Wait a brief moment before responding to a new event
+        // (to work around an issue in Firefox where pressing a link triggers a focus event)
+        if (element._data__NavDropDown_lately) return;
+        element._data__NavDropDown_lately = true;
+        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
+
         if (element.className.indexOf("active") < 0) {
           element.className += " active";
         }
@@ -439,6 +452,8 @@
             } else {
               show(section);
             }
+
+          // For the navigation on smaller screens
           } else {
             var nav    = closest(target, "nav");
             var header = closest(target, "header");
@@ -464,7 +479,7 @@
 
 
       document.addEventListener("click", toggle, false);
-      //document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
+      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
 
       // Style the dropdowns
