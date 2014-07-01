@@ -391,7 +391,7 @@
 
         // KLUDGE: Wait a brief moment before responding to a new event
         // (to work around an issue in Firefox where pressing a link triggers a focus event)
-        if (element._data__NavDropDown_lately) return;
+        //if (element._data__NavDropDown_lately) return;
         element._data__NavDropDown_lately = true;
         setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
 
@@ -403,9 +403,13 @@
 
         // KLUDGE: Wait a brief moment before responding to a new event
         // (to work around an issue in Firefox where pressing a link triggers a focus event)
-        if (element._data__NavDropDown_lately) return;
+        //if (element._data__NavDropDown_lately) return;
         element._data__NavDropDown_lately = true;
         setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
+
+        // KLUDGE: Deactivate the navigation if it’s active
+        var nav = closest(element, "nav");
+        if (nav && nav.className.indexOf("active") >= 0 && element.className.indexOf("post") < 0) hide(nav);
 
         if (element.className.indexOf("active") < 0) {
           element.className += " active";
@@ -427,10 +431,15 @@
               hide(active);
             }
           }
+
+          var nav = closest(target, "nav");
+          if (nav && !within(e.target, nav)) {
+            hide(nav);
+          }
         //}
 
         // If the target is a headline or a link
-        if (name == "h3" || name == "img" || name == "a" || name == "p") {
+        if (name == "h3" || name == "img" || name == "a" || name == "p" || name == "button") {
           var section = closest(target, "section");
 
           // If the target is within a post or member section
