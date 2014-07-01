@@ -7664,7 +7664,7 @@
   /* =List (first level)
   ----------------------------------------------- */
   @media (min-width: 83em) { /* @very-wide-header */
-    #header nav > div > div > ul {
+    #header nav div > ul {
       margin-right: 1em;
       border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-left: 1em;
@@ -7672,13 +7672,13 @@
       line-height: 40px;
       border-top-width: 0;
     }
-    #header nav > div > div > ul > li > a {
+    #header nav div > ul > li > a {
       display: inline-block;
     }
-    .scripted-header #header nav > div > div > ul {
+    .scripted-header #header nav div > ul {
       display: inline-block;
     }
-    .scripted-header #header nav > div > div > ul > li {
+    .scripted-header #header nav div > ul > li {
       display: inline;
     }
   }
@@ -7916,7 +7916,7 @@
   /* =Options (for small screens)
   ----------------------------------------------- */
   @media (max-width: 82.9375em) { /* @very-wide-header */
-    .scripted-header #header nav > div > div {
+    .scripted-header #header nav div div {
       position: absolute;
       left: -9999px;
 
@@ -7930,7 +7930,7 @@
       padding-left: 0;
       margin-right: 0;
     }
-    .scripted-header #header nav > div > div > ul {
+    .scripted-header #header nav div > ul {
       margin-bottom: 0;
     }
     .scripted-header #header nav form p {
@@ -7938,12 +7938,12 @@
       padding: 0.125em 1em;
       display: block;
     }
-    .scripted-header #header nav.active > div > div {
+    .scripted-header #header nav.active div div {
       left: auto;
       right: 0;
       top: 56px;
     }
-    .scripted-header #header nav > div > div:after {
+    .scripted-header #header nav div div:after {
       display: block;
       content: "";
       background: white;
@@ -7965,17 +7965,17 @@
       -o-transform      : rotate(45deg);
       transform         : rotate(45deg);
     }
-    .scripted-header #header nav > div > div:after {
+    .scripted-header #header nav div div:after {
       left: auto;
       right: 1em;
     }
-    .scripted-header #header.has-account nav > div > div:after {
+    .scripted-header #header.has-account nav div div:after {
       right: 5.25em;
     }
-    .scripted-header #header nav > div > div {
+    .scripted-header #header nav div div {
       min-width: 17.5em;
     }
-    .scripted-header #header nav > div > div > ul a {
+    .scripted-header #header nav div > ul a {
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
@@ -7987,7 +7987,7 @@
       position: relative;
       z-index: 1;
     }
-    .scripted-header #header nav.active > div > div > ul > li:first-child > a {
+    .scripted-header #header nav.active div > ul > li:first-child > a {
       border-top-width: 0;
     }
   }
