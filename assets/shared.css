@@ -7625,7 +7625,7 @@
     text-decoration: none;
     font-weight: bold;
     display: block;
-    padding: 0 0.75em; /* 12px / 16px */
+    padding: 0 0.7em; /* 12px / 16px */
     line-height: 2.25; /* 36px / 16px */
   }
   #header nav div li a,
@@ -7935,7 +7935,7 @@
     }
     .scripted-header #header nav form p {
       border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-      padding: 0.125em 1em;
+      padding: 0.4375em 1em;
       display: block;
     }
     .scripted-header #header nav.active div div {
