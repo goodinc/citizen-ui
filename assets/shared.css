@@ -271,7 +271,7 @@
   ----------------------------------------------- */
   .avatar > span {
     display: inline-block;
-    background: rgb(153, 153, 153);
+    background: rgb(153, 153, 153); /* @aluminum */
     color: white;
     width       : 1.5em;
     line-height : 1.5em;
@@ -374,7 +374,7 @@
     display: inline-block;
   }
   .pagination li a {
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
     text-decoration: none;
   }
   .pagination li a:hover,
@@ -1307,7 +1307,7 @@
     font-style: inherit;
     font-size: 0.875em;
     font-weight: bold;
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
     margin-bottom: 0;
   }
   form.voted h6 + p,
@@ -3077,7 +3077,7 @@
 
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(253, 253, 253);
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
   }
   .meta .dos      a:hover,
@@ -3500,7 +3500,7 @@
   main:hover .activity-item:hover .meta .dos,
   main:hover .activity-item:hover .meta .votes,
   main:hover .activity-item:hover .meta .comments {
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
   }
   main:hover .activity-item:hover .meta .dos abbr:before {
     color: rgb(83, 231, 185); /* @kiwi */
@@ -4029,7 +4029,7 @@
   .comment-list h3 {
     margin: 0;
     font-size: 0.75em;
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
     font-weight: normal;
     font-family: inherit;
     line-height: inherit;
@@ -4233,7 +4233,7 @@
   .comment-form  .file label:hover:before,
   .comments form .file label:hover:before {
     opacity: 1;
-    border-color: rgb(153, 153, 153);
+    border-color: rgb(153, 153, 153); /* @aluminum */
   }
   .comment-form  .file label > span:first-child,
   .comments form .file label > span:first-child {
@@ -5741,7 +5741,7 @@
   .activity-list footer.options a,
   .activity-list footer.options button {
     font-size: 0.75em;
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
   }
 
   .post > footer .do    h2,
@@ -6950,7 +6950,7 @@
     }
   }
   .post-form .submit a {
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
     float: right;
     margin-right: 0.4375em;
   }
@@ -7391,7 +7391,7 @@
     color: black;
   }
   #header > ul a {
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @aluminum */
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -7630,9 +7630,8 @@
   }
   #header nav div li a,
   #header nav div li h3 {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgb(153, 153, 153); /* @aluminum */
   }
-
 
   #header nav ul h3:hover,
   #header nav li a:hover,
@@ -7707,24 +7706,24 @@
     #header nav .post {
       display: inline;
     }
-    .scripted-header #header nav .post h3 {
+    .scripted-header #header .post {
+      position: relative;
+    }
+    .scripted-header #header .post h3 {
+      cursor: pointer;
+    }
+
+    /* Show the word “Post” as a header and hide it in the links */
+    .scripted-header #header .post h3 {
       position: static;
     }
-    .scripted-header #header nav .post li a span {
+    .scripted-header #header .post li a span {
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
     }
-  }
 
-  @media (min-width: 83em) { /* @very-wide-header */
-    .scripted-header #header .post {
-      position: relative;
-    }
-    .scripted-header #header .post   h3 {
-      cursor: pointer;
-    }
-    .scripted-header #header .post   ul {
+    .scripted-header #header .post ul {
       position: absolute;
       left: -9999px;
 
@@ -7734,13 +7733,15 @@
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
       z-index: 9999; /* @infinity */
+
+      min-width: 6em;
     }
-    .scripted-header #header .post.active  ul {
+    .scripted-header #header .post.active ul {
       left: auto;
       right: -1.25em;
       top: 2.25em;
     }
-    .scripted-header #header .post   ul:after {
+    .scripted-header #header .post ul:after {
       display: block;
       content: "";
       background: white;
@@ -7762,10 +7763,7 @@
       -o-transform      : rotate(45deg);
       transform         : rotate(45deg);
     }
-    .scripted-header #header .post ul {
-      min-width: 6em;
-    }
-    .scripted-header #header .post   li a {
+    .scripted-header #header .post li a {
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
@@ -7777,103 +7775,9 @@
       position: relative;
       z-index: 1;
     }
-    .scripted-header #header .post   li:first-child a {
+    .scripted-header #header .post li:first-child a {
       border-top-width: 0;
     }
-  }
-
-
-  /* =Member
-  ----------------------------------------------- */
-  #header .member,
-  #header .member h3 {
-    margin: 0;
-    display: inline;
-  }
-  #header .member h3 {
-    font-size: inherit;
-  }
-  #header .member h3 {
-    position: static;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  @media (min-width: 83em) { /* @very-wide-header */
-    #header .member h3 {
-      border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      margin-left: 0.75em;
-      padding-left: 0.875em;
-    }
-  }
-  #header .member h3 img {
-    display: block;
-  }
-  .scripted-header #header .member h3 {
-    cursor: pointer;
-  }
-  .scripted-header #header .member {
-    position: relative;
-  }
-  .scripted-header #header .member ul {
-    position: absolute;
-    left: -9999px;
-
-    /* @dropdown */
-    background: white;
-    border: 1px solid rgb(139, 139, 139);
-    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-
-    z-index: 9999; /* @infinity */
-  }
-  .scripted-header #header .member.active ul {
-    left: auto;
-    right: 0;
-  }
-  .scripted-header #header .member ul:after {
-    display: block;
-    content: "";
-    background: white;
-    border-width: 0.125em 0 0 0.125em;
-    border-style: solid;
-    border-color: rgb(139, 139, 139);
-    width: 1em;
-    height: 1em;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
-    position: absolute;
-    top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
-    left: 50%;
-    margin-left: -0.5em;
-    font-size: 0.875em;
-
-    -webkit-transform : rotate(45deg);
-    -moz-transform    : rotate(45deg);
-    -o-transform      : rotate(45deg);
-    transform         : rotate(45deg);
-  }
-  .scripted-header #header .member ul {
-    min-width: 15em;
-    position: absolute;
-    left: -9999px;
-  }
-  .scripted-header #header .member ul:after {
-    left: auto;
-    right: 1em;
-  }
-  .scripted-header #header .member li a {
-    display: block;
-    padding: 0.675em 1.25em;
-    font-size: 0.875em;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-    color: rgb(101, 102, 102);
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 1.75em;
-    position: relative;
-    z-index: 1;
-  }
-  .scripted-header #header .member li:first-child a {
-    border-top-width: 0;
   }
 
 
@@ -7919,6 +7823,93 @@
   #header button:focus {
     /* Data URI encoded from shared/header/lense-ocean.svg */
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9InJnYig0NywgMTMyLCAyMTgpIiBkPSJNODkuNDI2LDEwLjU3N0M4Mi42MDYsMy43NTcsNzMuNTM1LDAsNjMuODg5LDBTNDUuMTc0LDMuNzU3LDM4LjM1NCwxMC41NzdTMjcuNzc4LDI2LjQ2NSwyNy43OCwzNi4xMDgNCgljLTAuMDAyLDYuODAyLDEuOSwxMy4yOTUsNS4zOTEsMTguOTM2bC0zMC43MywzMC43M2MtMy4yNTUsMy4yNTUtMy4yNTUsOC41MjksMCwxMS43ODRDNC4wNjksOTkuMTg2LDYuMjAxLDEwMCw4LjMzMywxMDANCglzNC4yNjQtMC44MTQsNS44OTItMi40NDFsMzAuNzI5LTMwLjcyOWM1LjY0MSwzLjQ5MSwxMi4xMzcsNS4zOTMsMTguOTQsNS4zOTNjOS42NDYsMCwxOC43MTItMy43NTQsMjUuNTMyLTEwLjU3NA0KCWM2LjgyLTYuODI1LDEwLjU3OS0xNS44OTQsMTAuNTc0LTI1LjUzNEMxMDAuMDA1LDI2LjQ2OCw5Ni4yNDYsMTcuMzk2LDg5LjQyNiwxMC41Nzd6IE03Ny42NDIsNDkuODYyDQoJYy03LjMxNSw3LjMxNy0yMC4wNCw3LjMzMi0yNy40LDAuMDgxYy0wLjAzMi0wLjAzMy0wLjA0MS0wLjA3OC0wLjA3NC0wLjExMWMtMC4wMzQtMC4wMzQtMC4wOC0wLjA0My0wLjExNC0wLjA3Ng0KCWMtMy42MTEtMy42NjItNS42MDctOC40OTYtNS42MDctMTMuNjQ4YzAtNS4xOTIsMi4wMjEtMTAuMDc1LDUuNjk0LTEzLjc0OGMzLjY3LTMuNjcsOC41NTYtNS42OTQsMTMuNzQ4LTUuNjk0DQoJYzUuMTk3LDAsMTAuMDgsMi4wMjQsMTMuNzUzLDUuNjk0YzMuNjczLDMuNjczLDUuNjkxLDguNTU2LDUuNjkxLDEzLjc1M0M4My4zMzMsNDEuMzA2LDgxLjMxNSw0Ni4xODksNzcuNjQyLDQ5Ljg2MnoiLz4NCjwvc3ZnPg0K"), none;
+  }
+
+
+  /* =Member
+  ----------------------------------------------- */
+  #header .member,
+  #header .member h3 {
+    margin: 0;
+    display: inline;
+  }
+  #header .member h3 {
+    font-size: inherit;
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @media (min-width: 83em) { /* @very-wide-header */
+    #header .member h3 {
+      border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      margin-left: 0.75em;
+      padding-left: 0.875em;
+    }
+  }
+  #header .member h3 img {
+    display: block;
+  }
+  .scripted-header #header .member {
+    position: relative;
+  }
+  .scripted-header #header .member h3 {
+    cursor: pointer;
+  }
+  .scripted-header #header .member ul {
+    position: absolute;
+    left: -9999px;
+
+    /* @dropdown */
+    background: white;
+    border: 1px solid rgb(139, 139, 139);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+
+    z-index: 9999; /* @infinity */
+    min-width: 15em;
+  }
+  .scripted-header #header .member ul:after {
+    display: block;
+    content: "";
+    background: white;
+    border-width: 0.125em 0 0 0.125em;
+    border-style: solid;
+    border-color: rgb(139, 139, 139);
+    width: 1em;
+    height: 1em;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    position: absolute;
+    top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
+    left: 50%;
+    margin-left: -0.5em;
+    font-size: 0.875em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+
+    left: auto;
+    right: 1em;
+  }
+  .scripted-header #header .member.active ul {
+    left: auto;
+    right: 0;
+  }
+  .scripted-header #header .member li a {
+    display: block;
+    padding: 0.675em 1.25em;
+    font-size: 0.875em;
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    color: rgb(101, 102, 102);
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1.75em;
+    position: relative;
+    z-index: 1;
+  }
+  .scripted-header #header .member li:first-child a {
+    border-top-width: 0;
   }
 
 
