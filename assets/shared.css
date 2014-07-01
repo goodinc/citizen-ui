@@ -7359,7 +7359,12 @@
     border-style: solid;
     border-color: rgb(230, 230, 230);
     background: white;
-    padding: 7px 1.5em 16px 39px;
+    padding: 7px 1.5em 16px;
+  }
+  @media (min-width: 25em) {
+    #header > div {
+      padding-left: 39px;
+    }
   }
   @media (min-width: 48em) { /* @wide-header */
     #header > div {
