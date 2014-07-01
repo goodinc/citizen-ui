@@ -7,8 +7,7 @@
   function start() {
 
     // OPTIONAL: Present the header navigation as dropdowns.
-    //new NavDropDown();
-    new HeaderDropDown();
+    new NavDropDown();
 
     // OPTIONAL: Present the do, voted, and following buttons as dropdowns.
     new ButtonDropDown();
@@ -188,7 +187,6 @@
 
   /* =NavDropDown
   ----------------------------------------------- */
-  /*
   var NavDropDown = function() {};
 
   (function() {
@@ -196,194 +194,6 @@
     if (!document.addEventListener || !document.querySelector) return;
 
     NavDropDown = function() {
-
-      var active; // The currently active element
-
-      function hide(element) {
-
-        // KLUDGE: Wait a brief moment before responding to a new event
-        // (to work around an issue in Firefox where pressing a link triggers a focus event)
-        if (element._data__NavDropDown_lately) return;
-        element._data__NavDropDown_lately = true;
-        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
-
-        element.className = element.className.replace(/active/g, "");
-        if (active === element) active = undefined;
-
-
-        // KLUDGE: Activate the post or search elements separately, on large screens
-        // (This might be improved by having separate logic for small and large screens)
-
-        // Post
-        var item = element.querySelector("li.post");
-        if (item) {
-          item.className = item.className.replace(/active/g, "");
-        }
-
-        // Search
-        var section = element.querySelector("section.search");
-        if (section) {
-          section.className = section.className.replace(/active/g, "");
-        }
-      }
-
-      function show(element, target) {
-
-        // KLUDGE: Wait a brief moment before responding to a new event
-        // (to work around an issue in Firefox where pressing a link triggers a focus event)
-        if (element._data__NavDropDown_lately) return;
-        element._data__NavDropDown_lately = true;
-        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
-
-        if (element.className.indexOf("active") < 0) {
-          element.className += " active";
-        }
-        active = element;
-
-
-        // KLUDGE: Activate the post or search elements separately, on large screens
-        // (This might be improved by having separate logic for small and large screens)
-
-        var section = closest(target, "section");
-        var list = closest(target, "ul");
-        var item = closest(target, "li");
-
-        var post;
-
-        // The target might be the “Post” link
-        if (item && item.className.indexOf("post") >= 0 && item.className.indexOf("active") < 0) {
-          post = item;
-        // Or it might be a link in the child list
-        } else if (list && list.parentNode.nodeName.toLowerCase() == "li" && list.parentNode.className.indexOf("post") >= 0 && list.parentNode.className.indexOf("active") < 0) {
-          post = list.parentNode;
-        }
-
-        // If the post dropdown was activated
-        if (post) {
-
-          // Close the search dropdown
-          section = element.querySelector("section.search");
-          if (section) {
-            section.className = section.className.replace(/active/g, "");
-          }
-
-          post.className += " active";
-
-        // If the search dropdown was activated
-        } else if (section && section.className.indexOf("search") >= 0 && section.className.indexOf("active") < 0) {
-
-          // Close the post dropdown
-          item = element.querySelector("li.post");
-          if (item) {
-            item.className = item.className.replace(/active/g, "");
-          }
-
-          section.className += " active";
-        }
-      }
-
-      function toggle(e) {
-
-        var target = e.target;
-
-        // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
-        if (windowWidth() >= 800) { // This number is arbitrary, but happens to be a little larger than
-                                    // the media query used to switch between inline and positioned dropdowns
-          if (active) {
-            if (!within(target, active)) {
-              hide(active);
-            }
-          }
-        }
-
-        // If the target is one of the elements we’re listening for
-        var name = target.nodeName.toLowerCase();
-        if (name == "a"      ||
-            name == "img"    ||
-            name == "h3"     ||
-            name == "h4"     ||
-            name == "input"  ||
-            name == "button"  ) {
-
-          var nav = closest(target, "nav");
-
-          // If the target is within the “primary” or “account” nav elements
-          if (nav && (nav.className.indexOf("primary") >= 0 ||
-                      nav.className.indexOf("account") >= 0 )) {
-
-            // If a dropdown is currently open and it’s not the target, close it
-            if (active) {
-              if (!within(target, active)) {
-                hide(active);
-              }
-            }
-
-            var item = closest(target, "li");
-            var headline = closest(target, "h3") || closest(target, "h4");
-
-            // If the post dropdown was pressed
-            if (item && item.className.indexOf("post") >= 0) {
-
-              // If the post dropdown is open
-              if (item.className.indexOf("active") >= 0) {
-                hide(nav);
-              } else {
-                show(nav, target);
-              }
-
-            // If the account or primary dropdown was pressed
-            } else if (headline && headline.nodeName.toLowerCase() == "h3" && nav.className.indexOf("active") >= 0) {
-              hide(nav);
-
-            // If the search dropdown was pressed
-            } else if (headline && nav.className.indexOf("active") >= 0) {
-
-              var section = closest(target, "section");
-
-              // If the search dropdown is open
-              if (section && section.className.indexOf("active") >= 0) {
-                hide(nav);
-              } else {
-                show(nav, target);
-              }
-
-            } else {
-              //nav.className.indexOf("active") >= 0
-              show(nav, target);
-            }
-
-
-            // If a link that triggers a toggle was pressed, prevent the browser from following the link.
-            if (headline || (item && item.className.indexOf("post") >= 0)) {
-              e.preventDefault();
-            }
-          }
-        }
-      }
-
-      document.addEventListener("click", toggle, false);
-      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
-
-
-      // Style the dropdowns
-      var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-nav";
-
-    };
-      
-  })();
-  */
-
-
-  /* =HeaderDropDown
-  ----------------------------------------------- */
-  var HeaderDropDown = function() {};
-
-  (function() {
-
-    if (!document.addEventListener || !document.querySelector) return;
-
-    HeaderDropDown = function() {
 
       var active; // The currently active element
 
@@ -421,30 +231,30 @@
         var target = e.target;
         var name = target.nodeName.toLowerCase();
 
-        // KLUDGE: Make any interaction outside of a dropdown close it on wide screens
-        //if (windowWidth() >= 1050) { // This number is arbitrary, but happens to be a little larger than
-                                    // the media query used to switch between inline and positioned dropdowns
-
-          // If a dropdown is currently open and it’s not the target, close it
-          if (active) {
-            if (!within(e.target, active)) {
-              hide(active);
-            }
+        // If a dropdown is currently open and it’s not the target, close it
+        if (active) {
+          if (!within(e.target, active)) {
+            hide(active);
           }
+        }
 
-          var nav = closest(target, "nav");
-          if (nav && !within(e.target, nav)) {
-            hide(nav);
-          }
-        //}
+        var nav = closest(target, "nav");
+        if (nav && !within(e.target, nav)) {
+          hide(nav);
+        }
 
         // If the target is a headline or a link
-        if (name == "h3" || name == "img" || name == "a" || name == "p" || name == "button") {
+        if (name == "a"      ||
+            name == "img"    ||
+            name == "h3"     ||
+            name == "p"      ||
+            name == "input"  ||
+            name == "button"  ) {
           var section = closest(target, "section");
 
-          // If the target is within a post or member section
-          if (section && ( section.className.indexOf("post")      >= 0 ||
-                           section.className.indexOf("member")    >= 0 )) {
+          // If the target is within a post or account section
+          if (section && ( section.className.indexOf("post")    >= 0 ||
+                           section.className.indexOf("account") >= 0 )) {
 
             // If the target is within a headline, assume the headline is the target
             if (name == "img") {
@@ -493,7 +303,7 @@
 
       // Style the dropdowns
       var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-header";
+      html.className += " scripted-nav";
 
     };
       
