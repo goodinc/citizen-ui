@@ -7359,7 +7359,7 @@
   ----------------------------------------------- */
   #header > ul {
     display: block;
-    margin-left: 30px;
+    margin-left: 24px;
     line-height: normal;
     margin-bottom: -1px;
     position: relative;
@@ -7371,7 +7371,7 @@
   }
   #header > ul li a {
     display: block;
-    padding: 12px 28px 13px 27px;
+    padding: 12px 34px 13px 34px;
     line-height: 1;
     font-size: 13px;
     border-width: 0 1px 0 0;
@@ -7380,11 +7380,11 @@
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
   }
   #header > ul li:last-child a {
-    padding-left: 26px;
+    padding-left: 32px;
+    padding-right: 33px;
   }
   #header > ul li:first-child a {
     border-left-width: 1px;
-    padding-left: 29px;
   }
   #header > ul li.active a {
     background: white;
