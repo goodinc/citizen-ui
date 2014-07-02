@@ -233,20 +233,35 @@
 
         // If a dropdown is currently open and it’s not the target, close it
         if (active) {
-          if (!within(e.target, active)) {
+
+          if (!within(e.target, active) && name != "p") {
             hide(active);
           }
-        }
 
-        (function() {
-          var nav = closest(target, "nav");
-          if (nav) {
-            var result = nav.getElementsByTagName("div");
-            if (result.length > 1 && !within(e.target, result[1])) {
-              hide(result[0]);
+          // KLUDGE: The dropdown for small screens requires special logic
+          (function() {
+            var nav = closest(target, "nav");
+            if (nav) {
+              var result = nav.getElementsByTagName("div");
+              if (result.length > 1 ) {
+
+                // If the event happened outside the dropdown
+                if (!within(e.target, result[1]) && name != "p") {
+                  if (result[0].className.indexOf("active") >= 0) {
+                    hide(result[0]);
+                  }
+                // If the event happened inside the dropdown
+                } else if (name == "p") {
+                  if (active !== result[0]) {
+                    hide(active);
+                  }
+                }
+
+              }
             }
-          }
-        })();
+          })();
+
+        }
 
         // If the target is a headline or a link
         if (name == "a"      ||
