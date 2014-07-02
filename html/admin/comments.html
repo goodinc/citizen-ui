@@ -27,57 +27,69 @@
 </head>
 <body>
 
-<header id="header" class="has-account">
-  <div class="container">
-    <h2><a href="for-you.html">GOOD</a></h2>
+<header id="header" class="minimal has-account">
 
-    <nav class="primary">
-      <h3>Navigation</h3>
-      <div class="options">
-        <ul>
-          <li><a href="explore.html">Explore</a></li>
-          <li class="post">
-            <h4>Post</h4>
-            <ul>
-              <li><a href="post-link-new.html"><span>Post</span> Link</a></li>
-              <li><a href="post-action-new.html"><span>Post</span> Do</a></li>
-            </ul>
-          </li>
-        </ul>
-        <section role="search" class="search">
-          <h4>Search</h4>
-          <form action="search.html" method="get">
+  <ul>
+    <li class="active"><a href="home.html">Community</a></li>
+    <li><a href="">Magazine</a></li>
+  </ul>
+
+  <div>
+    <h2><a href="home.html">GOOD</a></h2>
+
+    <nav>
+      <p>Navigation</p>
+      <ul>
+        <li><a href="home.html">Featured</a></li>
+        <li><a href="popular.html">Popular</a></li>
+        <li><a href="newest.html">Newest</a></li>
+        <li><a href="for-you.html">For You</a></li>
+        <li><a href="">Do</a></li>
+        <li><a href="">Video</a></li>
+      </ul>
+
+      <div>
+        <div>
+          <ul>
+            <li><a href="explore.html">Explore</a></li>
+            <li>
+              <section class="post">
+                <h3>Post</h3>
+                <ul>
+                  <li><a href="post-link-new.html"><span>Post</span> Link</a></li>
+                  <li><a href="post-action-new.html"><span>Post</span> Do</a></li>
+                </ul>
+              </section>
+            </li>
+          </ul>
+
+          <form role="search" action="search.html" method="get">
             <p>
               <label>
-                <span><strong>Search</strong> for topics, members or keywords…</span><br />
+                <span>Keywords</span><br />
                 <input name="q" type="search" />
               </label>
               <button type="submit">Search</button>
             </p>
           </form>
+        </div>
+
+        <section class="account">
+          <h3>
+            <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fimage-cache.good.is%2Favatars%2F1844858%2Foriginal%2FDSC01200.JPG%3F1347386733&amp;geometry=60x60%23" width="40" height="40" alt="eshah" />
+          </h3>
+          <ul>
+            <li><a href="member.html">View Profile</a></li>
+            <li><a href="account.html">Manage Account</a></li>
+            <li><a href="friends-find.html">Find &amp; Invite Friends</a></li>
+            <li><a href="sign-out.html">Sign Out</a></li>
+          </ul>
         </section>
+
       </div>
     </nav>
 
-    <nav class="account">
-      <h3>
-        <a href="member.html">
-          <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fimage-cache.good.is%2Favatars%2F1844858%2Foriginal%2FDSC01200.JPG%3F1347386733&amp;geometry=60x60%23" width="40" height="40" alt="eshah" />
-        </a>
-      </h3>
-      <div class="options">
-        <ul>
-          <li><a href="member.html">View Profile</a></li>
-          <li><a href="account.html">Manage Account</a></li>
-          <li><a href="friends-find.html">Find &amp; Invite Friends</a></li>
-          <li><a href="featured.html">Update Featured</a></li>
-          <li><a href="posts.html">Review Posts &amp; Comments</a></li>
-          <li><a href="sign-out.html">Sign Out</a></li>
-        </ul>
-      </div>
-    </nav>
-
-  </div><!-- /.container -->
+  </div>
 </header>
 
 <nav class="sub">
