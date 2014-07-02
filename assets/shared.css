@@ -7347,6 +7347,10 @@
     margin-left: 0;
     padding-left: 0;
   }
+  #header ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
 
   /* =Meta
@@ -7495,7 +7499,7 @@
     margin-left: 0;
   }
   @media (min-width: 48em) { /* @medium-header */
-    .scripted-nav #header.minimal nav {
+    #header.minimal nav {
       margin-top: 0.5em;
     }
   }
@@ -7515,6 +7519,14 @@
   #header nav div li a,
   #header nav div li h3 {
     color: rgb(153, 153, 153); /* @aluminum */
+  }
+  #header nav div li a {
+    border-top: 1px solid rgb(245, 245, 245);
+    padding-top: 0.4375em;
+    padding-bottom: 0.4375em;
+  }
+  #header nav div > ul > li:first-child a {
+    border-top-width: 0;
   }
   #header nav li a:hover,
   #header nav li a:active,
@@ -7621,12 +7633,6 @@
   #header nav > div {
     clear: both;
     border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-    padding-top: 0.875em;
-
-    margin-left: -1.5em;
-    margin-right: -1.5em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
   }
   .scripted-nav #header nav > div {
     /* reset */
@@ -7636,7 +7642,7 @@
 
     line-height: 40px;
     position: absolute;
-    top: 20px;
+    top: 16px;
     right: 1.5em;
   }
   .scripted-nav #header nav div div {
@@ -7647,7 +7653,7 @@
       top: 92px;
     }
     .scripted-nav #header.minimal nav > div {
-      top: 20px;
+      top: 16px;
     }
   }
 
@@ -7773,10 +7779,23 @@
 
   /* =Search
   ----------------------------------------------- */
-  #header form,
+  #header form {
+    margin: 0;
+  }
   #header form p {
     margin: 0;
     display: inline;
+  }
+  #header form {
+    border-top: 1px solid rgb(245, 245, 245);
+    padding-top: 0.4375em;
+    padding-bottom: 0.4375em;
+  }
+  .scripted-nav #header form {
+    display: inline;
+    border-top-width: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   #header label > span:first-child {
     /* @hidden-accessible */
@@ -7828,6 +7847,12 @@
     position: static;
     display: inline-block;
     vertical-align: middle;
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+  }
+  .scripted-nav #header .account h3 {
+    position: static;
   }
   @media (min-width: 80em) { /* @wide-header */
     #header .account h3 {
@@ -7859,6 +7884,7 @@
   }
   .scripted-nav #header .account.active ul {
     left: auto;
+    top: 45px;
     right: 0;
   }
   .scripted-nav #header .account ul:after {
@@ -8010,7 +8036,7 @@
 
       position: absolute;
       left: auto;
-      top: 21px;
+      top: 17px;
       right: 1.5em;
     }
     .scripted-nav #header.minimal nav > p:first-child {
