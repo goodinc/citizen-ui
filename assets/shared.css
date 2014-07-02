@@ -7535,9 +7535,6 @@
     position: relative;
     padding-bottom: 1.4375em; /* 23px / 16px */
   }
-  #header.minimal nav > ul > li {
-    padding-bottom: 0;
-  }
 
   #header nav > ul > li.active a:after {
     content: "";
