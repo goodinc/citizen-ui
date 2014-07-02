@@ -7525,6 +7525,10 @@
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
+  .scripted-nav #header nav div li a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   #header nav div > ul > li:first-child a {
     border-top-width: 0;
   }
@@ -7653,7 +7657,7 @@
       top: 92px;
     }
     .scripted-nav #header.minimal nav > div {
-      top: 16px;
+      top: 20px;
     }
   }
 
@@ -8036,11 +8040,11 @@
 
       position: absolute;
       left: auto;
-      top: 17px;
+      top: 16px;
       right: 1.5em;
     }
     .scripted-nav #header.minimal nav > p:first-child {
-      top: 21px;
+      top: 16px;
     }
     .scripted-nav #header.has-account nav > p:first-child {
       right: 84px;
@@ -8055,7 +8059,7 @@
       top: 93px;
     }
     .scripted-nav #header.minimal nav > p:first-child {
-      top: 19px;
+      top: 21px;
     }
   }
 
