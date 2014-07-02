@@ -7454,7 +7454,7 @@
     border-style: solid;
     border-color: rgb(230, 230, 230);
     background: white;
-    padding: 7px 1.5em 16px;
+    padding: 7px 1.5em 0;
     position: relative;
   }
   #header > div:after {
@@ -7533,7 +7533,9 @@
   #header nav > ul > li {
     display: inline-block;
     position: relative;
+    padding-bottom: 1.4375em; /* 23px / 16px */
   }
+
   #header nav > ul > li.active a:after {
     content: "";
     display: block;
@@ -7541,11 +7543,12 @@
     border-bottom: 0.375em solid black; /* 6px / 16px */
     position: absolute;
     left: 0;
-    bottom: -23px;
+    bottom: 0;
   }
+
   @media (min-width: 48em) { /* @medium-header */
-    #header nav > ul > li.active a:after {
-      bottom: -29px;
+    #header nav > ul > li {
+      padding-bottom: 29px;
     }
   }
   #header nav > ul > li.active a {
@@ -7573,7 +7576,6 @@
   @media (max-width: 34em) {
     #header nav > ul {
       padding-top: 0.5em;
-      padding-bottom: 7px;
     }
     #header nav > ul:after {
       content: "";
@@ -7582,20 +7584,20 @@
     }
     #header nav > ul > li {
       float: left;
-    }
-    #header nav > ul > li > a {
       font-size: 0.875em;
     }
   }
   @media (max-width: 30em) {
-    #header nav > ul > li > a {
+    #header nav > ul > li {
       font-size: 0.875em;
+    }
+    #header nav > ul > li > a {
       padding: 0 0.5em;
       line-height: 2;
     }
   }
   @media (max-width: 26em) {
-    #header nav > ul > li > a {
+    #header nav > ul > li {
       font-size: 0.75em;
     }
   }
