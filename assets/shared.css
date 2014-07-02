@@ -1803,12 +1803,6 @@
   ----------------------------------------------- */
 
 
-  /* =Header
-  ----------------------------------------------- */
-
-
-
-
   /* =Footer
   ----------------------------------------------- */
   #footer section {
@@ -7929,7 +7923,7 @@
       padding: 0.4375em 1em;
       display: block;
     }
-    .scripted-nav #header nav.active div div {
+    .scripted-nav #header nav div.active div {
       left: auto;
       right: 0;
       top: 56px;
@@ -7978,7 +7972,7 @@
       position: relative;
       z-index: 1;
     }
-    .scripted-nav #header nav.active div > ul > li:first-child > a {
+    .scripted-nav #header nav div > ul > li:first-child > a {
       border-top-width: 0;
     }
   }

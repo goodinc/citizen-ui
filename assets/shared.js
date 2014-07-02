@@ -191,7 +191,7 @@
 
   (function() {
 
-    if (!document.addEventListener || !document.querySelector) return;
+    if (!document.addEventListener) return;
 
     NavDropDown = function() {
 
@@ -218,8 +218,8 @@
         setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
 
         // KLUDGE: Deactivate the navigation if it’s active
-        var nav = closest(element, "nav");
-        if (nav && nav.className.indexOf("active") >= 0 && element.className.indexOf("post") < 0) hide(nav);
+        //var nav = closest(element, "nav");
+        //if (nav && nav.className.indexOf("active") >= 0 && element.className.indexOf("post") < 0) hide(nav);
 
         if (element.className.indexOf("active") < 0) {
           element.className += " active";
@@ -238,10 +238,15 @@
           }
         }
 
-        var nav = closest(target, "nav");
-        if (nav && !within(e.target, nav)) {
-          hide(nav);
-        }
+        (function() {
+          var nav = closest(target, "nav");
+          if (nav) {
+            var result = nav.getElementsByTagName("div");
+            if (result.length > 1 && !within(e.target, result[1])) {
+              hide(result[0]);
+            }
+          }
+        })();
 
         // If the target is a headline or a link
         if (name == "a"      ||
@@ -284,13 +289,23 @@
             }
 
             if (nav && header && header.id == "header") {
-              // Toggle the dropdown
-              if (name == "p" && nav.className.indexOf("active") >= 0) {
-                hide(nav);
-              } else {
-                show(nav);
+
+              var div;
+
+              if (name == "p" || closest(target, "div")) {
+                var result = nav.getElementsByTagName("div");
+                if (result.length > 0) div = result[0];
               }
 
+              if (div) {
+
+                // Toggle the dropdown
+                if (name == "p" && div.className.indexOf("active") >= 0) {
+                  hide(div);
+                } else {
+                  show(div);
+                }
+              }
             }
           }
         }
