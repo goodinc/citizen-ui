@@ -599,16 +599,19 @@
 
   .dialog .note,
   form    .note,
-  form .text label > span.note,
   form legend em,
   form label  em {
-    font-size: 0.8571428571em; /* 12px / 14px */
+    font-size: 0.75em; /* 12px / @font-size */
     font-style: normal;
     font-weight: normal;
     color: rgb(102, 102, 102);
   }
-  form label textarea           + span.note,
-  form label input[type="text"] + span.note {
+  form label > span em {
+    font-size: 0.8571428571em; /* 12px / 14px */
+  }
+
+  .post-form    label .note,
+  .profile-form label .note {
     text-align: right;
   }
   form legend em,
@@ -7176,6 +7179,10 @@
   @media (min-width: 40em) {
     .post-form .story > .container {
       padding: 0.875em;
+      border-radius: 0.25em;
+    }
+    .post-form .mark-done .story > .container {
+      border-radius: 0;
       -webkit-border-bottom-right-radius : 0.25em;
       -webkit-border-bottom-left-radius  : 0.25em;
          -moz-border-radius-bottomright  : 0.25em;
