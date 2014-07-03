@@ -601,10 +601,16 @@
   form    .note,
   form legend em,
   form label  em {
-    font-size: 0.75em; /* 12px / @font-size */
-    font-style: normal;
-    font-weight: normal;
+    font-size: 0.875em; /* 14px / @font-size */
     color: rgb(102, 102, 102);
+  }
+  form legend em,
+  form label  em {
+    font-weight: normal;
+    font-style: normal;
+  }
+  form label .note {
+    font-size: 0.75em; /* 12px / @font-size */
   }
   form label > span em {
     font-size: 0.8571428571em; /* 12px / 14px */
