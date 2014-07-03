@@ -616,8 +616,10 @@
     font-size: 0.8571428571em; /* 12px / 14px */
   }
 
-  .post-form    label .note,
-  .profile-form label .note {
+  .post-form    label textarea           + span.note,
+  .post-form    label input[type="text"] + span.note,
+  .profile-form label textarea           + span.note,
+  .profile-form label input[type="text"] + span.note {
     text-align: right;
   }
   form legend em,
