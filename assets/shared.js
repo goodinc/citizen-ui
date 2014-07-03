@@ -191,7 +191,7 @@
 
   (function() {
 
-    if (!document.addEventListener || !document.querySelector) return;
+    if (!document.addEventListener) return;
 
     NavDropDown = function() {
 
@@ -218,8 +218,8 @@
         setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
 
         // KLUDGE: Deactivate the navigation if it’s active
-        var nav = closest(element, "nav");
-        if (nav && nav.className.indexOf("active") >= 0 && element.className.indexOf("post") < 0) hide(nav);
+        //var nav = closest(element, "nav");
+        //if (nav && nav.className.indexOf("active") >= 0 && element.className.indexOf("post") < 0) hide(nav);
 
         if (element.className.indexOf("active") < 0) {
           element.className += " active";
@@ -233,14 +233,34 @@
 
         // If a dropdown is currently open and it’s not the target, close it
         if (active) {
-          if (!within(e.target, active)) {
+
+          if (!within(e.target, active) && name != "p") {
             hide(active);
           }
-        }
 
-        var nav = closest(target, "nav");
-        if (nav && !within(e.target, nav)) {
-          hide(nav);
+          // KLUDGE: The dropdown for small screens requires special logic
+          (function() {
+            var nav = closest(target, "nav");
+            if (nav) {
+              var result = nav.getElementsByTagName("div");
+              if (result.length > 1 ) {
+
+                // If the event happened outside the dropdown
+                if (!within(e.target, result[1]) && name != "p") {
+                  if (result[0].className.indexOf("active") >= 0) {
+                    hide(result[0]);
+                  }
+                // If the event happened inside the dropdown
+                } else if (name == "p") {
+                  if (active !== result[0]) {
+                    hide(active);
+                  }
+                }
+
+              }
+            }
+          })();
+
         }
 
         // If the target is a headline or a link
@@ -284,13 +304,23 @@
             }
 
             if (nav && header && header.id == "header") {
-              // Toggle the dropdown
-              if (name == "p" && nav.className.indexOf("active") >= 0) {
-                hide(nav);
-              } else {
-                show(nav);
+
+              var div;
+
+              if (name == "p" || closest(target, "div")) {
+                var result = nav.getElementsByTagName("div");
+                if (result.length > 0) div = result[0];
               }
 
+              if (div) {
+
+                // Toggle the dropdown
+                if (name == "p" && div.className.indexOf("active") >= 0) {
+                  hide(div);
+                } else {
+                  show(div);
+                }
+              }
             }
           }
         }
