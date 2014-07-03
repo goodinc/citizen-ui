@@ -7613,17 +7613,13 @@
   }
 
   /* OPTIONAL: Reduce the size of the navigation as the screen gets smaller. */
-  @media (max-width: 34em) {
-    #header nav > ul {
-      padding-top: 0.5em;
-    }
+  @media (max-width: 33.9375em) {
     #header nav > ul:after {
       content: "";
       display: table;
       clear: both;
     }
     #header nav > ul > li {
-      float: left;
       font-size: 0.875em;
     }
   }
