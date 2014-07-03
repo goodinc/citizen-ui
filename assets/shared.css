@@ -7383,6 +7383,7 @@
   #header > ul li:last-child a {
     padding-left: 32px;
     padding-right: 33px;
+    border-right-width: 0;
   }
   #header > ul a {
     color: rgb(153, 153, 153); /* @aluminum */
@@ -7482,7 +7483,7 @@
       padding: 7px 1.5em 6px 30px;
     }
   }
-  @media (min-width: 83em) {
+  @media (min-width: 60em) {
     #header > div,
     #header.minimal > div {
       padding-left: 58px;
@@ -7550,6 +7551,9 @@
     display: inline-block;
     position: relative;
     padding-bottom: 1.4375em; /* 23px / 16px */
+  }
+  #header nav > ul > li + li {
+    margin-left: -0.25em;
   }
 
   #header nav > ul > li.active a:after {
@@ -7673,10 +7677,13 @@
       display: inline-block;
     }
     .scripted-nav #header nav div > ul > li {
-      display: inline;
+      display: inline-block;
+    }
+    .scripted-nav #header nav div > ul > li + li {
+      margin-left: -0.25em;
     }
     .scripted-nav #header nav div > ul > li > a {
-      display: inline-block;
+      display: block;
     }
   }
 
@@ -7861,7 +7868,7 @@
   @media (min-width: 80em) { /* @wide-header */
     #header .account h3 {
       border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      margin-left: 0.75em;
+      margin-left: 0.4375em;
       padding-left: 0.875em;
     }
   }
