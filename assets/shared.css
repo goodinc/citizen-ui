@@ -526,7 +526,7 @@
     /* Give the field a width of 33em’s, but make it fit on small screens. */
     max-width: 33em;
     width: 100%;
-    height: 9.15em; /* (line-height(1.375) x 6) + padding(0.45em) x 2 */
+    /* height: 9.15em; (line-height(1.375) x 6) + padding(0.45em) x 2 */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
@@ -6935,7 +6935,7 @@
   }
   @media (min-width: 40em) {
     .post-form .submit {
-      margin-top: 1.3125em;
+      /* margin-top: 1.3125em; */
       border-top: 1px solid rgb(225, 225, 225);
       padding-top: 1.75em;
     }
@@ -7165,6 +7165,8 @@
   .post-form .story {
     margin-top: 1.3125em;
     margin-bottom: -0.75em;
+    border-top: 1px solid #dddddd;
+    padding-top: 1.3125em;
   }
   .post-form .story > .container {
     position: relative;
@@ -7183,7 +7185,7 @@
     }
   }
   .post-form .story > .container:before {
-    content: "";
+  /*  content: ""; */
     display: block;
     background: rgb(62, 197, 149); /* @fern */
     width: 1em;
@@ -7208,7 +7210,6 @@
   .post-form .story h2 + p {
     color: white;
     margin-left: 0.4375em;
-    text-transform: lowercase;
     font-size: 0.75em;
   }
   .post-form .story h2 + p:before {
