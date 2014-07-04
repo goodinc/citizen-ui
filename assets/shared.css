@@ -7449,19 +7449,20 @@
     #header h2 {
       margin-right: 0;
       float: left;
-      font-size: 154px;
+      font-size: 155px;
     }
     #header h2 a {
       border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
-      padding-right: 29px;
+      padding-right: 27px;
+      background: white;
+      margin-right: 12px;
     }
     #header.minimal h2 a {
       margin-right: 0.2em;
     }
     #header h2 + p {
       position: static;
-      margin-left: 238px;
-      padding-left: 1.4em;
+      padding-left: 264px;
       border-bottom: 1px solid rgb(221, 223, 227); /* @silver-blue */
       padding-bottom: 12px;
       margin-bottom: 5px;
@@ -7585,7 +7586,7 @@
 
   @media (min-width: 48em) { /* @medium-header */
     #header nav > ul > li {
-      padding-bottom: 29px;
+      padding-bottom: 30px;
     }
     #header.minimal nav > ul > li {
       padding-bottom: 0;
@@ -7603,7 +7604,6 @@
   }
   @media (min-width: 48em) { /* @medium-header */
     #header nav > ul {
-      margin-left: 238px;
       display: block;
       padding-left: 0.65em;
     }
