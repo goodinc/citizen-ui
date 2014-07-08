@@ -2791,13 +2791,13 @@
     }
 
     .scripted-button .activity-item .do     form,
-                 .activity-item .follow form {
+                     .activity-item .follow form {
       position: absolute;
       margin-top: 0;
       top: 0;
       right: 0.5625em; /* meta.margin-right(9px) / @font-size(16px) */
     }
-    .scripted-button .activity-item .do.has-story form {
+    .scripted-button .activity-item .do form {
       margin-top: -0.5em;
     }
     .activity-item .follow form {
@@ -2859,16 +2859,16 @@
 
 /* =Do with Story
   ----------------------------------------------- */
-  .activity-item section.do.has-story {
+  .activity-item section.do {
     margin-bottom: 0;
   }
-  .activity-item section.do.has-story h3 {
+  .activity-item section.do h3 {
     min-height: 0;
     margin-bottom: 0;
   }
-  .activity-item section.do.has-story form.do,
-  .activity-item section.do.has-story form.doing,
-  .activity-item section.do.has-story form.done {
+  .activity-item section.do form.do,
+  .activity-item section.do form.doing,
+  .activity-item section.do form.done {
     float: none;
   }
 
@@ -3123,9 +3123,19 @@
     content: "\e604"; /* @icon-do */
     color: rgb(83, 231, 185); /* @kiwi */
   }
+  .do.has-story .meta .dos a:before {
+    /* @icon-participants */
+    content: "\e61d";
+    color: rgb(83, 83, 83);
+  }
   .meta .comments a:before {
     content: "\e601"; /* @icon-comment */
     color: rgb(255, 223, 145); /* @banana */
+  }
+  .do.has-story .meta .comments a:before {
+    /* @icon-launch */
+    content: "\e612";
+    color: rgb(83, 83, 83);
   }
   .meta .vote button:before {
     margin-right: 0.1em;
