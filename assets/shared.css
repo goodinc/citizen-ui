@@ -2859,16 +2859,16 @@
 
 /* =Do with Story
   ----------------------------------------------- */
-  .activity-item section.do {
+  .activity-item section.do.has-story {
     margin-bottom: 0;
   }
-  .activity-item section.do h3 {
+  .activity-item section.do.has-story h3 {
     min-height: 0;
     margin-bottom: 0;
   }
-  .activity-item section.do form.do,
-  .activity-item section.do form.doing,
-  .activity-item section.do form.done {
+  .activity-item section.do.has-story form.do,
+  .activity-item section.do.has-story form.doing,
+  .activity-item section.do.has-story form.done {
     float: none;
   }
 
@@ -3038,8 +3038,10 @@
     clear: both;
   }
 
-  .activity-item .meta p.dos,
-  .activity-item .meta p.comments {
+  .activity-item .meta .dos,
+  .activity-item .meta .comments,
+  .activity-item .meta .stories,
+  .activity-item .meta .participants {
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
@@ -3068,10 +3070,12 @@
   }
 
   /* Icons */
-  .meta .dos      a,
-  .meta .comments a,
-  .meta .vote     button,
-  .meta .voted    button {
+  .meta .dos          a,
+  .meta .comments     a,
+  .meta .stories      a,
+  .meta .participants a,
+  .meta .vote         button,
+  .meta .voted        button {
     border-radius: 0.25em;
     font-family: inherit;
     font-size: 0.75em;
@@ -3085,18 +3089,26 @@
     color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
   }
-  .meta .dos      a:hover,
-  .meta .dos      a:active,
-  .meta .dos      a:focus,
-  .meta .comments a:hover,
-  .meta .comments a:active,
-  .meta .comments a:focus {
+  .meta .dos          a:hover,
+  .meta .dos          a:active,
+  .meta .dos          a:focus,
+  .meta .comments     a:hover,
+  .meta .comments     a:active,
+  .meta .comments     a:focus,
+  .meta .stories      a:hover,
+  .meta .stories      a:active,
+  .meta .stories      a:focus,
+  .meta .participants a:hover,
+  .meta .participants a:active,
+  .meta .participants a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-  .meta .dos       a:before,
-  .meta .comments  a:before,
-  .meta .vote button:before {
+  .meta .dos          a:before,
+  .meta .comments     a:before,
+  .meta .stories      a:before,
+  .meta .participants a:before,
+  .meta .vote         button:before {
 
     /* @icons */
     font-family: "Icons";
@@ -3115,15 +3127,17 @@
     display: inline-block;
     vertical-align: middle;
   }
-  .meta .dos      a:before,
-  .meta .comments a:before {
+  .meta .dos          a:before,
+  .meta .comments     a:before,
+  .meta .stories      a:before,
+  .meta .participants a:before {
     margin-right: 0.25em;
   }
   .meta .dos a:before {
     content: "\e604"; /* @icon-do */
     color: rgb(83, 231, 185); /* @kiwi */
   }
-  .do.has-story .meta .dos a:before {
+  .meta .participants a:before {
     /* @icon-participants */
     content: "\e61d";
     color: rgb(83, 83, 83);
@@ -3132,7 +3146,7 @@
     content: "\e601"; /* @icon-comment */
     color: rgb(255, 223, 145); /* @banana */
   }
-  .do.has-story .meta .comments a:before {
+  .meta .stories a:before {
     /* @icon-launch */
     content: "\e612";
     color: rgb(83, 83, 83);
@@ -3800,8 +3814,10 @@
   .topic-featured .activity-item.do .meta .comments {
     margin-left: 0.75em;
   }
-  .topic-featured .activity-item.do .meta .dos      a,
-  .topic-featured .activity-item.do .meta .comments a {
+  .topic-featured .activity-item.do .meta .dos          a,
+  .topic-featured .activity-item.do .meta .comments     a,
+  .topic-featured .activity-item.do .meta .stories      a,
+  .topic-featured .activity-item.do .meta .participants a {
     background-color: transparent;
     padding: 0;
     border-width: 0;
