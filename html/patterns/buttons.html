@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="stylesheet" href="../../assets/shared.css" />
+
+  <script src="../../assets/shared.js"></script>
+
   <script>
     // fonts.com tracking
     var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
@@ -17,61 +20,81 @@
     })();
   </script>
 
-  <script src="../../assets/shared.js"></script>
-
-  <!--[if lte IE 8]>
-  <script src="../../assets/modernizr.js"></script>
-  <![endif]-->
+  <style>
+    ol,
+    ol li {
+      margin-top: 3.5em;
+    }
+  </style>
 
 </head>
 <body class="pattern">
 
 <section>
-  <h2>Primary</h2>
+  <h1>Buttons</h1>
 
-  <h3>Button</h3>
-  <form action="" method="post">
-    <p><button type="submit">Submit</button></p>
-  </form>
+  <section>
+    <h2>Primary</h2>
 
-  <h3>Link</h3>
-  <p class="action"><a href="">Take Action</a></p>
+    <figure>
+      <form action="" method="post">
+        <p><button type="submit">Submit</button></p>
+      </form>
+      <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+  &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+      <figcaption>Button</figcaption>
+    </figure>
 
-  <!--
-  <h3>Back</h3>
-  <p class="back"><a href="">Back to that page</a></p>
+    <figure>
+      <p class="action"><a href="">Take Action</a></p>
+      <pre><code>&lt;p class=&quot;action&quot;&gt;&lt;a href=&quot;&quot;&gt;Take Action&lt;/a&gt;&lt;/p&gt;</code></pre>
+      <figcaption>Link</figcaption>
+    </figure>
+  </section>
 
-  <h3>Top</h3>
-  <p class="top"><a href="">Back to that thing</a></p>
-  -->
+  <section id="secondary">
+    <h2>Secondary</h2>
 
-</section>
+    <figure>
+      <form action="" method="post" class="secondary">
+        <p><button type="submit">Flag this post</button></p>
+      </form>
+      <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;<mark>secondary</mark>&quot;&gt;
+  &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Flag this post&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+      <figcaption>Button</figcaption>
+    </figure>
 
-<section id="secondary">
-  <h2>Secondary</h2>
+    <figure>
+      <p class="secondary action"><a href="">Edit this post</a></p>
+      <pre><code>&lt;p class=&quot;<mark>secondary</mark> action&quot;&gt;&lt;a href=&quot;&quot;&gt;Edit this post&lt;/a&gt;&lt;/p&gt;</code></pre>
+      <figcaption>Link</figcaption>
+    </figure>
+  </section>
 
-  <h3>Button</h3>
-  <form action="" method="post" class="secondary">
-    <p><button type="submit">Flag this post</button></p>
-  </form>
+  <section id="warning">
+    <h2>Warning</h2>
 
-  <h3>Link</h3>
-  <p class="secondary action"><a href="">Edit this post</a></p>
-</section>
+    <figure>
+      <form action="" method="post" class="warning">
+        <p><button type="submit">Delete</button></p>
+      </form>
+      <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;warning&quot;&gt;
+  &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Delete&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+      <figcaption>Button</figcaption>
+    </figure>
+  </section>
 
-<section id="warning">
-  <h2>Warning</h2>
+  <section id="loading">
+    <h2>Loading</h2>
 
-  <form action="" method="post" class="warning">
-    <p><button type="submit">Delete</button></p>
-  </form>
-</section>
-
-<section id="loading">
-  <h2>Loading Indicator</h2>
-
-  <p class="loading">Loading…</p>
-</section>
+    <figure>
+      <p class="loading">Loading…</p>
+      <pre><code>&lt;p class=&quot;loading&quot;&gt;Loading…&lt;/p&gt;</code></pre>
+    </figure>
+  </section>
 
 </body>
 </html>
