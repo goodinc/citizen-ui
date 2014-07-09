@@ -1754,7 +1754,7 @@
     border-top-width: 0;
     padding-top: 0;
     padding-bottom: 1.75em;
-    margin-top: 1.75em;
+    margin-top: 3.5em;
   }
   .topic-featured {
     padding-top    : 1.3125em; /* @line-height / 4 x 3 */
@@ -8257,6 +8257,13 @@
   #header + div .do-header,
   #header + #content.minimal {
     /*border-top: 1px solid rgb(221, 223, 227);*/ /* @silver-blue */
+  }
+  #header + .join-promotion,
+  #header + .join-promotion + #content,
+  #header + #content,
+  #header + .join-promotion + nav.sub,
+  #header + nav.sub {
+    border-top-width: 0;
   }
 
 
