@@ -51,12 +51,8 @@
 /* =Header
   ----------------------------------------------- */
   .do-header {
-    margin-top: 0.875em;
+    margin-top: 1.75em;
     margin-bottom: 0;
-  }
-  #header + .do-header,
-  #header + div .do-header:first-child {
-    margin-top: 0;
   }
   .do.options > .container,
   .do-header > .container {

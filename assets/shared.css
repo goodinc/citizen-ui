@@ -1754,6 +1754,7 @@
     border-top-width: 0;
     padding-top: 0;
     padding-bottom: 1.75em;
+    margin-top: 1.75em;
   }
   .topic-featured {
     padding-top    : 1.3125em; /* @line-height / 4 x 3 */
@@ -4536,7 +4537,7 @@
   -----------------------------------------------
   ----------------------------------------------- */
   .member-header {
-    margin-top    : 0;
+    margin-top    : 1.75em;
     margin-bottom : 0;
   }
   .member-header > .container {
@@ -4783,7 +4784,8 @@
   -----------------------------------------------
   ----------------------------------------------- */
   body > header.sub {
-    margin-top: 0;
+    margin-top: 1.75em;
+    margin-bottom: 1.75em;
   }
   body > header.sub > .container > div {
     border-width: 0.1em;
@@ -4816,7 +4818,7 @@
   -----------------------------------------------
   ----------------------------------------------- */
   .topic-header {
-    margin-top: 0;
+    margin-top: 1.75em;
     margin-bottom: 0;
   }
 
@@ -6691,7 +6693,7 @@
 /* =Search Results
   ----------------------------------------------- */
   .search-header {
-    margin-top: 0;
+    margin-top: 1.75em;
     margin-bottom: 1.75em;
   }
   .search-header .container h1 {
@@ -7507,7 +7509,7 @@
   /* =Container
   ----------------------------------------------- */
   #header > div {
-    border-width: 1px 0 0 0;
+    border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: rgb(230, 230, 230);
     background: white;
@@ -8218,9 +8220,9 @@
 
 /* =Borders & Margins (for the header)
   ----------------------------------------------- */
+  /*
   #header ~ header {
-    margin-top: 0;
-    padding-top: 3.5em;
+    margin-top: 1.75em;
     margin-bottom: 1.75em;
   }
   #header ~ .do-header,
@@ -8229,11 +8231,12 @@
     margin-top: 0;
     padding-top: 1.75em;
   }
+  */
   @media (min-width: 50em) {
     #header ~ .do-header,
     #header ~ div .do-header,
     #header ~ #content.minimal {
-      padding-top: 3.5em;   /* @line-height x 2 */
+      /*padding-top: 3.5em;*/   /* @line-height x 2 */
     }
   }
   #header ~ .message {
@@ -8241,7 +8244,7 @@
   }
 
   .join-promotion {
-    border-width: 1px 0 0 0;
+    border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: rgb(221, 223, 227); /* @silver-blue */
   }
@@ -8253,7 +8256,7 @@
   #header + .do-header,
   #header + div .do-header,
   #header + #content.minimal {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    /*border-top: 1px solid rgb(221, 223, 227);*/ /* @silver-blue */
   }
 
 
