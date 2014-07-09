@@ -1,29 +1,19 @@
 ## Good HTML
 
-These are HTML prototypes that represent the basic structure for the good.is production site.
+These are HTML prototypes that represent the basic structure for the good.is community site.
 
 ### Project Goals
 
-* Make the site load faster
+* Make the site load fast.
 
-* Use less bandwidth for things like CSS and JavaScript
+* Use minimal bandwidth for things like CSS and JavaScript.
 
-* Make the site usable on any device
+* Make the site usable on any device.
 
-* Make the site look good in modern browsers on any size screen
+* Make the site look good in modern browsers on any size screen.
 
-* Make the site more accessible for disabled users
+* Make the site accessible for users with special input devices like touchscreens and screen readers.
 
-* Allow users with old versions of Internet Explorer onto the site
+* Use simple, consistent HTML patterns to make integration with templates easy.
 
-* Remove the need for a separate mobile site (less code to maintain)
-
-* Allow mobile users onto the main site so they get extra features like comments
-
-* Simple, consistent HTML patterns so there won’t be a need to abstract into ruby
-
-* Simple, consistent CSS patterns so we can reuse selectors and save bandwidth
-
-* Match the existing site design as closely as possible
-
-
+* Use simple, consistent CSS patterns so we can reuse selectors and save bandwidth.
