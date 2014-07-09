@@ -7406,9 +7406,14 @@
     position: relative;
     z-index: 1;
   }
+  #header > ul:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   #header > ul li {
     margin-right: 0;
-    display: inline-block;
+    float: left;
   }
   #header > ul li a {
     display: block;
@@ -7424,8 +7429,8 @@
     border-left-width: 1px;
   }
   #header > ul li:last-child a {
-    padding-left: 32px;
-    padding-right: 33px;
+    padding-left: 35px;
+    padding-right: 35px;
     border-right-width: 0;
   }
   #header > ul a {
@@ -7440,7 +7445,9 @@
   #header > ul a:hover,
   #header > ul a:active,
   #header > ul a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
+    border-color: black;
+    background: black;
+    color: white;
   }
 
 
@@ -7690,13 +7697,14 @@
 
     line-height: 40px;
     position: absolute;
-    top: 16px;
+    top: 20px;
     right: 1.5em;
   }
   .scripted-nav #header nav div div {
     display: inline;
+    vertical-align: middle;
   }
-  @media (min-width: 55em) {
+  @media (min-width: 80em) {
     .scripted-nav #header nav > div {
       top: 92px;
     }
@@ -7706,7 +7714,7 @@
   }
 
   /* List */
-  @media (min-width: 80em) { /* @wide-header */
+  @media (min-width: 75em) { /* @wide-header */
     .scripted-nav #header nav div > ul {
       margin-right: 0.65em;
       border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
@@ -7749,7 +7757,7 @@
 
   /* OPTIONAL: Present the post options as a drop-down */
 
-  @media (min-width: 80em) { /* @wide-header */
+  @media (min-width: 75em) { /* @wide-header */
     #header nav .post {
       display: inline;
     }
@@ -7891,12 +7899,11 @@
   #header .account,
   #header .account h3 {
     margin: 0;
-    display: inline;
+    display: inline-block;
   }
   #header .account h3 {
     font-size: inherit;
     position: static;
-    display: inline-block;
     vertical-align: middle;
     position: absolute;
     top: 1em;
@@ -7905,7 +7912,7 @@
   .scripted-nav #header .account h3 {
     position: static;
   }
-  @media (min-width: 80em) { /* @wide-header */
+  @media (min-width: 75em) { /* @wide-header */
     #header .account h3 {
       border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
       margin-left: 0.4375em;
@@ -7935,7 +7942,7 @@
   }
   .scripted-nav #header .account.active ul {
     left: auto;
-    top: 45px;
+    top: 56px;
     right: 0;
   }
   .scripted-nav #header .account ul:after {
@@ -7982,7 +7989,7 @@
 
   /* =Options (for small screens)
   ----------------------------------------------- */
-  @media (max-width: 79.9375em) { /* @wide-header */
+  @media (max-width: 74.9375em) { /* @wide-header */
     .scripted-nav #header nav div div {
       position: absolute;
       left: -9999px;
@@ -8068,7 +8075,7 @@
     left: -9999px;
   }
 
-  @media (max-width: 79.9375em) { /* @wide-header */
+  @media (max-width: 74.9375em) { /* @wide-header */
     .scripted-nav #header nav > p:first-child {
       font-size: inherit;
       background: transparent url(shared/header/nav.png) no-repeat center;
@@ -8087,11 +8094,11 @@
 
       position: absolute;
       left: auto;
-      top: 16px;
+      top: 20px;
       right: 1.5em;
     }
     .scripted-nav #header.minimal nav > p:first-child {
-      top: 16px;
+      top: 20px;
     }
     .scripted-nav #header.has-account nav > p:first-child {
       right: 84px;
@@ -8099,14 +8106,6 @@
     .scripted-nav #header nav > p:first-child:hover {
       /* Data URI encoded from shared/header/nav-black.svg */
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iODguMjM1cHgiIHZpZXdCb3g9IjAgMCAxMDAgODguMjM1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgODguMjM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9ImJsYWNrIiBkPSJNOTEuMTc2LDE3LjY0N0g4LjgyNEMzLjk1LDE3LjY0NywwLDEzLjY5NywwLDguODI0UzMuOTUsMCw4LjgyNCwwaDgyLjM1M0M5Ni4wNDgsMCwxMDAsMy45NSwxMDAsOC44MjQNCglTOTYuMDQ4LDE3LjY0Nyw5MS4xNzYsMTcuNjQ3eiIvPg0KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik05MS4xNzYsNTIuOTQxSDguODI0QzMuOTUsNTIuOTQxLDAsNDguOTg5LDAsNDQuMTE4YzAtNC44NzQsMy45NS04LjgyNCw4LjgyNC04LjgyNGg4Mi4zNTMNCgljNC44NzEsMCw4LjgyNCwzLjk1LDguODI0LDguODI0QzEwMCw0OC45ODksOTYuMDQ4LDUyLjk0MSw5MS4xNzYsNTIuOTQxeiIvPg0KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik05MS4xNzYsODguMjM1SDguODI0QzMuOTUsODguMjM1LDAsODQuMjgzLDAsNzkuNDEyczMuOTUtOC44MjQsOC44MjQtOC44MjRoODIuMzUzDQoJYzQuODcxLDAsOC44MjQsMy45NTIsOC44MjQsOC44MjRTOTYuMDQ4LDg4LjIzNSw5MS4xNzYsODguMjM1eiIvPg0KPC9zdmc+DQo="), none;
-    }
-  }
-  @media (min-width: 55em) and (max-width: 79.9375em) { /* @wide-header */
-    .scripted-nav #header nav > p:first-child {
-      top: 93px;
-    }
-    .scripted-nav #header.minimal nav > p:first-child {
-      top: 21px;
     }
   }
 
