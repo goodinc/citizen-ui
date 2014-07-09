@@ -1,6 +1,6 @@
 
 This file contains the original icons, from Adobe Illustrator:
-icons.original.svg
+site-icons.original.svg
 
 It also contains the lowercase and uppercase alphabet of “Brandon Grotesque Bold” (a-z and A-Z) as a fallback for browsers that don’t support ligatures.
 
@@ -12,11 +12,13 @@ To add symbols to the font files (site-icons.ttf, site-icons.eot, etc…):
 http://icomoon.io/app/
 
 2. Upload this file:
-icons.json
+site-icons.json
 
-3. Import your new icons
+3. Import and select your new icons
 
-4. Download the new font files
+4. Activate the “Ligatures” option
+
+5. Download the new font files
 
 Note: It may help if you begin by opening site-icons.original.svg in Adobe Illustrator and use it as a guide.
 

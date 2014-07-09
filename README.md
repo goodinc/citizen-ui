@@ -12,7 +12,7 @@ These are HTML prototypes that represent the basic structure for the good.is com
 
 * Make the site look good in modern browsers on any size screen.
 
-* Make the site accessible for users with special input devices like touchscreens and screen readers.
+* Make the site accessible for users with diverse input devices, like touchscreens and screen readers.
 
 * Use simple, consistent HTML patterns to make integration with templates easy.
 
