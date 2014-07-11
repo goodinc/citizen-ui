@@ -4059,6 +4059,9 @@
     margin-top    : 0.625em; /* @line-height(20px) / 2 */
     margin-bottom : 0.625em;
   }
+  .comment-list p:last-child {
+    margin-bottom: 0;
+  }
 
   /* Links */
   .comment-list a {
@@ -7224,7 +7227,7 @@
   }
   .post-form form > .story {
     margin-top: 1.3125em;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid rgb(221, 221, 221);
     padding-top: 1.3125em;
   }
   .post-form .mark-done .story {
@@ -8421,20 +8424,32 @@
 
 /* =Story Summaries
   ----------------------------------------------- */
-  .activity-item .do.has-story ~ .comment .images {
+  .images.n1,
+  .images.n2,
+  .images.n3 {
     clear: both;
-    margin: 0 0 1.3125em 0;
+    margin: 1.3125em 0;
   }
-  .activity-item .do.has-story ~ .comment .images:after {
+  .activity-item .images.n1,
+  .activity-item .images.n2,
+  .activity-item .images.n3 {
+    margin-top: 0;
+  }
+  .images.n1:after,
+  .images.n2:after,
+  .images.n3:after {
     content: "";
     display: table;
     clear: both;
   }
-  .activity-item .do.has-story ~ .comment .images figure {
+  .images.n1 figure,
+  .images.n2 figure,
+  .images.n3 figure {
     margin: 0;
     display: block;
   }
-  .activity-item .do.has-story ~ .comment .images .image > span {
+  .images.n2 .image > span,
+  .images.n3 .image > span {
     display: block;
     background-repeat: no-repeat;
     background-position: center;
@@ -8444,65 +8459,621 @@
   }
 
   /* Two images */
-  .activity-item .do.has-story ~ .comment .images.n2 figure {
+  .images.n2 figure {
     width: 49%;
 
     float: left;
   }
-  .activity-item .do.has-story ~ .comment .images.n2 figure + figure {
+  .images.n2 figure + figure {
     margin-left: 2%;
   }
-  .activity-item .do.has-story ~ .comment .images.n2 .image > span  {
+  .images.n2 .image > span  {
     height: 250px;
   }
 
   /* Three images */
-  .activity-item .do.has-story ~ .comment .images.n3 figure {
+  .images.n3 figure {
     width: 49%;
     overflow: hidden;
 
     float: left;
   }
-  .activity-item .do.has-story ~ .comment .images.n3 figure + figure {
+  .images.n3 figure + figure {
     margin-left: 2%;
   }
-  .activity-item .do.has-story ~ .comment .images.n3 .image > span {
+  .images.n3 .image > span {
     height: 250px;
   }
-  .activity-item .do.has-story ~ .comment .images.n3 figure:nth-child(2) .image > span,
-  .activity-item .do.has-story ~ .comment .images.n3 figure:nth-child(3) .image > span {
+  .images.n3 figure:nth-child(2) .image > span,
+  .images.n3 figure:nth-child(3) .image > span {
     height: 120px;
   }
-  .activity-item .do.has-story ~ .comment .images.n3 figure:nth-child(3) .image > span {
+  .images.n3 figure:nth-child(3) .image > span {
     margin-top: 10px;
   }
 
-  .activity-item .do.has-story ~ .comment li:nth-child(2n) .images.n2   figure,
-  .activity-item .do.has-story ~ .comment li:nth-child(2n) .images.n3 figure {
+  li:nth-child(2n) .images.n2 figure,
+  li:nth-child(2n) .images.n3 figure {
     float: right;
   }
-  .activity-item .do.has-story ~ .comment li:nth-child(2n) .images.n2   figure + figure,
-  .activity-item .do.has-story ~ .comment li:nth-child(2n) .images.n3 figure + figure {
+  li:nth-child(2n) .images.n2 figure + figure,
+  li:nth-child(2n) .images.n3 figure + figure {
     margin-left: 0;
     margin-right: 2%;
   }
 
   @media (min-width: 30em) {
-    .activity-item .do.has-story ~ .comment .images .image > span {
-      height: 450px;
-    }
 
     /* Two images */
-    .activity-item .do.has-story ~ .comment .images.n2 .image > span  {
+    .images.n2 .image > span  {
       height: 450px;
     }
 
     /* Three images */
-    .activity-item .do.has-story ~ .comment .images.n3 .image > span {
+    .images.n3 .image > span {
       height: 450px;
     }
-    .activity-item .do.has-story ~ .comment .images.n3 figure:nth-child(2) .image > span,
-    .activity-item .do.has-story ~ .comment .images.n3 figure:nth-child(3) .image > span {
+    .images.n3 figure:nth-child(2) .image > span,
+    .images.n3 figure:nth-child(3) .image > span {
       height: 220px;
     }
   }
+
+
+/* =Do Header
+  ----------------------------------------------- */
+  .do-header {
+    margin-top: 1.75em;
+    margin-bottom: 0;
+  }
+
+  .do-header > .container,
+  .do-header ~ .add-story,
+  .do-header ~ .options {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 66.5625em; /* @max-page-width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .do-header ~ .options > .container {
+    text-align: right;
+    padding-right: 1.5em;
+  }
+  .do-header > .container > div {
+    border-width: 0.1em 0;
+    border-style: solid;
+    border-color: rgb(218, 220, 224);
+    padding: 1em 1.5em;
+    background: white;
+  }
+  @media (min-width: 40em) {
+    .do-header > .container {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+    .do-header > .container > div {
+      border-width: 0.1em;
+    }
+  }
+  .do-header .body {
+    margin-top: 0.875em;
+    margin-bottom: 0.875em;
+    position: relative;
+  }
+  .do-header .body.summary {
+    cursor: pointer;
+  }
+  .do-header .body.summary div {
+    max-height: 5.25em;
+    overflow: hidden;
+    position: relative;
+  }
+  .do-header .body.summary div:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    /* Data URI encoded from: do/mask.svg */
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwcHgiIGhlaWdodD0iNTAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMC41IiB5MT0iMCIgeDI9IjAuNSIgeTI9IjEiPgogICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAiIC8+CiAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iMSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPg==) top repeat-x;
+    background-size: contain;
+  }
+  .do-header .body.summary:after {
+    margin-top: 0.4375em;
+    display: block;
+    text-align: right;
+    content: "See more…";
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .do-header .body.summary:hover:after {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .do-header > .container > div > h2:first-child {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    text-transform: uppercase;
+    font-size: 1em;
+    background: black;
+    color: white;
+    border-radius: 100%;
+    width: 2.25em;
+    line-height: 2.25em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: 20%;
+    margin: 0 0.5em 0 0;
+  }
+  .do-header > .container > div h1 {
+    margin-top: 0.2916666667em; /* line-height / 4 */
+    margin-bottom: 0;
+    display: inline;
+  }
+  .do-header .tags {
+    font-size: 0.75em;
+    margin-bottom: 0;
+    margin-top: 0;
+    border-top: 0.1em solid rgb(218, 220, 224);
+    padding-top: 0.875em;
+  }
+  .do-header .tags h2 {
+    font-family: inherit;
+    font-style: inherit;
+    font-size: inherit;
+    text-transform: lowercase;
+    color: rgb(153, 153, 153);
+    display: inline;
+    margin-right: 0.5em;
+  }
+  .do-header .tags h2:after {
+    content: ": ";
+  }
+  .do-header .tags ul,
+  .do-header .tags li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+  }
+  .do-header .tags li:after {
+    content: ", ";
+  }
+  .do-header .tags li:last-child:after {
+    content: "";
+  }
+  .do-header .tags a {
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .do-header .tags a:hover,
+  .do-header .tags a:active,
+  .do-header .tags a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .do-header h1 {
+    font-family: inherit;
+    font-weight: bold;
+  }
+
+  /* SHIM: Override a style in the responsive.css intended for another context? */
+  .do-header .todo_actions {
+    display: block;
+  }
+
+  .do-header form.do,
+  .do-header form.doing,
+  .do-header form.done {
+    font-size: 0.875em;
+  }
+  @media (min-width: 40em) {
+    .do-header > .container {
+      position: relative;
+    }
+    .do-header > .container > div {
+      padding-left: 4.75em;
+      padding-right: 11em;
+      position: relative;
+    }
+    .do-header > .container > div > h2:first-child {
+      position: absolute;
+      top: 1.5em;
+      left: 1.5em;
+    }
+    .do-header form.do,
+    .do-header form.doing,
+    .do-header form.done {
+      position: absolute;
+      margin-top: 0;
+      top: 1.3125em;
+      right: 3em;
+    }
+
+    .do-header .share {
+      position: absolute;
+      margin-bottom: 0;
+      bottom: 1em;
+      right: 0.5em;
+      font-size: 0.875em;
+    }
+  }
+
+  .do-header .edit {
+    display: inline-block;
+    font-size: 0.875em;
+    vertical-align: middle;
+    margin-top: 0;
+    color: rgb(153, 153, 153);
+  }
+  .do-header .edit a {
+    color: rgb(153, 153, 153);
+  }
+  .do-header .action.edit a {
+    background-color: transparent;
+    color: rgb(101, 102, 102);
+    border-width: 0;
+    font-weight: normal;
+  }
+  .do-header .action.edit a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+
+    margin-right: 0.375em;
+    content: "\e609"; /* @icon-edit */
+    transition: color 0.2s;
+    color: rgb(229, 229, 229);
+  }
+  .do-header .action.edit  a:hover:before,
+  .do-header .action.edit  a:active:before,
+  .do-header .action.edit  a:focus:before {
+    color: rgb(49, 144, 242); /* @deep-ocean */
+  }
+  .do-header a.more {
+    text-decoration: none;
+  }
+
+
+/* =Share
+  ----------------------------------------------- */
+  .do-header .share,
+  .do-header .share li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .do-header .share li {
+    display: inline;
+    margin-right: 1em;
+  }
+  .do-header .share a {
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: bold;
+  }
+  .do-header .share a:hover,
+  .do-header .share a:active,
+  .do-header .share a:focus {
+    color: rgb(178, 158, 31);
+  }
+
+  .do-header .share .facebook a {
+    color: rgb(58, 88, 151) !important;
+  }
+  .do-header .share .twitter a {
+    color: rgb(40, 170, 225) !important;
+  }
+  .do-header .share .facebook  a:before,
+  .do-header .share .twitter   a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin-right: 0.4375em;
+  }
+  .do-header .share .facebook  a:before {
+    content: "\e60d"; /* @icon-facebook */
+  }
+  .do-header .share .twitter   a:before {
+    content: "\e60f"; /* @icon-twitter */
+  }
+
+  .do-header .share .facebook a:before {
+
+    background: rgb(59, 89, 152); /* @blueberry */
+    border-radius: 0.15em;
+    padding: 0.25em 0 0 0.25em;
+
+    content: "\e60d"; /* @icon-facebook */
+    color: white;
+
+  }
+
+
+
+/* =Story Form
+  ----------------------------------------------- */
+  .add-story {
+    margin-top: 0;
+    margin-bottom: 0.875em;
+  }
+  .add-story h2 {
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: bold;
+  }
+  .add-story h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    line-height: 1;
+    margin-right: 0.875em;
+    vertical-align: middle;
+  }
+  .add-story > .container {
+    background: rgb(62, 197, 149);
+  }
+  @media (min-width: 40em) {
+    .add-story > .container {
+      padding: 0.875em;
+      -webkit-border-bottom-right-radius : 0.25em;
+      -webkit-border-bottom-left-radius  : 0.25em;
+         -moz-border-radius-bottomright  : 0.25em;
+         -moz-border-radius-bottomleft   : 0.25em;
+              border-bottom-right-radius : 0.25em;
+              border-bottom-left-radius  : 0.25em;
+    }
+  }
+  .add-story .comment-form {
+    position: relative;
+  }
+  .add-story .comment-form:before {
+    content: "";
+    display: block;
+    background: white;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: -0.5em;
+    right: 2.75em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+    right: auto;
+    left: 4.375em;
+  }
+  .add-story .comment-form .container {
+    border-width: 0;
+  }
+  .add-story .comment-form .checkbox {
+    color: white;
+  }
+  .add-story .comment-form .submit {
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 1.3125em;
+    margin-bottom: 0.4375em;
+  }
+  .add-story .comment-form .submit button {
+    background-color: rgb(239, 239, 239);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: rgb(101, 102, 102); /* @steel */
+    border-color: transparent;
+  }
+  .add-story .comment-form .submit button:hover,
+  .add-story .comment-form .submit button:active,
+  .add-story .comment-form .submit button:focus {
+    background: rgb(250, 250, 250);
+    color: rgb(42, 43, 44);
+  }
+  .add-story .comment-form .submit a {
+    color: white;
+    float: right;
+    margin-right: 0.4375em;
+  }
+
+
+/* =Stories
+  ----------------------------------------------- */
+  .stories header {
+    padding-bottom: 0.875em;
+    border-bottom: 0.1em solid rgb(233, 233, 233);
+  }
+  .stories header h2 {
+    font-size: 0.875em;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+  }
+  .stories header h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    font-size: 1.25em;
+    line-height: 1;
+    margin-right: 0.4375em;
+    vertical-align: middle;
+  }
+  .stories header h2,
+  .stories header p {
+    display: inline;
+  }
+  .stories header p {
+    margin-left: 0.4375em;
+    font-size: 0.875em;
+    color: rgb(153, 153, 153);
+  }
+  .stories header p:before {
+    content: "(";
+  }
+  .stories header p:after {
+    content: ")";
+  }
+  .stories .comment-list > li {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+  .stories .comment-list article {
+    margin: 0;
+    border-width: 0.125em 0 0;
+    border-style: solid;
+    border-color: rgb(246, 246, 246);
+  }
+  .stories .comment-list article > p {
+    max-width: none;
+  }
+  @media (min-width: 40em) {
+    .stories .comment-list > li {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .stories .comment-list article {
+      margin: 0.875em 2.625em;
+      border-width: 0.125em;
+      border-radius: 0.25em;
+    }
+  }
+  .stories .comment-list article > h3 {
+    color: rgb(102, 102, 102);
+    line-height: 1.2;
+  }
+  .stories .comment-list article > h3 + p {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 0.1em solid rgb(246, 246, 246);
+  }
+  .stories .comment-list article > p + figure {
+    margin-top: 0.875em;
+    padding-top: 0.875em;
+    border-top: 0.1em solid rgb(246, 246, 246);
+  }
+  .stories .comment-list article > h3 a img,
+  .stories .comment-list article > h3 a .avatar {
+    float: none;
+    vertical-align: middle;
+    font-size: inherit;
+  }
+  .stories .comment-list article > h3 a {
+    font-size: 1.3333333333em;
+    color: black;
+    font-weight: bold;
+  }
+  .stories .comment-list article > h3 a:hover,
+  .stories .comment-list article > h3 a:active,
+  .stories .comment-list article > h3 a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .stories .comment-list li article {
+    padding: 1.5em;
+    background: white;
+  }
+  .stories .comment-list article > h3 img,
+  .stories .comment-list article > h3 .avatar {
+    margin-left: 0;
+  }
+  .stories .comment-list article > a {
+    display: block;
+    color: inherit;
+  }
+  .stories .comment-list article > a .action {
+    color: rgb(113, 179, 247); /* @sky */
+    transition: color 0.2s;
+  }
+  .stories .comment-list article > a:hover,
+  .stories .comment-list article > a:active,
+  .stories .comment-list article > a:focus {
+    color: black;
+  }
+  .stories .comment-list article > a:hover  .action,
+  .stories .comment-list article > a:active .action,
+  .stories .comment-list article > a:focus  .action {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
+  .stories .comment-list .meta {
+    margin-top: 1.3125em;
+    padding-top: 0.875em;
+    border-top: 0.1em solid rgb(246, 246, 246);
+  }
+
+
+/* =Empty Message
+  ----------------------------------------------- */
+  .stories section.message.empty {
+    margin-bottom: 1.75em;
+    background: rgb(246, 246, 246);
+    border-width: 0;
+  }
+  .stories section.message.empty h1 {
+    font-family: inherit;
+    text-transform: none;
+    font-variant: normal;
+    font-weight: bold;
+
+    /* @h3 */
+    font-size: 1.5em;
+    line-height   : 1.1666666667em; /* @line-height / 1.5 */
+    margin-bottom : 0.5833333334em;
+  }
+  .stories section.message.empty a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .stories section.message.empty h1 + p:after {
+    content: none;
+  }
+  .stories section.message.empty h1 + p {
+    border-top-color: rgb(224, 224, 224);
+  }
+
+
