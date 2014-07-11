@@ -91,6 +91,11 @@
   </div>
 </header>
 
+<section class="message error">
+  <h1>Oops!</h1>
+  <p>Can’t accept that file type. Please try again with a .JPG or .PNG image.</p>
+</section>
+
 <main id="content">
   <div class="container">
 
@@ -194,12 +199,13 @@
                 </label>
               </li>
             </ul>
-            <p class="file">
+            <p class="file error">
               <label>
                 <span>Or upload an image</span><br />
                 <input type="file" /><br />
                 <span class="note">Image must be at least 240 pixels wide and tall.</span>
               </label>
+              <strong class="error-message">Please try uploading a .jpg or .png image.</strong>
             </p>
           </div><!-- /.options -->
         </fieldset>

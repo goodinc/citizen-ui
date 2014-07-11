@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Edit DO – GOOD</title>
+  <title>Edit Do – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -106,14 +106,15 @@
 
         <section class="tip inactive">
           <div class="container">
-            <h2>What is a Do?</h2>
-            <p>A Do is a creative action you or anyone can take towards a better self and a better world.</p>
-            <p>Share what you’ve done to live well and do good.</p>
+            <h2>A Do is creative action anyone can take right now toward a better self and a better world.</h2>
+            <p class="do">Keep a Do open-ended, so everyone can do it and add a Story. Check out this great example: <a href="http://www.good.is/do/interact-with-one-stranger-today--2">Interact with One Stranger Today</a></p>
+            <p class="dont">Do posts aren’t for clicktivism, petitions, crowd funding events or marketing. Have a post that’s GOOD, but doesn’t work as a Do? <a href="post-link-new.html">Share a Link</a></p>
+            <p class="more"><a href="http://support.good.is/home">Learn more at our FAQ</a></p>
           </div>
         </section>
       </header>
 
-      <form action="new" method="post">
+      <form action="" method="post">
         <p class="text">
           <label>
             <span>What is your Do?</span><br />
@@ -122,22 +123,21 @@
         </p>
         <p class="text">
           <label>
-            <span>Add tags <em>Comma separated. Spaces are OK.</em></span><br />
-            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" value="biking, exercise, energy" />
-          </label>
-        </p>
-        <p class="text details">
-          <label>
-            <span>Add details <em>Enter up to 1,000 characters of plain text. (Optional)</em></span><br />
-            <textarea name="details" maxlength="1000" placeholder="Enter additional info… ">This week is National Bike to Work Week (May 13th - 17th).
-
+            <span>Add a description <em>(Optional)</em> <small>Plain text please. Any URLs will be hyperlinked.</small></span><br />
+            <textarea name="details" maxlength="1000" placeholder="What are some details to help others get this done?">This week is National Bike to Work Week (May 13th - 17th).
 http://www.fitnessforweightloss.com/bike-to-work-week-infographic</textarea>
             <span class="note">789 characters remaining</span>
           </label>
         </p>
+        <p class="text">
+          <label>
+            <span>Add tags <small>Comma separated.</small></span><br />
+            <input type="text" name="tags" placeholder="ex. biking, conscious living, design" value="biking, exercise, energy" />
+          </label>
+        </p>
 
         <ul class="submit">
-          <li><button type="submit">Post</button></li>
+          <li><button type="submit">Save</button></li>
           <li><a href="">Cancel</a></li>
         </ul>
       </form>

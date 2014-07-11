@@ -600,12 +600,14 @@
   .dialog .note,
   form    .note,
   form legend em,
-  form label  em {
+  form label  em,
+  form label  small {
     font-size: 0.875em; /* 14px / @font-size */
     color: rgb(102, 102, 102);
   }
   form legend em,
-  form label  em {
+  form label  em,
+  form label  small {
     font-weight: normal;
     font-style: normal;
   }
@@ -613,6 +615,9 @@
     font-size: 0.75em; /* 12px / @font-size */
   }
   form label > span em {
+    font-size: inherit;
+  }
+  form label > span small {
     font-size: 0.8571428571em; /* 12px / 14px */
   }
 
@@ -623,7 +628,8 @@
     text-align: right;
   }
   form legend em,
-  form label  em {
+  form label  em,
+  form label  small {
     margin-left: 0.4375em;
   }
   form .note {
@@ -6961,6 +6967,10 @@
     max-width: 35em;
   }
 
+  .post-form form > .text textarea {
+    height: 3.65em; /* (line-height(1.375) x 2) + padding(0.45em) x 2 */
+  }
+
   /* TBD: Make this the default styles for all submit buttons? */
   .post-form   .submit button {
     background-color: rgb(239, 239, 239);
@@ -7204,6 +7214,11 @@
   .post-form .story {
     margin-top: 1.3125em;
   }
+  .post-form form > .story {
+    margin-top: 1.3125em;
+    border-top: 1px solid #dddddd;
+    padding-top: 1.3125em;
+  }
   .post-form .mark-done .story {
     margin-bottom: -0.75em;
   }
@@ -7253,7 +7268,6 @@
   .post-form .story h2 + p {
     color: white;
     margin-left: 0.4375em;
-    text-transform: lowercase;
     font-size: 0.75em;
   }
   .post-form .story h2 + p:before {
@@ -7354,6 +7368,12 @@
       right: 0;
     }
   }
+  @media (min-width: 85em) {
+    .post-form .tip .container {
+      width: 16em;
+      right: -20em;
+    }
+  }
   .post-form .tip h2 {
     font-size: inherit;
     font-family: inherit;
@@ -7364,11 +7384,49 @@
     color: rgb(102, 102, 102);
     line-height: 1.3;
   }
+  .post-form .tip p,
+  .post-form .tip p.do,
+  .post-form .tip p.dont {
+    font-size: 0.75em;
+    line-height: 1.5;
+  }
+  .post-form .tip p.do,
+  .post-form .tip p.dont {
+    padding-left: 1em;
+    position: relative;
+  }
+  .post-form .tip p.do:before,
+  .post-form .tip p.dont:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 0.25em;
+    left: -0.5em;
+  }
+  .post-form .tip p.do:before {
+    content: "\e606"; /* @icon-approve */
+    color: rgb(133, 191, 133);
+  }
+  .post-form .tip p.dont:before {
+    content: "\e60a"; /* @icon-delete */
+    color: rgb(255, 125, 125);
+  }
+  .post-form .tip a {
+    text-decoration: none;
+  }
+  .post-form .tip .more {
+    text-align: right;
+  }
 
   /* OPTIONAL: Hide the tip if it’s inactive */
-  .post-form .tip {
-    cursor: pointer;
-  }
   .post-form .tip.inactive .container {
     /* @hidden-accessible */
     position: absolute;
