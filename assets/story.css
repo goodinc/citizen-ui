@@ -8,9 +8,22 @@
   ----------------------------------------------- */
   body       > .message.success,
   body > div > .message.success {
-    text-align: left;
-    max-width: 71em;
-    margin-bottom: 2.25em;
+    max-width: none;
+    margin-bottom: 0;
+  }
+  @media (min-width: 65em) and (min-height: 50em) {
+    body       > .message.success,
+    body > div > .message.success {
+      text-align: left;
+      max-width: 71em;
+      margin-bottom: 2.25em;
+    }
+    body       > .join-promotion,
+    body > div > .join-promotion {
+      border-top-width: 0;
+      margin-top: -2.25em;
+      margin-bottom: 2.25em;
+    }
   }
 
 
@@ -91,10 +104,17 @@
     margin-bottom: 0;
     position: relative;
   }
+  .do-header + .join-promotion {
+    border-top-width: 0;
+  }
   @media (min-width: 65em) {
     .do-header {
       padding-left: 2.25em;
       padding-right: 2.25em;
+      margin-bottom: 2.25em;
+    }
+    .do-header + .join-promotion {
+      margin-top: -2.25em;
       margin-bottom: 2.25em;
     }
   }
@@ -108,6 +128,11 @@
       left: 0;
       z-index: 1;
       width: 100%;
+    }
+    .join-promotion {
+      border-top-width: 0;
+      margin-top: -2.25em;
+      margin-bottom: 2.25em;
     }
   }
 
