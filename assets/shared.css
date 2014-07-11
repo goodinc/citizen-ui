@@ -4425,7 +4425,8 @@
       padding-bottom: 0;
       margin: -2.6em 0 0 0;
     }
-    .comment-form.inactive .checkbox {
+    .comment-form.inactive .checkbox,
+    .comment-form.inactive .submit {
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
@@ -7279,7 +7280,7 @@
   .post-form .story h2 + p {
     color: white;
     margin-left: 0.4375em;
-    font-size: 0.75em;
+    font-size: 0.875em;
   }
   .post-form .story h2 + p:before {
     content: "(";
@@ -8528,7 +8529,7 @@
   }
 
   .do-header > .container,
-  .do-header ~ .add-story,
+  .add-story,
   .do-header ~ .options {
     padding-left: 0;
     padding-right: 0;
@@ -8541,7 +8542,7 @@
     padding-right: 1.5em;
   }
   .do-header > .container > div {
-    border-width: 0.1em 0;
+    border-width: 0.1em 0 0;
     border-style: solid;
     border-color: rgb(218, 220, 224);
     padding: 1em 1.5em;
@@ -8553,7 +8554,7 @@
       padding-right: 1.5em;
     }
     .do-header > .container > div {
-      border-width: 0.1em;
+      border-width: 0.1em 0.1em 0;
     }
   }
   .do-header .body {
@@ -8817,10 +8818,16 @@
     margin-top: 0;
     margin-bottom: 0.875em;
   }
+  @media (min-width: 40em) {
+    .add-story {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
   .add-story h2 {
     color: white;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 0.875em;
     line-height: inherit;
     font-weight: bold;
   }
@@ -8847,10 +8854,11 @@
   }
   .add-story > .container {
     background: rgb(62, 197, 149);
+    padding: 1em 1.5em;
   }
   @media (min-width: 40em) {
     .add-story > .container {
-      padding: 0.875em;
+      padding: 0.75em 0.875em 0.875em;
       -webkit-border-bottom-right-radius : 0.25em;
       -webkit-border-bottom-left-radius  : 0.25em;
          -moz-border-radius-bottomright  : 0.25em;
@@ -8916,13 +8924,13 @@
     padding-bottom: 0.875em;
     border-bottom: 0.1em solid rgb(233, 233, 233);
   }
-  .stories header h2 {
+  .stories header h1 {
     font-size: 0.875em;
     font-variant: small-caps;
     text-transform: uppercase;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
   }
-  .stories header h2:before {
+  .stories header h1:before {
 
     /* @icons */
     font-family: "Icons";
@@ -8945,7 +8953,7 @@
     margin-right: 0.4375em;
     vertical-align: middle;
   }
-  .stories header h2,
+  .stories header h1,
   .stories header p {
     display: inline;
   }
