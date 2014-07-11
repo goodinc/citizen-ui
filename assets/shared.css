@@ -7396,6 +7396,14 @@
     font-size: 0.75em;
     line-height: 1.5;
   }
+  .post-form .tip a {
+    text-decoration: none;
+  }
+  .post-form .tip .more {
+    text-align: right;
+  }
+
+  /* OPTIONAL: Add an icon before the do’s and dont’s */
   .post-form .tip p.do,
   .post-form .tip p.dont {
     padding-left: 1em;
@@ -7414,8 +7422,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
-    top: 0.25em;
-    left: -0.5em;
+    top: 0;
+    left: -0.75em;
+    font-size: 1.25em;
   }
   .post-form .tip p.do:before {
     content: "\e606"; /* @icon-approve */
@@ -7425,11 +7434,17 @@
     content: "\e60a"; /* @icon-delete */
     color: rgb(255, 125, 125);
   }
-  .post-form .tip a {
-    text-decoration: none;
+
+  /* OPTIONAL: Add a background-color behind the do’s and dont’s */
+  .post-form .tip > .container > div {
+    margin: -1.375em;
+    margin-top: 1.375em;
+    padding: 1.375em;
+    background-color: rgb(243, 239, 209);
+    background-color: rgb(250, 247, 226);
   }
-  .post-form .tip .more {
-    text-align: right;
+  .post-form .tip > .container > div a {
+    color: rgb(47, 132, 218);
   }
 
   /* OPTIONAL: Hide the tip if it’s inactive */
