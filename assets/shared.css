@@ -641,6 +641,14 @@
   form .error input {
     border-color: rgb(255, 200, 200);
   }
+  form .file.error {
+    padding: 1.375em 1.75em;
+    background: rgb(253, 235, 230);
+    border: 0.1875em solid rgb(251, 204, 204);
+  }
+  form .file.error .error-message {
+    margin-top: 1.75em;
+  }
   form .success textarea,
   form .success input {
     border-color: rgb(184, 231, 184);
@@ -7384,9 +7392,7 @@
     color: rgb(102, 102, 102);
     line-height: 1.3;
   }
-  .post-form .tip p,
-  .post-form .tip p.do,
-  .post-form .tip p.dont {
+  .post-form .tip p {
     font-size: 0.75em;
     line-height: 1.5;
   }
