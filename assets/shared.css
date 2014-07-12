@@ -8691,14 +8691,6 @@
       top: 1.3125em;
       right: 3em;
     }
-
-    .do-header .share {
-      position: absolute;
-      margin-bottom: 0;
-      bottom: 1em;
-      right: 0.5em;
-      font-size: 0.875em;
-    }
   }
 
   .do-header .edit {
@@ -8798,18 +8790,25 @@
   .do-header .share .twitter   a:before {
     content: "\e60f"; /* @icon-twitter */
   }
-
   .do-header .share .facebook a:before {
-
     background: rgb(59, 89, 152); /* @blueberry */
     border-radius: 0.15em;
     padding: 0.25em 0 0 0.25em;
 
     content: "\e60d"; /* @icon-facebook */
     color: white;
-
   }
-
+  @media (min-width: 40em) {
+    .do-header .share {
+      margin-left: -76px;
+      margin-right: -176px;
+      margin-top: 1em;
+      border-top: 0.1em solid rgb(218, 220, 224);
+      padding-top: 0.75em;
+      font-size: 0.875em;
+      text-align: right;
+    }
+  }
 
 
 /* =Story Form
