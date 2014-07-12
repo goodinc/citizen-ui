@@ -8798,15 +8798,33 @@
     content: "\e60d"; /* @icon-facebook */
     color: white;
   }
+  .do-header .share {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    margin-top: 1.75em;
+    border-top: 0.1em solid rgb(218, 220, 224);
+    font-size: 0.875em;
+    text-align: right;
+    margin-bottom: -16px;
+  }
+  .do-header .share li {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .do-header .twitter  a,
+  .do-header .facebook a {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+
+    border-left-width: 0.1em;
+    border-left-style: solid;
+    border-left-color: rgb(218, 220, 224);
+  }
   @media (min-width: 40em) {
     .do-header .share {
+      margin-top: 1em;
       margin-left: -76px;
       margin-right: -176px;
-      margin-top: 1em;
-      border-top: 0.1em solid rgb(218, 220, 224);
-      padding-top: 0.75em;
-      font-size: 0.875em;
-      text-align: right;
     }
   }
 
