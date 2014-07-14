@@ -8867,6 +8867,7 @@
     font-weight: bold;
     padding-left: 0.875em;
     margin-bottom: 0;
+    text-transform: lowercase;
   }
 
   .add-story h2:before {
@@ -8958,6 +8959,7 @@
   /* OPTIONAL: Make the Add Story headline look like a tab */
   @media (min-width: 30em) {
     .add-story > .container {
+      margin-top: -1px;
       position: relative;
     }
     .add-story h2 {
