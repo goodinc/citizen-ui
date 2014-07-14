@@ -8814,6 +8814,7 @@
   .do-header .share a {
     display: inline-block;
     padding: 0.5em 1.75em;
+    line-height: 2; /* @line-height / 0.875 */
 
     border-left-width: 0.1em;
     border-left-style: solid;
@@ -8862,10 +8863,12 @@
     color: white;
     font-family: inherit;
     font-size: 0.875em;
-    line-height: inherit;
+    line-height: 2; /* @line-height / 0.875 */
     font-weight: bold;
     padding-left: 0.875em;
+    margin-bottom: 0;
   }
+
   .add-story h2:before {
 
     /* @icons */
@@ -8893,7 +8896,7 @@
   }
   @media (min-width: 40em) {
     .add-story > .container {
-      padding: 0.75em 0.875em 0.875em;
+      padding: 0.875em;
       -webkit-border-bottom-right-radius : 0.25em;
       -webkit-border-bottom-left-radius  : 0.25em;
          -moz-border-radius-bottomright  : 0.25em;
@@ -8903,7 +8906,6 @@
     }
   }
   .add-story .comment-form {
-    margin-top: 1.125em;
     position: relative;
   }
   .add-story .comment-form:before {
@@ -8951,6 +8953,23 @@
     color: white;
     float: right;
     margin-right: 0.4375em;
+  }
+
+  /* OPTIONAL: Make the Add Story headline look like a tab */
+  @media (min-width: 30em) {
+    .add-story > .container {
+      position: relative;
+    }
+    .add-story h2 {
+      background: rgb(62, 197, 149);
+      position: absolute;
+      left: 0;
+      top: -3em;
+      padding: 0.5em 1.75em;
+    }
+    .add-story .comment-form {
+      margin-top: 0;
+    }
   }
 
 
