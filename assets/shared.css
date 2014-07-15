@@ -7238,11 +7238,15 @@
     position: relative;
     background: rgb(62, 197, 149); /* @fern */
     padding: 1.5em;
+    margin-left: -1.5em; /* @page-margin */
+    margin-right: -1.5em;
   }
   @media (min-width: 40em) {
     .post-form .story > .container {
       padding: 0.875em;
       border-radius: 0.25em;
+      margin-left: 0;
+      margin-right: 0;
     }
     .post-form .mark-done .story > .container {
       border-radius: 0;
@@ -7318,6 +7322,7 @@
     border: 0.1875em solid rgb(243, 239, 209);
     border-radius: 0.5em;
     position: relative;
+    cursor: default;
   }
   .post-form .tip .container:before {
     content: "";
@@ -7456,7 +7461,7 @@
 
   /* OPTIONAL: Present multiple columns on medium-size screens */
   @media (min-width: 30em) and (max-width: 65em) {
-    .post-form h2 {
+    .post-form .tip h2 {
       float: left;
       width: 40%;
     }
@@ -8886,7 +8891,6 @@
     font-weight: bold;
     padding-left: 0.875em;
     margin-bottom: 0;
-    text-transform: lowercase;
   }
 
   .add-story h2:before {
@@ -8988,7 +8992,7 @@
       top: -3em;
       padding: 0.5em 1.75em;
     }
-    .add-story .comment-form {
+    .add-story form {
       margin-top: 0;
     }
   }
