@@ -7309,6 +7309,9 @@
 
   /* =Tip
   ----------------------------------------------- */
+  .post-form .tip {
+    cursor: pointer;
+  }
   .post-form .tip .container {
     padding: 1.375em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231);
@@ -7346,8 +7349,6 @@
     width: 1.5em;
     line-height: 1.5em;
     text-align: center;
-  }
-  .post-form .tip:before {
     position: absolute;
     top: 0;
     right: 1em;
@@ -8740,33 +8741,35 @@
 
 /* =Share
   ----------------------------------------------- */
+  .message   .share,
+  .message   .share li,
   .do-header .share,
   .do-header .share li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
+  .message   .share li,
   .do-header .share li {
     display: inline;
     margin-right: 1em;
   }
+  .message   .share a,
   .do-header .share a {
     text-decoration: none;
     text-transform: lowercase;
     font-weight: bold;
   }
-  .do-header .share a:hover,
-  .do-header .share a:active,
-  .do-header .share a:focus {
-    color: rgb(178, 158, 31);
-  }
-
+  .message   .share .facebook a,
   .do-header .share .facebook a {
-    color: rgb(58, 88, 151) !important;
+    color: rgb(58, 88, 151);
   }
+  .message   .share .twitter a,
   .do-header .share .twitter a {
-    color: rgb(40, 170, 225) !important;
+    color: rgb(40, 170, 225);
   }
+  .message   .share .facebook  a:before,
+  .message   .share .twitter   a:before,
   .do-header .share .facebook  a:before,
   .do-header .share .twitter   a:before {
     /* @icons */
@@ -8784,12 +8787,15 @@
 
     margin-right: 0.4375em;
   }
+  .message   .share .facebook  a:before,
   .do-header .share .facebook  a:before {
     content: "\e60d"; /* @icon-facebook */
   }
+  .message   .share .twitter   a:before,
   .do-header .share .twitter   a:before {
     content: "\e60f"; /* @icon-twitter */
   }
+  .message   .share .facebook a:before,
   .do-header .share .facebook a:before {
     background: rgb(59, 89, 152); /* @blueberry */
     border-radius: 0.15em;
@@ -8820,6 +8826,7 @@
     border-left-style: solid;
     border-left-color: rgb(218, 220, 224);
   }
+  .message   .share li:last-child a,
   .do-header .share li:last-child a {
     padding-right: 2em;
   }
@@ -8830,21 +8837,15 @@
       margin-right: -176px;
     }
   }
-  /*
-  @media (min-width: 70em) {
-    .do-header .share {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      margin: 0 -0.1em -39px 0;
-      background: white;
-      width: 64em;
-      border-right-width: 0.1em;
-      border-right-style: solid;
-      border-right-color: rgb(218, 220, 224);
+  .message .share {
+    margin-bottom: 0;
+  }
+  @media (min-width: 48em) {
+    .message .share {
+      display: inline;
+      margin-left: 1em;
     }
   }
-  */
 
 
 /* =Story Form
