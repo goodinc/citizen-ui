@@ -8423,6 +8423,24 @@
     margin-bottom  : 0.875em; /* @line-height / 2 */
   }
 
+  /* SHIM: For the Do detail page (which is currently wrapped in a div to support Angular JS) */
+  #header ~ div #content {
+    /* @separator */
+    margin-top: 0;
+    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    padding-top: 1.75em;   /* @line-height */
+    padding-bottom: 3.5em; /* @line-height x 2*/
+  }
+  @media (min-width: 50em) {
+    #header ~ div #content {
+      padding-top: 3.5em;   /* @line-height x 2 */
+    }
+  }
+  #header ~ div .message {
+    margin-top: 1.75em;
+  }
+
+
 
 /* =Story Summaries
   ----------------------------------------------- */
