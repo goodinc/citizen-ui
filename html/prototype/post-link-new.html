@@ -120,7 +120,7 @@
             <input type="text" name="title" placeholder="Make it short and memorable" required="required" />
           </label>
         </p>
-        <p class="text details">
+        <p class="text">
           <label>
             <span>Add a description <em>(Optional)</em> <small>Plain text please.</small></span><br />
             <textarea name="description" maxlength="500" placeholder="What’s your take on this?"></textarea>
@@ -133,12 +133,17 @@
             <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
           </label>
         </p>
+        <ul class="autocomplete">
+          <li><button>bikes</button></li>
+          <li><button>biking</button></li>
+          <li><button>bike nation</button></li>
+        </ul>
 
         <!--  NOTE: Add a class name of “scripted” to the fieldset, to make the radio
               buttons disappear and show a blue outline around the active item.
 
               (The idea being that this class name will only be present if JavaScript
-              is synchronizing the “active” class name with checked radio button.) -->
+              is synchronizing the “active” class name with the checked radio button.) -->
         <fieldset class="images scripted">
           <legend>Pick a post thumbnail <em>(Optional)</em></legend>
 

@@ -713,13 +713,15 @@
     font-style: normal;
     font-size: 0.875em;
   }
-  p + fieldset,
+  p        + fieldset,
+  ul       + fieldset,
   fieldset + fieldset {
     margin-top: 1.75em; /* @line-height */
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 3.5em;
   }
-  p + fieldset legend,
+  p        + fieldset legend,
+  ul       + fieldset legend,
   fieldset + fieldset legend {
     top: 1.75em;
   }
@@ -1289,6 +1291,7 @@
   .comments .submit button,
   .secondary.action  a,
   .secondary .action a,
+  .autocomplete button,
   .secondary button {
     background-color: rgb(239, 239, 239);
     color: rgb(101, 102, 102); /* @steel */
@@ -1305,6 +1308,9 @@
   .secondary .action a:hover,
   .secondary .action a:active,
   .secondary .action a:focus,
+  .autocomplete button:hover,
+  .autocomplete button:active,
+  .autocomplete button:focus,
   .secondary button:hover,
   .secondary button:active,
   .secondary button:focus {
@@ -1320,6 +1326,17 @@
   .warning button:active,
   .warning button:focus {
     background-color: rgb(247, 113, 113);
+  }
+
+  /* Autocomplete */
+  form ul.autocomplete li {
+    display: inline;
+  }
+  form ul.autocomplete button {
+    font-size: 0.75em;
+  }
+  form ul.autocomplete button:before {
+    content: "+ ";
   }
 
   /* OPTIONAL: Present the do, following & voted buttons as drop-downs */
