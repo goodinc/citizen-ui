@@ -7,9 +7,9 @@
   function start() {
 
     // OPTIONAL: Present the header navigation as dropdowns.
-    new NavDropDown();
-
-    //new Navigation();
+    new NavDropDown("nav > p:first-child", "nav div div");
+    new NavDropDown(".post h3", ".post");
+    new NavDropDown(".account h3 img", ".account");
 
     // OPTIONAL: Present the do, voted, and following buttons as dropdowns.
     new ButtonDropDown();
@@ -187,19 +187,20 @@
   */
 
 
-  /* =Navigation
+  /* =NavDropDown
   ----------------------------------------------- */
-  var Navigation = function() {};
+  var NavDropDown = function() {};
 
   (function() {
 
-    if (!document.addEventListener) return;
+    if (!document.addEventListener || !document.querySelector) return;
 
-    Navigation = function(element) {
+    NavDropDown = function(buttonSelector, containerSelector) {
 
-      var active; // The currently active element
-
-      var button;
+      var active;    // The currently active element
+      var parent;    // An element that contains the dropdown
+      var button;    // The toggle button
+      var container; // The content of the dropdown
 
       function hide(element) {
         element.className = element.className.replace(/active/g, "");
@@ -222,200 +223,46 @@
         }
       }
 
-      var initialized;
-      function init(header) {
-        if (initialized) return;
-        initialized = true;
-
-        var headlines = header.getElementsByTagName("h3");
-        for (var index = 0; index < headlines.length; index++) {
-          (function() {
-            var headline = headlines[index];
-            headline.addEventListener("click", function(e) {
-              toggle(headline.parentNode);
-            }, false);
-          })();
-        }
-
-        var paragraphs = header.getElementsByTagName("p");
-        for (var index = 0; index < paragraphs.length; index++) {
-          (function() {
-            var paragraph = paragraphs[index];
-            paragraph.addEventListener("click", function(e) {
-              var containers = paragraph.parentNode.getElementsByTagName("div");
-              if (containers.length > 0) {
-                button = paragraph;
-                toggle(containers[0]);
-              }
-            }, false);
-          })();
-        }
-
-        // If a dropdown is currently open and it’s not the target, close it
-        document.addEventListener("click", function(e) {
-          if (active && !within(e.target, active) && e.target !== button) {
-            hide(active);
-          }
-        }, false);
-
-        //header.addEventListener("click", toggle, false);
-        //header.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
-
-        // Style the dropdowns
-        var html = document.getElementsByTagName("html")[0];
-        html.className += " scripted-nav";
-      }
-
-      var tries = 0;
-      function findHeader() {
-        var header = document.getElementById("header");
-        if (header) {
-          init(header);
-        } else {
-          if (tries++ < 200) setTimeout(findHeader, 10);  // Poll for two seconds
+      function hideInactive(element, target) {
+        // If the dropdown is currently open and it’s not the target, close it
+        if (active === element && !within(target, element)) {
+          hide(element);
         }
       }
-      findHeader();
 
-      // Try once more when the document has finished loading
-      document.addEventListener("DOMContentLoaded", findHeader);
-
-    };
-      
-  })();
-
-
-  /* =NavDropDown
-  ----------------------------------------------- */
-  var NavDropDown = function() {};
-
-  (function() {
-
-    if (!document.addEventListener) return;
-
-    NavDropDown = function() {
-
-      var active; // The currently active element
-
-      function hide(element) {
-        element.className = element.className.replace(/active/g, "");
-        if (active === element) active = undefined;
-      }
-
-      function show(element) {
-        if (element.className.indexOf("active") < 0) {
-          element.className += " active";
-        }
-        active = element;
-      }
-
-      function toggle(e) {
-        var target = e.target;
-        var name = target.nodeName.toLowerCase();
-
-        // If a dropdown is currently open and it’s not the target, close it
-        if (active) {
-
-          if (!within(e.target, active) && name != "p") {
-            hide(active);
-          }
-
-          // KLUDGE: The dropdown for small screens requires special logic
-          (function() {
-            var nav = closest(target, "nav");
-            if (nav) {
-              var result = nav.getElementsByTagName("div");
-              if (result.length > 1 ) {
-
-                // If the event happened outside the dropdown
-                if (!within(e.target, result[1]) && name != "p") {
-                  if (result[0].className.indexOf("active") >= 0) {
-                    hide(result[0]);
-                  }
-                // If the event happened inside the dropdown
-                } else if (name == "p") {
-                  if (active !== result[0]) {
-                    hide(active);
-                  }
-                }
-
-              }
-            }
-          })();
-
-        }
-
-        // If the target is a headline or a link
-        if (name == "a"      ||
-            name == "img"    ||
-            name == "h3"     ||
-            name == "p"      ||
-            name == "input"  ||
-            name == "button"  ) {
-          var section = closest(target, "section");
-
-          // If the target is within a post or account section
-          if (section && ( section.className.indexOf("post")    >= 0 ||
-                           section.className.indexOf("account") >= 0 )) {
-
-            // If the target is within a headline, assume the headline is the target
-            if (name == "img") {
-              var headline = closest(target, "h3");
-              if (headline) {
-                target = headline;
-                name = "h3";
-              }
-            }
-
-            // Toggle the dropdown
-            if (name == "h3" && section.className.indexOf("active") >= 0) {
-              hide(section);
-            } else {
-              show(section);
-            }
-
-          // For the navigation on smaller screens
+      function handleClick(e) {
+        if (!parent) parent = document.getElementById("header");
+        if (parent) {
+          if (!button) button = parent.querySelector(buttonSelector);
+          if (!container) container = parent.querySelector(containerSelector);
+          if (e.target === button) {
+            toggle(container);
           } else {
-            var nav    = closest(target, "nav");
-            var header = closest(target, "header");
-
-            // KLUDGE: Ignore clicks in the primary navigation (Featured, Popular, Newest, etc)
-            var list = closest(target, "ul");
-            if (name == "a" && list && list.parentNode === nav && header.id == "header") {
-              return;
-            }
-
-            if (nav && header && header.id == "header") {
-
-              var div;
-
-              if (name == "p" || closest(target, "div")) {
-                var result = nav.getElementsByTagName("div");
-                if (result.length > 0) div = result[0];
-              }
-
-              if (div) {
-
-                // Toggle the dropdown
-                if (name == "p" && div.className.indexOf("active") >= 0) {
-                  hide(div);
-                } else {
-                  show(div);
-                }
-              }
-            }
+            hideInactive(container, e.target);
           }
         }
       }
 
+      function handleFocus(e) {
+        if (!parent) parent = document.getElementById("header");
+        if (parent) {
+          if (!container) container = parent.querySelector(containerSelector);
+          if (container && within(e.target, container)) {
+            show(container);
+          } else {
+            hideInactive(container, e.target);
+          }
+        }
+      }
 
-      document.addEventListener("click", toggle, false);
-      document.addEventListener("focus", toggle, true); // TRICKY: Focus events don’t bubble up, so use capture instead
-
+      document.addEventListener("click", handleClick, false);
+      document.addEventListener("focus", handleFocus, true); // TRICKY: Focus events don’t bubble up, so use capture instead
 
       // Style the dropdowns
       var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-nav";
+      if (html.className.indexOf("scripted-nav") < 0) {
+        html.className += " scripted-nav";
+      }
 
     };
       

@@ -8135,7 +8135,7 @@
       padding: 0.4375em 1em;
       display: block;
     }
-    .scripted-nav #header nav div.active div {
+    .scripted-nav #header nav div div.active {
       left: auto;
       right: 0;
       top: 56px;
