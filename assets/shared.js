@@ -198,29 +198,11 @@
       var active; // The currently active element
 
       function hide(element) {
-
-        // KLUDGE: Wait a brief moment before responding to a new event
-        // (to work around an issue in Firefox where pressing a link triggers a focus event)
-        //if (element._data__NavDropDown_lately) return;
-        element._data__NavDropDown_lately = true;
-        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
-
         element.className = element.className.replace(/active/g, "");
         if (active === element) active = undefined;
       }
 
       function show(element) {
-
-        // KLUDGE: Wait a brief moment before responding to a new event
-        // (to work around an issue in Firefox where pressing a link triggers a focus event)
-        //if (element._data__NavDropDown_lately) return;
-        element._data__NavDropDown_lately = true;
-        setTimeout(function() { element._data__NavDropDown_lately = false; }, 250);
-
-        // KLUDGE: Deactivate the navigation if it’s active
-        //var nav = closest(element, "nav");
-        //if (nav && nav.className.indexOf("active") >= 0 && element.className.indexOf("post") < 0) hide(nav);
-
         if (element.className.indexOf("active") < 0) {
           element.className += " active";
         }
