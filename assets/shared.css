@@ -7330,7 +7330,13 @@
     line-height: 1.5;
   }
   .post-form .tip a {
+    color: rgb(47, 132, 218); /* @ocean */
     text-decoration: none;
+  }
+  .post-form .tip a:hover,
+  .post-form .tip a:active,
+  .post-form .tip a:focus {
+    text-decoration: underline;
   }
   .post-form .tip .more {
     text-align: right;
@@ -7377,9 +7383,6 @@
     background-color: rgb(250, 247, 226);
     border-bottom-left-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
-  }
-  .post-form .tip > .container > div a {
-    color: rgb(47, 132, 218);
   }
 
   /* OPTIONAL: Present multiple columns on medium-size screens */
