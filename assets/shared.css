@@ -7372,7 +7372,7 @@
   .post-form .tip > .container > div {
     margin: -1.375em;
     margin-top: 1.375em;
-    padding: 1.375em;
+    padding: 0.875em 1.375em;
     background-color: rgb(243, 239, 209);
     background-color: rgb(250, 247, 226);
     border-bottom-left-radius: 0.25em;
@@ -7384,22 +7384,22 @@
 
   /* OPTIONAL: Present multiple columns on medium-size screens */
   @media (min-width: 30em) and (max-width: 65em) {
-    .post-form .tip h2 {
+    .post-form .tip > .container > div:after {
+      /* @clearfix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .post-form .tip > .container > div p.do,
+    .post-form .tip > .container > div p.dont {
+      margin: 0 0 0.875em 0;
       float: left;
-      width: 40%;
+      width: 47%;
+      -moz-box-sizing : border-box;
+      box-sizing      : border-box;
     }
-    /* TODO: Consider using a div around the tip body on the Link form, and simplify these styles. */
-    .post-form .tip > .container > p {
-      margin-left: 45%;
-    }
-    .post-form .tip > .container > h2 + p {
-      margin-top: 0;
-    }
-    .post-form .tip > .container > div {
-      position: relative;
-      z-index: 1;
-      margin-top: -1.375em;
-      margin-left: 45%;
+    .post-form .tip > .container > div p.dont {
+      margin-left: 6%;
     }
   }
 
