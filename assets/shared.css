@@ -261,7 +261,8 @@
   }
 
   /* Search Results */
-  mark {
+  mark
+  span.match {
     background-color: rgb(255, 255, 204);
     padding: 0.25em;
   }
@@ -2803,6 +2804,11 @@
   .activity-item section.do.has-story form.do,
   .activity-item section.do.has-story form.doing,
   .activity-item section.do.has-story form.done {
+    float: none;
+  }
+
+  /* SHIM: Support multiple form elements, wrapped in a container */
+  .activity-item section.do.has-story .todo_actions {
     float: none;
   }
 
@@ -8570,7 +8576,7 @@
   .do-header .tags {
     font-size: 0.75em;
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: 0.875em;
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 0.875em;
   }
