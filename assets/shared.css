@@ -8621,11 +8621,6 @@
     font-weight: bold;
   }
 
-  /* SHIM: Override a style in the responsive.css intended for another context? */
-  .do-header .todo_actions {
-    display: block;
-  }
-
   .do-header form.do,
   .do-header form.doing,
   .do-header form.done {
@@ -8697,6 +8692,12 @@
   }
   .do-header a.more {
     text-decoration: none;
+  }
+
+
+  /* SHIM: Support multiple form elements, wrapped in a container */
+  .do-header .todo_actions {
+    margin-top: 0.875em; /* @line-height / 2 */
   }
 
 
