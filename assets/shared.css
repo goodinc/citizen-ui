@@ -892,6 +892,7 @@
     margin-bottom: 0.875em; /* @line-height / 2 */
   }
 
+  section.message.featured,
   section.message.flagged,
   section.message.spam {
     padding: 2.5em 3.75em;
@@ -2978,10 +2979,10 @@
     clear: both;
   }
 
-  .activity-item .meta .dos,
-  .activity-item .meta .comments,
-  .activity-item .meta .stories,
-  .activity-item .meta .participants {
+  .meta .dos,
+  .meta .comments,
+  .meta .stories,
+  .meta .participants {
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
@@ -2989,8 +2990,8 @@
     color: rgb(153, 153, 153); /* @aluminum */
   }
 
-  .activity-item .meta form.vote,
-  .activity-item .meta form.voted {
+  .meta form.vote,
+  .meta form.voted {
     margin-top: 0;
     margin-bottom: 0;
     font-size: inherit;
