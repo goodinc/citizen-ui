@@ -149,16 +149,21 @@
   .filters form select {
     font-size: 1.1428571429em; /* 16px / 14px */
   }
-  .filters form .submit button {
+  .add-post form button,
+  .filters  form .submit button {
     margin-top: 0;
     font-size: 0.875em;
     padding-top: 0.35em;
     padding-bottom: 0.35em;
     vertical-align: top;
   }
+  .add-post form button,
   .filters form .submit button {
     background-color: rgb(69, 71, 71);
   }
+  .add-post form button:hover,
+  .add-post form button:active,
+  .add-post form button:focus,
   .filters form .submit button:hover,
   .filters form .submit button:active,
   .filters form .submit button:focus {
@@ -689,35 +694,40 @@ td .source.comments > h2 > a {
   .features h2 {
     font-size: inherit;
     font-family: inherit;
-    font-weight: bold;
+    display: inline;
+    margin-right: 1em;
+  }
+  .add-post p {
+    display: inline;
+    margin-right: 1em;
   }
   .features ol {
-    max-width: 55em;
-    border-bottom: 0.1em solid rgb(218, 220, 224);
+    margin-top: 20px;
+    border-bottom: 3px solid rgb(204, 204, 204);
     margin-bottom: 1.75em;
   }
   .features ol li {
-    border-top: 0.1em solid rgb(218, 220, 224);
+    border-top: 0.1em solid rgb(204, 204, 204);
     position: relative;
-    padding: 0.875em 6em 0.875em 0.875em;
+    padding: 0.875em 7em 0.875em 0.875em;
     list-style-position: outside;
-  }
-  .features ol li:nth-child(2n+1) {
-    background-color: rgb(245, 245, 245);
   }
   .features ol input[type="text"] {
     width: 3em;
+    font-size: 0.875em;
+    text-align: center;
   }
   .features ol label span {
     margin-left: 0.5em;
-    font-family: "Freight Text Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @freight */
-    font-size: 1.125em;
+    margin-right: 1em;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: 34px;
+    color: black;
   }
   .features ol a {
     text-decoration: none;
     font-size: 0.75em;
-    margin-left: 1em;
-    font-weight: bold;
     color: rgb(101, 102, 102); /* @steel */
     text-transform: lowercase;
   }
@@ -732,20 +742,24 @@ td .source.comments > h2 > a {
     top: 1em;
     right: 0.875em;
   }
-  .add-post {
-    max-width: 43.75em;
-    box-sizing: border-box;
-    border: 0.1em solid rgb(218, 220, 224);
-    padding: 1.75em;
-    margin: 1.75em 0;
+  .add-post form {
+    font-size: 0.875em;
+  }
+  .add-post h2 {
+    margin-right: 0.5em;
+    color: rgb(102, 102, 102);
+    font-size: inherit;
+    font-weight: bold;
   }
   .add-post label > span:first-child {
-    margin-right: 0.5em;
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .add-post input[type="text"] {
+    max-width: 30em;
   }
   .add-post button {
     margin-top: 0;
-    font-size: 0.75em;
     vertical-align: top;
   }
-
-
