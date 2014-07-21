@@ -4026,15 +4026,13 @@
     font-size: 0.875em; /* 14px / @font-size */
   }
 
-  .comment-form  .container,
-  .comments form .container {
+  .comment-form  .container {
     border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     border-radius: 0.25em;
     background: white;
     position: relative;
   }
-  .comment-form  h6.avatar,
-  .comments form h6.avatar {
+  .comment-form  h6.avatar {
     font-size: inherit;
     position: absolute;
     top: 0.625em; /* 10px / 16px */
@@ -4042,33 +4040,29 @@
     margin: 0;
     line-height: 1;
   }
-  .comment-form  .text,
-  .comments form .text {
+  .comment-form  .text {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .comment-form  .text label,
-  .comments form .text label {
+  .comment-form  .text label {
     display: block;
     padding-bottom: 0;
     border-width: 0;
   }
 
   /* Make space for the user’s avatar. (It will be present if they’re signed in.) */
-  .comment-form  .avatar + .text label,
-  .comments form .avatar + .text label {
+  .comment-form  .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
     border-color: rgb(238, 238, 238);
     margin-left: 3.125em; /* 50px / 16px*/
   }
 
-  .comment-form  .text textarea,
-  .comments form .text textarea {
+  .comment-form  .text textarea {
     border-width: 0;
     background: transparent;
     max-width: 100%;
-    height: 10.5em;
+    height: 7.75em; /* About four lines */
     padding: 0.875em; /* @line-height / 2 */
   }
 
@@ -4076,22 +4070,16 @@
   .comment-form  .container > .note,
   .comment-form  .container > .error-message,
   .comment-form  .images,
-  .comment-form  .file,
-  .comments form .container > .note,
-  .comments form .container > .error-message,
-  .comments form .images,
-  .comments form .file {
+  .comment-form  .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
   }
 
-  .comment-form  .images,
-  .comments form .images {
+  .comment-form  .images {
     background: rgb(249, 249, 249);
   }
-  .comment-form  .images li,
-  .comments form .images li {
+  .comment-form  .images li {
     display: block;
     position: relative;
     background: white;
@@ -4104,18 +4092,15 @@
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
-  .comment-form  .images li:after,
-  .comments form .images li:after {
+  .comment-form  .images li:after {
     content: "";
     display: table;
     clear: both;
   }
-  .comment-form  .images li + li,
-  .comments form .images li + li {
+  .comment-form  .images li + li {
     margin-top: 0.625em; /* 10px / 16px */
   }
-  .comment-form  .images li img,
-  .comments form .images li img {
+  .comment-form  .images li img {
     margin-right: 0.625em; /* 10px / 16px */
     height: 2.5em; /* 30px / 12px */
     width: auto;
@@ -4123,8 +4108,7 @@
     border-top-left-radius    : 0.25em;
     border-bottom-left-radius : 0.25em;
   }
-  .comment-form  .images button,
-  .comments form .images button {
+  .comment-form  .images button {
     background: rgb(153, 153, 153); /* @aluminum */
     float: right;
 
@@ -4135,20 +4119,15 @@
   }
   .comment-form  .images button:hover,
   .comment-form  .images button:active,
-  .comment-form  .images button:focus,
-  .comments form .images button:hover,
-  .comments form .images button:active,
-  .comments form .images button:focus {
+  .comment-form  .images button:focus {
     background: rgb(101, 102, 102); /* @steel */
   }
-  .comment-form  .images button span,
-  .comments form .images button span {
+  .comment-form  .images button span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .comment-form  .images button:after,
-  .comments form .images button:after {
+  .comment-form  .images button:after {
 
     /* @icons */
     font-family: "Icons";
@@ -4163,19 +4142,16 @@
 
     content: "\e60a"; /* @icon-delete */
   }
-  .comment-form  .container:after,
-  .comments form .container:after {
+  .comment-form  .container:after {
     /* @clearfix */
     content: "";
     display: table;
     clear: both;
   }
-  .comment-form  .file,
-  .comments form .file {
+  .comment-form  .file {
     text-align: right;
   }
-  .comment-form  .file label,
-  .comments form .file label {
+  .comment-form  .file label {
     display: inline-block;
     max-width: 33em;
     -moz-box-sizing : border-box;
@@ -4184,12 +4160,10 @@
     cursor: pointer;
     transition: opacity 0.2s, border-color 0.2s;
   }
-  .comment-form  .file label br,
-  .comments form .file label br {
+  .comment-form  .file label br {
     display: none;
   }
-  .comment-form  .file label:before,
-  .comments form .file label:before {
+  .comment-form  .file label:before {
     background: transparent url(shared/comment/picture.svg) no-repeat center;
     background-size: 1.25em auto;
     content: "";
@@ -4205,13 +4179,11 @@
     border-radius: 0.25em;
     border-color: transparent;
   }
-  .comment-form  .file label:hover:before,
-  .comments form .file label:hover:before {
+  .comment-form  .file label:hover:before {
     opacity: 1;
     border-color: rgb(153, 153, 153); /* @aluminum */
   }
-  .comment-form  .file label > span:first-child,
-  .comments form .file label > span:first-child {
+  .comment-form  .file label > span:first-child {
     font-size: 0.75em;
     position: absolute;
     background: rgb(51, 51, 51); /* @tungsten */
@@ -4226,8 +4198,7 @@
     opacity: 0;
     transition: opacity 0.2s;
   }
-  .comment-form  .file label > span:first-child:before,
-  .comments form .file label > span:first-child:before {
+  .comment-form  .file label > span:first-child:before {
     content: "";
     display: block;
     background: rgb(51, 51, 51); /* @tungsten */
@@ -4244,57 +4215,46 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
-  .comment-form  .file label:hover  > span:first-child,
-  .comments form .file label:hover  > span:first-child {
+  .comment-form  .file label:hover  > span:first-child {
     left: 50%;
     opacity: 1;
   }
-  .comment-form  .file label + .error-message,
-  .comments form .file label + .error-message {
+  .comment-form  .file label + .error-message {
     margin-top: 0.4375em;
   }
-  .comment-form  .file label > span:first-child,
-  .comments form .file label > span:first-child {
+  .comment-form  .file label > span:first-child {
     margin-right: 0.4375em;
   }
-  .comment-form  .file input,
-  .comments form .file input {
+  .comment-form  .file input {
     position: absolute;
     left: -9999px;
   }
-  .comment-form  .file input:focus,
-  .comments form .file input:focus {
+  .comment-form  .file input:focus {
     position: static;
     left: auto;
   }
-  .comment-form  .submit,
-  .comments form .submit {
+  .comment-form  .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
 
-  .supports-placeholder  .comment-form .text label > span:first-child,
-  .supports-placeholder .comments form .text label > span:first-child {
+  .supports-placeholder  .comment-form .text label > span:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .supports-placeholder  .comment-form .text label br,
-  .supports-placeholder .comments form .text label br {
+  .supports-placeholder  .comment-form .text label br {
     display: none;
   }
 
-  .comment-form  .file.disabled label,
-  .comments form .file.disabled label {
+  .comment-form  .file.disabled label {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .comment-form  .file.disabled br,
-  .comments form .file.disabled br {
+  .comment-form  .file.disabled br {
     display: none;
   }
-  .comment-form  .file.disabled label:hover > span:first-child,
-  .comments form .file.disabled label:hover > span:first-child {
+  .comment-form  .file.disabled label:hover > span:first-child {
     opacity: 0;
   }
 
@@ -4302,11 +4262,7 @@
   .comment-form  .container > p.error-message span,
   .comment-form  .container > p.note span,
   .comment-form  .file .error-message,
-  .comment-form  .file .note,
-  .comments form .container > p.error-message span,
-  .comments form .container > p.note span,
-  .comments form .file .error-message,
-  .comments form .file .note {
+  .comment-form  .file .note {
     display: block;
     margin-top: 0;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
@@ -4315,35 +4271,28 @@
     text-align: center;
   }
   .comment-form  .container > p.error-message span,
-  .comment-form  .file .error-message,
-  .comments form .container > p.error-message span,
-  .comments form .file .error-message {
+  .comment-form  .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
   .comment-form  .container > p.note span,
-  .comment-form  .file .note,
-  .comments form .container > p.note span,
-  .comments form .file .note {
+  .comment-form  .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
   }
-  .comment-form  .message,
-  .comments form .message {
+  .comment-form  .message {
     margin-top: 0.875em;
   }
 
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
   @media (min-width: 40em) {
-    .comment-form.inactive  .text textarea,
-    .comments form.inactive .text textarea {
+    .comment-form.inactive  .text textarea {
       height: 3.125em; /* 50px / 16px  */
       resize: none; /* Prevent the resize handle from overlapping with the upload button. */
     }
-    .comment-form.inactive  p.text + .file,
-    .comments form.inactive p.text + .file {
+    .comment-form.inactive  p.text + .file {
       float: right;
       border-top-width: 0;
       padding-top: 0;
