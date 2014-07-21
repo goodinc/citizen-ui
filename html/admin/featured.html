@@ -8,6 +8,12 @@
 
   <link rel="stylesheet" href="../../assets/shared.css" />
   <link rel="stylesheet" href="../../assets/admin.css" />
+  <style>
+  .sortable>li.over {
+    border: 2px dashed #000;
+    opacity :0.4;
+  }
+  </style>
   <script>
     // fonts.com tracking
     var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
@@ -136,7 +142,7 @@
         <p class="submit"><button type="submit">Save Changes</button></p>
 
         <ol class="sortable">
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_12345" value="1" />
               <span>The Enduring Fallacy of Astrology and Why Your Sign Actually Isn&#x27;t Your Sign</span>
@@ -146,7 +152,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_31245" value="2" />
               <span>Why we should all care about who is running Google Glass</span>
@@ -156,7 +162,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_4927492" value="3" />
               <span>The Most Creative People in Social Good</span>
@@ -166,7 +172,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_89631" value="4" />
               <span>Find an example of an effective creative collaboration</span>
@@ -176,7 +182,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_35231561" value="5" />
               <span>Connecting Broadly Won’t Replace the Importance of Connecting Deeply</span>
@@ -186,7 +192,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_96431" value="6" />
               <span>A Project to Bring 50 Little Free Libraries to Dallas</span>
@@ -196,7 +202,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_21" value="7" />
               <span>What&#x27;s So Scary About Smart Girls?</span>
@@ -206,7 +212,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_381" value="8" />
               <span>Nurture a neighborhood!</span>
@@ -216,7 +222,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_4561" value="9" />
               <span>Resurrection: Sweet Souvenirs from Forgotten Cultures</span>
@@ -226,7 +232,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_0781" value="10" />
               <span>Learn Chinese By Making Pictograms Out Of The Characters. Cool!</span>
@@ -236,7 +242,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_3471" value="11" />
               <span>Bringing Back Indigenous Customs</span>
@@ -246,7 +252,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_234551" value="12" />
               <span>5 Amazing Underwater Cities</span>
@@ -256,7 +262,7 @@
               <button type="submit" name="remove" value="post_12345">Remove</button>
             </span>
           </li>
-          <li>
+          <li draggable="true">
             <label>
               <input type="text" name="post_3924930" value="13" />
               <span>Help this awesome org in Uganda with design work</span>
@@ -314,6 +320,70 @@
 </footer>
 
 <script src="../../assets/admin.js"></script>
+<script>
+var dragSrcEl = null;
+
+function handleDragStart(e) {
+  // Target (this) element is the source node.
+  //this.style.opacity = '0.4';
+
+  dragSrcEl = this;
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
+}
+function handleDrop(e) {
+  // this/e.target is current target element.
+
+  if (e.stopPropagation) {
+    e.stopPropagation(); // Stops some browsers from redirecting.
+  }
+
+  // Don't do anything if dropping the same column we're dragging.
+  if (dragSrcEl != this) {
+    // Set the source column's HTML to the HTML of the column we dropped on.
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData('text/html');
+  }
+
+  return false;
+}
+
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault(); // Necessary. Allows us to drop.
+  }
+
+  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+  return false;
+}
+
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+  this.classList.add('over');
+}
+
+function handleDragLeave(e) {
+  this.classList.remove('over');  // this / e.target is previous target element.
+}
+function handleDragEnd(e) {
+  // this/e.target is the source node.
+
+  [].forEach.call(cols, function (col) {
+    col.classList.remove('over');
+  });
+}
+var cols = document.querySelectorAll('.sortable>li');
+[].forEach.call(cols, function(col) {
+  col.addEventListener('dragstart', handleDragStart, false);
+  col.addEventListener('dragenter', handleDragEnter, false);
+  col.addEventListener('dragover', handleDragOver, false);
+  col.addEventListener('dragleave', handleDragLeave, false);
+  col.addEventListener('drop', handleDrop, false);
+  col.addEventListener('dragend', handleDragEnd, false);
+});
+</script>
 
 </body>
 </html>
