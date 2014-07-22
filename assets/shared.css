@@ -4159,6 +4159,7 @@
   }
   .comment-form .url label {
     position: relative;
+    cursor: pointer;
   }
   .comment-form .file label {
     display: inline-block;
