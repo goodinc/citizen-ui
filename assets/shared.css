@@ -4330,6 +4330,14 @@
       padding-bottom: 0;
       background-color: transparent;
     }
+    .comment-form .url.inactive {
+      position: absolute;
+      right: 2.6em;
+      background-color: transparent;
+    }
+    .comment-form.inactive p.text + .url.inactive {
+      position: static;
+    }
     .comment-form.inactive p.text + .file,
     .comment-form.inactive p.text + .url + .file {
       float: right;
@@ -4339,6 +4347,8 @@
       padding-bottom: 0;
       margin: -2.6em 0 0 0;
     }
+    .comment-form .url.inactive input,
+    .comment-form .url.inactive button,
     .comment-form.inactive p.text + .url input,
     .comment-form.inactive p.text + .url button,
     .comment-form.inactive .checkbox,

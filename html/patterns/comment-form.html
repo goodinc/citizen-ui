@@ -74,7 +74,7 @@
             <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
           </label>
         </p>
-        <p class="url">
+        <p class="url inactive">
           <label>
             <span>Embed Video</span><br />
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
@@ -95,7 +95,39 @@
   </section>
 
   <section class="comments">
-    <h2>Expanded</h2>
+    <h2>Active</h2>
+
+    <form action="" method="post" class="comment-form">
+      <div class="container">
+        <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <p class="url inactive">
+          <label>
+            <span>Embed Video</span><br />
+            <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
+          </label>
+          <button>Embed</button>
+        </p>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div><!-- /.container -->
+      <p class="submit">
+        <button type="submit">Post</button>
+      </p>
+    </form>
+  </section>
+
+  <section class="comments">
+    <h2>Embed Video</h2>
 
     <form action="" method="post" class="comment-form">
       <div class="container">
@@ -148,13 +180,6 @@
             <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
             <span>road.jpg</span>
             <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
-          </li>
-        </ol>
-        <ol class="images">
-          <li>
-            <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
-            <span>bikes.jpg</span>
-            <button type="submit" name="remove" value="image1"><span>Remove this video</span></button>
           </li>
         </ol>
         <p class="url">
