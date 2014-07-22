@@ -1290,7 +1290,7 @@
 
   /* Secondary */
   .account-form a .action span,
-  .comments .submit button,
+  .comment-form button,
   .secondary.action  a,
   .secondary .action a,
   .autocomplete button,
@@ -1301,9 +1301,9 @@
   .account-form a:hover  .action span,
   .account-form a:active .action span,
   .account-form a:focus  .action span,
-  .comments .submit button:hover,
-  .comments .submit button:active,
-  .comments .submit button:focus,
+  .comment-form button:hover,
+  .comment-form button:active,
+  .comment-form button:focus,
   .secondary.action a:hover,
   .secondary.action a:active,
   .secondary.action a:focus,
@@ -4026,13 +4026,13 @@
     font-size: 0.875em; /* 14px / @font-size */
   }
 
-  .comment-form  .container {
+  .comment-form .container {
     border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     border-radius: 0.25em;
     background: white;
     position: relative;
   }
-  .comment-form  h6.avatar {
+  .comment-form h6.avatar {
     font-size: inherit;
     position: absolute;
     top: 0.625em; /* 10px / 16px */
@@ -4040,25 +4040,25 @@
     margin: 0;
     line-height: 1;
   }
-  .comment-form  .text {
+  .comment-form .text {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .comment-form  .text label {
+  .comment-form .text label {
     display: block;
     padding-bottom: 0;
     border-width: 0;
   }
 
   /* Make space for the user’s avatar. (It will be present if they’re signed in.) */
-  .comment-form  .avatar + .text label {
+  .comment-form .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
     border-color: rgb(238, 238, 238);
     margin-left: 3.125em; /* 50px / 16px*/
   }
 
-  .comment-form  .text textarea {
+  .comment-form .text textarea {
     border-width: 0;
     background: transparent;
     max-width: 100%;
@@ -4067,19 +4067,21 @@
   }
 
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
-  .comment-form  .container > .note,
-  .comment-form  .container > .error-message,
-  .comment-form  .images,
-  .comment-form  .file {
+  .comment-form .container > .note,
+  .comment-form .container > .error-message,
+  .comment-form .images,
+  .comment-form .url,
+  .comment-form .file {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
   }
 
-  .comment-form  .images {
+  .comment-form .url,
+  .comment-form .images {
     background: rgb(249, 249, 249);
   }
-  .comment-form  .images li {
+  .comment-form .images li {
     display: block;
     position: relative;
     background: white;
@@ -4092,15 +4094,15 @@
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
-  .comment-form  .images li:after {
+  .comment-form .images li:after {
     content: "";
     display: table;
     clear: both;
   }
-  .comment-form  .images li + li {
+  .comment-form .images li + li {
     margin-top: 0.625em; /* 10px / 16px */
   }
-  .comment-form  .images li img {
+  .comment-form .images li img {
     margin-right: 0.625em; /* 10px / 16px */
     height: 2.5em; /* 30px / 12px */
     width: auto;
@@ -4108,26 +4110,27 @@
     border-top-left-radius    : 0.25em;
     border-bottom-left-radius : 0.25em;
   }
-  .comment-form  .images button {
+  .comment-form .images button {
     background: rgb(153, 153, 153); /* @aluminum */
     float: right;
+    color: white;
 
     /* These values are arbitrary. They happen to make the button appear
     centered within the item, and the “X” appear centered within the button.*/
     padding: 0.2em 0.5em;
     margin: 0.35em;
   }
-  .comment-form  .images button:hover,
-  .comment-form  .images button:active,
-  .comment-form  .images button:focus {
+  .comment-form .images button:hover,
+  .comment-form .images button:active,
+  .comment-form .images button:focus {
     background: rgb(101, 102, 102); /* @steel */
   }
-  .comment-form  .images button span {
+  .comment-form .images button span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .comment-form  .images button:after {
+  .comment-form .images button:after {
 
     /* @icons */
     font-family: "Icons";
@@ -4148,10 +4151,16 @@
     display: table;
     clear: both;
   }
-  .comment-form  .file {
+  .comment-form .file {
     text-align: right;
   }
-  .comment-form  .file label {
+  .comment-form .url {
+    text-align: right;
+  }
+  .comment-form .url label {
+    position: relative;
+  }
+  .comment-form .file label {
     display: inline-block;
     max-width: 33em;
     -moz-box-sizing : border-box;
@@ -4160,10 +4169,12 @@
     cursor: pointer;
     transition: opacity 0.2s, border-color 0.2s;
   }
-  .comment-form  .file label br {
+  .comment-form .url  label br,
+  .comment-form .file label br {
     display: none;
   }
-  .comment-form  .file label:before {
+  .comment-form .url  label:before,
+  .comment-form .file label:before {
     background: transparent url(shared/comment/picture.svg) no-repeat center;
     background-size: 1.25em auto;
     content: "";
@@ -4179,11 +4190,16 @@
     border-radius: 0.25em;
     border-color: transparent;
   }
-  .comment-form  .file label:hover:before {
+  .comment-form .url label:before {
+    background: transparent url(shared/comment/play.svg) no-repeat center;
+  }
+  .comment-form .url  label:hover:before,
+  .comment-form .file label:hover:before {
     opacity: 1;
     border-color: rgb(153, 153, 153); /* @aluminum */
   }
-  .comment-form  .file label > span:first-child {
+  .comment-form .url  label > span:first-child,
+  .comment-form .file label > span:first-child {
     font-size: 0.75em;
     position: absolute;
     background: rgb(51, 51, 51); /* @tungsten */
@@ -4198,7 +4214,11 @@
     opacity: 0;
     transition: opacity 0.2s;
   }
-  .comment-form  .file label > span:first-child:before {
+  .comment-form .url label > span:first-child {
+    margin-bottom: 3em;
+  }
+  .comment-form .url  label > span:first-child:before,
+  .comment-form .file label > span:first-child:before {
     content: "";
     display: block;
     background: rgb(51, 51, 51); /* @tungsten */
@@ -4215,46 +4235,57 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
-  .comment-form  .file label:hover  > span:first-child {
+  .comment-form .url  label:hover  > span:first-child,
+  .comment-form .file label:hover  > span:first-child {
     left: 50%;
     opacity: 1;
   }
-  .comment-form  .file label + .error-message {
+  .comment-form .url label:hover  > span:first-child {
+    left: 1.35em;
+  }
+  .comment-form .file label + .error-message {
     margin-top: 0.4375em;
   }
-  .comment-form  .file label > span:first-child {
+  .comment-form .file label > span:first-child {
     margin-right: 0.4375em;
   }
-  .comment-form  .file input {
+  .comment-form .url input {
+
+    /* This number is arbitrary, but happens to make the field the same height as the button. */
+    line-height: 1.5625em; /* 25px / 16px */
+
+    vertical-align: middle;
+  }
+  .comment-form .file input {
     position: absolute;
     left: -9999px;
   }
-  .comment-form  .file input:focus {
+  .comment-form .file input:focus {
     position: static;
     left: auto;
   }
-  .comment-form  .submit {
+  .comment-form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
 
-  .supports-placeholder  .comment-form .text label > span:first-child {
+  .supports-placeholder .comment-form .text label > span:first-child {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .supports-placeholder  .comment-form .text label br {
+  .supports-placeholder .comment-form .text label br {
     display: none;
   }
 
-  .comment-form  .file.disabled label {
+  .comment-form .file.disabled label {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .comment-form  .file.disabled br {
+  .comment-form .file.disabled br {
     display: none;
   }
-  .comment-form  .file.disabled label:hover > span:first-child {
+  .comment-form .file.disabled label:hover > span:first-child {
     opacity: 0;
   }
 
@@ -4270,13 +4301,13 @@
     padding: 0.4375em;
     text-align: center;
   }
-  .comment-form  .container > p.error-message span,
-  .comment-form  .file .error-message {
+  .comment-form .container > p.error-message span,
+  .comment-form .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
-  .comment-form  .container > p.note span,
-  .comment-form  .file .note {
+  .comment-form .container > p.note span,
+  .comment-form .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
@@ -4285,11 +4316,21 @@
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
   @media (min-width: 40em) {
-    .comment-form.inactive  .text textarea {
+    .comment-form.inactive .text textarea {
       height: 3.125em; /* 50px / 16px  */
       resize: none; /* Prevent the resize handle from overlapping with the upload button. */
     }
-    .comment-form.inactive  p.text + .file {
+    .comment-form.inactive p.text + .url {
+      margin: -2.6em 2.6em 0 0;
+      float: right;
+      border-top-width: 0;
+      padding-top: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      background-color: transparent;
+    }
+    .comment-form.inactive p.text + .file,
+    .comment-form.inactive p.text + .url + .file {
       float: right;
       border-top-width: 0;
       padding-top: 0;
@@ -4297,6 +4338,8 @@
       padding-bottom: 0;
       margin: -2.6em 0 0 0;
     }
+    .comment-form.inactive p.text + .url input,
+    .comment-form.inactive p.text + .url button,
     .comment-form.inactive .checkbox,
     .comment-form.inactive .submit {
       /* @hidden-accessible */

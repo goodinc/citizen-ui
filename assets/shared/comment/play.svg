@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px"
+	 height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g id="Layer_2" display="none">
+	
+		<image display="inline" overflow="visible" width="144" height="81" xlink:href="../../../../../../Desktop/Screen Shot 2014-07-22 at 12.37.46 PM.png"  transform="matrix(1 0 0 1 -80.875 -28)">
+	</image>
+</g>
+<g id="Layer_1" display="none">
+	<g display="inline">
+		<path fill="#020202" d="M18.25,1.75v16.5H1.75V1.75H18.25 M18.5,0h-17C0.672,0,0,0.672,0,1.5v17C0,19.328,0.672,20,1.5,20h17
+			c0.828,0,1.5-0.672,1.5-1.5v-17C20,0.672,19.328,0,18.5,0L18.5,0z"/>
+	</g>
+	<g display="inline">
+		<circle fill="#020202" stroke="#020202" stroke-width="0.8" stroke-miterlimit="10" cx="13" cy="7.25" r="1"/>
+		
+			<polygon fill="#020202" stroke="#020202" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			4,16.25 16,16.25 16,12.25 12,14.25 4,10.25 		"/>
+	</g>
+</g>
+<g id="Layer_3">
+	<g id="vote">
+		<polygon fill="#010101" points="8.167,6.25 13.167,10 8.167,13.75 		"/>
+	</g>
+	<circle fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" cx="10" cy="10" r="9.125"/>
+</g>
+</svg>
