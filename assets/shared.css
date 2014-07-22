@@ -4281,9 +4281,6 @@
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
   }
-  .comment-form  .message {
-    margin-top: 0.875em;
-  }
 
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
