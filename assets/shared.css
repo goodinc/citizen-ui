@@ -4212,6 +4212,7 @@
   .comment-form .file label br {
     display: none;
   }
+  .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before,
   .comment-form .file         label:before {
     background: transparent url(shared/comment/picture.svg) no-repeat center;
@@ -4229,9 +4230,11 @@
     border-radius: 0.25em;
     border-color: transparent;
   }
+  .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before {
     background: transparent url(shared/comment/play.svg) no-repeat center;
   }
+  .comment-form.inactive .url label:hover:before,
   .comment-form .url.inactive label:hover:before,
   .comment-form .file         label:hover:before {
     opacity: 1;
@@ -4274,6 +4277,7 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
+  .comment-form.inactive .url label:hover > span:first-child,
   .comment-form .url.inactive label:hover > span:first-child,
   .comment-form .file         label:hover > span:first-child {
     left: 50%;
@@ -4292,6 +4296,8 @@
     /* This number is arbitrary, but happens to make the field the same height as the button. */
     line-height: 1.5625em; /* 25px / 16px */
 
+    max-width: 100%;
+
     vertical-align: middle;
   }
   .comment-form .file input {
@@ -4301,6 +4307,17 @@
   .comment-form .file input:focus {
     position: static;
     left: auto;
+  }
+  .comment-form .url button {
+    margin-top: 0.875em;
+  }
+  @media (min-width: 40em) {
+    .comment-form .url input {
+      max-width: 22em;
+    }
+    .comment-form .url button {
+      margin-top: 0;
+    }
   }
   .comment-form .submit {
     margin-bottom: 1.75em; /* @line-height */
@@ -4350,36 +4367,40 @@
     color: rgb(51, 51, 51); /* @tungsten */
   }
 
+  .comment-form.inactive .url input,
+  .comment-form.inactive .url button,
+  .comment-form .url.inactive input,
+  .comment-form .url.inactive button {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+  .comment-form .url.inactive,
+  .comment-form.inactive .url {
+    position: absolute;
+    margin-top: 0.1em;
+    right: 2.6em;
+    border-top-width: 0;
+    background-color: transparent;
+  }
+
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
-  @media (min-width: 30em) {
+  @media (min-width: 40em) {
+
+    /* Make the text field shorter. */
     .comment-form.inactive .text textarea {
       height: 3.125em; /* 50px / 16px  */
       resize: none; /* Prevent the resize handle from overlapping with the upload button. */
     }
-    .comment-form.inactive p.text + .url {
-      margin: -2.6em 2.6em 0 0;
-      float: right;
-      border-top-width: 0;
+
+    /* Position the video and image icons next to the text field. */
+    .comment-form.inactive .url {
+      margin-top: -2.6em;
       padding-top: 0;
-      padding-left: 0;
-      padding-bottom: 0;
-      background-color: transparent;
     }
-    .comment-form .url.inactive {
-      position: absolute;
-      right: 2.6em;
-      background-color: transparent;
-    }
-    .comment-form .file + .url.inactive {
-      margin-top: -3.3em;
-      right: 0;
-    }
-    .comment-form.inactive p.text + .url.inactive {
-      position: static;
-    }
-    .comment-form.inactive p.text + .file,
-    .comment-form.inactive p.text + .url + .file {
+    .comment-form.inactive .file {
       float: right;
       border-top-width: 0;
       padding-top: 0;
@@ -4387,25 +4408,13 @@
       padding-bottom: 0;
       margin: -2.6em 0 0 0;
     }
-    .comment-form .url.inactive input,
-    .comment-form .url.inactive button,
-    .comment-form.inactive p.text + .url input,
-    .comment-form.inactive p.text + .url button,
+
+    /* Hide the submit button and the Facebook checkbox. */
     .comment-form.inactive .checkbox,
     .comment-form.inactive .submit {
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
-    }
-  }
-
-  /* OPTIONAL: Hide the play icon on small screens */
-  @media (max-width: 29.9em) {
-    .comment-form .url {
-      text-align: right;
-    }
-    .comment-form .url button {
-      margin-top: 0.875em;
     }
   }
 
