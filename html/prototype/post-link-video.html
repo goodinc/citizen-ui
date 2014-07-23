@@ -208,13 +208,29 @@
       <section class="comments" id="discuss">
         <h2>Discuss</h2>
 
-        <form action="" method="post">
-          <p>
-            <label>
-              <span>Share your thoughts or insights...</span><br />
-              <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
-            </label>
-          </p>
+        <form action="" method="post" class="comment-form inactive">
+          <div class="container">
+            <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+            <p class="text">
+              <label>
+                <span>Share your thoughts or insights...</span><br />
+                <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+              </label>
+            </p>
+            <p class="url inactive">
+              <label>
+                <span>Embed Video</span><br />
+                <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
+              </label>
+              <button>Embed</button>
+            </p>
+            <p class="file">
+              <label>
+                <span>Attach Image</span><br />
+                <input type="file" name="image[]" />
+              </label>
+            </p>
+          </div><!-- /.container -->
           <p class="submit">
             <button type="submit">Post</button>
           </p>
@@ -246,18 +262,33 @@
                   -->
                 </ul>
 
-                <form action="" method="post">
+                <form action="" method="post" class="comment-form">
                   <h4>Reply</h4>
-                  <p>
-                    <label>
-                      <span>Share your thoughts or insights...</span><br />
-                      <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
-                    </label>
+                  <div class="container">
+                    <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+                    <p class="text">
+                      <label>
+                        <span>Share your thoughts or insights...</span><br />
+                        <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+                      </label>
+                    </p>
+                    <p class="url inactive">
+                      <label>
+                        <span>Embed Video</span><br />
+                        <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
+                      </label>
+                      <button>Embed</button>
+                    </p>
+                    <p class="file">
+                      <label>
+                        <span>Attach Image</span><br />
+                        <input type="file" name="image[]" />
+                      </label>
+                    </p>
+                  </div><!-- /.container -->
+                  <p class="submit">
+                    <button type="submit">Post</button>
                   </p>
-                  <ul class="submit">
-                    <li><button type="submit">Post</button></li>
-                    <li><a href="">Cancel</a></li>
-                  </ul>
                 </form>
               </footer>
             </article>
