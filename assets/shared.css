@@ -4067,9 +4067,8 @@
     padding: 0.875em; /* @line-height / 2 */
   }
 
-  /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
-  .comment-form .container > .note,
-  .comment-form .container > .error-message,
+  .comment-form .note,
+  .comment-form .error-message,
   .comment-form .images,
   .comment-form .url,
   .comment-form .file {
@@ -4121,16 +4120,57 @@
     padding: 0.2em 0.5em;
     margin: 0.35em;
   }
+
+  .comment-form .images .video {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 0.625em; /* 10px / 16px */
+  }
+  .comment-form .images .video img {
+    margin-right: 0;
+  }
+  .comment-form .images .video:before {
+    content: "";
+    display: block;
+    width : 2.5em; /* 30px / 12px */
+    height: 2.5em; /* 30px / 12px */
+    background: transparent url(shared/comment/play-white.svg) no-repeat center;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.25em;
+  }
+
+  .comment-form .url .cancel {
+    float: right;
+    text-decoration: none;
+  }
+  .comment-form .url a {
+    margin-top: 0.5em;
+    margin-right: 1em;
+    float: right;
+  }
+  .comment-form .url button.cancel {
+    background-color: transparent;
+    border-width: 0;
+  }
+  .comment-form .url   .cancel:hover,
+  .comment-form .url   .cancel:active,
+  .comment-form .url   .cancel:focus,
   .comment-form .images button:hover,
   .comment-form .images button:active,
   .comment-form .images button:focus {
     background: rgb(101, 102, 102); /* @steel */
+    color: white;
   }
+  .comment-form .url   .cancel span,
   .comment-form .images button span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
+  .comment-form .url   .cancel:after,
   .comment-form .images button:after {
 
     /* @icons */
@@ -4172,8 +4212,8 @@
   .comment-form .file label br {
     display: none;
   }
-  .comment-form .url  label:before,
-  .comment-form .file label:before {
+  .comment-form .url.inactive label:before,
+  .comment-form .file         label:before {
     background: transparent url(shared/comment/picture.svg) no-repeat center;
     background-size: 1.25em auto;
     content: "";
@@ -4189,11 +4229,11 @@
     border-radius: 0.25em;
     border-color: transparent;
   }
-  .comment-form .url label:before {
+  .comment-form .url.inactive label:before {
     background: transparent url(shared/comment/play.svg) no-repeat center;
   }
-  .comment-form .url  label:hover:before,
-  .comment-form .file label:hover:before {
+  .comment-form .url.inactive label:hover:before,
+  .comment-form .file         label:hover:before {
     opacity: 1;
     border-color: rgb(153, 153, 153); /* @aluminum */
   }
@@ -4234,17 +4274,14 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
-  .comment-form .url  label:hover  > span:first-child,
-  .comment-form .file label:hover  > span:first-child {
+  .comment-form .url.inactive label:hover > span:first-child,
+  .comment-form .file         label:hover > span:first-child {
     left: 50%;
     opacity: 1;
   }
-  .comment-form .url label:hover  > span:first-child {
-    left: 1.35em;
-  }
   .comment-form .url  button + .note,
   .comment-form .url  button + .error-message,
-  .comment-form .file label + .error-message {
+  .comment-form .file label  + .error-message {
     margin-top: 0.875em;
   }
   .comment-form .file label > span:first-child {
@@ -4290,13 +4327,8 @@
     opacity: 0;
   }
 
-  /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
-  .comment-form  .container > p.error-message span,
-  .comment-form  .container > p.note span,
-  .comment-form  .url .error-message,
-  .comment-form  .url .note,
-  .comment-form  .file .error-message,
-  .comment-form  .file .note {
+  .comment-form .error-message span,
+  .comment-form .note span {
     display: block;
     margin-top: 0;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
@@ -4320,7 +4352,7 @@
 
   /* OPTIONAL: Make the comments form that appears at the
   top look more compact, if it hasn’t been interacted with. */
-  @media (min-width: 40em) {
+  @media (min-width: 30em) {
     .comment-form.inactive .text textarea {
       height: 3.125em; /* 50px / 16px  */
       resize: none; /* Prevent the resize handle from overlapping with the upload button. */
@@ -4338,6 +4370,10 @@
       position: absolute;
       right: 2.6em;
       background-color: transparent;
+    }
+    .comment-form .file + .url.inactive {
+      margin-top: -3.3em;
+      right: 0;
     }
     .comment-form.inactive p.text + .url.inactive {
       position: static;
@@ -4360,6 +4396,16 @@
       /* @hidden-accessible */
       position: absolute;
       left: -9999px;
+    }
+  }
+
+  /* OPTIONAL: Hide the play icon on small screens */
+  @media (max-width: 29.9em) {
+    .comment-form .url {
+      text-align: right;
+    }
+    .comment-form .url button {
+      margin-top: 0.875em;
     }
   }
 

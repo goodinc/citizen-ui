@@ -33,7 +33,7 @@
 <section>
   <h1>Comment Form</h1>
 
-  <section class="comments">
+  <section>
     <h2>Signed Out</h2>
     <form action="" method="post" class="comment-form inactive">
       <div class="container">
@@ -49,6 +49,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         <p class="file">
           <label>
@@ -63,7 +64,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Signed In</h2>
     <form action="" method="post" class="comment-form inactive">
       <div class="container">
@@ -80,6 +81,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         <p class="file">
           <label>
@@ -94,7 +96,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Active</h2>
 
     <form action="" method="post" class="comment-form">
@@ -112,6 +114,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         <p class="file">
           <label>
@@ -126,7 +129,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Video</h2>
 
     <form action="" method="post" class="comment-form">
@@ -144,13 +147,16 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
+        <!--
         <p class="file">
           <label>
             <span>Attach Image</span><br />
             <input type="file" name="image[]" />
           </label>
         </p>
+        -->
       </div><!-- /.container -->
       <p class="submit">
         <button type="submit">Post</button>
@@ -158,7 +164,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Images</h2>
 
     <form action="" method="post" class="comment-form">
@@ -189,6 +195,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button type="submit" name="embed" value="1">Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         -->
         <p class="file">
@@ -204,7 +211,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Error Message</h2>
 
     <form action="" method="post" class="comment-form">
@@ -222,6 +229,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         <p class="file">
           <label>
@@ -251,14 +259,17 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" value="http://www.video.com/windmills.mov" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         <p class="error-message"><span>Oops! Nice video, but it’s just not our (video) type. Please enter a URL from YouTube or Vimeo.</span></p>
+        <!--
         <p class="file">
           <label>
             <span>Attach Image</span><br />
             <input type="file" name="image[]" />
           </label>
         </p>
+        -->
       </div><!-- /.container -->
       <p class="submit">
         <button type="submit">Post</button>
@@ -266,7 +277,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Information Message</h2>
 
     <form action="" method="post" class="comment-form">
@@ -281,7 +292,7 @@
         <ol class="images">
           <li>
             <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
-            <span>bikes.jpg</span>
+            <span>ciclavia-bike-ride.jpg</span>
             <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
           </li>
           <li>
@@ -302,6 +313,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         <p class="file">
           <label>
@@ -328,8 +340,10 @@
         </p>
         <ol class="images">
           <li>
-            <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
-            <span>bikes.jpg</span>
+            <span class="video">
+              <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
+            </span>
+            <span>Ciclavia: 80,000-person Community Bike Ride in Los Angeles</span>
             <button type="submit" name="remove" value="video1"><span>Remove this video</span></button>
           </li>
         </ol>
@@ -340,6 +354,7 @@
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
           </label>
           <button>Embed</button>
+          <button class="cancel"><span>Cancel</span></button>
         </p>
         -->
         <p class="note"><span>Your video is ready to post!</span></p>
@@ -358,7 +373,7 @@
     </form>
   </section>
 
-  <section class="comments">
+  <section>
     <h2>Reply</h2>
     <ul class="comment-list">
       <li>
@@ -407,6 +422,7 @@
                     <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
                   </label>
                   <button>Embed</button>
+                  <button class="cancel"><span>Cancel</span></button>
                 </p>
                 <p class="file">
                   <label>
@@ -449,6 +465,7 @@
                 <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
               </label>
               <button>Embed</button>
+              <button class="cancel"><span>Cancel</span></button>
             </p>
             <p class="file">
               <label>
@@ -499,6 +516,7 @@
                     <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
                   </label>
                   <button>Embed</button>
+                  <button class="cancel"><span>Cancel</span></button>
                 </p>
                 <p class="file">
                   <label>
