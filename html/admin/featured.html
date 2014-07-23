@@ -29,7 +29,7 @@
   <!--[if lte IE 8]>
   <script src="../../assets/modernizr.js"></script>
   <![endif]-->
-
+  
 </head>
 <body>
 
@@ -143,7 +143,7 @@
 
         <ol class="sortable">
           <li draggable="true">
-            <label>
+            <label><strong></strong>
               <input type="text" name="post_12345" value="1" />
               <span>The Enduring Fallacy of Astrology and Why Your Sign Actually Isn&#x27;t Your Sign</span>
             </label>
@@ -320,6 +320,7 @@
 </footer>
 
 <script src="../../assets/admin.js"></script>
+
 <script>
 var dragSrcEl = null;
 
@@ -374,7 +375,14 @@ function handleDragEnd(e) {
     col.classList.remove('over');
   });
 }
+function orderList(){
+  var list = document.querySelectorAll('.sortable>li>label>input');
+  for (var i=0; i<list.length ; i++){
+      list[i].value = i+1;
+  }
+}
 var cols = document.querySelectorAll('.sortable>li');
+
 [].forEach.call(cols, function(col) {
   col.addEventListener('dragstart', handleDragStart, false);
   col.addEventListener('dragenter', handleDragEnter, false);
@@ -382,7 +390,10 @@ var cols = document.querySelectorAll('.sortable>li');
   col.addEventListener('dragleave', handleDragLeave, false);
   col.addEventListener('drop', handleDrop, false);
   col.addEventListener('dragend', handleDragEnd, false);
+  col.addEventListener('dragend',orderList, false);
 });
+
+
 </script>
 
 </body>
