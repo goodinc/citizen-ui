@@ -398,7 +398,7 @@
     border-radius: 0.25em;
   }
   .pagination .next a {
-    background-color: rgb(113, 179, 247); /* @sky */
+    background-color: rgb(69, 71, 71);
     color: white;
   }
   .pagination .next a:hover,
@@ -1128,6 +1128,7 @@
     font-size: inherit;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     background-color: rgb(113, 179, 247); /* @sky */
+    background-color: rgb(69, 71, 71);
     color: white;
     cursor: pointer;
     border: 0.1em solid rgba(0, 0, 0, 0.15);
@@ -1290,7 +1291,7 @@
 
   /* Secondary */
   .account-form a .action span,
-  .comment-form button,
+  .comment-form .url button,
   .secondary.action  a,
   .secondary .action a,
   .autocomplete button,
@@ -1301,9 +1302,9 @@
   .account-form a:hover  .action span,
   .account-form a:active .action span,
   .account-form a:focus  .action span,
-  .comment-form button:hover,
-  .comment-form button:active,
-  .comment-form button:focus,
+  .comment-form .url button:hover,
+  .comment-form .url button:active,
+  .comment-form .url button:focus,
   .secondary.action a:hover,
   .secondary.action a:active,
   .secondary.action a:focus,
@@ -4154,9 +4155,6 @@
   .comment-form .file {
     text-align: right;
   }
-  .comment-form .url {
-    text-align: right;
-  }
   .comment-form .url label {
     position: relative;
     cursor: pointer;
@@ -4244,8 +4242,10 @@
   .comment-form .url label:hover  > span:first-child {
     left: 1.35em;
   }
+  .comment-form .url  button + .note,
+  .comment-form .url  button + .error-message,
   .comment-form .file label + .error-message {
-    margin-top: 0.4375em;
+    margin-top: 0.875em;
   }
   .comment-form .file label > span:first-child {
     margin-right: 0.4375em;
@@ -4293,6 +4293,8 @@
   /* TBD: Show the notes and error messages in a consistent location and simplify these selectors? */
   .comment-form  .container > p.error-message span,
   .comment-form  .container > p.note span,
+  .comment-form  .url .error-message,
+  .comment-form  .url .note,
   .comment-form  .file .error-message,
   .comment-form  .file .note {
     display: block;
@@ -4303,11 +4305,13 @@
     text-align: center;
   }
   .comment-form .container > p.error-message span,
+  .comment-form .url .error-message,
   .comment-form .file .error-message {
     background: rgb(253, 235, 230);
     border-color: rgb(251, 204, 204);
   }
   .comment-form .container > p.note span,
+  .comment-form .url .note,
   .comment-form .file .note {
     background-color: rgb(255, 255, 204);
     font-style: normal;
@@ -8899,18 +8903,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.25);
     padding-top: 1.3125em;
     margin-bottom: 0.4375em;
-  }
-  .add-story .comment-form .submit button {
-    background-color: rgb(239, 239, 239);
-    background-color: rgba(255, 255, 255, 0.85);
-    color: rgb(101, 102, 102); /* @steel */
-    border-color: transparent;
-  }
-  .add-story .comment-form .submit button:hover,
-  .add-story .comment-form .submit button:active,
-  .add-story .comment-form .submit button:focus {
-    background: rgb(250, 250, 250);
-    color: rgb(42, 43, 44);
   }
   .add-story .comment-form .submit a {
     color: white;
