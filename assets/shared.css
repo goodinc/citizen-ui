@@ -261,7 +261,7 @@
   }
 
   /* Search Results */
-  mark
+  mark,
   span.match {
     background-color: rgb(255, 255, 204);
     padding: 0.25em;
@@ -6972,17 +6972,7 @@
     height: 3.65em; /* (line-height(1.375) x 2) + padding(0.45em) x 2 */
   }
 
-  /* TBD: Make this the default styles for all submit buttons? */
-  .post-form   .submit button {
-    background-color: rgb(239, 239, 239);
-    color: rgb(101, 102, 102); /* @steel */
-  }
-  .post-form   .submit button:hover,
-  .post-form   .submit button:active,
-  .post-form   .submit button:focus {
-    background: rgb(250, 250, 250);
-    color: rgb(42, 43, 44);
-  }
+  /* TBD: Make these the default styles for all submit and cancel buttons? */
   @media (min-width: 40em) {
     .post-form .submit {
       margin-top: 1.3125em;
