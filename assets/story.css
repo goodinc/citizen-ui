@@ -599,10 +599,13 @@
     display: table;
     clear: both;
   }
+
+  /* SHIM: Support multiple Do forms within a container element. */
   .do-header div.todo_actions {
     margin-top: 0;
     display: block;
   }
+
   @media (min-width: 65em) {
     .story {
       float: left;

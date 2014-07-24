@@ -8594,20 +8594,26 @@
     text-align: right;
     padding-right: 1.5em;
   }
+  .do-header > .container:before {
+    content: "";
+    display: block;
+    border-top: 5px solid black;
+  }
   .do-header > .container > div {
-    border-width: 0.1em 0 0;
+    border-width: 0;
     border-style: solid;
     border-color: rgb(218, 220, 224);
     padding: 1em 1.5em;
     background: white;
   }
+
   @media (min-width: 40em) {
     .do-header > .container {
       padding-left: 1.5em;
       padding-right: 1.5em;
     }
     .do-header > .container > div {
-      border-width: 0.1em 0.1em 0;
+      border-width: 0 0.1em 0;
     }
   }
   .do-header .body {
@@ -8710,6 +8716,7 @@
   .do-header h1 {
     font-family: inherit;
     font-weight: bold;
+    color: black;
   }
 
   .do-header form.do,
@@ -8731,6 +8738,7 @@
       top: 1.5em;
       left: 1.5em;
     }
+
     .do-header form.do,
     .do-header form.doing,
     .do-header form.done {
@@ -8785,6 +8793,71 @@
     text-decoration: none;
   }
 
+  .do-header .participants {
+    margin-top: 0.875em;
+    border-top: 0.1em solid rgb(218, 220, 224);
+    padding-top: 0.875em;
+  }
+  .do-header .participants header {
+    display: inline;
+    margin-right: 0.5em;
+  }
+  .do-header .participants header h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.33333333333333em; /* 16px / 12px */
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+
+    /* @icon-participants */
+    content: "\e61d";
+    color: black;
+  }
+  .do-header .participants header h2 {
+    font-family: inherit;
+    font-size: 0.875em;
+    line-height: 2;
+    font-weight: bold;
+  }
+  .do-header .participants header h2,
+  .do-header .participants header p {
+    display: inline;
+  }
+  .do-header .participants header p {
+    margin-left: 0.4375em;
+    font-size: 0.875em;
+    color: rgb(153, 153, 153);
+  }
+  .do-header .participants header p:before {
+    content: "(";
+  }
+  .do-header .participants header p:after {
+    content: ")";
+  }
+  .do-header .participants ul,
+  .do-header .participants li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+  }
+  .do-header .participants li img,
+  .do-header .participants li .avatar {
+    vertical-align: middle;
+  }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
   .do-header .todo_actions {
