@@ -8590,8 +8590,12 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .do-header ~ .options {
+    margin-bottom: 1.75em;
+  }
   .do-header ~ .options > .container {
     text-align: right;
+    padding-left: 1.5em;
     padding-right: 1.5em;
   }
   .do-header > .container:before {
@@ -8807,7 +8811,8 @@
   }
   @media (min-width: 60em) {
     .do-header .participants {
-      margin-top: 1.25em;
+      margin-top: 0.4em;
+      margin-bottom: 0;
       border-top-width: 0;
       padding-top: 0;
       position: absolute;
@@ -8878,6 +8883,76 @@
   /* SHIM: Support multiple form elements, wrapped in a container */
   .do-header .todo_actions {
     margin-top: 0.875em; /* @line-height / 2 */
+  }
+
+
+/* =Tags
+  ----------------------------------------------- */
+  .do-tags {
+    color: rgb(101, 102, 102);
+    font-size: 0.875em;
+    float: left;
+    margin: 0.125em 0 0 0;
+  }
+  .do-tags h2 {
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .do-tags h2 span {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+  .do-tags h2:before {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e603"; /* @icon-tag */
+
+    color: rgb(247, 105, 100); /* @strawberry */
+    font-size: 1.15384615384615em; /* 15px / 13px */
+    margin-right: 0.5em;
+  }
+  .do-tags ul {
+    display: inline;
+  }
+  .do-tags ul,
+  .do-tags li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  footer.options .do-tags li {
+    display: inline-block;
+    margin-right: 0;
+  }
+  .do-tags li:after {
+    content: ",";
+  }
+  .do-tags li:last-child:after {
+    content: "";
+  }
+  .do-tags li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .do-tags li a:hover,
+  .do-tags li a:active,
+  .do-tags li a:focus {
+    color: black;
   }
 
 
