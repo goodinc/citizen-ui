@@ -8746,7 +8746,7 @@
 
 
   .do-header > .container > div h1 {
-    margin-top: 1.75em;
+    margin-top: 60px;
     display: block;
   }
 
@@ -8839,7 +8839,7 @@
   .do-header .participants header {
     margin-bottom: 0;
   }
-  @media (min-width: 40em) {
+  @media (min-width: 30em) {
     .do-header .participants header {
       display: inline;
       margin-right: 0.5em;
@@ -8864,7 +8864,7 @@
     font-size: 1.33333333333333em; /* 16px / 12px */
     display: inline-block;
     vertical-align: middle;
-    margin-right: 0.25em;
+    margin-right: 0.35em;
 
     /* @icon-participants */
     content: "\e61d";
@@ -9128,7 +9128,7 @@
     content: "\e612";
 
     line-height: 1;
-    margin-right: 0.75em;
+    margin-right: 0.65em;
     vertical-align: middle;
   }
   .add-story > .container {
@@ -9351,6 +9351,7 @@
   .stories section.message.empty {
     margin-bottom: 1.75em;
     background: rgb(246, 246, 246);
+    color: rgb(153, 153, 153);
     border-width: 0;
   }
   .stories section.message.empty h1 {
@@ -9364,9 +9365,52 @@
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
     margin-bottom : 0.5833333334em;
   }
+  .stories section.message.empty h1:after {
+
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* @icon-launch */
+    content: "\e612";
+
+    color: rgb(204, 204, 204);
+    margin-top: 56px;
+    margin-bottom: 56px;
+    font-size: 3em;
+    display: block;
+    line-height: 1;
+    text-align: center;
+  }
+  @media (min-width: 40em) {
+    .stories section.message.empty {
+      padding: 3.5em 5em;
+    }
+    .stories section.message.empty h1:after {
+      font-size: 10em;
+    }
+  }
+  .stories section.message.empty h1 + p {
+    border-top-width: 0;
+    padding-top: 0;
+  }
   .stories section.message.empty a {
     font-weight: bold;
     text-decoration: none;
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .stories section.message.empty a:hover,
+  .stories section.message.empty a:active,
+  .stories section.message.empty a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .stories section.message.empty h1 + p:after {
     content: none;
