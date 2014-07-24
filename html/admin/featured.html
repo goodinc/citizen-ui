@@ -11,7 +11,7 @@
   <style>
   .sortable>li.over {
     border: 2px dashed #000;
-    opacity :0.4;
+    opacity :0;
   }
   </style>
   <script>
@@ -139,7 +139,7 @@
       </section>
 
       <form action="" method="post">
-        <p class="submit"><button type="submit">Save Changes</button></p>
+        <p class="submit"><button type="submit">Update Order</button></p>
 
         <ol class="sortable">
           <li draggable="true">
@@ -274,7 +274,7 @@
           </li>
         </ol>
 
-        <p class="submit"><button type="submit">Save Changes</button></p>
+        <p class="submit"><button type="submit">Update Order</button></p>
       </form>
 
     </section>
@@ -356,6 +356,7 @@ function handleDragOver(e) {
   }
 
   e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+  this.classList.add('over');
 
   return false;
 }
@@ -381,6 +382,7 @@ function orderList(){
       list[i].value = i+1;
   }
 }
+
 var cols = document.querySelectorAll('.sortable>li');
 
 [].forEach.call(cols, function(col) {
