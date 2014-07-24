@@ -4145,32 +4145,32 @@
   .comment-form .url .cancel {
     float: right;
     text-decoration: none;
+    margin-top: 1.2em;
+    margin-right: 0.4em;
   }
+
+  @media (min-width: 40em) {
+    .comment-form .url .cancel {
+      margin-top: 0.4em;
+    }
+  }
+
   .comment-form .url a {
     margin-top: 0.5em;
     margin-right: 1em;
     float: right;
   }
-  .comment-form .url button.cancel {
-    background-color: transparent;
-    border-width: 0;
-  }
-  .comment-form .url   .cancel:hover,
-  .comment-form .url   .cancel:active,
-  .comment-form .url   .cancel:focus,
   .comment-form .images button:hover,
   .comment-form .images button:active,
   .comment-form .images button:focus {
     background: rgb(101, 102, 102); /* @steel */
     color: white;
   }
-  .comment-form .url   .cancel span,
   .comment-form .images button span {
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
   }
-  .comment-form .url   .cancel:after,
   .comment-form .images button:after {
 
     /* @icons */
@@ -4212,6 +4212,7 @@
   .comment-form .file label br {
     display: none;
   }
+  .comment-form .url .cancel,
   .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before,
   .comment-form .file         label:before {
@@ -4230,16 +4231,42 @@
     border-radius: 0.25em;
     border-color: transparent;
   }
+  .comment-form .url .cancel {
+    position: relative;
+    background: transparent;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+  }
+  .comment-form .url .cancel:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    /* For better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e60a"; /* @icon-delete */
+  }
   .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before {
     background: transparent url(shared/comment/play.svg) no-repeat center;
   }
+  .comment-form .url        .cancel:hover,
+  .comment-form .url        .cancel:focus,
   .comment-form.inactive .url label:hover:before,
   .comment-form .url.inactive label:hover:before,
   .comment-form .file         label:hover:before {
     opacity: 1;
     border-color: rgb(153, 153, 153); /* @aluminum */
   }
+  .comment-form .url .cancel span,
   .comment-form .url  label > span:first-child,
   .comment-form .file label > span:first-child {
     font-size: 0.75em;
@@ -4256,9 +4283,18 @@
     opacity: 0;
     transition: opacity 0.2s;
   }
+  .comment-form .url .cancel span {
+    width: 6em;
+    margin-left: -3em;
+  }
+  .comment-form .url .cancel span {
+    font-size: 0.875em;
+    line-height: 1.75em;
+  }
   .comment-form .url label > span:first-child {
     margin-bottom: 3em;
   }
+  .comment-form .url .cancel span:before,
   .comment-form .url  label > span:first-child:before,
   .comment-form .file label > span:first-child:before {
     content: "";
@@ -4277,6 +4313,8 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
+  .comment-form .url .cancel:hover span,
+  .comment-form .url .cancel:focus span,
   .comment-form.inactive .url label:hover > span:first-child,
   .comment-form .url.inactive label:hover > span:first-child,
   .comment-form .file         label:hover > span:first-child {
