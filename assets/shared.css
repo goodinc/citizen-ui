@@ -8798,6 +8798,15 @@
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 0.875em;
   }
+  @media (min-width: 60em) {
+    .do-header .participants {
+      margin-top: 1.25em;
+      border-top-width: 0;
+      padding-top: 0;
+      position: absolute;
+      margin-left: 7em;
+    }
+  }
   .do-header .participants header {
     display: inline;
     margin-right: 0.5em;
@@ -8855,7 +8864,7 @@
     display: inline;
   }
   .do-header .participants li img,
-  .do-header .participants li .avatar {
+  .do-header .participants li .avatar > span {
     vertical-align: middle;
   }
 
