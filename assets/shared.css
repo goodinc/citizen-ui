@@ -8798,6 +8798,13 @@
     border-top: 0.1em solid rgb(218, 220, 224);
     padding-top: 0.875em;
   }
+  .do-header .participants img {
+    width: 1em; /* 16px ÷ @font-size */
+    height: auto;
+  }
+  .do-header .participants .avatar > span {
+    font-size: 0.6666666667em; /* 16px × ⅔ ÷ @font-size */
+  }
   @media (min-width: 60em) {
     .do-header .participants {
       margin-top: 1.25em;
