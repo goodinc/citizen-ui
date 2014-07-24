@@ -4421,6 +4421,10 @@
     right: 2.6em;
     border-top-width: 0;
     background-color: transparent;
+
+    border-left: 0.1em dotted rgb(238, 238, 238);
+    border-right: 0.1em dotted rgb(238, 238, 238);
+    margin-right: 0.675em;
   }
 
   /* OPTIONAL: Make the comments form that appears at the
