@@ -8919,6 +8919,7 @@
     margin-bottom: 0;
   }
 
+  .story     h2:before,
   .add-story h2:before {
 
     /* @icons */
@@ -8937,7 +8938,7 @@
     content: "\e612";
 
     line-height: 1;
-    margin-right: 0.875em;
+    margin-right: 0.75em;
     vertical-align: middle;
   }
   .add-story > .container {
@@ -8978,8 +8979,14 @@
   .add-story .comment-form .container {
     border-width: 0;
   }
+  .story     .comment-form .checkbox,
   .add-story .comment-form .checkbox {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0.25em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
     color: white;
+    line-height: 2;
   }
   .add-story .comment-form .submit {
     margin-top: 0;
