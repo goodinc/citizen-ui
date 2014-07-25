@@ -806,3 +806,7 @@ td .source.comments > h2 > a {
     margin-top: 0;
     vertical-align: top;
   }
+  .sortable>li.over {
+    border: 2px dashed #000;
+    opacity :0;
+  }
