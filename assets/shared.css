@@ -8782,7 +8782,6 @@
     font-size: 0.875em;
     vertical-align: middle;
     margin-top: 0;
-    color: rgb(153, 153, 153);
   }
   .do-header .edit a {
     font-size: 0.875em;
@@ -8803,8 +8802,6 @@
 
     margin-right: 0.375em;
     content: "\e609"; /* @icon-edit */
-    transition: color 0.2s;
-    color: rgb(229, 229, 229);
   }
   .do-header a.more {
     text-decoration: none;
