@@ -603,6 +603,7 @@
   /* SHIM: Support multiple Do forms within a container element. */
   .do-header div.todo_actions {
     margin-top: 0;
+    margin-bottom: 0;
     display: block;
   }
 

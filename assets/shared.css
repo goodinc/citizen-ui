@@ -8762,6 +8762,7 @@
       margin-top: 0;
     }
     .do-header > .container > div h1,
+    .do-header > .container > div .action.edit,
     .do-header > .container > div .body {
       margin-left: 55px;
       margin-right: 115px;
@@ -8784,13 +8785,7 @@
     color: rgb(153, 153, 153);
   }
   .do-header .edit a {
-    color: rgb(153, 153, 153);
-  }
-  .do-header .action.edit a {
-    background-color: transparent;
-    color: rgb(101, 102, 102);
-    border-width: 0;
-    font-weight: normal;
+    font-size: 0.875em;
   }
   .do-header .action.edit a:before {
     /* @icons */
@@ -8811,11 +8806,6 @@
     transition: color 0.2s;
     color: rgb(229, 229, 229);
   }
-  .do-header .action.edit  a:hover:before,
-  .do-header .action.edit  a:active:before,
-  .do-header .action.edit  a:focus:before {
-    color: rgb(49, 144, 242); /* @deep-ocean */
-  }
   .do-header a.more {
     text-decoration: none;
   }
@@ -8834,12 +8824,13 @@
   }
   @media (min-width: 60em) {
     .do-header .participants {
-      margin-top: 0.4em;
+      margin-top: 0;
       margin-bottom: 0;
       border-top-width: 0;
       padding-top: 0;
       position: absolute;
-      margin-left: 10.5em;
+      left: 12em;
+      bottom: 0.5em;
     }
   }
 
@@ -9116,8 +9107,8 @@
     margin-bottom: 0;
   }
 
-  .story     h2:before,
-  .add-story h2:before {
+  form .story h2:before,
+  .add-story  h2:before {
 
     /* @icons */
     font-family: "Icons";
