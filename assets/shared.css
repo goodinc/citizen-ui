@@ -8577,7 +8577,7 @@
 /* =Do Header
   ----------------------------------------------- */
   .do-header {
-    margin-top: 1.75em;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -8612,6 +8612,9 @@
   }
 
   @media (min-width: 40em) {
+    .do-header {
+      margin-top: 1.75em;
+    }
     .do-header > .container {
       padding-left: 1.5em;
       padding-right: 1.5em;
@@ -8744,10 +8747,14 @@
     left: 1.5em;
   }
 
-
   .do-header > .container > div h1 {
     margin-top: 60px;
     display: block;
+  }
+  @media (max-width: 39.9em) {
+    .do-header > .container > div h1 {
+      font-size: 1.5em;
+    }
   }
 
   @media (min-width: 45em) {
