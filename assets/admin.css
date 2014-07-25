@@ -158,18 +158,9 @@
     padding-bottom: 0.35em;
     vertical-align: top;
   }
-  .features ol button,
-  .add-post form button,
-  .filters form .submit button {
-    background-color: rgb(69, 71, 71);
-  }
-  .add-post form button:hover,
-  .add-post form button:active,
-  .add-post form button:focus,
-  .filters form .submit button:hover,
-  .filters form .submit button:active,
-  .filters form .submit button:focus {
-    background-color: rgb(51, 153, 255); /* @link-color */
+  .features ol button {
+    background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102); /* @steel */
   }
   .admin#users .filters form {
     margin-left: 48px;
@@ -604,9 +595,14 @@ td .source.comments > h2 > a {
   .batch button {
     font-size: 14px;
     font-weight: bold;
+    background-color: rgb(239, 239, 239);
+    color: rgb(101, 102, 102); /* @steel */
+  }
+  .batch button:hover,
+  .batch button:active,
+  .batch button:focus {
     background: rgb(250, 250, 250);
-    border: 1px solid rgb(227, 229, 232);
-    color: rgb(153, 153, 153); /* $steel */
+    color: rgb(42, 43, 44);
   }
   .batch button:before {
     /* @icons */
@@ -622,7 +618,7 @@ td .source.comments > h2 > a {
 
     margin-right: 0.5em;
     vertical-align: middle;
-    color: rgb(204, 204, 204);
+    transition: color 0.2s;
   }
   .batch button.approve:before {
     content: "\e606"; /* @icon-approve */
@@ -704,16 +700,6 @@ td .source.comments > h2 > a {
   }
   .features form p.submit button {
     font-size: 14px;
-    font-weight: bold;
-    background: rgb(250, 250, 250);
-    border: 0.1em solid rgba(0, 0, 0, 0.1);
-    color: rgb(153, 153, 153);
-  }
-  .features form p.submit button:hover,
-  .features form p.submit button:active,
-  .features form p.submit button:focus {
-    background-color: rgb(51, 153, 255); /* @link-color */
-    color: white;
   }
   .features form p.submit:first-of-type {
     border-top: 0.1em solid rgb(204, 204, 204);
@@ -768,10 +754,6 @@ td .source.comments > h2 > a {
   .features ol button {
     font-size: 12px;
     font-weight: bold;
-    background: rgb(250, 250, 250);
-    border: 1px solid rgb(227, 229, 232);
-    border: 0.1em solid rgba(0, 0, 0, 0.1);
-    color: rgb(153, 153, 153);
     position: absolute;
     top: 1.25em;
     right: 0.875em;
