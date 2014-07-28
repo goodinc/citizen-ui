@@ -5263,11 +5263,13 @@
   }
 
   /* TBD: Should we add a height attribute to the iframe instead? */
-  .post > article iframe {
+  .story > article iframe,
+  .post  > article iframe {
     height: 505px;
   }
   @media (max-width: 29.9em) {
-    .post > article iframe {
+    .story > article iframe,
+    .post  > article iframe {
       height: 250px;
     }
   }
