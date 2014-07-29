@@ -212,6 +212,88 @@
   </section>
 
   <section>
+    <h2>Uploading</h2>
+
+    <form action="" method="post" class="comment-form">
+      <div class="container">
+        <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <ol class="images">
+          <li class="progress">
+            <span>bikes.jpg</span>
+            <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
+            <progress max="100" value="80"></progress>
+          </li>
+          <li>
+            <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
+            <button type="submit" name="remove" value="image2" class="remove"><span>Remove this image</span></button>
+          </li>
+        </ol>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div><!-- /.container -->
+      <p class="submit">
+        <button type="submit">Post</button>
+      </p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Change Order</h2>
+
+    <form action="" method="post" class="comment-form">
+      <div class="container">
+        <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <ol class="images">
+          <li>
+            <button type="submit" name="down" value="image2" class="down"><span>Move Down</span></button>
+            <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
+            <span>ciclavia-bike-ride.jpg</span>
+            <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
+          </li>
+          <li>
+            <button type="submit" name="up" value="image2" class="up"><span>Move Up</span></button>
+            <button type="submit" name="down" value="image2" class="down"><span>Move Down</span></button>
+            <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
+            <span>road.jpg</span>
+            <button type="submit" name="remove" value="image2"><span>Remove this image</span></button>
+          </li>
+          <li>
+            <button type="submit" name="up" value="image2" class="up"><span>Move Up</span></button>
+            <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/262/325/original/le-tour-baguette-bike-e1383079350740-425x445.jpg" alt="" />
+            <span>festival.jpg</span>
+            <button type="submit" name="remove" value="image3"><span>Remove this image</span></button>
+          </li>
+        </ol>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div><!-- /.container -->
+      <p class="submit">
+        <button type="submit">Post</button>
+      </p>
+    </form>
+  </section>
+
+  <section>
     <h2>Error Message</h2>
 
     <form action="" method="post" class="comment-form">

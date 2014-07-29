@@ -37,17 +37,6 @@
 </section>
 -->
 
-<!--
-<section class="join-promotion">
-  <h2>Discover and share</h2>
-  <p>creative solutions for you and your world.</p>
-  <ul>
-    <li class="action"><a href="join.html">Join</a></li>
-    <li class="action secondary"><a href="sign-in.html">Sign In</a></li>
-  </ul>
-</section>
--->
-
 <header class="do-header">
   <h3><a href="">GOOD</a></h3>
 
@@ -87,19 +76,32 @@
       </div>
     </header>
 
-    <p class="secondary action edit"><a href="story-edit.html">Edit</a></p>
-
-    <div class="images">
-      <figure>
-        <div class="image">
-          <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/596/376/original/Cinespia.JPG=s2000x2000" />
-        </div>
-      </figure>
-    </div>
-
-    <div class="body">
-      <p>Summer in Los Angeles starts when movie screenings move outside and, perhaps, there is no outdoor movie series more quintessentially LA than Cinespia at the Hollywood Forever Cemetery. Arrive with a picnic and good friends in tow and enjoy music and a movie. Dreamy.</p>
-    </div>
+    <form action="" method="post" class="comment-form">
+      <div class="container">
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <ol class="images">
+          <li>
+            <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/596/376/original/Cinespia.JPG=s2000x2000" alt="" />
+            <button type="submit" name="remove" value="image2" class="remove"><span>Remove this image</span></button>
+          </li>
+        </ol>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div><!-- /.container -->
+      <ul class="submit">
+        <li><button type="submit">Save</button></li>
+        <li><a href="">Cancel</a></li>
+      </ul>
+    </form>
   </article>
 
   <section class="comments" id="comment">

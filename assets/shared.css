@@ -1162,6 +1162,25 @@
     opacity: 0.5;
   }
 
+  /* Edit */
+  .action.edit a:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+
+    margin-right: 0.375em;
+    content: "\e609"; /* @icon-edit */
+  }
+
   /* Vote */
   .vote button {
     background-color: rgb(113, 179, 247); /* @sky */
@@ -4087,9 +4106,10 @@
     background: white;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
     border-radius: 0.25em;
-    max-width: 40em;
+    max-width: 50em;
+    overflow: hidden;
     font-size: 0.75em; /* 12px / 16px */
-    line-height: 2.5em; /* 30px / 12px */
+    line-height: 5em; /* 60px / 12px */
     color: rgb(101, 102, 102); /* @steel */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
@@ -4103,62 +4123,98 @@
     margin-top: 0.625em; /* 10px / 16px */
   }
   .comment-form .images li img {
-    margin-right: 0.625em; /* 10px / 16px */
-    height: 2.5em; /* 30px / 12px */
+    height: 5em; /* 60px / 12px */
     width: auto;
     float: left;
     border-top-left-radius    : 0.25em;
     border-bottom-left-radius : 0.25em;
   }
+  .comment-form .images li img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    max-height: none;
+  }
+
+  .comment-form .images li img {
+    width: auto;
+    max-height: 15em;
+  }
+
+
+/* TEMPORARY */
+.comment-form .images li img + span {
+  display: none;
+}
+.comment-form .images li img + span.video {
+  display: block;
+}
+
+/*
+  .story article .comment-form .container {
+    border-width: 0;
+  }
+  .story article .comment-form .images {
+    background: transparent;
+    border-width: 0;
+    padding: 0;
+  }
+  .story article .comment-form .images li {
+    max-width: none;
+    border-width: 0;
+    margin-top: 0.875em;
+  }
+  .story article .comment-form .text textarea {
+    height: 15em;
+    margin-top: 0.875em;
+    border: 0.1em solid rgb(204, 204, 204);
+  }
+*/
+
+  .comment-form .images li span {
+    margin-left: 1em;
+  }
+  .comment-form .images li span.video {
+    margin-left: 0;
+  }
+  .comment-form .images li.progress {
+    line-height: 3.5em;
+  }
+  .comment-form .images progress {
+    border: 1px solid rgb(204, 204, 204); /* @magnesium */
+    width: 20em;
+    vertical-align: middle;
+    margin-left: 1em;
+    float: right;
+    margin-top: 0.875em;
+    margin-right: 4em;
+
+    /* Match the height and margin of the “remove” button. */
+    height: 1.75em;
+  }
+  .comment-form .images progress::-webkit-progress-bar {
+    background: white;
+  }
+  .comment-form .images progress::-webkit-progress-value {
+    background: black;
+    border: 1px solid white;
+  }
   .comment-form .images button {
-    background: rgb(153, 153, 153); /* @aluminum */
+    background: black;
+    background: rgba(0, 0, 0, 0.85);
     float: right;
     color: white;
+    font-size: 1.3333333333em; /* 16px / 12px */
+    line-height: 1;
 
     /* These values are arbitrary. They happen to make the button appear
     centered within the item, and the “X” appear centered within the button.*/
-    padding: 0.2em 0.5em;
-    margin: 0.35em;
-  }
+    padding: 0.3em 0.3em;
 
-  .comment-form .images .video {
-    position: relative;
-    display: block;
-    float: left;
-    margin-right: 0.625em; /* 10px / 16px */
-  }
-  .comment-form .images .video img {
-    margin-right: 0;
-  }
-  .comment-form .images .video:before {
-    content: "";
-    display: block;
-    width : 2.5em; /* 30px / 12px */
-    height: 2.5em; /* 30px / 12px */
-    background: transparent url(shared/comment/play-white.svg) no-repeat center;
-    vertical-align: middle;
     position: absolute;
-    left: 50%;
-    margin-left: -1.25em;
-  }
-
-  .comment-form .url .cancel {
-    float: right;
-    text-decoration: none;
-    margin-top: 1.2em;
-    margin-right: 0.4em;
-  }
-
-  @media (min-width: 40em) {
-    .comment-form .url .cancel {
-      margin-top: 0.4em;
-    }
-  }
-
-  .comment-form .url a {
-    margin-top: 0.5em;
-    margin-right: 1em;
-    float: right;
+    top: 0.5em;
+    right: 0.5em;
+    margin: 0;
   }
   .comment-form .images button:hover,
   .comment-form .images button:active,
@@ -4185,6 +4241,92 @@
     -moz-osx-font-smoothing: grayscale;
 
     content: "\e60a"; /* @icon-delete */
+  }
+
+
+
+  .comment-form .images .progress button {
+    background: transparent;
+    border-color: transparent;
+    color: rgb(204, 204, 204); /* @magnesium */
+  }
+
+
+
+  .comment-form .images button.up:after {
+    content: "\e60b"; /* @icon-ascending */
+  }
+  .comment-form .images button.down:after {
+    content: "\e60c"; /* @icon-descending */
+  }
+  .comment-form .images button.up,
+  .comment-form .images button.down {
+    position: absolute;
+    left: 0.5em;
+    margin: 0;
+  }
+
+/* TEMPORARY */
+.comment-form .images button.up:after,
+.comment-form .images button.down:after {
+  color: transparent;
+}
+.comment-form .images button.up {
+  background-image: url(shared/comment/up.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.comment-form .images button.down {
+  background-image: url(shared/comment/down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+  .comment-form .images button.down {
+    top: 2.75em;
+  }
+  .comment-form .images button.down:first-child,
+  .comment-form .images button.up {
+    top: 0.5em;
+  }
+
+  .comment-form .images .video {
+    position: relative;
+    display: table;
+  }
+  .comment-form .images .video img {
+    margin-right: 0;
+    display: block;
+    float: none;
+  }
+  .comment-form .images .video:before {
+    content: "";
+    display: block;
+    background: transparent url(shared/comment/play-white.svg) no-repeat center;
+    background-size: 10% auto;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .comment-form .url .cancel {
+    float: right;
+    text-decoration: none;
+    margin-top: 1.2em;
+    margin-right: 0.4em;
+  }
+
+  @media (min-width: 40em) {
+    .comment-form .url .cancel {
+      margin-top: 0.4em;
+    }
+  }
+
+  .comment-form .url a {
+    margin-top: 0.5em;
+    margin-right: 1em;
+    float: right;
   }
   .comment-form  .container:after {
     /* @clearfix */
@@ -8787,23 +8929,6 @@
   }
   .do-header .edit a {
     font-size: 0.875em;
-  }
-  .do-header .action.edit a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 0.9375em; /* 15px / @font-size(16px) */
-
-    margin-right: 0.375em;
-    content: "\e609"; /* @icon-edit */
   }
   .do-header a.more {
     text-decoration: none;

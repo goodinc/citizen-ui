@@ -421,19 +421,29 @@
     }
   }
 
+  .story .comment-form {
+    text-align: left;
+  }
+  .story .action.edit {
+    margin-bottom: 1.75em;
+  }
+  .story .action.edit a {
+    font-size: 0.875em;
+  }
+
 
 /* =Images
   ----------------------------------------------- */
-  .images {
+  .story div.images {
     text-align: center;
   }
-  .images figure {
+  .story div.images figure {
     margin: 0;
   }
-  .images figure img {
+  .story div.images figure img {
     box-shadow: none;
   }
-  .images img {
+  .story div.images img {
     max-height: 80vh;
     width: auto;
   }
@@ -449,7 +459,14 @@
     border-style: solid;
     border-color: rgb(224, 224, 224);
     padding-top: 1.3125em;
+    padding-bottom: 1.75em;
   }
+
+  /* OPTIONAL: Remove the space below the comment list */
+  .comments > .comment-list {
+    margin-bottom: -1.75em;
+  }
+
   .comments h2 {
     margin-left: 0.8em;
     margin-right: 0.8em;
