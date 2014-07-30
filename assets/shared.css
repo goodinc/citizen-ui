@@ -1703,7 +1703,7 @@
     vertical-align: middle;
     margin-right: 0.4375em; /* @line-height / 4 */
     position: relative;
-    width: 1.3125em;
+    width: 1.3125em; /* @line-height x 3/4 */
     height: 1.3125em;
     border: 0.21875em solid rgb(101, 102, 102); /* @steel */
     border-right-color: transparent;
@@ -1749,15 +1749,6 @@
     margin-top: -0.5em;
     margin-left: -0.5em;
   }
-  /*
-  .form.loading .loading {
-    position: absolute;
-    margin-top: -0.9375em;
-    margin-left: -0.9375em;
-    top: 50%;
-    left: 50%;
-  }
-  */
 
   /* OPTIONAL: Center the loading indicator, when it appears after pagination */
   .pagination + .loading {
@@ -4266,6 +4257,11 @@
   .comment-form .images .video {
     position: relative;
     display: table;
+  }
+  .comment-form .images .video + span {
+    display: block;
+    margin-top: 0.875em;
+    margin-bottom: 0.875em;
   }
   .comment-form .images .video img {
     margin-right: 0;
