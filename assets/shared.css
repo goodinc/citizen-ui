@@ -4013,7 +4013,7 @@
 
   /* Headlines */
   .comment-list h3 {
-    margin: 0;
+    margin: 0 0 0.875em 0;
     font-size: 0.75em;
     color: rgb(153, 153, 153); /* @aluminum */
     font-weight: normal;
@@ -9456,6 +9456,9 @@
   .stories .comment-list li article {
     padding: 1.5em;
     background: white;
+  }
+  .stories .comment-list article > h3 {
+    margin-bottom: 1.75em; /* @line-height */
   }
   .stories .comment-list article > h3 img,
   .stories .comment-list article > h3 .avatar {
