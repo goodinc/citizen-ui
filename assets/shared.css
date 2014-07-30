@@ -4576,6 +4576,45 @@
   }
 
 
+/* =Edit Story
+  ----------------------------------------------- */
+  .story article .comment-form .container {
+    border: 1px solid black;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    margin-top: 0;
+    background: white;
+  }
+  .story article .comment-form h4 {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: inherit;
+    float: left;
+    padding: 1em;
+    margin-bottom: 0;
+  }
+  .story article .comment-form h4:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+
+    margin-right: 0.375em;
+    content: "\e609"; /* @icon-edit */
+  }
+  .story article .comment-form textarea {
+    border-top: 0.1em solid rgb(218, 220, 224);
+  }
+
+
 /* =More Link
   ----------------------------------------------- */
   .comment-list + .more {
