@@ -4122,22 +4122,26 @@
     margin-top: 0.625em; /* 10px / 16px */
   }
   .comment-form .images li img {
-    height: 5em; /* 60px / 12px */
+    height: 3.75em;
     width: auto;
     float: left;
     border-top-left-radius    : 0.25em;
     border-bottom-left-radius : 0.25em;
   }
-  .comment-form .images li img {
+
+  .comment-form .images.full-size li img {
     width: 100%;
     height: auto;
-    border-radius: 0;
     max-height: none;
+    border-radius: 0;
   }
 
-  .comment-form .images li img {
+  .comment-form .images li .video img,
+  .comment-form .images.reorder li img {
+    height: auto;
     width: auto;
     max-height: 15em;
+    border-radius: 0;
   }
 
 
