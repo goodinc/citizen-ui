@@ -4471,6 +4471,10 @@
   .comment-form .submit {
     margin-bottom: 1.75em; /* @line-height */
   }
+  .comment-form .submit a {
+    float: right;
+    margin-right: 0.4375em;
+  }
 
   .supports-placeholder .comment-form .text label > span:first-child {
     /* @hidden-accessible */
@@ -5540,7 +5544,7 @@
   }
 
   form .submit a {
-    color: rgb(247, 157, 130);
+    color: rgb(153, 153, 153);
     font-weight: bold;
     text-decoration: inherit;
   }
@@ -9277,8 +9281,6 @@
   }
   .add-story .comment-form .submit a {
     color: white;
-    float: right;
-    margin-right: 0.4375em;
   }
 
   /* OPTIONAL: Make the Add Story headline look like a tab */
