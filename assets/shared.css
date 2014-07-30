@@ -4087,21 +4087,24 @@
     padding: 0.625em; /* 10px / 16px */
   }
 
-  .comment-form .url,
-  .comment-form .images {
+  .comment-form .url {
     background: rgb(249, 249, 249);
   }
   .comment-form .images li {
     display: block;
     position: relative;
-    background: white;
+    background: rgb(249, 249, 250);
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
+    border-width: 0;
     border-radius: 0.25em;
     max-width: 50em;
     font-size: 0.75em; /* 12px / 16px */
     color: rgb(101, 102, 102); /* @steel */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
+  }
+  .comment-form .images li.progress {
+    display: block;
   }
   .comment-form .images li:after {
     content: "";
@@ -4117,13 +4120,6 @@
     border-top-left-radius    : 0.25em;
     border-bottom-left-radius : 0.25em;
     vertical-align: middle;
-  }
-
-  .comment-form .images.full-size li img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-    border-radius: 0;
   }
 
   .comment-form .images li .video img,
@@ -4146,6 +4142,8 @@
 
   .comment-form .images li span {
     margin-left: 1em;
+    font-weight: bold;
+    color: rgb(102, 102, 102);
   }
   .comment-form .images li span.video {
     margin-left: 0;
@@ -4175,8 +4173,6 @@
   .comment-form .images button {
     background: black;
     background: rgba(0, 0, 0, 0.85);
-
-    background: rgb(153, 153, 153); /* @aluminum */
 
     float: right;
     color: white;
