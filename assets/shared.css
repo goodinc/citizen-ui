@@ -4202,6 +4202,9 @@
   .comment-form .images button {
     background: black;
     background: rgba(0, 0, 0, 0.85);
+
+    background: rgb(153, 153, 153); /* @aluminum */
+
     float: right;
     color: white;
     font-size: 1.3333333333em; /* 16px / 12px */
