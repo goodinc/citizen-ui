@@ -25,10 +25,7 @@
 
   <link rel="stylesheet" href="../../../assets/story.css" />
 
-  <style>
-
-  /* =Edit Story
-    ----------------------------------------------- */
+   <style>
     .story article .comment-form {
       border: 1px solid black;
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
@@ -38,16 +35,12 @@
       margin-right: -0.875em;
       background: white;
     }
-    .story article .comment-form .container {
-      border-width: 0;
-      box-shadow: none;
-    }
     .story article .comment-form h4 {
       font-family: inherit;
       font-size: inherit;
       font-weight: bold;
       line-height: inherit;
-      float: left;
+      float: none;
       padding-top: 0;
     }
     .story article .comment-form h4:before {
@@ -67,6 +60,14 @@
       margin-right: 0.375em;
       content: "\e609"; /* @icon-edit */
     }
+    .story article .comment-form .file {
+      border-top-width: 0;
+      padding-top: 0;
+    }
+    .story article .comment-form .container {
+      border-width: 0;
+      box-shadow: none;
+    }
     .story article .comment-form .images {
       background: transparent;
       border-width: 0;
@@ -78,16 +79,28 @@
       margin-top: 0.875em;
       background: rgb(249, 249, 250);
     }
+    .comment-form .images.reorder li img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      border-radius: 0;
+    }
     .story article .comment-form .images li span {
       font-weight: bold;
       color: rgb(102, 102, 102);
     }
     .story article .comment-form .text textarea {
+      height: 15em;
+      margin-top: 0.875em;
       border: 0.1em solid rgb(204, 204, 204);
     }
+
+    .comment-form .images li img {
+      width: 100%;
+      max-height: none;
+    }
+
     .story article .comment-form .submit {
-      border-top: 0.1em solid rgb(218, 220, 224);
-      padding-top: 0.875em;
       margin-bottom: 0;
     }
 
@@ -152,33 +165,19 @@
     <form action="" method="post" class="comment-form">
       <div class="container">
         <h4>Editing…</h4>
-
+        <ol class="images reorder">
+          <li>
+            <span class="video">
+              <img src="http://pre.cloudfront.goodinc.com/posts/1286493921ciclavia.jpg" alt="" />
+            </span>
+            <span>Ciclavia: 80,000-person Community Bike Ride in Los Angeles</span>
+            <button type="submit" name="remove" value="video1"><span>Remove this video</span></button>
+          </li>
+        </ol>
         <p class="text">
           <label>
             <span>Share your thoughts or insights...</span><br />
             <textarea name="comment" placeholder="Share your thoughts or insights...">Summer in Los Angeles starts when movie screenings move outside and, perhaps, there is no outdoor movie series more quintessentially LA than Cinespia at the Hollywood Forever Cemetery. Arrive with a picnic and good friends in tow and enjoy music and a movie. Dreamy.</textarea>
-          </label>
-        </p>
-        <ol class="images reorder">
-          <li class="progress">
-            <span>ciclavia-bike-ride.jpg</span>
-            <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
-            <progress max="100" value="80"></progress>
-          </li>
-          <li class="progress">
-            <span>bikes.jpg</span>
-            <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
-          </li>
-          <li>
-            <button type="submit" name="up" value="image2" class="up"><span>Move Up</span></button>
-            <img src="http://s3.amazonaws.com/production.calumet.good.is/bookmarks/photos/000/201/223/original/Screen_Shot_2013-04-08_at_12.13.27_PM.png" alt="" />
-            <button type="submit" name="remove" value="image2" class="remove"><span>Remove this image</span></button>
-          </li>
-        </ol>
-        <p class="file">
-          <label>
-            <span>Attach Image</span><br />
-            <input type="file" name="image[]" />
           </label>
         </p>
       </div><!-- /.container -->
