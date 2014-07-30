@@ -4127,7 +4127,7 @@
   }
 
   .comment-form .images li .video img,
-  .comment-form .images.reorder li img {
+  .comment-form .images li img {
     height: auto;
     width: auto;
     max-height: 15em;
@@ -4136,7 +4136,7 @@
 
 
 /* TEMPORARY */
-.comment-form .images.reorder li img + span {
+.comment-form .images li img + span {
   display: none;
   float: left;
 }
