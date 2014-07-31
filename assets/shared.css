@@ -4130,6 +4130,13 @@
     border-radius: 0;
   }
 
+  .story article .comment-form .images li .video img,
+  .story article .comment-form .images li img {
+    height: auto;
+    width: 100%;
+    max-height: none;
+  }
+
 
 /* TEMPORARY */
 .comment-form .images li img + span {
