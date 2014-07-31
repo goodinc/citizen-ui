@@ -7781,7 +7781,7 @@
   #header h2 a:hover,
   #header h2 a:active,
   #header h2 a:focus {
-    color: rgb(56, 60, 61);
+    color: rgb(56, 60, 61); /* @logo-hover */
   }
   #header h2 + p {
     color: rgb(102, 102, 102);

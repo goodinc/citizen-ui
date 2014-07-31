@@ -152,7 +152,7 @@
   .do-header h3 a:hover,
   .do-header h3 a:active,
   .do-header h3 a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
+    color: rgb(56, 60, 61); /* @logo-hover */
   }
 
   .do-header h2 {
