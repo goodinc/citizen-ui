@@ -109,7 +109,7 @@
   <p class="close"><a href="" title="Close this message">Close</a></p>
 </section>
 
-<section class="do-header">
+<section class="do-header" id="do-header">
   <div class="container">
     <div>
       <h2>Do</h2>
@@ -214,7 +214,11 @@
 
       <section class="message empty">
         <h1>Looking forward to stories being added!</h1>
-        <p><a href="#add-story" onclick="document.getElementById('story-field').focus();">Add your story</a> above when you’ve done this, or press <strong>“Do It”</strong> to save to your profile.</p>
+        <ul>
+          <li><a href="#add-story" onclick="document.getElementById('story-field').focus();">Add your story</a> above when you’ve done this</li>
+          <li>Press <a href="#do-header">Do It</a> to save to your profile.</li>
+          <li><a href="">Share</a> and <a href="">Tweet</a> to invite friends to do this.</li>
+        </ul>
       </section>
 
     </section><!-- /.stories -->

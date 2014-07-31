@@ -9056,8 +9056,13 @@
   .do-tags {
     color: rgb(101, 102, 102);
     font-size: 0.875em;
-    float: left;
-    margin: 0.125em 0 0 0;
+    text-align: left;
+  }
+  @media (min-width: 40em) {
+    .do-tags {
+      float: left;
+      margin: 0.125em 1.75em 0 0;
+    }
   }
   .do-tags h2 {
     display: inline-block;
