@@ -4179,7 +4179,7 @@
   }
   .comment-form .images button {
     background: black;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.75);
 
     float: right;
     color: white;
@@ -4198,8 +4198,7 @@
   .comment-form .images button:hover,
   .comment-form .images button:active,
   .comment-form .images button:focus {
-    background: rgb(101, 102, 102); /* @steel */
-    color: white;
+    background-color: black;
   }
   .comment-form .images button span {
     /* @hidden-accessible */
@@ -4226,6 +4225,12 @@
     background: transparent;
     border-color: transparent;
     color: rgb(204, 204, 204); /* @magnesium */
+  }
+  .comment-form .images .progress button:hover,
+  .comment-form .images .progress button:active,
+  .comment-form .images .progress button:focus {
+    background-color: black;
+    color: white;
   }
 
   .comment-form .images button.up:after,
