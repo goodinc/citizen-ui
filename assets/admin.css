@@ -472,7 +472,11 @@ td .source.comments > h2 > a {
     background: white;
     border-color: rgb(213, 212, 209);
   }
-  td.action a:before {
+
+  /* SHIM: The extra “td.action.edit” selector helps override the default style for edit actions.
+  (This could be improved by reusing the default style here instead) */
+  td.action.edit a:before,
+  td.action      a:before {
     font-family: "Icons";
     speak: none;
     font-style: normal;
