@@ -2537,7 +2537,7 @@
   }
 
   /* OPTIONAL: Line up with the headline */
-  @media (min-width: 40em) { /* @medium-size */
+  @media (min-width: 30em) {
     .activity-item .post .has-image ~ .meta {
       margin-left: 7.5em; /* image.width(120px) / @font-size(16px) */
     }
@@ -2942,6 +2942,9 @@
   .activity-item .source {
     font-size: 0.75em; /* 12px / @font-size */
     color: rgb(153, 153, 153); /* @aluminum */
+
+    /* Make space for the “time” element. */
+    margin-right: 3.5em; /* @line-height x 2 */
   }
   .activity-item .source a {
     font-weight: bold;
@@ -2971,6 +2974,17 @@
     padding-top: 0.625em;
   }
 
+  /* OPTIONAL: Move the meta data below the image on small screens
+  (to increase the chances that the buttons will appear on the same line). */
+  @media (max-width: 29.9em) {
+    .activity-item .post h3.has-image:after {
+      /* @clear-fix */
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
   .activity-item .link .meta {
     border-top-color: rgb(218, 220, 224); /* @bright-blue-silver */
 
@@ -2995,7 +3009,7 @@
   .meta .stories,
   .meta .participants {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.4375em; /* @line-height / 4 */
     display: inline-block;
     margin-right: 0.15em;
     color: rgb(153, 153, 153); /* @aluminum */
@@ -3445,17 +3459,6 @@
   .activity-item:hover:before {
     opacity: 1;
   }
-
-  /* OPTIONAL: Only show the topics for one item at a time */
-  /*
-  main:hover .activity-item .tags {
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  main:hover .activity-item:hover .tags {
-    opacity: 1;
-  }
-  */
 
   /* OPTIONAL: Light up the social icons for an item, when hovering over it */
 
