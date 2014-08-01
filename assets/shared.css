@@ -2582,6 +2582,12 @@
             transform: rotate(360deg);
   }
 
+  /* For comments on stories */
+  .activity-item .story .play-button .image:before,
+  .activity-item .story .play-button .image:after {
+    font-size: 1.5em;
+  }
+
   /* Links have a smaller image */
   .activity-item .link .play-button .image:before,
   .activity-item .link .play-button .image:after {
