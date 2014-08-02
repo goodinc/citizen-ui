@@ -38,167 +38,7 @@
       var html = document.getElementsByTagName("html")[0];
       html.className += " supports-svg";
     }
-
-
-    /* =Site Message
-    ----------------------------------------------- */
-    /*
-    NOTE: If you uncomment this, you’ll want to add a “data-site-message-id”
-    attribute to the <html> element on each page of the website. The value
-    should be a unique string for your message. For example: "do20-introduction".
-
-    // OPTIONAL: Add a button to hide the site-wide message.
-    new HideMessage();
-
-    // OPTIONAL: Add a button to show more details within the site-wide message.
-    new MessageDetails();
-    */
-
   }
-
-
-  /* Utilities
-  ----------------------------------------------- */
-  function within(needle, haystack) {
-
-    // If the parent element is the target
-    if (needle === haystack) {
-      return true;
-
-    // If any of the children are the target
-    } else if (haystack.firstChild) {
-      var child = haystack.firstChild;
-      do {
-        if (within(needle, child)) return true;
-      } while (child = child.nextSibling);
-    }
-  }
-
-  function closest(element, nodeName) {
-
-    // If the element is the target
-    if (nodeName === element.nodeName.toLowerCase()) {
-      return element;
-    } else {
-      if (element.parentNode) return closest(element.parentNode, nodeName);
-    }
-  }
-
-  // http://stackoverflow.com/questions/3437786/how-to-get-web-page-size-browser-window-size-screen-size-in-a-cross-browser-wa
-  function windowWidth() {
-    var w = window;
-    var d = document;
-    var e = d.documentElement;
-    var g = d.getElementsByTagName('body')[0];
-    return w.innerWidth || e.clientWidth || g.clientWidth;
-  }
-
-
-  /* =MessageDetails
-  ----------------------------------------------- */
-  /*
-  var MessageDetails = function() {};
-
-  (function() {
-
-    if (!document.addEventListener) return;
-
-    MessageDetails = function() {
-
-      // Show the details if the .show button or the headline are pressed.
-      function handleClick(e) {
-        var target = e.target;
-        var p = closest(e.target, "p");
-        if ((p && p.className.indexOf("show") >= 0) || closest(e.target, "h1")) {
-
-          var section = closest(e.target, "section");
-          if (section && section.className.indexOf("has-details") >= 0) {
-            section.className += " show-details";
-            e.preventDefault();
-          }
-
-        }
-      }
-
-      // Show the details if any links within it are focused.
-      function handleFocus(e) {
-        var target = e.target;
-        var name = target.nodeName.toLowerCase();
-        if (name == "a") {
-          var div = closest(e.target, "div");
-          if (div.className.indexOf("details") >= 0) {
-
-            var section = closest(e.target, "section");
-            if (section && section.className.indexOf("has-details") >= 0) {
-              section.className += " show-details";
-            }
-
-          }
-        }
-      }
-
-      document.addEventListener("click", handleClick, false);
-      document.addEventListener("focus", handleFocus, true); // TRICKY: Focus events don’t bubble up, so use capture instead
-
-      // Show buttons
-      var html = document.getElementsByTagName("html")[0];
-      html.className += " scripted-message-details";
-    }
-
-  })();
-  */
-
-
-  /* =HideMessage
-  ----------------------------------------------- */
-  /*
-  var HideMessage = function() {};
-
-  (function() {
-
-    if (!window.localStorage || !document.addEventListener) return;
-
-    HideMessage = function() {
-
-      var html = document.getElementsByTagName("html")[0];
-
-      var id = html.getAttribute("data-site-message-id");
-      if (!id) return;
-
-      var storageName = "hide_" + id.replace(/-/g, "_");
-
-      // Hide the messages
-      function hide(e) {
-        if (localStorage[storageName]) {
-          html.className += " hide-site-message";
-        }
-      }
-
-      // Save the user’s preference
-      function save(e) {
-        var target = e.target;
-        var name = target.nodeName.toLowerCase();
-        var p = closest(e.target, "p");
-        if (p && p.className.indexOf("close") >= 0) {
-          var section = closest(e.target, "section");
-
-          if (section && section.className.indexOf("site") >= 0 && section.className.indexOf("message") >= 0) {
-            localStorage[storageName] = "hidden";
-            hide();
-            e.preventDefault();
-          }
-        }
-      }
-
-      hide();
-      document.addEventListener("click", save, false);
-
-      // Show the close buttons
-      html.className += " scripted-hide-message";
-    }
-
-  })();
-  */
 
 
   /* =NavDropDown
@@ -244,10 +84,11 @@
         }
       }
 
+      // Toggle the dropdown if the button is pressed
       function handleClick(e) {
         if (!parent) parent = document.getElementById("header");
         if (parent) {
-          if (!button) button = parent.querySelector(buttonSelector);
+          if (!button)    button    = parent.querySelector(buttonSelector);
           if (!container) container = parent.querySelector(containerSelector);
           if (e.target === button) {
             toggle(container);
@@ -257,6 +98,7 @@
         }
       }
 
+      // Show the drop down if any of its contents gain focus
       function handleFocus(e) {
         if (!parent) parent = document.getElementById("header");
         if (parent) {
@@ -348,6 +190,43 @@
     };
       
   })();
+
+
+  /* Utilities
+  ----------------------------------------------- */
+  function within(needle, haystack) {
+
+    // If the parent element is the target
+    if (needle === haystack) {
+      return true;
+
+    // If any of the children are the target
+    } else if (haystack.firstChild) {
+      var child = haystack.firstChild;
+      do {
+        if (within(needle, child)) return true;
+      } while (child = child.nextSibling);
+    }
+  }
+
+  function closest(element, nodeName) {
+
+    // If the element is the target
+    if (nodeName === element.nodeName.toLowerCase()) {
+      return element;
+    } else {
+      if (element.parentNode) return closest(element.parentNode, nodeName);
+    }
+  }
+
+  // http://stackoverflow.com/questions/3437786/how-to-get-web-page-size-browser-window-size-screen-size-in-a-cross-browser-wa
+  function windowWidth() {
+    var w = window;
+    var d = document;
+    var e = d.documentElement;
+    var g = d.getElementsByTagName('body')[0];
+    return w.innerWidth || e.clientWidth || g.clientWidth;
+  }
 
 
   /* Everything is ready, so start it up
