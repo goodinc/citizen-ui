@@ -4099,12 +4099,14 @@
   .comment-form .url {
     background: rgb(249, 249, 249);
   }
+  .comment-form .images {
+    background: rgb(249, 249, 249);
+  }
   .comment-form .images li {
     display: block;
     position: relative;
-    background: rgb(249, 249, 250);
+    background: white;
     border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
-    border-width: 0;
     border-radius: 0.25em;
     max-width: 50em;
     font-size: 0.75em; /* 12px / 16px */
@@ -4131,30 +4133,19 @@
     vertical-align: middle;
   }
 
-  .comment-form .images li .video img,
-  .comment-form .images li img {
+  .comment-form .images li button ~ img {
     height: auto;
     width: auto;
-    max-height: 15em;
-    border-radius: 0;
+    max-height: 6.7em;
   }
 
-  .story article .comment-form .images li .video img,
-  .story article .comment-form .images li img {
+
+  .story article .comment-form .images li .video img {
     height: auto;
     width: 100%;
     max-height: none;
   }
 
-
-/* TEMPORARY */
-.comment-form .images li img + span {
-  display: none;
-  float: left;
-}
-.comment-form .images li img + span.video {
-  display: block;
-}
 
   .comment-form .images li span {
     margin-left: 1em;
@@ -4187,8 +4178,7 @@
     border: 1px solid white;
   }
   .comment-form .images button {
-    background: black;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgb(153, 153, 153); /* @aluminum */
 
     float: right;
     color: white;
@@ -4257,43 +4247,65 @@
     background-position: center;
   }
   .comment-form .images button.up {
-    background-image: url(shared/comment/up.svg);
+    background-image: url(shared/comment/up.png);
   }
   .comment-form .images button.down {
+    background-image: url(shared/comment/down.png);
+  }
+  .supports-placeholder .comment-form .images button.up {
+    background-image: url(shared/comment/up.svg);
+  }
+  .supports-placeholder .comment-form .images button.down {
     background-image: url(shared/comment/down.svg);
   }
 
   .comment-form .images button.down {
     top: 2.75em;
   }
-  .comment-form .images button.down:first-child,
   .comment-form .images button.up {
     top: 0.5em;
   }
 
   .comment-form .images .video {
     position: relative;
+  }
+
+  .comment-form .images .video:before {
+    content: "";
+    display: block;
+    width: 2.5em;
+    height: 3.65em;
+    background: transparent url(shared/comment/play-white.png) no-repeat center;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    margin-left: -1.25em;
+  }
+  .supports-placeholder .comment-form .images .video:before {
+    background-image: url(shared/comment/play-white.svg);
+  }
+
+  /* TBD: Should these styles be applied to all commment forms? */
+  .story article .comment-form .images .video {
     display: table;
   }
-  .comment-form .images .video + span {
+  .story article .comment-form .images .video + span {
     display: block;
     margin-top: 0.875em;
     margin-bottom: 0.875em;
   }
-  .comment-form .images .video img {
+  .story article .comment-form .images .video img {
     margin-right: 0;
     display: block;
     float: none;
   }
-  .comment-form .images .video:before {
-    content: "";
-    display: block;
-    background: transparent url(shared/comment/play-white.svg) no-repeat center;
+  .story article .comment-form .images .video:before {
     background-size: 10% auto;
-    vertical-align: middle;
-    position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0;
   }
 
   .comment-form .url .cancel {
@@ -4340,12 +4352,12 @@
   .comment-form .file label br {
     display: none;
   }
-  .comment-form .url .cancel,
+  .comment-form          .url .cancel,
   .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before,
   .comment-form .file         label:before {
-    background: transparent url(shared/comment/picture.svg) no-repeat center;
-    background-size: 1.25em auto;
+    background-repeat: no-repeat;
+    background-position: center;
     content: "";
     display: inline-block;
     width: 1.25em;
@@ -4358,6 +4370,12 @@
     line-height: 1;
     border-radius: 0.25em;
     border-color: transparent;
+  }
+  .comment-form .file label:before {
+    background-image: url(shared/comment/picture.png);
+  }
+  .supports-placeholder .comment-form .file label:before {
+    background-image: url(shared/comment/picture.svg);
   }
   .comment-form .url .cancel {
     position: relative;
@@ -4384,7 +4402,11 @@
   }
   .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before {
-    background: transparent url(shared/comment/play.svg) no-repeat center;
+    background-image: url(shared/comment/play.png);
+  }
+  .supports-placeholder .comment-form.inactive .url label:before,
+  .supports-placeholder .comment-form .url.inactive label:before {
+    background-image: url(shared/comment/play.svg);
   }
   .comment-form .url        .cancel:hover,
   .comment-form .url        .cancel:focus,
@@ -4629,6 +4651,46 @@
   }
   .story article .comment-form textarea {
     border-top: 0.1em solid rgb(218, 220, 224);
+  }
+
+  /* TBD: Should this style be applied to all comment forms? */
+  .story article .comment-form .images li .video img,
+  .story article .comment-form .images li img {
+    height: auto;
+    width: 100%;
+    max-height: none;
+    border-radius: 0;
+  }
+  .story article .comment-form .images {
+    background-color: transparent;
+  }
+  .story article .comment-form .images li {
+    background-color: rgb(249, 249, 250);
+    border-width: 0;
+  }
+  .story article .comment-form .images li img + span {
+    display: none;
+  }
+  .story article .comment-form .images li img + span.video {
+    display: block;
+    float: left;
+  }
+  .story article .comment-form .images button {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .story article .comment-form .images button:hover,
+  .story article .comment-form .images button:active,
+  .story article .comment-form .images button:focus {
+    background-color: black;
+  }
+  .story article .comment-form .images .progress button {
+    background-color: transparent;
+  }
+  .story article .comment-form .images .progress button:hover,
+  .story article .comment-form .images .progress button:active,
+  .story article .comment-form .images .progress button:focus {
+    color: black;
   }
 
 
