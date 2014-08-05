@@ -3,6 +3,7 @@
     Shared styles, for all pages
   ----------------------------------------------- */
 
+
   /* =Fonts
   -----------------------------------------------
   -----------------------------------------------
@@ -168,7 +169,7 @@
   }
   h3 {
     font-size: 1.5em;                   /* 24px / @font-size */
-    line-height   : 1.1666666667em;     /* @line-height / 1.5 */
+    line-height   : 1.1666666667em;     /* @line-height / 3/2 */
     margin-top    : 1.1666666667em;
     margin-bottom : 0.5833333334em;
   }
@@ -334,26 +335,6 @@
     text-align: center;
     margin-bottom: 1.75em; /* @line-height */
   }
-  header.sub .pagination {
-    border-top-width: 0;
-    padding-top: 0;
-    margin-top: 1.3125em;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 60em) {
-    header.sub div {
-      position: relative;
-    }
-    header.sub div .skip {
-      margin-top: 0;
-      margin-bottom: 0;
-      position: absolute;
-      top: 1.3125em;
-      right: 1.75em;
-    }
-  }
-
   .pagination:after {
     /* @clearfix */
     content: "";
@@ -450,6 +431,26 @@
   }
   .pagination .previous:first-child:last-child {
     margin-right: 0;
+  }
+
+  /* For the “Onboarding” pages */
+  header.sub .pagination {
+    border-top-width: 0;
+    padding-top: 0;
+    margin-top: 1.3125em;
+    margin-bottom: 0;
+  }
+  @media (min-width: 60em) {
+    header.sub div {
+      position: relative;
+    }
+    header.sub div .skip {
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      top: 1.3125em;
+      right: 1.75em;
+    }
   }
 
 
