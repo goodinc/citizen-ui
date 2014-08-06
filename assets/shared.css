@@ -1717,9 +1717,9 @@
     content: "";
     display: block;
     position: absolute;
-    width: 0.6125em;
-    height: 0.6125em;
-    top: 0.45em;
+    width: 0.58125em;
+    height: 0.58125em;
+    top: 0.55em;
     left: 0.35em;
     border: 0.21875em solid rgb(101, 102, 102); /* @steel */
     border-left-color: transparent;
