@@ -264,7 +264,7 @@
   /* Search Results */
   mark,
   span.match {
-    background-color: rgb(255, 255, 204);
+    background-color: rgb(255, 255, 204); /* @mark */
     padding: 0.25em;
   }
 
@@ -399,7 +399,7 @@
   .pagination .previous a:active,
   .pagination .previous a:focus {
     background: rgb(250, 250, 250);
-    color: rgb(42, 43, 44);
+    color: rgb(42, 43, 44); /* @text-color */
   }
   .pagination .previous {
     margin-right : 0.875em;
@@ -1338,7 +1338,7 @@
   .secondary button:active,
   .secondary button:focus {
     background: rgb(250, 250, 250);
-    color: rgb(42, 43, 44);
+    color: rgb(42, 43, 44); /* @text-color */
   }
 
   /* Warning */
@@ -4560,7 +4560,7 @@
   .comment-form .container > p.note span,
   .comment-form .url .note,
   .comment-form .file .note {
-    background-color: rgb(255, 255, 204);
+    background-color: rgb(255, 255, 204); /* @mark */
     font-style: normal;
     color: rgb(51, 51, 51); /* @tungsten */
   }
