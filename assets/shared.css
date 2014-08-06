@@ -1694,10 +1694,15 @@
     font-weight: bold;
     color: rgb(101, 102, 102); /* @steel */
   }
+
+  /* SHIM: Make submit buttons look nice when the label has been replaced with a loading indicator.
+  (This could be improved by adding the loading class to the button
+  element itself and then setting text color to “transparent”). */
   span.loading {
     display: inline-block;
     vertical-align: middle;
   }
+
   .loading:before {
     content: "";
     display: inline-block;
