@@ -85,6 +85,12 @@
 
     </div>
   </header>
+  <pre><code>&lt;header id=&quot;header&quot;&gt;
+  &lt;h2&gt;&lt;a href=&quot;&#8230;&quot;&gt;GOOD&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;Creative Solutions for Living Well + Doing Good.&lt;/p&gt;
+  …
+&lt;/header&gt;</code></pre>
+
 
   <h2>Site (minimal)</h2>
   <header id="header" class="minimal">
@@ -138,8 +144,12 @@
 
     </div>
   </header>
+  <pre><code>&lt;header id=&quot;header&quot; class=&quot;<mark>minimal</mark>&quot;&gt;
+  &lt;h2&gt;&lt;a href=&quot;&#8230;&quot;&gt;GOOD&lt;/a&gt;&lt;/h2&gt;
+  …
+&lt;/header&gt;</code></pre>
 
-  <h2>Site (with account)</h2>
+  <h2>Site (signed in)</h2>
   <header id="header" class="minimal has-account">
 
     <ul>
@@ -204,6 +214,27 @@
 
     </div>
   </header>
+  <pre><code>&lt;header id=&quot;header&quot; class=&quot;minimal <mark>has-account</mark>&quot;&gt;
+  &lt;h2&gt;&lt;a href=&quot;&#8230;&quot;&gt;GOOD&lt;/a&gt;&lt;/h2&gt;
+  …
+  &lt;section class=&quot;account&quot;&gt;&#8230;&lt;/section&gt;
+&lt;/header&gt;</code></pre>
+
+  <h2>Section</h2>
+  <header class="sub">
+    <div class="container">
+      <div>
+        <h1>Section Title</h1>
+      </div>
+    </div>
+  </header>
+  <pre><code>&lt;header class=&quot;<mark>sub</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Section Title&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
 
   <h2>Topic</h2>
   <header class="topic-header">
@@ -213,6 +244,13 @@
       </div>
     </div><!-- /.container -->
   </header>
+  <pre><code>&lt;header class=&quot;<mark>topic-header</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Civic Hacking&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
 
   <h2>Member</h2>
   <header class="member-header">
@@ -220,49 +258,33 @@
       <div>
         <div class="basics">
           <h1>
-            <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=130x130%23" width="130" height="130" alt="" />Ethan Lipsitz
+            <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=130x130%23" width="130" height="130" alt="" />
+            Ethan Lipsitz
           </h1>
-          <form action="" method="post" class="following">
-            <h6>Following</h6>
-            <p>
-              <button type="submit" name="unfollow" value="1">Unfollow</button>
-            </p>
-          </form>
         </div>
         <div class="details">
           <p class="introduction">Co-founder and CEO of Apliiq, design clothes as unique as you are.</p>
           <p class="skills">I am good at giving a damn.</p>
-          <dl>
-            <dt class="location">Location</dt>
-            <dd>Locarno, Switzerland</dd>
-            <dt class="twitter">Twitter</dt>
-            <dd><a href="http://twitter.com/@jonnym1ller">@jonnym1ller</a></dd>
-            <dt class="website">Website</dt>
-            <dd><a href="http://blog.maptia.com" target="_blank" rel="nofollow">blog.maptia.com</a></dd>
-          </dl>
-        </div>
-        <div class="options">
-          <!--
-          <p class="edit"><a href="member-edit.html">Edit Profile</a></p>
-          -->
-          <ul>
-            <li class="flag">
-              <form action="" method="post">
-                <button type="submit" title="Flag this member if they’re posting inappropriate content">Flag</button>
-              </form>
-            </li>
-            <!--
-            <li class="spam">
-              <form action="" method="post">
-                <button type="submit" title="Mark this member as spam">Mark As Spam</button>
-              </form>
-            </li>
-            -->
-          </ul>
         </div>
       </div>
     </div><!-- /.container -->
   </header>
+  <pre><code>&lt;header class=&quot;<mark>member-header</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+      &lt;div class=&quot;basics&quot;&gt;
+        &lt;h1&gt;
+          &lt;img src=&quot;…&quot; width=&quot;130&quot; height=&quot;130&quot; alt=&quot;&quot; /&gt;
+          Ethan Lipsitz
+        &lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;details&quot;&gt;
+        &lt;p class=&quot;introduction&quot;&gt;Co-founder and CEO of Apliiq, design clothes as unique as you are.&lt;/p&gt;
+        &lt;p class=&quot;skills&quot;&gt;I am good at giving a damn.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
 
   <h2>Search</h2>
   <header class="search-header">
@@ -278,22 +300,24 @@
       </form>
     </div>
   </header>
-
-  <h2>Account</h2>
-  <header class="sub">
-    <div class="container">
-      <div>
-        <h1>Account Settings</h1>
-      </div>
-    </div>
-  </header>
+  <pre><code>&lt;header class=&quot;<mark>search-header</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
+      &lt;h1&gt;
+        &lt;label&gt;
+          &lt;span&gt;You searched for&#8230;&lt;/span&gt;
+          &lt;input name=&quot;q&quot; type=&quot;search&quot; placeholder=&quot;What are you looking for?&quot; value=&quot;<mark>dinosaur</mark>&quot; /&gt;
+        &lt;/label&gt;
+        &lt;button type=&quot;submit&quot;&gt;Search&lt;/button&gt;
+      &lt;/h1&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
 
   <h2>Onboarding</h2>
   <header class="sub">
     <div class="container">
       <div>
-
-        <!-- This should take the user to the page they were on before they joined. -->
         <p class="skip"><a href="">Skip this</a></p>
 
         <h1>Welcome Agus Echagüe, You’re In!</h1>
@@ -302,14 +326,25 @@
         <nav class="pagination">
           <ul>
             <li class="next">
-              <a href="join-invite.html" title="Next Page">Next</a>
+              <a href="" title="Next Page">Next</a>
             </li
           </ul>
         </nav>
-
       </div>
     </div>
   </header>
+  <pre><code>&lt;header class=&quot;<mark>sub</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;skip&quot;&gt;&lt;a href=&quot;&quot;&gt;Skip this&lt;/a&gt;&lt;/p&gt;
+
+      &lt;h1&gt;Welcome Agus Echag&#252;e, You&#8217;re In!&lt;/h1&gt;
+      &lt;p&gt;Nicely done! You just marked this to-do: &lt;strong&gt;Biking to Work&lt;/strong&gt;. See below to find great members and topics to follow.&lt;/p&gt;
+
+      &lt;nav class=&quot;pagination&quot;&gt;&#8230;&lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
 
 </body>
 </html>
