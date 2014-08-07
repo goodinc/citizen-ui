@@ -75,18 +75,19 @@
     <figcaption>12 pixels</figcaption>
   </figure>
 
+  <h2>On post detail pages</h2>
   <figure>
     <form action="" method="post" class="vote loading">
       <p><button type="submit" title="Promote this">It’s GOOD</button></p>
     </form>
     <pre><code>
 &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;vote <mark>loading</mark>&quot;&gt;
-&lt;p&gt;&lt;button type=&quot;submit&quot; title=&quot;Promote this&quot;&gt;It’s GOOD&lt;/button&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;button type=&quot;submit&quot; title=&quot;Promote this&quot;&gt;It’s GOOD&lt;/button&gt;&lt;/p&gt;
 &lt;/form&gt;
 </code></pre>
-    <figcaption>Vote, on post detail pages</figcaption>
   </figure>
 
+  <h2>In lists of activities</h2>
   <figure>
     <div class="meta">
       <form action="" method="post" class="vote loading">
@@ -99,17 +100,17 @@
     </div>
     <pre><code>&lt;div class=&quot;meta&quot;&gt;
 &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;vote <mark>loading</mark>&quot;&gt;
-&lt;p&gt;
-&lt;button type=&quot;submit&quot; title=&quot;Promote this&quot;&gt;
-  It’s GOOD
-&lt;/button&gt;
-&lt;/p&gt;
-&lt;/form&gt;
+  &lt;p&gt;
+    &lt;button type=&quot;submit&quot; title=&quot;Promote this&quot;&gt;
+      It’s GOOD
+    &lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/form&gt;
 &lt;/div&gt;
 </code></pre>
-    <figcaption>Vote, in lists of activities</figcaption>
   </figure>
 
+  <h2>Primary Button</h2>
   <figure>
     <form>
       <p class="submit">
@@ -125,9 +126,9 @@
     &lt;/button&gt;
   &lt;/p&gt;
 &lt;/form&gt;</code></pre>
-    <figcaption>Primary Button</figcaption>
   </figure>
 
+  <h2>Secondary Button</h2>
   <figure>
     <form>
       <p class="submit secondary">
@@ -143,9 +144,9 @@
     &lt;/button&gt;
   &lt;/p&gt;
 &lt;/form&gt;</code></pre>
-    <figcaption>Secondary Button</figcaption>
   </figure>
 
+  <h2>Form Message</h2>
   <figure>
     <form>
       <p class="loading">Posting Do...</p>
@@ -153,9 +154,9 @@
     <pre><code>&lt;form&gt;
   &lt;p class=&quot;loading&quot;&gt;Posting Do...&lt;/p&gt;
 &lt;/form&gt;</code></pre>
-    <figcaption>Form Message</figcaption>
   </figure>
 
+  <h2>Invite friends</h2>
   <figure>
     <section class="invite-friends">
       <h1>GOOD is better with friends</h1>
@@ -167,7 +168,27 @@
         <a href="">Invite Facebook friends</a>
       </p>
     </section>
-    <figcaption>Invite Friends</figcaption>
+  </figure>
+
+  <h2>Image upload</h2>
+  <figure>
+    <form action="" method="post" class="comment-form">
+      <ol class="images">
+        <li class="progress">
+          <span>bikes.jpg</span>
+          <button type="submit" name="remove" value="image1"><span>Remove this image</span></button>
+          <progress max="100" value="80">80% Loaded</progress>
+        </li>
+      </ol>
+    </form>
+    <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;ol class=&quot;images&quot;&gt;
+    &lt;li class=&quot;progress&quot;&gt;
+      …
+      &lt;progress max=&quot;100&quot; value=&quot;80&quot;&gt;80% Loaded&lt;/progress&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/form&gt;</code></pre>
   </figure>
 
 </body>
