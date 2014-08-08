@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <title>Forms / Good</title>
+  <title>Messages / Good</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -19,35 +19,64 @@
 </head>
 <body class="pattern">
 
-<section id="messages">
-  <h2>Messages</h2>
+  <h1>Messages</h1>
 
   <section class="message">
     <h1>Information Message</h1>
     <p>Consectetur adipisicing elit, sed do eiusmod.</p>
   </section>
+  <pre><code>&lt;section class=&quot;message&quot;&gt;
+  &lt;h1&gt;Information Message&lt;/h1&gt;
+  &lt;p&gt;Consectetur adipisicing elit, sed do eiusmod.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
 
   <section class="message success">
     <h1>Success Message</h1>
     <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
     <p class="close"><a href="" title="Close this message">Close</a></p>
   </section>
+  <pre><code>&lt;section class=&quot;message <mark>success</mark>&quot;&gt;
+  &lt;h1&gt;Success Message&lt;/h1&gt;
+  &lt;p&gt;Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.&lt;/p&gt;
+  &lt;p class=&quot;close&quot;&gt;&lt;a href=&quot;&quot; title=&quot;Close this message&quot;&gt;Close&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
 
   <section class="message error">
     <h1>Error Message</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </section>
+  <pre><code>&lt;section class=&quot;message <mark>error</mark>&quot;&gt;
+  &lt;h1&gt;Error Message&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
 
   <section class="message empty">
     <h1>Empty Content Message</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </section>
+  <pre><code>&lt;section class=&quot;message <mark>empty</mark>&quot;&gt;
+  &lt;h1&gt;Empty Content Message&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
 
   <!-- Member -->
-  <h2>Member</h2>
   <section class="message spam">
     <h1>This User is marked as Spam.</h1>
     <p>Not spam? No worries, just mark them <strong>Ham, Not Spam!</strong></p>
+  </section>
+  <pre><code>&lt;section class=&quot;message <mark>spam</mark>&quot;&gt;
+  &lt;h1&gt;This User is marked as Spam.&lt;/h1&gt;
+  &lt;p&gt;Not spam? No worries, just mark them &lt;strong&gt;Ham, Not Spam!&lt;/strong&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+  <!-- Admin -->
+  <section class="message flagged">
+    <h1>
+      These posts have been flagged as spam.
+    </h1>
+    <p>
+      You can <strong>Unflag</strong> or <strong>Mark as Spam.</strong>
+    </p>
   </section>
 
   <!-- For You -->
@@ -193,8 +222,6 @@
     <h1>Aw, shucks.</h1>
     <p>Can’t deliver GOOD to that email address. Try another?</p>
   </section>
-
-</section>
 
 <script src="../../assets/shared.js"></script>
 

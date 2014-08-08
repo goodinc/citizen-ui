@@ -19,17 +19,113 @@
 </head>
 <body class="pattern">
 
-<div id="content">
-  <div class="container">
+  <h2>Dialog</h2>
+  <section class="dialog">
+    <h1>Message Title</h1>
+    <p>Message Body – Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+    <p class="action"><a href="">Suggested action to take</a></p>
+  </section>
+<pre><code>&lt;section class=&quot;dialog&quot;&gt;
+  &lt;h1&gt;Message Title&lt;/h1&gt;
+  &lt;p&gt;Message Body &#8211; Lorem ipsum dolor sit amet…&lt;/p&gt;
+  &lt;p class=&quot;action&quot;&gt;&lt;a href=&quot;&quot;&gt;Suggested action to take&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre>
 
-    <section class="dialog">
-      <h1>Message Title</h1>
-      <p>Message Body – Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-      <p class="action"><a href="">Suggested action to take</a></p>
+  <h2>Back button</h2>
+  <section class="dialog">
+    <p class="back"><a href="">Go Back</a></p>
+    <h1>Message Title</h1>
+    <p>Message Body – Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+  <pre><code>&lt;section class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;<mark>back</mark>&quot;&gt;&lt;a href=&quot;&quot;&gt;Go Back&lt;/a&gt;&lt;/p&gt;
+  &lt;h1&gt;Message Title&lt;/h1&gt;
+  &lt;p&gt;Message Body &#8211; Lorem ipsum dolor sit amet…&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+  <h2>Section</h2>
+  <section class="dialog">
+    <h1>Message Title</h1>
+    <section>
+      <h2>Section title</h2>
+      <p>Message Body – Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </section>
+    <section>
+      <h2>Another title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+  </section>
+  <pre><code>&lt;section class=&quot;dialog&quot;&gt;
+  &lt;h1&gt;Message Title&lt;/h1&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Section title&lt;/h2&gt;
+    &lt;p&gt;Message Body &#8211; Lorem ipsum dolor sit amet…&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Another title&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet…&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
 
-  </div><!-- /.container -->
-</div><!-- /#content -->
+  <h2>Related action</h2>
+  <section class="dialog">
+    <h1>Message Title</h1>
+    <p>Message Body – Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <aside>
+      <a href="">
+        <h2>Not what you expected?</h2>
+        <p>Alternate action to take</p>
+      </a>
+    </aside>
+  </section>
+  <pre><code>&lt;section class=&quot;dialog&quot;&gt;
+  &lt;h1&gt;Message Title&lt;/h1&gt;
+  &lt;p&gt;Message Body &#8211; Lorem ipsum dolor sit amet…&lt;/p&gt;
+
+  &lt;aside&gt;
+    &lt;a href=&quot;…&quot;&gt;
+      &lt;h2&gt;Not what you expected?&lt;/h2&gt;
+      &lt;p&gt;Alternate action to take&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/aside&gt;
+&lt;/section&gt;</code></pre>
+
+  <h2>Form</h2>
+  <section class="dialog">
+    <h1>Reset Your Password</h1>
+    <p>Enter your email address and we’ll send instructions about how to reset your password.</p>
+
+    <form action="" method="post">
+      <p>
+        <label>
+          <span>Email Address</span><br />
+          <input type="email" />
+        </label>
+      </p>
+      <p class="submit">
+        <button type="submit">Submit</button>
+      </p>
+    </form>
+  </section>
+  <pre><code>&lt;section class=&quot;dialog&quot;&gt;
+  &lt;h1&gt;Reset Your Password&lt;/h1&gt;
+  &lt;p&gt;Enter your email address and we&#8217;ll send instructions about how to reset your password.&lt;/p&gt;
+
+  &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+    &lt;p&gt;
+      &lt;label&gt;
+        &lt;span&gt;Email Address&lt;/span&gt;&lt;br /&gt;
+        &lt;input type=&quot;email&quot; /&gt;
+      &lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;submit&quot;&gt;
+      &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/form&gt;
+&lt;/section&gt;</code></pre>
+
+</section>
 
 </body>
 </html>

@@ -29,13 +29,13 @@
       <p class="text">
         <label>
           <span>First Name</span><br />
-          <input type="text" name="first_name" />
+          <input type="text"/>
         </label>
       </p>
       <pre><code>&lt;p class=&quot;text&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;Text Field&lt;/span&gt;&lt;br /&gt;
-    &lt;input type=&quot;text&quot; name=&quot;first_name&quot; /&gt;
+    &lt;input type=&quot;text&quot; /&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     </figure>
@@ -43,27 +43,27 @@
       <p class="text">
         <label>
           <span>Email</span><br />
-          <input type="email" name="email" placeholder="e.g. name@domain.com" />
+          <input type="email" placeholder="name@domain.com" />
         </label>
       </p>
     </figure>
     <pre><code>&lt;p class=&quot;text&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;Email&lt;/span&gt;&lt;br /&gt;
-    &lt;input type=&quot;<mark>email</mark>&quot; name=&quot;email&quot; placeholder=&quot;e.g. name@domain.com&quot; /&gt;
+    &lt;input type=&quot;<mark>email</mark>&quot; placeholder=&quot;name@domain.com&quot; /&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     <figure>
       <p class="text">
         <label>
           <span>Discuss</span><br />
-          <textarea rows="6" cols="20" name="comment" placeholder="What are your thoughts?"></textarea>
+          <textarea rows="6" cols="20" placeholder="What are your thoughts?"></textarea>
         </label>
       </p>
       <pre><code>&lt;p class=&quot;text&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;Discuss&lt;/span&gt;&lt;br /&gt;
-    &lt;textarea rows=&quot;6&quot; cols=&quot;20&quot; name=&quot;comment&quot; placeholder=&quot;What are your thoughts?&quot;&gt;&lt;/textarea&gt;
+    &lt;textarea rows=&quot;6&quot; cols=&quot;20&quot; placeholder=&quot;What are your thoughts?&quot;&gt;&lt;/textarea&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     </figure>
@@ -74,7 +74,7 @@
       <p class="text error">
         <label>
           <span>First Name</span><br />
-          <input type="text" name="first_name" />
+          <input type="text" />
         </label>
         <strong class="error-message">Please enter your first name.</strong>
       </p>
@@ -92,13 +92,13 @@
       <p class="text success">
         <label>
           <span>First Name</span><br />
-          <input type="text" name="first_name" value="Hayao" />
+          <input type="text" value="Hayao" />
         </label>
       </p>
       <pre><code>&lt;p class=&quot;text <mark>success</mark>&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;Text Field&lt;/span&gt;&lt;br /&gt;
-    &lt;input type=&quot;text&quot; name=&quot;first_name&quot; value=&quot;Hayao&quot; /&gt;
+    &lt;input type=&quot;text&quot; value=&quot;Hayao&quot; /&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     </figure>
@@ -108,13 +108,13 @@
       <p class="text">
         <label>
           <span>First Name <em>This field is optional</em></span><br />
-          <input type="text" name="first_name" />
+          <input type="text" />
         </label>
       </p>
       <pre><code>&lt;p class=&quot;text&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;Description <mark>&lt;em&gt;</mark>This field is optional<mark>&lt;/em&gt;</mark>&lt;/span&gt;&lt;br /&gt;
-    &lt;input type=&quot;text&quot; name=&quot;first_name&quot; /&gt;
+    &lt;input type=&quot;text&quot; /&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     </figure>
@@ -124,13 +124,13 @@
       <p class="text">
         <label>
           <span>First Name <small>Plain text please</small></span><br />
-          <input type="text" name="first_name" />
+          <input type="text" />
         </label>
       </p>
       <pre><code>&lt;p class=&quot;text&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;Description <mark>&lt;small&gt;</mark>Plain text please<mark>&lt;/small&gt;</mark>&lt;/span&gt;&lt;br /&gt;
-    &lt;input type=&quot;text&quot; name=&quot;first_name&quot; /&gt;
+    &lt;input type=&quot;text&quot; /&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     </figure>
@@ -140,14 +140,14 @@
       <p class="text">
         <label>
           <span>First Name</span><br />
-          <input type="text" name="first_name" />
+          <input type="text" />
           <span class="note">Enter up to 50 characters</span>
         </label>
       </p>
       <pre><code>&lt;p class=&quot;text&quot;&gt;
   &lt;label&gt;
     &lt;span&gt;First Name&lt;/span&gt;&lt;br /&gt;
-    &lt;input type=&quot;text&quot; name=&quot;first_name&quot; /&gt;
+    &lt;input type=&quot;text&quot; /&gt;
     &lt;span class=&quot;<mark>note</mark>&quot;&gt;Enter up to 50 characters&lt;/span&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
@@ -157,17 +157,86 @@
     <figure>
       <p class="checkbox">
         <label>
-          <input type="checkbox" name="option" checked="checked" />
+          <input type="checkbox" checked="checked" />
           <span>Yes, please send me an email</span>
         </label>
       </p>
       <pre><code>&lt;p class=&quot;checkbox&quot;&gt;
   &lt;label&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;option&quot; checked=&quot;checked&quot; /&gt;
+    &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;
     &lt;span&gt;Yes, please send me an email&lt;/span&gt;
   &lt;/label&gt;
 &lt;/p&gt;</code></pre>
     </figure>
+
+    <h2>Fieldset</h2>
+    <fieldset>
+      <legend>GOOD Local Editions</legend>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>San Francisco, California</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" checked="checked" />
+            <span>Los Angeles, California</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>Chicago, Illinois</span>
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;GOOD Local Editions&lt;/legend&gt;
+  …
+&lt;/fieldset&gt;</code></pre>
+
+    <h2>List with headlines</h2>
+    <fieldset>
+      <legend>GOOD Newsletters</legend>
+      <ul class="headlines">
+        <li>
+          <h3>
+            <label>
+              <input type="checkbox" />
+              <span>GOOD HQ Updates</span>
+            </label>
+          </h3>
+          <p class="note">Keeping you posted on the latest happenings at GOOD HQ</p>
+        </li>
+        <li>
+          <h3>
+            <label>
+              <input type="checkbox" />
+              <span>GOOD Digest</span>
+            </label>
+          </h3>
+          <p class="note">Choose a daily or weekly roundup of top links shared by GOOD members</p>
+        </li>
+      </ul>
+    </fieldset>
+    <pre><code>
+&lt;ul class=&quot;<mark>headlines</mark>&quot;&gt;
+  &lt;li&gt;
+    &lt;h3&gt;
+      &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; /&gt;
+        &lt;span&gt;GOOD HQ Updates&lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/h3&gt;
+    &lt;p class=&quot;note&quot;&gt;Keeping you posted on the latest happenings at GOOD HQ&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    …
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
     <h2>Submit</h2>
     <figure>
@@ -189,262 +258,6 @@
 &lt;/ul&gt;</code></pre>
     </figure>
   </form>
-</section>
-
-<section id="search">
-  <h2>Search form</h2>
-
-  <figure>
-    <section class="search-friends">
-      <form action="" method="get">
-        <h2>Search for a friend</h2>
-        <p>
-          <label>
-            <span>Type a friend’s name…</span>
-            <input type="search" name="q" placeholder="Type a friend’s name…" />
-          </label>
-          <button type="submit">Search</button>
-        </p>
-      </form>
-    </section>
-    <pre><code>&lt;section class=&quot;search-friends&quot;&gt;
-  &lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
-    &lt;h2&gt;Search for a friend&lt;/h2&gt;
-    &lt;p&gt;
-      &lt;label&gt;
-        &lt;span&gt;Type a friend&#8217;s name&#8230;&lt;/span&gt;
-        &lt;input type=&quot;<mark>search</mark>&quot; name=&quot;q&quot; placeholder=&quot;Type a friend&#8217;s name&#8230;&quot; /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Search&lt;/button&gt;
-    &lt;/p&gt;
-  &lt;/form&gt;
-&lt;/section&gt;</code></pre>
-  </figure>
-
-  <figure>
-    <section class="search-again">
-      <form action="" method="get">
-        <h2>Search Again</h2>
-        <p>
-          <label>
-            <span><strong>Search</strong> for topics, members or keywords…</span>
-            <input type="search" name="q" placeholder="What are you looking for?" value="dinosaur" />
-          </label>
-          <button type="submit">Search</button>
-        </p>
-      </form>
-    </section>
-    <pre><code>&lt;section class=&quot;search-again&quot;&gt;
-  &lt;form action=&quot;&quot; method=&quot;get&quot;&gt;
-    &lt;h2&gt;Search Again&lt;/h2&gt;
-    &lt;p&gt;
-      &lt;label&gt;
-        &lt;span&gt;&lt;strong&gt;Search&lt;/strong&gt; for topics, members or keywords&#8230;&lt;/span&gt;
-        &lt;input type=&quot;<mark>search</mark>&quot; name=&quot;q&quot; placeholder=&quot;What are you looking for?&quot; value=&quot;dinosaur&quot; /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Search&lt;/button&gt;
-    &lt;/p&gt;
-  &lt;/form&gt;
-&lt;/section&gt;</code></pre>
-  </figure>
-
-</section>
-
-<section id="post">
-  <h2>Post form</h2>
-
-  <section class="post-form">
-
-    <header>
-      <h1>New Link</h1>
-
-      <!-- Add a classname of “inactive” to hide the tip (ideally with the same JavaScript that makes the tip function) -->
-      <section class="tip inactive">
-        <div class="container">
-          <h2>Tip</h2>
-          <p>More details</p>
-        </div>
-      </section>
-    </header>
-
-    <form action="" method="post">
-      <p class="text">
-        <label>
-          <span>Label <em>(Optional)</em> <small>Minor Note</small></span><br />
-          <textarea name="description" maxlength="500" placeholder="What’s your take on this?"></textarea>
-          <span class="note">Character count</span>
-        </label>
-      </p>
-      <p class="text">
-        <label>
-          <span>Add tags <small>Comma separated.</small></span><br />
-          <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
-        </label>
-      </p>
-
-      <ul class="submit">
-        <li><button type="submit">Post</button></li>
-        <li><a href="">Cancel</a></li>
-      </ul>
-    </form>
-
-  </section>
-  <pre><code>&lt;section class=&quot;post-form&quot;&gt;
-  &lt;header&gt;
-    &lt;h1&gt;New Link&lt;/h1&gt;
-  &lt;/header&gt;
-  &lt;form&gt;
-    &#8230;
-  &lt;/form&gt;
-&lt;/section&gt;</code></pre>
-
-  <section class="post-form">
-
-    <header>
-      <h1>New Do</h1>
-
-      <!-- Add a classname of “inactive” to hide the tip (ideally with the same JavaScript that makes the tip function) -->
-      <section class="tip inactive">
-        <div class="container">
-          <h2>Tip</h2>
-          <p>More details</p>
-        </div>
-      </section>
-    </header>
-
-    <form action="" method="post">
-      <p class="text">
-        <label>
-          <span>Label <em>(Optional)</em> <small>Minor Note</small></span><br />
-          <textarea name="details" maxlength="1000" placeholder="What are some details to help others get this done?"></textarea>
-          <span class="note">Character count</span>
-        </label>
-      </p>
-      <p class="text">
-        <label>
-          <span>Add tags <small>Comma separated.</small></span><br />
-          <input type="text" name="tags" placeholder="ex. biking, conscious living, design" />
-        </label>
-      </p>
-
-      <ul class="submit">
-        <li><button type="submit">Post</button></li>
-        <li><a href="">Cancel</a></li>
-      </ul>
-    </form>
-
-  </section>
-  <pre><code>&lt;section class=&quot;post-form&quot;&gt;
-  &lt;header&gt;
-    &lt;h1&gt;New Do&lt;/h1&gt;
-  &lt;/header&gt;
-  &lt;form&gt;
-    &#8230;
-  &lt;/form&gt;
-&lt;/section&gt;</code></pre>
-
-</section>
-
-<section id="tip">
-  <h2>Tooltip</h2>
-
-  <section class="post-form">
-    <h1>New Post</h1>
-
-    <section class="tip">
-      <div class="container">
-        <h2>Title</h2>
-        <p>More details to help someone with this form.</p>
-      </div>
-    </section>
-  </section>
-  <pre><code>&lt;section class=&quot;post-form&quot;&gt;
-  …
-  &lt;section class=&quot;tip&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;h2&gt;Title&lt;/h2&gt;
-      &lt;p&gt;More details to help someone with this form.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/section&gt;</code></pre>
-
-  <section class="post-form">
-    <h1>New Post</h1>
-
-    <!-- Add a classname of “inactive” to hide the tip (ideally with the same JavaScript that makes the tip function) -->
-    <section class="tip inactive">
-      <div class="container">
-        <h2>Title</h2>
-        <p>More details to help someone with this form.</p>
-      </div>
-    </section>
-  </section>
-  <pre><code>&lt;section class=&quot;post-form&quot;&gt;
-  …
-  &lt;section class=&quot;tip <mark>inactive</mark>&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;h2&gt;Title&lt;/h2&gt;
-      &lt;p&gt;More details to help someone with this form.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/section&gt;</code></pre>
-
-</section>
-
-<section>
-  <h2>Tooltip (hover)</h2>
-
-  <h3>Images &amp; Video</h3>
-  <form action="" method="post" class="comment-form">
-    <div class="container">
-      <p class="url inactive">
-        <label>
-          <span>Embed Video</span><br />
-          <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
-        </label>
-      </p>
-      <p class="file">
-        <label>
-          <span>Attach Image</span><br />
-          <input type="file" name="image[]" />
-        </label>
-      </p>
-    </div>
-  </form>
-  <pre><code>&lt;form class=&quot;comment-form&quot;&gt;
-  &lt;p class=&quot;url inactive&quot;&gt;
-    &lt;label&gt;
-      &lt;span&gt;Embed Video&lt;/span&gt;&lt;br /&gt;
-      …
-    &lt;/label&gt;
-  &lt;/p&gt;
-  &lt;p class=&quot;file&quot;&gt;
-    &lt;label&gt;
-      &lt;span&gt;Attach Image&lt;/span&gt;&lt;br /&gt;
-      …
-    &lt;/label&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</code></pre>
-
-  <h3>Cancel</h3>
-  <form action="" method="post" class="comment-form">
-    <div class="container">
-      <p class="url">
-        <label>
-          <span>Embed Video</span><br />
-          <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
-        </label>
-        <button type="submit" name="embed" value="1">Embed</button>
-        <button type="submit" name="cancel" value="1" class="cancel"><span>Cancel</span></button>
-      </p>
-    </div>
-  </form>
-  <pre><code>&lt;form class=&quot;comment-form&quot;&gt;
-  &lt;p class=&quot;url&quot;&gt;
-    …
-    &lt;button … class=&quot;cancel&quot;&gt;&lt;span&gt;Cancel&lt;/span&gt;&lt;/button&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</code></pre>
 </section>
 
 <script src="../../assets/shared.js"></script>

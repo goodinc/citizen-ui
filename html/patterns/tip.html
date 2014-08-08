@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Tooltip / Good</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../../assets/shared.css" />
+  <script>
+    // fonts.com tracking
+    var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
+    (function() {
+      var t = document.createElement("script"); t.type = "text/javascript"; t.async = "true";
+      t.src = "//fast.fonts.net/t/trackingCode.js";
+      var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+</head>
+<body class="pattern">
+
+<section>
+  <h1>Tooltip</h1>
+
+  <section class="post-form">
+    <h1>New Post</h1>
+
+    <section class="tip">
+      <div class="container">
+        <h2>Title</h2>
+        <p>More details to help someone with this form.</p>
+      </div>
+    </section>
+  </section>
+  <pre><code>&lt;section class=&quot;post-form&quot;&gt;
+  …
+  &lt;section class=&quot;tip&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2&gt;Title&lt;/h2&gt;
+      &lt;p&gt;More details to help someone with this form.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+
+  <section class="post-form">
+    <h1>New Post</h1>
+
+    <!-- Add a classname of “inactive” to hide the tip (ideally with the same JavaScript that makes the tip function) -->
+    <section class="tip inactive">
+      <div class="container">
+        <h2>Title</h2>
+        <p>More details to help someone with this form.</p>
+      </div>
+    </section>
+  </section>
+  <pre><code>&lt;section class=&quot;post-form&quot;&gt;
+  …
+  &lt;section class=&quot;tip <mark>inactive</mark>&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h2&gt;Title&lt;/h2&gt;
+      &lt;p&gt;More details to help someone with this form.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
+
+</section>
+
+<section>
+  <h2>Tooltip (hover)</h2>
+
+  <form action="" method="post" class="comment-form">
+    <div class="container">
+      <p class="url inactive">
+        <label>
+          <span>Embed Video</span><br />
+          <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
+        </label>
+      </p>
+      <p class="file">
+        <label>
+          <span>Attach Image</span><br />
+          <input type="file" name="image[]" />
+        </label>
+      </p>
+    </div>
+  </form>
+  <pre><code>&lt;form class=&quot;comment-form&quot;&gt;
+  &lt;p class=&quot;url inactive&quot;&gt;
+    &lt;label&gt;
+      &lt;span&gt;Embed Video&lt;/span&gt;&lt;br /&gt;
+      …
+    &lt;/label&gt;
+  &lt;/p&gt;
+  &lt;p class=&quot;file&quot;&gt;
+    &lt;label&gt;
+      &lt;span&gt;Attach Image&lt;/span&gt;&lt;br /&gt;
+      …
+    &lt;/label&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+
+  <form action="" method="post" class="comment-form">
+    <div class="container">
+      <p class="url">
+        <label>
+          <span>Embed Video</span><br />
+          <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
+        </label>
+        <button type="submit" name="embed" value="1">Embed</button>
+        <button type="submit" name="cancel" value="1" class="cancel"><span>Cancel</span></button>
+      </p>
+    </div>
+  </form>
+  <pre><code>&lt;form class=&quot;comment-form&quot;&gt;
+  &lt;p class=&quot;url&quot;&gt;
+    …
+    &lt;button … class=&quot;cancel&quot;&gt;&lt;span&gt;Cancel&lt;/span&gt;&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+</section>
+
+<script src="../../assets/shared.js"></script>
+
+</body>
+</html>
