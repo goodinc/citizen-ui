@@ -1,96 +1,66 @@
-
-
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
+  <title>GOOD</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Good</title>
-  <style type="text/css">
-    html, body, #outer-outer-container, #outer-container {
-      height: 100%;
-      min-height: 100%;
-    }
+
+  <link rel="stylesheet" href="assets/shared.css" />
+  <script>
+    // fonts.com tracking
+    var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
+    (function() {
+      var t = document.createElement("script"); t.type = "text/javascript"; t.async = "true";
+      t.src = "//fast.fonts.net/t/trackingCode.js";
+      var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+  <style>
+  @media (min-width: 50em) {  
     body {
-      font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: 0;
-      background: rgb(244, 245, 244);
-      color: rgb(0, 1, 0); /* @text-color */
+      text-align: center;
     }
-    a {
-      color: rgb(110, 160, 26); /* @link-color */
-      text-decoration: none;
+    section {
+      text-align: left;
+      margin-left: 1.75em;
+      margin-right: 1.75em;
     }
-    a:hover,
-    a:active,
-    a:focus {
-      text-decoration: underline;
+    .pattern .logotype {
+      font-size: 10em;
     }
-    a:visited {
-      color: #333;
-    }
-    h1 {
-      margin-top: 0;
-      margin-bottom: 1em;
-    }
-    h2 {
-      margin-bottom: 0;
-      font-weight: normal;
-    }
-    h2 strong {
-      font-weight: bold;
-    }
-    h2 + p {
-      margin-top: 0;
-      max-width: 25em;
-    }
-    #container {
-      margin: 50px auto;
-    }
-    #outer-outer-container {
-      margin: 0 auto;
-      display: table;
-      padding: 2em;
-    }
-    #outer-container {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 0 auto;
-    }
+  }
+  a {
+    text-decoration: none;
+  }
+  section h2 {
+    color: rgb(42, 43, 44); /* @text-color */
+  }
   </style>
 </head>
-<body>
-  <div id="outer-outer-container">
-    <div id="outer-container">
-      <div id="container">
+<body class="pattern index">
 
-        <header>
-          <h1>Good</h1>
-        </header>
+  <h1 class="logotype">GOOD</h1>
 
-        <section>
-          <section>
-            <a href="html/prototype/">
-              <h2>Prototype</h2>
-              <p>Pages, features, and example content</p>
-            </a>
-          </section>
-          <section>
-            <a href="html/messages/">
-              <h2>Messages</h2>
-              <p>Notices that appear throughout the site</p>
-            </a>
-          </section>
-          <section>
-            <a href="html/patterns/">
-              <h2>Patterns</h2>
-              <p>Reusable pieces of HTML, for new content and pages</p>
-            </a>
-          </section>
-        </section>
+  <section>
+    <a href="html/prototype/">
+      <h2>Prototype</h2>
+      <p>Pages, features, and example content</p>
+    </a>
+  </section>
+  <section>
+    <a href="html/messages/">
+      <h2>Messages</h2>
+      <p>Notices that appear throughout the site</p>
+    </a>
+  </section>
+  <section>
+    <a href="html/patterns/">
+      <h2>Patterns</h2>
+      <p>Reusable pieces of HTML, for new content and pages</p>
+    </a>
+  </section>
 
-      </div>
-    </div>
-  </div>
 </body>
 </html>

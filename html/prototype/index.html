@@ -2,187 +2,122 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
+  <title>Prototype / GOOD</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTML Prototype / Good</title>
-  <style type="text/css">
-    html, body, #outer-outer-container, #outer-container {
-      height: 100%;
-      min-height: 100%;
-    }
-    body {
-      font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: 0;
-      background: rgb(244, 245, 244);
-      color: rgb(0, 1, 0); /* @text-color */
-    }
-    header h1 {
-      margin-bottom: 0;
-    }
-    header h1 a,
-    header h1 a:visited {
-      color: inherit;
-    }
-    header h2 {
-      margin-top: 0;
-      font-style: normal;
-      color: #999;
-    }
-    a[href] {
-      color: rgb(110, 160, 26); /* @link-color */
-      text-decoration: none;
-    }
-    a[href]:hover,
-    a[href]:active,
-    a[href]:focus {
-      text-decoration: underline;
-    }
-    a[href]:visited {
-      color: #333;
-    }
-    ul, li {
-      margin-left: 0;
-      padding-left: 0;
-    }
-    h3 {
-      margin-bottom: 0;
-    }
-    ul {
-      margin-top: 0.5em;
-      padding-left: 0.5em;
-    }
-    #container {
-      margin: 50px auto;
-    }
-    #outer-outer-container {
-      margin: 0 auto;
-      display: table;
-      padding: 2em;
-    }
-    #outer-container {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 0 auto;
-    }
-    #container > section:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    #container > section > section {
-      float: left;
-      margin-right: 3em;
-    }
-    li {
-      color: #bbb;
-    }
-    .new a {
-      color: #a93c44;
-    }
-  </style>
+
+  <link rel="stylesheet" href="../../assets/shared.css" />
+  <script>
+    // fonts.com tracking
+    var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
+    (function() {
+      var t = document.createElement("script"); t.type = "text/javascript"; t.async = "true";
+      t.src = "//fast.fonts.net/t/trackingCode.js";
+      var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s);
+    })();
+  </script>
 </head>
-<body>
-  <div id="outer-outer-container">
-    <div id="outer-container">
-      <div id="container">
+<body class="pattern index">
 
-        <header>
-          <h1><a href="../../">Good</a></h1>
-          <h2>HTML Prototype</h2>
-        </header>
+  <h2 class="logotype"><a href="../../">GOOD</a></h2>
+  <nav class="sub">
+    <ul>
+      <li><a href="../patterns/">Patterns</a></li>
+      <li><a href="../messages/">Messages</a></li>
+      <li><a href="../prototype/">Prototype</a></li>
+    </ul>
+  </nav>
 
-        <section>
-          <section>
-            <h3>Introduction</h3>
-            <ul>
-              <li><a href="home.html">Featured</a></li>
-              <li><a href="for-you.html">For You</a></li>
-              <li><a href="explore.html">Explore</a></li>
-              <li><a href="about.html">About</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Do</h3>
-            <ul>
-              <li><a href="post-action.html">Details</a></li>
-              <li><a href="post-action-new.html">New</a></li>
-              <li><a href="post-action-edit.html">Edit</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Story</h3>
-            <ul>
-              <li><a href="story.html">Details</a></li>
-              <li><a href="story-video.html">Details (Video)</a></li>
-              <li><a href="story-edit.html">Edit</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Link</h3>
-            <ul>
-              <li><a href="post-link.html">Details</a></li>
-              <li><a href="post-link-new.html">New</a></li>
-              <li><a href="post-link-edit.html">Edit</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Topic</h3>
-            <ul>
-              <li><a href="topic.html">Posts</a></li>
-              <li><a href="topic-followers.html">Followers</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Member</h3>
-            <ul>
-              <li><a href="member.html">Activity</a></li>
-              <li><a href="member-followers.html">Followers</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Search</h3>
-            <ul>
-              <li><a href="search.html">Results</a></li>
-            </ul>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Join</h3>
-            <ul>
-              <li><a href="join.html">Join</a></li>
-              <li><a href="sign-in.html">Sign In</a></li>
-              <li><a href="forgot.html">Forgot</a></li>
-              <li><a href="forgot-success.html">Forgot (Confirmation)</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Onboarding</h3>
-            <ul>
-              <li><a href="join-confirmation.html">Find Friends</a></li>
-              <li><a href="join-facebook.html">Find Friends (Facebook)</a></li>
-              <li><a href="join-invite.html">Invite Friends (Facebook)</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Account</h3>
-            <ul>
-              <li><a href="member-edit.html">Profile</a></li>
-              <li class="in-progress"><a href="account.html">Settings</a></li>
-              <li><a href="friends-find.html">Find Friends</a></li>
-              <li><a href="friends-invite.html">Invite Friends</a></li>
-            </ul>
-          </section>
-          <section>
-            <h3>Admin</h3>
-            <ul>
-              <li><a href="admin-featured.html">Featured</a></li>
-              <li class="in-progress"><a href="admin-stories.html">Stories</a></li>
-            </ul>
-          </section>
-        </section>
+  <h1>Prototype</h1>
 
-      </div>
-    </div>
-  </div>
+  <section>
+    <h3>Introduction</h3>
+    <ul>
+      <li><a href="home.html">Featured</a></li>
+      <li><a href="for-you.html">For You</a></li>
+      <li><a href="explore.html">Explore</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Do</h3>
+    <ul>
+      <li><a href="post-action.html">Details</a></li>
+      <li><a href="post-action-new.html">New</a></li>
+      <li><a href="post-action-edit.html">Edit</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Story</h3>
+    <ul>
+      <li><a href="story.html">Details</a></li>
+      <li><a href="story-video.html">Details (Video)</a></li>
+      <li><a href="story-edit.html">Edit</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Link</h3>
+    <ul>
+      <li><a href="post-link.html">Details</a></li>
+      <li><a href="post-link-new.html">New</a></li>
+      <li><a href="post-link-edit.html">Edit</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Topic</h3>
+    <ul>
+      <li><a href="topic.html">Posts</a></li>
+      <li><a href="topic-followers.html">Followers</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Member</h3>
+    <ul>
+      <li><a href="member.html">Activity</a></li>
+      <li><a href="member-followers.html">Followers</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Search</h3>
+    <ul>
+      <li><a href="search.html">Results</a></li>
+    </ul>
+  </section>
+</section>
+<section>
+  <section>
+    <h3>Join</h3>
+    <ul>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="sign-in.html">Sign In</a></li>
+      <li><a href="forgot.html">Forgot</a></li>
+      <li><a href="forgot-success.html">Forgot (Confirmation)</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Onboarding</h3>
+    <ul>
+      <li><a href="join-confirmation.html">Find Friends</a></li>
+      <li><a href="join-facebook.html">Find Friends (Facebook)</a></li>
+      <li><a href="join-invite.html">Invite Friends (Facebook)</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Account</h3>
+    <ul>
+      <li><a href="member-edit.html">Profile</a></li>
+      <li class="in-progress"><a href="account.html">Settings</a></li>
+      <li><a href="friends-find.html">Find Friends</a></li>
+      <li><a href="friends-invite.html">Invite Friends</a></li>
+    </ul>
+  </section>
+  <section>
+    <h3>Admin</h3>
+    <ul>
+      <li><a href="admin-featured.html">Featured</a></li>
+      <li class="in-progress"><a href="admin-stories.html">Stories</a></li>
+    </ul>
+  </section>
+
 </body>
 </html>
