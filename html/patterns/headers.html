@@ -30,6 +30,15 @@
 </head>
 <body class="pattern">
 
+  <h2 class="logotype"><a href="../../">GOOD</a></h2>
+  <nav class="sub">
+    <ul>
+      <li><a href="./">Patterns</a></li>
+      <li><a href="../messages/">Messages</a></li>
+      <li><a href="../prototype/">Prototype</a></li>
+    </ul>
+  </nav>
+
   <h1>Header</h1>
 
   <h2>Site</h2>
@@ -409,15 +418,12 @@
         </ul>
       </section>
 
-      <form action="" method="post" class="voted">
-        <h6>It’s GOOD</h6>
-        <p>
-          <button type="submit" name="undo" value="1">Undo</button>
-        </p>
+      <form action="" method="post" class="vote">
+        <p><button type="submit" title="Promote this">It’s GOOD</button></p>
       </form>
     </header>
   </section>
-  <pre><code>&lt;section class=&quot;post&quot;&gt;
+  <pre><code>&lt;section class=&quot;<mark>post</mark>&quot;&gt;
   &lt;header&gt;
     &lt;h2 class=&quot;<mark>link</mark>&quot;&gt;Link&lt;/h2&gt;
 
@@ -428,9 +434,8 @@
       &lt;/ul&gt;
     &lt;/section&gt;
 
-    &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;voted&quot;&gt;
-      &lt;h6&gt;It’s GOOD&lt;/h6&gt;
-      &lt;p&gt;…&lt;/p&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;vote&quot;&gt;
+      &lt;p&gt;&lt;button type=&quot;submit&quot; title=&quot;Promote this&quot;&gt;It’s GOOD&lt;/button&gt;&lt;/p&gt;
     &lt;/form&gt;
   &lt;/header&gt;
 &lt;/section&gt;</code></pre>
@@ -461,7 +466,7 @@
 
     </header>
   </section>
-  <pre><code>&lt;section class=&quot;post&quot;&gt;
+  <pre><code>&lt;section class=&quot;<mark>post</mark>&quot;&gt;
   &lt;header&gt;
     &lt;h2 class=&quot;<mark>do</mark>&quot;&gt;Do&lt;/h2&gt;
 
