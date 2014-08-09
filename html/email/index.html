@@ -2,15 +2,27 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
+  <title>Email Prototype / GOOD</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Email Prototype / Good</title>
+
+  <link rel="stylesheet" href="../../assets/shared.css" />
+
+  <script>
+    // fonts.com tracking
+    var MTIProjectId = "f90e5d12-8fa4-47b1-a316-b233141d7f51";
+    (function() {
+      var t = document.createElement("script"); t.type = "text/javascript"; t.async = "true";
+      t.src = "//fast.fonts.net/t/trackingCode.js";
+      var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(t, s);
+    })();
+  </script>
   <style type="text/css">
     html, body, #outer-outer-container, #outer-container {
       height: 100%;
       min-height: 100%;
     }
     body {
-      font: 125%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
       background: rgb(244, 245, 244);
       color: rgb(0, 1, 0); /* @text-color */
@@ -26,15 +38,6 @@
       margin-top: 0;
       font-style: normal;
       color: #999;
-    }
-    a[href] {
-      color: rgb(110, 160, 26); /* @link-color */
-      text-decoration: none;
-    }
-    a[href]:hover,
-    a[href]:active,
-    a[href]:focus {
-      text-decoration: underline;
     }
     /*
     a[href]:visited {
@@ -84,17 +87,19 @@
     */
   </style>
 </head>
-<body>
-  <div id="outer-outer-container">
-    <div id="outer-container">
-      <div id="container">
+<body class="pattern index">
 
-        <header>
-          <h1><a href="../../">Good</a></h1>
-          <h2>Email Prototype</h2>
-        </header>
+  <h2 class="logotype"><a href="../../">GOOD</a></h2>
+  <nav class="sub">
+    <ul>
+      <li><a href="../patterns/">Patterns</a></li>
+      <li><a href="../messages/">Messages</a></li>
+      <li><a href="../prototype/">Prototype</a></li>
+    </ul>
+  </nav>
 
-        <section>
+          <h1>Email Prototype</h1>
+
           <section>
             <ul>
               <li><a href="video.html">Video</a></li>
@@ -104,10 +109,5 @@
               <li><a href="weekly.html">Weekly Digest</a></li>
             </ul>
           </section>
-        </section>
-
-      </div>
-    </div>
-  </div>
 </body>
 </html>

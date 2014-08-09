@@ -9136,11 +9136,11 @@
   -----------------------------------------------
   -----------------------------------------------
   -----------------------------------------------
-  This section is for experimental or temporary styles that
-  were written (perhaps in a hurry) to fix a bug, or get
+  This section is for temporary styles that
+  were written in a rush to get
   a new site feature released quickly.
 
-  If possible, these should be optimized or corrected
+  If possible, these should be optimized
   and moved out of this area.
   ----------------------------------------------- */
 
@@ -9229,20 +9229,25 @@
     padding: 1.75em 1.75em 7em;
     background: rgb(253, 254, 255); /* @snow */
   }
-  .pattern .logotype {
+  .logotype {
     margin-top: 0;
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
+    font-weight: normal;
     line-height: 1;
     font-size: 3em;
   }
-  .pattern .logotype a {
+  .logotype a {
     text-decoration: none;
   }
-  .pattern.index section {
+  .pattern-list section {
     display: inline-block;
     vertical-align: top;
-    margin-top: 0;
-    margin-right: 1.75em;
+    margin: 0 3.5em 1.75em 0;
   }
-
-
+  .pattern-list ul {
+    margin-top: 0.5em;
+    padding-left: 0.5em;
+  }
+  .pattern-list li {
+    color: #bbb;
+  }
