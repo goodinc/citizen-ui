@@ -4343,14 +4343,15 @@
   }
   .comment-form .images progress {
     border: 1px solid rgb(204, 204, 204); /* @magnesium */
-    width: 20em;
-    vertical-align: middle;
+    min-width: 20em;
     margin-left: 1em;
+    display: block;
     float: right;
     margin-top: 0.875em;
     margin-right: 4em;
 
     /* Match the height and margin of the “remove” button. */
+    line-height: 1.75em;
     height: 1.75em;
   }
   .comment-form .images progress::-webkit-progress-bar {
