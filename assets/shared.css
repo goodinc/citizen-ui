@@ -9250,12 +9250,11 @@
     text-align: left;
     font-size: 125%;
   }
-  .pattern-list ul {
-    margin-top: 0.5em;
-    padding-left: 0.5em;
-  }
+  .pattern-list ul,
   .pattern-list li {
-    color: rgb(187, 187, 187);
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
   }
   .pattern-list li a {
     display: block;
