@@ -261,7 +261,7 @@
     }
   }
 
-  /* Search Results */
+  /* For search results (SHIM: We’re currently using a <span class="match"> element, but a <mark> would more ideal.) */
   mark,
   span.match {
     background-color: rgb(255, 255, 204); /* @banana */
@@ -343,6 +343,7 @@
   }
   .pagination ul,
   .pagination li {
+    /* @reset-list-style */
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -700,7 +701,7 @@
   /* =Warning
   ----------------------------------------------- */
   .warning button {
-    background-color: rgb(247, 157, 130); /* @bright-strawberry */
+    background-color: rgb(247, 157, 130); /* @mango */
   }
   .warning button:hover,
   .warning button:active,
@@ -829,7 +830,7 @@
   .scripted-button form.voted button[name*="undo"],
   .scripted-button form.doing button[name*="remove"],
   .scripted-button form.done  button[name*="remove"] {
-    color: rgb(247, 157, 130); /* @bright-strawberry */
+    color: rgb(247, 157, 130); /* @mango */
   }
   .scripted-button form.following button[name*="unfollow"]:hover,
   .scripted-button form.following button[name*="unfollow"]:active,
@@ -1096,9 +1097,11 @@
     }
   }
 
-  form ol,
-  form ul,
-  form li {
+  fieldset ul,
+  fieldset ul li,
+  form ul.submit,
+  form ul.submit li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -1697,6 +1700,7 @@
   .comment-list  .options li,
   footer.options          ul,
   footer.options          li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -1884,6 +1888,7 @@
   }
   .promotion ul,
   .promotion li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -1969,6 +1974,7 @@
   }
   .join-promotion ul,
   .join-promotion li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -2011,9 +2017,9 @@
 
   @media (min-width: 60em) {
     .join-promotion {
-      padding-left: 60px;
-      padding-right: 60px;
-      padding-top: 0.875em;
+      padding-left: 3.5em; /* @line-height x 2 */
+      padding-right: 3.5em;
+      padding-top: 0.875em; /* @line-height / 2 */
       padding-bottom: 0.875em;
       text-align: center;
     }
@@ -2041,6 +2047,7 @@
   }
   .social.promotion ul,
   .social.promotion li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -2176,6 +2183,7 @@
   }
   .discussion ul,
   .discussion li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -3094,6 +3102,7 @@
 
   .activity-item section.tags ul,
   .activity-item section.tags li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -3541,6 +3550,7 @@
   ----------------------------------------------- */
   ul.activity-list,
   ul.activity-list > li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -3560,6 +3570,7 @@
   }
   .follow-list,
   .follow-list > li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -3748,6 +3759,7 @@
   }
   .comment-list,
   .comment-list > li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -4270,6 +4282,14 @@
     max-width: 100%;
     height: 7.75em; /* About four lines */
     padding: 0.875em; /* @line-height / 2 */
+  }
+
+  .comment-form .images,
+  .comment-form .images li {
+    /* @reset-list-style */
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .comment-form .note,
@@ -6199,6 +6219,7 @@
   }
   body > nav.sub ul,
   body > nav.sub li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -6330,6 +6351,7 @@
   }
   body * nav.sub ul,
   body * nav.sub li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -6453,6 +6475,7 @@
   }
   #header ul,
   #header li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -7405,6 +7428,7 @@
   }
   #footer ul,
   #footer li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -7478,6 +7502,7 @@
   }
   .post > article .share,
   .post > article .share li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -7877,6 +7902,7 @@
 
   .post .tags ul,
   .post .tags li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -7980,6 +8006,7 @@
   .post > footer .dos   li,
   .post > footer .votes ul,
   .post > footer .votes li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -8306,9 +8333,11 @@
   }
   .do-header .tags ul,
   .do-header .tags li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
+
     display: inline;
   }
   .do-header .tags li:after {
@@ -8476,9 +8505,11 @@
   }
   .do-header .participants ul,
   .do-header .participants li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
+
     display: inline;
   }
   .do-header .participants li img,
@@ -8543,6 +8574,7 @@
   }
   .do-tags ul,
   .do-tags li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -8574,6 +8606,7 @@
   .message   .share li,
   .do-header .share,
   .do-header .share li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -8689,7 +8722,7 @@
   .invite-friends {
     text-align: center;
   }
-  .explore h1,
+  .explore        h1,
   .invite-friends h1 {
     /* @h2 */
     font-size: 2.25em;
@@ -8699,7 +8732,7 @@
     /* Add to the line-height to make multi-line headlines easier to read. */
     line-height   : 1.5555555556em; /* (@line-height x 2) / 2.25 */
   }
-  .explore h2,
+  .explore        h2,
   .invite-friends h2 {
     /* @h3 */
     font-size: 1.5em;
@@ -8784,6 +8817,7 @@
   }
   .explore ul.action,
   .explore ul.action li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -8861,6 +8895,7 @@
   }
   .explore > ul.introduction,
   .explore > ul.introduction li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -8890,7 +8925,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    /* @h3*/
+    /* @h3 */
     font-size: 1.5em;
     line-height   : 1.1666666667em; /* @line-height / 1.5 */
     margin-top    : 1.1666666667em;
@@ -9251,6 +9286,7 @@
   }
   .pattern-list ul,
   .pattern-list li {
+    /* @reset-list-style */
     list-style: none;
     margin-left: 0;
     padding-left: 0;

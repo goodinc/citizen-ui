@@ -896,58 +896,52 @@
 &lt;/section&gt;</code></pre>
 
 
-  <h2>Follow</h2>
+  <h2>Story</h2>
   <section class="activity-item">
     <p class="source has-image">
-      <a href="/members/jonnym1ller"><img alt="" height="60" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=60x60%23" width="60" /> Jonny Miller</a> is now following…
+      <a href="/members/jimthoburn" rel=""><img alt="" height="60" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=60x60%23" width="60"> Ethan Lipsitz</a> added a story
     </p>
     <p class="time">
-      <time datetime="2014-05-02T20:07:13Z"><abbr title="3 weeks ago">3 w</abbr></time>
+      <time datetime="2014-04-16T16:59:44Z"><abbr title="7 weeks ago">3 d</abbr></time>
     </p>
-    <section class="follow">
-      <h3 class="has-image">
-        <a href="/members/linnealarsen"><span class="image"><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F467%2F412%2Foriginal%2F418592_460872533937449_415658720_n.jpg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>Linnea Larsen</a>
+    <section class="post do has-story">
+      <h3>
+        <a href="">Make something for a stranger to find</a>
       </h3>
-      <div class="meta">
+      <form action="" method="post" class="do">
+        <h6>Do It</h6>
         <p>
-          2 Followers
-        </p>
-      </div>
-      <p class="introduction">
-        Somewhere along the road of life we begin to forget what we knew as in
-      </p>
-      <form class="follow">
-        <p>
-          <button type="submit">Follow</button>
+          <button type="submit" name="todo" value="1">I want to do this</button>
+          <button type="submit" name="done" value="1">I did this</button>
         </p>
       </form>
     </section>
+    <article class="comment">
+      <a href="">
+        <p>I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours… <span class="action">View story</span></p>
+      </a>
+    </article>
   </section>
   <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
   …
-  &lt;section class=&quot;<mark>follow</mark>&quot;&gt;
-    &lt;h3 class=&quot;has-image&quot;&gt;
-      &lt;a href=&quot;/members/linnealarsen&quot;&gt;
-        &lt;span class=&quot;image&quot;&gt;
-          &lt;img src=&quot;…&quot; alt=&quot;&quot; width=&quot;60&quot; height=&quot;60&quot; /&gt;
-        &lt;/span&gt;
-        Linnea Larsen
-      &lt;/a&gt;
+  &lt;section class=&quot;post do <mark>has-story</mark>&quot;&gt;
+    &lt;h3&gt;
+      &lt;a href=&quot;…&quot;&gt;Make something for a stranger to find&lt;/a&gt;
     &lt;/h3&gt;
-    &lt;div class=&quot;meta&quot;&gt;
-      &lt;p&gt;2 Followers&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;introduction&quot;&gt;
-      Somewhere along the road of life we begin to forget what we knew as in
-    &lt;/p&gt;
-    &lt;form class=&quot;follow&quot;&gt;
-      &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Follow&lt;/button&gt;&lt;/p&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;do&quot;&gt;
+      &lt;h6&gt;Do It&lt;/h6&gt;
+      &lt;p&gt;…&lt;/p&gt;
     &lt;/form&gt;
   &lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;
+    &lt;a href=&quot;&quot;&gt;
+      &lt;p&gt;I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours… &lt;span class=&quot;action&quot;&gt;View story&lt;/span&gt;&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/article&gt;
 &lt;/section&gt;</code></pre>
 
 
-  <h2>Story</h2>
+  <h2>Story (with images)</h2>
   <section class="activity-item">
     <p class="source has-image">
       <a href="/members/jimthoburn" rel=""><img alt="" height="60" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=60x60%23" width="60"> Ethan Lipsitz</a> added a story
@@ -990,6 +984,33 @@
       </a>
     </article>
   </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post do has-story&quot;&gt;…&lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;
+    &lt;a href=&quot;&quot;&gt;
+      &lt;div class=&quot;<mark>images</mark> n3&quot;&gt;
+        &lt;figure&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;span style=&quot;background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;amp;geometry=1000x1000%3E)&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;figure&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;span style=&quot;background-image: url(http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F454%2Foriginal%2FIMG_8823.JPG&amp;amp;geometry=1000x1000%3E)&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/figure&gt;
+        &lt;figure&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;span style=&quot;background-image: url(http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F455%2Foriginal%2Fphoto.JPG&amp;amp;geometry=1000x1000%3E)&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/figure&gt;
+      &lt;/div&gt;
+      &lt;p&gt;I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours… &lt;span class=&quot;action&quot;&gt;View story&lt;/span&gt;&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code></pre>
+
 
   <h2>Story (with video)</h2>
   <section class="activity-item">
@@ -1018,9 +1039,62 @@
       </a>
     </article>
   </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post do has-story&quot;&gt;…&lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/soicdL9py9E&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;a href=&quot;&quot;&gt;
+      &lt;p&gt;I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours… &lt;span class=&quot;action&quot;&gt;View story&lt;/span&gt;&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</code></pre>
 
 
   <h2>Comment on a Story</h2>
+  <section class="activity-item">
+    <p class="source has-image">
+      <a href="/members/jimthoburn" rel=""><img alt="" height="60" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=60x60%23" width="60"> Ethan Lipsitz</a> commented on <a href="">Kendra Bridges</a> story
+    </p>
+    <p class="time">
+      <time datetime="2014-04-16T16:59:44Z"><abbr title="7 weeks ago">3 d</abbr></time>
+    </p>
+    <section class="post story">
+      <h3>
+        <a href="">
+          <span class="text">
+            When I moved back to midtown Sacramento, where I grew up, it magically became more difficult to drive than ride my bicycle or walk. While the central city of Sacramento… <span class="action">View story</span>
+          </span>
+        </a>
+      </h3>
+    </section>
+    <article class="comment">
+      <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46486">
+        <p>Same here – I can imagine what a rewarding and fun project it must have been to document getting to know all of those women (not to mention tasting their delicious looking food afterwards!)</p>
+      </a>
+    </article>
+    <p class="more">
+      <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46488" rel="">Join the discussion</a>
+    </p>
+  </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post <mark>story</mark>&quot;&gt;
+    &lt;h3&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;span class=&quot;text&quot;&gt;
+          When I moved back to midtown Sacramento, where I grew up, it magically became more difficult to drive than ride my bicycle or walk. While the central city of Sacramento…
+          &lt;span class=&quot;action&quot;&gt;View story&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/h3&gt;
+  &lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;…&lt;/article&gt;
+  …
+&lt;/section&gt;</code></pre>
+
+
+  <h2>Comment on a Story (with an image)</h2>
   <section class="activity-item">
     <p class="source has-image">
       <a href="/members/jimthoburn" rel=""><img alt="" height="60" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=60x60%23" width="60"> Ethan Lipsitz</a> commented on <a href="">Johanna Holtan’s</a> story
@@ -1060,6 +1134,21 @@
       <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46488" rel="">Join the discussion</a>
     </p>
   </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post story&quot;&gt;
+    &lt;h3 class=&quot;<mark>has-image</mark>&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;span class=&quot;image&quot; style=&quot;background-image: url(…)&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;text&quot;&gt;
+          I started cycling a couple years ago and it has revolutionised the way I view the streets of Edinburgh… &lt;span class=&quot;action&quot;&gt;View story&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/h3&gt;
+  &lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;…&lt;/article&gt;
+  …
+&lt;/section&gt;</code></pre>
 
   <h2>Comment on a Story (with a video)</h2>
   <section class="activity-item">
@@ -1101,39 +1190,26 @@
       <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46488" rel="">Join the discussion</a>
     </p>
   </section>
-
-
-  <h2>Comment on a Story (without an image)</h2>
-  <section class="activity-item">
-    <p class="source has-image">
-      <a href="/members/jimthoburn" rel=""><img alt="" height="60" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=60x60%23" width="60"> Ethan Lipsitz</a> commented on <a href="">Kendra Bridges</a> story
-    </p>
-    <p class="time">
-      <time datetime="2014-04-16T16:59:44Z"><abbr title="7 weeks ago">3 d</abbr></time>
-    </p>
-    <section class="post story">
-      <h3>
-        <a href="">
-          <span class="text">
-            When I moved back to midtown Sacramento, where I grew up, it magically became more difficult to drive than ride my bicycle or walk. While the central city of Sacramento… <span class="action">View story</span>
-          </span>
-        </a>
-      </h3>
-    </section>
-    <article class="comment">
-      <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46486">
-        <p>Same here – I can imagine what a rewarding and fun project it must have been to document getting to know all of those women (not to mention tasting their delicious looking food afterwards!)</p>
-      </a>
-    </article>
-    <p class="more">
-      <a href="/link/20-grandmas-around-the-world-and-their-culinary-masterpieces#comment-46488" rel="">Join the discussion</a>
-    </p>
-  </section>
-  <pre><code></code></pre>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post story&quot;&gt;
+    &lt;h3 class=&quot;has-image <mark>play-button</mark>&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;span class=&quot;image&quot; style=&quot;background-image: url(…)&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;text&quot;&gt;
+          I started cycling a couple years ago and it has revolutionised the way I view the streets of Edinburgh…
+          &lt;span class=&quot;action&quot;&gt;View story&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/h3&gt;
+  &lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;…&lt;/article&gt;
+  …
+&lt;/section&gt;</code></pre>
 
 
   <h2>Comment on a Link</h2>
-  <section class="activity-item" set-current-post="{&quot;slug&quot;:&quot;26-stories-that-celebrate-our-humanity&quot;}" data-slug="26-stories-that-celebrate-our-humanity" data-spam="false" data-title="26 Stories that Celebrate Our Humanity">
+  <section class="activity-item">
     <p class="source has-image">
       <a href="/members/jonnym1ller" rel=""><img alt="" height="60" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=60x60%23" width="60" /> Jonny Miller</a> replied to a comment by <a href="/members/alessandra-rizzotti" rel="">Alessandra Rizzotti</a>
     </p>
@@ -1142,7 +1218,7 @@
     </p>
     <section class="post link">
       <h3 class=" has-image">
-        <a href="https://medium.com/storytelling-on-maptia/15c32069fff8" target="_blank" rel=""><span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F308%2F975%2Foriginal%2F1%2A03WHgOwhZeFb3oo0M13yrA.jpeg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>26 Stories that Celebrate Our Humanity</a>&nbsp;<small class="source">via <a href="https://medium.com/storytelling-on-maptia/15c32069fff8" rel="" target="_blank">medium.com</a></small>
+        <a href="https://medium.com/storytelling-on-maptia/15c32069fff8"><span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F308%2F975%2Foriginal%2F1%2A03WHgOwhZeFb3oo0M13yrA.jpeg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>26 Stories that Celebrate Our Humanity</a>&nbsp;<small class="source">via <a href="https://medium.com/storytelling-on-maptia/15c32069fff8" rel="" target="_blank">medium.com</a></small>
       </h3>
       <div class="meta">
         <form action="" method="post" class="vote">
@@ -1176,7 +1252,83 @@
     </section>
     <article class="comment">
       <h3 class="source has-image">
-        <a href="/members/jonnym1ller" rel=""><img alt="" height="30" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=30x30%23" width="30" /> Jonny Miller</a><time datetime="2014-04-21T09:22:47Z"></time>about 1 month ago
+        <a href="/members/jonnym1ller" rel=""><img alt="" height="30" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=30x30%23" width="30" /> Jonny Miller</a>
+        <time datetime="2014-04-21T09:22:47Z">about 1 month ago</time>
+      </h3>
+      <a href="/link/26-stories-that-celebrate-our-humanity#comment-45943">
+        <p>Thanks Alessandra – I agree, everything (especially home) is just a question of perspective. Have you seen Wade Davis' TED talk? It's one of my all time favourites ;)
+          www.ted.com/talks/wade_davis_on_endangered_cultures.html</p>
+      </a>
+    </article>
+    <p class="more">
+      <a href="/link/26-stories-that-celebrate-our-humanity#comment-45955" rel="">Join the discussion</a>
+    </p>
+  </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post link&quot;&gt;…&lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;
+    &lt;h3 class=&quot;<mark>source</mark> has-image&quot;&gt;
+      &lt;a href=&quot;…&quot;&gt;&lt;img alt=&quot;&quot; height=&quot;30&quot; src=&quot;…&quot; width=&quot;30&quot; /&gt; Jonny Miller&lt;/a&gt;
+      &lt;time datetime=&quot;2014-04-21T09:22:47Z&quot;&gt;about 1 month ago&lt;/time&gt;
+    &lt;/h3&gt;
+    &lt;a href=&quot;…&quot;&gt;
+      &lt;p&gt;Thanks Alessandra – I agree, everything (especially home) is just a question of perspective. Have you seen Wade Davis&#39; TED talk? It&#39;s one of my all time favourites ;)
+        www.ted.com/talks/wade_davis_on_endangered_cultures.html&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/article&gt;
+  &lt;p class=&quot;more&quot;&gt;
+    &lt;a href=&quot;…&quot;&gt;Join the discussion&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+
+  <h2>Comment on a Link (with an image)</h2>
+  <section class="activity-item">
+    <p class="source has-image">
+      <a href="/members/jonnym1ller" rel=""><img alt="" height="60" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=60x60%23" width="60" /> Jonny Miller</a> replied to a comment by <a href="/members/alessandra-rizzotti" rel="">Alessandra Rizzotti</a>
+    </p>
+    <p class="time">
+      <time datetime="2014-04-21T09:22:47Z"><abbr title="4 weeks ago">4 w</abbr></time>
+    </p>
+    <section class="post link">
+      <h3 class=" has-image">
+        <a href="https://medium.com/storytelling-on-maptia/15c32069fff8"><span class="image"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fbookmarks%2Fphotos%2F000%2F308%2F975%2Foriginal%2F1%2A03WHgOwhZeFb3oo0M13yrA.jpeg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>26 Stories that Celebrate Our Humanity</a>&nbsp;<small class="source">via <a href="https://medium.com/storytelling-on-maptia/15c32069fff8" rel="" target="_blank">medium.com</a></small>
+      </h3>
+      <div class="meta">
+        <form action="" method="post" class="vote">
+          <p>
+            <button type="submit" title="Promote this">
+              It’s GOOD <abbr title="6 people think this is good">6</abbr>
+            </button>
+          </p>
+        </form>
+        <p class="comments">
+          <a href="/link/26-stories-that-celebrate-our-humanity#discuss" rel=""><abbr title="2 people commented">2</abbr></a>
+        </p>
+        <section class="tags">
+          <h4>
+            <span>Tags</span>
+          </h4>
+          <ul>
+            <li>
+              <a href="/global-citizenship" rel="">Global Citizenship</a>
+            </li>
+            <li>
+              <a href="/conscious-living" rel="">Conscious Living</a>
+            </li>
+            <li>
+              <a href="/living-well" rel="">Living Well</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      
+    </section>
+    <article class="comment">
+      <h3 class="source has-image">
+        <a href="/members/jonnym1ller" rel=""><img alt="" height="30" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=30x30%23" width="30" /> Jonny Miller</a>
+        <time datetime="2014-04-21T09:22:47Z">about 1 month ago</time>
       </h3>
       <a href="/link/26-stories-that-celebrate-our-humanity#comment-45943">
         <p>Thanks Alessandra – I agree, everything (especially home) is just a question of perspective. Have you seen Wade Davis' TED talk? It's one of my all time favourites ;)
@@ -1192,6 +1344,23 @@
       <a href="/link/26-stories-that-celebrate-our-humanity#comment-45955" rel="">Join the discussion</a>
     </p>
   </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post link&quot;&gt;…&lt;/section&gt;
+  &lt;article class=&quot;comment&quot;&gt;
+    &lt;h3 class=&quot;source has-image&quot;&gt;…&lt;/h3&gt;
+    &lt;a href=&quot;…&quot;&gt;
+      &lt;p&gt;Thanks Alessandra – I agree, everything (especially home) is just a question of perspective. Have you seen Wade Davis&#39; TED talk? It&#39;s one of my all time favourites ;)
+        www.ted.com/talks/wade_davis_on_endangered_cultures.html&lt;/p&gt;
+      &lt;figure&gt;
+        &lt;div class=&quot;<mark>image</mark>&quot;&gt;
+          &lt;img src=&quot;…&quot; alt=&quot;&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/figure&gt;
+    &lt;/a&gt;
+  &lt;/article&gt;
+  …
+&lt;/section&gt;</code></pre>
 
   <h2>Comment on a Link (with two images)</h2>
   <section class="activity-item" set-current-post="{&quot;slug&quot;:&quot;20-grandmas-around-the-world-and-their-culinary-masterpieces&quot;}" data-slug="20-grandmas-around-the-world-and-their-culinary-masterpieces" data-spam="false" data-title="20 Grandmas around the world and their culinary masterpieces">
@@ -1330,56 +1499,53 @@
   </section>
 
 
-  <h2>Search Result</h2>
+  <h2>Follow</h2>
   <section class="activity-item">
     <p class="source has-image">
-      <a href=""><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Favatars%2F1460127%2Foriginal%2FBlake_J._Graham-1.jpg%3F1353963526&amp;geometry=60x60%23" alt="" width="60" height="60"> Blake Graham</a> shared a link</p>
-    <p class="time">
-      <time datetime="2012-10-23T00:40:38Z"><abbr title="1 year ago">1 y</abbr></time>
+      <a href="/members/jonnym1ller"><img alt="" height="60" src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F312%2F707%2Foriginal%2FProfile_pic.jpg&amp;geometry=60x60%23" width="60" /> Jonny Miller</a> is now following…
     </p>
-    <section class="post link">
-      <h3 class=" has-image">
-        <a href=""><span class="image"><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fphotos%2F175966%2Foriginal%2FCommentary_such-small-hands.jpg%3F1350952839&amp;geometry=60x60%23" alt="" width="60" height="60"></span> T. Rex and Hands Only A Mother Could Love</a>&nbsp; <small class="source">via <a href="http://theairspace.net/commentary/t-rex-and-hands-only-a-mother-could-love/">theairspace.net</a></small>
+    <p class="time">
+      <time datetime="2014-05-02T20:07:13Z"><abbr title="3 weeks ago">3 w</abbr></time>
+    </p>
+    <section class="follow">
+      <h3 class="has-image">
+        <a href="/members/linnealarsen"><span class="image"><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F467%2F412%2Foriginal%2F418592_460872533937449_415658720_n.jpg&amp;geometry=60x60%23" alt="" width="60" height="60" /></span>Linnea Larsen</a>
       </h3>
-      <p class="excerpt">…remains of a previously undiscovered <mark>dinosaur</mark>, which is now named Vertidraco…</p>
       <div class="meta">
-        <form action="" method="post" class="vote">
-          <p>
-            <button type="submit" title="4 people think this is good">
-              4
-            </button>
-          </p>
-        </form>
-        <p class="comments">
-          <a href="post-link.html#discuss"><abbr title="1 person commented">1</abbr></a>
+        <p>
+          2 Followers
         </p>
-        <section class="tags">
-          <h4>
-            <span>Tag</span>
-          </h4>
-          <ul>
-            <li>
-              <a href="/dinosaurs"><mark>Dinosaurs</mark></a>
-            </li>
-            <li>
-              <a href="/education">Education</a>
-            </li>
-            <li>
-              <a href="/history">History</a>
-            </li>
-          </ul>
-        </section>
       </div>
+      <p class="introduction">
+        Somewhere along the road of life we begin to forget what we knew as in
+      </p>
+      <form class="follow">
+        <p>
+          <button type="submit">Follow</button>
+        </p>
+      </form>
     </section>
   </section>
   <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
   …
-  &lt;section class=&quot;post&quot;&gt;
-    …
-    &lt;p class=&quot;<mark>excerpt</mark>&quot;&gt;
-      …remains of a previously undiscovered &lt;mark&gt;dinosaur&lt;/mark&gt;, which is now named Vertidraco…
+  &lt;section class=&quot;<mark>follow</mark>&quot;&gt;
+    &lt;h3 class=&quot;has-image&quot;&gt;
+      &lt;a href=&quot;/members/linnealarsen&quot;&gt;
+        &lt;span class=&quot;image&quot;&gt;
+          &lt;img src=&quot;…&quot; alt=&quot;&quot; width=&quot;60&quot; height=&quot;60&quot; /&gt;
+        &lt;/span&gt;
+        Linnea Larsen
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;div class=&quot;meta&quot;&gt;
+      &lt;p&gt;2 Followers&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;introduction&quot;&gt;
+      Somewhere along the road of life we begin to forget what we knew as in
     &lt;/p&gt;
-    …
+    &lt;form class=&quot;follow&quot;&gt;
+      &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Follow&lt;/button&gt;&lt;/p&gt;
+    &lt;/form&gt;
   &lt;/section&gt;
 &lt;/section&gt;</code></pre>
 
@@ -1681,6 +1847,60 @@
     …
   &lt;/ul&gt;
 &lt;/footer&gt;</code></pre>
+
+
+  <h2>Search Result</h2>
+  <section class="activity-item">
+    <p class="source has-image">
+      <a href=""><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Favatars%2F1460127%2Foriginal%2FBlake_J._Graham-1.jpg%3F1353963526&amp;geometry=60x60%23" alt="" width="60" height="60"> Blake Graham</a> shared a link</p>
+    <p class="time">
+      <time datetime="2012-10-23T00:40:38Z"><abbr title="1 year ago">1 y</abbr></time>
+    </p>
+    <section class="post link">
+      <h3 class=" has-image">
+        <a href=""><span class="image"><img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fphotos%2F175966%2Foriginal%2FCommentary_such-small-hands.jpg%3F1350952839&amp;geometry=60x60%23" alt="" width="60" height="60"></span> T. Rex and Hands Only A Mother Could Love</a>&nbsp; <small class="source">via <a href="http://theairspace.net/commentary/t-rex-and-hands-only-a-mother-could-love/">theairspace.net</a></small>
+      </h3>
+      <p class="excerpt">…remains of a previously undiscovered <mark>dinosaur</mark>, which is now named Vertidraco…</p>
+      <div class="meta">
+        <form action="" method="post" class="vote">
+          <p>
+            <button type="submit" title="4 people think this is good">
+              4
+            </button>
+          </p>
+        </form>
+        <p class="comments">
+          <a href="post-link.html#discuss"><abbr title="1 person commented">1</abbr></a>
+        </p>
+        <section class="tags">
+          <h4>
+            <span>Tag</span>
+          </h4>
+          <ul>
+            <li>
+              <a href="/dinosaurs"><mark>Dinosaurs</mark></a>
+            </li>
+            <li>
+              <a href="/education">Education</a>
+            </li>
+            <li>
+              <a href="/history">History</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </section>
+  <pre><code>&lt;section class=&quot;activity-item&quot;&gt;
+  …
+  &lt;section class=&quot;post&quot;&gt;
+    …
+    &lt;p class=&quot;<mark>excerpt</mark>&quot;&gt;
+      …remains of a previously undiscovered &lt;mark&gt;dinosaur&lt;/mark&gt;, which is now named Vertidraco…
+    &lt;/p&gt;
+    …
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
 
 
 </section>

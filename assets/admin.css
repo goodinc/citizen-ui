@@ -711,6 +711,12 @@ td .source.comments > h2 > a {
     padding: 20px 0 0 0.875em;
     margin-bottom: 0;
   }
+  .features ol,
+  .features ol li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
   .features ol {
     border-top: 1px solid rgb(204, 204, 204);
     border-bottom: 3px solid rgb(204, 204, 204);
