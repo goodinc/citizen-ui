@@ -4754,7 +4754,6 @@
   .comment-form .url.inactive,
   .comment-form.inactive .url {
     position: absolute;
-    margin-top: 0.1em;
     right: 2.6em;
     border-top-width: 0;
     background-color: transparent;
@@ -4776,8 +4775,9 @@
 
     /* Position the video and image icons next to the text field. */
     .comment-form.inactive .url {
-      margin-top: -2.6em;
-      padding-top: 0;
+      /* SHIM: These numbers are arbitrary, but happen to look good. */
+      margin-top: -3.125em;
+      padding-top: 0.525em;
     }
     .comment-form.inactive .file {
       float: right;
@@ -4932,7 +4932,7 @@
     font-weight: bold;
     line-height: inherit;
     float: left;
-    padding: 1em;
+    padding: 0.75em;
     margin-bottom: 0;
   }
   .story article .comment-form h4:before {
@@ -4952,8 +4952,9 @@
     margin-right: 0.375em;
     content: "\e609"; /* @icon-edit */
   }
-  .story article .comment-form textarea {
+  .story article .comment-form .text {
     border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    clear: both;
   }
 
   /* TBD: Should this style be applied to all comment forms? */
