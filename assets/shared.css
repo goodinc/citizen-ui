@@ -9206,15 +9206,11 @@
   aside section.facebook:first-child {
     margin-top: 0;
   }
+
+  /* TEMPORARY: These only appear in the pattern library */
   body.pattern {
     padding: 1.75em 1.75em 7em;
     background: rgb(253, 254, 255); /* @snow */
-  }
-  body.pattern.index h1 {
-    text-align: center;
-  }
-  .pattern-list {
-    text-align: center;
   }
   .logotype {
     margin-top: 0;
@@ -9225,12 +9221,34 @@
   }
   .logotype a {
     text-decoration: none;
+    color: inherit;
+  }
+  .logotype a:hover,
+  .logotype a:active,
+  .logotype a:focus {
+    color: rgb(56, 60, 61); /* @logo-hover */
+  }
+  .pattern.index h1 {
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .pattern-list {
+    text-align: center;
+  }
+  .pattern-list h3 {
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1.25em;
+    line-height: inherit;
   }
   .pattern-list section {
     display: inline-block;
     vertical-align: top;
     margin: 0 1.75em 1.75em;
     text-align: left;
+    font-size: 125%;
   }
   .pattern-list ul {
     margin-top: 0.5em;
@@ -9238,4 +9256,17 @@
   }
   .pattern-list li {
     color: rgb(187, 187, 187);
+  }
+  .pattern-list li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(113, 179, 247); /* @sky */
+  }
+  .pattern-list li a:visited {
+    color: rgb(42, 43, 44); /* @text-color */
+  }
+  .pattern-list li a:hover,
+  .pattern-list li a:active,
+  .pattern-list li a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
   }
