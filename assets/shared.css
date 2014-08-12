@@ -393,7 +393,7 @@
   }
   .pagination .previous a {
     background-color: rgb(240, 240, 240); /* @mercury */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .pagination .previous a:hover,
   .pagination .previous a:active,
@@ -504,7 +504,7 @@
   button[disabled] {
     cursor: default;
     background-color: rgb(240, 240, 240); /* @mercury */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     opacity: 0.5;
   }
 
@@ -672,7 +672,7 @@
   .autocomplete button,
   .secondary button {
     background-color: rgb(240, 240, 240); /* @mercury */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .account-form a:hover  .action span,
   .account-form a:active .action span,
@@ -753,7 +753,7 @@
     z-index: 9999; /* @infinity */
     background: white;
     text-align: center;
-    border: 0.125em solid rgb(139, 139, 139);
+    border: 0.125em solid rgb(139, 139, 139); /* @zinc */
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
     transition: opacity 0.2s;
     margin-top: 1em;
@@ -782,7 +782,7 @@
     background: white;
     border-width: 0.125em 0 0 0.125em;
     border-style: solid;
-    border-color: rgb(139, 139, 139);
+    border-color: rgb(139, 139, 139); /* @zinc */
     width: 1em;
     height: 1em;
     -moz-box-sizing : border-box;
@@ -804,7 +804,7 @@
   .scripted-button form.done  h6 + p button {
     background: transparent;
     border-width: 0;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
     min-width: 8em;
     display: block;
@@ -1115,7 +1115,7 @@
   form label  em,
   form label  small {
     font-size: 0.875em; /* 14px / @font-size */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   form legend em,
   form label  em,
@@ -1516,7 +1516,7 @@
   .loading {
     position: relative;
     font-weight: bold;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
 
   /* SHIM: Make submit buttons look nice when the label has been replaced with a loading indicator.
@@ -1535,7 +1535,7 @@
     position: relative;
     width: 1.3125em; /* @line-height x 3/4 */
     height: 1.3125em;
-    border: 0.21875em solid rgb(101, 102, 102); /* @steel */
+    border: 0.21875em solid rgb(101, 102, 103); /* @steel */
     border-right-color: transparent;
     border-radius: 50%;
     -webkit-animation : outerspin 1.3s infinite linear;
@@ -1550,7 +1550,7 @@
     height: 0.58125em;
     top: 0.55em;
     left: 0.35em;
-    border: 0.21875em solid rgb(101, 102, 102); /* @steel */
+    border: 0.21875em solid rgb(101, 102, 103); /* @steel */
     border-left-color: transparent;
     border-top-color: transparent;
     border-radius: 50%;
@@ -1605,7 +1605,7 @@
     background-color: transparent;
     border-width: 0;
     font-weight: inherit;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     margin: 0;
     padding: 0;
     font-size: 0.875em;
@@ -2119,12 +2119,12 @@
   ----------------------------------------------- */
   .discussion {
     position: relative;
-    border: 0.25em solid rgb(247, 247, 247);
-    background-color: rgb(252, 252, 252);
+    border: 0.25em solid rgb(245, 245, 245); /* @bright-mercury */
+    background-color: rgb(252, 252, 252); /* @nearly-snow */
     padding: 1em 1.25em;
   }
   .discussion h2 {
-    color: rgb(247, 113, 113);
+    color: rgb(247, 113, 113); /* @strawberry */
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
@@ -2160,7 +2160,7 @@
     text-align: center;
   }
   .discussion h3 a {
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     text-decoration: inherit;
   }
   .discussion h3 a:hover,
@@ -2190,7 +2190,7 @@
   .discussion li {
     padding: 1em 0; /* 11px / font-size(11px) */
     border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
   .discussion li a {
@@ -2214,7 +2214,7 @@
     text-align: center;
   }
   .discussion .more a {
-    color: rgb(247, 113, 113);
+    color: rgb(247, 113, 113); /* @strawberry */
     text-decoration: inherit;
     font-weight: bold;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
@@ -2443,8 +2443,8 @@
   .activity-item section.link,
   .activity-item section.follow {
     padding       : 1.25em;  /* @line-height(20px) */
-    border: 1px solid rgb(243, 243, 243); /* @bright-silver */
-    background: rgb(249, 249, 249); /* @silver */
+    border: 1px solid rgb(240, 240, 240); /* @mercury */
+    background: rgb(249, 249, 250); /* @bright-white */
     border-radius: 0.25em;
     transition: background-color 0.2s, border-color 0.2s;
     position: relative;
@@ -2688,7 +2688,7 @@
   }
   .activity-item .source a {
     font-weight: bold;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .activity-item .source a:hover,
   .activity-item .source a:hover,
@@ -2710,7 +2710,7 @@
 
   .activity-item .post .meta {
     margin-top: 0.625em;
-    border-top: 1px solid rgb(243, 243, 243); /* @bright-silver */
+    border-top: 1px solid rgb(240, 240, 240); /* @mercury */
     padding-top: 0.625em;
   }
 
@@ -2769,7 +2769,7 @@
     display: inline;
   }
   .activity-item .follow .meta p + p {
-    border-left: 1px solid rgb(216, 216, 216);
+    border-left: 1px solid rgb(215, 216, 217); /* @barium */
     padding-left: 0.6em;
     margin-left: 0.6em;
     line-height: 1;
@@ -2791,7 +2791,7 @@
     margin-left: 0;
 
     border: 0.1em solid rgb(244, 244, 244);
-    background: rgb(253, 253, 253);
+    background: rgb(252, 252, 252); /* @nearly-snow */
     color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
     text-decoration: none;
@@ -2953,7 +2953,7 @@
   .meta .vote.loading button:focus,
   .meta .vote.loading button:active {
     border: 0.1em solid rgb(244, 244, 244);
-    background: rgb(253, 253, 253);
+    background: rgb(252, 252, 252); /* @nearly-snow */
   }
   .meta .vote.loading button:before {
     color: transparent;
@@ -2975,7 +2975,7 @@
   }
   .meta .vote.loading:before,
   .meta .vote.loading:after {
-    border-color: rgb(101, 102, 102); /* @steel */
+    border-color: rgb(101, 102, 103); /* @steel */
   }
   .meta .vote.loading:before {
     border-right-color: transparent;
@@ -3188,19 +3188,20 @@
     opacity: 1;
   }
 
-  /* OPTIONAL: Light up the social icons for an item, when hovering over it */
+  /* OPTIONAL: Light up the buttons and tags for an item, when hovering over it */
 
   /* Off */
   main:hover .activity-item .meta .dos,
-  main:hover .activity-item .meta .votes,
+  main:hover .activity-item .meta .vote,
+  main:hover .activity-item .meta .voted,
   main:hover .activity-item .meta .comments {
     color: rgb(190, 190, 190);
     transition: color 0.2s;
   }
-  main:hover .activity-item .meta .dos      abbr:before,
-  main:hover .activity-item .meta .votes    abbr:before,
-  main:hover .activity-item .meta .comments abbr:before {
-    color: rgb(236, 236, 236);
+  main:hover .activity-item .meta .dos      a:before,
+  main:hover .activity-item .meta .vote     button:before,
+  main:hover .activity-item .meta .comments a:before {
+    color: rgb(230, 230, 230); /* @tin */
     transition: color 0.2s;
   }
   main:hover .activity-item section.tags h4:before {
@@ -3210,17 +3211,21 @@
 
   /* Over */
   main:hover .activity-item:hover .meta .dos,
-  main:hover .activity-item:hover .meta .votes,
+  main:hover .activity-item:hover .meta .vote,
+  main:hover .activity-item:hover .meta .voted,
   main:hover .activity-item:hover .meta .comments {
     color: rgb(153, 153, 153); /* @aluminum */
   }
-  main:hover .activity-item:hover .meta .dos abbr:before {
+  main:hover .activity-item:hover .meta .dos a:before {
     color: rgb(83, 231, 185); /* @kiwi */
   }
-  main:hover .activity-item:hover .meta .votes abbr:before {
+  main:hover .activity-item:hover .meta .vote  button:before {
     color: rgb(113, 179, 247); /* @sky */
   }
-  main:hover .activity-item:hover .meta .comments abbr:before {
+  main:hover .activity-item:hover .meta .vote  button:hover:before {
+    color: white;
+  }
+  main:hover .activity-item:hover .meta .comments a:before {
     color: rgb(255, 223, 145); /* @cantaloupe */
   }
   main:hover .activity-item:hover section.tags h4:before {
@@ -3576,7 +3581,7 @@
 
   /* Links */
   .follow-list a {
-    color: rgb(102, 153, 204);
+    color: rgb(102, 153, 204); /* @blue */
     text-decoration: none;
   }
   .follow-list a:hover,
@@ -3674,7 +3679,7 @@
     margin-right: 0;
   }
   .follow-list .meta p + p {
-    border-left: 1px solid rgb(216, 216, 216);
+    border-left: 1px solid rgb(215, 216, 217); /* @barium */
     padding-left: 0.6em;
     margin-left: 0.6em;
     line-height: 1;
@@ -3763,7 +3768,7 @@
 
   /* Links */
   .comment-list a {
-    color: rgb(102, 153, 204);
+    color: rgb(102, 153, 204); /* @blue */
     text-decoration: none;
   }
   .comment-list a:hover,
@@ -3783,7 +3788,7 @@
   }
   .comment-list h3 a {
     font-weight: bold;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
 
 
@@ -3844,7 +3849,7 @@
     max-width: 33em;
   }
   .comment-list article > p a {
-    color: rgb(102, 153, 204);
+    color: rgb(102, 153, 204); /* @blue */
   }
   .comment-list article > p a:hover,
   .comment-list article > p a:active,
@@ -4004,7 +4009,7 @@
   ----------------------------------------------- */
   .stories header {
     padding-bottom: 0.875em;
-    border-bottom: 0.1em solid rgb(233, 233, 233);
+    border-bottom: 0.1em solid rgb(230, 230, 230); /* @tin */
   }
   .stories header h1 {
     font-size: 0.875em;
@@ -4058,7 +4063,7 @@
     margin: 0;
     border-width: 0.125em 0 0;
     border-style: solid;
-    border-color: rgb(246, 246, 246);
+    border-color: rgb(245, 245, 245); /* @bright-mercury */
   }
   .stories .comment-list article > p {
     max-width: none;
@@ -4075,18 +4080,18 @@
     }
   }
   .stories .comment-list article > h3 {
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     line-height: 1.2;
   }
   .stories .comment-list article > h3 + p {
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 0.1em solid rgb(246, 246, 246);
+    border-top: 0.1em solid rgb(245, 245, 245); /* @bright-mercury */
   }
   .stories .comment-list article > p + figure {
     margin-top: 0.875em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(246, 246, 246);
+    border-top: 0.1em solid rgb(245, 245, 245); /* @bright-mercury */
   }
   .stories .comment-list article > h3 a img,
   .stories .comment-list article > h3 a .avatar {
@@ -4136,7 +4141,7 @@
   .stories .comment-list .meta {
     margin-top: 1.3125em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(246, 246, 246);
+    border-top: 0.1em solid rgb(245, 245, 245); /* @bright-mercury */
   }
 
 
@@ -4144,7 +4149,7 @@
   ----------------------------------------------- */
   .stories section.message.empty {
     margin-bottom: 1.75em;
-    background: rgb(246, 246, 246);
+    background: rgb(245, 245, 245); /* @bright-mercury */
     color: rgb(153, 153, 153); /* @aluminum */
     border-width: 0;
   }
@@ -4176,7 +4181,7 @@
     /* @icon-launch */
     content: "\e612";
 
-    color: rgb(204, 204, 204);
+    color: rgb(204, 204, 204); /* @magnesium */
     margin-top: 56px;
     margin-bottom: 56px;
     font-size: 3em;
@@ -4210,7 +4215,7 @@
     content: none;
   }
   .stories section.message.empty h1 + p {
-    border-top-color: rgb(224, 224, 224);
+    border-top-color: rgb(225, 225, 225); /* @bright-silver */
   }
 
 
@@ -4255,7 +4260,7 @@
   .comment-form .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
-    border-color: rgb(238, 238, 238);
+    border-color: rgb(230, 230, 230); /* @tin */
     margin-left: 3.125em; /* 50px / 16px*/
   }
 
@@ -4277,11 +4282,9 @@
     padding: 0.625em; /* 10px / 16px */
   }
 
-  .comment-form .url {
-    background: rgb(249, 249, 249);
-  }
+  .comment-form .url,
   .comment-form .images {
-    background: rgb(249, 249, 249);
+    background: rgb(249, 249, 250); /* @bright-white */
   }
   .comment-form .images li {
     display: block;
@@ -4291,7 +4294,7 @@
     border-radius: 0.25em;
     max-width: 50em;
     font-size: 0.75em; /* 12px / 16px */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
@@ -4329,7 +4332,7 @@
   .comment-form .images li span {
     margin-left: 1em;
     font-weight: bold;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .comment-form .images li span.video {
     margin-left: 0;
@@ -4602,7 +4605,7 @@
     font-size: 0.75em;
     position: absolute;
     background: rgb(51, 51, 51); /* @tungsten */
-    color: rgb(253, 253, 253);
+    color: rgb(252, 252, 252); /* @nearly-snow */
     bottom: 0;
     margin-bottom: 4em;
     margin-left: -4em;
@@ -4756,8 +4759,8 @@
     border-top-width: 0;
     background-color: transparent;
 
-    border-left: 0.1em dotted rgb(238, 238, 238);
-    border-right: 0.1em dotted rgb(238, 238, 238);
+    border-left: 0.1em dotted rgb(230, 230, 230); /* @tin */
+    border-right: 0.1em dotted rgb(230, 230, 230); /* @tin */
     margin-right: 0.675em;
   }
 
@@ -4840,7 +4843,7 @@
     vertical-align: middle;
   }
   .add-story > .container {
-    background: rgb(62, 197, 149);
+    background: rgb(62, 197, 149); /* @fern */
     padding: 1em 1.5em;
   }
   @media (min-width: 40em) {
@@ -4903,7 +4906,7 @@
       position: relative;
     }
     .add-story h2 {
-      background: rgb(62, 197, 149);
+      background: rgb(62, 197, 149); /* @fern */
       position: absolute;
       left: 0;
       top: -3em;
@@ -5077,7 +5080,7 @@
     width: 120px;
     line-height: 120px;
     text-align: center;
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(204, 204, 204); /* @magnesium */
     color: white;
     font-weight: bold;
     font-size: inherit;
@@ -5153,7 +5156,7 @@
     margin-top: 1.3125em;
   }
   .post-form form > .story {
-    border-top: 1px solid rgb(221, 221, 221);
+    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */;
     padding-top: 1.3125em;
   }
   .post-form .story > .container {
@@ -5243,7 +5246,7 @@
     font-style: italic;
     font-weight: bold;
     font-family: Georgia, Times, "Times New Roman", serif; /* @georgia */
-    background: rgb(204, 204, 204);
+    background: rgb(204, 204, 204); /* @magnesium */
     border-radius: 100%;
     color: white;
     display: inline-block;
@@ -5295,7 +5298,7 @@
   }
   .post-form .tip p {
     font-size: 0.875em;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     line-height: 1.3;
   }
   .post-form .tip p {
@@ -5344,7 +5347,7 @@
   }
   .post-form .tip p.dont:before {
     content: "\e60a"; /* @icon-delete */
-    color: rgb(255, 125, 125);
+    color: rgb(255, 102, 102); /* @bright-salmon */
   }
 
   /* OPTIONAL: Add a background-color behind the do’s and dont’s */
@@ -5409,7 +5412,7 @@
   }
   .account-form h1 + p {
     margin-top: 0.4375em; /* @line-height x 1/4 */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .account-form .summary a {
     display: block;
@@ -5821,7 +5824,7 @@
     padding-bottom: 0;
     border-bottom-width: 0;
     margin-bottom: 0;
-    border-top: 0.1em solid rgb(215, 216, 217);
+    border-top: 0.1em solid rgb(215, 216, 217); /* @barium */
     padding-top: 0.875em;
   }
 
@@ -5932,7 +5935,7 @@
   }
   .member-header .details dd,
   .member-header .details dd a {
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     text-decoration: none;
   }
   .member-header .details dd a:hover,
@@ -6210,7 +6213,7 @@
   .home > .rss a,
   body > nav.sub .rss a,
   body > nav.sub li a {
-    color: rgb(102, 103, 104);
+    color: rgb(101, 102, 103); /* @steel */
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     font-size: 0.75em; /* 12px / @font-size */
@@ -6321,19 +6324,9 @@
   ----------------------------------------------- */
   body * nav.sub {
     max-width: none;
-    color: rgb(102, 103, 104);
+    color: rgb(101, 102, 103); /* @steel */
     position: relative;
   }
-
-  body #content nav.sub {
-    margin-bottom: 1.75em; /* @line-height */
-  }
-  body #content p + nav.sub {
-    border-top: 0.1em solid rgb(233, 233, 233);
-    margin-top  : 1.75em; /* @line-height */
-    padding-top : 0.875em;
-  }
-
   body * nav.sub ul,
   body * nav.sub li {
     list-style: none;
@@ -6350,7 +6343,7 @@
   }
   body * nav.sub li {
     display: inline;
-    border-right: 0.1em solid rgb(215, 216, 217);
+    border-right: 0.1em solid rgb(215, 216, 217); /* @barium */
   }
   body * nav.sub li:first-child {
     margin-left: 0;
@@ -6358,7 +6351,6 @@
   body * nav.sub li:last-child {
     border-right-width: 0;
   }
-
   body * nav.sub a {
     color: inherit;
     font-weight: bold;
@@ -6389,7 +6381,6 @@
     text-transform: uppercase;
     font-weight: normal;
   }
-
   body * nav.sub form {
     margin: -0.1em 1.75em -0.1em 0;
     float: left;
@@ -6430,7 +6421,7 @@
   /* OPTIONAL: Hide the main headline on home, topic, member, account, and admin pages
   (since they’re redundant with the navigation) */
   /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
-  #header ~ #content > .container > .home           > h1:first-child,
+  #header           ~ #content > .container > .home           > h1:first-child,
   body > nav.sub    ~ #content > .container > .home           > h1:first-child,
   body > header.sub ~ #content > .container > .form           > h1:first-child,
   .search-header    ~ #content > .container > .search-results > h1:first-child,
@@ -6440,7 +6431,7 @@
     position: absolute;
     left: -9999px;
   }
-  #header ~ #content > .container > .home    > h1 + *,
+  #header           ~ #content > .container > .home    > h1 + *,
   body > nav.sub    ~ #content > .container > .home    > h1 + *,
   body > header.sub ~ #content > .container > .form    > h1 + *,
   .topic-header     ~ #content > .container > section  > h1 + *,
@@ -6550,7 +6541,7 @@
     color: rgb(56, 60, 61); /* @logo-hover */
   }
   #header h2 + p {
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     font-weight: normal;
     margin-bottom: 0;
 
@@ -6873,7 +6864,7 @@
 
       /* @dropdown */
       background: white;
-      border: 1px solid rgb(139, 139, 139);
+      border: 1px solid rgb(139, 139, 139); /* @zinc */
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
       z-index: 9999; /* @infinity */
@@ -6891,7 +6882,7 @@
       background: white;
       border-width: 0.125em 0 0 0.125em;
       border-style: solid;
-      border-color: rgb(139, 139, 139);
+      border-color: rgb(139, 139, 139); /* @zinc */
       width: 1em;
       height: 1em;
       -moz-box-sizing : border-box;
@@ -6912,7 +6903,7 @@
       padding: 0.675em 1.25em;
       font-size: 0.875em;
       border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-      color: rgb(101, 102, 102); /* @steel */
+      color: rgb(101, 102, 103); /* @steel */
       text-decoration: none;
       font-weight: bold;
       line-height: 1.75em;
@@ -6956,7 +6947,7 @@
   #header input {
     border-width: 0;
     border-radius: 2em;
-    background: rgb(246, 246, 246);
+    background: rgb(245, 245, 245); /* @bright-mercury */
     width: 12em;
     max-width: none;
   }
@@ -7025,7 +7016,7 @@
 
     /* @dropdown */
     background: white;
-    border: 1px solid rgb(139, 139, 139);
+    border: 1px solid rgb(139, 139, 139); /* @zinc */
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
     z-index: 9999; /* @infinity */
@@ -7042,7 +7033,7 @@
     background: white;
     border-width: 0.125em 0 0 0.125em;
     border-style: solid;
-    border-color: rgb(139, 139, 139);
+    border-color: rgb(139, 139, 139); /* @zinc */
     width: 1em;
     height: 1em;
     -moz-box-sizing : border-box;
@@ -7066,7 +7057,7 @@
     padding: 0.675em 1.25em;
     font-size: 0.875em;
     border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     text-decoration: none;
     font-weight: bold;
     line-height: 1.75em;
@@ -7087,7 +7078,7 @@
 
       /* @dropdown */
       background: white;
-      border: 1px solid rgb(139, 139, 139);
+      border: 1px solid rgb(139, 139, 139); /* @zinc */
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
       z-index: 9999; /* @infinity */
@@ -7114,7 +7105,7 @@
       background: white;
       border-width: 0.125em 0 0 0.125em;
       border-style: solid;
-      border-color: rgb(139, 139, 139);
+      border-color: rgb(139, 139, 139); /* @zinc */
       width: 1em;
       height: 1em;
       -moz-box-sizing : border-box;
@@ -7145,7 +7136,7 @@
       padding: 0.675em 1.25em;
       font-size: 0.875em;
       border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
-      color: rgb(101, 102, 102); /* @steel */
+      color: rgb(101, 102, 103); /* @steel */
       text-decoration: none;
       font-weight: bold;
       line-height: 1.75em;
@@ -7745,7 +7736,7 @@
     content: "\e609"; /* @icon-edit */
   }
   .post > article .source {
-    color: rgb(153, 153, 153); /* @activity-source */
+    color: rgb(153, 153, 153); /* @aluminum */
     font-size: 0.75em;
   }
   .post > article .source img,
@@ -7757,9 +7748,8 @@
     vertical-align: middle;
   }
   .post > article .source a {
-    /* @activity-source-link */
     font-weight: bold;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
 
   .post > article h1      a:hover,
@@ -7825,7 +7815,7 @@
 
   .post > footer .tags {
     margin-top: 0.875em; /* @line-height / 2 */
-    background: rgb(247, 247, 247);
+    background: rgb(245, 245, 245); /* @bright-mercury */
     padding: 1.5em;
     margin-left: -1.5em;
     margin-right: -1.5em;
@@ -7931,7 +7921,7 @@
     display: inline-block;
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83); /* @nickel */
-    background: rgb(252, 252, 252);
+    background: rgb(252, 252, 252); /* @nearly-snow */
     border: 1px solid rgb(240, 240, 240); /* @mercury */
     text-decoration: none;
   }
@@ -7972,7 +7962,7 @@
     font-family: inherit;
     font-size: 0.875em; /* 14px / @font-size(16px) */
     line-height: 2em; /* @line-height(1.75em) / font-size(0.875em) */
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .post > header h2.do,
   .post > header h2.link {
@@ -8329,7 +8319,7 @@
     content: "";
   }
   .do-header .tags a {
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     text-decoration: none;
     font-weight: bold;
   }
@@ -8506,7 +8496,7 @@
 /* =Tags
   ----------------------------------------------- */
   .do-tags {
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 103); /* @steel */
     font-size: 0.875em;
     text-align: left;
   }
@@ -8545,7 +8535,7 @@
     content: "\e603"; /* @icon-tag */
 
     color: rgb(247, 113, 113); /* @strawberry */
-    color: rgb(204, 204, 204);
+    color: rgb(204, 204, 204); /* @magnesium */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
   }
