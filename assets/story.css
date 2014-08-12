@@ -6,6 +6,8 @@
 
 /* =Message
   ----------------------------------------------- */
+
+  /* SHIM: The story page is wrapped in a “div” element, to make scripting easier. */
   body       > .message.success,
   body > div > .message.success {
     max-width: none;
@@ -94,7 +96,7 @@
 
 /* =Header
   ----------------------------------------------- */
-  .do-header {
+  .story-header {
     margin-top: 0;
     padding: 1em 1.5em;
     background: white;
@@ -104,16 +106,16 @@
     margin-bottom: 0;
     position: relative;
   }
-  .do-header + .join-promotion {
+  .story-header + .join-promotion {
     border-top-width: 0;
   }
   @media (min-width: 65em) {
-    .do-header {
+    .story-header {
       padding-left: 2.25em;
       padding-right: 2.25em;
       margin-bottom: 2.25em;
     }
-    .do-header + .join-promotion {
+    .story-header + .join-promotion {
       margin-top: -2.25em;
       margin-bottom: 2.25em;
     }
@@ -122,7 +124,7 @@
     body {
       padding-top: 6.5625em; /* header.height (69px) / @font-size (16px) + margin (2.25em) */
     }
-    .do-header {
+    .story-header {
       position: fixed;
       top: 0;
       left: 0;
@@ -136,7 +138,7 @@
     }
   }
 
-  .do-header h3 {
+  .story-header h3 {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 1em;
@@ -145,17 +147,17 @@
     line-height: 1;
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
   }
-  .do-header h3 a {
+  .story-header h3 a {
     text-decoration: none;
     color: rgb(0, 1, 2); /* @midnight */
   }
-  .do-header h3 a:hover,
-  .do-header h3 a:active,
-  .do-header h3 a:focus {
+  .story-header h3 a:hover,
+  .story-header h3 a:active,
+  .story-header h3 a:focus {
     color: rgb(56, 60, 61); /* @logo-hover */
   }
 
-  .do-header h2 {
+  .story-header h2 {
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
     text-transform: uppercase;
     font-size: 1em;
@@ -168,16 +170,16 @@
     margin: 0;
     float: left;
   }
-  .do-header > a {
+  .story-header > a {
     color: inherit;
     text-decoration: none;
   }
-  .do-header > a:hover,
-  .do-header > a:active,
-  .do-header > a:focus {
+  .story-header > a:hover,
+  .story-header > a:active,
+  .story-header > a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
-  .do-header h1 {
+  .story-header h1 {
     font-family: inherit;
     font-size: 1.125em; /* 18px / @font-size */
     line-height: 1.5555555556; /* @line-height / 1.125em */
@@ -188,60 +190,60 @@
     margin-left: 2.8em;
   }
   @media (min-width: 65em) {
-    .do-header h3 {
+    .story-header h3 {
       margin-top: -0.119047619em;
       margin-bottom: -0.119047619em;
       display: inline-block;
       vertical-align: middle;
     }
-    .do-header h2 {
+    .story-header h2 {
       float: none;
       display: inline-block;
       margin-right: 0.875em;
     }
-    .do-header h1 {
+    .story-header h1 {
       display: inline;
       margin-left: 0;
     }
   }
-  .do-header h1 a {
+  .story-header h1 a {
     color: inherit;
     text-decoration: none;
   }
-  .do-header h1 a:hover,
-  .do-header h1 a:active,
-  .do-header h1 a:focus {
+  .story-header h1 a:hover,
+  .story-header h1 a:active,
+  .story-header h1 a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
-  .do-header p,
-  .do-header .share {
+  .story-header p,
+  .story-header .share {
     display: inline;
     margin-left: 1.75em;
   }
-  .do-header .share {
+  .story-header .share {
     margin-left: 2.75em;
   }
   @media (min-width: 60em) {
-    .do-header nav {
+    .story-header nav {
       margin: 0;
       display: inline;
     }
   }
-  .do-header nav   a,
-  .do-header .back a {
+  .story-header nav   a,
+  .story-header .back a {
     text-decoration: none;
   }
-  .do-header .back a {
+  .story-header .back a {
     color: rgb(153, 153, 153);
     padding: 0.35em 0.7em;
     display: inline-block;
   }
-  .do-header .back a:hover,
-  .do-header .back a:active,
-  .do-header .back a:focus {
+  .story-header .back a:hover,
+  .story-header .back a:active,
+  .story-header .back a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
-  .do-header .back a:after {
+  .story-header .back a:after {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -255,44 +257,44 @@
 
     content: "\e60a"; /* @icon-delete */
   }
-  .do-header .back a span {
+  .story-header .back a span {
     position: absolute;
     left: -9999px;
   }
-  .do-header nav ul,
-  .do-header nav li {
+  .story-header nav ul,
+  .story-header nav li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
     display: inline;
   }
   @media (min-width: 60em) {
-    .do-header nav ul {
+    .story-header nav ul {
       margin-left: 3em;
     }
   }
-  .do-header nav li + li {
+  .story-header nav li + li {
     margin-left: 0.75em;
     padding-left: 0.875em;
     border-left: 0.1em solid rgb(204, 204, 204);
   }
-  .do-header nav li {
+  .story-header nav li {
     font-weight: bold;
     font-size: 0.875em;
   }
-  .do-header nav a {
+  .story-header nav a {
     color: rgb(62, 197, 149); /* @fern */
   }
-  .do-header form.do,
-  .do-header form.doing,
-  .do-header form.done {
+  .story-header form.do,
+  .story-header form.doing,
+  .story-header form.done {
     margin: 0;
     font-size: 0.875em;
     position: absolute;
     top: 1em;
     right: 6.25em;
   }
-  .do-header .back {
+  .story-header .back {
     position: absolute;
     top: 0;
     right: 1.3125em;
@@ -497,19 +499,6 @@
     border-style: solid;
     border-color: rgb(224, 224, 224);
   }
-  /*
-  .comment-list .comment-list article h3 img {
-    width: 30px;
-    height: auto;
-  }
-  .comment-list .comment-list article h3 .avatar span {
-    font-size: 1.25em;
-  }
-  .comment-list .comment-list article > h3 img,
-  .comment-list .comment-list article > h3 .avatar {
-    margin-left: -2.15em;
-  }
-  */
   .comment-list .comment-list {
     margin-top: 0;
   }
@@ -523,16 +512,16 @@
 
 /* =Aside
   ----------------------------------------------- */
-  .do-aside {
+  .story-aside {
     background: white;
     padding: 0.875em 1.5em;
   }
   @media (min-width: 65em) {
-    .do-aside {
+    .story-aside {
       padding: 0.875em;
     }
   }
-  .do-aside h2 {
+  .story-aside h2 {
     font-family: inherit;
     font-weight: bold;
 
@@ -548,30 +537,30 @@
     padding-bottom: 0.7777777778em;
     margin-bottom: 0.7777777778em;
   }
-  .do-aside h2 + ul {
+  .story-aside h2 + ul {
     margin-top: 0;
     padding-top: 0;
   }
-  .do-aside ul,
-  .do-aside li {
+  .story-aside ul,
+  .story-aside li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  .do-aside li {
+  .story-aside li {
     display: inline;
     margin-right: 0.25em;
   }
-  .do-aside li a {
+  .story-aside li a {
     position: relative;
     display: inline-block;
   }
-  .do-aside li a img {
+  .story-aside li a img {
     display: block;
   }
 
   /* TBD: Consider using an SVG image here instead */
-  .do-aside li.video a:before {
+  .story-aside li.video a:before {
     content: "";
     position: absolute;
     top  : 50%;
@@ -589,7 +578,7 @@
          -o-border-radius: 100%;
             border-radius: 100%;
   }
-  .do-aside li.video a:after {
+  .story-aside li.video a:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -609,29 +598,29 @@
             transform: rotate(360deg);
   }
 
-  .do-aside li a {
+  .story-aside li a {
     text-decoration: none;
   }
-  .do-aside form {
+  .story-aside form {
     display: inline;
     font-size: 0.75em;
     margin-top: 0;
     float: right;
   }
-  .do-aside ul {
+  .story-aside ul {
     border-top: 0.1em solid rgb(249, 249, 250);
     margin-top: 0.875em;
     padding-top: 0.875em;
   }
   @media (min-width: 40em) {
-    .do-aside h1 {
+    .story-aside h1 {
       border-top-width: 0;
       padding-top: 0;
       margin-top: 0;
       display: inline;
     }
   }
-  .do-aside h1 a {
+  .story-aside h1 a {
     color: inherit;
     text-decoration: none;
   }
@@ -650,22 +639,22 @@
 
 /* =Layout
   ----------------------------------------------- */
-  .do-header > a,
-  .do-header h3 + div {
+  .story-header > a,
+  .story-header h3 + div {
     display: block;
     border-top: 0.1em solid rgb(224, 224, 224);
     padding-top: 0.875em;
     margin-top: 0.875em;
   }
-  .do-header > a:after,
-  .do-header h3 + div:after {
+  .story-header > a:after,
+  .story-header h3 + div:after {
     content: "";
     display: table;
     clear: both;
   }
 
   /* SHIM: Support multiple Do forms within a container element. */
-  .do-header div.todo_actions {
+  .story-header div.todo_actions {
     margin-top: 0;
     margin-bottom: 0;
     display: block;
@@ -679,14 +668,14 @@
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
     }
-    .do-header > a,
-    .do-header h3 + div {
+    .story-header > a,
+    .story-header h3 + div {
       display: inline;
       border-top-width: 0;
       padding-top: 0;
       margin-top: 0;
     }
-    .do-aside {
+    .story-aside {
       margin: 0 2.25em 2.25em 60%;
     }
     .story > article {
@@ -707,7 +696,7 @@
     body {
       text-align: center;
     }
-    .do-header h3 {
+    .story-header h3 {
       margin-top: 0;
       margin-bottom: 0;
       position: absolute;
@@ -715,8 +704,8 @@
       top: 0.3em;
       left: 1em;
     }
-    .do-header > a,
-    .do-header h3 + div {
+    .story-header > a,
+    .story-header h3 + div {
       margin-top: 0;
       display: block;
       max-width: 69em;
@@ -725,7 +714,7 @@
       text-align: left;
     }
     .story,
-    .do-aside {
+    .story-aside {
       text-align: left;
       float: none;
       max-width: none;
@@ -737,7 +726,7 @@
     .story {
       width: 47em;
     }
-    .do-aside {
+    .story-aside {
       margin-left: 2.25em;
       width: 19.75em;
     }
