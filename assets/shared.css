@@ -8193,8 +8193,6 @@
   .do-header > .container,
   .add-story,
   .do-header ~ .options {
-    padding-left: 0;
-    padding-right: 0;
     max-width: 66.5625em; /* @max-page-width */
     margin-left: auto;
     margin-right: auto;
