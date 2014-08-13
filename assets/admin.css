@@ -160,7 +160,7 @@
   }
   .features ol button {
     background-color: rgb(239, 239, 239);
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 102); /* @aluminum */
   }
   .admin#users .filters form {
     margin-left: 48px;
@@ -393,7 +393,7 @@ td .source.comments > h2 > a {
     margin: 0;
   }
   td .source .details > .container p.meta {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     font-size: 12px;
     display: inline;
   }
@@ -600,7 +600,7 @@ td .source.comments > h2 > a {
     font-size: 14px;
     font-weight: bold;
     background-color: rgb(239, 239, 239);
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 102); /* @aluminum */
   }
   .batch button:hover,
   .batch button:active,
@@ -753,7 +753,7 @@ td .source.comments > h2 > a {
   .features ol a {
     text-decoration: none;
     font-size: 0.75em;
-    color: rgb(101, 102, 102); /* @steel */
+    color: rgb(101, 102, 102); /* @aluminum */
     text-transform: lowercase;
   }
   .features ol a:hover,

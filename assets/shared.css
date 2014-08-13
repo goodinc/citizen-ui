@@ -81,8 +81,8 @@
     font: 100%/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     margin: 0;
     padding: 0;
-    background: rgb(249, 249, 250); /* @silver */
-    color: rgb(42, 43, 44); /* @granite */
+    background: rgb(249, 249, 250); /* @seashell */
+    color: rgb(42, 43, 44); /* @tungsten */
   }
   a {
     color: rgb(113, 179, 247); /* @sky */
@@ -234,7 +234,7 @@
     font-size: 0.75em;
     line-height: 1.33333333333333;
     padding: 1.86em 0;
-    border-bottom: 1px solid rgb(218, 220, 224); /* @mithril */
+    border-bottom: 1px solid rgb(218, 220, 224); /* @mercury */
     margin-bottom: 1.86em;
   }
   figure + figure {
@@ -273,7 +273,7 @@
   ----------------------------------------------- */
   .avatar > span {
     display: inline-block;
-    background: rgb(153, 153, 153); /* @aluminum */
+    background: rgb(153, 153, 153); /* @magnesium */
     color: white;
     width       : 1.5em;
     line-height : 1.5em;
@@ -329,7 +329,7 @@
   /* =Paging
   ----------------------------------------------- */
   .pagination {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     position: relative;
     padding: 1.25em 1.25em 0;
     text-align: center;
@@ -357,7 +357,7 @@
     display: inline-block;
   }
   .pagination li a {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     text-decoration: none;
   }
   .pagination li a:hover,
@@ -380,7 +380,7 @@
     border-radius: 0.25em;
   }
   .pagination .next a {
-    background-color: rgb(69, 71, 71); /* @iron */
+    background-color: rgb(69, 71, 71); /* @tin */
     color: white;
   }
   .pagination .next a:hover,
@@ -393,14 +393,14 @@
     color: rgb(0, 1, 2); /* @midnight */
   }
   .pagination .previous a {
-    background-color: rgb(240, 240, 240); /* @mercury */
-    color: rgb(101, 102, 103); /* @steel */
+    background-color: rgb(240, 240, 240); /* @gray-240 */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .pagination .previous a:hover,
   .pagination .previous a:active,
   .pagination .previous a:focus {
-    background: rgb(249, 249, 250); /* @silver */
-    color: rgb(42, 43, 44); /* @granite */
+    background: rgb(249, 249, 250); /* @seashell */
+    color: rgb(42, 43, 44); /* @tungsten */
   }
   .pagination .previous {
     margin-right : 0.875em;
@@ -475,7 +475,7 @@
     font-size: inherit;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     background-color: rgb(113, 179, 247); /* @sky */
-    background-color: rgb(69, 71, 71); /* @iron */
+    background-color: rgb(69, 71, 71); /* @tin */
     color: white;
     cursor: pointer;
     border: 0.1em solid rgba(0, 0, 0, 0.15);
@@ -504,8 +504,8 @@
 
   button[disabled] {
     cursor: default;
-    background-color: rgb(240, 240, 240); /* @mercury */
-    color: rgb(101, 102, 103); /* @steel */
+    background-color: rgb(240, 240, 240); /* @gray-240 */
+    color: rgb(101, 102, 103); /* @aluminum */
     opacity: 0.5;
   }
 
@@ -672,8 +672,8 @@
   .secondary .action a,
   .autocomplete button,
   .secondary button {
-    background-color: rgb(240, 240, 240); /* @mercury */
-    color: rgb(101, 102, 103); /* @steel */
+    background-color: rgb(240, 240, 240); /* @gray-240 */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .account-form a:hover  .action span,
   .account-form a:active .action span,
@@ -693,8 +693,8 @@
   .secondary button:hover,
   .secondary button:active,
   .secondary button:focus {
-    background: rgb(249, 249, 250); /* @silver */
-    color: rgb(42, 43, 44); /* @granite */
+    background: rgb(249, 249, 250); /* @seashell */
+    color: rgb(42, 43, 44); /* @tungsten */
   }
 
 
@@ -723,7 +723,7 @@
     font-style: inherit;
     font-size: 0.875em;
     font-weight: bold;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     margin-bottom: 0;
   }
   form.voted h6 + p,
@@ -754,7 +754,7 @@
     z-index: 9999; /* @infinity */
     background: white;
     text-align: center;
-    border: 0.125em solid rgb(139, 139, 139); /* @zinc */
+    border: 0.125em solid rgb(153, 153, 153); /* @magnesium */
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
     transition: opacity 0.2s;
     margin-top: 1em;
@@ -783,7 +783,7 @@
     background: white;
     border-width: 0.125em 0 0 0.125em;
     border-style: solid;
-    border-color: rgb(139, 139, 139); /* @zinc */
+    border-color: rgb(153, 153, 153); /* @magnesium */
     width: 1em;
     height: 1em;
     -moz-box-sizing : border-box;
@@ -805,7 +805,7 @@
   .scripted-button form.done  h6 + p button {
     background: transparent;
     border-width: 0;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
     min-width: 8em;
     display: block;
@@ -819,7 +819,7 @@
   .scripted-button form.do    h6 + p button + button,
   .scripted-button form.doing h6 + p button + button,
   .scripted-button form.done  h6 + p button + button {
-    border-top: 1px solid rgb(204, 204, 204); /* @magnesium */
+    border-top: 1px solid rgb(204, 204, 204); /* @silver */
   }
   .scripted-button form.voted button[name*="undo"] {
     font-family: inherit;
@@ -1012,7 +1012,7 @@
   textarea {
     border-width: 0;
     border-radius: 0;
-    border: 1px solid rgb(225, 225, 225); /* @chromium */
+    border: 1px solid rgb(225, 225, 225); /* @gray-225 */
 
     /* Give the field a width of 22em’s, but make it fit on small screens. */
     max-width: 22em;
@@ -1049,7 +1049,7 @@
 
   input[type="text"][disabled] {
     opacity: 0.6;
-    background: rgb(245, 245, 245); /* @thorium */
+    background: rgb(245, 245, 245); /* @vanilla */
   }
 
   form .submit {
@@ -1067,7 +1067,7 @@
 
     /* @fieldset */
     margin-top: 2.625em; /* @line-height x 3/2 */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em;
   }
   form section.secondary h2,
@@ -1118,7 +1118,7 @@
   form label  em,
   form label  small {
     font-size: 0.875em; /* 14px / @font-size */
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   form legend em,
   form label  em,
@@ -1228,7 +1228,7 @@
   ul       + fieldset,
   fieldset + fieldset {
     margin-top: 1.75em; /* @line-height */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 3.5em;
   }
   p        + fieldset legend,
@@ -1260,7 +1260,7 @@
   }
 
   form .submit a {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     font-weight: bold;
     text-decoration: inherit;
   }
@@ -1436,7 +1436,7 @@
 
     font-size: 2.25em; /* 36px / @font-size(16px) */
     margin-right: 0.5em;
-    color: rgb(230, 230, 230); /* @tin */
+    color: rgb(230, 230, 230); /* @gray-230 */
     transition: color 0.2s;
 
     background: transparent url(shared/message-shadow.png) bottom no-repeat;
@@ -1519,7 +1519,7 @@
   .loading {
     position: relative;
     font-weight: bold;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
 
   /* SHIM: Make submit buttons look nice when the label has been replaced with a loading indicator.
@@ -1538,7 +1538,7 @@
     position: relative;
     width: 1.3125em; /* @line-height x 3/4 */
     height: 1.3125em;
-    border: 0.21875em solid rgb(101, 102, 103); /* @steel */
+    border: 0.21875em solid rgb(101, 102, 103); /* @aluminum */
     border-right-color: transparent;
     border-radius: 50%;
     -webkit-animation : outerspin 1.3s infinite linear;
@@ -1553,7 +1553,7 @@
     height: 0.58125em;
     top: 0.55em;
     left: 0.35em;
-    border: 0.21875em solid rgb(101, 102, 103); /* @steel */
+    border: 0.21875em solid rgb(101, 102, 103); /* @aluminum */
     border-left-color: transparent;
     border-top-color: transparent;
     border-radius: 50%;
@@ -1608,7 +1608,7 @@
     background-color: transparent;
     border-width: 0;
     font-weight: inherit;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     margin: 0;
     padding: 0;
     font-size: 0.875em;
@@ -1634,7 +1634,7 @@
     font-size: 0.9375em; /* 15px / @font-size(16px) */
     margin-right: 0.375em;
     transition: color 0.2s;
-    color: rgb(230, 230, 230); /* @tin */
+    color: rgb(230, 230, 230); /* @gray-230 */
   }
 
   .options .edit a:before {
@@ -1738,7 +1738,7 @@
   .activity-list footer.options a,
   .activity-list footer.options button {
     font-size: 0.75em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
 
   /* OPTIONAL: Make the admin options take up less space */
@@ -1877,8 +1877,8 @@
 
   .promotion {
     padding: 1.5em;
-    background: rgb(249, 249, 250); /* @silver */
-    border: 0.1875em solid rgb(225, 225, 225); /* @chromium */
+    background: rgb(249, 249, 250); /* @seashell */
+    border: 0.1875em solid rgb(225, 225, 225); /* @gray-225 */
   }
   .promotion h2 {
     margin-bottom: 0;
@@ -1936,7 +1936,7 @@
 
     border-width: 1px 0 1px 0;
     border-style: solid;
-    border-color: rgb(221, 223, 227); /* @germanium */
+    border-color: rgb(218, 220, 224); /* @mercury */
   }
   .join-promotion h2 {
     font-family: inherit;
@@ -2070,7 +2070,7 @@
          -o-font-feature-settings: "liga";
             font-feature-settings: "liga";
 
-    color: rgb(69, 71, 71); /* @iron */
+    color: rgb(69, 71, 71); /* @tin */
     font-weight: normal;
     font-size: 1.25em;
   }
@@ -2090,7 +2090,7 @@
     box-sizing      : border-box;
 
     padding: 3.5em 0;
-    background-color: rgb(225, 225, 225); /* @chromium */
+    background-color: rgb(225, 225, 225); /* @gray-225 */
   }
   .connect-facebook h1 {
     font-family: inherit;
@@ -2108,7 +2108,7 @@
   }
   .connect-facebook .container > a {
     background: white;
-    border: 0.3125em solid rgb(240, 240, 240); /* @mercury */
+    border: 0.3125em solid rgb(240, 240, 240); /* @gray-240 */
     box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
     display: table;
     margin: 9em auto 0;
@@ -2126,7 +2126,7 @@
   ----------------------------------------------- */
   .discussion {
     position: relative;
-    border: 0.25em solid rgb(245, 245, 245); /* @thorium */
+    border: 0.25em solid rgb(245, 245, 245); /* @vanilla */
     background-color: rgb(252, 252, 252); /* @snow */
     padding: 1em 1.25em;
   }
@@ -2167,7 +2167,7 @@
     text-align: center;
   }
   .discussion h3 a {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     text-decoration: inherit;
   }
   .discussion h3 a:hover,
@@ -2197,8 +2197,8 @@
   }
   .discussion li {
     padding: 1em 0; /* 11px / font-size(11px) */
-    border-bottom: 1px solid rgb(218, 220, 224); /* @mithril */
-    color: rgb(101, 102, 103); /* @steel */
+    border-bottom: 1px solid rgb(218, 220, 224); /* @mercury */
+    color: rgb(101, 102, 103); /* @aluminum */
     font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
   .discussion li a {
@@ -2276,7 +2276,7 @@
 
   /* Time */
   .activity-item .time {
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
     font-size: 0.75em; /* 12px / @font-size */
   }
 
@@ -2451,8 +2451,8 @@
   .activity-item section.link,
   .activity-item section.follow {
     padding       : 1.25em;  /* @line-height(20px) */
-    border: 1px solid rgb(240, 240, 240); /* @mercury */
-    background: rgb(249, 249, 250); /* @silver */
+    border: 1px solid rgb(240, 240, 240); /* @gray-240 */
+    background: rgb(249, 249, 250); /* @seashell */
     border-radius: 0.25em;
     transition: background-color 0.2s, border-color 0.2s;
     position: relative;
@@ -2505,7 +2505,7 @@
   .activity-item .link:hover,
   .activity-item .follow:hover {
     background: white;
-    border-color: rgb(153, 153, 153); /* @aluminum */
+    border-color: rgb(153, 153, 153); /* @magnesium */
   }
 
 
@@ -2528,7 +2528,7 @@
     font-size: 0.75em; /* 12px / @font-size */
   }
   .activity-item .follow .meta + .introduction {
-    border-top: 1px solid rgb(218, 220, 224); /* @mithril */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .activity-item .follow .introduction {
@@ -2581,7 +2581,7 @@
     line-height: inherit;
     display: table;
     width: 100%;
-    border: 1px solid rgb(221, 223, 227); /* @germanium */
+    border: 1px solid rgb(218, 220, 224); /* @mercury */
   }
   .activity-item section.story h3 a {
     display: table-row;
@@ -2612,7 +2612,7 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
   .activity-item section.story h3 a > span.text:first-child {
-    border-left: 20px solid rgb(245, 245, 245); /* @thorium */
+    border-left: 20px solid rgb(245, 245, 245); /* @vanilla */
   }
 
 
@@ -2624,7 +2624,7 @@
   .activity-item .comment,
   .activity-item .comment + .more {
     margin-top: 0.875em;
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.875em;
   }
   .activity-item .comment + .comment {
@@ -2689,14 +2689,14 @@
   ----------------------------------------------- */
   .activity-item .source {
     font-size: 0.75em; /* 12px / @font-size */
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
 
     /* Make space for the “time” element. */
     margin-right: 3.5em; /* @line-height x 2 */
   }
   .activity-item .source a {
     font-weight: bold;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .activity-item .source a:hover,
   .activity-item .source a:hover,
@@ -2718,7 +2718,7 @@
 
   .activity-item .post .meta {
     margin-top: 0.625em;
-    border-top: 1px solid rgb(240, 240, 240); /* @mercury */
+    border-top: 1px solid rgb(240, 240, 240); /* @gray-240 */
     padding-top: 0.625em;
   }
 
@@ -2734,7 +2734,7 @@
   }
 
   .activity-item .link .meta {
-    border-top-color: rgb(218, 220, 224); /* @mithril */
+    border-top-color: rgb(218, 220, 224); /* @mercury */
 
     /* OPTIONAL: Line up with the image */
     margin-right: -0.3125em;
@@ -2760,7 +2760,7 @@
     margin-bottom: 0.4375em; /* @line-height / 4 */
     display: inline-block;
     margin-right: 0.15em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
 
   .meta form.vote,
@@ -2777,7 +2777,7 @@
     display: inline;
   }
   .activity-item .follow .meta p + p {
-    border-left: 1px solid rgb(215, 216, 217); /* @barium */
+    border-left: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-left: 0.6em;
     margin-left: 0.6em;
     line-height: 1;
@@ -2800,7 +2800,7 @@
 
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(252, 252, 252); /* @snow */
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     font-weight: bold;
     text-decoration: none;
   }
@@ -2983,7 +2983,7 @@
   }
   .meta .vote.loading:before,
   .meta .vote.loading:after {
-    border-color: rgb(101, 102, 103); /* @steel */
+    border-color: rgb(101, 102, 103); /* @aluminum */
   }
   .meta .vote.loading:before {
     border-right-color: transparent;
@@ -3121,7 +3121,7 @@
     margin-right: 0;
   }
   .activity-item section.tags a {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
   .activity-item section.tags a:hover,
   .activity-item section.tags a:active,
@@ -3156,7 +3156,7 @@
 /* =Activity Item
   ----------------------------------------------- */
   .activity-item {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     position: relative;
     padding: 2.5em 1.25em; /* @line-height(20px) x 2    @line-height(20px) */
   }
@@ -3210,11 +3210,11 @@
   main:hover .activity-item .meta .dos      a:before,
   main:hover .activity-item .meta .vote     button:before,
   main:hover .activity-item .meta .comments a:before {
-    color: rgb(230, 230, 230); /* @tin */
+    color: rgb(230, 230, 230); /* @gray-230 */
     transition: color 0.2s;
   }
   main:hover .activity-item section.tags h4:before {
-    color: rgb(225, 225, 225); /* @chromium */
+    color: rgb(225, 225, 225); /* @gray-225 */
     transition: color 0.2s;
   }
 
@@ -3223,7 +3223,7 @@
   main:hover .activity-item:hover .meta .vote,
   main:hover .activity-item:hover .meta .voted,
   main:hover .activity-item:hover .meta .comments {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
   main:hover .activity-item:hover .meta .dos a:before {
     color: rgb(83, 231, 185); /* @kiwi */
@@ -3250,7 +3250,7 @@
   }
 
   /* OPTIONAL: Move the primary source to the left a little */
-  @media (min-width: 25em) { /* @tiny-screen */
+  @media (min-width: 25em) { /* @gray-230y-screen */
     .activity-item > .source:first-child {
       margin-left: -1.66666666666667em; /* @line-height(20px) / 12px */
     }
@@ -3265,7 +3265,7 @@
     margin-top: -0.75em; /* 12px / @font-size */
     margin-left: -1.25em; /* 20px / @font-size */
     margin-right: 1em; /* @font-size */
-    border-color: rgb(221, 223, 227); /* @germanium */
+    border-color: rgb(218, 220, 224); /* @mercury */
     border-style: solid;
     border-width: 0 1px 1px 1px;
     display: inline-block;
@@ -3475,7 +3475,7 @@
 
   .topic-featured > .container > .featured-do {
     margin-top: 1.75em; /* @line-height */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em; /* @line-height */
   }
 
@@ -3676,7 +3676,7 @@
     margin-bottom: 0;
     display: inline-block;
     margin-right: 0.75em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
 
   /* OPTIONAL: Add a line between meta items within a follow */
@@ -3684,7 +3684,7 @@
     margin-right: 0;
   }
   .follow-list .meta p + p {
-    border-left: 1px solid rgb(215, 216, 217); /* @barium */
+    border-left: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-left: 0.6em;
     margin-left: 0.6em;
     line-height: 1;
@@ -3710,7 +3710,7 @@
   }
   .follow-list .meta + .location,
   .follow-list .meta + .introduction {
-    border-top: 1px solid rgb(218, 220, 224); /* @mithril */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .follow-list .location,
@@ -3727,12 +3727,12 @@
   /* =Follow Item
   ----------------------------------------------- */
   .follow-list > li {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     position: relative;
     padding: 1.5em; /* @line-height */
   }
 
-  @media (max-width: 24.9em) { /* @tiny-screen */
+  @media (max-width: 24.9em) { /* @gray-230y-screen */
     .follow-list > li {
       padding-left: 0;
       padding-right: 0;
@@ -3781,14 +3781,14 @@
   .comment-list h3 {
     margin: 0 0 0.875em 0;
     font-size: 0.75em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     font-weight: normal;
     font-family: inherit;
     line-height: inherit;
   }
   .comment-list h3 a {
     font-weight: bold;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
 
 
@@ -3799,7 +3799,7 @@
     margin-top: 1.5em;
   }
   .comment-list + .more a {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     font-weight: bold;
     font-size: 0.875em; /* 14px / @font-size */
     text-decoration: none;
@@ -3814,14 +3814,14 @@
   /* =Comment
   ----------------------------------------------- */
   .comment-list article {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     position: relative;
     padding-top: 1.25em;
     margin-bottom: 0;
   }
   .comment-list article,
   .comment-list + .more {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.25em; /* @line-height(20px) */
     padding-bottom: 1.25em
   }
@@ -3861,7 +3861,7 @@
 
   @media (min-width: 40em) {
     .comment-list article {
-      border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-top: 1px solid rgb(218, 220, 224); /* @mercury */
       position: relative;
       padding: 1.25em; /* @line-height(20px) */
     }
@@ -4001,7 +4001,7 @@
   ----------------------------------------------- */
   .stories header {
     padding-bottom: 0.875em;
-    border-bottom: 0.1em solid rgb(230, 230, 230); /* @tin */
+    border-bottom: 0.1em solid rgb(230, 230, 230); /* @gray-230 */
   }
   .stories header h1 {
     font-size: 0.875em;
@@ -4039,7 +4039,7 @@
   .stories header p {
     margin-left: 0.4375em;
     font-size: 0.875em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
   .stories header p:before {
     content: "(";
@@ -4055,7 +4055,7 @@
     margin: 0;
     border-width: 0.125em 0 0;
     border-style: solid;
-    border-color: rgb(245, 245, 245); /* @thorium */
+    border-color: rgb(245, 245, 245); /* @vanilla */
   }
   .stories .comment-list article > p {
     max-width: none;
@@ -4072,18 +4072,18 @@
     }
   }
   .stories .comment-list article > h3 {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     line-height: 1.2;
   }
   .stories .comment-list article > h3 + p {
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @thorium */
+    border-top: 0.1em solid rgb(245, 245, 245); /* @vanilla */
   }
   .stories .comment-list article > p + figure {
     margin-top: 0.875em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @thorium */
+    border-top: 0.1em solid rgb(245, 245, 245); /* @vanilla */
   }
   .stories .comment-list article > h3 a img,
   .stories .comment-list article > h3 a .avatar {
@@ -4133,7 +4133,7 @@
   .stories .comment-list .meta {
     margin-top: 1.3125em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @thorium */
+    border-top: 0.1em solid rgb(245, 245, 245); /* @vanilla */
   }
 
 
@@ -4141,8 +4141,8 @@
   ----------------------------------------------- */
   .stories section.message.empty {
     margin-bottom: 1.75em;
-    background: rgb(245, 245, 245); /* @thorium */
-    color: rgb(153, 153, 153); /* @aluminum */
+    background: rgb(245, 245, 245); /* @vanilla */
+    color: rgb(153, 153, 153); /* @magnesium */
     border-width: 0;
   }
   .stories section.message.empty h1 {
@@ -4173,7 +4173,7 @@
     /* @icon-launch */
     content: "\e612";
 
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
     margin-top: 56px;
     margin-bottom: 56px;
     font-size: 3em;
@@ -4207,7 +4207,7 @@
     content: none;
   }
   .stories section.message.empty h1 + p {
-    border-top-color: rgb(225, 225, 225); /* @chromium */
+    border-top-color: rgb(225, 225, 225); /* @gray-225 */
   }
 
 
@@ -4225,7 +4225,7 @@
   }
 
   .comment-form .container {
-    border: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border: 0.1em solid rgb(218, 220, 224); /* @mercury */
     border-radius: 0.25em;
     background: white;
     position: relative;
@@ -4252,7 +4252,7 @@
   .comment-form .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
-    border-color: rgb(230, 230, 230); /* @tin */
+    border-color: rgb(230, 230, 230); /* @gray-230 */
     margin-left: 3.125em; /* 50px / 16px*/
   }
 
@@ -4277,24 +4277,24 @@
   .comment-form .images,
   .comment-form .url,
   .comment-form .file {
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
   }
 
   .comment-form .url,
   .comment-form .images {
-    background: rgb(249, 249, 250); /* @silver */
+    background: rgb(249, 249, 250); /* @seashell */
   }
   .comment-form .images li {
     display: block;
     position: relative;
     background: white;
-    border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
+    border: 0.1em solid rgb(204, 204, 204); /* @silver */
     border-radius: 0.25em;
     max-width: 50em;
     font-size: 0.75em; /* 12px / 16px */
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
   }
@@ -4332,7 +4332,7 @@
   .comment-form .images li span {
     margin-left: 1em;
     font-weight: bold;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .comment-form .images li span.video {
     margin-left: 0;
@@ -4341,7 +4341,7 @@
     line-height: 3.5em;
   }
   .comment-form .images progress {
-    border: 1px solid rgb(204, 204, 204); /* @magnesium */
+    border: 1px solid rgb(204, 204, 204); /* @silver */
     min-width: 20em;
     margin-left: 1em;
     display: block;
@@ -4361,7 +4361,7 @@
     border: 1px solid white;
   }
   .comment-form .images button {
-    background: rgb(153, 153, 153); /* @aluminum */
+    background: rgb(153, 153, 153); /* @magnesium */
 
     float: right;
     color: white;
@@ -4406,7 +4406,7 @@
   .comment-form .images .progress button {
     background: transparent;
     border-color: transparent;
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
   }
   .comment-form .images .progress button:hover,
   .comment-form .images .progress button:active,
@@ -4549,7 +4549,7 @@
     opacity: 0.25;
     transition: opacity 0.2s, border-color 0.2s;
     padding: 0.328125em;
-    border: 0.1em solid rgb(153, 153, 153); /* @aluminum */
+    border: 0.1em solid rgb(153, 153, 153); /* @magnesium */
     line-height: 1;
     border-radius: 0.25em;
     border-color: transparent;
@@ -4597,14 +4597,14 @@
   .comment-form .url.inactive label:hover:before,
   .comment-form .file         label:hover:before {
     opacity: 1;
-    border-color: rgb(153, 153, 153); /* @aluminum */
+    border-color: rgb(153, 153, 153); /* @magnesium */
   }
   .comment-form .url .cancel span,
   .comment-form .url  label > span:first-child,
   .comment-form .file label > span:first-child {
     font-size: 0.75em;
     position: absolute;
-    background: rgb(51, 51, 51); /* @tungsten */
+    background: rgb(51, 51, 51); /* @iron */
     color: rgb(252, 252, 252); /* @snow */
     bottom: 0;
     margin-bottom: 4em;
@@ -4632,7 +4632,7 @@
   .comment-form .file label > span:first-child:before {
     content: "";
     display: block;
-    background: rgb(51, 51, 51); /* @tungsten */
+    background: rgb(51, 51, 51); /* @iron */
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -4723,7 +4723,7 @@
   .comment-form .note span {
     display: block;
     margin-top: 0;
-    border: 0.1em solid rgb(204, 204, 204); /* @magnesium */
+    border: 0.1em solid rgb(204, 204, 204); /* @silver */
     border-radius: 0.25em;
     padding: 0.4375em;
     text-align: center;
@@ -4739,7 +4739,7 @@
   .comment-form .file .note {
     background-color: rgb(255, 255, 204); /* @banana */
     font-style: normal;
-    color: rgb(51, 51, 51); /* @tungsten */
+    color: rgb(51, 51, 51); /* @iron */
   }
 
   .comment-form.inactive .url input,
@@ -4758,8 +4758,8 @@
     border-top-width: 0;
     background-color: transparent;
 
-    border-left: 0.1em dotted rgb(230, 230, 230); /* @tin */
-    border-right: 0.1em dotted rgb(230, 230, 230); /* @tin */
+    border-left: 0.1em dotted rgb(230, 230, 230); /* @gray-230 */
+    border-right: 0.1em dotted rgb(230, 230, 230); /* @gray-230 */
     margin-right: 0.675em;
   }
 
@@ -4953,7 +4953,7 @@
     content: "\e609"; /* @icon-edit */
   }
   .story article .comment-form .text {
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     clear: both;
   }
 
@@ -4969,7 +4969,7 @@
     background-color: transparent;
   }
   .story article .comment-form .images li {
-    background-color: rgb(249, 249, 250); /* @silver */
+    background-color: rgb(249, 249, 250); /* @seashell */
     border-width: 0;
   }
   .story article .comment-form .images li img + span {
@@ -5018,7 +5018,7 @@
 
   .post-form header {
     padding-bottom: 1em;
-    border-bottom: 1px solid rgb(225, 225, 225); /* @chromium */
+    border-bottom: 1px solid rgb(225, 225, 225); /* @gray-225 */
   }
   .post-form h1 {
     font-family: inherit;
@@ -5039,7 +5039,7 @@
   @media (min-width: 40em) {
     .post-form .submit {
       margin-top: 1.3125em;
-      border-top: 1px solid rgb(225, 225, 225); /* @chromium */
+      border-top: 1px solid rgb(225, 225, 225); /* @gray-225 */
       padding-top: 1.75em;
     }
     .post-form .submit a {
@@ -5047,7 +5047,7 @@
     }
   }
   .post-form .submit a {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     float: right;
     margin-right: 0.4375em;
   }
@@ -5081,7 +5081,7 @@
     width: 120px;
     line-height: 120px;
     text-align: center;
-    background-color: rgb(204, 204, 204); /* @magnesium */
+    background-color: rgb(204, 204, 204); /* @silver */
     color: white;
     font-weight: bold;
     font-size: inherit;
@@ -5135,7 +5135,7 @@
     content: "\e609"; /* @icon-edit */
     background:  rgb(0, 1, 2);       /* @midnight */
     background: rgba(0, 1, 2, 0.75); /* @midnight */
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
     position: absolute;
     padding: 0.25em;
     border-radius: 0.125em;
@@ -5157,7 +5157,7 @@
     margin-top: 1.3125em;
   }
   .post-form form > .story {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */;
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */;
     padding-top: 1.3125em;
   }
   .post-form .story > .container {
@@ -5247,7 +5247,7 @@
     font-style: italic;
     font-weight: bold;
     font-family: Georgia, Times, "Times New Roman", serif; /* @georgia */
-    background: rgb(204, 204, 204); /* @magnesium */
+    background: rgb(204, 204, 204); /* @silver */
     border-radius: 100%;
     color: white;
     display: inline-block;
@@ -5299,7 +5299,7 @@
   }
   .post-form .tip p {
     font-size: 0.875em;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     line-height: 1.3;
   }
   .post-form .tip p {
@@ -5413,7 +5413,7 @@
   }
   .account-form h1 + p {
     margin-top: 0.4375em; /* @line-height x 1/4 */
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .account-form .summary a {
     display: block;
@@ -5437,7 +5437,7 @@
   .account-form section {
     border-width: 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -5484,7 +5484,7 @@
     section.form {
       border-width: 0.1em;
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @mithril */
+      border-color: rgb(218, 220, 224); /* @mercury */
       padding: 1.75em; /* @line-height */
       margin-left: 0;
       margin-right: 0;
@@ -5497,7 +5497,7 @@
   .profile-form form {
     border-width: 0.1em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     background: rgb(253, 254, 255); /* @white */
     padding: 1.75em; /* @line-height */
     margin-left  : -1.5em;
@@ -5532,7 +5532,7 @@
   .profile-form .basics,
   .profile-form .details {
     padding-bottom: 1.75em;
-    border-bottom: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @mercury */
   }
   .profile-form .details {
     margin-top: 0.875em; /* @line-height / 2 */
@@ -5560,10 +5560,10 @@
     .profile-form .details {
       margin-left: 15.75em;
       padding-left: 1.75em;
-      border-left: 0.1em solid rgb(218, 220, 224); /* @mithril */
+      border-left: 0.1em solid rgb(218, 220, 224); /* @mercury */
     }
     .profile-form .submit {
-      border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+      border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
       padding-top: 1.75em;
       padding-left: 17.5em;
     }
@@ -5589,7 +5589,7 @@
   .dialog {
     border-width: 0.1em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     padding: 1.75em 1.5em; /* @line-height */
     background: rgb(253, 254, 255); /* @white */
     margin-left: -1.5em;
@@ -5734,7 +5734,7 @@
   }
 
   .dialog .back {
-    border-bottom: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @mercury */
     margin-top: -1.3125em; /* @line-height x 3/4 */
     padding-bottom: 0.4375em; /* @line-height x 1/4 */
     margin-bottom: 1.75em;
@@ -5747,7 +5747,7 @@
   }
   .dialog > section {
     margin-top: 1.75em; /* @line-height / 2 */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em;
   }
   .dialog > aside {
@@ -5770,8 +5770,8 @@
   .dialog > aside > a {
     display: block;
     color: inherit;
-    background: rgb(249, 249, 250); /* @silver */
-    border: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    background: rgb(249, 249, 250); /* @seashell */
+    border: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding: 0.4375em 0.875em; /* @line-height / 4 */
   }
   .dialog > aside > a p {
@@ -5825,7 +5825,7 @@
     padding-bottom: 0;
     border-bottom-width: 0;
     margin-bottom: 0;
-    border-top: 0.1em solid rgb(215, 216, 217); /* @barium */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.875em;
   }
 
@@ -5860,7 +5860,7 @@
     margin-top    : 1.1666666667em;
     margin-bottom : 0.5833333334em;
 
-    border-bottom: 0.04166666667em solid rgb(218, 220, 224); /* @mithril 1px / 24px */
+    border-bottom: 0.04166666667em solid rgb(218, 220, 224); /* @mercury 1px / 24px */
     padding-bottom: 0.5833333334em;
     margin-bottom : 0.5833333334em;
   }
@@ -5936,7 +5936,7 @@
   }
   .member-header .details dd,
   .member-header .details dd a {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     text-decoration: none;
   }
   .member-header .details dd a:hover,
@@ -5948,7 +5948,7 @@
   .member-header > .container > div {
     border-width: 0.1em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     padding: 1.75em 1.5em 2.625em;
     background: rgb(253, 254, 255); /* @white */
     margin-left: -1.5em;
@@ -6038,7 +6038,7 @@
       /* article line height */
       line-height: 1.13em;
 
-      border-bottom: 0.02777777778em solid rgb(218, 220, 224); /* @mithril 1px / 36px */
+      border-bottom: 0.02777777778em solid rgb(218, 220, 224); /* @mercury 1px / 36px */
       min-height: 2.825em; /* .introduction.line-height x 2.5 */
       padding-bottom: 0.565em; /* .introduction.line-height / 2*/
       margin-bottom: 0.21em; /* 10px / 36px*/
@@ -6082,7 +6082,7 @@
   body > header.sub > .container > div {
     border-width: 0.1em;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     padding: 1.5625em; /* @line-height - 0.1875em */
     background: white;
     text-align: center;
@@ -6117,7 +6117,7 @@
   .topic-header > .container > div {
     border-width: 0.1875em; /* 3px / @font-size */
     border-style: solid;
-    border-color: rgb(51, 51, 51); /* @tungsten */
+    border-color: rgb(51, 51, 51); /* @iron */
     padding: 1.5625em; /* @line-height - 0.1875em */
     background: white;
     text-align: center;
@@ -6185,7 +6185,7 @@
   body > nav {
     background: white;
     margin: 0;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */;
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */;
   }
   body > nav:after {
     /* @clearfix */
@@ -6215,7 +6215,7 @@
   .home > .rss a,
   body > nav.sub .rss a,
   body > nav.sub li a {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     font-size: 0.75em; /* 12px / @font-size */
@@ -6235,7 +6235,7 @@
     display: block;
     font-size: 0.875em;
     margin-bottom: 0.875em; /* @line-height / 2 */
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.875em;   /* @line-height / 2 */
     margin-right: -1.5em;
     margin-left: -1.5em;
@@ -6268,7 +6268,7 @@
   }
   .home > .rss a,
   body > nav.sub .rss a {
-    color: rgb(221, 223, 227); /* @germanium */
+    color: rgb(218, 220, 224); /* @mercury */
   }
   .home > .rss a:after,
   body > nav.sub .rss a:after {
@@ -6287,7 +6287,7 @@
 
     font-size: 0.875em;
     content: "\e610"; /* @icon-rss */
-    color: rgb(221, 223, 227); /* @germanium */
+    color: rgb(218, 220, 224); /* @mercury */
     margin-left: 0.875em;
     transition: color 0.2s;
   }
@@ -6326,7 +6326,7 @@
   ----------------------------------------------- */
   body * nav.sub {
     max-width: none;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     position: relative;
   }
   body * nav.sub ul,
@@ -6346,7 +6346,7 @@
   }
   body * nav.sub li {
     display: inline;
-    border-right: 0.1em solid rgb(215, 216, 217); /* @barium */
+    border-right: 0.1em solid rgb(218, 220, 224); /* @mercury */
   }
   body * nav.sub li:first-child {
     margin-left: 0;
@@ -6494,7 +6494,7 @@
     font-size: 13px;
     border-width: 0 1px 0 0;
     border-style: solid;
-    border-color: rgb(230, 230, 230); /* @tin */
+    border-color: rgb(230, 230, 230); /* @gray-230 */
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
   }
   #header > ul li:first-child a {
@@ -6506,7 +6506,7 @@
     border-right-width: 0;
   }
   #header > ul a {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -6544,10 +6544,10 @@
   #header h2 a:hover,
   #header h2 a:active,
   #header h2 a:focus {
-    color: rgb(56, 60, 61); /* @platinum */
+    color: rgb(56, 60, 61); /* @steel */
   }
   #header h2 + p {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     font-weight: normal;
     margin-bottom: 0;
 
@@ -6562,7 +6562,7 @@
       font-size: 155px;
     }
     #header h2 a {
-      border-right: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-right: 1px solid rgb(218, 220, 224); /* @mercury */
       padding-right: 27px;
       background: white;
       margin-right: 12px;
@@ -6574,7 +6574,7 @@
     #header h2 + p {
       position: static;
       padding-left: 264px;
-      border-bottom: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-bottom: 1px solid rgb(218, 220, 224); /* @mercury */
       padding-bottom: 12px;
       margin-bottom: 5px;
     }
@@ -6586,7 +6586,7 @@
   #header > div {
     border-width: 1px 0 1px 0;
     border-style: solid;
-    border-color: rgb(230, 230, 230); /* @tin */
+    border-color: rgb(230, 230, 230); /* @gray-230 */
     background: white;
     padding: 7px 1.5em 0;
     position: relative;
@@ -6648,10 +6648,10 @@
   }
   #header nav div li a,
   #header nav div li h3 {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
   #header nav div li a {
-    border-top: 1px solid rgb(245, 245, 245); /* @thorium */
+    border-top: 1px solid rgb(245, 245, 245); /* @vanilla */
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
@@ -6719,7 +6719,7 @@
   @media (max-width: 47.9375em) { /* @medium-header */
     #header nav > ul {
       margin-top: 0.65625em;
-      border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     }
   }
   @media (min-width: 48em) { /* @medium-header */
@@ -6773,7 +6773,7 @@
   /* Containers */
   #header nav > div {
     clear: both;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
   }
   .scripted-nav #header nav > div {
     /* reset */
@@ -6803,7 +6803,7 @@
   @media (min-width: 75em) { /* @wide-header */
     .scripted-nav #header nav div > ul {
       margin-right: 0.65em;
-      border-left: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-left: 1px solid rgb(218, 220, 224); /* @mercury */
       padding-left: 0.65em;
       margin-bottom: 0;
       line-height: 40px;
@@ -6870,7 +6870,7 @@
 
       /* @dropdown */
       background: white;
-      border: 1px solid rgb(139, 139, 139); /* @zinc */
+      border: 1px solid rgb(153, 153, 153); /* @magnesium */
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
       z-index: 9999; /* @infinity */
@@ -6888,7 +6888,7 @@
       background: white;
       border-width: 0.125em 0 0 0.125em;
       border-style: solid;
-      border-color: rgb(139, 139, 139); /* @zinc */
+      border-color: rgb(153, 153, 153); /* @magnesium */
       width: 1em;
       height: 1em;
       -moz-box-sizing : border-box;
@@ -6908,8 +6908,8 @@
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
-      border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
-      color: rgb(101, 102, 103); /* @steel */
+      border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
+      color: rgb(101, 102, 103); /* @aluminum */
       text-decoration: none;
       font-weight: bold;
       line-height: 1.75em;
@@ -6932,7 +6932,7 @@
     display: inline;
   }
   #header form {
-    border-top: 1px solid rgb(245, 245, 245); /* @thorium */
+    border-top: 1px solid rgb(245, 245, 245); /* @vanilla */
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
@@ -6953,7 +6953,7 @@
   #header input {
     border-width: 0;
     border-radius: 2em;
-    background: rgb(245, 245, 245); /* @thorium */
+    background: rgb(245, 245, 245); /* @vanilla */
     width: 12em;
     max-width: none;
   }
@@ -7002,7 +7002,7 @@
   }
   @media (min-width: 75em) { /* @wide-header */
     #header .account h3 {
-      border-left: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-left: 1px solid rgb(218, 220, 224); /* @mercury */
       margin-left: 0.4375em;
       padding-left: 0.875em;
     }
@@ -7022,7 +7022,7 @@
 
     /* @dropdown */
     background: white;
-    border: 1px solid rgb(139, 139, 139); /* @zinc */
+    border: 1px solid rgb(153, 153, 153); /* @magnesium */
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
     z-index: 9999; /* @infinity */
@@ -7039,7 +7039,7 @@
     background: white;
     border-width: 0.125em 0 0 0.125em;
     border-style: solid;
-    border-color: rgb(139, 139, 139); /* @zinc */
+    border-color: rgb(153, 153, 153); /* @magnesium */
     width: 1em;
     height: 1em;
     -moz-box-sizing : border-box;
@@ -7062,8 +7062,8 @@
     display: block;
     padding: 0.675em 1.25em;
     font-size: 0.875em;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
-    color: rgb(101, 102, 103); /* @steel */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
+    color: rgb(101, 102, 103); /* @aluminum */
     text-decoration: none;
     font-weight: bold;
     line-height: 1.75em;
@@ -7084,7 +7084,7 @@
 
       /* @dropdown */
       background: white;
-      border: 1px solid rgb(139, 139, 139); /* @zinc */
+      border: 1px solid rgb(153, 153, 153); /* @magnesium */
       box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
 
       z-index: 9999; /* @infinity */
@@ -7096,7 +7096,7 @@
       margin-bottom: 0;
     }
     .scripted-nav #header nav form p {
-      border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
+      border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
       padding: 0.4375em 1em;
       display: block;
     }
@@ -7111,7 +7111,7 @@
       background: white;
       border-width: 0.125em 0 0 0.125em;
       border-style: solid;
-      border-color: rgb(139, 139, 139); /* @zinc */
+      border-color: rgb(153, 153, 153); /* @magnesium */
       width: 1em;
       height: 1em;
       -moz-box-sizing : border-box;
@@ -7141,8 +7141,8 @@
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
-      border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
-      color: rgb(101, 102, 103); /* @steel */
+      border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
+      color: rgb(101, 102, 103); /* @aluminum */
       text-decoration: none;
       font-weight: bold;
       line-height: 1.75em;
@@ -7221,7 +7221,7 @@
   #header ~ #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
@@ -7245,7 +7245,7 @@
     margin-top: 0;
 
     /* @separator */
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em; /* @line-height */
 
     padding-bottom: 3.5em; /* @line-height x 2 */
@@ -7346,7 +7346,7 @@
 
     #content .has-aside {
       padding-right: 1.75em;
-      border-right: 1px solid rgb(221, 223, 227); /* @germanium */
+      border-right: 1px solid rgb(218, 220, 224); /* @mercury */
     }
 
     /* @aside-column */
@@ -7407,7 +7407,7 @@
   }
   #footer > .container > p:last-child {
     font-size: 0.75em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
   #footer ul,
   #footer li {
@@ -7437,7 +7437,7 @@
          -o-font-feature-settings: "liga";
             font-feature-settings: "liga";
 
-    color: rgb(69, 71, 71); /* @iron */
+    color: rgb(69, 71, 71); /* @tin */
     font-weight: normal;
     line-height: 1
   }
@@ -7445,7 +7445,7 @@
     margin-left: 0.25em;
   }
   #footer p.rss a {
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
     font-size: 0.75em;
   }
   #footer p.rss a:hover,
@@ -7481,7 +7481,7 @@
     border-width: 0.1em 0;
     padding: 0.875em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
   }
   .post > article .share,
   .post > article .share li {
@@ -7609,7 +7609,7 @@
   .post > header h2.do,
   .post > header h2.link {
     margin-right: 0.55em;
-    border-right: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-right: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-right: 1em;
     line-height: 1;
   }
@@ -7704,7 +7704,7 @@
     border-width: 0.1em 0;
     padding: 1.75em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     margin-bottom: 1.75em; /* @line-height */
   }
 
@@ -7745,7 +7745,7 @@
     content: "\e609"; /* @icon-edit */
   }
   .post > article .source {
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     font-size: 0.75em;
   }
   .post > article .source img,
@@ -7758,7 +7758,7 @@
   }
   .post > article .source a {
     font-weight: bold;
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
 
   .post > article h1      a:hover,
@@ -7824,7 +7824,7 @@
 
   .post > footer .tags {
     margin-top: 0.875em; /* @line-height / 2 */
-    background: rgb(245, 245, 245); /* @thorium */
+    background: rgb(245, 245, 245); /* @vanilla */
     padding: 1.5em;
     margin-left: -1.5em;
     margin-right: -1.5em;
@@ -7843,14 +7843,14 @@
   @media (min-width: 50em) {
     .post > header {
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @mithril */
+      border-color: rgb(218, 220, 224); /* @mercury */
       border-width: 0.1em 0.1em 0;
       padding: 1.75em 3.5em 0; /* @line-height x 2 */
     }
     .post > footer {
       margin-top: 0;
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @mithril */
+      border-color: rgb(218, 220, 224); /* @mercury */
       border-width: 0 0.1em 0.1em;
       padding: 0.875em 3.5em 1.75em; /* @line-height x 2 */
     }
@@ -7868,12 +7868,12 @@
       padding: 0 3.5em 0 3.5em; /* @line-height x 2 */
     }
     .post > article h1 {
-      border-top: 1px solid rgb(218, 220, 224); /* @mithril */
+      border-top: 1px solid rgb(218, 220, 224); /* @mercury */
       padding-top: 0.7368421053em; /* @line-height(1.75em) / font-size(2.375em) */
     }
     .post > article > form:last-child,
     .post > article > footer:last-child {
-      border-bottom: 1px solid rgb(218, 220, 224); /* @mithril */
+      border-bottom: 1px solid rgb(218, 220, 224); /* @mercury */
       padding-bottom: 1.75em;
     }
   }
@@ -7932,7 +7932,7 @@
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83); /* @nickel */
     background: rgb(252, 252, 252); /* @snow */
-    border: 1px solid rgb(240, 240, 240); /* @mercury */
+    border: 1px solid rgb(240, 240, 240); /* @gray-240 */
     text-decoration: none;
   }
 
@@ -7947,7 +7947,7 @@
   .post > .popular-posts {
     margin-top: 1.75em;
     padding-top: 1.75em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
   }
   .post > .comments      h2,
   .post > .popular-posts h2 {
@@ -7972,7 +7972,7 @@
     font-family: inherit;
     font-size: 0.875em; /* 14px / @font-size(16px) */
     line-height: 2em; /* @line-height(1.75em) / font-size(0.875em) */
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .post > header h2.do,
   .post > header h2.link {
@@ -8153,7 +8153,7 @@
     background:  rgb(0, 1, 2);       /* @midnight */
     background: rgba(0, 1, 2, 0.75); /* @midnight */
     padding: 0.5em 1em 0.5em 1.25em;
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
     border-radius: 1.5em;
     margin-top: -1em;
     margin-left: -7em;
@@ -8223,7 +8223,7 @@
   .do-header > .container > div {
     border-width: 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     padding: 1em 1.5em;
     background: white;
   }
@@ -8299,7 +8299,7 @@
     font-size: 0.75em;
     margin-bottom: 0;
     margin-top: 0.875em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.875em;
   }
   .do-header .tags h2 {
@@ -8307,7 +8307,7 @@
     font-style: inherit;
     font-size: inherit;
     text-transform: lowercase;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
     display: inline;
     margin-right: 0.5em;
   }
@@ -8330,7 +8330,7 @@
     content: "";
   }
   .do-header .tags a {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     text-decoration: none;
     font-weight: bold;
   }
@@ -8409,7 +8409,7 @@
 
   .do-header .participants {
     margin-top: 0.875em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 0.875em;
   }
   .do-header .participants img {
@@ -8478,7 +8478,7 @@
   .do-header .participants header p {
     margin-left: 0.4375em;
     font-size: 0.875em;
-    color: rgb(153, 153, 153); /* @aluminum */
+    color: rgb(153, 153, 153); /* @magnesium */
   }
   .do-header .participants header p:before {
     content: "(";
@@ -8509,7 +8509,7 @@
 /* =Tags
   ----------------------------------------------- */
   .do-tags {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
     font-size: 0.875em;
     text-align: left;
   }
@@ -8548,7 +8548,7 @@
     content: "\e603"; /* @icon-tag */
 
     color: rgb(247, 113, 113); /* @raspberry */
-    color: rgb(204, 204, 204); /* @magnesium */
+    color: rgb(204, 204, 204); /* @silver */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
   }
@@ -8653,7 +8653,7 @@
     margin-left: -24px;
     margin-right: -24px;
     margin-top: 1.75em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     font-size: 0.875em;
     text-align: right;
     margin-bottom: -16px;
@@ -8669,7 +8669,7 @@
 
     border-left-width: 0.1em;
     border-left-style: solid;
-    border-left-color: rgb(218, 220, 224); /* @mithril */
+    border-left-color: rgb(218, 220, 224); /* @mercury */
   }
   .message   .share li:last-child a,
   .do-header .share li:last-child a {
@@ -8724,7 +8724,7 @@
     margin-bottom : 0.5833333334em;
   }
   .explore .action + h2 {
-    border-top: 1px solid rgb(218, 220, 224); /* @mithril */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em; /* @line-height */
     margin-top: 2.3333333334em; /* @line-height / font-size(1.5) x 2 */
   }
@@ -8857,7 +8857,7 @@
   /* Introduction */
   .explore + .explore {
     margin-top: 3.5em; /* @line-height x 2 */
-    border-top: 0.1em solid rgb(240, 240, 240); /* @mercury */
+    border-top: 0.1em solid rgb(240, 240, 240); /* @gray-240 */
     padding-top: 3.5em;
   }
 
@@ -8889,7 +8889,7 @@
     height: 6.25em;
     width: 0.375em;
     margin: 1.75em auto;
-    background: rgb(240, 240, 240); /* @mercury */
+    background: rgb(240, 240, 240); /* @gray-240 */
   }
   .explore > ul.introduction h3 {
     /* @h1 */
@@ -9016,7 +9016,7 @@
   .search-header .container h1 {
     border-width: 0.1em;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     padding: 2.25em;
     background: white;
     text-align: center;
@@ -9041,7 +9041,7 @@
     margin-bottom: 3.5em;
     border-width: 0.1em;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @mithril */
+    border-color: rgb(218, 220, 224); /* @mercury */
     padding: 1.75em;
     margin-left: auto;
     margin-right: auto;
@@ -9095,7 +9095,7 @@
     margin-bottom: 0;
   }
   .search-summary .action {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     margin-top: 0;
     position: relative;
     padding: 2em 1.4285714286em 0;
@@ -9109,7 +9109,7 @@
       float: left;
       border-width: 0.1em;
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @mithril */
+      border-color: rgb(218, 220, 224); /* @mercury */
       padding: 1.75em;
     }
     .search-summary + .search-summary {
@@ -9158,7 +9158,7 @@
   /* SHIM: Center the “More Posts” link on search results pages.
   (If we show the regular paging instead, we can remove this.) */
   .activity-list + .action {
-    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
+    border-top: 1px solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em; /* @line-height */
     text-align: center;
   }
@@ -9174,7 +9174,7 @@
   #header ~ div #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mercury */
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
@@ -9243,7 +9243,7 @@
   .logotype a:hover,
   .logotype a:active,
   .logotype a:focus {
-    color: rgb(56, 60, 61); /* @platinum */
+    color: rgb(56, 60, 61); /* @steel */
   }
   .pattern.index h1 {
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
@@ -9284,7 +9284,7 @@
     color: rgb(113, 179, 247); /* @sky */
   }
   .pattern-list li a:visited {
-    color: rgb(101, 102, 103); /* @steel */
+    color: rgb(101, 102, 103); /* @aluminum */
   }
   .pattern-list li a:hover,
   .pattern-list li a:active,
