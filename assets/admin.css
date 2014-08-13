@@ -59,7 +59,7 @@
   }
 
   section.message .close.secondary a {
-    color: rgb(153, 153, 102);
+    color: rgb(162, 166, 121); /* @asparagus */
   }
   section.message .close.secondary a span {
     /* @hidden-accessible */
@@ -72,7 +72,7 @@
   ----------------------------------------------- */
   .filters h2,
   .filters label span {
-    color: rgb(102, 102, 102);
+    color: rgb(101, 102, 103); /* @tin */
     font-size: 14px;
     display: inline;
     margin-right: 15px;
@@ -97,9 +97,9 @@
     display: inline-block;
     line-height: 36px;
     padding: 0 20px;
-    border: 1px solid rgb(227, 229, 232);
+    border: 1px solid rgb(218, 220, 224); /* @magnesium */
     background: white;
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @nickel */
     font-weight: bold;
     margin-right: 4px;
     margin-bottom: -1px;
@@ -110,18 +110,18 @@
   .filters a:hover,
   .filters a:active,
   .filters a:focus {
-    color: rgb(51, 153, 255); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   .filters a.active {
-    border: 1px solid rgb(164, 228, 176);
-    background: rgb(237, 253, 242);
+    border: 1px solid rgb(184, 231, 184); /* @bamboo */
+    background: rgb(230, 253, 235); /* @pear */
     color: black;
   }
   .filters li:last-child a {
     margin-right: 0;
   }
   .filters form {
-    border-top: 1px solid rgb(239, 239, 239);
+    border-top: 1px solid rgb(240, 240, 240); /* @seashell */
     padding-top: 20px;
     margin: 0 0 20px;
     font-size: 0.875em;
@@ -159,7 +159,7 @@
     vertical-align: top;
   }
   .features ol button {
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(240, 240, 240); /* @seashell */
     color: rgb(101, 102, 102); /* @tin */
   }
   .admin#users .filters form {
@@ -186,7 +186,7 @@
     line-height: 1.5;
     border-width: 1px 0 2px 0;
     border-style: solid;
-    border-color: rgb(204, 204, 204);
+    border-color: rgb(204, 204, 204); /* @aluminum */
     border-spacing: 0;
     width: 100%;
   }
@@ -209,24 +209,24 @@
   }
   td.action a:before {
     transition: opacity 0.1s;
-    color: rgb(229, 229, 229);
+    color: rgb(230, 230, 230); /* @mercury */
   }
   tbody tr:hover,
   tbody tr:active,
   tbody tr:focus {
-    background: rgb(255, 252, 231);
+    background: rgb(255, 252, 231); /* @pineapple */
   }
   tbody tr:hover td.action a:before,
   tbody tr:active td.action a:before,
   tbody tr:focus td.action a:before {
-    color: rgb(162, 166, 121); /* $blue_aluminum */
+    color: rgb(162, 166, 121); /* @asparagus */
   }
   th,
   td {
     border-width: 0 0 1px 0;
     border-style: solid;
-    border-color: rgb(204, 204, 204);
-    color: rgb(153, 153, 153);
+    border-color: rgb(204, 204, 204); /* @aluminum */
+    color: rgb(153, 153, 153); /* @nickel */
     text-align: left;
     font-size: 12px;
     vertical-align: middle;
@@ -261,7 +261,7 @@
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     font-size: 11px;
-    border-bottom: 2px solid rgb(204, 204, 204);
+    border-bottom: 2px solid rgb(204, 204, 204); /* @aluminum */
   }
   th.ascending span, table th.descending span {
     color: black;
@@ -360,11 +360,11 @@ td .source.comments > h2 > a {
     position: absolute;
   }
   td .source .details > .container {
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204); /* @aluminum */
     border-radius: 0.25em;
   }
   td .source .details > .container .container {
-    border: 0.25em solid rgb(239, 239, 239);
+    border: 0.25em solid rgb(240, 240, 240); /* @seashell */
     background: white;
     padding: 0.375em; /* 6px / 16px */
     border-radius: 0.25em;
@@ -403,15 +403,15 @@ td .source.comments > h2 > a {
   td .source .details > .container p.meta + p.meta {
     margin-left: 0.5em;
     padding-left: 0.7em;
-    border-left: 1px solid rgb(217, 217, 217);
+    border-left: 1px solid rgb(218, 220, 224); /* @magnesium */
   }
   td .source .details > .container .link {
     margin-top: 7px;
   }
   td .source .details > .container .link a {
-    background: rgb(250, 250, 250); /* $bright_mercury */
-    border: 1px solid rgb(218, 220, 224); /* $bright_blue_silver */
-    color: rgb(102, 102, 102); /* $steel */
+    background: rgb(249, 249, 250); /* @vanilla */
+    border: 1px solid rgb(218, 220, 224); /* @magnesium */
+    color: rgb(101, 102, 103); /* @tin */
     padding: 7px 15px 5px;
     display: block;
     border-radius: 0.25em;
@@ -419,7 +419,7 @@ td .source.comments > h2 > a {
   td .source .details > .container .link a:hover,
   td .source .details > .container .link a:active,
   td .source .details > .container .link a:focus {
-    color: rgb(51, 153, 255); /* @link-color */
+    color: rgb(47, 132, 218); /* @ocean */
   }
   td .source:hover  .details,
   td .source:active .details,
@@ -443,7 +443,7 @@ td .source.comments > h2 > a {
   }
 
   td.author {
-    color: rgb(102, 102, 102);
+    color: rgb(101, 102, 103); /* @tin */
   }
   td.author .source .details {
     top: 1.8em;
@@ -468,9 +468,9 @@ td .source.comments > h2 > a {
   td.action a:hover,
   td.action a:active,
   td.action a:focus {
-    color: rgb(102, 102, 102);
+    color: rgb(101, 102, 103); /* @tin */
     background: white;
-    border-color: rgb(213, 212, 209);
+    border-color: rgb(218, 220, 224); /* @magnesium */
   }
 
   /* SHIM: The extra “td.action.edit” selector helps override the default style for edit actions.
@@ -496,7 +496,7 @@ td .source.comments > h2 > a {
   td.approve a:hover:before,
   td.approve a:active:before,
   td.approve a:focus:before {
-    color: rgb(0, 128, 64) !important;
+    color: rgb(0, 128, 64) !important; /* @cucumber */
   }
   td.flag a:before {
     content: "\e607"; /* @icon-flag */
@@ -504,7 +504,7 @@ td .source.comments > h2 > a {
   td.flag a:hover:before,
   td.flag a:active:before,
   td.flag a:focus:before {
-    color: rgb(255, 102, 102) !important;
+    color: rgb(255, 51, 51) !important; /* @apple */
   }
   td.ban a:before {
     content: "\e608"; /* @icon-ban */
@@ -512,7 +512,7 @@ td .source.comments > h2 > a {
   td.ban a:hover:before,
   td.ban a:active:before,
   td.ban a:focus:before {
-    color: rgb(255, 102, 102) !important;
+    color: rgb(255, 51, 51) !important; /* @apple */
   }
   td.edit a:before {
     content: "\e609"; /* @icon-edit */
@@ -520,7 +520,7 @@ td .source.comments > h2 > a {
   td.edit a:hover:before,
   td.edit a:active:before,
   td.edit a:focus:before {
-    color: rgb(51, 153, 255) !important;
+    color: rgb(49, 144, 242) !important; /* @boysenberry */
   }
   td.delete a:before {
     content: "\e60a"; /* @icon-delete */
@@ -528,7 +528,7 @@ td .source.comments > h2 > a {
   td.delete a:hover:before,
   td.delete a:active:before,
   td.delete a:focus:before {
-    color: rgb(255, 102, 102) !important;
+    color: rgb(255, 51, 51) !important; /* @apple */
   }
   td.action a > span {
     position: absolute;
@@ -547,7 +547,7 @@ td .source.comments > h2 > a {
     white-space: nowrap;
     padding: 0.5em 1em;
     border-radius: 0.25em;
-    border: 1px solid rgb(234, 234, 234);
+    border: 1px solid rgb(230, 230, 230); /* @mercury */
   }
   td.action a > span span:before {
     content: "";
@@ -580,7 +580,7 @@ td .source.comments > h2 > a {
   td a:hover,
   td a:active,
   td a:focus {
-    color: rgb(51, 153, 255);
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
@@ -599,14 +599,14 @@ td .source.comments > h2 > a {
   .batch button {
     font-size: 14px;
     font-weight: bold;
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(240, 240, 240); /* @seashell */
     color: rgb(101, 102, 102); /* @tin */
   }
   .batch button:hover,
   .batch button:active,
   .batch button:focus {
-    background: rgb(250, 250, 250);
-    color: rgb(42, 43, 44);
+    background: rgb(249, 249, 250); /* @vanilla */
+    color: rgb(42, 43, 44); /* @tungsten */
   }
   .batch button:before {
     /* @icons */
@@ -630,7 +630,7 @@ td .source.comments > h2 > a {
   .batch button.approve:hover:before,
   .batch button.approve:active:before,
   .batch button.approve:focus:before {
-    color: rgb(0, 128, 64) !important;
+    color: rgb(0, 128, 64) !important; /* @cucumber */
   }
   .batch button.flag:before {
     content: "\e607"; /* @icon-flag */
@@ -638,7 +638,7 @@ td .source.comments > h2 > a {
   .batch button.flag:hover:before,
   .batch button.flag:active:before,
   .batch button.flag:focus:before {
-    color: rgb(255, 102, 102) !important;
+    color: rgb(255, 51, 51) !important; /* @apple */
   }
   .batch button.ban:before {
     content: "\e608"; /* @icon-ban */
@@ -646,7 +646,7 @@ td .source.comments > h2 > a {
   .batch button.ban:hover:before,
   .batch button.ban:active:before,
   .batch button.ban:focus:before {
-    color: rgb(255, 102, 102) !important;
+    color: rgb(255, 51, 51) !important; /* @apple */
   }
   .batch button.delete:before {
     content: "\e60a"; /* @icon-delete */
@@ -654,7 +654,7 @@ td .source.comments > h2 > a {
   .batch button.delete:hover:before,
   .batch button.delete:active:before,
   .batch button.delete:focus:before {
-    color: rgb(255, 102, 102) !important;
+    color: rgb(255, 51, 51) !important; /* @apple */
   }
 
 
@@ -666,7 +666,7 @@ td .source.comments > h2 > a {
     margin: 0 0.875em 0 0;
   }
   td figure img {
-    box-shadow: 0.25em 0.25em 0 rgb(227, 228, 229);
+    box-shadow: 0.25em 0.25em 0 rgb(218, 220, 224); /* @magnesium */
   }
 
 
@@ -706,7 +706,7 @@ td .source.comments > h2 > a {
     font-size: 14px;
   }
   .features form p.submit:first-of-type {
-    border-top: 0.1em solid rgb(204, 204, 204);
+    border-top: 0.1em solid rgb(204, 204, 204); /* @aluminum */
     position: relative;
     padding: 20px 0 0 0.875em;
     margin-bottom: 0;
@@ -718,8 +718,8 @@ td .source.comments > h2 > a {
     padding-left: 0;
   }
   .features ol {
-    border-top: 1px solid rgb(204, 204, 204);
-    border-bottom: 3px solid rgb(204, 204, 204);
+    border-top: 1px solid rgb(204, 204, 204); /* @aluminum */
+    border-bottom: 3px solid rgb(204, 204, 204); /* @aluminum */
     margin-bottom: 1.75em;
   }
   .features form p.submit + ol {
@@ -727,7 +727,7 @@ td .source.comments > h2 > a {
     margin-bottom: 20px;
   }
   .features ol li {
-    border-top: 0.1em solid rgb(204, 204, 204);
+    border-top: 0.1em solid rgb(204, 204, 204); /* @aluminum */
     position: relative;
     padding: 16px 7em 16px 0.875em;
     transition: background-color 0.1s;
@@ -735,7 +735,7 @@ td .source.comments > h2 > a {
   .features ol li:hover,
   .features ol li:active,
   .features ol li:focus {
-    background: rgb(255, 252, 231);
+    background: rgb(255, 252, 231); /* @pineapple */
   }
   .features ol input[type="text"] {
     width: 3em;
@@ -778,7 +778,7 @@ td .source.comments > h2 > a {
   }
   .add-post h2 {
     margin-right: 0.5em;
-    color: rgb(102, 102, 102);
+    color: rgb(101, 102, 103); /* @tin */
     font-size: inherit;
     font-weight: bold;
   }

@@ -46,17 +46,11 @@
     text-transform: lowercase;
     font-weight: bold;
   }
-  .share a:hover,
-  .share a:active,
-  .share a:focus {
-    color: rgb(178, 158, 31);
-  }
-
   .share .facebook a {
-    color: rgb(58, 88, 151) !important;
+    color: rgb(59, 89, 152); /* @plumb */
   }
   .share .twitter a {
-    color: rgb(40, 170, 225) !important;
+    color: rgb(85, 172, 238); /* @bluebird */
   }
   .share .facebook  a:before,
   .share .twitter   a:before {
@@ -100,7 +94,7 @@
     margin-top: 0;
     padding: 1em 1.5em;
     background: white;
-    border-bottom: 0.1em solid rgb(224, 224, 224);
+    border-bottom: 0.1em solid rgb(225, 225, 225); /* @silver */
     -moz-box-sizing : border-box;
     box-sizing      : border-box;
     margin-bottom: 0;
@@ -234,7 +228,7 @@
     text-decoration: none;
   }
   .story-header .back a {
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @nickel */
     padding: 0.35em 0.7em;
     display: inline-block;
   }
@@ -276,7 +270,7 @@
   .story-header nav li + li {
     margin-left: 0.75em;
     padding-left: 0.875em;
-    border-left: 0.1em solid rgb(204, 204, 204);
+    border-left: 0.1em solid rgb(204, 204, 204); /* @aluminum */
   }
   .story-header nav li {
     font-weight: bold;
@@ -324,7 +318,7 @@
   .member {
     border-width: 0 0 0.1em 0;
     border-style: solid;
-    border-color: rgb(224, 224, 224);
+    border-color: rgb(225, 225, 225); /* @silver */
     padding-bottom: 0.875em;
     margin-bottom: 0.875em;
   }
@@ -358,7 +352,7 @@
     margin-top: 1.75em;
     display: block;
     font-size: 0.875em;
-    color: rgb(153, 153, 153);
+    color: rgb(153, 153, 153); /* @nickel */
   }
   .member .comment {
     display: inline;
@@ -391,7 +385,7 @@
     margin-right: 0.4375em;
   }
   .member .options {
-    border-top: 0.1em solid rgb(224, 224, 224);
+    border-top: 0.1em solid rgb(225, 225, 225); /* @silver */
     padding-top: 0.875em;
     margin-top: 0.875em;
   }
@@ -459,7 +453,7 @@
     background: white;
     border-width: 0.1em 0 0 0;
     border-style: solid;
-    border-color: rgb(224, 224, 224);
+    border-color: rgb(225, 225, 225); /* @silver */
     padding-top: 1.3125em;
     padding-bottom: 1.75em;
   }
@@ -484,7 +478,7 @@
   .comments > .comment-list {
     border-width: 0.1em 0 0 0;
     border-style: solid;
-    border-color: rgb(224, 224, 224);
+    border-color: rgb(225, 225, 225); /* @silver */
     margin-top: 2.625em;
     padding-top: 0.875em;
   }
@@ -497,7 +491,7 @@
   .comment-list article {
     border-width: 0 0 0.1em 0;
     border-style: solid;
-    border-color: rgb(224, 224, 224);
+    border-color: rgb(225, 225, 225); /* @silver */
   }
   .comment-list .comment-list {
     margin-top: 0;
@@ -533,7 +527,7 @@
     line-height: 2.2222222222em; /* 40px / 18px */
     border-width: 0 0 0.1em 0;
     border-style: solid;
-    border-color: rgb(224, 224, 224);
+    border-color: rgb(225, 225, 225); /* @silver */
     padding-bottom: 0.7777777778em;
     margin-bottom: 0.7777777778em;
   }
@@ -608,7 +602,7 @@
     float: right;
   }
   .story-aside ul {
-    border-top: 0.1em solid rgb(249, 249, 250);
+    border-top: 0.1em solid rgb(249, 249, 250); /* @vanilla */
     margin-top: 0.875em;
     padding-top: 0.875em;
   }
@@ -642,7 +636,7 @@
   .story-header > a,
   .story-header h3 + div {
     display: block;
-    border-top: 0.1em solid rgb(224, 224, 224);
+    border-top: 0.1em solid rgb(225, 225, 225); /* @silver */
     padding-top: 0.875em;
     margin-top: 0.875em;
   }

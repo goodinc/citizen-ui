@@ -1299,7 +1299,7 @@
     color: rgb(152, 94, 91);
   }
   section.message.success {
-    background: rgb(230, 253, 235);
+    background: rgb(230, 253, 235); /* @pear */
     border-color: rgb(184, 231, 184); /* @bamboo */
   }
   section.message.success p,
@@ -8544,7 +8544,6 @@
 
     content: "\e603"; /* @icon-tag */
 
-    color: rgb(247, 113, 113); /* @raspberry */
     color: rgb(204, 204, 204); /* @aluminum */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
@@ -8604,11 +8603,11 @@
   }
   .message   .share .facebook a,
   .do-header .share .facebook a {
-    color: rgb(58, 88, 151);
+    color: rgb(59, 89, 152); /* @plumb */
   }
   .message   .share .twitter a,
   .do-header .share .twitter a {
-    color: rgb(40, 170, 225);
+    color: rgb(85, 172, 238); /* @bluebird */
   }
   .message   .share .facebook  a:before,
   .message   .share .twitter   a:before,
