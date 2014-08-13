@@ -261,7 +261,7 @@
     }
   }
 
-  /* For search results (SHIM: We’re currently using a <span class="match"> element, but a <mark> would more ideal.) */
+  /* For search results */
   mark,
   span.match {
     background-color: rgb(255, 255, 204); /* @banana */
@@ -6283,8 +6283,8 @@
     }
   }
   body > nav.sub .active a {
-    color: rgb(0, 1, 2); /* @black */
-    border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @black */
+    color: rgb(0, 1, 2); /* @midnight */
+    border-bottom: 0.4166666667em solid rgb(0, 1, 2); /* @midnight */
   }
   .home > .rss a,
   body > nav.sub .rss a {
@@ -6396,7 +6396,7 @@
     color: rgb(0, 1, 2);  /* @midnight */
   }
   body * nav.sub .active a:after {
-    border-bottom-color: rgb(0, 1, 2); /* @black */
+    border-bottom-color: rgb(0, 1, 2); /* @midnight */
   }
   body * nav.sub li span {
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
@@ -9267,10 +9267,6 @@
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
-    text-align: center;
-  }
-  .pattern-list {
-    text-align: center;
   }
   .pattern-list h3 {
     font-weight: bold;
@@ -9278,12 +9274,20 @@
     font-size: 1.25em;
     line-height: inherit;
   }
-  .pattern-list section {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 1.75em 1.75em;
-    text-align: left;
-    font-size: 125%;
+  @media (min-width: 40em) {  
+    .pattern-list {
+      text-align: center;
+    }
+    .pattern.index h1 {
+      text-align: center;
+    }
+    .pattern-list section {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 1.75em 1.75em;
+      text-align: left;
+      font-size: 125%;
+    }
   }
   .pattern-list ul,
   .pattern-list li {
