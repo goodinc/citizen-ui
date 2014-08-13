@@ -386,7 +386,7 @@
   .pagination .next a:hover,
   .pagination .next a:active,
   .pagination .next a:focus {
-    background-color: rgb(49, 144, 242); /* @deep-ocean */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
     color: white;
   }
   .pagination li.active a {
@@ -499,7 +499,7 @@
   button:hover,
   button:active,
   button:focus {
-    background-color: rgb(49, 144, 242); /* @deep-ocean */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
 
   button[disabled] {
@@ -538,7 +538,7 @@
   }
   .scripted-button form.voted h6,
   .voted button {
-    background-color: rgb(49, 144, 242); /* @deep-ocean */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
   .scripted-button form.voted h6,
   .vote  button,
@@ -553,7 +553,7 @@
   .vote button:hover,
   .vote button:active,
   .vote button:focus {
-    background-color: rgb(49, 144, 242); /* @deep-ocean */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
   .scripted-button form.voted h6:hover,
   .scripted-button form.voted h6:active,
@@ -561,7 +561,7 @@
   .voted button:hover,
   .voted button:active,
   .voted button:focus {
-    background-color: rgb(19, 114, 212); /* @deep-dark-ocean */
+    background-color: rgb(19, 114, 212); /* @blueberry */
   }
 
   /* OPTIONAL: Adjust the font size, for readability */
@@ -1659,7 +1659,7 @@
   .options .reply a:hover:before,
   .options .reply a:active:before,
   .options .reply a:focus:before {
-    color: rgb(49, 144, 242); /* @deep-ocean */
+    color: rgb(49, 144, 242); /* @boysenberry */
   }
 
   .options .flag   button:hover:before,
@@ -1932,7 +1932,7 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 1.3125em 1.5em;
-    background: rgb(234, 244, 254); /* @mercury-blue */
+    background: rgb(234, 244, 254); /* @cloud */
 
     border-width: 1px 0 1px 0;
     border-style: solid;
@@ -2207,7 +2207,7 @@
   .discussion li a:hover,
   .discussion li a:active,
   .discussion li a:focus {
-    color: rgb(47, 132, 218); /* @deep-blue */
+    color: rgb(49, 144, 242); /* @boysenberry */
   }
   .discussion li img,
   .discussion li .avatar {
@@ -2893,7 +2893,7 @@
   .meta form.vote  button:active,
   .meta form.vote  button:focus,
   .meta form.voted button {
-    background-color: rgb(49, 144, 242); /* @deep-ocean */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
     border-color: rgba(0, 0, 0, 0.15);
     color: white;
   }
@@ -2904,7 +2904,7 @@
   .meta form.voted button:hover,
   .meta form.voted button:active,
   .meta form.voted button:focus {
-    background-color: rgb(19, 114, 212); /* @deep-dark-ocean */
+    background-color: rgb(19, 114, 212); /* @blueberry */
   }
   /* SHIM: Override the above styles to keep the background color transparent.
   (This can be removed once the HTML is updated and the hover style above is obsolete.) */
@@ -3592,13 +3592,7 @@
 
   /* Links */
   .follow-list a {
-    color: rgb(102, 153, 204); /* @blue */
     text-decoration: none;
-  }
-  .follow-list a:hover,
-  .follow-list a:active,
-  .follow-list a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Headlines */
@@ -3780,13 +3774,7 @@
 
   /* Links */
   .comment-list a {
-    color: rgb(102, 153, 204); /* @blue */
     text-decoration: none;
-  }
-  .comment-list a:hover,
-  .comment-list a:active,
-  .comment-list a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
   }
 
   /* Headlines */
@@ -3859,14 +3847,6 @@
   }
   .comment-list article > p {
     max-width: 33em;
-  }
-  .comment-list article > p a {
-    color: rgb(102, 153, 204); /* @blue */
-  }
-  .comment-list article > p a:hover,
-  .comment-list article > p a:active,
-  .comment-list article > p a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
   }
 
   .comment-list form {
@@ -5678,7 +5658,7 @@
   /* Join / Sign In */
   .facebook.action span,
   .facebook.action a {
-    background-color: rgb(59, 89, 152); /* @blueberry */
+    background-color: rgb(59, 89, 152); /* @plumb */
     font-size: 0.875em;
   }
   .dialog .facebook.action {
@@ -5723,7 +5703,7 @@
     padding: 0.25em 0 0 0.25em;
 
     content: "\e60d"; /* @icon-facebook */
-    color: rgb(59, 89, 152); /* @blueberry */
+    color: rgb(59, 89, 152); /* @plumb */
 
   }
   @media (min-width: 30em) {
@@ -6686,7 +6666,7 @@
   #header nav li a:active,
   #header nav li a:focus,
   #header nav li h3:hover {
-    background: rgb(234, 244, 254); /* @mercury-blue */
+    background: rgb(234, 244, 254); /* @cloud */
   }
 
 
@@ -7960,7 +7940,7 @@
   .post > footer .tags a:active,
   .post > footer .tags a:focus {
     background: white;
-    color: rgb(47, 132, 218); /* @deep-blue */
+    color: rgb(49, 144, 242); /* @boysenberry */
   }
 
   .post > .comments,
@@ -8140,7 +8120,7 @@
   .post .popular-posts  h2 a:hover,
   .post .popular-posts  h2 a:active,
   .post .popular-posts  h2 a:focus {
-    color: rgb(47, 132, 218); /* @deep-blue */
+    color: rgb(49, 144, 242); /* @boysenberry */
   }
   .post .popular-posts li:first-child .activity-item {
     border-top-width: 0;
@@ -8662,7 +8642,7 @@
   }
   .message   .share .facebook a:before,
   .do-header .share .facebook a:before {
-    background: rgb(59, 89, 152); /* @blueberry */
+    background: rgb(59, 89, 152); /* @plumb */
     border-radius: 0.15em;
     padding: 0.25em 0 0 0.25em;
 
