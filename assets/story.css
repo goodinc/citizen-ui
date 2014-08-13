@@ -154,7 +154,7 @@
   .story-header h3 a:hover,
   .story-header h3 a:active,
   .story-header h3 a:focus {
-    color: rgb(56, 60, 61); /* @logo-hover */
+    color: rgb(56, 60, 61); /* @platinum */
   }
 
   .story-header h2 {
@@ -283,7 +283,7 @@
     font-size: 0.875em;
   }
   .story-header nav a {
-    color: rgb(62, 197, 149); /* @fern */
+    color: rgb(64, 198, 149); /* @clover */
   }
   .story-header form.do,
   .story-header form.doing,

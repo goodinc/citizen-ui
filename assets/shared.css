@@ -81,8 +81,8 @@
     font: 100%/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     margin: 0;
     padding: 0;
-    background: rgb(249, 249, 250); /* @bright-white */
-    color: rgb(42, 43, 44); /* @text-color */
+    background: rgb(249, 249, 250); /* @silver */
+    color: rgb(42, 43, 44); /* @granite */
   }
   a {
     color: rgb(113, 179, 247); /* @sky */
@@ -234,7 +234,7 @@
     font-size: 0.75em;
     line-height: 1.33333333333333;
     padding: 1.86em 0;
-    border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    border-bottom: 1px solid rgb(218, 220, 224); /* @mithril */
     margin-bottom: 1.86em;
   }
   figure + figure {
@@ -329,7 +329,7 @@
   /* =Paging
   ----------------------------------------------- */
   .pagination {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     position: relative;
     padding: 1.25em 1.25em 0;
     text-align: center;
@@ -399,8 +399,8 @@
   .pagination .previous a:hover,
   .pagination .previous a:active,
   .pagination .previous a:focus {
-    background: rgb(249, 249, 250); /* @bright-white */
-    color: rgb(42, 43, 44); /* @text-color */
+    background: rgb(249, 249, 250); /* @silver */
+    color: rgb(42, 43, 44); /* @granite */
   }
   .pagination .previous {
     margin-right : 0.875em;
@@ -582,7 +582,7 @@
   .follow button:hover,
   .follow button:active,
   .follow button:focus {
-    background-color: rgb(64, 198, 131); /* @bright-moss */
+    background-color: rgb(64, 198, 149); /* @clover */
   }
   .scripted-button form.following h6,
   .following button {
@@ -591,12 +591,12 @@
   .scripted-button form.following h6:hover,
   .scripted-button form.following h6:active,
   .scripted-button form.following h6:focus {
-    background-color: rgb(80, 167, 135); /* @bright-clover */
+    background-color: rgb(80, 167, 135); /* @fern */
   }
   .following button:hover,
   .following button:active,
   .following button:focus {
-    background: rgb(247, 113, 113); /* @strawberry */
+    background: rgb(247, 113, 113); /* @raspberry */
   }
 
   .following button:hover,
@@ -636,7 +636,7 @@
   .do button:hover,
   .do button:active,
   .do button:focus {
-    background-color: rgb(64, 198, 131); /* @bright-moss */
+    background-color: rgb(64, 198, 149); /* @clover */
   }
   .scripted-button form.doing h6,
   .doing button {
@@ -660,7 +660,7 @@
   .done button:hover,
   .done button:active,
   .done button:focus {
-    background-color: rgb(80, 167, 135); /* @bright-clover */
+    background-color: rgb(80, 167, 135); /* @fern */
   }
 
 
@@ -693,8 +693,8 @@
   .secondary button:hover,
   .secondary button:active,
   .secondary button:focus {
-    background: rgb(249, 249, 250); /* @bright-white */
-    color: rgb(42, 43, 44); /* @text-color */
+    background: rgb(249, 249, 250); /* @silver */
+    color: rgb(42, 43, 44); /* @granite */
   }
 
 
@@ -706,7 +706,7 @@
   .warning button:hover,
   .warning button:active,
   .warning button:focus {
-    background-color: rgb(247, 113, 113); /* @strawberry */
+    background-color: rgb(247, 113, 113); /* @raspberry */
   }
 
 
@@ -844,7 +844,7 @@
   .scripted-button form.done  button[name*="remove"]:hover,
   .scripted-button form.done  button[name*="remove"]:active,
   .scripted-button form.done  button[name*="remove"]:focus {
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
   }
   .scripted-button form.following h6 + p button:hover,
   .scripted-button form.following h6 + p button:active,
@@ -1012,7 +1012,7 @@
   textarea {
     border-width: 0;
     border-radius: 0;
-    border: 1px solid rgb(225, 225, 225); /* @bright-silver */
+    border: 1px solid rgb(225, 225, 225); /* @chromium */
 
     /* Give the field a width of 22em’s, but make it fit on small screens. */
     max-width: 22em;
@@ -1049,7 +1049,7 @@
 
   input[type="text"][disabled] {
     opacity: 0.6;
-    background: rgb(245, 245, 245); /* @bright-mercury */
+    background: rgb(245, 245, 245); /* @thorium */
   }
 
   form .submit {
@@ -1067,7 +1067,7 @@
 
     /* @fieldset */
     margin-top: 2.625em; /* @line-height x 3/2 */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-top: 1.75em;
   }
   form section.secondary h2,
@@ -1158,15 +1158,15 @@
   }
   form .file.error {
     padding: 1.375em 1.75em;
-    background: rgb(253, 235, 230); /* @super-bright-salmon */
-    border: 0.1875em solid rgb(251, 204, 204); /* @bright-salmon */
+    background: rgb(253, 235, 230); /* @bright-strawberry */
+    border: 0.1875em solid rgb(251, 204, 204); /* @strawberry */
   }
   form .file.error .error-message {
     margin-top: 1.75em;
   }
   form .success textarea,
   form .success input {
-    border-color: rgb(184, 231, 184); /* @green */
+    border-color: rgb(184, 231, 184); /* @bamboo */
   }
   form .success label:after {
     /* @icons */
@@ -1184,7 +1184,7 @@
   }
   form .success label:after {
     content: "\e606"; /* @icon-approve */
-    color: rgb(133, 191, 133); /* @dark-green */
+    color: rgb(133, 191, 133); /* @lime */
   }
 
   form .error-message {
@@ -1228,7 +1228,7 @@
   ul       + fieldset,
   fieldset + fieldset {
     margin-top: 1.75em; /* @line-height */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-top: 3.5em;
   }
   p        + fieldset legend,
@@ -1267,7 +1267,7 @@
   form .submit a:hover,
   form .submit a:active,
   form .submit a:focus {
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
   }
 
 
@@ -1276,7 +1276,7 @@
   section.message {
     padding: 1.375em 2.625em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231); /* @sand */
-    border: 0.1875em solid rgb(243, 239, 209); /* @dark-sand */
+    border: 0.1875em solid rgb(243, 239, 209); /* @deep-dark-sand */
   }
   section.message h1 {
     font-size: inherit;
@@ -1291,8 +1291,8 @@
     content: " — ";
   }
   section.message.error {
-    background: rgb(253, 235, 230); /* @super-bright-salmon */
-    border-color: rgb(251, 204, 204); /* @bright-salmon */
+    background: rgb(253, 235, 230); /* @bright-strawberry */
+    border-color: rgb(251, 204, 204); /* @strawberry */
   }
   section.message.error p,
   section.message.error li {
@@ -1300,7 +1300,7 @@
   }
   section.message.success {
     background: rgb(230, 253, 235);
-    border-color: rgb(184, 231, 184); /* @green */
+    border-color: rgb(184, 231, 184); /* @bamboo */
   }
   section.message.success p,
   section.message.success li {
@@ -1328,7 +1328,7 @@
   section.message.empty h1 + p {
     margin-top: 0.875em; /* @line-height / 2 */
     padding-top: 1.75em; /* @line-height */
-    border-top: 1px solid rgb(243, 239, 209); /* @dark-sand */
+    border-top: 1px solid rgb(243, 239, 209); /* @deep-dark-sand */
   }
   section.message a {
     color: rgb(47, 132, 218); /* @ocean */
@@ -1444,11 +1444,11 @@
   }
   section.message.flagged h1:before {
     content: "\e607"; /* @icon-flag */
-    color: rgb(255, 51, 51); /* @salmon */
+    color: rgb(255, 51, 51); /* @maraschino */
   }
   section.message.spam h1:before {
     content: "\e608"; /* @icon-ban */
-    color: rgb(255, 51, 51); /* @salmon */
+    color: rgb(255, 51, 51); /* @maraschino */
   }
 
   .activity-item .message.success a {
@@ -1671,7 +1671,7 @@
   .options .delete button:hover:before,
   .options .delete button:active:before,
   .options .delete button:focus:before {
-    color: rgb(255, 102, 102); /* @bright-salmon */
+    color: rgb(255, 102, 102); /* @strawberry */
   }
 
   .member-header .options {
@@ -1877,8 +1877,8 @@
 
   .promotion {
     padding: 1.5em;
-    background: rgb(249, 249, 250); /* @bright-white */
-    border: 0.1875em solid rgb(225, 225, 225); /* @bright-silver */
+    background: rgb(249, 249, 250); /* @silver */
+    border: 0.1875em solid rgb(225, 225, 225); /* @chromium */
   }
   .promotion h2 {
     margin-bottom: 0;
@@ -1936,7 +1936,7 @@
 
     border-width: 1px 0 1px 0;
     border-style: solid;
-    border-color: rgb(221, 223, 227); /* @silver-blue */
+    border-color: rgb(221, 223, 227); /* @germanium */
   }
   .join-promotion h2 {
     font-family: inherit;
@@ -2090,7 +2090,7 @@
     box-sizing      : border-box;
 
     padding: 3.5em 0;
-    background-color: rgb(225, 225, 225); /* @bright-silver */
+    background-color: rgb(225, 225, 225); /* @chromium */
   }
   .connect-facebook h1 {
     font-family: inherit;
@@ -2126,12 +2126,12 @@
   ----------------------------------------------- */
   .discussion {
     position: relative;
-    border: 0.25em solid rgb(245, 245, 245); /* @bright-mercury */
-    background-color: rgb(252, 252, 252); /* @nearly-snow */
+    border: 0.25em solid rgb(245, 245, 245); /* @thorium */
+    background-color: rgb(252, 252, 252); /* @snow */
     padding: 1em 1.25em;
   }
   .discussion h2 {
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
     font-weight: normal;
     text-transform: uppercase;
@@ -2197,7 +2197,7 @@
   }
   .discussion li {
     padding: 1em 0; /* 11px / font-size(11px) */
-    border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    border-bottom: 1px solid rgb(218, 220, 224); /* @mithril */
     color: rgb(101, 102, 103); /* @steel */
     font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
@@ -2222,7 +2222,7 @@
     text-align: center;
   }
   .discussion .more a {
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
     text-decoration: inherit;
     font-weight: bold;
     font-size: 0.6875em; /* 11px / @font-size(16px) */
@@ -2452,7 +2452,7 @@
   .activity-item section.follow {
     padding       : 1.25em;  /* @line-height(20px) */
     border: 1px solid rgb(240, 240, 240); /* @mercury */
-    background: rgb(249, 249, 250); /* @bright-white */
+    background: rgb(249, 249, 250); /* @silver */
     border-radius: 0.25em;
     transition: background-color 0.2s, border-color 0.2s;
     position: relative;
@@ -2528,7 +2528,7 @@
     font-size: 0.75em; /* 12px / @font-size */
   }
   .activity-item .follow .meta + .introduction {
-    border-top: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 1px solid rgb(218, 220, 224); /* @mithril */
     padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .activity-item .follow .introduction {
@@ -2581,7 +2581,7 @@
     line-height: inherit;
     display: table;
     width: 100%;
-    border: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border: 1px solid rgb(221, 223, 227); /* @germanium */
   }
   .activity-item section.story h3 a {
     display: table-row;
@@ -2612,7 +2612,7 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
   .activity-item section.story h3 a > span.text:first-child {
-    border-left: 20px solid rgb(245, 245, 245); /* @bright-mercury */
+    border-left: 20px solid rgb(245, 245, 245); /* @thorium */
   }
 
 
@@ -2624,7 +2624,7 @@
   .activity-item .comment,
   .activity-item .comment + .more {
     margin-top: 0.875em;
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     padding-top: 0.875em;
   }
   .activity-item .comment + .comment {
@@ -2734,7 +2734,7 @@
   }
 
   .activity-item .link .meta {
-    border-top-color: rgb(218, 220, 224); /* @blue-gray */
+    border-top-color: rgb(218, 220, 224); /* @mithril */
 
     /* OPTIONAL: Line up with the image */
     margin-right: -0.3125em;
@@ -2799,7 +2799,7 @@
     margin-left: 0;
 
     border: 0.1em solid rgb(244, 244, 244);
-    background: rgb(252, 252, 252); /* @nearly-snow */
+    background: rgb(252, 252, 252); /* @snow */
     color: rgb(153, 153, 153); /* @aluminum */
     font-weight: bold;
     text-decoration: none;
@@ -2961,7 +2961,7 @@
   .meta .vote.loading button:focus,
   .meta .vote.loading button:active {
     border: 0.1em solid rgb(244, 244, 244);
-    background: rgb(252, 252, 252); /* @nearly-snow */
+    background: rgb(252, 252, 252); /* @snow */
   }
   .meta .vote.loading button:before {
     color: transparent;
@@ -3001,7 +3001,7 @@
   .meta form.voted button[title="Undo"]:hover,
   .meta form.voted button[title="Undo"]:active,
   .meta form.voted button[title="Undo"]:focus {
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
   }
   form.voted button[title="Undo"]:hover,
   form.voted button[title="Undo"]:active,
@@ -3096,7 +3096,7 @@
 
     content: "\e603"; /* @icon-tag */
 
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
     font-size: 0.9375em; /* 15px / @font-size */
   }
 
@@ -3156,7 +3156,7 @@
 /* =Activity Item
   ----------------------------------------------- */
   .activity-item {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     position: relative;
     padding: 2.5em 1.25em; /* @line-height(20px) x 2    @line-height(20px) */
   }
@@ -3214,7 +3214,7 @@
     transition: color 0.2s;
   }
   main:hover .activity-item section.tags h4:before {
-    color: rgb(225, 225, 225); /* @bright-silver */
+    color: rgb(225, 225, 225); /* @chromium */
     transition: color 0.2s;
   }
 
@@ -3238,7 +3238,7 @@
     color: rgb(255, 223, 145); /* @cantaloupe */
   }
   main:hover .activity-item:hover section.tags h4:before {
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
   }
 
   /* OPTIONAL: Move the primary source up a little */
@@ -3265,7 +3265,7 @@
     margin-top: -0.75em; /* 12px / @font-size */
     margin-left: -1.25em; /* 20px / @font-size */
     margin-right: 1em; /* @font-size */
-    border-color: rgb(221, 223, 227); /* @silver-blue */
+    border-color: rgb(221, 223, 227); /* @germanium */
     border-style: solid;
     border-width: 0 1px 1px 1px;
     display: inline-block;
@@ -3475,7 +3475,7 @@
 
   .topic-featured > .container > .featured-do {
     margin-top: 1.75em; /* @line-height */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-top: 1.75em; /* @line-height */
   }
 
@@ -3716,7 +3716,7 @@
   }
   .follow-list .meta + .location,
   .follow-list .meta + .introduction {
-    border-top: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 1px solid rgb(218, 220, 224); /* @mithril */
     padding-top: 0.625em; /* @line-height(20px) / 2 */
   }
   .follow-list .location,
@@ -3733,7 +3733,7 @@
   /* =Follow Item
   ----------------------------------------------- */
   .follow-list > li {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     position: relative;
     padding: 1.5em; /* @line-height */
   }
@@ -3826,14 +3826,14 @@
   /* =Comment
   ----------------------------------------------- */
   .comment-list article {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     position: relative;
     padding-top: 1.25em;
     margin-bottom: 0;
   }
   .comment-list article,
   .comment-list + .more {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     padding-top: 1.25em; /* @line-height(20px) */
     padding-bottom: 1.25em
   }
@@ -3881,7 +3881,7 @@
 
   @media (min-width: 40em) {
     .comment-list article {
-      border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-top: 1px solid rgb(221, 223, 227); /* @germanium */
       position: relative;
       padding: 1.25em; /* @line-height(20px) */
     }
@@ -4075,7 +4075,7 @@
     margin: 0;
     border-width: 0.125em 0 0;
     border-style: solid;
-    border-color: rgb(245, 245, 245); /* @bright-mercury */
+    border-color: rgb(245, 245, 245); /* @thorium */
   }
   .stories .comment-list article > p {
     max-width: none;
@@ -4098,12 +4098,12 @@
   .stories .comment-list article > h3 + p {
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @bright-mercury */
+    border-top: 0.1em solid rgb(245, 245, 245); /* @thorium */
   }
   .stories .comment-list article > p + figure {
     margin-top: 0.875em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @bright-mercury */
+    border-top: 0.1em solid rgb(245, 245, 245); /* @thorium */
   }
   .stories .comment-list article > h3 a img,
   .stories .comment-list article > h3 a .avatar {
@@ -4153,7 +4153,7 @@
   .stories .comment-list .meta {
     margin-top: 1.3125em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @bright-mercury */
+    border-top: 0.1em solid rgb(245, 245, 245); /* @thorium */
   }
 
 
@@ -4161,7 +4161,7 @@
   ----------------------------------------------- */
   .stories section.message.empty {
     margin-bottom: 1.75em;
-    background: rgb(245, 245, 245); /* @bright-mercury */
+    background: rgb(245, 245, 245); /* @thorium */
     color: rgb(153, 153, 153); /* @aluminum */
     border-width: 0;
   }
@@ -4227,7 +4227,7 @@
     content: none;
   }
   .stories section.message.empty h1 + p {
-    border-top-color: rgb(225, 225, 225); /* @bright-silver */
+    border-top-color: rgb(225, 225, 225); /* @chromium */
   }
 
 
@@ -4245,7 +4245,7 @@
   }
 
   .comment-form .container {
-    border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border: 0.1em solid rgb(218, 220, 224); /* @mithril */
     border-radius: 0.25em;
     background: white;
     position: relative;
@@ -4297,14 +4297,14 @@
   .comment-form .images,
   .comment-form .url,
   .comment-form .file {
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     margin: 0;
     padding: 0.625em; /* 10px / 16px */
   }
 
   .comment-form .url,
   .comment-form .images {
-    background: rgb(249, 249, 250); /* @bright-white */
+    background: rgb(249, 249, 250); /* @silver */
   }
   .comment-form .images li {
     display: block;
@@ -4625,7 +4625,7 @@
     font-size: 0.75em;
     position: absolute;
     background: rgb(51, 51, 51); /* @tungsten */
-    color: rgb(252, 252, 252); /* @nearly-snow */
+    color: rgb(252, 252, 252); /* @snow */
     bottom: 0;
     margin-bottom: 4em;
     margin-left: -4em;
@@ -4751,8 +4751,8 @@
   .comment-form .container > p.error-message span,
   .comment-form .url .error-message,
   .comment-form .file .error-message {
-    background: rgb(253, 235, 230); /* @super-bright-salmon */
-    border-color: rgb(251, 204, 204); /* @bright-salmon */
+    background: rgb(253, 235, 230); /* @bright-strawberry */
+    border-color: rgb(251, 204, 204); /* @strawberry */
   }
   .comment-form .container > p.note span,
   .comment-form .url .note,
@@ -4863,7 +4863,7 @@
     vertical-align: middle;
   }
   .add-story > .container {
-    background: rgb(62, 197, 149); /* @fern */
+    background: rgb(64, 198, 149); /* @clover */
     padding: 1em 1.5em;
   }
   @media (min-width: 40em) {
@@ -4926,7 +4926,7 @@
       position: relative;
     }
     .add-story h2 {
-      background: rgb(62, 197, 149); /* @fern */
+      background: rgb(64, 198, 149); /* @clover */
       position: absolute;
       left: 0;
       top: -3em;
@@ -4973,7 +4973,7 @@
     content: "\e609"; /* @icon-edit */
   }
   .story article .comment-form .text {
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     clear: both;
   }
 
@@ -4989,7 +4989,7 @@
     background-color: transparent;
   }
   .story article .comment-form .images li {
-    background-color: rgb(249, 249, 250); /* @bright-white */
+    background-color: rgb(249, 249, 250); /* @silver */
     border-width: 0;
   }
   .story article .comment-form .images li img + span {
@@ -5038,7 +5038,7 @@
 
   .post-form header {
     padding-bottom: 1em;
-    border-bottom: 1px solid rgb(225, 225, 225); /* @bright-silver */
+    border-bottom: 1px solid rgb(225, 225, 225); /* @chromium */
   }
   .post-form h1 {
     font-family: inherit;
@@ -5059,7 +5059,7 @@
   @media (min-width: 40em) {
     .post-form .submit {
       margin-top: 1.3125em;
-      border-top: 1px solid rgb(225, 225, 225); /* @bright-silver */
+      border-top: 1px solid rgb(225, 225, 225); /* @chromium */
       padding-top: 1.75em;
     }
     .post-form .submit a {
@@ -5177,12 +5177,12 @@
     margin-top: 1.3125em;
   }
   .post-form form > .story {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */;
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */;
     padding-top: 1.3125em;
   }
   .post-form .story > .container {
     position: relative;
-    background: rgb(62, 197, 149); /* @fern */
+    background: rgb(64, 198, 149); /* @clover */
     padding: 1.5em;
     margin-left: -1.5em; /* @page-margin */
     margin-right: -1.5em;
@@ -5239,7 +5239,7 @@
   .post-form .tip .container {
     padding: 1.375em; /* @line-height x 3 / 2 */
     background: rgb(255, 252, 231); /* @sand */
-    border: 0.1875em solid rgb(243, 239, 209); /* @dark-sand */
+    border: 0.1875em solid rgb(243, 239, 209); /* @deep-dark-sand */
     border-radius: 0.5em;
     position: relative;
     cursor: default;
@@ -5255,7 +5255,7 @@
     top: -0.75em;
     border-width: 0 0 0.1875em 0.1875em;
     border-style: solid;
-    border-color: rgb(243, 239, 209); /* @dark-sand */
+    border-color: rgb(243, 239, 209); /* @deep-dark-sand */
 
     -webkit-transform : rotate(135deg);
     -moz-transform    : rotate(135deg);
@@ -5364,11 +5364,11 @@
   }
   .post-form .tip p.do:before {
     content: "\e606"; /* @icon-approve */
-    color: rgb(133, 191, 133); /* @dark-green */
+    color: rgb(133, 191, 133); /* @lime */
   }
   .post-form .tip p.dont:before {
     content: "\e60a"; /* @icon-delete */
-    color: rgb(255, 102, 102); /* @bright-salmon */
+    color: rgb(255, 102, 102); /* @strawberry */
   }
 
   /* OPTIONAL: Add a background-color behind the do’s and dont’s */
@@ -5376,8 +5376,8 @@
     margin: -1.375em;
     margin-top: 1.375em;
     padding: 0.875em 1.375em;
-    background-color: rgb(243, 239, 209); /* @dark-sand */
-    background-color: rgb(250, 247, 226); /* @deep-dark-sand */
+    background-color: rgb(243, 239, 209); /* @deep-dark-sand */
+    background-color: rgb(250, 247, 226); /* @dark-sand */
     border-bottom-left-radius: 0.25em;
     border-bottom-right-radius: 0.25em;
   }
@@ -5457,7 +5457,7 @@
   .account-form section {
     border-width: 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -5504,7 +5504,7 @@
     section.form {
       border-width: 0.1em;
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @blue-gray */
+      border-color: rgb(218, 220, 224); /* @mithril */
       padding: 1.75em; /* @line-height */
       margin-left: 0;
       margin-right: 0;
@@ -5517,8 +5517,8 @@
   .profile-form form {
     border-width: 0.1em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
-    background: rgb(253, 254, 255); /* @snow */
+    border-color: rgb(218, 220, 224); /* @mithril */
+    background: rgb(253, 254, 255); /* @white */
     padding: 1.75em; /* @line-height */
     margin-left  : -1.5em;
     margin-right : -1.5em;
@@ -5552,7 +5552,7 @@
   .profile-form .basics,
   .profile-form .details {
     padding-bottom: 1.75em;
-    border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @mithril */
   }
   .profile-form .details {
     margin-top: 0.875em; /* @line-height / 2 */
@@ -5580,10 +5580,10 @@
     .profile-form .details {
       margin-left: 15.75em;
       padding-left: 1.75em;
-      border-left: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+      border-left: 0.1em solid rgb(218, 220, 224); /* @mithril */
     }
     .profile-form .submit {
-      border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+      border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
       padding-top: 1.75em;
       padding-left: 17.5em;
     }
@@ -5609,9 +5609,9 @@
   .dialog {
     border-width: 0.1em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     padding: 1.75em 1.5em; /* @line-height */
-    background: rgb(253, 254, 255); /* @snow */
+    background: rgb(253, 254, 255); /* @white */
     margin-left: -1.5em;
     margin-right: -1.5em;
     text-align: center;
@@ -5754,7 +5754,7 @@
   }
 
   .dialog .back {
-    border-bottom: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-bottom: 0.1em solid rgb(218, 220, 224); /* @mithril */
     margin-top: -1.3125em; /* @line-height x 3/4 */
     padding-bottom: 0.4375em; /* @line-height x 1/4 */
     margin-bottom: 1.75em;
@@ -5767,7 +5767,7 @@
   }
   .dialog > section {
     margin-top: 1.75em; /* @line-height / 2 */
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-top: 1.75em;
   }
   .dialog > aside {
@@ -5790,8 +5790,8 @@
   .dialog > aside > a {
     display: block;
     color: inherit;
-    background: rgb(249, 249, 250); /* @bright-white */
-    border: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    background: rgb(249, 249, 250); /* @silver */
+    border: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding: 0.4375em 0.875em; /* @line-height / 4 */
   }
   .dialog > aside > a p {
@@ -5880,7 +5880,7 @@
     margin-top    : 1.1666666667em;
     margin-bottom : 0.5833333334em;
 
-    border-bottom: 0.04166666667em solid rgb(218, 220, 224); /* @blue-gray 1px / 24px */
+    border-bottom: 0.04166666667em solid rgb(218, 220, 224); /* @mithril 1px / 24px */
     padding-bottom: 0.5833333334em;
     margin-bottom : 0.5833333334em;
   }
@@ -5968,9 +5968,9 @@
   .member-header > .container > div {
     border-width: 0.1em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     padding: 1.75em 1.5em 2.625em;
-    background: rgb(253, 254, 255); /* @snow */
+    background: rgb(253, 254, 255); /* @white */
     margin-left: -1.5em;
     margin-right: -1.5em;
   }
@@ -6058,7 +6058,7 @@
       /* article line height */
       line-height: 1.13em;
 
-      border-bottom: 0.02777777778em solid rgb(218, 220, 224); /* @blue-gray 1px / 36px */
+      border-bottom: 0.02777777778em solid rgb(218, 220, 224); /* @mithril 1px / 36px */
       min-height: 2.825em; /* .introduction.line-height x 2.5 */
       padding-bottom: 0.565em; /* .introduction.line-height / 2*/
       margin-bottom: 0.21em; /* 10px / 36px*/
@@ -6102,7 +6102,7 @@
   body > header.sub > .container > div {
     border-width: 0.1em;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     padding: 1.5625em; /* @line-height - 0.1875em */
     background: white;
     text-align: center;
@@ -6205,7 +6205,7 @@
   body > nav {
     background: white;
     margin: 0;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */;
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */;
   }
   body > nav:after {
     /* @clearfix */
@@ -6255,7 +6255,7 @@
     display: block;
     font-size: 0.875em;
     margin-bottom: 0.875em; /* @line-height / 2 */
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
     padding-top: 0.875em;   /* @line-height / 2 */
     margin-right: -1.5em;
     margin-left: -1.5em;
@@ -6288,7 +6288,7 @@
   }
   .home > .rss a,
   body > nav.sub .rss a {
-    color: rgb(221, 223, 227); /* @silver-blue */
+    color: rgb(221, 223, 227); /* @germanium */
   }
   .home > .rss a:after,
   body > nav.sub .rss a:after {
@@ -6307,7 +6307,7 @@
 
     font-size: 0.875em;
     content: "\e610"; /* @icon-rss */
-    color: rgb(221, 223, 227); /* @silver-blue */
+    color: rgb(221, 223, 227); /* @germanium */
     margin-left: 0.875em;
     transition: color 0.2s;
   }
@@ -6441,9 +6441,11 @@
     }
   }
 
-  /* OPTIONAL: Hide the main headline on home, topic, member, account, and admin pages
-  (since they’re redundant with the navigation) */
-  /* TRICKY: Use specific selectors here, to avoid hiding the headline in things like “empty content” messages. */
+  /* OPTIONAL: Hide the main headline on home, topic, member, account, and
+               admin pages (since they’re redundant with the navigation)
+  -----------------------------------------------
+     TRICKY:   Use specific selectors here, to avoid hiding the
+               headline in things like “empty content” messages. */
   #header           ~ #content > .container > .home           > h1:first-child,
   body > nav.sub    ~ #content > .container > .home           > h1:first-child,
   body > header.sub ~ #content > .container > .form           > h1:first-child,
@@ -6562,7 +6564,7 @@
   #header h2 a:hover,
   #header h2 a:active,
   #header h2 a:focus {
-    color: rgb(56, 60, 61); /* @logo-hover */
+    color: rgb(56, 60, 61); /* @platinum */
   }
   #header h2 + p {
     color: rgb(101, 102, 103); /* @steel */
@@ -6580,7 +6582,7 @@
       font-size: 155px;
     }
     #header h2 a {
-      border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-right: 1px solid rgb(221, 223, 227); /* @germanium */
       padding-right: 27px;
       background: white;
       margin-right: 12px;
@@ -6592,7 +6594,7 @@
     #header h2 + p {
       position: static;
       padding-left: 264px;
-      border-bottom: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-bottom: 1px solid rgb(221, 223, 227); /* @germanium */
       padding-bottom: 12px;
       margin-bottom: 5px;
     }
@@ -6669,7 +6671,7 @@
     color: rgb(153, 153, 153); /* @aluminum */
   }
   #header nav div li a {
-    border-top: 1px solid rgb(245, 245, 245); /* @bright-mercury */
+    border-top: 1px solid rgb(245, 245, 245); /* @thorium */
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
@@ -6737,7 +6739,7 @@
   @media (max-width: 47.9375em) { /* @medium-header */
     #header nav > ul {
       margin-top: 0.65625em;
-      border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     }
   }
   @media (min-width: 48em) { /* @medium-header */
@@ -6791,7 +6793,7 @@
   /* Containers */
   #header nav > div {
     clear: both;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
   }
   .scripted-nav #header nav > div {
     /* reset */
@@ -6821,7 +6823,7 @@
   @media (min-width: 75em) { /* @wide-header */
     .scripted-nav #header nav div > ul {
       margin-right: 0.65em;
-      border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-left: 1px solid rgb(221, 223, 227); /* @germanium */
       padding-left: 0.65em;
       margin-bottom: 0;
       line-height: 40px;
@@ -6926,7 +6928,7 @@
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
-      border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+      border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
       color: rgb(101, 102, 103); /* @steel */
       text-decoration: none;
       font-weight: bold;
@@ -6950,7 +6952,7 @@
     display: inline;
   }
   #header form {
-    border-top: 1px solid rgb(245, 245, 245); /* @bright-mercury */
+    border-top: 1px solid rgb(245, 245, 245); /* @thorium */
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
@@ -6971,7 +6973,7 @@
   #header input {
     border-width: 0;
     border-radius: 2em;
-    background: rgb(245, 245, 245); /* @bright-mercury */
+    background: rgb(245, 245, 245); /* @thorium */
     width: 12em;
     max-width: none;
   }
@@ -7020,7 +7022,7 @@
   }
   @media (min-width: 75em) { /* @wide-header */
     #header .account h3 {
-      border-left: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-left: 1px solid rgb(221, 223, 227); /* @germanium */
       margin-left: 0.4375em;
       padding-left: 0.875em;
     }
@@ -7080,7 +7082,7 @@
     display: block;
     padding: 0.675em 1.25em;
     font-size: 0.875em;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
     color: rgb(101, 102, 103); /* @steel */
     text-decoration: none;
     font-weight: bold;
@@ -7114,7 +7116,7 @@
       margin-bottom: 0;
     }
     .scripted-nav #header nav form p {
-      border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+      border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
       padding: 0.4375em 1em;
       display: block;
     }
@@ -7159,7 +7161,7 @@
       display: block;
       padding: 0.675em 1.25em;
       font-size: 0.875em;
-      border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+      border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
       color: rgb(101, 102, 103); /* @steel */
       text-decoration: none;
       font-weight: bold;
@@ -7239,7 +7241,7 @@
   #header ~ #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
@@ -7263,7 +7265,7 @@
     margin-top: 0;
 
     /* @separator */
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
     padding-top: 1.75em; /* @line-height */
 
     padding-bottom: 3.5em; /* @line-height x 2 */
@@ -7311,7 +7313,7 @@
   ----------------------------------------------- */
   .topic-featured,
   #content {
-    background: rgb(253, 254, 255); /* @snow */
+    background: rgb(253, 254, 255); /* @white */
   }
   #content.minimal {
     background: transparent;
@@ -7364,7 +7366,7 @@
 
     #content .has-aside {
       padding-right: 1.75em;
-      border-right: 1px solid rgb(221, 223, 227); /* @silver-blue */
+      border-right: 1px solid rgb(221, 223, 227); /* @germanium */
     }
 
     /* @aside-column */
@@ -7499,7 +7501,7 @@
     border-width: 0.1em 0;
     padding: 0.875em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
   }
   .post > article .share,
   .post > article .share li {
@@ -7627,7 +7629,7 @@
   .post > header h2.do,
   .post > header h2.link {
     margin-right: 0.55em;
-    border-right: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-right: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-right: 1em;
     line-height: 1;
   }
@@ -7722,7 +7724,7 @@
     border-width: 0.1em 0;
     padding: 1.75em 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     margin-bottom: 1.75em; /* @line-height */
   }
 
@@ -7842,7 +7844,7 @@
 
   .post > footer .tags {
     margin-top: 0.875em; /* @line-height / 2 */
-    background: rgb(245, 245, 245); /* @bright-mercury */
+    background: rgb(245, 245, 245); /* @thorium */
     padding: 1.5em;
     margin-left: -1.5em;
     margin-right: -1.5em;
@@ -7861,14 +7863,14 @@
   @media (min-width: 50em) {
     .post > header {
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @blue-gray */
+      border-color: rgb(218, 220, 224); /* @mithril */
       border-width: 0.1em 0.1em 0;
       padding: 1.75em 3.5em 0; /* @line-height x 2 */
     }
     .post > footer {
       margin-top: 0;
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @blue-gray */
+      border-color: rgb(218, 220, 224); /* @mithril */
       border-width: 0 0.1em 0.1em;
       padding: 0.875em 3.5em 1.75em; /* @line-height x 2 */
     }
@@ -7886,12 +7888,12 @@
       padding: 0 3.5em 0 3.5em; /* @line-height x 2 */
     }
     .post > article h1 {
-      border-top: 1px solid rgb(218, 220, 224); /* @blue-gray */
+      border-top: 1px solid rgb(218, 220, 224); /* @mithril */
       padding-top: 0.7368421053em; /* @line-height(1.75em) / font-size(2.375em) */
     }
     .post > article > form:last-child,
     .post > article > footer:last-child {
-      border-bottom: 1px solid rgb(218, 220, 224); /* @blue-gray */
+      border-bottom: 1px solid rgb(218, 220, 224); /* @mithril */
       padding-bottom: 1.75em;
     }
   }
@@ -7930,7 +7932,7 @@
 
     content: "\e603"; /* @icon-tag */
 
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
   }
@@ -7949,7 +7951,7 @@
     display: inline-block;
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83); /* @nickel */
-    background: rgb(252, 252, 252); /* @nearly-snow */
+    background: rgb(252, 252, 252); /* @snow */
     border: 1px solid rgb(240, 240, 240); /* @mercury */
     text-decoration: none;
   }
@@ -7965,7 +7967,7 @@
   .post > .popular-posts {
     margin-top: 1.75em;
     padding-top: 1.75em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
   }
   .post > .comments      h2,
   .post > .popular-posts h2 {
@@ -8241,7 +8243,7 @@
   .do-header > .container > div {
     border-width: 0;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     padding: 1em 1.5em;
     background: white;
   }
@@ -8317,7 +8319,7 @@
     font-size: 0.75em;
     margin-bottom: 0;
     margin-top: 0.875em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-top: 0.875em;
   }
   .do-header .tags h2 {
@@ -8427,7 +8429,7 @@
 
   .do-header .participants {
     margin-top: 0.875em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     padding-top: 0.875em;
   }
   .do-header .participants img {
@@ -8565,7 +8567,7 @@
 
     content: "\e603"; /* @icon-tag */
 
-    color: rgb(247, 113, 113); /* @strawberry */
+    color: rgb(247, 113, 113); /* @raspberry */
     color: rgb(204, 204, 204); /* @magnesium */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
@@ -8671,7 +8673,7 @@
     margin-left: -24px;
     margin-right: -24px;
     margin-top: 1.75em;
-    border-top: 0.1em solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 0.1em solid rgb(218, 220, 224); /* @mithril */
     font-size: 0.875em;
     text-align: right;
     margin-bottom: -16px;
@@ -8687,7 +8689,7 @@
 
     border-left-width: 0.1em;
     border-left-style: solid;
-    border-left-color: rgb(218, 220, 224); /* @blue-gray */
+    border-left-color: rgb(218, 220, 224); /* @mithril */
   }
   .message   .share li:last-child a,
   .do-header .share li:last-child a {
@@ -8742,7 +8744,7 @@
     margin-bottom : 0.5833333334em;
   }
   .explore .action + h2 {
-    border-top: 1px solid rgb(218, 220, 224); /* @blue-gray */
+    border-top: 1px solid rgb(218, 220, 224); /* @mithril */
     padding-top: 1.75em; /* @line-height */
     margin-top: 2.3333333334em; /* @line-height / font-size(1.5) x 2 */
   }
@@ -9034,7 +9036,7 @@
   .search-header .container h1 {
     border-width: 0.1em;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     padding: 2.25em;
     background: white;
     text-align: center;
@@ -9059,7 +9061,7 @@
     margin-bottom: 3.5em;
     border-width: 0.1em;
     border-style: solid;
-    border-color: rgb(218, 220, 224); /* @blue-gray */
+    border-color: rgb(218, 220, 224); /* @mithril */
     padding: 1.75em;
     margin-left: auto;
     margin-right: auto;
@@ -9113,7 +9115,7 @@
     margin-bottom: 0;
   }
   .search-summary .action {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     margin-top: 0;
     position: relative;
     padding: 2em 1.4285714286em 0;
@@ -9127,7 +9129,7 @@
       float: left;
       border-width: 0.1em;
       border-style: solid;
-      border-color: rgb(218, 220, 224); /* @blue-gray */
+      border-color: rgb(218, 220, 224); /* @mithril */
       padding: 1.75em;
     }
     .search-summary + .search-summary {
@@ -9176,7 +9178,7 @@
   /* SHIM: Center the “More Posts” link on search results pages.
   (If we show the regular paging instead, we can remove this.) */
   .activity-list + .action {
-    border-top: 1px solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 1px solid rgb(221, 223, 227); /* @germanium */
     padding-top: 1.75em; /* @line-height */
     text-align: center;
   }
@@ -9192,7 +9194,7 @@
   #header ~ div #content {
     /* @separator */
     margin-top: 0;
-    border-top: 0.1em solid rgb(221, 223, 227); /* @silver-blue */
+    border-top: 0.1em solid rgb(221, 223, 227); /* @germanium */
     padding-top: 1.75em;   /* @line-height */
     padding-bottom: 3.5em; /* @line-height x 2*/
   }
@@ -9245,7 +9247,7 @@
   /* TEMPORARY: These only appear in the pattern library */
   body.pattern {
     padding: 1.75em 1.75em 7em;
-    background: rgb(253, 254, 255); /* @snow */
+    background: rgb(253, 254, 255); /* @white */
   }
   .logotype {
     margin-top: 0;
@@ -9261,7 +9263,7 @@
   .logotype a:hover,
   .logotype a:active,
   .logotype a:focus {
-    color: rgb(56, 60, 61); /* @logo-hover */
+    color: rgb(56, 60, 61); /* @platinum */
   }
   .pattern.index h1 {
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
