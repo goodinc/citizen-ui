@@ -393,7 +393,7 @@
     color: rgb(0, 1, 2); /* @midnight */
   }
   .pagination .previous a {
-    background-color: rgb(240, 240, 240); /* @gray-240 */
+    background-color: rgb(240, 240, 240); /* @vanilla */
     color: rgb(101, 102, 103); /* @aluminum */
   }
   .pagination .previous a:hover,
@@ -504,7 +504,7 @@
 
   button[disabled] {
     cursor: default;
-    background-color: rgb(240, 240, 240); /* @gray-240 */
+    background-color: rgb(240, 240, 240); /* @vanilla */
     color: rgb(101, 102, 103); /* @aluminum */
     opacity: 0.5;
   }
@@ -672,7 +672,7 @@
   .secondary .action a,
   .autocomplete button,
   .secondary button {
-    background-color: rgb(240, 240, 240); /* @gray-240 */
+    background-color: rgb(240, 240, 240); /* @vanilla */
     color: rgb(101, 102, 103); /* @aluminum */
   }
   .account-form a:hover  .action span,
@@ -1012,7 +1012,7 @@
   textarea {
     border-width: 0;
     border-radius: 0;
-    border: 1px solid rgb(225, 225, 225); /* @gray-225 */
+    border: 1px solid rgb(225, 225, 225); /* @thorium */
 
     /* Give the field a width of 22em’s, but make it fit on small screens. */
     max-width: 22em;
@@ -1049,7 +1049,7 @@
 
   input[type="text"][disabled] {
     opacity: 0.6;
-    background: rgb(245, 245, 245); /* @vanilla */
+    background: rgb(240, 240, 240); /* @vanilla */
   }
 
   form .submit {
@@ -1420,7 +1420,7 @@
     text-align: center;
   }
   section.message.flagged h1:before,
-  section.message.spam h1:before {
+  section.message.spam    h1:before {
 
     /* @icons */
     font-family: "Icons";
@@ -1436,7 +1436,6 @@
 
     font-size: 2.25em; /* 36px / @font-size(16px) */
     margin-right: 0.5em;
-    color: rgb(230, 230, 230); /* @gray-230 */
     transition: color 0.2s;
 
     background: transparent url(shared/message-shadow.png) bottom no-repeat;
@@ -1634,7 +1633,7 @@
     font-size: 0.9375em; /* 15px / @font-size(16px) */
     margin-right: 0.375em;
     transition: color 0.2s;
-    color: rgb(230, 230, 230); /* @gray-230 */
+    color: rgb(230, 230, 230); /* @barium */
   }
 
   .options .edit a:before {
@@ -1878,7 +1877,7 @@
   .promotion {
     padding: 1.5em;
     background: rgb(249, 249, 250); /* @seashell */
-    border: 0.1875em solid rgb(225, 225, 225); /* @gray-225 */
+    border: 0.1875em solid rgb(225, 225, 225); /* @thorium */
   }
   .promotion h2 {
     margin-bottom: 0;
@@ -2090,7 +2089,7 @@
     box-sizing      : border-box;
 
     padding: 3.5em 0;
-    background-color: rgb(225, 225, 225); /* @gray-225 */
+    background-color: rgb(225, 225, 225); /* @thorium */
   }
   .connect-facebook h1 {
     font-family: inherit;
@@ -2108,7 +2107,7 @@
   }
   .connect-facebook .container > a {
     background: white;
-    border: 0.3125em solid rgb(240, 240, 240); /* @gray-240 */
+    border: 0.3125em solid rgb(240, 240, 240); /* @vanilla */
     box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
     display: table;
     margin: 9em auto 0;
@@ -2126,7 +2125,7 @@
   ----------------------------------------------- */
   .discussion {
     position: relative;
-    border: 0.25em solid rgb(245, 245, 245); /* @vanilla */
+    border: 0.25em solid rgb(240, 240, 240); /* @vanilla */
     background-color: rgb(252, 252, 252); /* @snow */
     padding: 1em 1.25em;
   }
@@ -2451,7 +2450,7 @@
   .activity-item section.link,
   .activity-item section.follow {
     padding       : 1.25em;  /* @line-height(20px) */
-    border: 1px solid rgb(240, 240, 240); /* @gray-240 */
+    border: 1px solid rgb(240, 240, 240); /* @vanilla */
     background: rgb(249, 249, 250); /* @seashell */
     border-radius: 0.25em;
     transition: background-color 0.2s, border-color 0.2s;
@@ -2612,7 +2611,7 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
   .activity-item section.story h3 a > span.text:first-child {
-    border-left: 20px solid rgb(245, 245, 245); /* @vanilla */
+    border-left: 20px solid rgb(240, 240, 240); /* @vanilla */
   }
 
 
@@ -2718,7 +2717,7 @@
 
   .activity-item .post .meta {
     margin-top: 0.625em;
-    border-top: 1px solid rgb(240, 240, 240); /* @gray-240 */
+    border-top: 1px solid rgb(240, 240, 240); /* @vanilla */
     padding-top: 0.625em;
   }
 
@@ -3210,11 +3209,11 @@
   main:hover .activity-item .meta .dos      a:before,
   main:hover .activity-item .meta .vote     button:before,
   main:hover .activity-item .meta .comments a:before {
-    color: rgb(230, 230, 230); /* @gray-230 */
+    color: rgb(230, 230, 230); /* @barium */
     transition: color 0.2s;
   }
   main:hover .activity-item section.tags h4:before {
-    color: rgb(225, 225, 225); /* @gray-225 */
+    color: rgb(225, 225, 225); /* @thorium */
     transition: color 0.2s;
   }
 
@@ -3250,7 +3249,7 @@
   }
 
   /* OPTIONAL: Move the primary source to the left a little */
-  @media (min-width: 25em) { /* @gray-230y-screen */
+  @media (min-width: 25em) { /* @tiny-screen */
     .activity-item > .source:first-child {
       margin-left: -1.66666666666667em; /* @line-height(20px) / 12px */
     }
@@ -3732,7 +3731,7 @@
     padding: 1.5em; /* @line-height */
   }
 
-  @media (max-width: 24.9em) { /* @gray-230y-screen */
+  @media (max-width: 24.9em) { /* @tiny-screen */
     .follow-list > li {
       padding-left: 0;
       padding-right: 0;
@@ -4001,7 +4000,7 @@
   ----------------------------------------------- */
   .stories header {
     padding-bottom: 0.875em;
-    border-bottom: 0.1em solid rgb(230, 230, 230); /* @gray-230 */
+    border-bottom: 0.1em solid rgb(230, 230, 230); /* @barium */
   }
   .stories header h1 {
     font-size: 0.875em;
@@ -4055,7 +4054,7 @@
     margin: 0;
     border-width: 0.125em 0 0;
     border-style: solid;
-    border-color: rgb(245, 245, 245); /* @vanilla */
+    border-color: rgb(240, 240, 240); /* @vanilla */
   }
   .stories .comment-list article > p {
     max-width: none;
@@ -4078,12 +4077,12 @@
   .stories .comment-list article > h3 + p {
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @vanilla */
+    border-top: 0.1em solid rgb(240, 240, 240); /* @vanilla */
   }
   .stories .comment-list article > p + figure {
     margin-top: 0.875em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @vanilla */
+    border-top: 0.1em solid rgb(240, 240, 240); /* @vanilla */
   }
   .stories .comment-list article > h3 a img,
   .stories .comment-list article > h3 a .avatar {
@@ -4133,7 +4132,7 @@
   .stories .comment-list .meta {
     margin-top: 1.3125em;
     padding-top: 0.875em;
-    border-top: 0.1em solid rgb(245, 245, 245); /* @vanilla */
+    border-top: 0.1em solid rgb(240, 240, 240); /* @vanilla */
   }
 
 
@@ -4141,7 +4140,7 @@
   ----------------------------------------------- */
   .stories section.message.empty {
     margin-bottom: 1.75em;
-    background: rgb(245, 245, 245); /* @vanilla */
+    background: rgb(249, 249, 250); /* @seashell */
     color: rgb(153, 153, 153); /* @magnesium */
     border-width: 0;
   }
@@ -4207,7 +4206,7 @@
     content: none;
   }
   .stories section.message.empty h1 + p {
-    border-top-color: rgb(225, 225, 225); /* @gray-225 */
+    border-top-color: rgb(225, 225, 225); /* @thorium */
   }
 
 
@@ -4252,7 +4251,7 @@
   .comment-form .avatar + .text label {
     border-width: 0 0 0 0.1em;
     border-style: dotted;
-    border-color: rgb(230, 230, 230); /* @gray-230 */
+    border-color: rgb(230, 230, 230); /* @barium */
     margin-left: 3.125em; /* 50px / 16px*/
   }
 
@@ -4758,8 +4757,8 @@
     border-top-width: 0;
     background-color: transparent;
 
-    border-left: 0.1em dotted rgb(230, 230, 230); /* @gray-230 */
-    border-right: 0.1em dotted rgb(230, 230, 230); /* @gray-230 */
+    border-left: 0.1em dotted rgb(230, 230, 230); /* @barium */
+    border-right: 0.1em dotted rgb(230, 230, 230); /* @barium */
     margin-right: 0.675em;
   }
 
@@ -5018,7 +5017,7 @@
 
   .post-form header {
     padding-bottom: 1em;
-    border-bottom: 1px solid rgb(225, 225, 225); /* @gray-225 */
+    border-bottom: 1px solid rgb(225, 225, 225); /* @thorium */
   }
   .post-form h1 {
     font-family: inherit;
@@ -5039,7 +5038,7 @@
   @media (min-width: 40em) {
     .post-form .submit {
       margin-top: 1.3125em;
-      border-top: 1px solid rgb(225, 225, 225); /* @gray-225 */
+      border-top: 1px solid rgb(225, 225, 225); /* @thorium */
       padding-top: 1.75em;
     }
     .post-form .submit a {
@@ -6494,7 +6493,7 @@
     font-size: 13px;
     border-width: 0 1px 0 0;
     border-style: solid;
-    border-color: rgb(230, 230, 230); /* @gray-230 */
+    border-color: rgb(230, 230, 230); /* @barium */
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
   }
   #header > ul li:first-child a {
@@ -6586,7 +6585,7 @@
   #header > div {
     border-width: 1px 0 1px 0;
     border-style: solid;
-    border-color: rgb(230, 230, 230); /* @gray-230 */
+    border-color: rgb(230, 230, 230); /* @barium */
     background: white;
     padding: 7px 1.5em 0;
     position: relative;
@@ -6651,7 +6650,6 @@
     color: rgb(153, 153, 153); /* @magnesium */
   }
   #header nav div li a {
-    border-top: 1px solid rgb(245, 245, 245); /* @vanilla */
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
@@ -6932,7 +6930,6 @@
     display: inline;
   }
   #header form {
-    border-top: 1px solid rgb(245, 245, 245); /* @vanilla */
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
   }
@@ -6953,7 +6950,7 @@
   #header input {
     border-width: 0;
     border-radius: 2em;
-    background: rgb(245, 245, 245); /* @vanilla */
+    background: rgb(240, 240, 240); /* @vanilla */
     width: 12em;
     max-width: none;
   }
@@ -7824,7 +7821,7 @@
 
   .post > footer .tags {
     margin-top: 0.875em; /* @line-height / 2 */
-    background: rgb(245, 245, 245); /* @vanilla */
+    background: rgb(245, 245, 245);
     padding: 1.5em;
     margin-left: -1.5em;
     margin-right: -1.5em;
@@ -7932,7 +7929,7 @@
     padding: 0.4375em 0.875em; /* @line-height / 4      @line-height / 2 */
     color: rgb(83, 83, 83); /* @nickel */
     background: rgb(252, 252, 252); /* @snow */
-    border: 1px solid rgb(240, 240, 240); /* @gray-240 */
+    border: 1px solid rgb(240, 240, 240); /* @vanilla */
     text-decoration: none;
   }
 
@@ -8857,7 +8854,7 @@
   /* Introduction */
   .explore + .explore {
     margin-top: 3.5em; /* @line-height x 2 */
-    border-top: 0.1em solid rgb(240, 240, 240); /* @gray-240 */
+    border-top: 0.1em solid rgb(240, 240, 240); /* @vanilla */
     padding-top: 3.5em;
   }
 
@@ -8889,7 +8886,7 @@
     height: 6.25em;
     width: 0.375em;
     margin: 1.75em auto;
-    background: rgb(240, 240, 240); /* @gray-240 */
+    background: rgb(240, 240, 240); /* @vanilla */
   }
   .explore > ul.introduction h3 {
     /* @h1 */
