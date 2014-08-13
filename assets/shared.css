@@ -7235,6 +7235,7 @@
     padding-bottom: 1.25em;
   }
   .topic-featured,
+  nav.sub + #content,
   #header ~ #content {
     /* @separator */
     margin-top: 0;
@@ -9297,7 +9298,7 @@
     color: rgb(113, 179, 247); /* @sky */
   }
   .pattern-list li a:visited {
-    color: rgb(42, 43, 44); /* @text-color */
+    color: rgb(101, 102, 103); /* @steel */
   }
   .pattern-list li a:hover,
   .pattern-list li a:active,
