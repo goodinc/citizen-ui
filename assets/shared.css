@@ -5092,37 +5092,6 @@
     display: inline-block;
     position: relative;
   }
-  .post-form fieldset.images.scripted .current.active label:after {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1.5em;
-
-    content: "\e609"; /* @icon-edit */
-    background:  rgb(0, 1, 2);       /* @midnight */
-    background: rgba(0, 1, 2, 0.75); /* @midnight */
-    color: rgb(204, 204, 204); /* @aluminum */
-    position: absolute;
-    padding: 0.25em;
-    border-radius: 0.125em;
-    top: 50%;
-    left: 50%;
-    margin-left : -0.75em;
-    margin-top  : -0.75em;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .post-form fieldset.images.scripted .current.active label:hover:after {
-    opacity: 1;
-  }
 
 
   /* =Add Story
