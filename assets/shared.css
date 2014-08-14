@@ -1479,24 +1479,6 @@
       }
   }
 
-  @-moz-keyframes outerspin {
-      from {
-        -moz-transform: rotate(0deg);
-      }
-      to {
-        -moz-transform: rotate(360deg);
-      }
-  }
-
-  @-moz-keyframes innerspin {
-      from {
-        -moz-transform: rotate(0deg);
-      }
-      to {
-        -moz-transform: rotate(360deg);
-      }
-  }
-
   @keyframes outerspin {
       from {
         transform: rotate(0deg);
@@ -1541,7 +1523,6 @@
     border-right-color: transparent;
     border-radius: 50%;
     -webkit-animation : outerspin 1.3s infinite linear;
-       -moz-animation : outerspin 1.3s infinite linear;
             animation : outerspin 1.3s infinite linear;
   }
   .loading:after {
@@ -1557,7 +1538,6 @@
     border-top-color: transparent;
     border-radius: 50%;
     -webkit-animation : innerspin 2s infinite linear;
-       -moz-animation : innerspin 2s infinite linear;
             animation : innerspin 2s infinite linear;
   }
 
@@ -8490,6 +8470,31 @@
     vertical-align: middle;
   }
 
+  /* OPTIONAL: Draw attention the user’s avatar, after they press “Do It”. */
+  @-webkit-keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+  }
+
+  @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+  }
+
+  .do-header .participants li.notice {
+    -webkit-animation: fadein 0.5s backwards linear;
+            animation: fadein 0.5s backwards linear;
+  }
+
+
   .do-header .participants .avatar {
     position: relative;
   }
@@ -8614,7 +8619,7 @@
   .do-tags li a:hover,
   .do-tags li a:active,
   .do-tags li a:focus {
-    color: black;
+    color: rgb(47, 132, 218); /* @ocean */
   }
 
 
