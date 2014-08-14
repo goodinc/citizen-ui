@@ -947,7 +947,7 @@
     margin-left: -2.25em;
   }
   .scripted-button form.do    h6:before {
-    content: "\e604"; /* @icon-doing */
+    content: "\e604"; /* @icon-do */
     color: rgb(124, 227, 162); /* @moss */
   }
   .scripted-button form.doing h6:before {
@@ -1956,7 +1956,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-launch */
+    /* @icon-stories */
     content: "\e612";
 
     font-size: 1.25em;
@@ -2151,8 +2151,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-active */
-    content: "\e614";
+    content: "\e614"; /* @icon-active */
 
     font-size: 1.65em;
     margin-right: 0.4375em;
@@ -2852,8 +2851,7 @@
     color: rgb(83, 231, 185); /* @kiwi */
   }
   .meta .participants a:before {
-    /* @icon-participants */
-    content: "\e61d";
+    content: "\e61d"; /* @icon-participants */
     color: rgb(83, 83, 83); /* @steel */
   }
   .meta .comments a:before {
@@ -2861,8 +2859,7 @@
     color: rgb(255, 223, 145); /* @cantaloupe */
   }
   .meta .stories a:before {
-    /* @icon-launch */
-    content: "\e612";
+    content: "\e612"; /* @icon-stories */
     color: rgb(83, 83, 83); /* @steel */
   }
   .meta .vote button:before {
@@ -4023,8 +4020,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-launch */
-    content: "\e612";
+    content: "\e612"; /* @icon-stories */
 
     font-size: 1.25em;
     line-height: 1;
@@ -4169,8 +4165,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-launch */
-    content: "\e612";
+    content: "\e612"; /* @icon-stories */
 
     color: rgb(204, 204, 204); /* @aluminum */
     margin-top: 56px;
@@ -4834,7 +4829,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-launch */
+    /* @icon-stories */
     content: "\e612";
 
     line-height: 1;
@@ -8171,8 +8166,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* @icon-launch */
-    content: "\e612";
+    content: "\e612"; /* @icon-stories */
 
     font-size: 1.25em;
     line-height: 1;
@@ -8458,8 +8452,7 @@
     vertical-align: middle;
     margin-right: 0.35em;
 
-    /* @icon-participants */
-    content: "\e61d";
+    content: "\e61d"; /* @icon-participants */
     color: black;
   }
   .do-header .participants header h2 {
@@ -8514,9 +8507,9 @@
     text-align: center;
     padding: 0.4375em;
 
-    left: -9999px;
     opacity: 0;
     transition: opacity 0.2s;
+    font-weight: bold;
   }
   .do-header .participants .avatar .name:before {
 
