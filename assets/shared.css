@@ -658,7 +658,6 @@
   .comment-form .url button,
   .secondary.action  a,
   .secondary .action a,
-  .autocomplete button,
   .secondary button {
     background-color: rgb(240, 240, 240); /* @seashell */
     color: rgb(101, 102, 103); /* @tin */
@@ -675,9 +674,6 @@
   .secondary .action a:hover,
   .secondary .action a:active,
   .secondary .action a:focus,
-  .autocomplete button:hover,
-  .autocomplete button:active,
-  .autocomplete button:focus,
   .secondary button:hover,
   .secondary button:active,
   .secondary button:focus {
