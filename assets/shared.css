@@ -8460,10 +8460,18 @@
             animation: fadein 0.5s backwards linear;
   }
 
-
+  /* OPTIONAL: Present the particpant names as tooltips */
+  .post > header .dos      .avatar,
+  .post > header .votes    .avatar,
+  .post > footer .dos      .avatar,
+  .post > footer .votes    .avatar,
   .do-header .participants .avatar {
     position: relative;
   }
+  .post > header .dos      .avatar .name,
+  .post > header .votes    .avatar .name,
+  .post > footer .dos      .avatar .name,
+  .post > footer .votes    .avatar .name,
   .do-header .participants .avatar .name {
 
     /* @tooltip */
@@ -8482,6 +8490,10 @@
     transition: opacity 0.2s;
     font-weight: bold;
   }
+  .post > header .dos      .avatar .name:before,
+  .post > header .votes    .avatar .name:before,
+  .post > footer .dos      .avatar .name:before,
+  .post > footer .votes    .avatar .name:before,
   .do-header .participants .avatar .name:before {
 
     /* @pointer */
@@ -8500,6 +8512,18 @@
     -o-transform      : rotate(45deg);
     transform         : rotate(45deg);
   }
+  .post > header .dos      a:hover  .avatar .name,
+  .post > header .dos      a:active .avatar .name,
+  .post > header .dos      a:focus  .avatar .name,
+  .post > header .votes    a:hover  .avatar .name,
+  .post > header .votes    a:active .avatar .name,
+  .post > header .votes    a:focus  .avatar .name,
+  .post > footer .dos      a:hover  .avatar .name,
+  .post > footer .dos      a:active .avatar .name,
+  .post > footer .dos      a:focus  .avatar .name,
+  .post > footer .votes    a:hover  .avatar .name,
+  .post > footer .votes    a:active .avatar .name,
+  .post > footer .votes    a:focus  .avatar .name,
   .do-header .participants a:hover  .avatar .name,
   .do-header .participants a:active .avatar .name,
   .do-header .participants a:focus  .avatar .name {
