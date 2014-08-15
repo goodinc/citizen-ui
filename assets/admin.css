@@ -325,20 +325,17 @@
     font-weight: normal;
     font-size: 14px;
   }
-
-/* TEMPORARY: This can be removed once the HTML has been updated to use paragraphs instead of headlines */
-td .source.comments > h2 > a {
-  font-weight: normal;
-  font-size: 14px;
-}
-
+  /* OPTIONAL: Prevent videos from appearing too large. */
+  td .source.comments iframe {
+    max-width: 300px;
+    max-height: 200px;
+  }
   td .source .details {
     /* Reset */
     font-size: 16px;
     color: black;
     font-weight: normal;
     margin-top: 0;
-    top: 2.1em;
     position: absolute;
     z-index: 1;
     background: transparent;

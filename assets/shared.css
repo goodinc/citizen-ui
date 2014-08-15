@@ -441,18 +441,6 @@
     margin-top: 1.3125em;
     margin-bottom: 0;
   }
-  @media (min-width: 60em) {
-    header.sub div {
-      position: relative;
-    }
-    header.sub div .skip {
-      margin-top: 0;
-      margin-bottom: 0;
-      position: absolute;
-      top: 1.3125em;
-      right: 1.75em;
-    }
-  }
 
 
 
@@ -5088,10 +5076,6 @@
   .post-form fieldset.images .options {
     margin-top: 1.75em;
   }
-  .post-form fieldset.images .current label {
-    display: inline-block;
-    position: relative;
-  }
 
 
   /* =Add Story
@@ -6030,6 +6014,7 @@
     background: white;
     text-align: center;
   }
+
   body > header.sub > .container > div h1 {
     margin-top: 0;
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
@@ -6038,6 +6023,22 @@
     margin-bottom: 0;
     font-size: 2.25em;
     line-height: 1.5555555556; /* (@line-height x 2) / 2.25 */
+  }
+
+  /* OPTIONAL: Make the header more compact on the “Onboarding” pages */
+  @media (min-width: 60em) {
+    body > header.sub > .container > div {
+      position: relative;
+      padding-left: 7em;
+      padding-right: 7em;
+    }
+    body > header.sub > .container > div .skip {
+      margin-top: 0;
+      margin-bottom: 0;
+      position: absolute;
+      top: 1.3125em;
+      right: 1.75em;
+    }
   }
 
   /* SHIM: Add space between the header and navigation
