@@ -4393,10 +4393,10 @@
   .comment-form .images button.down {
     background-image: url(shared/comment/down.png);
   }
-  .supports-placeholder .comment-form .images button.up {
+  .supports-svg .comment-form .images button.up {
     background-image: url(shared/comment/up.svg);
   }
-  .supports-placeholder .comment-form .images button.down {
+  .supports-svg .comment-form .images button.down {
     background-image: url(shared/comment/down.svg);
   }
 
@@ -4422,7 +4422,7 @@
     left: 50%;
     margin-left: -1.25em;
   }
-  .supports-placeholder .comment-form .images .video:before {
+  .supports-svg .comment-form .images .video:before {
     background-image: url(shared/comment/play-white.svg);
   }
 
@@ -4515,7 +4515,7 @@
   .comment-form .file label:before {
     background-image: url(shared/comment/picture.png);
   }
-  .supports-placeholder .comment-form .file label:before {
+  .supports-svg .comment-form .file label:before {
     background-image: url(shared/comment/picture.svg);
   }
   .comment-form .url .cancel {
@@ -4545,8 +4545,8 @@
   .comment-form .url.inactive label:before {
     background-image: url(shared/comment/play.png);
   }
-  .supports-placeholder .comment-form.inactive .url label:before,
-  .supports-placeholder .comment-form .url.inactive label:before {
+  .supports-svg .comment-form.inactive .url label:before,
+  .supports-svg .comment-form .url.inactive label:before {
     background-image: url(shared/comment/play.svg);
   }
   .comment-form .url        .cancel:hover,
