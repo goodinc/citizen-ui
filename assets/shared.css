@@ -2725,6 +2725,7 @@
     color: rgb(153, 153, 153); /* @nickel */
   }
 
+  .meta [backbone-view="GoodButton"],
   .meta form.vote,
   .meta form.voted {
     margin-top: 0;
