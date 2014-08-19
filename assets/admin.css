@@ -325,11 +325,25 @@
     font-weight: normal;
     font-size: 14px;
   }
-  /* OPTIONAL: Prevent videos from appearing too large. */
-  td .source.comments iframe {
-    max-width: 300px;
-    max-height: 200px;
+
+  /* Indicate when an image is a video */
+  td .source.comments .video {
+    position: relative;
   }
+  td .source.comments .video:before {
+    content: "";
+    background: transparent url(shared/comment/play-white.png) no-repeat center;
+    position: absolute;
+    background-size: 30% auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .supports-svg td .source.comments .video:before {
+    background-image: url(shared/comment/play-white.svg);
+  }
+
   td .source .details {
     /* Reset */
     font-size: 16px;
