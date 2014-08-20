@@ -8353,6 +8353,7 @@
     margin-top: 0.875em;
     border-top: 0.1em solid rgb(218, 220, 224); /* @magnesium */
     padding-top: 0.875em;
+    margin-bottom: 0;
   }
   .do-header .participants img {
     width: 1em; /* 16px ÷ @font-size */
@@ -8687,7 +8688,7 @@
   .do-header .share {
     margin-left: -24px;
     margin-right: -24px;
-    margin-top: 1.75em;
+    margin-top: 1em;
     border-top: 0.1em solid rgb(218, 220, 224); /* @magnesium */
     font-size: 0.875em;
     text-align: right;
