@@ -5760,6 +5760,10 @@
     line-height: 1.3125em; /* @line-height / 4 x 3 */
     margin-top: 0em;
     margin-bottom: 1.3125em;
+
+    /* OPTIONAL: Handle long member names gracefully when they don’t have dashes or spaces. */
+    word-wrap     : break-word; /* Currently supported in most browsers */
+    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
   }
   .member-header h1 a {
     display: block;
