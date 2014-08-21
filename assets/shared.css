@@ -4859,21 +4859,19 @@
   }
 
   /* OPTIONAL: Make the Add Story headline look like a tab */
-  @media (min-width: 30em) {
-    .add-story > .container {
-      margin-top: -1px;
-      position: relative;
-    }
-    .add-story h2 {
-      background: rgb(64, 198, 149); /* @clover */
-      position: absolute;
-      left: 0;
-      top: -3em;
-      padding: 0.5em 1.75em;
-    }
-    .add-story form {
-      margin-top: 0;
-    }
+  .add-story > .container {
+    margin-top: -1px;
+    position: relative;
+  }
+  .add-story h2 {
+    background: rgb(64, 198, 149); /* @clover */
+    position: absolute;
+    left: 0;
+    top: -3em;
+    padding: 0.5em 1.75em;
+  }
+  .add-story form {
+    margin-top: 0;
   }
 
 
@@ -8723,6 +8721,25 @@
     .message .share {
       display: inline;
       margin-left: 1em;
+    }
+  }
+
+  /* OPTIONAL: Make the share buttons more compact on small screens. */
+  @media (max-width: 25em) {
+    .do-header .share a {
+      font-size: 0.7857142857em; /* 11px / 14px */
+      line-height: 2.5454545455; /* @line-height / 0.7857142857 */
+      padding-top   : 0.6363636364em; /* 0.5em / 0.7857142857em */
+      padding-bottom: 0.6363636364em;
+
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      border-width: 0;
+    }
+  }
+  @media (max-width: 30em) {
+    .do-header .share li:first-child a {
+      border-width: 0;
     }
   }
 
