@@ -3749,6 +3749,11 @@
     font-weight: bold;
     color: rgb(101, 102, 103); /* @tin */
   }
+  .comment-list h3 a:hover,
+  .comment-list h3 a:active,
+  .comment-list h3 a:focus {
+    color: rgb(47, 132, 218); /* @ocean */
+  }
 
 
   /* =More Link
