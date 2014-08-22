@@ -1,5 +1,3 @@
-
-  .post > header [backbone-view="GoodButton"],
 /*-----------------------------------------------
     Shared styles, for all pages
   ----------------------------------------------- */
@@ -13,7 +11,7 @@
   @font-face {
     font-family: "GOOD";
     src: url(shared/logotype.eot);
-    src: url(shared/logotype.eot?#iefix) format("eot"),
+    src: url(shared/logotype.eot#iefix) format("eot"),
          url(shared/logotype.woff)       format("woff"),
          url(shared/logotype.ttf)        format("truetype"),
          url(shared/logotype.svg#logotype)   format("svg");
