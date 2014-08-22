@@ -29,38 +29,145 @@
   </nav>
 
   <section>
-    <h1>Follow List</h1>
+    <h1>Follow</h1>
 
+    <h2>Topic</h2>
     <ul class="follow-list">
       <li>
         <h3>
-          <a href="member.html"><span class="image"><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F127%2F174%2Foriginal%2FKatie_18_sq.jpg&amp;geometry=130x130%23" alt="" width="80" height="80"></span> Katie Crepeau</a>
+          <a href="">Dinosaurs</a>
+        </h3>
+        <form action="" method="post" class="follow">
+          <p><button type="submit">Follow</button></p>
+        </form>
+      </li>
+    </ul>
+    <pre><code>&lt;ul class=&quot;follow-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h3&gt;
+      &lt;a href=&quot;…&quot;&gt;Dinosaurs&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;follow&quot;&gt;…&lt;/form&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <h2>Topic with an image</h2>
+    <ul class="follow-list">
+      <li>
+        <h3 class="has-image">
+          <a href="">
+            <img src="http://www.good.is/assets/explore/topics/travel-like-you-give-a-damn-967c865ce53e9248475e6489fa214ef7.png" alt="" width="80" height="80" />
+            Conscious Travel
+          </a>
+        </h3>
+        <form action="" method="post" class="follow">
+          <p><button type="submit">Follow</button></p>
+        </form>
+      </li>
+    </ul>
+    <pre><code>&lt;ul class=&quot;follow-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h3 class=&quot;<mark>has-image</mark>&quot;&gt;
+      &lt;a href=&quot;…&quot;&gt;
+        &lt;img src=&quot;…&quot; alt=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; /&gt;
+        Conscious Travel
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;follow&quot;&gt;…&lt;/form&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+    <h2>Topic with meta data</h2>
+    <ul class="follow-list">
+      <li>
+        <h3>
+          <a href="">Dinosaurs</a>
+        </h3>
+        <div class="meta">
+          <p>200 Posts</p>
+          <p>10 Followers</p>
+        </div>
+        <form action="" method="post" class="follow">
+          <p><button type="submit">Follow</button></p>
+        </form>
+      </li>
+    </ul>
+    <pre><code>&lt;ul class=&quot;follow-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h3&gt;…&lt;/h3&gt;
+    &lt;div class=&quot;<mark>meta</mark>&quot;&gt;
+      &lt;p&gt;200 Posts&lt;/p&gt;
+      &lt;p&gt;10 Followers&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;follow&quot;&gt;…&lt;/form&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <h2>Member</h2>
+    <ul class="follow-list">
+      <li>
+        <h3 class="has-image">
+          <a href="">
+            <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F127%2F174%2Foriginal%2FKatie_18_sq.jpg&amp;geometry=130x130%23" alt="" width="80" height="80">
+            Katie Crepeau
+          </a>
+        </h3>
+        <div class="meta">
+          <p>32 Followers</p>
+        </div>
+        <form action="" method="post" class="follow">
+          <p><button type="submit">Follow</button></p>
+        </form>
+      </li>
+    </ul>
+    <pre><code>&lt;ul class=&quot;follow-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h3 class=&quot;has-image&quot;&gt;
+      &lt;a href=&quot;…&quot;&gt;
+        &lt;img src=&quot;…&quot; alt=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; /&gt;
+        Katie Crepeau
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;div class=&quot;meta&quot;&gt;
+      &lt;p&gt;32 Followers&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;follow&quot;&gt;…&lt;/form&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <h2>Introduction</h2>
+    <ul class="follow-list">
+      <li>
+        <h3 class="has-image">
+          <a href="">
+            <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F127%2F174%2Foriginal%2FKatie_18_sq.jpg&amp;geometry=130x130%23" alt="" width="80" height="80">
+            Katie Crepeau
+          </a>
         </h3>
         <div class="meta">
           <p>32 Followers</p>
         </div>
         <p class="introduction">architect, blogger, health nut, happiness builder</p>
-
         <form action="" method="post" class="follow">
           <p><button type="submit">Follow</button></p>
         </form>
       </li>
-      <li>
-        <h3>
-          <a href="topic.html"><img alt="" src="http://www.good.is/assets/explore/topics/travel-like-you-give-a-damn-967c865ce53e9248475e6489fa214ef7.png" /> Conscious Travel</a>
-        </h3>
-        <div class="meta">
-          <p>355 Posts</p>
-          <p>7,365 Followers</p>
-        </div>
+    </ul>
+    <pre><code>&lt;ul class=&quot;follow-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h3 class=&quot;has-image&quot;&gt;…&lt;/h3&gt;
+    …
+    &lt;p class=&quot;<mark>introduction</mark>&quot;&gt;architect, blogger, health nut, happiness builder&lt;/p&gt;
+    …
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
-        <form action="" method="post" class="follow">
-          <p><button type="submit">Follow</button></p>
-        </form>
-      </li>
+    <h2>Follow List</h2>
+    <ul class="follow-list">
       <li>
         <h3>
-          <a href=""><strong class="match">Dinosaurs</strong></a>
+          <a href="">Dinosaurs</a>
         </h3>
         <div class="meta">
           <p>200 Posts</p>
@@ -71,49 +178,15 @@
         </form>
       </li>
       <li>
-        <h3>
-          <a href="/coworking">Coworking</a>
-        </h3>
-        <div class="meta">
-          <p>29 Posts</p>
-          <p>10 Followers</p>
-        </div>
-        <form action="" method="post" class="follow">
-          <p><button type="submit">Follow</button></p>
-        </form>
-      </li>
-      <li>
-        <h3>
-          <a href="">Prehistoric</a>
-        </h3>
-        <div class="meta">
-          <p>150 Posts</p>
-          <p>8 Followers</p>
-        </div>
-        <form action="" method="post" class="follow">
-          <p><button type="submit">Follow</button></p>
-        </form>
-      </li>
-      <li>
         <h3 class="has-image">
-          <a href="member.html"><span class="image"><img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fimages-2.good.is%2Falbums%2Fcrop%3Fimage_url%3Dhttp%253A%252F%252Fs3.amazonaws.com%252Fproduction.calumet.good.is%252Fusers%252Favatars%252F002%252F218%252F144%252Foriginal%252Fche.jpg%26geometry%3D240x240%2523&amp;geometry=130x130%23" alt="" width="80" height="80"></span> Chelsea Wagner</a>
-        </h3>
-        <p class="introduction">Artist--Activist--Anthropologist</p>
-
-        <form action="" method="post" class="follow">
-          <p><button type="submit">Follow</button></p>
-        </form>
-      </li>
-      <li>
-        <h3 class="has-image">
-          <a href="member.html"><span class="image"><img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fpre.cloudfront.goodinc.com%2Fusers%2Flarge-1334026057-spring.jpg&amp;geometry=130x130%23" alt="" width="80" height="80"></span> Jillian Anthony</a>
+          <a href="">
+            <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fpre.cloudfront.goodinc.com%2Fusers%2Flarge-1334026057-spring.jpg&amp;geometry=130x130%23" alt="" width="80" height="80">
+            Jillian Anthony
+          </a>
         </h3>
         <div class="meta">
           <p>35 Followers</p>
         </div>
-        <p class="introduction">My favorite dinosaur is a parasaurolophus.</p>
-        <p class="location">Los Angeles</p>
-
         <form action="" method="post" class="following">
           <h6>Following</h6>
           <p>
@@ -122,16 +195,47 @@
         </form>
       </li>
       <li>
-        <a href="post-new-link.html">
-          <h3>
-            <img alt="Yourboard" src="http://www.good.is/assets/explore/yourboard.png" />
-            + Your City, Issue, Topic…
-          </h3>
-          <p>Post something with your tag to start a conversation.</p>
-        </a>
+        <h3 class="has-image">
+          <a href="">
+            <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fimages-2.good.is%2Falbums%2Fcrop%3Fimage_url%3Dhttp%253A%252F%252Fs3.amazonaws.com%252Fproduction.calumet.good.is%252Fusers%252Favatars%252F002%252F218%252F144%252Foriginal%252Fche.jpg%26geometry%3D240x240%2523&amp;geometry=130x130%23" alt="" width="80" height="80">
+            Chelsea Wagner
+          </a>
+        </h3>
+        <div class="meta">
+          <p>35 Followers</p>
+        </div>
+        <form action="" method="post" class="follow">
+          <p><button type="submit">Follow</button></p>
+        </form>
       </li>
     </ul>
   </section>
+  <pre><code>&lt;ul class=&quot;follow-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h3&gt;
+      &lt;a href=&quot;&quot;&gt;Dinosaurs&lt;/a&gt;
+    &lt;/h3&gt;
+    …
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 class=&quot;has-image&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;img src=&quot;…&quot; alt=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; /&gt;
+        Jillian Anthony
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    …
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 class=&quot;has-image&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;
+        &lt;img src=&quot;…&quot; alt=&quot;&quot; width=&quot;80&quot; height=&quot;80&quot; /&gt;
+        Chelsea Wagner
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    …
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
   <section class="explore">
     <h2>Follow List (multiple columns)</h2>
@@ -236,6 +340,13 @@
     </ul>
 
   </section>
+  <pre><code>&lt;section class=&quot;<mark>explore</mark>&quot;&gt;
+  &lt;ul class=&quot;follow-list&quot;&gt;
+    …
+  &lt;/ul&gt;
+  …
+&lt;/section&gt;</code></pre>
+
 
   <section class="explore featured">
     <h2>Follow List (two columns, to emphasize topics)</h2>
@@ -293,7 +404,19 @@
           </p>
         </form>
       </li>
+      <li>
+        <a href="">
+          <h3>
+            <img alt="You" src="http://community.good.is/assets/explore/you.png">+ Invite
+          </h3>
+          <p>
+            Invite the people you respect and make GOOD even better.
+          </p>
+        </a>
+      </li>
     </ul>
+
+
     <ul class="follow-list">
       <li>
         <h3 class="has-image">
@@ -335,9 +458,49 @@
           </p>
         </form>
       </li>
+      <li>
+        <a href="/posts/new">
+          <h3>
+            <img alt="Yourboard" src="http://community.good.is/assets/explore/yourboard.png">+ Your City, Issue, Topic…
+          </h3>
+          <p>
+            Post something with your tag to start a conversation.
+          </p>
+        </a>
+      </li>
     </ul>
 
   </section>
+  <pre><code>&lt;section class=&quot;explore <mark>featured</mark>&quot;&gt;
+  &lt;ul class=&quot;follow-list&quot;&gt;
+    …
+    &lt;li&gt;
+      &lt;a href=&quot;…&quot;&gt;
+        &lt;h3&gt;
+          &lt;img alt=&quot;You&quot; src=&quot;…&quot; /&gt;
+          + Invite
+        &lt;/h3&gt;
+        &lt;p&gt;
+          Invite the people you respect and make GOOD even better.
+        &lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul class=&quot;follow-list&quot;&gt;
+    …
+    &lt;li&gt;
+      &lt;a href=&quot;…&quot;&gt;
+        &lt;h3&gt;
+          &lt;img alt=&quot;Yourboard&quot; src=&quot;…&quot; /&gt;
+          + Your City, Issue, Topic…
+        &lt;/h3&gt;
+        &lt;p&gt;
+          Post something with your tag to start a conversation.
+        &lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
 
   <script src="../../assets/shared.js"></script>
 
