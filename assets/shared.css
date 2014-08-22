@@ -1,4 +1,5 @@
 
+  .post > header [backbone-view="GoodButton"],
 /*-----------------------------------------------
     Shared styles, for all pages
   ----------------------------------------------- */
@@ -7577,6 +7578,7 @@
   .post > header form.do,
   .post > header form.doing,
   .post > header form.done,
+  .post > header [backbone-view="GoodButton"],
   .post > header form.vote,
   .post > header form.voted {
     float: right;
@@ -8003,12 +8005,16 @@
   .post > footer .doing,
   .post > footer .done,
   .post > footer .dos,
+  .post > footer [backbone-view="GoodButton"],
   .post > footer .vote,
   .post > footer .voted,
   .post > footer .votes {
     margin-top: 0.875em; /* @line-height / 2 */
     display: inline-block;
     vertical-align: top;
+  }
+  .post > footer [backbone-view="GoodButton"] form {
+    margin-top: 0;
   }
   .post > footer .do,
   .post > footer .doing,
