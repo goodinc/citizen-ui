@@ -1,3 +1,4 @@
+
 /*-----------------------------------------------
     Shared styles, for all pages
   ----------------------------------------------- */
@@ -8187,24 +8188,32 @@
       border-width: 0 0.1em 0;
     }
   }
+  .stories   .body,
   .do-header .body {
-    margin-top: 0.875em;
-    margin-bottom: 0.875em;
+    margin-top: 0.875em; /* @line-height x 1/2 */
+    margin-bottom: 1.3125em; /* @line-height x 3/4 */
     position: relative;
   }
+  .stories   .body.summary,
   .do-header .body.summary {
     cursor: pointer;
   }
+  .stories   .body.summary div,
   .do-header .body.summary div {
-    max-height: 5.25em;
+    max-height: 5.6875em; /* @line-height x 3.25 */
     overflow: hidden;
     position: relative;
   }
+  .stories   .body.summary div {
+    max-height: 8.75em; /* @line-height x 5 */
+  }
+  .stories   .body.summary div:after,
   .do-header .body.summary div:after {
     content: "";
     display: block;
     width: 100%;
     height: 100%;
+    max-height: 5.6875em; /* @line-height x 3.25 */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -8213,6 +8222,7 @@
     background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwcHgiIGhlaWdodD0iNTAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMC41IiB5MT0iMCIgeDI9IjAuNSIgeTI9IjEiPgogICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IndoaXRlIiBzdG9wLW9wYWNpdHk9IjAiIC8+CiAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0id2hpdGUiIHN0b3Atb3BhY2l0eT0iMSIgLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIHN0cm9rZS13aWR0aD0iMCIgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIC8+CiA8L2c+Cjwvc3ZnPg==) top repeat-x;
     background-size: contain;
   }
+  .stories   .body.summary:after,
   .do-header .body.summary:after {
     margin-top: 0.4375em;
     display: block;
@@ -8220,6 +8230,7 @@
     content: "See more…";
     color: rgb(113, 179, 247); /* @sky */
   }
+  .stories a:hover .body.summary:after,
   .do-header .body.summary:hover:after {
     color: rgb(47, 132, 218); /* @ocean */
   }
