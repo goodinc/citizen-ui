@@ -1498,31 +1498,36 @@
   .loading:before {
     content: "";
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     margin-right: 0.4375em; /* @line-height / 4 */
     position: relative;
-    width: 1.3125em; /* @line-height x 3/4 */
-    height: 1.3125em;
-    border: 0.21875em solid rgb(101, 102, 103); /* @tin */
+    width: 1.75em;
+    height: 1.75em;
+    border: 0.1875em solid rgb(101, 102, 103); /* @tin */
     border-right-color: transparent;
     border-radius: 50%;
     -webkit-animation : outerspin 1.3s infinite linear;
             animation : outerspin 1.3s infinite linear;
+    -moz-box-sizing : border-box;
+         box-sizing : border-box;
   }
   .loading:after {
     content: "";
     display: block;
     position: absolute;
-    width: 0.58125em;
-    height: 0.58125em;
-    top: 0.55em;
-    left: 0.35em;
-    border: 0.21875em solid rgb(101, 102, 103); /* @tin */
+    width: 1em;
+    height: 1em;
+    top: 0.375em;
+    left: 0.375em;    
+    border: 0.1875em solid rgb(101, 102, 103); /* @tin */
     border-left-color: transparent;
     border-top-color: transparent;
     border-radius: 50%;
     -webkit-animation : innerspin 2s infinite linear;
             animation : innerspin 2s infinite linear;
+    -moz-box-sizing : border-box;
+         box-sizing : border-box;
+
   }
 
   /* OPTIONAL: Position the loading indicator above the form */
