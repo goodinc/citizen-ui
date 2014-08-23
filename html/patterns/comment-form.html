@@ -44,7 +44,7 @@
 
   <section>
     <h2>Signed Out</h2>
-    <form action="" method="post" class="comment-form inactive">
+    <form action="" method="post" class="comment-form">
       <div class="container">
         <p class="text">
           <label>
@@ -52,7 +52,7 @@
             <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
           </label>
         </p>
-        <p class="url">
+        <p class="url inactive">
           <label>
             <span>Embed Video</span><br />
             <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
@@ -72,42 +72,23 @@
       </p>
     </form>
   </section>
+  <pre><code>&lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;<mark>comment-form</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p class=&quot;text&quot;&gt;
+      &lt;label&gt;
+        &lt;span&gt;Share your thoughts or insights...&lt;/span&gt;&lt;br /&gt;
+        &lt;textarea name=&quot;comment&quot; placeholder=&quot;Share your thoughts or insights...&quot;&gt;&lt;/textarea&gt;
+      &lt;/label&gt;
+    &lt;/p&gt;
+    …
+  &lt;/div&gt;
+  &lt;p class=&quot;submit&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Post&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</code></pre>
 
   <section>
     <h2>Signed In</h2>
-    <form action="" method="post" class="comment-form inactive">
-      <div class="container">
-        <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
-        <p class="text">
-          <label>
-            <span>Share your thoughts or insights...</span><br />
-            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
-          </label>
-        </p>
-        <p class="url">
-          <label>
-            <span>Embed Video</span><br />
-            <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
-          </label>
-          <button type="submit" name="embed" value="1">Embed</button>
-          <button type="submit" name="cancel" value="1" class="cancel"><span>Cancel</span></button>
-        </p>
-        <p class="file">
-          <label>
-            <span>Attach Image</span><br />
-            <input type="file" name="image[]" />
-          </label>
-        </p>
-      </div><!-- /.container -->
-      <p class="submit">
-        <button type="submit">Post</button>
-      </p>
-    </form>
-  </section>
-
-  <section>
-    <h2>Active</h2>
-
     <form action="" method="post" class="comment-form">
       <div class="container">
         <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
@@ -137,6 +118,55 @@
       </p>
     </form>
   </section>
+  <pre><code>&lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h6 class=&quot;<mark>avatar</mark>&quot;&gt;&lt;img src=&quot;…&quot; alt=&quot;Agus Echague&quot; width=&quot;30&quot; height=&quot;30&quot; /&gt;&lt;/h6&gt;
+    &lt;p class=&quot;text&quot;&gt;… &lt;/p&gt;
+    …
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
+
+  <section>
+    <h2>Inactive</h2>
+
+    <form action="" method="post" class="comment-form inactive">
+      <div class="container">
+        <h6 class="avatar"><img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" alt="Agus Echague" width="30" height="30" /></h6>
+        <p class="text">
+          <label>
+            <span>Share your thoughts or insights...</span><br />
+            <textarea name="comment" placeholder="Share your thoughts or insights..."></textarea>
+          </label>
+        </p>
+        <p class="url inactive">
+          <label>
+            <span>Embed Video</span><br />
+            <input type="text" name="video" placeholder="Paste your YouTube or Vimeo URL…" />
+          </label>
+          <button type="submit" name="embed" value="1">Embed</button>
+          <button type="submit" name="cancel" value="1" class="cancel"><span>Cancel</span></button>
+        </p>
+        <p class="file">
+          <label>
+            <span>Attach Image</span><br />
+            <input type="file" name="image[]" />
+          </label>
+        </p>
+      </div><!-- /.container -->
+      <p class="submit">
+        <button type="submit">Post</button>
+      </p>
+    </form>
+  </section>
+  <pre><code>&lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;comment-form <mark>inactive</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h6 class=&quot;avatar&quot;&gt;&lt;img src=&quot;…&quot; alt=&quot;Agus Echague&quot; width=&quot;30&quot; height=&quot;30&quot; /&gt;&lt;/h6&gt;
+    &lt;p class=&quot;text&quot;&gt;… &lt;/p&gt;
+    …
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
 
   <section>
     <h2>Video</h2>
@@ -172,6 +202,21 @@
       </p>
     </form>
   </section>
+  <pre><code>&lt;form action=&quot;…&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    …
+    &lt;p class=&quot;<mark>url</mark>&quot;&gt;
+      &lt;label&gt;
+        &lt;span&gt;Embed Video&lt;/span&gt;&lt;br /&gt;
+        &lt;input type=&quot;text&quot; name=&quot;video&quot; placeholder=&quot;Paste your YouTube or Vimeo URL…&quot; /&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot; name=&quot;embed&quot; value=&quot;1&quot;&gt;Embed&lt;/button&gt;
+      &lt;button type=&quot;submit&quot; name=&quot;cancel&quot; value=&quot;1&quot; class=&quot;cancel&quot;&gt;&lt;span&gt;Cancel&lt;/span&gt;&lt;/button&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;file&quot;&gt;…&lt;/p&gt;
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
 
   <section>
     <h2>Images</h2>
@@ -219,6 +264,25 @@
       </p>
     </form>
   </section>
+  <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    …
+    &lt;ol class=&quot;<mark>images</mark>&quot;&gt;
+      &lt;li&gt;
+        &lt;img src=&quot;…&quot; alt=&quot;&quot; /&gt;
+        &lt;span&gt;bikes.jpg&lt;/span&gt;
+        &lt;button type=&quot;submit&quot; name=&quot;remove&quot; value=&quot;image1&quot;&gt;&lt;span&gt;Remove this image&lt;/span&gt;&lt;/button&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;img src=&quot;…&quot; alt=&quot;&quot; /&gt;
+        &lt;span&gt;road.jpg&lt;/span&gt;
+        &lt;button type=&quot;submit&quot; name=&quot;remove&quot; value=&quot;image2&quot;&gt;&lt;span&gt;Remove this image&lt;/span&gt;&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p class=&quot;file&quot;&gt;…&lt;/p&gt;
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
 
   <section>
     <h2>Uploading</h2>
@@ -256,6 +320,21 @@
       </p>
     </form>
   </section>
+  <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    …
+    &lt;ol class=&quot;images&quot;&gt;
+      &lt;li class=&quot;<mark>progress</mark>&quot;&gt;
+        &lt;span&gt;bikes.jpg&lt;/span&gt;
+        &lt;button type=&quot;submit&quot; name=&quot;remove&quot; value=&quot;image1&quot;&gt;&lt;span&gt;Remove this image&lt;/span&gt;&lt;/button&gt;
+        &lt;progress max=&quot;100&quot; value=&quot;80&quot;&gt;80% Loaded&lt;/progress&gt;
+      &lt;/li&gt;
+      …
+    &lt;/ol&gt;
+    &lt;p class=&quot;file&quot;&gt;…&lt;/p&gt;
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
 
   <section>
     <h2>Change Order</h2>
@@ -302,6 +381,16 @@
       </p>
     </form>
   </section>
+  <pre><code>&lt;ol class=&quot;images&quot;&gt;
+  …
+  &lt;li&gt;
+    &lt;button class=&quot;<mark>up</mark>&quot;&gt;&lt;span&gt;Move Up&lt;/span&gt;&lt;/button&gt;
+    &lt;button class=&quot;<mark>down</mark>&quot;&gt;&lt;span&gt;Move Down&lt;/span&gt;&lt;/button&gt;
+    &lt;img src=&quot;…&quot; alt=&quot;&quot; /&gt;
+    …
+  &lt;/li&gt;
+  …
+&lt;/ol&gt;</code></pre>
 
   <section>
     <h2>Error Message</h2>
@@ -367,6 +456,13 @@
         <button type="submit">Post</button>
       </p>
     </form>
+    <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    …
+    &lt;p class=&quot;<mark>error-message</mark>&quot;&gt;&lt;span&gt;Oops! Nice video, but it’s just not our (video) type…&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
   </section>
 
   <section>
@@ -461,6 +557,22 @@
         <button type="submit">Post</button>
       </p>
     </form>
+    <pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;comment-form&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    …
+    &lt;ol class=&quot;images&quot;&gt;
+      &lt;li&gt;
+        &lt;span class=&quot;<mark>video</mark>&quot;&gt;
+          &lt;img src=&quot;…&quot; alt=&quot;&quot; /&gt;
+        &lt;/span&gt;
+        &lt;span&gt;Ciclavia: 80,000-person Community Bike Ride in Los Angeles&lt;/span&gt;
+        …
+      &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p class=&quot;<mark>note</mark>&quot;&gt;&lt;span&gt;Your video is ready to post!&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  …
+&lt;/form&gt;</code></pre>
   </section>
 
   <section>
@@ -468,7 +580,7 @@
     <ul class="comment-list">
       <li>
         <article>
-          <h3 class="source has-image">
+          <h3 class="source">
             <a href="">
               <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F260%2F378%2Foriginal%2F371448_760274872_1396902646_n.jpg&amp;geometry=60x60%23" alt="" width="60" height="60" />
               Javiera Avendaño
@@ -530,6 +642,19 @@
       </li>
     </ul>
   </section>
+  <pre><code>&lt;ul class=&quot;<mark>comment-list</mark>&quot;&gt;
+  &lt;li&gt;
+    &lt;article&gt;
+      …
+      &lt;footer&gt;
+        …
+        &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;<mark>comment-form</mark>&quot;&gt;
+          …
+        &lt;/form&gt;
+      &lt;/footer&gt;
+    &lt;/article&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
   <section>
     <h2 style="margin-bottom: 3em;">Add Story</h2>
@@ -541,7 +666,7 @@
         <form action="" method="post" class="comment-form inactive">
           <div class="container">
             <h6 class="avatar">
-              <img src="http://images-1.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F119%2F440%2Foriginal%2Fselfwhitewall009lowres.jpg&amp;geometry=60x60%23" width="30" height="30" alt="Agus Echagüe" />
+              <img src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F293%2F409%2Foriginal%2F182324_10150900976641728_904360760_n.jpg&amp;geometry=60x60%23" width="30" height="30" alt="Agus Echagüe" />
             </h6>
             <p class="text">
               <label>
@@ -577,6 +702,14 @@
         </form>
       </div><!-- /.container -->
     </section>
+<pre><code>&lt;section class=&quot;<mark>add-story</mark>&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h2&gt;Add your story&lt;/h2&gt;
+    &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;<mark>comment-form</mark> inactive&quot;&gt;
+      … 
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
 
   </section>
 
@@ -628,6 +761,30 @@
     </section>
   </section>
 
+<pre><code>&lt;section class=&quot;post-form&quot;&gt;
+  &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+    …
+    &lt;section class=&quot;<mark>story</mark>&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Add your story&lt;/h2&gt;
+        &lt;p&gt;Optional&lt;/p&gt;
+        &lt;fieldset class=&quot;<mark>comment-form</mark>&quot;&gt;
+          &lt;div class=&quot;container&quot;&gt;
+            …
+          &lt;/div&gt;
+          &lt;p class=&quot;checkbox&quot;&gt;
+            &lt;label&gt;
+              &lt;input type=&quot;checkbox&quot; /&gt;
+              &lt;span&gt;Yes, share this to Facebook.&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/p&gt;
+        &lt;/fieldset&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/form&gt;
+&lt;/section&gt;
+</code></pre>
+
   <h2>Edit Story</h2>
   <main class="story">
     <article>
@@ -669,6 +826,19 @@
       </form>
     </article>
   </main>
+  <pre><code>&lt;main class=&quot;<mark>story</mark>&quot;&gt;
+  &lt;article&gt;
+    …
+    &lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;<mark>comment-form</mark>&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        &lt;h4&gt;Editing…&lt;/h4&gt;
+        …
+      &lt;/div&gt;
+      …
+    &lt;/form&gt;
+    …
+  &lt;/article&gt;
+&lt;/main&gt;</code></pre>
 
 </section>
 
