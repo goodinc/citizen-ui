@@ -2542,7 +2542,7 @@
 
   /* =Story
   ----------------------------------------------- */
-  .activity-item section.story h3 {
+  .activity-item .post.story h3 {
     font-family: inherit;
     font-size: 0.875em;
     line-height: inherit;
@@ -2550,36 +2550,39 @@
     width: 100%;
     border: 1px solid rgb(218, 220, 224); /* @magnesium */
   }
-  .activity-item section.story h3 a {
+  .activity-item .post.story h3 a {
     display: table-row;
   }
-  .activity-item section.story h3 a > span {
+  .activity-item .post.story h3 a > span {
     display: table-cell;
   }
-  .activity-item section.story h3 a > span.image {
+  .activity-item .post.story h3 a > span.image {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 80px;
     float: none;
   }
-  .activity-item section.story h3 a > span.text {
+  .activity-item .post.story h3 a > span.text {
     vertical-align: middle;
-    padding: 14px 20px;
-    height: 50px;
+
+    /* The text determines the height of the image. (Ideally about 80 pixels)  */
+    padding: 1.0714285714em 1.4285714286em; /* 15px / 14px */ /* 20px / 14px */
+    height: 3.5714285714em; /* 50px / 14px */
   }
-  .activity-item section.story h3 a .action {
+  .activity-item .post.story h3 a .action {
     color: rgb(113, 179, 247); /* @sky */
     transition: color 0.2s;
     white-space: nowrap;
   }
-  .activity-item section.story h3 a:hover  .action,
-  .activity-item section.story h3 a:active .action,
-  .activity-item section.story h3 a:focus  .action {
+  .activity-item .post.story h3 a:hover  .action,
+  .activity-item .post.story h3 a:active .action,
+  .activity-item .post.story h3 a:focus  .action {
     color: rgb(47, 132, 218); /* @ocean */
   }
-  .activity-item section.story h3 a > span.text:first-child {
-    border-left: 20px solid rgb(240, 240, 240); /* @seashell */
+  .activity-item .post.story h3 a > span.text:first-child {
+    /* If there’s no story image, show shape instead. */
+    border-left: 1.4285714286em solid rgb(240, 240, 240); /* @seashell */ /* 20px / 14px */
   }
 
 

@@ -30,134 +30,179 @@
 
   <h1>Advertising</h1>
 
-  <h2>In lists of activity</h2>
+  <h2>In lists of activity or followers (responsive)</h2>
+
+  <h3>300 x 50</h3>
+  <ul class="activity-list">
+    <li class="ad-container">
+      <div class="ad leaderboard" style="width: 300px; height: 50px;">
+        <img src="../../assets/shared/placeholder/8650823342934040008.png" alt="" />
+      </div>
+    </li>
+  </ul>
+  <pre><code>&lt;ul class=&quot;activity-list&quot;&gt;
+  &lt;li class=&quot;ad-container&quot;&gt;
+    &lt;div class=&quot;ad leaderboard&quot; style=&quot;width: 300px; height: 50px;&quot;&gt;
+      …
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+  <h3>468 x 60</h3>
+  <ul class="activity-list">
+    <li class="ad-container">
+      <div class="ad leaderboard" style="width: 468px; height: 60px;">
+        <img src="../../assets/shared/placeholder/18269158537442244495.jpg" alt="" />
+      </div>
+    </li>
+  </ul>
+  <pre><code>&lt;ul class=&quot;activity-list&quot;&gt;
+  &lt;li class=&quot;ad-container&quot;&gt;
+    &lt;div class=&quot;ad leaderboard&quot; style=&quot;width: 468px; height: 60px;&quot;&gt;
+      …
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+  <h3>728 x 90</h3>
+  <ul class="activity-list">
+    <li class="ad-container">
+      <div class="ad leaderboard" style="width: 728px; height: 90px;">
+        <img src="../../assets/shared/placeholder/8774308457468282784.gif" alt="" />
+      </div>
+    </li>
+  </ul>
+  <pre><code>&lt;ul class=&quot;activity-list&quot;&gt;
+  &lt;li class=&quot;ad-container&quot;&gt;
+    &lt;div class=&quot;ad leaderboard&quot; style=&quot;width: 728px; height: 90px;&quot;&gt;
+      …
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+  <h3>Leaderboard &amp; Middleboard</h3>
+  <p>If more than one advertisement appears in a list, each unit gets a unique name (for tracking)</p>
+  <ul class="activity-list">
+    <li class="ad-container">
+      <div class="ad leaderboard" style="width: 728px; height: 90px;">
+        <img src="../../assets/shared/placeholder/8774308457468282784.gif" alt="" />
+      </div>
+    </li>
+    <li class="ad-container">
+      <div class="ad middleboard1" style="width: 728px; height: 90px;">
+        <img src="../../assets/shared/placeholder/8774308457468282784.gif" alt="" />
+      </div>
+    </li>
+    <li class="ad-container">
+      <div class="ad middleboard2" style="width: 728px; height: 90px;">
+        <img src="../../assets/shared/placeholder/8774308457468282784.gif" alt="" />
+      </div>
+    </li>
+  </ul>
+  <pre><code>&lt;ul class=&quot;activity-list&quot;&gt;
+  &lt;li class=&quot;ad-container&quot;&gt;
+    &lt;div class=&quot;ad <mark>leaderboard</mark>&quot; style=&quot;width: 728px; height: 90px;&quot;&gt;
+      …
+    &lt;/div&gt;
+  &lt;/li&gt;
+  …
+  &lt;li class=&quot;ad-container&quot;&gt;
+    &lt;div class=&quot;ad <mark>middleboard1</mark>&quot; style=&quot;width: 728px; height: 90px;&quot;&gt;
+      …
+    &lt;/div&gt;
+  &lt;/li&gt;
+  …
+  &lt;li class=&quot;ad-container&quot;&gt;
+    &lt;div class=&quot;ad <mark>middleboard2</mark>&quot; style=&quot;width: 728px; height: 90px;&quot;&gt;
+      …
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+  <h2>After paging (responsive)</h2>
 
   <h3>300 x 50</h3>
   <div class="ad-container">
-    <div class="ad leaderboard" style="width: 300px; height: 50px;">
-      <img src="http://placehold.it/300x50" width="300" height="50" alt="Placeholder" />
+    <div class="ad baseboard" style="width: 300px; height: 50px;">
+      <img src="../../assets/shared/placeholder/8650823342934040008.png" alt="" />
     </div>
   </div>
+  <pre><code>&lt;div class=&quot;ad-container&quot;&gt;
+  &lt;div class=&quot;ad <mark>baseboard</mark>&quot; style=&quot;width: 300px; height: 50px;&quot;&gt;
+    …
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
   <h3>468 x 60</h3>
   <div class="ad-container">
-    <div class="ad leaderboard" style="width: 468px; height: 60px;">
-      <img src="http://placehold.it/468x60" width="468" height="60" alt="Placeholder" />
+    <div class="ad baseboard" style="width: 468px; height: 60px;">
+      <img src="../../assets/shared/placeholder/18269158537442244495.jpg" alt="" />
     </div>
   </div>
+  <pre><code>&lt;div class=&quot;ad-container&quot;&gt;
+  &lt;div class=&quot;ad <mark>baseboard</mark>&quot; style=&quot;width: 468px; height: 60px;&quot;&gt;
+    …
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
   <h3>728 x 90</h3>
   <div class="ad-container">
-    <div class="ad leaderboard" style="width: 728px; height: 90px;">
-      <img src="http://placehold.it/728x90" width="728" height="90" alt="Placeholder" />
+    <div class="ad baseboard" style="width: 728px; height: 90px;">
+      <img src="../../assets/shared/placeholder/8774308457468282784.gif" alt="" />
     </div>
   </div>
+  <pre><code>&lt;div class=&quot;ad-container&quot;&gt;
+  &lt;div class=&quot;ad <mark>baseboard</mark>&quot; style=&quot;width: 728px; height: 90px;&quot;&gt;
+    …
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 
-  <h2>Units</h2>
+  <h2>With related content</h2>
 
-  <h3>300 x 50</h3>
-  <div class="ad w300 h50">
-    <p>
-      <a href="">
-        <img src="http://placehold.it/300x50" width="300" height="50" alt="Placeholder" />
-      </a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://www.good.is/creativity">
-        <img src="../../assets/shared/placeholder/11032900839499264470.png" width="300" height="50" alt="Creativity: Another good hub to follow" />
-      </a>
-    </p>
-  </div>
+  <aside style="margin-top: 0">
+    <h3>600 x 250</h3>
+    <div class="ad" style="width: 300px; height: 600px;">
+      <img src="../../assets/shared/placeholder/9792033188347793238.jpg" alt="" />
+    </div>
+  <pre><code>&lt;aside&gt;
+  &lt;div class=&quot;ad&quot; style=&quot;width: 300px; height: 600px;&quot;&gt;
+    …
+  &lt;/div&gt;
+&lt;/aside&gt;
+</code></pre>
 
-  <h3>300 x 125</h3>
-  <div class="ad w300 h125">
-    <p>
-      <a href="">
-        <img src="http://placehold.it/300x125" width="300" height="125" alt="Placeholder" />
-      </a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://news.good.is/subscriptions/new"><img src="../../assets/shared/placeholder/7172951939178626391.jpg" width="300" height="125" alt="Meet the Good 100. Subscribe Today." /></a>
-    </p>
-  </div>
+    <h3>300 x 250</h3>
+    <div class="ad" style="width: 300px; height: 250px;">
+      <img src="../../assets/shared/placeholder/14814442120967193973.gif" alt="" />
+    </div>
+  <pre><code>&lt;aside&gt;
+  &lt;div class=&quot;ad&quot; style=&quot;width: 300px; height: 250px;&quot;&gt;
+    …
+  &lt;/div&gt;
+&lt;/aside&gt;
+</code></pre>
 
-  <h3>300 x 250</h3>
-  <div class="ad w300 h250">
-    <p>
-      <a href="">
-        <img src="http://placehold.it/300x250" width="300" height="250" alt="Placeholder" />
-      </a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://www.good.is/health"><img src="../../assets/shared/placeholder/13614656033173660853.jpg" width="300" height="250" alt="Good Health: A community effort to get good. Presented by Health Happens Here, a California Endowment." /></a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://news.good.is/subscriptions/new"><img src="../../assets/shared/placeholder/15973211541698829695.jpg" width="300" height="250" alt="Meet the Good 100. Subscribe Today." /></a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://news.good.is/about/jobs"><img src="../../assets/shared/placeholder/1000020248718.jpg" width="300" height="250" alt="Good is hiring! Really impressive people wanted for really important work. Current Openings…" /></a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://news.good.is/about/jobs"><img src="../../assets/shared/placeholder/10600944286132269123.png" width="300" height="250" alt="Reason #52 why you should subscribe to GOOD magazine. Our next issue is all about Brazil. Subscribe here." /></a>
-    </p>
-  </div>
-
-  <h3>300 x 600</h3>
-  <div class="ad w300 h600">
-    <p>
-      <a href="">
-        <img src="http://placehold.it/300x600" width="300" height="600" alt="Placeholder" />
-      </a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://www.good.is/health"><img src="../../assets/shared/placeholder/16004687743808433884.jpg" width="300" height="600" alt="Reason #924 why you should subscribe to GOOD magazine. Because it’s fun to get things in the mail. Subscribe here." /></a>
-    </p>  
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://www.good.is/health"><img src="../../assets/shared/placeholder/9775554761881619301.jpg" width="300" height="600" alt="Good Health: A community effort to get good. Presented by Health Happens Here, a California Endowment." /></a>
-    </p>
-  </div>
-
-  <h3>468 x 60</h3>
-  <div class="ad w468 h60">
-    <p>
-      <a href="">
-        <img src="http://placehold.it/468x60" width="468" height="60" alt="Placeholder" />
-      </a>
-    </p>
-  </div>
-
-  <h3>728 x 90</h3>
-  <div class="ad w728 h90">
-    <p>
-      <a href="">
-        <img src="http://placehold.it/728x90" width="728" height="90" alt="Placeholder" />
-      </a>
-    </p>
-  </div>
-  <div class="ad">
-    <p>
-      <a href="http://www.good.is/health">
-        <img src="../../assets/shared/placeholder/2759062616324051325.jpg" width="728" height="90" alt="Good Health: A community effort to get good. Presented by Health Happens Here, a California Endowment." />
-      </a>
-    </p>
-  </div>
+    <h3>300 x 125</h3>
+    <div class="ad">
+      <div class="ad" style="width: 300px; height: 125px;">
+        <img src="../../assets/shared/placeholder/7172951939178626391.jpg" alt="" />
+      </div>
+    </div>
+  </aside>
+  <pre><code>&lt;aside&gt;
+  &lt;div class=&quot;ad&quot; style=&quot;width: 300px; height: 125px;&quot;&gt;
+    …
+  &lt;/div&gt;
+&lt;/aside&gt;
+</code></pre>
 
 </body>
 </html>
