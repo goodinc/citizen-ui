@@ -421,7 +421,7 @@
     text-align: left;
   }
   .story .action.edit {
-    margin-bottom: 1.75em;
+    text-align: center;
   }
   .story .action.edit a {
     font-size: 0.875em;
@@ -531,23 +531,28 @@
     padding-bottom: 0.7777777778em;
     margin-bottom: 0.7777777778em;
   }
-  .story-aside h2 + ul {
-    margin-top: 0;
-    padding-top: 0;
-  }
   .story-aside ul,
   .story-aside li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
+  .story-aside ul:after {
+    /* @clearfix */
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .story-aside ul {
+    margin: -0.25em;
+  }
   .story-aside li {
-    display: inline;
-    margin-right: 0.25em;
+    float: left;
+    margin: 0.25em;
   }
   .story-aside li a {
     position: relative;
-    display: inline-block;
+    display: block;
   }
   .story-aside li a img {
     display: block;
@@ -600,11 +605,6 @@
     font-size: 0.75em;
     margin-top: 0;
     float: right;
-  }
-  .story-aside ul {
-    border-top: 0.1em solid rgb(249, 249, 250); /* @vanilla */
-    margin-top: 0.875em;
-    padding-top: 0.875em;
   }
   @media (min-width: 40em) {
     .story-aside h1 {

@@ -597,6 +597,13 @@
 
   /* =Batch Options
   ----------------------------------------------- */
+  .batch,
+  .batch li {
+    /* @reset-list-style */
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
   .batch {
     margin-left: 10px;
     margin-right: 10px;
