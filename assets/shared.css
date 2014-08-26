@@ -3862,7 +3862,7 @@
     font-size: 0.875em; /* 14px / @font-size */
 
     /* OPTIONAL: Handle the case where a URL within a comment is really long and won’t wrap naturally.*/
-    /* For an example, see Kevin Van Lierop’s commment in this article: http://www.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
+    /* For an example, see Kevin Van Lierop’s commment in this article: http://community.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
     word-wrap     : break-word; /* Currently supported in most browsers */
     overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
   }
@@ -6169,7 +6169,7 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
-  /* SHIM: Support the old image maps on pages like this one: http://www.good.is/los-angeles */
+  /* SHIM: Support the old image maps on pages like this one: http://community.good.is/los-angeles */
   .topic-header a.image-map {
     position: absolute;
     top: 0;
