@@ -432,25 +432,36 @@
   td .source .details > .container .link a:focus {
     color: rgb(47, 132, 218); /* @ocean */
   }
+
+  @-webkit-keyframes appear {
+    from {
+      left: -9999px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes appear {
+    from {
+      left: -9999px;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
   td .source:hover  .details,
   td .source:active .details,
   td .source:focus  .details {
-    left: auto;
-    opacity: 1;
-  }
 
-  /* If the page is scripted, delay the hover effect */
-  td .source.scripted:hover  .details,
-  td .source.scripted:active .details,
-  td .source.scripted:focus  .details {
-    left: -9999px;
-    opacity: 0;
-  }
-  td .source.active:hover  .details,
-  td .source.active:active .details,
-  td .source.active:focus  .details {
-    left: auto;
-    opacity: 1;
+    /* OPTIONAL: Add a delay to the hover effect, for better usability */
+    -webkit-animation : appear 1ms 0.5s both;
+            animation : appear 1ms 0.5s both;
   }
 
   td.author {
