@@ -1433,6 +1433,36 @@
     content: "\e608"; /* @icon-ban */
     color: rgb(255, 51, 51); /* @apple */
   }
+  section.message form.approve {
+    display: inline;
+  }
+  section.message form.approve button {
+    font-size: 0.875em;
+    margin-left: 0.5em;
+  }
+  section.message form.approve button:before {
+    /* @icons */
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9375em; /* 15px / @font-size(16px) */
+    margin-right: 0.375em;
+    transition: color 0.2s;
+
+    content: "\e606"; /* @icon-approve */
+  }
+  section.message form.approve button:hover:before,
+  section.message form.approve button:active:before,
+  section.message form.approve button:focus:before {
+    color: rgb(0, 128, 64); /* @cucumber */
+  }
 
   .activity-item .message.success a {
     text-decoration: underline;
@@ -1446,30 +1476,30 @@
   ----------------------------------------------- */
 
   @-webkit-keyframes outerspin {
-      from {
-        -webkit-transform: rotate(0deg);
-      }
-      to {
-        -webkit-transform: rotate(360deg);
-      }
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
   }
 
   @-webkit-keyframes innerspin {
-      from {
-        -webkit-transform: rotate(0deg);
-      }
-      to {
-        -webkit-transform: rotate(360deg);
-      }
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
   }
 
   @keyframes outerspin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes innerspin {
@@ -1527,7 +1557,6 @@
             animation : innerspin 2s infinite linear;
     -moz-box-sizing : border-box;
          box-sizing : border-box;
-
   }
 
   /* OPTIONAL: Position the loading indicator above the form */
@@ -1562,17 +1591,18 @@
   /* OPTIONAL: Add space around a loading icon, when it appears after a button */
   form p   button + .loading,
   p.action      a + .loading {
-    margin: 0.4375em; /* @line-height / 2 */
+    margin: 0.4375em; /* @line-height / 4 */
   }
 
 
   /* =Options
   ----------------------------------------------- */
-  .options .edit   a,
-  .options .reply  a,
-  .options .flag   button,
-  .options .spam   button,
-  .options .delete button {
+  .options .edit    a,
+  .options .reply   a,
+  .options .approve button,
+  .options .flag    button,
+  .options .spam    button,
+  .options .delete  button {
     background-color: transparent;
     border-width: 0;
     font-weight: inherit;
@@ -1583,11 +1613,12 @@
     text-decoration: none;
   }
 
-  .options .edit        a:before,
-  .options .reply       a:before,
-  .options .flag   button:before,
-  .options .spam   button:before,
-  .options .delete button:before {
+  .options .edit         a:before,
+  .options .reply        a:before,
+  .options .approve button:before,
+  .options .flag    button:before,
+  .options .spam    button:before,
+  .options .delete  button:before {
     /* @icons */
     font-family: "Icons";
     speak: none;
@@ -1611,6 +1642,9 @@
   .options .reply a:before {
     content: "\e605"; /* @icon-reply */
   }
+  .options .approve button:before {
+    content: "\e606"; /* @icon-approve */
+  }
   .options .flag button:before {
     content: "\e607"; /* @icon-flag */
   }
@@ -1629,17 +1663,21 @@
   .options .reply a:focus:before {
     color: rgb(49, 144, 242); /* @boysenberry */
   }
-
-  .options .flag   button:hover:before,
-  .options .flag   button:active:before,
-  .options .flag   button:focus:before,
-  .options .spam   button:hover:before,
-  .options .spam   button:active:before,
-  .options .spam   button:focus:before,
-  .options .delete button:hover:before,
-  .options .delete button:active:before,
-  .options .delete button:focus:before {
-    color: rgb(255, 102, 102); /* @strawberry */
+  .options .approve button:hover:before,
+  .options .approve button:active:before,
+  .options .approve button:focus:before {
+    color: rgb(0, 128, 64); /* @cucumber */
+  }
+  .options .flag    button:hover:before,
+  .options .flag    button:active:before,
+  .options .flag    button:focus:before,
+  .options .spam    button:hover:before,
+  .options .spam    button:active:before,
+  .options .spam    button:focus:before,
+  .options .delete  button:hover:before,
+  .options .delete  button:active:before,
+  .options .delete  button:focus:before {
+    color: rgb(255, 51, 51); /* @apple */
   }
 
   .member-header .options {

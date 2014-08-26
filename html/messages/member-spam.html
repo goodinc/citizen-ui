@@ -86,7 +86,9 @@
 
 <section class="message spam">
   <h1>This User is marked as Spam.</h1>
-  <p>Not spam? No worries, just mark them <strong>Ham, Not Spam!</strong></p>
+  <form action="" method="post" class="approve secondary">
+    <p>Not spam? No worries, just mark them <button type="submit">Ham, Not Spam!</button></p>
+  </form>
 </section>
 
 <header class="member-header">
@@ -114,6 +116,13 @@
           <dt class="website">Website</dt>
           <dd><a href="http://verynice.co/">verynice.co/</a></dd>
         </dl>
+        <ul class="options">
+          <li class="approve">
+            <form action="" method="post">
+              <button type="submit" title="Mark this member as Ham, Not Spam!">Ham, Not Spam!</button>
+            </form>
+          </li>
+        </ul>
       </div>
     </div>
     <nav class="sub">
