@@ -8287,6 +8287,10 @@
     content: "See more…";
     color: rgb(113, 179, 247); /* @sky */
   }
+  .stories   .body p:first-child,
+  .do-header .body p:first-child {
+    margin-top: 0;
+  }
   .stories a:hover .body.summary:after,
   .do-header .body.summary:hover:after {
     color: rgb(47, 132, 218); /* @ocean */

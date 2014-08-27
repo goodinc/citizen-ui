@@ -420,6 +420,9 @@
   .story .comment-form {
     text-align: left;
   }
+  .story .action.edit {
+    margin-bottom: 1.75em;
+  }
   .story .action.edit a {
     font-size: 0.875em;
   }
