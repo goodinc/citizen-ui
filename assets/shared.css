@@ -1812,7 +1812,6 @@
   }
   aside div.ad,
   aside .promotion,
-  aside .discussion,
   aside .fb-recommendations {
     margin-top: 0;
     margin-bottom : 1.75em; /* @line-height */
@@ -2136,112 +2135,6 @@
   .connect-facebook p:first-child {
     font-size: 1.5em;
     font-weight: bold;
-  }
-
-
-  /* =Active Discussion
-  ----------------------------------------------- */
-  .discussion {
-    position: relative;
-    border: 0.25em solid rgb(240, 240, 240); /* @seashell */
-    background-color: rgb(252, 252, 252); /* @snow */
-    padding: 1em 1.25em;
-  }
-  .discussion h2 {
-    color: rgb(247, 113, 113); /* @raspberry */
-    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
-    font-weight: normal;
-    text-transform: uppercase;
-    font-size: 0.6875em; /* 11px / @font-size(16px) */
-    line-height: 2.54545454545455em; /* @line-height(1.75) / font-size(0.6875em) */
-  }
-  .discussion h2:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    content: "\e614"; /* @icon-active */
-
-    font-size: 1.65em;
-    margin-right: 0.4375em;
-    vertical-align: top;
-  }
-  .discussion h3 {
-    font-size: inherit;
-    line-height: 1.3125em; /* @line-height x 3/4 */
-    font-family: inherit;
-    font-weight: bold;
-    text-align: center;
-  }
-  .discussion h3 a {
-    color: rgb(101, 102, 103); /* @tin */
-    text-decoration: inherit;
-  }
-  .discussion h3 a:hover,
-  .discussion h3 a:active,
-  .discussion h3 a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
-  }
-  .discussion h3 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.75em;
-  }
-  .discussion ul,
-  .discussion li {
-    /* @reset-list-style */
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .discussion + section,
-  .discussion + p {
-    margin-top: 1.5em;
-  }
-  .discussion ul {
-    margin-top: 1.5em;
-  }
-  .discussion li {
-    padding: 1em 0; /* 11px / font-size(11px) */
-    border-bottom: 1px solid rgb(218, 220, 224); /* @magnesium */
-    color: rgb(101, 102, 103); /* @tin */
-    font-size: 0.6875em; /* 11px / @font-size(16px) */
-  }
-  .discussion li a {
-    text-decoration: none;
-  }
-  .discussion li a:hover,
-  .discussion li a:active,
-  .discussion li a:focus {
-    color: rgb(49, 144, 242); /* @boysenberry */
-  }
-  .discussion li img,
-  .discussion li .avatar {
-    float: right;
-    position: relative;
-    font-size: 1.4545454545em; /* @font-size / 11px */
-    top: -0.175em;
-    margin-left: 0.375em;
-    line-height: 1;
-  }
-  .discussion .more {
-    text-align: center;
-  }
-  .discussion .more a {
-    color: rgb(247, 113, 113); /* @raspberry */
-    text-decoration: inherit;
-    font-weight: bold;
-    font-size: 0.6875em; /* 11px / @font-size(16px) */
   }
 
 
@@ -2963,6 +2856,7 @@
   /* OPTIONAL: Make the loading icon look nice, if it’s applied to a follow button. */
   .scripted-button .following.loading h6,
   .follow.loading button {
+    transition-property: none;
     color: transparent;
   }
      .follow.loading:before,
@@ -6020,6 +5914,13 @@
 
     /* SHIM: Center the form element, so the drop-down will appear in the correct location. */
     .scripted-button .member-header h1 + form.following {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* SHIM: Sometimes the form appears inside of <div> element. */
+    .scripted-button .member-header h1 + div form.following {
       display: table;
       margin-left: auto;
       margin-right: auto;
@@ -9349,7 +9250,6 @@
     }
     aside > .ad,
     aside > .promotion,
-    aside > .discussion,
     aside > .fb-recommendations {
       float: left;
       margin-right: 1.5em;
