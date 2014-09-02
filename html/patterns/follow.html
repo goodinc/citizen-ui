@@ -58,6 +58,19 @@
     </li>
     <li>
       <figure>
+        <form action="" method="post" class="follow loading">
+          <p><button type="submit">Follow</button></p>
+        </form>
+        <pre><code>
+&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;follow <mark>loading</mark>&quot;&gt;
+  &lt;p&gt;&lt;button type=&quot;submit&quot;&gt;Follow&lt;/button&gt;&lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+        <figcaption>When pressed, it adds the user as a follower.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
         <form action="" method="post" class="following">
           <h6>Following</h6>
           <p>
@@ -73,6 +86,25 @@
 &lt;/form&gt;
 </code></pre>
         <figcaption>The button acts like a drop-down, once the user is following.</figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <form action="" method="post" class="following loading">
+          <h6>Following</h6>
+          <p>
+            <button type="submit" name="unfollow" value="1">Unfollow</button>
+          </p>
+        </form>
+        <pre><code>
+&lt;form action=&quot;&quot; method=&quot;post&quot; class=&quot;following <mark>loading</mark>&quot;&gt;
+  &lt;h6&gt;Following&lt;/h6&gt;
+  &lt;p&gt;
+    &lt;button type=&quot;submit&quot; name=&quot;unfollow&quot; value=&quot;1&quot;&gt;Unfollow&lt;/button&gt;
+  &lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+        <figcaption>When pressed, it removes the user as a follower.</figcaption>
       </figure>
     </li>
   </ol>

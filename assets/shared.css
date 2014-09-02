@@ -2960,13 +2960,33 @@
     border-color: rgba(0, 0, 0, 0.15);
   }
 
+  /* OPTIONAL: Make the loading icon look nice, if it’s applied to a follow button. */
+  .scripted-button .following.loading h6,
+  .follow.loading button {
+    color: transparent;
+  }
+     .follow.loading:before,
+     .follow.loading:after,
+  .following.loading:before,
+  .following.loading:after {
+    border-color: white;
+  }
+     .follow.loading:before,
+  .following.loading:before {
+    border-right-color: transparent;
+  }
+     .follow.loading:after,
+  .following.loading:after {
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
 
   /* OPTIONAL: Make the loading icon look nice, if it’s applied
   to the vote count in a feed or the vote button on a post page. */
   .scripted-button       .voted.loading h6,
   .scripted-button .meta .voted.loading h6,
          .vote.loading button,
-  .meta  .vote.loading button{
+  .meta  .vote.loading button {
     color: transparent;
   }
   .scripted-button       .voted.loading h6 abbr,
