@@ -452,10 +452,10 @@
   /* =Primary
   ----------------------------------------------- */
   .scripted-button form.following h6,
-  .scripted-button form.voted h6,
-  .scripted-button form.do    h6,
-  .scripted-button form.doing h6,
-  .scripted-button form.done  h6,
+  .scripted-button form.voted     h6,
+  .scripted-button form.do        h6,
+  .scripted-button form.doing     h6,
+  .scripted-button form.done      h6,
   a .action span,
   .action a,
   button {
@@ -519,139 +519,6 @@
   }
 
 
-  /* =Vote
-  ----------------------------------------------- */
-  .vote button {
-    background-color: rgb(113, 179, 247); /* @sky */
-  }
-  .scripted-button form.voted h6,
-  .voted button {
-    background-color: rgb(49, 144, 242); /* @boysenberry */
-  }
-  .scripted-button form.voted h6,
-  .vote  button,
-  .voted button {
-    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
-    font-weight: normal;
-  }
-  .voted button[disabled] {
-    color: white;
-    opacity: 1;
-  }
-  .vote button:hover,
-  .vote button:active,
-  .vote button:focus {
-    background-color: rgb(49, 144, 242); /* @boysenberry */
-  }
-  .scripted-button form.voted h6:hover,
-  .scripted-button form.voted h6:active,
-  .scripted-button form.voted h6:focus,
-  .voted button:hover,
-  .voted button:active,
-  .voted button:focus {
-    background-color: rgb(19, 114, 212); /* @blueberry */
-  }
-
-  /* OPTIONAL: Adjust the font size, for readability */
-  .scripted-button form.voted h6,
-  .vote  button,
-  .voted button {
-    font-size: 1.2em;
-    line-height: 1.40625em;
-    padding: 0.46875em 1.0416666667em;
-  }
-
-
-  /* =Follow
-  ----------------------------------------------- */
-  .follow button {
-    background-color: rgb(124, 227, 162); /* @moss */
-  }
-  .follow button:hover,
-  .follow button:active,
-  .follow button:focus {
-    background-color: rgb(64, 198, 149); /* @clover */
-  }
-  .scripted-button form.following h6,
-  .following button {
-    background-color: rgb(64, 198, 149); /* @clover */
-  }
-  .scripted-button form.following h6:hover,
-  .scripted-button form.following h6:active,
-  .scripted-button form.following h6:focus {
-    background-color: rgb(80, 167, 135); /* @fern */
-  }
-  .following button:hover,
-  .following button:active,
-  .following button:focus {
-    background: rgb(247, 113, 113); /* @raspberry */
-  }
-
-  .following button:hover,
-  .following button:active,
-  .following button:focus {
-    color: transparent;
-  }
-  .following button:before {
-    transition: color 0.2s;
-    content: "Unfollow";
-    color: transparent;
-    position: absolute;
-    margin-left: 0.2em;
-  }
-  .following button:hover:before,
-  .following button:active:before,
-  .following button:focus:before {
-    color: white;
-  }
-
-  /* SHIM: Hide the hover effect inside dropdowns.
-  (This can be removed once the HTML has been updated and the hover effect is obsolete) */
-  .scripted-button form.following h6 + p button:before {
-    content: none;
-  }
-
-
-  /* =Do
-  ----------------------------------------------- */
-  .scripted-button form.do h6,
-  .do button {
-    background-color: rgb(124, 227, 162); /* @moss */
-  }
-  .scripted-button form.do h6:hover,
-  .scripted-button form.do h6:active,
-  .scripted-button form.do h6:focus,
-  .do button:hover,
-  .do button:active,
-  .do button:focus {
-    background-color: rgb(64, 198, 149); /* @clover */
-  }
-  .scripted-button form.doing h6,
-  .doing button {
-    background-color: rgb(130, 242, 206); /* @spindrift */
-  }
-  .scripted-button form.doing h6:hover,
-  .scripted-button form.doing h6:active,
-  .scripted-button form.doing h6:focus,
-  .doing button:hover,
-  .doing button:active,
-  .doing button:focus {
-    background-color: rgb(110, 222, 186);
-  }
-  .scripted-button form.done h6,
-  .done button {
-    background: rgb(64, 198, 149); /* @clover */
-  }
-  .scripted-button form.done h6:hover,
-  .scripted-button form.done h6:active,
-  .scripted-button form.done h6:focus,
-  .done button:hover,
-  .done button:active,
-  .done button:focus {
-    background-color: rgb(80, 167, 135); /* @fern */
-  }
-
-
   /* =Secondary
   ----------------------------------------------- */
   .account-form a .action span,
@@ -694,185 +561,89 @@
   }
 
 
-  /* =Dropdowns
+  /* =Do
   ----------------------------------------------- */
+  .scripted-button form.do h6 {
+    background-color: rgb(124, 227, 162); /* @moss */
+  }
+  .scripted-button form.do h6:hover,
+  .scripted-button form.do h6:active,
+  .scripted-button form.do h6:focus {
+    background-color: rgb(64, 198, 149); /* @clover */
+  }
+  .scripted-button form.doing h6 {
+    background-color: rgb(130, 242, 206); /* @spindrift */
+  }
+  .scripted-button form.doing h6:hover,
+  .scripted-button form.doing h6:active,
+  .scripted-button form.doing h6:focus {
+    background-color: rgb(110, 222, 186);
+  }
+  .scripted-button form.done h6 {
+    background: rgb(64, 198, 149); /* @clover */
+  }
+  .scripted-button form.done h6:hover,
+  .scripted-button form.done h6:active,
+  .scripted-button form.done h6:focus {
+    background-color: rgb(80, 167, 135); /* @fern */
+  }
 
-  /* OPTIONAL: Present the do, following & voted buttons as drop-downs */
-  form.following h6,
-  form.voted h6,
-  form.do    h6,
-  form.doing h6,
-  form.done  h6 {
-    margin-top: 0;
-    font-style: inherit;
-    font-size: 0.875em;
-    font-weight: bold;
-    color: rgb(153, 153, 153); /* @nickel */
-    margin-bottom: 0;
-  }
-  form.voted h6 + p,
-  form.do    h6 + p,
-  form.doing h6 + p,
-  form.done  h6 + p {
-    margin-top: 0.4375em;
-  }
-  .scripted-button form.following h6,
+
+  /* =Vote
+  ----------------------------------------------- */
+  .vote button,
   .scripted-button form.voted h6 {
-    font-style: normal;
-    color: white;
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
   }
-  .scripted-button form.do    h6,
-  .scripted-button form.doing h6,
-  .scripted-button form.done  h6 {
-    font-style: normal;
-    font-size: inherit;
-    color: white;
+  .vote button {
+    background-color: rgb(113, 179, 247); /* @sky */
   }
-
-  .scripted-button form.following h6 + p,
-  .scripted-button form.voted h6 + p,
-  .scripted-button form.do    h6 + p,
-  .scripted-button form.doing h6 + p,
-  .scripted-button form.done  h6 + p {
-    position: absolute;
-    z-index: 9999; /* @infinity */
-    background: white;
-    text-align: center;
-    border: 0.125em solid rgb(153, 153, 153); /* @nickel */
-    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
-    transition: opacity 0.2s;
-    margin-top: 1em;
+  .scripted-button form.voted h6 {
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
-  .scripted-button form.following h6 + p,
-  .scripted-button form.voted h6 + p,
-  .scripted-button form.do    h6 + p,
-  .scripted-button form.doing h6 + p,
-  .scripted-button form.done  h6 + p {
-    left: -9999px;
+  .vote button:hover,
+  .vote button:active,
+  .vote button:focus {
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
-  .scripted-button form.following.active h6 + p,
-  .scripted-button form.voted.active h6 + p,
-  .scripted-button form.do.active    h6 + p,
-  .scripted-button form.doing.active h6 + p,
-  .scripted-button form.done.active  h6 + p {
-    left: auto;
-  }
-  .scripted-button form.following h6 + p:after,
-  .scripted-button form.voted h6 + p:after,
-  .scripted-button form.do    h6 + p:after,
-  .scripted-button form.doing h6 + p:after,
-  .scripted-button form.done  h6 + p:after {
-    display: block;
-    content: "";
-    background: white;
-    border-width: 0.125em 0 0 0.125em;
-    border-style: solid;
-    border-color: rgb(153, 153, 153); /* @nickel */
-    width: 1em;
-    height: 1em;
-    -moz-box-sizing : border-box;
-    box-sizing      : border-box;
-    position: absolute;
-    top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
-    left: 50%;
-    margin-left: -0.5em;
-
-    -webkit-transform : rotate(45deg);
-    -moz-transform    : rotate(45deg);
-    -o-transform      : rotate(45deg);
-    transform         : rotate(45deg);
-  }
-  .scripted-button form.following h6 + p button,
-  .scripted-button form.voted h6 + p button,
-  .scripted-button form.do    h6 + p button,
-  .scripted-button form.doing h6 + p button,
-  .scripted-button form.done  h6 + p button {
-    background: transparent;
-    border-width: 0;
-    color: rgb(101, 102, 103); /* @tin */
-    padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
-    min-width: 8em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: nowrap;
-    border-radius: 0;
-  }
-  .scripted-button form.following h6 + p button + button,
-  .scripted-button form.voted h6 + p button + button,
-  .scripted-button form.do    h6 + p button + button,
-  .scripted-button form.doing h6 + p button + button,
-  .scripted-button form.done  h6 + p button + button {
-    border-top: 1px solid rgb(204, 204, 204); /* @aluminum */
-  }
-  .scripted-button form.voted button[name*="undo"] {
-    font-family: inherit;
-    font-weight: bold;
-    font-size: inherit;
-  }
-  .scripted-button form.following button[name*="unfollow"],
-  .scripted-button form.voted button[name*="undo"],
-  .scripted-button form.doing button[name*="remove"],
-  .scripted-button form.done  button[name*="remove"] {
-    color: rgb(247, 157, 130); /* @mango */
-  }
-  .scripted-button form.following button[name*="unfollow"]:hover,
-  .scripted-button form.following button[name*="unfollow"]:active,
-  .scripted-button form.following button[name*="unfollow"]:focus,
-  .scripted-button form.voted button[name*="undo"]:hover,
-  .scripted-button form.voted button[name*="undo"]:active,
-  .scripted-button form.voted button[name*="undo"]:focus,
-  .scripted-button form.doing button[name*="remove"]:hover,
-  .scripted-button form.doing button[name*="remove"]:active,
-  .scripted-button form.doing button[name*="remove"]:focus,
-  .scripted-button form.done  button[name*="remove"]:hover,
-  .scripted-button form.done  button[name*="remove"]:active,
-  .scripted-button form.done  button[name*="remove"]:focus {
-    color: rgb(247, 113, 113); /* @raspberry */
-  }
-  .scripted-button form.following h6 + p button:hover,
-  .scripted-button form.following h6 + p button:active,
-  .scripted-button form.following h6 + p button:focus,
-  .scripted-button form.voted h6 + p button:hover,
-  .scripted-button form.voted h6 + p button:active,
-  .scripted-button form.voted h6 + p button:focus,
-  .scripted-button form.do    h6 + p button:hover,
-  .scripted-button form.do    h6 + p button:active,
-  .scripted-button form.do    h6 + p button:focus,
-  .scripted-button form.doing h6 + p button:hover,
-  .scripted-button form.doing h6 + p button:active,
-  .scripted-button form.doing h6 + p button:focus,
-  .scripted-button form.done  h6 + p button:hover,
-  .scripted-button form.done  h6 + p button:active,
-  .scripted-button form.done  h6 + p button:focus {
-    color: rgb(113, 179, 247); /* @sky */
+  .scripted-button form.voted h6:hover,
+  .scripted-button form.voted h6:active,
+  .scripted-button form.voted h6:focus {
+    background-color: rgb(19, 114, 212); /* @blueberry */
   }
 
-  /* OPTIONAL: Center the drop-down */
-  .scripted-button form.do,
-  .scripted-button form.doing,
-  .scripted-button form.done {
-    position: relative;
-    text-align: right;
-  }
-  .scripted-button form.do    h6 + p button,
-  .scripted-button form.doing h6 + p button,
-  .scripted-button form.done  h6 + p button {
-    min-width: 11em;
-  }
-  .scripted-button form.following.active h6 + p {
-    margin-left: -0.5em;
-  }
-  .scripted-button form.voted.active h6 + p {
-    margin-left: -0.75em;
-  }
-  .scripted-button form.do.active    h6 + p,
-  .scripted-button form.doing.active h6 + p,
-  .scripted-button form.done.active  h6 + p {
-    right: -3em;
+  /* OPTIONAL: Adjust the font size, for readability */
+  .vote button,
+  .scripted-button form.voted h6 {
+    font-size: 1.2em;
+    line-height: 1.40625em;
+    padding: 0.46875em 1.0416666667em;
   }
 
-  /* OPTIONAL: Add icons before the buttons */
+
+  /* =Follow
+  ----------------------------------------------- */
+  .follow button {
+    background-color: rgb(124, 227, 162); /* @moss */
+  }
+  .follow button:hover,
+  .follow button:active,
+  .follow button:focus {
+    background-color: rgb(64, 198, 149); /* @clover */
+  }
+  .scripted-button form.following h6 {
+    background-color: rgb(64, 198, 149); /* @clover */
+  }
+  .scripted-button form.following h6:hover,
+  .scripted-button form.following h6:active,
+  .scripted-button form.following h6:focus {
+    background-color: rgb(80, 167, 135); /* @fern */
+  }
+
+
+  /* OPTIONAL: Add icons before the buttons
+  ----------------------------------------------- */
 
   /* Vote */
   .vote button:before {
@@ -946,6 +717,228 @@
   .scripted-button form.doing h6,
   .scripted-button form.done  h6 {
     margin-left: 2em;
+  }
+
+
+  /* OPTIONAL: Make the loading icon look nice
+  ----------------------------------------------- */
+                        .vote.loading button,
+  .scripted-button     .voted.loading h6,
+                      .follow.loading button,
+  .scripted-button .following.loading h6 {
+    transition-property: none;
+    color: transparent;
+  }
+       .vote.loading:before,
+       .vote.loading:after,
+      .voted.loading:before,
+      .voted.loading:after,
+     .follow.loading:before,
+     .follow.loading:after,
+  .following.loading:before,
+  .following.loading:after {
+    border-color: white;
+  }
+       .vote.loading:before,
+      .voted.loading:before,
+     .follow.loading:before,
+  .following.loading:before {
+    border-right-color: transparent;
+  }
+       .vote.loading:after,
+      .voted.loading:after,
+     .follow.loading:after,
+  .following.loading:after {
+    border-left-color: transparent;
+    border-top-color: transparent;
+  }
+
+
+  /* OPTIONAL: Present the do, following & voted buttons as drop-downs
+  ----------------------------------------------- */
+  .scripted-button form.following h6,
+  .scripted-button form.voted     h6,
+  .scripted-button form.do        h6,
+  .scripted-button form.doing     h6,
+  .scripted-button form.done      h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: normal;
+    color: white;
+  }
+  .scripted-button form.following h6,
+  .scripted-button form.do        h6,
+  .scripted-button form.doing     h6,
+  .scripted-button form.done      h6 {
+    font-weight: bold;
+    font-size: inherit;
+  }
+  .scripted-button form.following p,
+  .scripted-button form.voted     p,
+  .scripted-button form.do        p,
+  .scripted-button form.doing     p,
+  .scripted-button form.done      p {
+    position: absolute;
+    z-index: 9999; /* @infinity */
+    background: white;
+    text-align: center;
+    border: 0.125em solid rgb(153, 153, 153); /* @nickel */
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.15);
+    transition: opacity 0.2s;
+    margin-top: 1em;
+    left: -9999px;
+  }
+  .scripted-button form.following.active p,
+  .scripted-button form.voted.active     p,
+  .scripted-button form.do.active        p,
+  .scripted-button form.doing.active     p,
+  .scripted-button form.done.active      p {
+    left: auto;
+  }
+  .scripted-button form.following p:after,
+  .scripted-button form.voted     p:after,
+  .scripted-button form.do        p:after,
+  .scripted-button form.doing     p:after,
+  .scripted-button form.done      p:after {
+    display: block;
+    content: "";
+    background: white;
+    border-width: 0.125em 0 0 0.125em;
+    border-style: solid;
+    border-color: rgb(153, 153, 153); /* @nickel */
+    width: 1em;
+    height: 1em;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+    position: absolute;
+    top: -0.55em; /* This number is arbitrary, but happens to work well with a border width of 0.125em */
+    left: 50%;
+    margin-left: -0.5em;
+
+    -webkit-transform : rotate(45deg);
+    -moz-transform    : rotate(45deg);
+    -o-transform      : rotate(45deg);
+    transform         : rotate(45deg);
+  }
+  .scripted-button form.following button,
+  .scripted-button form.voted     button,
+  .scripted-button form.do        button,
+  .scripted-button form.doing     button,
+  .scripted-button form.done      button {
+    background: transparent;
+    border-width: 0;
+    color: rgb(101, 102, 103); /* @tin */
+    padding: 0.875em 1.75em; /* @line-height / 2     @line-height */
+    min-width: 8em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    border-radius: 0;
+  }
+  .scripted-button form.following button + button,
+  .scripted-button form.voted     button + button,
+  .scripted-button form.do        button + button,
+  .scripted-button form.doing     button + button,
+  .scripted-button form.done      button + button {
+    border-top: 1px solid rgb(204, 204, 204); /* @aluminum */
+  }
+  .scripted-button form.following button:hover,
+  .scripted-button form.following button:active,
+  .scripted-button form.following button:focus,
+  .scripted-button form.voted     button:hover,
+  .scripted-button form.voted     button:active,
+  .scripted-button form.voted     button:focus,
+  .scripted-button form.do        button:hover,
+  .scripted-button form.do        button:active,
+  .scripted-button form.do        button:focus,
+  .scripted-button form.doing     button:hover,
+  .scripted-button form.doing     button:active,
+  .scripted-button form.doing     button:focus,
+  .scripted-button form.done      button:hover,
+  .scripted-button form.done      button:active,
+  .scripted-button form.done      button:focus {
+    color: rgb(113, 179, 247); /* @sky */
+  }
+
+
+  /* OPTIONAL: Center the drop-downs
+  ----------------------------------------------- */
+  .scripted-button form.do,
+  .scripted-button form.doing,
+  .scripted-button form.done {
+    position: relative;
+    text-align: right;
+  }
+  .scripted-button form.do    button,
+  .scripted-button form.doing button,
+  .scripted-button form.done  button {
+    min-width: 11em;
+  }
+  .scripted-button form.following.active h6 + p {
+    margin-left: -0.5em;
+  }
+  .scripted-button form.voted.active p {
+    margin-left: -0.75em;
+  }
+  .scripted-button form.do.active    p,
+  .scripted-button form.doing.active p,
+  .scripted-button form.done.active  p {
+    right: -3em;
+  }
+
+
+  /* OPTIONAL: Use the “warning” color for buttons that undo an action.
+  ----------------------------------------------- */
+  .scripted-button form.following button,
+  .scripted-button form.voted     button,
+  .scripted-button form.doing     button[name*="remove"],
+  .scripted-button form.done      button[name*="remove"] {
+    color: rgb(247, 157, 130); /* @mango */
+  }
+  .scripted-button form.following button:hover,
+  .scripted-button form.following button:active,
+  .scripted-button form.following button:focus,
+  .scripted-button form.voted     button:hover,
+  .scripted-button form.voted     button:active,
+  .scripted-button form.voted     button:focus,
+  .scripted-button form.doing     button[name*="remove"]:hover,
+  .scripted-button form.doing     button[name*="remove"]:active,
+  .scripted-button form.doing     button[name*="remove"]:focus,
+  .scripted-button form.done      button[name*="remove"]:hover,
+  .scripted-button form.done      button[name*="remove"]:active,
+  .scripted-button form.done      button[name*="remove"]:focus {
+    color: rgb(247, 113, 113); /* @raspberry */
+  }
+
+
+  /* OPTIONAL: Add a line between the button label and the count
+  ----------------------------------------------- */
+  form.vote  button abbr,
+  form.voted h6     abbr {
+    display: inline-block;
+    border-width: 0 0 0 0.1em;
+    border-style: solid;
+    border-color: rgb(244, 244, 244);
+    padding-left : 0.6em;
+    margin-left  : 0.45em;
+    margin-right : -0.25em;
+    margin-top: -0.75em;
+    padding-top: 0.75em;
+    margin-bottom: -0.8em;
+    padding-bottom: 0.8em;
+    transition: border-color 0.2s;
+  }
+  form.vote  button:hover  abbr,
+  form.vote  button:active abbr,
+  form.vote  button:focus  abbr,
+  form.voted h6            abbr {
+    border-color: rgb(51, 51, 51);
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+   .vote.loading button abbr,
+  .voted.loading h6     abbr {
+    border-color: transparent;
   }
 
 
@@ -2314,11 +2307,11 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
-  .activity-item .todo_actions {
+  .activity-item .do div.form {
     margin-top: 0.875em; /* @line-height / 2 */
     float: right;
   }
-  .topic-featured .activity-item .todo_actions {
+  .topic-featured .activity-item .do div.form {
     float: none;
     display: inline-block;
     vertical-align: middle;
@@ -2477,7 +2470,7 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
-  .activity-item section.do.has-story .todo_actions {
+  .activity-item section.do.has-story div.form {
     float: none;
   }
 
@@ -2675,7 +2668,8 @@
     color: rgb(153, 153, 153); /* @nickel */
   }
 
-  .meta [backbone-view="GoodButton"],
+  .meta div.form,
+  .meta [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
   .meta form.vote,
   .meta form.voted {
     margin-top: 0;
@@ -2696,26 +2690,34 @@
     line-height: 1;
   }
 
-  /* Icons */
+  /* Buttons */
   .meta .dos          a,
   .meta .comments     a,
   .meta .stories      a,
   .meta .participants a,
   .meta .vote         button,
-  .meta .voted        button {
+  .scripted-button .meta form.voted h6 {
     border-radius: 0.25em;
     font-family: inherit;
     font-size: 0.75em;
     line-height: 1.2em;
     padding: 0.75em 1em 0.7em;
     display: inline-block;
-    margin-left: 0;
-
+    font-weight: bold;
+  }
+  .meta .dos          a,
+  .meta .comments     a,
+  .meta .stories      a,
+  .meta .participants a,
+  .meta .vote         button {
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(252, 252, 252); /* @snow */
     color: rgb(153, 153, 153); /* @nickel */
-    font-weight: bold;
     text-decoration: none;
+  }
+  .scripted-button .meta form.voted p {
+    font-size: 0.75em;
+    margin-left: 0.25em;
   }
   .meta .dos          a:hover,
   .meta .dos          a:active,
@@ -2732,11 +2734,11 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
 
+  /* Icons */
   .meta .dos          a:before,
   .meta .comments     a:before,
   .meta .stories      a:before,
-  .meta .participants a:before,
-  .meta .vote         button:before {
+  .meta .participants a:before {
 
     /* @icons */
     font-family: "Icons";
@@ -2777,214 +2779,37 @@
     content: "\e612"; /* @icon-stories */
     color: rgb(83, 83, 83); /* @steel */
   }
+
+
+  /* OPTIONAL: Make the vote button look more like the other buttons */
+  .meta .vote button {
+    margin-left: 0;
+  }
   .meta .vote button:before {
+    position: static;
+    display: inline-block;
     margin-right: 0.1em;
     margin-left: 0;
-    position: static;
-    content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @sky */
   }
-
-  /* Mimic the size and style of the vote button */
-  .scripted-button .meta form.voted h6 {
-    font-size: 0.75em;
-    line-height: 1.2em;
-    padding: 0.75em 1em;
-    border-radius: 0.25em;
-    font-family: inherit;
-    font-weight: bold;
-  }
-  .scripted-button .meta form.voted h6 + p {
-    font-size: 0.75em;
-    margin-left: 0.25em;
-  }
-
-  .scripted-button .meta form.voted h6,
-  .meta form.vote  button:hover,
-  .meta form.vote  button:active,
-  .meta form.vote  button:focus,
-  .meta form.voted button {
+  .meta .vote button:hover,
+  .meta .vote button:active,
+  .meta .vote button:focus {
     background-color: rgb(49, 144, 242); /* @boysenberry */
     border-color: rgba(0, 0, 0, 0.15);
     color: white;
   }
-
-  .scripted-button .meta form.voted h6:hover,
-  .scripted-button .meta form.voted h6:active,
-  .scripted-button .meta form.voted h6:focus,
-  .meta form.voted button:hover,
-  .meta form.voted button:active,
-  .meta form.voted button:focus {
-    background-color: rgb(19, 114, 212); /* @blueberry */
-  }
-  /* SHIM: Override the above styles to keep the background color transparent.
-  (This can be removed once the HTML is updated and the hover style above is obsolete.) */
-  .scripted-button .meta form.voted h6 + p button {
-    background: transparent;
-  }
-  .meta form.vote  button:hover:before,
-  .meta form.vote  button:active:before,
-  .meta form.vote  button:focus:before {
+  .meta .vote button:hover:before,
+  .meta .vote button:active:before,
+  .meta .vote button:focus:before {
     color: white;
   }
-
-  .scripted-button .meta form.voted h6 abbr,
-  .meta form.vote  button abbr,
-  .meta form.voted button abbr {
-    display: inline-block;
-    border-width: 0 0 0 0.1em;
-    border-style: solid;
-    border-color: rgb(244, 244, 244);
-    padding-left : 0.6em;
-    margin-left  : 0.45em;
-    margin-right : -0.25em;
-    margin-top: -0.75em;
-    padding-top: 0.75em;
-    margin-bottom: -0.8em;
-    padding-bottom: 0.8em;
-    transition: border-color 0.2s;
-  }
-  .scripted-button .meta form.voted h6 abbr,
-  .meta form.vote   button:hover  abbr,
-  .meta form.vote   button:active abbr,
-  .meta form.vote   button:focus  abbr,
-  .meta form.voted  button        abbr {
-    border-color: rgb(51, 51, 51);
+  .meta .vote.loading button {
+    background-color: rgb(49, 144, 242); /* @boysenberry */
     border-color: rgba(0, 0, 0, 0.15);
-  }
-
-  /* OPTIONAL: Make the loading icon look nice, if it’s applied to a follow button. */
-  .scripted-button .following.loading h6,
-  .follow.loading button {
-    transition-property: none;
     color: transparent;
-  }
-     .follow.loading:before,
-     .follow.loading:after,
-  .following.loading:before,
-  .following.loading:after {
-    border-color: white;
-  }
-     .follow.loading:before,
-  .following.loading:before {
-    border-right-color: transparent;
-  }
-     .follow.loading:after,
-  .following.loading:after {
-    border-left-color: transparent;
-    border-top-color: transparent;
-  }
-
-  /* OPTIONAL: Make the loading icon look nice, if it’s applied
-  to the vote count in a feed or the vote button on a post page. */
-  .scripted-button       .voted.loading h6,
-  .scripted-button .meta .voted.loading h6,
-         .vote.loading button,
-  .meta  .vote.loading button {
-    color: transparent;
-  }
-  .scripted-button       .voted.loading h6 abbr,
-  .scripted-button .meta .voted.loading h6 abbr,
-         .vote.loading button abbr,
-  .meta  .vote.loading button abbr {
-    border-color: transparent;
-  }
-  .meta .vote.loading button:hover,
-  .meta .vote.loading button:focus,
-  .meta .vote.loading button:active {
-    border: 0.1em solid rgb(244, 244, 244);
-    background: rgb(252, 252, 252); /* @snow */
   }
   .meta .vote.loading button:before {
     color: transparent;
-  }
-   .vote.loading:before,
-   .vote.loading:after,
-  .voted.loading:before,
-  .voted.loading:after {
-    border-color: white;
-  }
-   .vote.loading:before,
-  .voted.loading:before {
-    border-right-color: transparent;
-  }
-   .vote.loading:after,
-  .voted.loading:after {
-    border-left-color: transparent;
-    border-top-color: transparent;
-  }
-  .meta .vote.loading:before,
-  .meta .vote.loading:after {
-    border-color: rgb(101, 102, 103); /* @tin */
-  }
-  .meta .vote.loading:before {
-    border-right-color: transparent;
-  }
-  .meta .vote.loading:after {
-    border-left-color: transparent;
-    border-top-color: transparent;
-  }
-
-  /* OPTIONAL: Indicate what action will be performed
-  when pressing the “It’s GOOD” button a second time. */
-            .voted button[title="Undo"]:hover,
-            .voted button[title="Undo"]:active,
-            .voted button[title="Undo"]:focus,
-  .meta form.voted button[title="Undo"]:hover,
-  .meta form.voted button[title="Undo"]:active,
-  .meta form.voted button[title="Undo"]:focus {
-    color: rgb(247, 113, 113); /* @raspberry */
-  }
-  form.voted button[title="Undo"]:hover,
-  form.voted button[title="Undo"]:active,
-  form.voted button[title="Undo"]:focus {
-    color: transparent;
-  }
-  form.voted button[title="Undo"]:before {
-    transition: color 0.2s;
-    content: "Undo";
-    color: transparent;
-    position: absolute;
-    margin-left: 0.875em;
-  }
-  .meta form.voted button[title="Undo"]:before {
-    margin-left: 2em;
-  }
-  form.voted button[title="Undo"]:hover:before,
-  form.voted button[title="Undo"]:active:before,
-  form.voted button[title="Undo"]:focus:before {
-    color: white;
-  }
-            .voted button[title="Undo"]:hover abbr,
-  .meta form.voted button[title="Undo"]:hover abbr {
-    border-color: transparent;
-  }
-
-  /* TEMPORARY: Show the icon for voted buttons that are still using the old HTML.
-  (Without the words “It’s GOOD”, the button is a little on the small side.) */
-  .meta form.voted button[disabled]:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    font-size: 1.33333333333333em; /* 16px / 12px */
-    display: inline-block;
-    vertical-align: middle;
-
-    margin-right: 0.1em;
-    margin-left: 0;
-    position: static;
-    content: "\e602"; /* @icon-vote */
-    color: white;
   }
 
 
@@ -5912,16 +5737,11 @@
       margin-left: 0;
     }
 
-    /* SHIM: Center the form element, so the drop-down will appear in the correct location. */
-    .scripted-button .member-header h1 + form.following {
-      display: table;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* SHIM: Sometimes the form appears inside of <div> element. */
+    /* SHIM: Center the form element, so the drop-down will appear in the correct location.
+             (The form sometimes appears inside of “div” element, to make scripting easier.) */
+    .scripted-button .member-header h1 +     form.following,
     .scripted-button .member-header h1 + div form.following {
-      display: table;
+      display: table; 
       margin-left: auto;
       margin-right: auto;
     }
@@ -7552,10 +7372,11 @@
     margin-right: 0;
     margin-bottom: 1.75em; /* @line-height */
   }
+  .post > header div.form,
+  .post > header [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
   .post > header form.do,
   .post > header form.doing,
   .post > header form.done,
-  .post > header [backbone-view="GoodButton"],
   .post > header form.vote,
   .post > header form.voted {
     float: right;
@@ -7564,12 +7385,12 @@
   }
 
   /* Support multiple form elements, wrapped in a container */
-  .post > header .todo_actions {
+  .post > header div.form {
     float: right;
     margin-top: -0.15em;
     margin-bottom: 1.75em; /* @line-height */
   }
-  .post > header .todo_actions form {
+  .post > header div.form form {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -7978,11 +7799,12 @@
     }
   }
 
+  .post > footer div.form,
+  .post > footer [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
   .post > footer .do,
   .post > footer .doing,
   .post > footer .done,
   .post > footer .dos,
-  .post > footer [backbone-view="GoodButton"],
   .post > footer .vote,
   .post > footer .voted,
   .post > footer .votes {
@@ -7990,7 +7812,8 @@
     display: inline-block;
     vertical-align: top;
   }
-  .post > footer [backbone-view="GoodButton"] form {
+  .post > footer div.form form,
+  .post > footer [backbone-view="GoodButton"] form { /* TODO: This selector can be safely removed once the .form class name is in place. */
     margin-top: 0;
   }
   .post > footer .do,
