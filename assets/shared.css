@@ -2320,10 +2320,12 @@
     float: right;
   }
   .topic-featured .activity-item .do .todo_actions,
-  .topic-featured .activity-item .do div.form {
+  .topic-featured .activity-item.do div.form {
     float: none;
     display: inline-block;
     vertical-align: middle;
+    margin-top: 0.875em;
+    margin-bottom: 0.875em;
   }
 
 
