@@ -2718,6 +2718,9 @@
     display: inline-block;
     font-weight: bold;
   }
+  .scripted-button .meta form.voted h6 {
+    padding-bottom: 0.75em;
+  }
   .meta .dos          a,
   .meta .comments     a,
   .meta .stories      a,
