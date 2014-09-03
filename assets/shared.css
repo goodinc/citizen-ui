@@ -936,8 +936,11 @@
     border-color: rgb(51, 51, 51);
     border-color: rgba(0, 0, 0, 0.15);
   }
-   .vote.loading button abbr,
-  .voted.loading h6     abbr {
+   .vote.loading button        abbr,
+   .vote.loading button:hover  abbr,
+   .vote.loading button:active abbr,
+   .vote.loading button:focus  abbr,
+  .voted.loading h6            abbr {
     border-color: transparent;
   }
 
@@ -2761,7 +2764,7 @@
   .meta .comments     a:before,
   .meta .stories      a:before,
   .meta .participants a:before {
-    margin-right: 0.25em;
+    margin-right: 0.4em;
   }
   .meta .dos a:before {
     content: "\e604"; /* @icon-do */
@@ -2788,7 +2791,7 @@
   .meta .vote button:before {
     position: static;
     display: inline-block;
-    margin-right: 0.1em;
+    margin-right: 0.25em;
     margin-left: 0;
   }
   .meta .vote button:hover,
@@ -2970,6 +2973,9 @@
     color: rgb(230, 230, 230); /* @mercury */
     transition: color 0.2s;
   }
+  main:hover .activity-item .meta .vote.loading button:before {
+    color: transparent;
+  }
   main:hover .activity-item section.tags h4:before {
     color: rgb(225, 225, 225); /* @silver */
     transition: color 0.2s;
@@ -2988,8 +2994,14 @@
   main:hover .activity-item:hover .meta .vote  button:before {
     color: rgb(113, 179, 247); /* @sky */
   }
+  main:hover .activity-item:hover .meta .vote.loading button:before {
+    color: transparent;
+  }
   main:hover .activity-item:hover .meta .vote  button:hover:before {
     color: white;
+  }
+  main:hover .activity-item:hover .meta .vote.loading button:hover:before {
+    color: transparent;
   }
   main:hover .activity-item:hover .meta .comments a:before {
     color: rgb(255, 223, 145); /* @cantaloupe */
