@@ -497,6 +497,11 @@
     opacity: 0.5;
   }
 
+  /* OPTIONAL: Add more space between actions and the element before them. */
+  p.action {
+    margin-top: 1.75em; /* @line-height */
+  }
+
 
   /* =Edit
   ----------------------------------------------- */
@@ -953,10 +958,6 @@
 
   /* =Form
   ----------------------------------------------- */
-  p.action {
-    margin-top    : 1.75em; /* @line-height */
-    margin-bottom : 1.75em;
-  }
   form p.submit,
   form p.submit + * {
     margin-top: 1.75em; /* @line-height */
@@ -2565,9 +2566,9 @@
     display: block;
     color: inherit;
   }
-  .activity-item .comment a:hover p,
+  .activity-item .comment a:hover  p,
   .activity-item .comment a:active p,
-  .activity-item .comment a:focus p {
+  .activity-item .comment a:focus  p {
     color: black;
   }
   .activity-item .comment p {
@@ -8191,6 +8192,8 @@
 
   .do-header .edit {
     font-size: 0.75em;
+    margin-top: 2.3333333333em;
+    margin-bottom: 2.3333333333em;
   }
   .do-header a.more {
     text-decoration: none;
@@ -9067,7 +9070,7 @@
     margin-bottom  : 0.875em; /* @line-height / 2 */
   }
 
-  /* SHIM: For the Do detail page (which is currently wrapped in a div to support Angular JS) */
+  /* SHIM: For the Do detail page (which is currently wrapped in a div to make scripting easier) */
   #header ~ div #content {
     /* @separator */
     margin-top: 0;
@@ -9100,7 +9103,7 @@
     }
   }
 
-  /* Prevent a doubly-tall border between the header and the next element. */
+  /* Prevent a doubly-thick border between the header and the next element. */
   #header + .join-promotion,
   #header + .join-promotion + #content,
   #header + #content,
