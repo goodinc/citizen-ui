@@ -953,7 +953,10 @@
 
   /* =Form
   ----------------------------------------------- */
-  p.action,
+  p.action {
+    margin-top    : 1.75em; /* @line-height */
+    margin-bottom : 1.75em;
+  }
   form p.submit,
   form p.submit + * {
     margin-top: 1.75em; /* @line-height */
@@ -2310,10 +2313,13 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
+  /* TODO: The todo_actions selector can be safely removed once the .form class name is in place. */
+  .activity-item .do .todo_actions,
   .activity-item .do div.form {
     margin-top: 0.875em; /* @line-height / 2 */
     float: right;
   }
+  .topic-featured .activity-item .do .todo_actions,
   .topic-featured .activity-item .do div.form {
     float: none;
     display: inline-block;
@@ -2473,6 +2479,8 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
+  /* TODO: The todo_actions selector can be safely removed once the .form class name is in place. */
+  .activity-item section.do.has-story .todo_actions,
   .activity-item section.do.has-story div.form {
     float: none;
   }
@@ -2671,8 +2679,8 @@
     color: rgb(153, 153, 153); /* @nickel */
   }
 
-  .meta div.form,
   .meta [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
+  .meta div.form,
   .meta form.vote,
   .meta form.voted {
     margin-top: 0;
@@ -7384,8 +7392,6 @@
     margin-right: 0;
     margin-bottom: 1.75em; /* @line-height */
   }
-  .post > header div.form,
-  .post > header [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
   .post > header form.do,
   .post > header form.doing,
   .post > header form.done,
@@ -7397,11 +7403,16 @@
   }
 
   /* Support multiple form elements, wrapped in a container */
+  /* TODO: The todo_actions and GoodButton selectors can be safely removed once the .form class name is in place. */
+  .post > header .todo_actions,
+  .post > header [backbone-view="GoodButton"],
   .post > header div.form {
     float: right;
     margin-top: -0.15em;
     margin-bottom: 1.75em; /* @line-height */
   }
+  .post > header .todo_actions form,
+  .post > header [backbone-view="GoodButton"] form,
   .post > header div.form form {
     margin-top: 0;
     margin-bottom: 0;
@@ -7811,8 +7822,6 @@
     }
   }
 
-  .post > footer div.form,
-  .post > footer [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
   .post > footer .do,
   .post > footer .doing,
   .post > footer .done,
@@ -7824,10 +7833,6 @@
     display: inline-block;
     vertical-align: top;
   }
-  .post > footer div.form form,
-  .post > footer [backbone-view="GoodButton"] form { /* TODO: This selector can be safely removed once the .form class name is in place. */
-    margin-top: 0;
-  }
   .post > footer .do,
   .post > footer .doing,
   .post > footer .done,
@@ -7837,10 +7842,20 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
-  .post > footer .todo_actions {
+  /* TODO: The todo_actions and GoodButton selectors can be safely removed once the .form class name is in place. */
+  .post > footer [backbone-view="GoodButton"] form,
+  .post > footer .todo_actions,
+  .post > footer div.form {
     display: inline-block;
     vertical-align: top;
-    margin-right: 0.875em; /* @line-height / 2 */
+    margin-top   : 0.875em; /* @line-height / 2 */
+    margin-right : 0.875em; /* @line-height / 2 */
+  }
+  .post > footer [backbone-view="GoodButton"] form,
+  .post > footer .todo_actions form,
+  .post > footer div.form form {
+    margin-top: 0;
+    margin-right: 0;
   }
 
   @media (min-width: 35em) {
@@ -8170,13 +8185,7 @@
   }
 
   .do-header .edit {
-    display: inline-block;
-    font-size: 0.875em;
-    vertical-align: middle;
-    margin-top: 0;
-  }
-  .do-header .edit a {
-    font-size: 0.875em;
+    font-size: 0.75em;
   }
   .do-header a.more {
     text-decoration: none;
@@ -8368,11 +8377,6 @@
   .do-header .participants a:focus  .avatar .name {
     left: 50%;
     opacity: 1;
-  }
-
-  /* SHIM: Support multiple form elements, wrapped in a container */
-  .do-header .todo_actions {
-    margin-top: 0.875em; /* @line-height / 2 */
   }
 
 
