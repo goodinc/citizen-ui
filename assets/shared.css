@@ -6351,7 +6351,6 @@
     #header h2 a {
       border-right: 1px solid rgb(218, 220, 224); /* @magnesium */
       padding-right: 27px;
-      background: white;
       margin-right: 12px;
       transition: color 0.2s;
     }
@@ -6361,9 +6360,12 @@
     #header h2 + p {
       position: static;
       padding-left: 264px;
-      border-bottom: 1px solid rgb(218, 220, 224); /* @magnesium */
-      padding-bottom: 12px;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
+    }
+    #header h2 + p + nav {
+      border-top: 1px solid rgb(218, 220, 224); /* @magnesium */
+      padding-top: 5px;
+      margin-left: 15em; /* logo.width / @font-size */
     }
   }
 
