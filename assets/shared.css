@@ -6340,6 +6340,9 @@
       float: left;
       font-size: 155px;
     }
+    #header.minimal h2 {
+      margin-right: 0;
+    }
     #header h2 svg {
       width : 1.3548387097em; /* 212px / 155px */
       height: 0.7419354839em; /* 115px / 155px */
