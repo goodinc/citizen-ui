@@ -6295,7 +6295,8 @@
 
   /* =Logotype
   ----------------------------------------------- */
-  #header h2 {
+  #header         h2,
+  #header.minimal h2 {
     font-size: inherit;
     margin-bottom: 0;
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
@@ -6304,8 +6305,16 @@
     margin-right: 0.5em;
     display: block;
   }
-  #header.minimal h2 {
-    font-size: 67px;
+  #header         h2 svg,
+  #header.minimal h2 svg {
+    width : 1.3432835821em; /* 90px / 67px */
+    height: 0.7462686567em; /* 50px / 67px */
+    transition: opacity 0.2s;
+  }
+  #header h2 a:hover  svg,
+  #header h2 a:active svg,
+  #header h2 a:focus  svg {
+    opacity: 0.8;
   }
   #header h2 a {
     color: rgb(0, 1, 2); /* @midnight */
@@ -6330,6 +6339,11 @@
       margin-right: 0;
       float: left;
       font-size: 155px;
+    }
+    #header h2 svg {
+      width : 1.3548387097em; /* 212px / 155px */
+      height: 0.7419354839em; /* 115px / 155px */
+      margin-right: 0.01290322581em; /* 2px / 115px */
     }
     #header h2 a {
       border-right: 1px solid rgb(218, 220, 224); /* @magnesium */
