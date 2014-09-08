@@ -1,9 +1,0 @@
-
-Good is a web font containing glyphs for the GOOD logotype.
-
-The original shapes used to create the font files (logotype.svg, logotype.ttf, logotype.eot, and logotype.woff) are contained in this file:
-
-logotype.original.svg
-
-
-The font files were created by exporting each glyph as an SVG, and manually creating an SVG font file from them.

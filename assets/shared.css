@@ -11,22 +11,22 @@
 
   @font-face {
     font-family: "GOOD";
-    src: url(shared/logotype.eot);
-    src: url(shared/logotype.eot#iefix) format("eot"),
-         url(shared/logotype.woff)       format("woff"),
-         url(shared/logotype.ttf)        format("truetype"),
-         url(shared/logotype.svg#logotype)   format("svg");
+    src: url(shared/good.eot);
+    src: url(shared/good.eot#iefix) format("eot"),
+         url(shared/good.woff)      format("woff"),
+         url(shared/good.ttf)       format("truetype"),
+         url(shared/good.svg#good)  format("svg");
     font-weight: bold;
     font-style: normal;
   }
 
   @font-face {
     font-family: "Icons";
-    src: url(shared/site-icons.eot?v=1);
-    src: url(shared/site-icons.eot?v=1#iefix) format("eot"),
-         url(shared/site-icons.woff?v=1)       format("woff"),
-         url(shared/site-icons.ttf?v=1)        format("truetype"),
-         url(shared/site-icons.svg?v=1#site-icons)  format("svg");
+    src: url(shared/icons.eot);
+    src: url(shared/icons.eot#iefix) format("eot"),
+         url(shared/icons.woff)      format("woff"),
+         url(shared/icons.ttf)       format("truetype"),
+         url(shared/icons.svg#icons) format("svg");
     font-weight: normal;
     font-style: normal;
   }
@@ -6300,6 +6300,7 @@
     font-size: inherit;
     margin-bottom: 0;
     font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
+    font-family: "GOOD", "Helvetica Neue Condensed Black", "HelveticaNeue-CondensedBlack", "Impact", "Helvetica Neue", Helvetica, Arial, sans-serif;  /* @good */
     line-height: 1;
     font-size: 67px;
     margin-right: 0.5em;
