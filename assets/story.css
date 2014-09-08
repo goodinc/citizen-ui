@@ -139,7 +139,7 @@
     font-size: 2.625em; /* 42px / @font-size */
     letter-spacing: 0.0125em;
     line-height: 1;
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
+    font-family: "GOOD", "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, "Impact", Arial, sans-serif;  /* @good */
   }
   .story-header h3 a {
     text-decoration: none;

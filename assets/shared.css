@@ -6299,8 +6299,7 @@
   #header.minimal h2 {
     font-size: inherit;
     margin-bottom: 0;
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
-    font-family: "GOOD", "Helvetica Neue Condensed Black", "HelveticaNeue-CondensedBlack", "Impact", "Helvetica Neue", Helvetica, Arial, sans-serif;  /* @good */
+    font-family: "GOOD", "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, "Impact", Arial, sans-serif;  /* @good */
     line-height: 1;
     font-size: 67px;
     margin-right: 0.5em;
@@ -8633,7 +8632,7 @@
     margin-top: 2.3333333334em; /* @line-height / font-size(1.5) x 2 */
   }
   .explore h1 strong {
-    font-family: "GOOD", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @good */
+    font-family: "GOOD", "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, "Impact", Arial, sans-serif;  /* @good */
     font-weight: normal;
     letter-spacing: 0.04em;
 
