@@ -638,16 +638,7 @@
     color: rgb(42, 43, 44); /* @tungsten */
   }
   .batch button:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Icons"; speak: none; /* @icons */
 
     margin-right: 0.5em;
     vertical-align: middle;

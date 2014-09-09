@@ -54,19 +54,8 @@
   }
   .share .facebook  a:before,
   .share .twitter   a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
     margin-right: 0.4375em;
   }
   .share .facebook  a:before {
@@ -238,17 +227,7 @@
     color: rgb(47, 132, 218); /* @ocean */
   }
   .story-header .back a:after {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e60a"; /* @icon-delete */
   }
   .story-header .back a span {
@@ -364,19 +343,7 @@
     font-weight: bold;
   }
   .member .comment a:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Icons"; speak: none; /* @icons */
 
     display: inline-block;
     vertical-align: middle;

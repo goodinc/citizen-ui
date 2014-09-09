@@ -27,7 +27,7 @@
          url(shared/icons.woff)      format("woff"),
          url(shared/icons.ttf)       format("truetype"),
          url(shared/icons.svg#icons) format("svg");
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
   }
 
@@ -506,19 +506,9 @@
   /* =Edit
   ----------------------------------------------- */
   .action.edit a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 0.9375em; /* 15px / @font-size(16px) */
-
     margin-right: 0.375em;
     content: "\e609"; /* @icon-edit */
   }
@@ -652,22 +642,8 @@
 
   /* Vote */
   .vote button:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 1.33333333333333em; /* 16px / 12px */
-
     display: block;
     vertical-align: middle;
     background-repeat: no-repeat;
@@ -688,20 +664,8 @@
   .scripted-button form.do    h6:before,
   .scripted-button form.doing h6:before,
   .scripted-button form.done  h6:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
     font-size: 1.4375em;
     position: absolute;
     margin-left: -2.25em;
@@ -1153,17 +1117,7 @@
     border-color: rgb(184, 231, 184); /* @bamboo */
   }
   form .success label:after {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     margin-left: 0.375em;
   }
   form .success label:after {
@@ -1370,17 +1324,7 @@
     color: black;
   }
   section.message p.close a:after {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e60a"; /* @icon-delete */
     margin-left: 0.375em;
   }
@@ -1405,19 +1349,8 @@
   }
   section.message.flagged h1:before,
   section.message.spam    h1:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
     font-size: 2.25em; /* 36px / @font-size(16px) */
     transition: color 0.2s;
 
@@ -1459,17 +1392,8 @@
     margin-left: 0.5em;
   }
   section.message form.approve button:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 0.9375em; /* 15px / @font-size(16px) */
     margin-right: 0.375em;
     transition: color 0.2s;
@@ -1630,17 +1554,8 @@
   .options .flag    button:before,
   .options .spam    button:before,
   .options .delete  button:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 0.9375em; /* 15px / @font-size(16px) */
     margin-right: 0.375em;
     transition: color 0.2s;
@@ -1955,21 +1870,8 @@
     font-size: inherit;
   }
   .join-promotion h2:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    /* @icon-stories */
-    content: "\e612";
+    font-family: "Icons"; speak: none; /* @icons */
+    content: "\e612"; /* @icon-stories */
 
     font-size: 1.25em;
     line-height: 1;
@@ -2745,20 +2647,7 @@
   .meta .comments     a:before,
   .meta .stories      a:before,
   .meta .participants a:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 1.33333333333333em; /* 16px / 12px */
     display: inline-block;
     vertical-align: middle;
@@ -2843,24 +2732,12 @@
   }
 
   .activity-item section.tags h4:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e603"; /* @icon-tag */
 
     color: rgb(247, 113, 113); /* @raspberry */
     font-size: 0.9375em; /* 15px / @font-size */
+    vertical-align: middle;
   }
 
   .activity-item section.tags ul,
@@ -2932,19 +2809,7 @@
 
   /* Show a triangle in the corner of the item, when hovering over it */
   .activity-item:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Icons"; speak: none; /* @icons */
 
     content: "\e600"; /* @icon-corner */
     color: rgb(34, 155, 246);
@@ -3788,24 +3653,9 @@
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
   }
   .stories header h1:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e612"; /* @icon-stories */
-
     font-size: 1.25em;
-    line-height: 1;
     margin-right: 0.4375em;
     vertical-align: middle;
   }
@@ -3934,21 +3784,8 @@
     margin-bottom : 0.5833333334em;
   }
   .stories section.message.empty h1:after {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e612"; /* @icon-stories */
-
     color: rgb(204, 204, 204); /* @aluminum */
     margin-top: 56px;
     margin-bottom: 56px;
@@ -4164,18 +4001,7 @@
     left: -9999px;
   }
   .comment-form .images button:after {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e60a"; /* @icon-delete */
   }
 
@@ -4344,20 +4170,9 @@
     padding: 0.5em;
   }
   .comment-form .url .cancel:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e60a"; /* @icon-delete */
+    vertical-align: middle;
   }
   .comment-form.inactive .url label:before,
   .comment-form .url.inactive label:before {
@@ -4598,22 +4413,8 @@
 
   form .story h2:before,
   .add-story  h2:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    /* @icon-stories */
-    content: "\e612";
-
+    font-family: "Icons"; speak: none; /* @icons */
+    content: "\e612"; /* @icon-stories */
     line-height: 1;
     margin-right: 0.65em;
     vertical-align: middle;
@@ -4710,19 +4511,9 @@
     margin-bottom: 0;
   }
   .story article .comment-form h4:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 0.9375em; /* 15px / @font-size(16px) */
-
+    vertical-align: middle;
     margin-right: 0.375em;
     content: "\e609"; /* @icon-edit */
   }
@@ -5067,16 +4858,7 @@
   }
   .post-form .tip p.do:before,
   .post-form .tip p.dont:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Icons"; speak: none; /* @icons */
     position: absolute;
     top: 0;
     left: -0.75em;
@@ -5423,21 +5205,11 @@
   }
   .facebook.action span:before,
   .facebook.action a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 1.25em;
+    line-height: 1;
     margin-right: 1em;
+    vertical-align: middle;
 
     background: white;
     border-radius: 0.1em;
@@ -5445,7 +5217,6 @@
 
     content: "\e60d"; /* @icon-facebook */
     color: rgb(59, 89, 152); /* @plumb */
-
   }
   @media (min-width: 30em) {
     .facebook.action span,
@@ -5636,18 +5407,8 @@
   .member-header .details dt.location + dd:before,
   .member-header .details dt.twitter  + dd a:before,
   .member-header .details dt.website  + dd a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
   .profile-form p.location label:before,
   .profile-form p.twitter  label:before,
@@ -6036,20 +5797,9 @@
   }
   .home > .rss a:after,
   body > nav.sub .rss a:after {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 0.875em;
+    vertical-align: middle;
     content: "\e610"; /* @icon-rss */
     color: rgb(218, 220, 224); /* @magnesium */
     margin-left: 0.875em;
@@ -7281,19 +7031,8 @@
 
   .post > article .facebook  a:after,
   .post > article .twitter   a:after {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
     font-size: 1.25em;
     margin-left: 0.5em;
   }
@@ -7316,22 +7055,8 @@
 
   .post > header .do   abbr:before,
   .post > header .vote abbr:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 0.55em; /* image-size(21px) / font-size(38px) */
-
     line-height: 2em;
     display: inline-block;
     vertical-align: top;
@@ -7493,19 +7218,9 @@
   .account-form .summary .action span:before,
   .member-header .details .edit a:before,
   .post > article header .edit a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+    font-family: "Icons"; speak: none; /* @icons */
     vertical-align: middle;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-size: 0.9375em; /* 15px / @font-size(16px) */
-
     margin-right: 0.375em;
     content: "\e609"; /* @icon-edit */
   }
@@ -7661,25 +7376,12 @@
     font-family: inherit;
   }
   .post > footer .tags h2:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e603"; /* @icon-tag */
-
     color: rgb(247, 113, 113); /* @raspberry */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
+    vertical-align: middle;
   }
 
   .post > footer .tags:after {
@@ -7930,22 +7632,8 @@
     font-weight: bold;
   }
   .slideshow p:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-
-
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e612"; /* @icon-stories */
-
     font-size: 1.25em;
     line-height: 1;
     margin-right: 0.65em;
@@ -8222,25 +7910,11 @@
   }
 
   .do-header .participants header h2:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     font-size: 1.33333333333333em; /* 16px / 12px */
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.35em;
-
     content: "\e61d"; /* @icon-participants */
     color: black;
   }
@@ -8400,25 +8074,12 @@
     left: -9999px;
   }
   .do-tags h2:before {
-
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     content: "\e603"; /* @icon-tag */
-
     color: rgb(204, 204, 204); /* @aluminum */
     font-size: 1.15384615384615em; /* 15px / 13px */
     margin-right: 0.5em;
+    vertical-align: middle;
   }
   .do-tags ul {
     display: inline;
@@ -8485,20 +8146,9 @@
   .message   .share .twitter   a:before,
   .do-header .share .facebook  a:before,
   .do-header .share .twitter   a:before {
-    /* @icons */
-    font-family: "Icons";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: middle;
-    /* For better font rendering */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+    font-family: "Icons"; speak: none; /* @icons */
     margin-right: 0.4375em;
+    vertical-align: middle;
   }
   .message   .share .facebook  a:before,
   .do-header .share .facebook  a:before {
