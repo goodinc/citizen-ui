@@ -7917,6 +7917,7 @@
     margin-right: 0.35em;
     content: "\e61d"; /* @icon-participants */
     color: black;
+    line-height: 1;
   }
   .do-header .participants header h2 {
     font-family: inherit;
