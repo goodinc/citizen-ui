@@ -1811,8 +1811,7 @@
     display: block;
   }
   aside div.ad,
-  aside .promotion,
-  aside .fb-recommendations {
+  aside .promotion {
     margin-top: 0;
     margin-bottom : 1.75em; /* @line-height */
   }
@@ -1863,9 +1862,7 @@
   /* OPTIONAL: Center the ads on medium size screens */
   @media (min-width: 40em) and (max-width: 66.5625em) { /* @max-page-width */
     .has-aside + aside .ad,
-    aside .promotion,
-    aside section.facebook,
-    aside .fb-recommendations {
+    aside .promotion {
       text-align: left;
       vertical-align: top;
       display: inline-block;
@@ -1875,9 +1872,7 @@
       margin-right: 0.5em !important;
     }
     .has-aside + aside .ad,
-    aside .promotion,
-    aside section.facebook,
-    aside .fb-recommendations {
+    aside .promotion {
       width: 18.75em;
       -moz-box-sizing : border-box;
       box-sizing      : border-box;
@@ -2314,13 +2309,10 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
-  /* TODO: The todo_actions selector can be safely removed once the .form class name is in place. */
-  .activity-item .do .todo_actions,
   .activity-item .do div.form {
     margin-top: 0.875em; /* @line-height / 2 */
     float: right;
   }
-  .topic-featured .activity-item .do .todo_actions,
   .topic-featured .activity-item.do div.form {
     float: none;
     display: inline-block;
@@ -2482,8 +2474,6 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
-  /* TODO: The todo_actions selector can be safely removed once the .form class name is in place. */
-  .activity-item section.do.has-story .todo_actions,
   .activity-item section.do.has-story div.form {
     float: none;
   }
@@ -2682,7 +2672,6 @@
     color: rgb(153, 153, 153); /* @nickel */
   }
 
-  .meta [backbone-view="GoodButton"], /* TODO: This selector can be safely removed once the .form class name is in place. */
   .meta div.form,
   .meta form.vote,
   .meta form.voted {
@@ -3633,6 +3622,9 @@
   }
   .comment-list article > p {
     max-width: 33em;
+  }
+  .comment-list article > iframe {
+    height: 300px;
   }
 
   .comment-list form {
@@ -4970,6 +4962,7 @@
     border-radius: 0.5em;
     position: relative;
     cursor: default;
+    transition: opacity 0.2s;
   }
   .post-form .tip .container:before {
     content: "";
@@ -5135,6 +5128,7 @@
     /* @hidden-accessible */
     position: absolute;
     left: -9999px;
+    opacity: 0;
   }
 
 
@@ -7412,16 +7406,11 @@
   }
 
   /* Support multiple form elements, wrapped in a container */
-  /* TODO: The todo_actions and GoodButton selectors can be safely removed once the .form class name is in place. */
-  .post > header .todo_actions,
-  .post > header [backbone-view="GoodButton"],
   .post > header div.form {
     float: right;
     margin-top: -0.15em;
     margin-bottom: 1.75em; /* @line-height */
   }
-  .post > header .todo_actions form,
-  .post > header [backbone-view="GoodButton"] form,
   .post > header div.form form {
     margin-top: 0;
     margin-bottom: 0;
@@ -7851,17 +7840,12 @@
   }
 
   /* SHIM: Support multiple form elements, wrapped in a container */
-  /* TODO: The todo_actions and GoodButton selectors can be safely removed once the .form class name is in place. */
-  .post > footer [backbone-view="GoodButton"] form,
-  .post > footer .todo_actions,
   .post > footer div.form {
     display: inline-block;
     vertical-align: top;
     margin-top   : 0.875em; /* @line-height / 2 */
     margin-right : 0.875em; /* @line-height / 2 */
   }
-  .post > footer [backbone-view="GoodButton"] form,
-  .post > footer .todo_actions form,
   .post > footer div.form form {
     margin-top: 0;
     margin-right: 0;
@@ -9045,13 +9029,6 @@
   and moved out of this area.
   ----------------------------------------------- */
 
-  /* OPTIONAL: Prevent the facebook recommendations from appearing too wide on small screens */
-  .fb-recommendations,
-  .fb-recommendations span,
-  .fb-recommendations iframe {
-    max-width: 100% !important;
-  }
-
   /* SHIM: Sometimes forms contain a hidden div at the beginning. */
   fieldset.first-child {
     margin-top: 0;
@@ -9099,8 +9076,7 @@
       clear: both;
     }
     aside > .ad,
-    aside > .promotion,
-    aside > .fb-recommendations {
+    aside > .promotion {
       float: left;
       margin-right: 1.5em;
     }
@@ -9113,4 +9089,9 @@
   #header + .join-promotion + nav.sub,
   #header + nav.sub {
     border-top-width: 0;
+  }
+
+  /* Prevent our CSS from clashing with Plupload’s absolutely-positioned shims. */
+  .moxie-shim form {
+    margin: 0 !important;
   }
