@@ -4366,9 +4366,10 @@
 
     /* Position the video and image icons next to the text field. */
     .comment-form.inactive .url {
-      /* SHIM: These numbers are arbitrary, but happen to look good. */
+
+      /* SHIM: These numbers are arbitrary, but happen to align the buttons in the right place. */
       margin-top: -3.125em;
-      padding-top: 0.525em;
+      padding-top: 0.5625em;
     }
     .comment-form.inactive .file {
       float: right;
