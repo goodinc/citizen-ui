@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>GOOD</title>
+  <title>Popular – GOOD</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -37,8 +37,7 @@
     <nav>
       <p>Navigation</p>
       <ul>
-        <li class="active"><a href="home.html">Featured</a></li>
-        <li><a href="popular.html">Popular</a></li>
+        <li class="active"><a href="popular.html">Popular</a></li>
         <li><a href="newest.html">Newest</a></li>
         <li><a href="for-you.html">For You</a></li>
         <li><a href="do.html">Do</a></li>
@@ -90,498 +89,849 @@
 
     <section class="home has-aside">
 
-      <h1>Featured</h1>
+      <h1>Popular</h1>
 
-          <ul class="activity-list">
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="1" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2&quot;}">
-                <p class="source has-image"><a href="/members/goodmagazine"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2" height="60" src="http://assets.goodstatic.com/s3/pre/users/xlarge-good-logo-black.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2"> GOOD Magazine</span></a> shared a link
+      <p class="rss"><a href=""><abbr title="Really Simple Syndication">RSS</abbr></a></p>
+
+      <ul class="activity-list">
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="2" data-featured-post-type="do" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;map-out-your-bucket-list-trip&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/rgoossen"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/001/291/145/original/ForAlex.jpg=c60x60" width="60" /> Rachel Goossen</a>, <a href="/members/alessandra-rizzotti">Alessandra Rizzotti</a> and <a href="/do/map-out-your-bucket-list-trip">49 others</a> are in on this
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/map-out-your-bucket-list-trip" target=""><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip" src="http://assets.goodstatic.com/s3/prod/images/attachments/000/610/640/original/BLMap.jpg=c100x100" alt="" width="100" height="100" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip"> Map out your bucket list trip.</span></a>
+                <small class="source">featured by GOOD</small>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/map-out-your-bucket-list-trip" title="51 people are in on this" ng-init="setDoerCount(51)">51</a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://magazine.good.is/articles/improving-womens-lives" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2" src="http://assets.goodstatic.com/s3/magazine/assets/537614/original/Screen_Shot_2014-08-25_at_12.17.31_PM.png=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2"> Gap Invests in the Women that Make Its Clothes: Improving Women&#39;s Lives and Benefitting Businesses</span></a>&nbsp;<small class="source">via <a href="http://magazine.good.is/articles/improving-womens-lives" target="_blank">magazine.good.is</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2" data-vote-count="3" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="3 people think this is good">3</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="3 people think this is good">3</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments">
-                      <a href="/link/gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2">Thoughts?</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/women-empowerment" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="gap-invests-in-the-women-that-make-its-clothes-improving-women-s-lives-and-benefitting-businesses--2">Women Empowerment</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="2" data-featured-post-type="do" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;map-out-your-bucket-list-trip&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
-                <p class="source has-image">
-                  <a href="/members/rgoossen"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/001/291/145/original/ForAlex.jpg=c60x60" width="60" /> Rachel Goossen</a>, <a href="/members/alessandra-rizzotti">Alessandra Rizzotti</a> and <a href="/do/map-out-your-bucket-list-trip">49 others</a> are in on this
+                <p class="stories"><a href="/do/map-out-your-bucket-list-trip" title="6 stories added" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">6</a>
                 </p>
-                <section class="post do">
-                  <h3 class=" has-image">
-                    <a href="/do/map-out-your-bucket-list-trip" target=""><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip" src="http://assets.goodstatic.com/s3/prod/images/attachments/000/610/640/original/BLMap.jpg=c100x100" alt="" width="100" height="100" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip"> Map out your bucket list trip.</span></a>
-                  </h3>
-                  <div class="form todo_actions" do-button="">
-                    <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
-                      <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">
-                        Do It
-                      </h6>
-                      <p>
-                        <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
-                      </p>
-                    </form>
-                    <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
-                      <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">
-                        To Do
-                      </h6>
-                      <p>
-                        <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
-                      </p>
-                    </form>
-                    <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
-                      <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">
-                        Done
-                      </h6>
-                      <p>
-                        <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
-                      </p>
-                    </form>
-                  </div>
-                  <div class="meta">
-                    <p class="participants">
-                      <a ng-cloak="true" allow-interpolation="true" href="/do/map-out-your-bucket-list-trip" title="51 people are in on this" ng-init="setDoerCount(51)">51</a>
-                    </p>
-                    <p class="stories"><a href="/do/map-out-your-bucket-list-trip" title="6 stories added" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">6</a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/conscious-living" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">Conscious Living</a>
-                        </li>
-                        <li>
-                          <a href="/dreams" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">Dreams</a>
-                        </li>
-                        <li>
-                          <a href="/gdap" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">Gdap</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/conscious-living" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">Conscious Living</a>
+                    </li>
+                    <li>
+                      <a href="/dreams" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">Dreams</a>
+                    </li>
+                    <li>
+                      <a href="/gdap" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="map-out-your-bucket-list-trip">Gdap</a>
+                    </li>
+                  </ul>
                 </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="3" data-featured-post-type="do" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;see-a-familiar-place-from-a-new-angle&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
-                <p class="source has-image">
-                  <a href="/members/jelenawoehr"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/292/104/original/195670_1043164079_987381920_n.jpg=c60x60" width="60" /> Jelena Woehr</a>, <a href="/members/cairns">Cairns</a> and <a href="/do/see-a-familiar-place-from-a-new-angle">45 others</a> are in on this
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="3" data-featured-post-type="do" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;see-a-familiar-place-from-a-new-angle&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/jelenawoehr"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/292/104/original/195670_1043164079_987381920_n.jpg=c60x60" width="60" /> Jelena Woehr</a>, <a href="/members/cairns">Cairns</a> and <a href="/do/see-a-familiar-place-from-a-new-angle">46 others</a> are in on this
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/see-a-familiar-place-from-a-new-angle" target=""><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle" src="http://assets.goodstatic.com/s3/prod/images/attachments/000/607/718/original/14909522151_319397def6_z.jpg=c100x100" alt="" width="100" height="100" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle"> See a familiar place from a new angle.</span></a>
+                <small class="source">featured by GOOD</small>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/see-a-familiar-place-from-a-new-angle" title="48 people are in on this" ng-init="setDoerCount(48)">48</a>
                 </p>
-                <section class="post do">
-                  <h3 class=" has-image">
-                    <a href="/do/see-a-familiar-place-from-a-new-angle" target=""><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle" src="http://assets.goodstatic.com/s3/prod/images/attachments/000/607/718/original/14909522151_319397def6_z.jpg=c100x100" alt="" width="100" height="100" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle"> See a familiar place from a new angle.</span></a>
-                  </h3>
-                  <div class="form todo_actions" do-button="">
-                    <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
-                      <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">
-                        Do It
-                      </h6>
-                      <p>
-                        <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
-                      </p>
-                    </form>
-                    <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
-                      <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">
-                        To Do
-                      </h6>
-                      <p>
-                        <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
-                      </p>
-                    </form>
-                    <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
-                      <h6 data-featured-click-target="do button" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">
-                        Done
-                      </h6>
-                      <p>
-                        <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
-                      </p>
-                    </form>
-                  </div>
-                  <div class="meta">
-                    <p class="participants">
-                      <a ng-cloak="true" allow-interpolation="true" href="/do/see-a-familiar-place-from-a-new-angle" title="47 people are in on this" ng-init="setDoerCount(47)">51</a>
-                    </p>
-                    <p class="stories"><a href="/do/see-a-familiar-place-from-a-new-angle" title="10 stories added" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">10</a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/conscious-living" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">Conscious Living</a>
-                        </li>
-                        <li>
-                          <a href="/public-spaces" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">Public Spaces</a>
-                        </li>
-                        <li>
-                          <a href="/parks" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">Parks</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="4" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020&quot;}">
-                <p class="source has-image"><a href="/members/halftheskymovement"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020" height="60" src="http://assets.goodstatic.com/s3/prod/avatars/1860937/original/tumblr-logo.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020"> Half the Sky Movement</span></a> shared a link
+                <p class="stories"><a href="/do/see-a-familiar-place-from-a-new-angle" title="10 stories added" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">10</a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://www.citylab.com/commute/2014/09/biking-toward-womens-rights-in-afghanistan/379573/" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020" src="http://assets.goodstatic.com/s3/prod/bookmarks/photos/000/344/414/original/lead_large.jpg=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020"> Afghan Women’s National Cycling Team Set Eyes on Olympics 2020</span></a>&nbsp;<small class="source">via <a href="http://www.citylab.com/commute/2014/09/biking-toward-womens-rights-in-afghanistan/379573/" target="_blank">citylab.com</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020" data-vote-count="1" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="1 person thinks this is good">1</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="1 person thinks this is good">1</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments">
-                      <a href="/link/afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Thoughts?</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/afghan-cycles" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Afghan Cycles</a>
-                        </li>
-                        <li>
-                          <a href="/afghanistan" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Afghanistan</a>
-                        </li>
-                        <li>
-                          <a href="/cycling" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Cycling</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/conscious-living" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">Conscious Living</a>
+                    </li>
+                    <li>
+                      <a href="/public-spaces" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">Public Spaces</a>
+                    </li>
+                    <li>
+                      <a href="/parks" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="see-a-familiar-place-from-a-new-angle">Parks</a>
+                    </li>
+                  </ul>
                 </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="5" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;migration-by-numbers&quot;}">
-                <p class="source has-image"><a href="/members/goodmagazine"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="migration-by-numbers" height="60" src="http://assets.goodstatic.com/s3/pre/users/xlarge-good-logo-black.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers"> GOOD Magazine</span></a> shared a link
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="4" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020&quot;}">
+            <p class="source has-image"><a href="/members/halftheskymovement"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020" height="60" src="http://assets.goodstatic.com/s3/prod/avatars/1860937/original/tumblr-logo.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020"> Half the Sky Movement</span></a> shared a link
+            </p>
+            <section class="post link">
+              <h3 class=" has-image">
+                <a href="http://www.citylab.com/commute/2014/09/biking-toward-womens-rights-in-afghanistan/379573/" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020" src="http://assets.goodstatic.com/s3/prod/bookmarks/photos/000/344/414/original/lead_large.jpg=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020"> Afghan Women’s National Cycling Team Set Eyes on Olympics 2020</span></a>&nbsp;<small class="source">via <a href="http://www.citylab.com/commute/2014/09/biking-toward-womens-rights-in-afghanistan/379573/" target="_blank">citylab.com</a></small>
+                <small class="source">featured by GOOD</small>
+              </h3>
+              <div class="meta">
+                <div class="form" backbone-view="GoodButton" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020" data-vote-count="1" data-voted="false">
+                  <form class="voted" style="display: none;">
+                    <h6>
+                      It's GOOD <abbr style="" title="1 person thinks this is good">1</abbr>
+                    </h6>
+                    <p>
+                      <button name="undo" title="Delete your vote for this post">Undo</button>
+                    </p>
+                  </form>
+                  <form class="vote">
+                    <p>
+                      <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="1 person thinks this is good">1</abbr></button>
+                    </p>
+                  </form>
+                </div>
+                <p class="comments">
+                  <a href="/link/afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Thoughts?</abbr></a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://magazine.good.is/infographics/the-most-diverse-cities-in-the-world" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers" src="http://assets.goodstatic.com/s3/magazine/assets/537603/original/large.png=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers"> Migration by Numbers </span></a>&nbsp;<small class="source">via <a href="http://magazine.good.is/infographics/the-most-diverse-cities-in-the-world" target="_blank">magazine.good.is</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="migration-by-numbers" data-vote-count="4" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="4 people think this is good">4</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="4 people think this is good">4</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments"><a href="/link/migration-by-numbers#discuss"><abbr title="9 people commented" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers">9</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/diversity" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers">Diversity</a>
-                        </li>
-                        <li>
-                          <a href="/racial-diversity" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers">Racial Diversity</a>
-                        </li>
-                        <li>
-                          <a href="/world-data" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="migration-by-numbers">World Data</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/afghan-cycles" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Afghan Cycles</a>
+                    </li>
+                    <li>
+                      <a href="/afghanistan" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Afghanistan</a>
+                    </li>
+                    <li>
+                      <a href="/cycling" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="afghan-women-s-national-cycling-team-set-eyes-on-olympics-2020">Cycling</a>
+                    </li>
+                  </ul>
                 </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="6" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;how-the-als-association-is-dealing-with-a-94-million-spotlight&quot;}">
-                <p class="source has-image"><a href="/members/jelenawoehr"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/292/104/original/195670_1043164079_987381920_n.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight"> Jelena Woehr</span></a> shared a link
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="9" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;stanford-2025&quot;}">
+            <p class="source has-image"><a href="/members/emrln"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="stanford-2025" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/471/844/original/10521196_555052417956473_3069103791250452826_n.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025"> Emerline Ji</span></a> shared a link
+            </p>
+            <section class="post link">
+              <h3>
+                <a href="http://www.stanford2025.com/" target="_blank"><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025"> Stanford 2025</span></a>&nbsp;<small class="source">via <a href="http://www.stanford2025.com/" target="_blank">stanford2025.com</a></small>
+                <small class="source">featured by GOOD</small>
+              </h3>
+              <div class="meta">
+                <div class="form" backbone-view="GoodButton" data-post-slug="stanford-2025" data-vote-count="3" data-voted="false">
+                  <form class="voted" style="display: none;">
+                    <h6>
+                      It's GOOD <abbr style="" title="3 people think this is good">3</abbr>
+                    </h6>
+                    <p>
+                      <button name="undo" title="Delete your vote for this post">Undo</button>
+                    </p>
+                  </form>
+                  <form class="vote">
+                    <p>
+                      <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="3 people think this is good">3</abbr></button>
+                    </p>
+                  </form>
+                </div>
+                <p class="comments">
+                  <a href="/link/stanford-2025#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">Thoughts?</abbr></a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://www.npr.org/blogs/health/2014/08/27/343733139/life-after-ice-buckets-als-group-faces-94-million-challenge" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight" src="http://assets.goodstatic.com/s3/prod/bookmarks/photos/000/344/453/original/icebucket_wide-547357d208124fc783e0ac5b64c8c15ae75d4a66-s4-c85.jpg=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight"> How the ALS Association is dealing with a $94 million spotlight.</span></a>&nbsp;<small class="source">via <a href="http://www.npr.org/blogs/health/2014/08/27/343733139/life-after-ice-buckets-als-group-faces-94-million-challenge" target="_blank">npr.org</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight" data-vote-count="4" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="4 people think this is good">4</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="4 people think this is good">4</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments">
-                      <a href="/link/how-the-als-association-is-dealing-with-a-94-million-spotlight#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight">Thoughts?</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/ice-bucket-challenge--2" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight">Ice Bucket Challenge</a>
-                        </li>
-                        <li>
-                          <a href="/charity" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="how-the-als-association-is-dealing-with-a-94-million-spotlight">Charity</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/design" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">Design</a>
+                    </li>
+                    <li>
+                      <a href="/d-school" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">D.School</a>
+                    </li>
+                    <li>
+                      <a href="/education" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">Education</a>
+                    </li>
+                  </ul>
                 </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="7" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal&quot;}">
-                <p class="source has-image"><a href="/members/goodmagazine"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal" height="60" src="http://assets.goodstatic.com/s3/pre/users/xlarge-good-logo-black.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal"> GOOD Magazine</span></a> shared a link
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;learn-something-new-this-weekend&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/jelenawoehr"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/292/104/original/195670_1043164079_987381920_n.jpg=c60x60" width="60" /> Jelena Woehr</a>, <a href="/members/kylestudstill">Kyle Studstill</a> and <a href="/do/learn-something-new-this-weekend">39 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-08-24T01:21:26Z"><abbr title="2 weeks ago">2 w</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/learn-something-new-this-weekend" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/613/465/original/Screen_Shot_2014-09-08_at_5.42.28_PM.png=c100x100" alt="" width="100" height="100" /></span><span> Learn something new this weekend.</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/learn-something-new-this-weekend" title="41 people are in on this" ng-init="setDoerCount(41)">41</a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://magazine.good.is/articles/rachel-lee-hovnanian-plastic-perfect" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal" src="http://assets.goodstatic.com/s3/magazine/assets/537782/original/10-Hovnanian__Rachel_Lee_Magically_Delicious_2014_Cereal_boxes__acrylic__crushed_glass__wood_67.5_x_59_x_4.5_in.jpg=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal"> When Your Facebook Gets You As Crunked As Sugary Breakfast Cereal</span></a>&nbsp;<small class="source">via <a href="http://magazine.good.is/articles/rachel-lee-hovnanian-plastic-perfect" target="_blank">magazine.good.is</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal" data-vote-count="3" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="3 people think this is good">3</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="3 people think this is good">3</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments">
-                      <a href="/link/when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal">Thoughts?</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/art" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal">Art</a>
-                        </li>
-                        <li>
-                          <a href="/technology-addiction" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal">Technology Addiction</a>
-                        </li>
-                        <li>
-                          <a href="/lifestyle" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="when-your-facebook-gets-you-as-crunked-as-sugary-breakfast-cereal">Lifestyle</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="8" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;is-toms-really-selling-out&quot;}">
-                <p class="source has-image"><a href="/members/rameis"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="is-toms-really-selling-out" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/336/994/original/RM_pic_small.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out"> Rachel Meisel</span></a> shared a link
+                <p class="stories"><a href="/do/learn-something-new-this-weekend" title="9 stories added">9</a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://joycorps.org/is-toms-selling-out/" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out" src="http://assets.goodstatic.com/s3/prod/bookmarks/photos/000/344/092/original/Blake-Mycoskie.jpg=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out"> Is TOMS really selling out? </span></a>&nbsp;<small class="source">via <a href="http://joycorps.org/is-toms-selling-out/" target="_blank">joycorps.org</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="is-toms-really-selling-out" data-vote-count="17" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="17 people think this is good">17</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="17 people think this is good">17</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments"><a href="/link/is-toms-really-selling-out#discuss"><abbr title="1 person commented" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out">1</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/toms" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out">Toms</a>
-                        </li>
-                        <li>
-                          <a href="/social-entrepreneur" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out">Social Entrepreneur</a>
-                        </li>
-                        <li>
-                          <a href="/business" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="is-toms-really-selling-out">Business</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/motorcycle">Motorcycle</a>
+                    </li>
+                    <li>
+                      <a href="/biking">Biking</a>
+                    </li>
+                    <li>
+                      <a href="/learning">Learning</a>
+                    </li>
+                  </ul>
                 </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="9" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;stanford-2025&quot;}">
-                <p class="source has-image"><a href="/members/emrln"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="stanford-2025" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/471/844/original/10521196_555052417956473_3069103791250452826_n.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025"> Emerline Ji</span></a> shared a link
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;walk--2&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/willy7841"><span class="avatar"><span class="size60 tangerine" data-content="W"></span></span> willy7841</a>, <a href="/members/mayerdahan">Mayer Dahan</a> and <a href="/do/walk--2">6 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-09-04T21:01:49Z"><abbr title="5 days ago">5 d</abbr></time>
+            </p>
+            <section class="post do">
+              <h3>
+                <a href="/do/walk--2" target=""><span> WALK</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/walk--2" title="8 people are in on this" ng-init="setDoerCount(8)">8</a>
                 </p>
-                <section class="post link">
-                  <h3>
-                    <a href="http://www.stanford2025.com/" target="_blank"><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025"> Stanford 2025</span></a>&nbsp;<small class="source">via <a href="http://www.stanford2025.com/" target="_blank">stanford2025.com</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="stanford-2025" data-vote-count="3" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="3 people think this is good">3</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="3 people think this is good">3</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments">
-                      <a href="/link/stanford-2025#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">Thoughts?</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/design" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">Design</a>
-                        </li>
-                        <li>
-                          <a href="/d-school" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">D.School</a>
-                        </li>
-                        <li>
-                          <a href="/education" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="stanford-2025">Education</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </section>
-              </section>
-              </li>
-              <li>
-              <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-featured-location="in feed" data-featured-position="10" data-featured-post-type="link" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;microchips-could-replace-animal-testing-around-the-world&quot;}">
-                <p class="source has-image"><a href="/members/goodmagazine"><img alt="" backbone-view="TrackFeaturedItemClick" data-featured-click-target="avatar" data-post-slug="microchips-could-replace-animal-testing-around-the-world" height="60" src="http://assets.goodstatic.com/s3/pre/users/xlarge-good-logo-black.jpg=c60x60" width="60" /><span data-featured-click-target="username" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world"> GOOD Magazine</span></a> shared a link
+                <p class="stories"><a href="/do/walk--2" title="2 stories added">2</a>
                 </p>
-                <section class="post link">
-                  <h3 class=" has-image">
-                    <a href="http://magazine.good.is/articles/tissuse-human-on-a-chip-could-replace-animal-testing" target="_blank"><span class="image"><img data-featured-click-target="image" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world" src="http://assets.goodstatic.com/s3/magazine/assets/537738/original/mouse_party.jpg=c60x60" alt="" width="60" height="60" /></span><span data-featured-click-target="headline" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world"> Microchips Could Replace Animal Testing Around the World</span></a>&nbsp;<small class="source">via <a href="http://magazine.good.is/articles/tissuse-human-on-a-chip-could-replace-animal-testing" target="_blank">magazine.good.is</a></small>
-                  </h3>
-                  <div class="meta">
-                    <div class="form" backbone-view="GoodButton" data-post-slug="microchips-could-replace-animal-testing-around-the-world" data-vote-count="4" data-voted="false">
-                      <form class="voted" style="display: none;">
-                        <h6>
-                          It's GOOD <abbr style="" title="4 people think this is good">4</abbr>
-                        </h6>
-                        <p>
-                          <button name="undo" title="Delete your vote for this post">Undo</button>
-                        </p>
-                      </form>
-                      <form class="vote">
-                        <p>
-                          <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="4 people think this is good">4</abbr></button>
-                        </p>
-                      </form>
-                    </div>
-                    <p class="comments">
-                      <a href="/link/microchips-could-replace-animal-testing-around-the-world#add-comment"><abbr title="Thoughts?" data-featured-click-target="comment count" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world">Thoughts?</abbr></a>
-                    </p>
-                    <section class="tags">
-                      <h4>
-                        <span>Tags</span>
-                      </h4>
-                      <ul>
-                        <li>
-                          <a href="/animals" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world">Animals</a>
-                        </li>
-                        <li>
-                          <a href="/harvard" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world">Harvard</a>
-                        </li>
-                        <li>
-                          <a href="/medicine" data-featured-click-target="topic" backbone-view="TrackFeaturedItemClick" data-post-slug="microchips-could-replace-animal-testing-around-the-world">Medicine</a>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/walking">Walking</a>
+                    </li>
+                    <li>
+                      <a href="/walk">Walk</a>
+                    </li>
+                    <li>
+                      <a href="/healthy">Healthy</a>
+                    </li>
+                  </ul>
                 </section>
-              </section>
-              </li>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;explore-your-wilderness&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/bax1billion"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/001/761/367/original/photo4.JPG=c60x60" width="60" /> Baxter Farabaugh</a>, <a href="/members/bill-shattuck">Bill Shattuck</a> and <a href="/do/explore-your-wilderness">21 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-08-22T21:38:54Z"><abbr title="2 weeks ago">2 w</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/explore-your-wilderness" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/611/933/original/photo_1.JPG=c100x100" alt="" width="100" height="100" /></span><span> Explore your wilderness</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/explore-your-wilderness" title="23 people are in on this" ng-init="setDoerCount(23)">23</a>
+                </p>
+                <p class="stories"><a href="/do/explore-your-wilderness" title="6 stories added">6</a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/outdoors">Outdoors</a>
+                    </li>
+                    <li>
+                      <a href="/nature">Nature</a>
+                    </li>
+                    <li>
+                      <a href="/wilderness">Wilderness</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;learn-about-what-s-important-to-the-people-you-want-to-help&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/partyliz"><span class="avatar"><span class="size60 sky" data-content="P"></span></span> partyliz</a>, <a href="/members/jen-gurecki">Jen Gurecki</a> and <a href="/do/learn-about-what-s-important-to-the-people-you-want-to-help">33 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-08-16T14:35:40Z"><abbr title="3 weeks ago">3 w</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/learn-about-what-s-important-to-the-people-you-want-to-help" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/609/614/original/Community_Garden_v4-FB.jpg=c100x100" alt="" width="100" height="100" /></span><span> Learn about what&#39;s important to the people you want to help</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/learn-about-what-s-important-to-the-people-you-want-to-help" title="35 people are in on this" ng-init="setDoerCount(35)">35</a>
+                </p>
+                <p class="stories"><a href="/do/learn-about-what-s-important-to-the-people-you-want-to-help" title="7 stories added">7</a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/community-development">Community Develop...</a>
+                    </li>
+                    <li>
+                      <a href="/international-development">International Dev...</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;is-toms-really-selling-out&quot;}">
+            <p class="source has-image"><a href="/members/rameis"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/336/994/original/RM_pic_small.jpg=c60x60" width="60" /><span> Rachel Meisel</span></a> shared a link
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-09-04T13:58:18Z"><abbr title="5 days ago">5 d</abbr></time>
+            </p>
+            <section class="post link">
+              <h3 class=" has-image">
+                <a href="http://joycorps.org/is-toms-selling-out/" target="_blank"><span class="image"><img src="http://assets.goodstatic.com/s3/prod/bookmarks/photos/000/344/092/original/Blake-Mycoskie.jpg=c60x60" alt="" width="60" height="60" /></span><span> Is TOMS really selling out? </span></a>&nbsp;<small class="source">via <a href="http://joycorps.org/is-toms-selling-out/" target="_blank">joycorps.org</a></small>
+              </h3>
+              <div class="meta">
+                <div class="form" backbone-view="GoodButton" data-post-slug="is-toms-really-selling-out" data-vote-count="18" data-voted="false">
+                  <form class="voted" style="display: none;">
+                    <h6>
+                      It's GOOD <abbr style="" title="18 people think this is good">18</abbr>
+                    </h6>
+                    <p>
+                      <button name="undo" title="Delete your vote for this post">Undo</button>
+                    </p>
+                  </form>
+                  <form class="vote">
+                    <p>
+                      <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="18 people think this is good">18</abbr></button>
+                    </p>
+                  </form>
+                </div>
+                <p class="comments"><a href="/link/is-toms-really-selling-out#discuss"><abbr title="2 people commented">2</abbr></a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/toms">Toms</a>
+                    </li>
+                    <li>
+                      <a href="/social-entrepreneur">Social Entrepreneur</a>
+                    </li>
+                    <li>
+                      <a href="/business">Business</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;acknowledge-your-moral-exemplars&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/jelenawoehr"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/292/104/original/195670_1043164079_987381920_n.jpg=c60x60" width="60" /> Jelena Woehr</a>, <a href="/members/kylestudstill">Kyle Studstill</a> and <a href="/do/acknowledge-your-moral-exemplars">7 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-08-27T16:08:20Z"><abbr title="1 week ago">1 w</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image play-button">
+                <a href="/do/acknowledge-your-moral-exemplars" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/videos/thumbnails/000/000/037/original/hqdefault.jpg=c100x100" alt="" width="100" height="100" /></span><span> Acknowledge Your Moral Exemplars</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/acknowledge-your-moral-exemplars" title="9 people are in on this" ng-init="setDoerCount(9)">9</a>
+                </p>
+                <p class="stories"><a href="/do/acknowledge-your-moral-exemplars" title="2 stories added">2</a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/conscious-living">Conscious Living</a>
+                    </li>
+                    <li>
+                      <a href="/moral-wisdom">Moral Wisdom</a>
+                    </li>
+                    <li>
+                      <a href="/ethics">Ethics</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;accept-people-for-who-they-really-are&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/latricespassion"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/563/047/original/Snapshot_2014813_(5).jpg=c60x60" width="60" /> Latrice Hughes</a>, <a href="/members/dsmy">David Yarde</a> and <a href="/do/accept-people-for-who-they-really-are">2 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-09-05T22:15:59Z"><abbr title="3 days ago">3 d</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image play-button">
+                <a href="/do/accept-people-for-who-they-really-are" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/videos/thumbnails/000/000/051/original/hqdefault.jpg=c100x100" alt="" width="100" height="100" /></span><span> Accept people for who they really are</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/accept-people-for-who-they-really-are" title="4 people are in on this" ng-init="setDoerCount(4)">4</a>
+                </p>
+                <p class="stories"><a href="/do/accept-people-for-who-they-really-are" title="1 story added">1</a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/natural-order-of-creation">Natural Order Of ...</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;leave-a-ninja-book-gift-in-a-public-place&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/crowdwish"><span class="avatar"><span class="size60 tangerine" data-content="C"></span></span> Crowdwish</a>, <a href="/members/karen-woods-ottawa">Karen.Woods.ottawa</a> and <a href="/do/leave-a-ninja-book-gift-in-a-public-place">39 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-08-06T16:27:25Z"><abbr title="4 weeks ago">4 w</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/leave-a-ninja-book-gift-in-a-public-place" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/610/794/original/CollageIt.jpg=c100x100" alt="" width="100" height="100" /></span><span> Leave a ninja-book-gift in a public place.</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/leave-a-ninja-book-gift-in-a-public-place" title="41 people are in on this" ng-init="setDoerCount(41)">41</a>
+                </p>
+                <p class="stories"><a href="/do/leave-a-ninja-book-gift-in-a-public-place" title="7 stories added">7</a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/reading">Reading</a>
+                    </li>
+                    <li>
+                      <a href="/education">Education</a>
+                    </li>
+                    <li>
+                      <a href="/books">Books</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item do" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;publicly-declare-your-appreciation-for-someone&quot;,&quot;current_user_todo_status&quot;:&quot;none&quot;,&quot;isSpam&quot;:false,&quot;isFlagged&quot;:false}">
+            <p class="source has-image">
+              <a href="/members/theasphere"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/users/avatars/001/171/772/original/00000000000000000000000000000000_(1_of_1)-8.jpg=c60x60" width="60" /> Thea Linscott</a>, <a href="/members/sarah-feldman26">sarah.feldman26</a> and <a href="/do/publicly-declare-your-appreciation-for-someone">76 others</a> are in on this
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-07-25T20:07:00Z"><abbr title="6 weeks ago">6 w</abbr></time>
+            </p>
+            <section class="post do">
+              <h3 class=" has-image">
+                <a href="/do/publicly-declare-your-appreciation-for-someone" target=""><span class="image"><img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/602/129/original/photo.JPG=c100x100" alt="" width="100" height="100" /></span><span> Publicly declare your appreciation for someone</span></a>
+              </h3>
+              <div class="form todo_actions" do-button="">
+                <form class="do" ng-if="currentPost.current_user_todo_status == &quot;none&quot;">
+                  <h6>
+                    Do It
+                  </h6>
+                  <p>
+                    <button type="submit" data-auth-trigger="to-do button" ng-click="setTodoStatus(&quot;started&quot;)">I want to do this</button><button type="submit" data-auth-trigger="done button" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button>
+                  </p>
+                </form>
+                <form class="doing" ng-if="currentPost.current_user_todo_status == &quot;started&quot;" style="display: none;">
+                  <h6>
+                    To Do
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;completed&quot;)">I did this</button><button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+                <form class="done" ng-if="currentPost.current_user_todo_status == &quot;completed&quot;" style="display: none;">
+                  <h6>
+                    Done
+                  </h6>
+                  <p>
+                    <button type="submit" ng-click="setTodoStatus(&quot;none&quot;)">Remove</button>
+                  </p>
+                </form>
+              </div>
+              <div class="meta">
+                <p class="participants">
+                  <a ng-cloak="true" allow-interpolation="true" href="/do/publicly-declare-your-appreciation-for-someone" title="78 people are in on this" ng-init="setDoerCount(78)">78</a>
+                </p>
+                <p class="stories"><a href="/do/publicly-declare-your-appreciation-for-someone" title="43 stories added">43</a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/gratitude">Gratitude</a>
+                    </li>
+                    <li>
+                      <a href="/urban">Urban</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
+          <li>
+          <section class="activity-item" ng-controller="FeedController" backbone-view="FeedItem" data-ui-scope="feed item" set-current-post="{&quot;slug&quot;:&quot;quiet-time-at-the-brooklyn-urban-garden-school&quot;}">
+            <p class="source has-image"><a href="/members/davidlynchfoundation"><img alt="" height="60" src="http://assets.goodstatic.com/s3/prod/avatars/2009096/original/32481_120867357938026_5378330_n.jpeg=c60x60" width="60" /><span> David Lynch Foundation</span></a> shared a link
+            </p>
+            <p class="time">
+              <time pubdate="" datetime="2014-09-09T16:22:44Z"><abbr title="5 hours ago">5 h</abbr></time>
+            </p>
+            <section class="post link">
+              <h3 class=" has-image">
+                <a href="http://www.davidlynchfoundation.org/blog/bugs-charter-school-teaches-tm/" target="_blank"><span class="image"><img src="http://assets.goodstatic.com/s3/prod/bookmarks/photos/000/345/409/original/Screen-shot-2014-08-26-at-5.33.08-PM.png=c60x60" alt="" width="60" height="60" /></span><span> Quiet Time at the Brooklyn Urban Garden School</span></a>&nbsp;<small class="source">via <a href="http://www.davidlynchfoundation.org/blog/bugs-charter-school-teaches-tm/" target="_blank">davidlynchfoundation.org</a></small>
+              </h3>
+              <div class="meta">
+                <div class="form" backbone-view="GoodButton" data-post-slug="quiet-time-at-the-brooklyn-urban-garden-school" data-vote-count="3" data-voted="false">
+                  <form class="voted" style="display: none;">
+                    <h6>
+                      It's GOOD <abbr style="" title="3 people think this is good">3</abbr>
+                    </h6>
+                    <p>
+                      <button name="undo" title="Delete your vote for this post">Undo</button>
+                    </p>
+                  </form>
+                  <form class="vote">
+                    <p>
+                      <button title="Vote for this post" data-auth-trigger="good button">It's GOOD <abbr style="" title="3 people think this is good">3</abbr></button>
+                    </p>
+                  </form>
+                </div>
+                <p class="comments">
+                  <a href="/link/quiet-time-at-the-brooklyn-urban-garden-school#add-comment"><abbr title="Thoughts?">Thoughts?</abbr></a>
+                </p>
+                <section class="tags">
+                  <h4>
+                    <span>Tags</span>
+                  </h4>
+                  <ul>
+                    <li>
+                      <a href="/at-risk">At Risk</a>
+                    </li>
+                    <li>
+                      <a href="/brooklyn">Brooklyn</a>
+                    </li>
+                    <li>
+                      <a href="/children">Children</a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+          </section>
+          </li>
       </ul>
 
+
+      <nav class="pagination">
+        <ul>
+          <li class="next">
+            <a href="" title="Next Page">Next</a>
+          </li>
+          <li class="previous">
+            <a href="" title="Previous Page">Prev</a>
+          </li>
+
+          <li><a href="" title="Page 1">1</a></li>
+          <li class="active"><a href="" title="Page 2">2</a></li>
+          <li><a href="" title="Page 3">3</a></li>
+          <li><a href="" title="Page 4">4</a></li>
+          <li><a href="" title="Page 5">5</a></li>
+        </ul>
+      </nav>
     </section>
 
     <aside>
@@ -590,17 +940,17 @@
         <a href="http://community.good.is/health"><img src="../../assets/shared/placeholder/9775554761881619301.jpg" width="300" height="600" alt="Good Health: A community effort to get good. Presented by Health Happens Here, a California Endowment." /></a>
       </p>
 
-      <section class="promotion feedback">
-        <h2>Feedback is GOOD!</h2>
-        <ul>
-          <li class="question">
-            <a href="http://support.good.is/home">Frequently Asked Questions (FAQs)</a>
-          </li>
-          <li class="message">
-            <a href="mailto:help@goodinc.com">Send us your feedback</a>
-          </li>
-        </ul>
-      </section>
+        <section class="promotion feedback">
+          <h2>Feedback is GOOD!</h2>
+          <ul>
+            <li class="message">
+              <a href="mailto:help@goodinc.com">Send us your feedback</a>
+            </li>
+            <li class="question">
+              <a href="http://support.good.is/home">Frequently Asked Questions (FAQs)</a>
+            </li>
+          </ul>
+        </section>
 
       <p class="ad upper">
         <a href="http://community.good.is/health"><img src="../../assets/shared/placeholder/13614656033173660853.jpg" width="300" height="250" alt="Good Health: A community effort to get good. Presented by Health Happens Here, a California Endowment." /></a>
@@ -621,16 +971,6 @@
 
   </div><!-- /.container -->
 </main><!-- /#content -->
-
-<section class="connect-facebook">
-  <div class="container">
-    <h1>Your Friends</h1>
-    <a href="">
-      <p>Are your friends doing good? Connect and see.</p>
-      <p class="facebook action"><span>Connect with Facebook</span></p>
-    </a>
-  </div><!-- /.container -->
-</section>
 
 <footer id="footer">
   <div class="container">

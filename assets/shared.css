@@ -2054,8 +2054,13 @@
   }
 
   /* Headlines */
-  .activity-item .do h3 {
-    min-height: 2.7em; /* line-height x 2 */
+  .activity-item .do h3.has-image {
+    min-height: 2.7em;
+  }
+  @media (min-width: 30em) {
+    .activity-item .do h3.has-image {
+      min-height: 1.75em; /* @line-height */
+    }
   }
   .activity-item .comment h3,
   .activity-item .follow  h3 {
@@ -2811,6 +2816,7 @@
   .activity-item:before {
     font-family: "Icons"; speak: none; /* @icons */
 
+    line-height: 1;
     content: "\e600"; /* @icon-corner */
     color: rgb(34, 155, 246);
     font-size: 0.9375em; /* 15px / @font-size */
