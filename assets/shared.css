@@ -592,20 +592,20 @@
     font-weight: normal;
   }
   .vote button {
-    background-color: rgb(113, 179, 247); /* @sky */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
   .vote button:hover,
   .vote button:active,
   .vote button:focus {
-    background-color: rgb(49, 144, 242); /* @boysenberry */
+    background-color: rgb(19, 114, 212); /* @blueberry */
   }
   .scripted-button form.voted h6 {
-    background-color: rgb(49, 144, 242); /* @boysenberry */
+    background-color: rgb(113, 179, 247); /* @sky */
   }
   .scripted-button form.voted h6:hover,
   .scripted-button form.voted h6:active,
   .scripted-button form.voted h6:focus {
-    background-color: rgb(19, 114, 212); /* @blueberry */
+    background-color: rgb(49, 144, 242); /* @boysenberry */
   }
 
   /* OPTIONAL: Adjust the font size, for readability */
@@ -654,7 +654,7 @@
     margin-left: -2em;
 
     content: "\e602"; /* @icon-vote */
-    color: rgb(113, 179, 247); /* @sky */
+    color: rgb(49, 144, 242); /* @boysenberry */
   }
   .vote button {
     margin-left: 1.5em;
@@ -888,7 +888,8 @@
     display: inline-block;
     border-width: 0 0 0 0.1em;
     border-style: solid;
-    border-color: rgb(244, 244, 244);
+    border-color: rgb(51, 51, 51);
+    border-color: rgba(0, 0, 0, 0.15);
     padding-left : 0.6em;
     margin-left  : 0.45em;
     margin-right : -0.25em;
@@ -898,17 +899,7 @@
     padding-bottom: 0.8em;
     transition: border-color 0.2s;
   }
-  form.vote  button:hover  abbr,
-  form.vote  button:active abbr,
-  form.vote  button:focus  abbr,
-  form.voted h6            abbr {
-    border-color: rgb(51, 51, 51);
-    border-color: rgba(0, 0, 0, 0.15);
-  }
    .vote.loading button        abbr,
-   .vote.loading button:hover  abbr,
-   .vote.loading button:active abbr,
-   .vote.loading button:focus  abbr,
   .voted.loading h6            abbr {
     border-color: transparent;
   }
@@ -2621,8 +2612,7 @@
   .meta .dos          a,
   .meta .comments     a,
   .meta .stories      a,
-  .meta .participants a,
-  .meta .vote         button {
+  .meta .participants a {
     border: 0.1em solid rgb(244, 244, 244);
     background: rgb(252, 252, 252); /* @snow */
     color: rgb(153, 153, 153); /* @nickel */
@@ -2690,24 +2680,9 @@
     display: inline-block;
     margin-right: 0.25em;
     margin-left: 0;
-  }
-  .meta .vote button:hover,
-  .meta .vote button:active,
-  .meta .vote button:focus {
-    background-color: rgb(49, 144, 242); /* @boysenberry */
-    border-color: rgba(0, 0, 0, 0.15);
     color: white;
   }
-  .meta .vote button:hover:before,
-  .meta .vote button:active:before,
-  .meta .vote button:focus:before {
-    color: white;
-  }
-  .meta .vote.loading button {
-    background-color: rgb(49, 144, 242); /* @boysenberry */
-    border-color: rgba(0, 0, 0, 0.15);
-    color: transparent;
-  }
+  .meta .vote.loading button,
   .meta .vote.loading button:before {
     color: transparent;
   }
@@ -2829,59 +2804,6 @@
   }
   .activity-item:hover:before {
     opacity: 1;
-  }
-
-  /* OPTIONAL: Light up the buttons and tags for an item, when hovering over it */
-
-  /* Off */
-  main:hover .activity-item .meta .dos,
-  main:hover .activity-item .meta .vote,
-  main:hover .activity-item .meta .voted,
-  main:hover .activity-item .meta .comments {
-    color: rgb(190, 190, 190);
-    transition: color 0.2s;
-  }
-  main:hover .activity-item .meta .dos      a:before,
-  main:hover .activity-item .meta .vote     button:before,
-  main:hover .activity-item .meta .comments a:before {
-    color: rgb(230, 230, 230); /* @mercury */
-    transition: color 0.2s;
-  }
-  main:hover .activity-item .meta .vote.loading button:before {
-    color: transparent;
-  }
-  main:hover .activity-item section.tags h4:before {
-    color: rgb(225, 225, 225); /* @silver */
-    transition: color 0.2s;
-  }
-
-  /* Over */
-  main:hover .activity-item:hover .meta .dos,
-  main:hover .activity-item:hover .meta .vote,
-  main:hover .activity-item:hover .meta .voted,
-  main:hover .activity-item:hover .meta .comments {
-    color: rgb(153, 153, 153); /* @nickel */
-  }
-  main:hover .activity-item:hover .meta .dos a:before {
-    color: rgb(83, 231, 185); /* @kiwi */
-  }
-  main:hover .activity-item:hover .meta .vote  button:before {
-    color: rgb(113, 179, 247); /* @sky */
-  }
-  main:hover .activity-item:hover .meta .vote.loading button:before {
-    color: transparent;
-  }
-  main:hover .activity-item:hover .meta .vote  button:hover:before {
-    color: white;
-  }
-  main:hover .activity-item:hover .meta .vote.loading button:hover:before {
-    color: transparent;
-  }
-  main:hover .activity-item:hover .meta .comments a:before {
-    color: rgb(255, 223, 145); /* @cantaloupe */
-  }
-  main:hover .activity-item:hover section.tags h4:before {
-    color: rgb(247, 113, 113); /* @raspberry */
   }
 
   /* OPTIONAL: Move the primary source up a little */
