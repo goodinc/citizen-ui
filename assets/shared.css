@@ -3189,16 +3189,16 @@
   }
 
 
-  /* On the “Popular” page, individual items are marked as featured. */
+  /* EXPERIMENTAL: Make featured items stand out on the “Popular” page.
   .featured.activity-item .post .source:last-child {
     padding: 0 0.875em;
     background: rgba(0, 0, 0, 0.1);
-    color: rgb(101, 102, 103); /* @tin */
+    color: rgb(101, 102, 103);
     font-weight: bold;
     margin-top: 0.4375em;
-    border-radius: 2px;
     display: table;
   }
+  */
 
 
   /* =Activity List
