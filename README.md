@@ -2,7 +2,7 @@
 
 These are HTML prototypes that represent the good.is community site.
 
-The site published on GitHub pages:
+The site is published on GitHub:
 <http://goodinc.github.io/citizen-ui/>
 
 ### Project Goals
