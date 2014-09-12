@@ -5931,7 +5931,12 @@
     margin-bottom: -1px;
     position: relative;
     z-index: 1;
-    margin-left: 24px;
+    margin-left: 1em;
+  }
+  @media (min-width: 48em) { /* @medium-header */
+    #header > ul {
+      margin-left: 24px;
+    }
   }
   #header > ul:after {
     content: "";
@@ -5944,17 +5949,23 @@
   }
   #header > ul li a {
     display: block;
-    padding: 17px 39px 18px 38px;
+    padding: 10px 16px;
     line-height: 1;
-    font-size: 14px;
+    font-size: 11px;
     border-width: 0 1px 0 0;
     border-style: solid;
     border-color: rgb(230, 230, 230); /* @mercury */
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
   }
-  #header > ul li:last-child a {
-    padding-left: 41px;
-    padding-right: 42px;
+  @media (min-width: 48em) { /* @medium-header */
+    #header > ul li a {
+      padding: 17px 39px 18px 38px;
+      font-size: 14px;
+    }
+    #header > ul li:last-child a {
+      padding-left: 41px;
+      padding-right: 42px;
+    }
   }
   #header > ul a {
     color: rgb(153, 153, 153); /* @nickel */
@@ -6186,7 +6197,7 @@
   }
 
   /* OPTIONAL: Reduce the size of the navigation as the screen gets smaller. */
-  @media (max-width: 33.9375em) {
+  @media (max-width: 25em) {
     #header nav > ul:after {
       content: "";
       display: table;
@@ -6194,28 +6205,6 @@
     }
     #header nav > ul > li {
       font-size: 0.875em;
-    }
-  }
-  @media (max-width: 30em) {
-    #header nav > ul > li {
-      font-size: 0.875em;
-    }
-    #header nav > ul > li > a {
-      padding: 0 0.5em;
-      line-height: 2;
-    }
-  }
-  @media (max-width: 26em) {
-    #header nav > ul > li {
-      font-size: 0.75em;
-    }
-  }
-  @media (max-width: 22em) {
-    #header nav > ul {
-      margin-left: -1.5em;
-      margin-right: -1.5em;
-      padding-left: 0.4375em;
-      padding-right: 0.4375em;
     }
   }
 
