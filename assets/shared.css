@@ -5952,13 +5952,9 @@
     border-color: rgb(230, 230, 230); /* @mercury */
     font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
   }
-  #header > ul li:first-child a {
-    border-left-width: 1px;
-  }
   #header > ul li:last-child a {
     padding-left: 35px;
     padding-right: 35px;
-    border-right-width: 0;
   }
   #header > ul a {
     color: rgb(153, 153, 153); /* @nickel */
