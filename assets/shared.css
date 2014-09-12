@@ -5927,11 +5927,11 @@
   ----------------------------------------------- */
   #header > ul {
     display: block;
-    margin-left: 24px;
     line-height: normal;
     margin-bottom: -1px;
     position: relative;
     z-index: 1;
+    margin-left: 24px;
   }
   #header > ul:after {
     content: "";
@@ -6020,6 +6020,7 @@
       margin-right: 12px;
     }
     #header.minimal h2 a {
+      padding-right: 30px;
       margin-right: 0.2em;
     }
     #header h2 + p {
@@ -6067,8 +6068,7 @@
     }
   }
   @media (min-width: 60em) {
-    #header > div,
-    #header.minimal > div {
+    #header > div {
       padding-left: 58px;
     }
   }
