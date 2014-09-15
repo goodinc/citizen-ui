@@ -2427,6 +2427,10 @@
   ----------------------------------------------- */
   .activity-item .comment {
     padding-left: 2.5em; /* @line-height(20px) x 2 */
+
+    /* OPTIONAL: Handle the case where a URL within a comment or a story is really long and won’t wrap naturally. */
+    word-wrap     : break-word; /* Currently supported in most browsers */
+    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
   }
   .activity-item .comment,
   .activity-item .comment + .more {
@@ -3398,6 +3402,11 @@
     position: relative;
     padding-top: 1.25em;
     margin-bottom: 0;
+
+    /* OPTIONAL: Handle the case where a URL within a comment is really long and won’t wrap naturally.*/
+    /* For an example, see Kevin Van Lierop’s commment in this article: http://community.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
+    word-wrap     : break-word; /* Currently supported in most browsers */
+    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
   }
   .comment-list article,
   .comment-list + .more {
@@ -3419,11 +3428,6 @@
   .comment-list article > p {
     color: black;
     font-size: 0.875em; /* 14px / @font-size */
-
-    /* OPTIONAL: Handle the case where a URL within a comment is really long and won’t wrap naturally.*/
-    /* For an example, see Kevin Van Lierop’s commment in this article: http://community.good.is/posts/not-worry-and-spread-messages-of-optimism#discuss */
-    word-wrap     : break-word; /* Currently supported in most browsers */
-    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
   }
   .comment-list article > p {
     max-width: 33em;

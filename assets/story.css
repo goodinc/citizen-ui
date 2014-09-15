@@ -280,6 +280,11 @@
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
+
+    /* OPTIONAL: Handle the case where a URL within a story is really long and won’t wrap naturally.*/
+    /* For an example, see Julia Gulia’s story: http://community.good.is/do/story/6E5A2D49 */
+    word-wrap     : break-word; /* Currently supported in most browsers */
+    overflow-wrap : break-word; /* TBD: Proposed standard that will be supported everywhere eventually? */
   }
   .story > article {
     padding: 1.5em 1.5em 3.5em;
