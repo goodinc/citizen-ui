@@ -6243,7 +6243,7 @@
 
     line-height: 40px;
     position: absolute;
-    top: 20px;
+    top: 18px;
     right: 1.5em;
   }
   .scripted-nav #header nav div div {
@@ -6255,7 +6255,7 @@
       top: 92px;
     }
     .scripted-nav #header.minimal nav > div {
-      top: 20px;
+      top: 18px;
     }
   }
 
