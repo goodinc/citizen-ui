@@ -3115,16 +3115,19 @@
   }
 
 
-  /* EXPERIMENTAL: Make featured items stand out on the “Popular” page.
-  .featured.activity-item .post .source:last-child {
-    padding: 0 0.875em;
-    background: rgba(0, 0, 0, 0.1);
-    color: rgb(101, 102, 103);
-    font-weight: bold;
-    margin-top: 0.4375em;
+  /* EXPERIMENTAL: Make featured items stand out on the “Popular” page. */
+  .activity-item .post .featured {
     display: table;
+    background: white;
+    border: 1px solid black;
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+
+    font-size: 0.4583333333em; /* 11px / 24px */
+    padding: 0 0.6363636364em; /* 7px / 11px */
+    margin-bottom: 0.6363636364em; /* 7px / 11px */
+    line-height: 2;
   }
-  */
 
 
   /* =Activity List
@@ -4821,6 +4824,23 @@
     color: rgb(255, 102, 102); /* @strawberry */
   }
 
+  .post-form .tip p.bookmark {
+    padding-left: 1em;
+    position: relative;
+  }
+  .post-form .tip p.bookmark:before {
+    content: "";
+    position: absolute;
+    top: 0.25em;
+    left: -0.5em;
+    font-size: 1.25em;
+    /* Data URI encoded from shared/bookmark.svg */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjYuNjY4cHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMCAwIDI2LjY2OCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjYuNjY4IDQwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9InJnYigxMTMsIDE3OSwgMjQ3KSIgcG9pbnRzPSIwLDAgMjYuNjY4LDAgMjYuNjY4LDQwIDEzLjMzNCwyNi42NjYgMCw0MCAiLz4NCjwvc3ZnPg0K) no-repeat;
+    background-size: contain;
+    width: 1em;
+    height: 1em;
+  }
+
   /* OPTIONAL: Add a background-color behind the do’s and dont’s */
   .post-form .tip > .container > div {
     margin: -1.375em;
@@ -6203,8 +6223,9 @@
     }
   }
 
+
   /* OPTIONAL: Reduce the size of the navigation as the screen gets smaller. */
-  @media (max-width: 33.9375em) {
+  @media (max-width: 25em) {
     #header nav > ul:after {
       content: "";
       display: table;
@@ -6212,20 +6233,6 @@
     }
     #header nav > ul > li {
       font-size: 0.875em;
-    }
-  }
-  @media (max-width: 30em) {
-    #header nav > ul > li {
-      font-size: 0.875em;
-    }
-    #header nav > ul > li > a {
-      padding: 0 0.5em;
-      line-height: 2;
-    }
-  }
-  @media (max-width: 26em) {
-    #header nav > ul > li {
-      font-size: 0.75em;
     }
   }
 
