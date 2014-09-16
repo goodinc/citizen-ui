@@ -3435,8 +3435,19 @@
   .comment-list article > p {
     max-width: 33em;
   }
+
+  /* SHIM: Handle the case where an iframe doesn’t have a height attribute.
+
+  TODO: Consider adding a container around the iframe, for styling:
+  https://github.com/jeffehobbs/embedresponsively
+  */
   .comment-list article > iframe {
-    height: 300px;
+    height: 425px;
+  }
+  @media (max-width: 29.9em) {
+    .comment-list article > iframe {
+      height: 300px;
+    }
   }
 
   .comment-list form {
@@ -7233,7 +7244,11 @@
     margin-top: 1.75em;
   }
 
-  /* TBD: Should we add a height attribute to the iframe instead? */
+  /* SHIM: Handle the case where an iframe doesn’t have a height attribute.
+
+  TODO: Consider adding a container around the iframe, for styling:
+  https://github.com/jeffehobbs/embedresponsively
+  */
   .story > article iframe,
   .post  > article iframe {
     height: 505px;
@@ -7241,7 +7256,7 @@
   @media (max-width: 29.9em) {
     .story > article iframe,
     .post  > article iframe {
-      height: 250px;
+      height: 300px;
     }
   }
 
