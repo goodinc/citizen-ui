@@ -156,7 +156,7 @@
   header a {
     display: block;
     text-decoration: none;
-    padding: 1.5em 1.25em 1em;
+    padding: 1.5em 1.25em 1.125em;
   }
   header a:hover,
   header a:active,
@@ -172,14 +172,14 @@
     line-height: inherit;
     font-size: 1.5em;
     line-height: 1.25;
-    margin-top: 2em;
+    padding-top: 2.25em;
     vertical-align: middle;
     max-height: 3.75em;
     overflow: hidden;
   }
   @media (min-width: 40em) {
     header h1 {
-      margin-top: 0;
+      padding-top: 0;
       margin-left: 55px;
       margin-right: 175px;
     }
@@ -196,10 +196,6 @@
     line-height: 2.25em;
     text-align: center;
     margin: 0;
-    margin-right: 0.875em;
-  }
-
-  header h2 {
     position: absolute;
     top: 1.5em;
     left: 1.5em;
@@ -217,12 +213,7 @@
     border-radius: 0.125;
     line-height: 1.5em;
     padding: 0.5em 1em;
-  }
-  @media (min-width: 40em) {
-    header .action {
-      display: inline-block;
-      float: right;
-    }
+    font-size: 0.875em;
   }
   header a:hover  .action,
   header a:active .action,
@@ -232,22 +223,28 @@
   .meta {
     margin-top: 1em;
     border-top: 0.1em solid rgba(255, 255, 255, 0.25);
-    padding-top: 0.75em;
+    padding-top: 1em;
   }
   .meta:after {
     content: "";
     display: table;
     clear: both;
   }
-  .meta p {
-    margin: 0;
-    display: inline;
+  .meta .stories {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .meta .more {
+    margin-top: 0.75em;
+    margin-bottom: 0;
   }
   .meta .stories {
     font-size: 0.875em;
+    line-height: 1.7142857143; /* @line-height / 0.875em */
     font-variant: small-caps;
     text-transform: uppercase;
     font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    margin-right: 1em;
   }
   .meta .stories .count {
     color: rgba(255, 255, 255, 0.5);
@@ -263,15 +260,32 @@
     content: ")";
   }
   .meta .stories svg {
-    vertical-align: middle;
+    vertical-align: bottom;
     margin-right: 0.375em;
   }
   .meta .stories svg path {
     fill: currentColor;
   }
   .meta .more {
-    float: right;
     text-transform: lowercase;
+    font-size: 0.875em;
+    line-height: 1.7142857143; /* @line-height / 0.875em */
+  }
+  @media (min-width: 20em) {
+    .meta .stories {
+      margin: 0;
+      float: left;
+    }
+    .meta .more {
+      margin: 0;
+      float: right;
+    }
+  }
+  @media (min-width: 25em) {
+    .meta .more {
+      font-size: inherit;
+      line-height: 1.5;
+    }
   }
   ul,
   li {
@@ -291,12 +305,7 @@
     text-decoration: none;
     overflow: hidden;
     color: white;
-    padding-top: 15em;
-  }
-  @media (min-width: 40em) {
-    li a {
-      padding-top: 12em;
-    }
+    padding-top: 12em;
   }
   li a:hover,
   li a:active,
@@ -380,13 +389,13 @@
   }
   li .body p {
     font-size: 1.25em;
-    max-height: 10.5em;
+    max-height: 9.75em;
     overflow: hidden;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
 
-    padding: 1.5em 1.5em 0;
+    padding: 2.25em 2.25em 0;
     color: rgb(204, 204, 204);
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
@@ -394,23 +403,42 @@
   li .body p.more {
     margin-top: 0;
     padding-top: 0;
-    padding-right: 1.875em;
+    padding-right: 3.75em;
     text-align: right;
     text-transform: lowercase;
-    font-size: 1em;
+    font-size: 0.75em;
   }
   li .body p.more:after {
-    content: "…";
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0.375em;
+    opacity: 0.75;
+    /*
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path fill="white" d="M8.8,3c-0.5,0.5-0.5,1.2,0,1.6l4.2,4.2H4.3c-0.6,0-1.2,0.5-1.2,1.2c0,0.7,0.6,1.2,1.2,1.2H13l-4.2,4.2
+        c-0.5,0.4-0.5,1.1,0,1.6s1.1,0.4,1.6,0l6.2-6.2c0.2-0.2,0.3-0.5,0.3-0.8s-0.1-0.6-0.3-0.8L10.4,3C9.9,2.6,9.1,2.6,8.8,3z"/>
+    </svg>
+    */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+DQogIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNOC44LDNjLTAuNSwwLjUtMC41LDEuMiwwLDEuNmw0LjIsNC4ySDQuM2MtMC42LDAtMS4yLDAuNS0xLjIsMS4yYzAsMC43LDAuNiwxLjIsMS4yLDEuMkgxM2wtNC4yLDQuMg0KICAgIGMtMC41LDAuNC0wLjUsMS4xLDAsMS42czEuMSwwLjQsMS42LDBsNi4yLTYuMmMwLjItMC4yLDAuMy0wLjUsMC4zLTAuOHMtMC4xLTAuNi0wLjMtMC44TDEwLjQsM0M5LjksMi42LDkuMSwyLjYsOC44LDN6Ii8+DQo8L3N2Zz4=);
   }
   @media (min-width: 40em) {
     li .body p {
       font-size: 2em;
-      max-height: 6em;
-      padding-left: 3em;
-      padding-right: 3em;
+      max-height: 6.25em;
+      padding-top: 0.25em;
+      padding-left: 2.25em;
+      padding-right: 2.25em;
     }
     li .body p.more {
-      padding-right: 6em;
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 1em;
+      padding-right: 4.5em;
     }
   }
   li a:hover  .body p,
@@ -439,13 +467,34 @@
     margin-right: 0.5em;
   }
 
+  li.inactive {
+    display: none;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+
 
   header {
     border-top-width: 0;
   }
   header a {
+    background: rgba(255, 255, 255, 0.95);
     background: white;
     color: black;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header h2 {
+    top: 0;
+    left: 0.25em;
+  }
+  header .action {
+    right: 0;
+    top: 0;
   }
   .meta .stories .count {
     color: rgba(0, 0, 0, 0.5);
@@ -461,12 +510,12 @@
   header a:focus  .meta .more {
     color: #0080d0; /* @boysenberry */
   }
-  li figure img {
-    top: calc(50vh + 12em); /* 200px (header height) / 16px = 12em */
-  }
 
-  li.inactive {
-    display: none;
+  /* @disabled */
+  @media (min-width: 99999px) {
+  }
+  li figure img {
+    top: calc(50vh + 10.5em); /* 200px (header height) / 16px = 12em */
   }
 
   </style>
@@ -502,7 +551,7 @@
     <li>
       <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
         <div class="body">
-          <p>Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only around 3 or 4, I would play a "game" on the computer that taught me "QWERTY" typing skills. The game would reward me every time I correctly typed "The quick brown fox jumped over the lazy dog" (even though I was still learning those words). Because this was happening at the same time that I was really ramping up my literacy skills, I learned how to write/type on the computer very young--and technology was inseparable from my imagination. I started typing out short stories and a novel (I think about wolves in Alaska?) when I was in second grade, because I could put anything I dreamt up right there on the screen--typed up as fast as I could think it!</p>
+          <p>Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only…</p>
           <p class="more">Read More</p>
         </div>
         <p class="source">
@@ -517,7 +566,7 @@
           <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/584/271/original/DirtBike_Riding.jpg=s1000x1000" alt="">
         </figure>
         <div class="body">
-          <p>I always plan to include an adventure whenever I go on my trip. I look for activities to do in the area and book for one which I haven't done. Adventures on my trip allows me to never forget my trip. :) Here are the images of my Zip-lining in Catalina Island, Dirt Biking riding in Hungry Valley last but not least Parasailing in beaches of LA.</p>
+          <p>I always plan to include an adventure whenever I go on my trip. I look for activities to do in the area and book for one…</p>
           <p class="more">Read More</p>
         </div>
         <p class="source">
@@ -534,7 +583,7 @@
           <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F267%2Foriginal%2F95fb124aa53811e2877122000a1fbc4f_7.jpg&amp;geometry=1000x1000%3E" />
         </figure>
         <div class="body">
-          <p>A few of my friends and I go for a monthly hike.  Here are some pics from our recent walk around Paramount Ranch in Malibu.  This is an old Western set used by Paramount for various films and tv shows, such as Dr. Quinn…</p>
+          <p>A few of my friends and I go for a monthly hike.  Here are some pics from our recent walk around Paramount Ranch in Malibu…</p>
           <p class="more">Read More</p>
         </div>
         <p class="source">
@@ -549,7 +598,7 @@
           <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=1000x1000%3E" />
         </figure>
         <div class="body">
-          <p>I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours…</p>
+          <p>I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex…</p>
           <p class="more">Read More</p>
         </div>
         <p class="source">
@@ -564,7 +613,7 @@
           <img src="//img.youtube.com/vi/IGfjMnvJaak/0.jpg" alt="">
         </figure>
         <div class="body">
-          <p>Cyclists could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending and, perhaps, create more jobs…</p>
+          <p>Cyclists could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending…</p>
           <p class="more">Read More</p>
         </div>
         <p class="source">
@@ -624,7 +673,7 @@
       }
 
       next();
-      setInterval(next, 5000);
+      setInterval(next, 7000);
 
     })();
 
