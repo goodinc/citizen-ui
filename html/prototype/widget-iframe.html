@@ -192,6 +192,41 @@
     overflow: hidden;
     color: white;
   }
+
+  .raspberry {
+    background-color: #b70941;
+  }
+  .strawberry {
+    background-color: #ee135c;
+  }
+  .banana {
+    background-color: #ffd50c;
+  }
+  .bilberry {
+    background-color: #00efc7;
+  }
+  .tangerine {
+    background-color: #ff4f19;
+  }
+  .orange {
+    background-color: #f8830b;
+  }
+  .plumb {
+    background-color: #a72dff;
+  }
+  .blueberry {
+    background-color: #009cff;
+  }
+  .boysenberry {
+    background-color: #0080d0;
+  }
+  .kiwi {
+    background-color: #26b252;
+  }
+  .lime {
+    background-color: #2fd864;
+  }
+
   li a {
     display: block;
     text-decoration: none;
@@ -350,6 +385,38 @@
       </a>
     </li>
   </ul>
+
+  <script>
+
+    (function() {
+
+      var colors = [
+        'raspberry',
+        'strawberry',
+        'banana',
+        'bilberry',
+        'tangerine',
+        'orange',
+        'plumb',
+        'blueberry',
+        'boysenberry',
+        'kiwi',
+        'lime'
+      ];
+
+      var min = 0;
+      var max = colors.length - 1;
+
+      var items = document.getElementsByTagName('li');
+      var random;
+      for (var index = 0; index < items.length; index++) {
+        random = Math.floor(Math.random() * (max - min + 1) + min);
+        items[index].className += colors[random];
+      }
+
+    })();
+
+  </script>
 
 </body>
 </html>
