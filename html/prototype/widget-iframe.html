@@ -419,6 +419,7 @@
     margin-left: 0.375em;
     opacity: 0.75;
     /*
+    @icon-right
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
       <path fill="white" d="M8.8,3c-0.5,0.5-0.5,1.2,0,1.6l4.2,4.2H4.3c-0.6,0-1.2,0.5-1.2,1.2c0,0.7,0.6,1.2,1.2,1.2H13l-4.2,4.2
         c-0.5,0.4-0.5,1.1,0,1.6s1.1,0.4,1.6,0l6.2-6.2c0.2-0.2,0.3-0.5,0.3-0.8s-0.1-0.6-0.3-0.8L10.4,3C9.9,2.6,9.1,2.6,8.8,3z"/>
@@ -515,7 +516,11 @@
   @media (min-width: 99999px) {
   }
   li figure img {
-    top: calc(50vh + 10.5em); /* 200px (header height) / 16px = 12em */
+    /* Fallback */
+    top: 420px; /* 120px + 300px (assumed viewport height) */
+
+    /* For browsers that understand calc() */
+    top: calc(50vh + 7.5em); /* 120px (header height) / 16px = 12em */
   }
 
   </style>
@@ -527,7 +532,10 @@
     <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
       <h2>Do</h2>
 
-      <h1>Share a story about how design and technology helped you (or someone you love) learn.</h1>
+      <h1>Share a story about how design and technology helped you learn.</h1>
+      <!--
+      <h1>Go on an adventure</h1>
+      -->
 
       <p class="action">Add your story</p>
 
