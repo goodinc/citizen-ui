@@ -146,11 +146,17 @@
     width: 100%;
     color: white;
     border-top: 5px solid rgb(0, 0, 0);
+    font-size: 0.875em;
+  }
+  @media (min-width: 40em) {
+    header {
+      font-size: inherit;
+    }
   }
   header a {
     display: block;
     text-decoration: none;
-    padding: 1.5em 1.25em;
+    padding: 1.5em 1.25em 1em;
   }
   header a:hover,
   header a:active,
@@ -162,19 +168,20 @@
     margin: 0;
   }
   header h1 {
-    margin-top: 0.375em;
-    vertical-align: middle;
+    font-size: inherit;
+    line-height: inherit;
     font-size: 1.5em;
+    line-height: 1.25;
+    margin-top: 2em;
+    vertical-align: middle;
+    max-height: 3.75em;
+    overflow: hidden;
   }
   @media (min-width: 40em) {
     header h1 {
       margin-top: 0;
-      font-size: 2.25em;
-      line-height   : 1.1666666667em;     /* @line-height x 3/2 / 2.25 */
-    }
-    header h1,
-    header h2 {
-      display: inline;
+      margin-left: 55px;
+      margin-right: 175px;
     }
   }
   header h2 {
@@ -189,8 +196,13 @@
     line-height: 2.25em;
     text-align: center;
     margin: 0;
-    display: inline-block;
     margin-right: 0.875em;
+  }
+
+  header h2 {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
   }
   header .action {
     position: absolute;
@@ -205,7 +217,6 @@
     border-radius: 0.125;
     line-height: 1.5em;
     padding: 0.5em 1em;
-    transition: color 0.2s, background-color 0.2s;
   }
   @media (min-width: 40em) {
     header .action {
@@ -255,6 +266,9 @@
     vertical-align: middle;
     margin-right: 0.375em;
   }
+  .meta .stories svg path {
+    fill: currentColor;
+  }
   .meta .more {
     float: right;
     text-transform: lowercase;
@@ -277,11 +291,11 @@
     text-decoration: none;
     overflow: hidden;
     color: white;
-    padding-top: 12em;
+    padding-top: 15em;
   }
   @media (min-width: 40em) {
     li a {
-      padding-top: 9em;
+      padding-top: 12em;
     }
   }
   li a:hover,
@@ -364,29 +378,44 @@
     margin-left: -50vmax;
     margin-top: -50vmax;
   }
-  li .body {
-    font-size: 1.5em;
-    max-height: 12em;
+  li .body p {
+    font-size: 1.25em;
+    max-height: 10.5em;
     overflow: hidden;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
 
-    padding: 1.5em 3em 0;
+    padding: 1.5em 1.5em 0;
     color: rgb(204, 204, 204);
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
-    transition: color 0.2s;
+  }
+  li .body p.more {
+    margin-top: 0;
+    padding-top: 0;
+    padding-right: 1.875em;
+    text-align: right;
+    text-transform: lowercase;
+    font-size: 1em;
+  }
+  li .body p.more:after {
+    content: "…";
   }
   @media (min-width: 40em) {
-    li .body {
+    li .body p {
       font-size: 2em;
-      max-height: 7.5em;
+      max-height: 6em;
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+    li .body p.more {
+      padding-right: 6em;
     }
   }
-  li a:hover  .body,
-  li a:active .body,
-  li a:focus  .body {
+  li a:hover  .body p,
+  li a:active .body p,
+  li a:focus  .body p {
     color: white;
   }
   li .source {
@@ -402,11 +431,42 @@
     z-index: 3;
     margin-bottom: 0;
     text-align: right;
+    font-size: 0.875em;
   }
   li .source .avatar,
   li .source img {
     vertical-align: middle;
     margin-right: 0.5em;
+  }
+
+
+  header {
+    border-top-width: 0;
+  }
+  header a {
+    background: white;
+    color: black;
+  }
+  .meta .stories .count {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  header .meta {
+    border-top-color: rgba(0, 0, 0, 0.1);
+  }
+  header .meta .more {
+    color: #009cff; /* @blueberry */
+  }
+  header a:hover  .meta .more,
+  header a:active .meta .more,
+  header a:focus  .meta .more {
+    color: #0080d0; /* @boysenberry */
+  }
+  li figure img {
+    top: calc(50vh + 12em); /* 200px (header height) / 16px = 12em */
+  }
+
+  li.inactive {
+    display: none;
   }
 
   </style>
@@ -415,10 +475,10 @@
 <body>
 
   <header>
-    <a href="http://community.good.is/do/go-for-an-adventure--2">
+    <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
       <h2>Do</h2>
 
-      <h1>Go for an adventure</h1>
+      <h1>Share a story about how design and technology helped you (or someone you love) learn.</h1>
 
       <p class="action">Add your story</p>
 
@@ -440,8 +500,11 @@
 
   <ul>
     <li>
-      <a href="http://community.good.is/do/go-for-an-adventure--2">
-        <p class="body">Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only around 3 or 4, I would play a "game" on the computer that taught me "QWERTY" typing skills. The game would reward me every time I correctly typed "The quick brown fox jumped over the lazy dog" (even though I was still learning those words). Because this was happening at the same time that I was really ramping up my literacy skills, I learned how to write/type on the computer very young--and technology was inseparable from my imagination. I started typing out short stories and a novel (I think about wolves in Alaska?) when I was in second grade, because I could put anything I dreamt up right there on the screen--typed up as fast as I could think it!</p>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+        <div class="body">
+          <p>Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only around 3 or 4, I would play a "game" on the computer that taught me "QWERTY" typing skills. The game would reward me every time I correctly typed "The quick brown fox jumped over the lazy dog" (even though I was still learning those words). Because this was happening at the same time that I was really ramping up my literacy skills, I learned how to write/type on the computer very young--and technology was inseparable from my imagination. I started typing out short stories and a novel (I think about wolves in Alaska?) when I was in second grade, because I could put anything I dreamt up right there on the screen--typed up as fast as I could think it!</p>
+          <p class="more">Read More</p>
+        </div>
         <p class="source">
           <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/573/222/original/Screen_Shot_2015-02-13_at_11.22.36_AM.png=c30x30" width="30">
           Katie Wudel
@@ -449,11 +512,14 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/go-for-an-adventure--2">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
         <figure>
           <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/584/271/original/DirtBike_Riding.jpg=s1000x1000" alt="">
         </figure>
-        <p class="body">I always plan to include an adventure whenever I go on my trip. I look for activities to do in the area and book for one which I haven't done. Adventures on my trip allows me to never forget my trip. :) Here are the images of my Zip-lining in Catalina Island, Dirt Biking riding in Hungry Valley last but not least Parasailing in beaches of LA</p>
+        <div class="body">
+          <p>I always plan to include an adventure whenever I go on my trip. I look for activities to do in the area and book for one which I haven't done. Adventures on my trip allows me to never forget my trip. :) Here are the images of my Zip-lining in Catalina Island, Dirt Biking riding in Hungry Valley last but not least Parasailing in beaches of LA.</p>
+          <p class="more">Read More</p>
+        </div>
         <p class="source">
           <span class="avatar">
             <span class="size30 sky" data-content="e"></span>
@@ -463,11 +529,14 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/go-for-an-adventure--2">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
         <figure>
           <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F267%2Foriginal%2F95fb124aa53811e2877122000a1fbc4f_7.jpg&amp;geometry=1000x1000%3E" />
         </figure>
-        <p class="body">A few of my friends and I go for a monthly hike.  Here are some pics from our recent walk around Paramount Ranch in Malibu.  This is an old Western set used by Paramount for various films and tv shows, such as Dr. Quinn… <span class="action">See more</span></p>
+        <div class="body">
+          <p>A few of my friends and I go for a monthly hike.  Here are some pics from our recent walk around Paramount Ranch in Malibu.  This is an old Western set used by Paramount for various films and tv shows, such as Dr. Quinn…</p>
+          <p class="more">Read More</p>
+        </div>
         <p class="source">
           <img alt="" height="30" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F789%2F706%2Foriginal%2F68757_10150302296215416_2135631_n.jpg&amp;geometry=30x30%23" width="30" />
           Paris Marron
@@ -475,11 +544,14 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/go-for-an-adventure--2">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
         <figure>
           <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=1000x1000%3E" />
         </figure>
-        <p class="body">I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours… <span class="action">View story</span></p>
+        <div class="body">
+          <p>I have the good fortune of working in a building and a neighborhood teeming with creative people.  A few months ago Skrillex, the one and only, had a rehearsal space downstairs and from the hours…</p>
+          <p class="more">Read More</p>
+        </div>
         <p class="source">
           <img alt="" height="30" src="http://images-3.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F002%2F175%2F132%2Foriginal%2FEthan_Lipsitz_Fabric_Library.jpg&amp;geometry=30x30%23" width="30" />
           Ethan Lipsitz
@@ -487,11 +559,14 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/go-for-an-adventure--2">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
         <figure>
           <img src="//img.youtube.com/vi/IGfjMnvJaak/0.jpg" alt="">
         </figure>
-        <p class="body">Cyclists could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending and, perhaps, create more jobs… <span class="action">View story</span></p>
+        <div class="body">
+          <p>Cyclists could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending and, perhaps, create more jobs…</p>
+          <p class="more">Read More</p>
+        </div>
         <p class="source">
           <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/115/613/original/profile_next.png=c30x30" width="30" />
           Nicolo Riggio
@@ -527,8 +602,29 @@
       for (var index = 0; index < items.length; index++) {
         cursor = (cursor + 1) % colors.length;
         var link = items[index].getElementsByTagName('a')[0];
-        link.className += colors[cursor];
+        link.className += ' ' + colors[cursor];
+        items[index].className = 'inactive';
       }
+
+    })();
+
+    (function() {
+
+      var items = document.getElementsByTagName('li');
+
+      var min = 0;
+      var max = items.length - 1;
+
+      var cursor = Math.floor(Math.random() * (max - min + 1) + min);
+
+      function next() {
+        items[cursor].className = 'inactive';
+        cursor = (cursor + 1) % items.length;
+        items[cursor].className = '';
+      }
+
+      next();
+      setInterval(next, 5000);
 
     })();
 
