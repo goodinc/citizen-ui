@@ -8,6 +8,36 @@
 
   <style>
 
+  /* =Third Party Fonts
+  -----------------------------------------------
+  This CSS resource incorporates links to font software which is the valuable copyrighted
+  property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+  redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+  Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url(../../assets/third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot);
+    src: url(../../assets/third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot?#iefix) format("eot"),
+         url(../../assets/third-party/4f2d0548-c7dc-459b-a2e0/e86656a10ded.woff)       format("woff"),
+         url(../../assets/third-party/dc21d9e5-516f-4e7e-9a84/7be79a44c2dd.ttf)        format("truetype"),
+         url(../../assets/third-party/a9bdb836-ee14-494d-8c69/5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Trade Gothic Bold Condensed";
+    src: url(../../assets/third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot);
+    src: url(../../assets/third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot?#iefix) format("eot"),
+         url(../../assets/third-party/5fdc935e-9e30-442a-bbe9/8d887b858471.woff)       format("woff"),
+         url(../../assets/third-party/616c4c87-a077-43f4-a9f4/f01267c13818.ttf)        format("truetype"),
+         url(../../assets/third-party/c901ad5f-a842-4549-a1f4/583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
 
   /* =Elements
   -----------------------------------------------
@@ -18,21 +48,20 @@
     height: 100%;
   }
   body {
-    font: 100%/1.75 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
     margin: 0;
     padding: 0;
-    background: rgb(249, 249, 250); /* @vanilla */
-    color: rgb(42, 43, 44); /* @tungsten */
+    background: white;
+    color: black;
   }
   a {
-    color: rgb(113, 179, 247); /* @sky */
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s, opacity 0.2s;
+    color: white;
+    text-decoration: none;
   }
   a:hover,
   a:active,
   a:focus {
-    color: rgb(47, 132, 218); /* @ocean */
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   /* Fit media to the available width */
@@ -46,23 +75,6 @@
 
   a img {
     border-width: 0;
-  }
-
-
-  .action a {
-    display: inline-block;
-    background-color: rgb(124, 227, 162); /* @moss */
-    color: white;
-    border: 0.1em solid rgba(0, 0, 0, 0.15);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0.125;
-    line-height: 1.6875em;
-    padding: 0.5625em 1.25em;
-    transition: color 0.2s, background-color 0.2s;
-  }
-  .action a {
-    background-color: rgb(64, 198, 149); /* @clover */
   }
 
 
@@ -126,24 +138,48 @@
   /* =Stories
   ----------------------------------------------- */
   header {
-    background: rgb(249, 249, 250); /* @vanilla */
-    padding: 1.5em;
     box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
     width: 100%;
+    color: white;
+    border-top: 5px solid rgb(0, 0, 0);
+  }
+  header a {
+    display: block;
+    text-decoration: none;
+    padding: 1.5em 1.25em;
+  }
+  header a:hover,
+  header a:active,
+  header a:focus {
+    text-decoration: none;
   }
   header h1,
   header h2 {
     margin: 0;
-    display: inline;
   }
   header h1 {
+    margin-top: 0.375em;
     vertical-align: middle;
+    font-size: 1.5em;
+  }
+  @media (min-width: 40em) {
+    header h1 {
+      margin-top: 0;
+      font-size: 2.25em;
+      line-height   : 1.1666666667em;     /* @line-height x 3/2 / 2.25 */
+    }
+    header h1,
+    header h2 {
+      display: inline;
+    }
   }
   header h2 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
     text-transform: uppercase;
     font-size: 1em;
     background: rgb(0, 0, 0);
@@ -157,11 +193,35 @@
     margin-right: 0.875em;
   }
   header .action {
-    float: right;
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
     margin: 0;
+    background-color: #2fd864; /* @lime */
+    color: white;
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.125;
+    line-height: 1.5em;
+    padding: 0.5em 1em;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  @media (min-width: 40em) {
+    header .action {
+      display: inline-block;
+      float: right;
+    }
+  }
+  header a:hover  .action,
+  header a:active .action,
+  header a:focus  .action {
+    background-color: #26b252; /* @kiwi */
   }
   .meta {
     margin-top: 1em;
+    border-top: 0.1em solid rgba(255, 255, 255, 0.25);
+    padding-top: 0.75em;
   }
   .meta:after {
     content: "";
@@ -172,11 +232,32 @@
     margin: 0;
     display: inline;
   }
-  .meta p:last-child {
-    float: right;
+  .meta .stories {
+    font-size: 0.875em;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
   }
-  ul {
-    margin: 9em 0 00;
+  .meta .stories .count {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: none;
+    font-variant: default;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    margin-left: 0.375em;
+  }
+  .meta .stories .count:before {
+    content: "(";
+  }
+  .meta .stories .count:after {
+    content: ")";
+  }
+  .meta .stories svg {
+    vertical-align: middle;
+    margin-right: 0.375em;
+  }
+  .meta .more {
+    float: right;
+    text-transform: lowercase;
   }
   ul,
   li {
@@ -184,13 +265,30 @@
     margin-left: 0;
     padding-left: 0;
   }
-  li {
-    height: calc(100vh - 9em);
+  ul {
+    margin: 0;
+  }
+  li a {
+    background-color: #2fd864; /* @lime */
+    display: block;
+    height: 100vh;
     position: relative;
     box-sizing: border-box;
-    background: rgb(64, 198, 149); /* @clover */
+    text-decoration: none;
     overflow: hidden;
     color: white;
+    padding-top: 12em;
+  }
+  @media (min-width: 40em) {
+    li a {
+      padding-top: 9em;
+    }
+  }
+  li a:hover,
+  li a:active,
+  li a:focus {
+    color: white;
+    text-decoration: none;
   }
 
   .raspberry {
@@ -227,15 +325,20 @@
     background-color: #2fd864;
   }
 
-  li a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+  li figure {
+    padding: 0;
+    margin: 0;
   }
-  li a:hover,
-  li a:active,
-  li a:focus {
-    color: inherit;
+  li figure:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
   }
   li figure img {
     max-width: 100%;
@@ -262,26 +365,35 @@
     margin-top: -50vmax;
   }
   li .body {
-    font-size: 2em;
-    margin: 1.5em 0 0;
-    max-height: 8.25em;
-    max-height: calc(100vh - 3.5em);
+    font-size: 1.5em;
+    max-height: 12em;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    padding: 1.5em;
     box-sizing: border-box;
+
+    padding: 1.5em 3em 0;
+    color: rgb(204, 204, 204);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    transition: color 0.2s;
   }
-  @media (min-aspect-ratio: 1/1) {
+  @media (min-width: 40em) {
     li .body {
-      max-height: 8.25em;
+      font-size: 2em;
+      max-height: 7.5em;
     }
+  }
+  li a:hover  .body,
+  li a:active .body,
+  li a:focus  .body {
+    color: white;
   }
   li .source {
     background: black;
     background: rgba(0, 0, 0, 0.25);
     color: white;
-    padding: 1.5em;
+    padding: 1.25em;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -303,30 +415,32 @@
 <body>
 
   <header>
-    <h2>Do</h2>
+    <a href="http://community.good.is/do/go-for-an-adventure--2">
+      <h2>Do</h2>
 
-    <h1>Go for an adventure</h1>
+      <h1>Go for an adventure</h1>
 
-    <p class="action"><a href="">Add your story</a></p>
+      <p class="action">Add your story</p>
 
-    <div class="meta">
-      <p>
-        <svg viewBox="0 0 20 20" width="20" height="20">
-          <path fill="black" d="M11.8,10.9c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9
-            C11.4,11.8,11.8,11.4,11.8,10.9z M13.1,3.4v4L9.9,5.6L3.3,8.5V3.4h0H13.1z M17.9,19H5.7c-0.6,0-1.1-0.5-1.1-1.1v-2.5H2.1
-            c-0.6,0-1.1-0.5-1.1-1.1V2.1C1,1.5,1.5,1,2.1,1h12.2c0.6,0,1.1,0.5,1.1,1.1v2.5h2.5c0.6,0,1.1,0.5,1.1,1.1v12.2
-            C19,18.5,18.5,19,17.9,19z M14,2.4H2.4V14H14C14,14,14,2.4,14,2.4z M17.6,6h-2.2v8.3c0,0.6-0.5,1.1-1.1,1.1H6v2.2h11.5
-            C17.6,17.6,17.6,6,17.6,6z"/>
-        </svg>
-        Stories (12)
-      </p>
-      <p class="more"><a href="">View more on community.good.is</a></p>
-    </div><!-- /.meta -->
+      <div class="meta">
+        <p class="stories">
+          <svg viewBox="0 0 20 20" width="20" height="20">
+            <path fill="white" d="M11.8,10.9c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9
+              C11.4,11.8,11.8,11.4,11.8,10.9z M13.1,3.4v4L9.9,5.6L3.3,8.5V3.4h0H13.1z M17.9,19H5.7c-0.6,0-1.1-0.5-1.1-1.1v-2.5H2.1
+              c-0.6,0-1.1-0.5-1.1-1.1V2.1C1,1.5,1.5,1,2.1,1h12.2c0.6,0,1.1,0.5,1.1,1.1v2.5h2.5c0.6,0,1.1,0.5,1.1,1.1v12.2
+              C19,18.5,18.5,19,17.9,19z M14,2.4H2.4V14H14C14,14,14,2.4,14,2.4z M17.6,6h-2.2v8.3c0,0.6-0.5,1.1-1.1,1.1H6v2.2h11.5
+              C17.6,17.6,17.6,6,17.6,6z"/>
+          </svg>
+          Stories <span class="count">12</span>
+        </p>
+        <p class="more">View more on community.good.is</p>
+      </div><!-- /.meta -->
+    </a>
   </header>
 
   <ul>
     <li>
-      <a href="">
+      <a href="http://community.good.is/do/go-for-an-adventure--2">
         <p class="body">Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only around 3 or 4, I would play a "game" on the computer that taught me "QWERTY" typing skills. The game would reward me every time I correctly typed "The quick brown fox jumped over the lazy dog" (even though I was still learning those words). Because this was happening at the same time that I was really ramping up my literacy skills, I learned how to write/type on the computer very young--and technology was inseparable from my imagination. I started typing out short stories and a novel (I think about wolves in Alaska?) when I was in second grade, because I could put anything I dreamt up right there on the screen--typed up as fast as I could think it!</p>
         <p class="source">
           <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/573/222/original/Screen_Shot_2015-02-13_at_11.22.36_AM.png=c30x30" width="30">
@@ -335,7 +449,7 @@
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="http://community.good.is/do/go-for-an-adventure--2">
         <figure>
           <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/584/271/original/DirtBike_Riding.jpg=s1000x1000" alt="">
         </figure>
@@ -349,7 +463,7 @@
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="http://community.good.is/do/go-for-an-adventure--2">
         <figure>
           <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F267%2Foriginal%2F95fb124aa53811e2877122000a1fbc4f_7.jpg&amp;geometry=1000x1000%3E" />
         </figure>
@@ -361,7 +475,7 @@
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="http://community.good.is/do/go-for-an-adventure--2">
         <figure>
           <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=1000x1000%3E" />
         </figure>
@@ -373,10 +487,10 @@
       </a>
     </li>
     <li>
-      <figure>
-        <img src="//img.youtube.com/vi/IGfjMnvJaak/0.jpg" alt="">
-      </figure>
-      <a href="">
+      <a href="http://community.good.is/do/go-for-an-adventure--2">
+        <figure>
+          <img src="//img.youtube.com/vi/IGfjMnvJaak/0.jpg" alt="">
+        </figure>
         <p class="body">Cyclists could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending and, perhaps, create more jobs… <span class="action">View story</span></p>
         <p class="source">
           <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/115/613/original/profile_next.png=c30x30" width="30" />
@@ -392,15 +506,15 @@
 
       var colors = [
         'raspberry',
-        'strawberry',
-        'banana',
-        'bilberry',
         'tangerine',
-        'orange',
         'plumb',
         'blueberry',
-        'boysenberry',
         'kiwi',
+        'strawberry',
+        //'banana',
+        //'bilberry',
+        'orange',
+        'boysenberry',
         'lime'
       ];
 
@@ -408,10 +522,12 @@
       var max = colors.length - 1;
 
       var items = document.getElementsByTagName('li');
-      var random;
+      var cursor = Math.floor(Math.random() * (max - min + 1) + min);
+
       for (var index = 0; index < items.length; index++) {
-        random = Math.floor(Math.random() * (max - min + 1) + min);
-        items[index].className += colors[random];
+        cursor = (cursor + 1) % colors.length;
+        var link = items[index].getElementsByTagName('a')[0];
+        link.className += colors[cursor];
       }
 
     })();
