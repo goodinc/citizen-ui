@@ -284,16 +284,16 @@
     font-size: inherit;
     line-height: 1.5;
   }
-  ul,
-  li {
-    list-style: none;
+  .story-list,
+  .story-list li {
+    .story-list list-style: none;
     margin-left: 0;
     padding-left: 0;
   }
-  ul {
+  .story-list {
     margin: 0;
   }
-  li a {
+  .story-list a {
     background-color: #2fd864; /* @lime */
     display: block;
     height: 100vh;
@@ -304,52 +304,52 @@
     color: white;
     padding-top: 12em;
   }
-  li a:hover,
-  li a:active,
-  li a:focus {
+  .story-list a:hover,
+  .story-list a:active,
+  .story-list a:focus {
     color: white;
     text-decoration: none;
   }
 
-  .raspberry {
+  .story-list .raspberry {
     background-color: #b70941;
   }
-  .strawberry {
+  .story-list .strawberry {
     background-color: #ee135c;
   }
-  .banana {
+  .story-list .banana {
     background-color: #ffd50c;
   }
-  .bilberry {
+  .story-list .bilberry {
     background-color: #00efc7;
   }
-  .tangerine {
+  .story-list .tangerine {
     background-color: #ff4f19;
   }
-  .orange {
+  .story-list .orange {
     background-color: #f8830b;
   }
-  .plumb {
+  .story-list .plumb {
     background-color: #a72dff;
   }
-  .blueberry {
+  .story-list .blueberry {
     background-color: #009cff;
   }
-  .boysenberry {
+  .story-list .boysenberry {
     background-color: #0080d0;
   }
-  .kiwi {
+  .story-list .kiwi {
     background-color: #26b252;
   }
-  .lime {
+  .story-list .lime {
     background-color: #2fd864;
   }
 
-  li figure {
+  .story-list li figure {
     padding: 0;
     margin: 0;
   }
-  li figure:before {
+  .story-list li figure:before {
     content: "";
     position: absolute;
     top: 0;
@@ -360,7 +360,7 @@
     background: rgba(0, 0, 0, 0.25);
     z-index: 1;
   }
-  li figure img {
+  .story-list li figure img {
     max-width: 100%;
     height: auto;
 
@@ -384,7 +384,7 @@
     margin-left: -50vmax;
     margin-top: -50vmax;
   }
-  li .body p {
+  .story-list li .body p {
     max-height: 9.75em;
     overflow: hidden;
     position: relative;
@@ -397,15 +397,15 @@
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
   }
-  li .body p.more {
-    margin-top: 0;
+  .story-list li .body p.more {
+    margin-top: 1em;
     padding-top: 0;
     padding-right: 1.25em;
     text-align: right;
     text-transform: lowercase;
     font-size: 0.75em;
   }
-  li .body p.more:after {
+  .story-list li .body p.more:after {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -425,12 +425,12 @@
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+DQogIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNOC44LDNjLTAuNSwwLjUtMC41LDEuMiwwLDEuNmw0LjIsNC4ySDQuM2MtMC42LDAtMS4yLDAuNS0xLjIsMS4yYzAsMC43LDAuNiwxLjIsMS4yLDEuMkgxM2wtNC4yLDQuMg0KICAgIGMtMC41LDAuNC0wLjUsMS4xLDAsMS42czEuMSwwLjQsMS42LDBsNi4yLTYuMmMwLjItMC4yLDAuMy0wLjUsMC4zLTAuOHMtMC4xLTAuNi0wLjMtMC44TDEwLjQsM0M5LjksMi42LDkuMSwyLjYsOC44LDN6Ii8+DQo8L3N2Zz4=);
   }
   @media (min-width: 40em) {
-    li .body p {
+    .story-list li .body p {
       font-size: 1.25em;
       padding-left: 3.75em; /* 4.6875em / 1.25em */
       padding-right: 3.75em;
     }
-    li .body p.more {
+    .story-list li .body p.more {
       margin-top: 1em;
       font-size: 0.75em;
       padding-right: 6.25em;
@@ -438,14 +438,14 @@
   }
   /*
   @media (min-width: 40em) {
-    li .body p {
+    .story-list li .body p {
       font-size: 2em;
       max-height: 6.25em;
       padding-top: 0.25em;
       padding-left: 2.25em;
       padding-right: 2.25em;
     }
-    li .body p.more {
+    .story-list li .body p.more {
       margin-top: 0;
       padding-top: 0;
       font-size: 1em;
@@ -453,12 +453,12 @@
     }
   }
   */
-  li a:hover  .body p,
-  li a:active .body p,
-  li a:focus  .body p {
+  .story-list li a:hover  .body p,
+  .story-list li a:active .body p,
+  .story-list li a:focus  .body p {
     color: white;
   }
-  li .source {
+  .story-list li .source {
     background: black;
     background: rgba(0, 0, 0, 0.25);
     color: white;
@@ -474,17 +474,23 @@
     font-size: 0.75em;
   }
   @media (min-width: 40em) {
-    li .source {
+    .story-list li .source {
       padding-right: 6.25em;
     }
   }
-  li .source .avatar,
-  li .source img {
+  .story-list li .source .avatar,
+  .story-list li .source img {
     vertical-align: middle;
     margin-right: 0.5em;
   }
 
-  li.inactive {
+  /* Attempt to make the image the same size as the avatar */
+  .story-list li .source img {
+    width: 1.875em;
+    height: 1.875em;
+  }
+
+  .story-list li.inactive {
     display: none;
   }
 
@@ -493,6 +499,66 @@
     background: rgba(0, 0, 0, 0.5);
   }
   */
+
+  nav {
+    position: absolute;
+    bottom: 0;
+    left: 0.5em;
+    z-index: 9999;
+  }
+
+  @media (min-width: 40em) {
+    nav {
+      left: 2.25em;
+    }
+  }
+
+  nav ul,
+  nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  nav ul {
+    margin: 0;
+  }
+  nav li {
+    display: block;
+    float: left;
+  }
+  nav button {
+    display: block;
+    background: transparent;
+    padding: 0.875em 0.375em;
+    border-width: 0;
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    font-size: 0.75em;
+  }
+  nav button:hover,
+  nav button:active,
+  nav button:focus {
+    color: white;
+  }
+  nav button svg {
+    width: 1.25em;
+    height: 1.25em;
+  }
+  nav button svg path {
+    fill: currentColor;
+  }
+
+  @media (min-width: 40em) {
+    nav button {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    nav button svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
 
   header {
     border-top-width: 0;
@@ -539,7 +605,7 @@
     color: #0080d0; /* @boysenberry */
   }
 
-  li figure img {
+  .story-list li figure img {
     /* Fallback */
     top: 420px; /* 120px + 300px (assumed viewport height) */
 
@@ -548,14 +614,14 @@
   }
 
   @media (min-width: 40em) {
-    li .body p {
+    .story-list li .body p {
       padding-left: 2.5em;
       padding-right: 2.5em;
     }
-    li .body p.more {
+    .story-list li .body p.more {
       padding-right: 5em;
     }
-    li .source {
+    .story-list li .source {
       padding-right: 5em;
     }
   }
@@ -592,7 +658,7 @@
     </a>
   </header>
 
-  <ul>
+  <ul class="story-list">
     <li>
       <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-8B6ABB0E" target="_top">
         <div class="body">
@@ -669,9 +735,33 @@
     </li>
   </ul>
 
+  <script type="text/template" id="navigation">
+  <nav>
+    <ul>
+      <li>
+        <button class="previous">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+            <path d="M14.5,19V1l-9,9L14.5,19z"/>
+            <foreignobject>Previous</foreignobject>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+            <path d="M14.5,10l-9-9v18L14.5,10z"/>
+            <foreignobject>Next</foreignobject>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  </script>
+
   <script>
 
     (function() {
+      if (!document.querySelectorAll) return;
 
       var colors = [
         'raspberry',
@@ -690,12 +780,12 @@
       var min = 0;
       var max = colors.length - 1;
 
-      var items = document.getElementsByTagName('li');
+      var items = document.querySelectorAll('.story-list li');
       var cursor = Math.floor(Math.random() * (max - min + 1) + min);
 
       for (var index = 0; index < items.length; index++) {
         cursor = (cursor + 1) % colors.length;
-        var link = items[index].getElementsByTagName('a')[0];
+        var link = items[index].querySelector('a');
         link.className += ' ' + colors[cursor];
         items[index].className = 'inactive';
       }
@@ -703,8 +793,9 @@
     })();
 
     (function() {
+      if (!document.querySelectorAll || !document.body.addEventListener) return;
 
-      var items = document.getElementsByTagName('li');
+      var items = document.querySelectorAll('.story-list li');
 
       var min = 0;
       var max = items.length - 1;
@@ -717,8 +808,35 @@
         items[cursor].className = '';
       }
 
+      function previous() {
+        items[cursor].className = 'inactive';
+        if (cursor == 0) cursor = items.length;
+        cursor = (cursor - 1) % items.length;
+        items[cursor].className = '';
+      }
+
       next();
       setInterval(next, 7000);
+
+      var navigation = document.getElementById('navigation');
+      if (navigation) {
+        var div = document.createElement('div');
+        div.innerHTML = navigation.innerHTML;
+        document.body.appendChild(div);
+
+        function addEvents() {
+          var nextButton     = document.querySelector('nav .next');
+          var previousButton = document.querySelector('nav .previous');
+          if (nextButton && previousButton) {
+            nextButton.addEventListener('click', next, false);
+            previousButton.addEventListener('click', previous, false);
+          } else {
+            setTimeout(addEvents, 10);
+          }
+        }
+
+        addEvents();
+      }
 
     })();
 
