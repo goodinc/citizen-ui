@@ -505,6 +505,8 @@
     bottom: 0;
     left: 0.5em;
     z-index: 9999;
+    padding-top: 3em;
+    padding-right: 3em;
   }
 
   @media (min-width: 40em) {
@@ -566,7 +568,7 @@
 
   @media (min-width: 40em) {
     header .meta .stories {
-      padding-left: 4em;
+      padding-left: 1.875em;
     }
   }
 
@@ -826,7 +828,7 @@
       }
 
       next();
-      setInterval(next, 7000);
+      var timer = setInterval(next, 7000);
 
       var navigation = document.getElementById('navigation');
       if (navigation) {
@@ -838,8 +840,14 @@
           var nextButton     = document.querySelector('nav .next');
           var previousButton = document.querySelector('nav .previous');
           if (nextButton && previousButton) {
-            nextButton.addEventListener('click', next, false);
-            previousButton.addEventListener('click', previous, false);
+            nextButton.addEventListener('click', function(e) {
+              if (timer) clearInterval(timer); // Switch to manual mode, since the user is now pressing buttons.
+              next();
+            }, false);
+            previousButton.addEventListener('click', function(e) {
+              if (timer) clearInterval(timer);
+              previous();
+            }, false);
           } else {
             setTimeout(addEvents, 10);
           }
