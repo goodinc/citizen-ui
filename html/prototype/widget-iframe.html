@@ -384,7 +384,7 @@
     margin-top: -50vmax;
   }
   .story-list li .body p {
-    max-height: 9.75em;
+    max-height: 8.75em;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -398,12 +398,12 @@
     font-size: 0.875em;
   }
   .story-list li .body p.more {
-    margin-top: 0.5em;
+    margin-top: 0.5454545455em;
     padding-top: 0;
     padding-right: 1.25em;
     text-align: right;
     text-transform: lowercase;
-    font-size: 0.75em;
+    font-size: 0.6875em;
   }
   .story-list li .body p.more:after {
     content: "";
@@ -424,6 +424,18 @@
     */
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+DQogIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNOC44LDNjLTAuNSwwLjUtMC41LDEuMiwwLDEuNmw0LjIsNC4ySDQuM2MtMC42LDAtMS4yLDAuNS0xLjIsMS4yYzAsMC43LDAuNiwxLjIsMS4yLDEuMkgxM2wtNC4yLDQuMg0KICAgIGMtMC41LDAuNC0wLjUsMS4xLDAsMS42czEuMSwwLjQsMS42LDBsNi4yLTYuMmMwLjItMC4yLDAuMy0wLjUsMC4zLTAuOHMtMC4xLTAuNi0wLjMtMC44TDEwLjQsM0M5LjksMi42LDkuMSwyLjYsOC44LDN6Ii8+DQo8L3N2Zz4=);
   }
+  .story-list li .body p.video:after {
+    width: 1.5em;
+    height: 1.5em;
+    /*
+    @icon-play
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <polygon fill="white" points="8.3,6.6 12.9,10 8.3,13.4"/>
+      <path fill="white" d="M10,19c-5,0-9-4-9-9s4-9,9-9s9,4,9,9S15,19,10,19z M10,2.4c-4.2,0-7.6,3.4-7.6,7.6s3.4,7.6,7.6,7.6 s7.6-3.4,7.6-7.6S14.2,2.4,10,2.4z"/>
+    </svg>
+    */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+DQogIDxwb2x5Z29uIGZpbGw9IndoaXRlIiBwb2ludHM9IjguMyw2LjYgMTIuOSwxMCA4LjMsMTMuNCIvPg0KICA8cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTEwLDE5Yy01LDAtOS00LTktOXM0LTksOS05czksNCw5LDlTMTUsMTksMTAsMTl6IE0xMCwyLjRjLTQuMiwwLTcuNiwzLjQtNy42LDcuNnMzLjQsNy42LDcuNiw3LjYgczcuNi0zLjQsNy42LTcuNlMxNC4yLDIuNCwxMCwyLjR6Ii8+DQo8L3N2Zz4NCg==);
+  }
   @media (min-width: 40em) {
     .story-list li .body p {
       font-size: 1.25em;
@@ -431,9 +443,10 @@
       padding-right: 3.75em;
     }
     .story-list li .body p.more {
-      margin-top: 1em;
-      font-size: 0.75em;
-      padding-right: 6.25em;
+      margin-top: 0.5357142857em;
+      font-size: 0.875em;
+      padding-left: 3.5714285714em; /* 50px / 14px */
+      padding-right: 3.5714285714em; /* 50px / 14px */
     }
   }
   /*
@@ -620,9 +633,6 @@
       padding-left: 2.5em;
       padding-right: 2.5em;
     }
-    .story-list li .body p.more {
-      padding-right: 5em;
-    }
     .story-list li .source {
       padding-right: 5em;
     }
@@ -734,7 +744,7 @@
         </figure>
         <div class="body">
           <p>Cyclist could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending and, perhaps, create more jobs. In fact, the Transport Minister…</p>
-          <p class="more">Read More</p>
+          <p class="more video">Watch Video</p>
         </div>
         <p class="source">
           <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/115/613/original/profile_next.png=c30x30" width="30" />
