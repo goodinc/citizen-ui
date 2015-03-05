@@ -302,7 +302,7 @@
     text-decoration: none;
     overflow: hidden;
     color: white;
-    padding-top: 12.75em;
+    padding-top: 12em;
   }
   .story-list a:hover,
   .story-list a:active,
@@ -377,10 +377,10 @@
     height: auto;
 
     /* OPTIONAL: Center the image */
-    width: 140vmax;
+    width: 100vmax;
     left: 50vw;
     top: 50vh;
-    margin-left: -70vmax;
+    margin-left: -50vmax;
     margin-top: -50vmax;
   }
   .story-list li .body p {
@@ -581,7 +581,7 @@
 
   @media (min-width: 40em) {
     header .meta .stories {
-      padding-left: 0.125em;
+      padding-left: 1.875em;
     }
   }
 
@@ -589,18 +589,44 @@
   /* @disabled */
   @media (min-width: 99999px) {
   }
+  header a {
+    background: rgba(255, 255, 255, 0.95);
+    background: white;
+    color: black;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header h2 {
+    top: 0;
+    left: 0.25em;
+  }
+  header .action {
+    right: 0;
+    top: 0;
+  }
+  .meta .stories .count {
+    color: rgba(0, 0, 0, 0.5);
+  }
   header .meta {
     border-top-color: rgba(0, 0, 0, 0.1);
   }
   header .meta .more {
-    color: rgba(255, 255, 255, 0.5);
+    color: #009cff; /* @blueberry */
   }
   header a:hover  .meta .more,
   header a:active .meta .more,
   header a:focus  .meta .more {
-    color: white;
+    color: #0080d0; /* @boysenberry */
   }
 
+  .story-list li figure img {
+    /* Fallback */
+    top: 320px; /* 120px + 200px (assumed viewport height / 2) */
+
+    /* For browsers that understand calc() */
+    top: calc(50vh + 7.5em); /* 120px (header height) / 16px = 12em */
+  }
 
   @media (min-width: 40em) {
     .story-list li .body p {
@@ -622,6 +648,11 @@
     padding-right: 1.6666666667em;
   }
 
+  @media (min-height: 500px) {
+    .body {
+      font-size: 1.25em;
+    }
+  }
 
   </style>
 
