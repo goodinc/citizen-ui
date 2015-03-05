@@ -270,22 +270,19 @@
     text-transform: lowercase;
     font-size: 0.875em;
     line-height: 1.7142857143; /* @line-height / 0.875em */
+    padding-right: 1em;
   }
-  @media (min-width: 20em) {
-    .meta .stories {
-      margin: 0;
-      float: left;
-    }
-    .meta .more {
-      margin: 0;
-      float: right;
-    }
+  .meta .stories {
+    margin: 0;
+    float: left;
   }
-  @media (min-width: 25em) {
-    .meta .more {
-      font-size: inherit;
-      line-height: 1.5;
-    }
+  .meta .more {
+    margin: 0;
+    float: right;
+  }
+  .meta .more {
+    font-size: inherit;
+    line-height: 1.5;
   }
   ul,
   li {
@@ -388,14 +385,14 @@
     margin-top: -50vmax;
   }
   li .body p {
-    font-size: 1.25em;
     max-height: 9.75em;
     overflow: hidden;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
 
-    padding: 2.25em 2.25em 0;
+    margin: 0;
+    padding: 1.25em 1.25em 0;
     color: rgb(204, 204, 204);
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
@@ -403,7 +400,7 @@
   li .body p.more {
     margin-top: 0;
     padding-top: 0;
-    padding-right: 3.75em;
+    padding-right: 1.25em;
     text-align: right;
     text-transform: lowercase;
     font-size: 0.75em;
@@ -429,6 +426,19 @@
   }
   @media (min-width: 40em) {
     li .body p {
+      font-size: 1.25em;
+      padding-left: 3.75em; /* 4.6875em / 1.25em */
+      padding-right: 3.75em;
+    }
+    li .body p.more {
+      margin-top: 1em;
+      font-size: 0.75em;
+      padding-right: 6.25em;
+    }
+  }
+  /*
+  @media (min-width: 40em) {
+    li .body p {
       font-size: 2em;
       max-height: 6.25em;
       padding-top: 0.25em;
@@ -442,6 +452,7 @@
       padding-right: 4.5em;
     }
   }
+  */
   li a:hover  .body p,
   li a:active .body p,
   li a:focus  .body p {
@@ -451,7 +462,7 @@
     background: black;
     background: rgba(0, 0, 0, 0.25);
     color: white;
-    padding: 1.25em;
+    padding: 1em 1.25em;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -460,7 +471,12 @@
     z-index: 3;
     margin-bottom: 0;
     text-align: right;
-    font-size: 0.875em;
+    font-size: 0.75em;
+  }
+  @media (min-width: 40em) {
+    li .source {
+      padding-right: 6.25em;
+    }
   }
   li .source .avatar,
   li .source img {
@@ -472,14 +488,25 @@
     display: none;
   }
 
+  /*
   header {
     background: rgba(0, 0, 0, 0.5);
   }
-
-
+  */
 
   header {
     border-top-width: 0;
+  }
+
+  @media (min-width: 40em) {
+    header .meta .stories {
+      padding-left: 4em;
+    }
+  }
+
+
+  /* @disabled */
+  @media (min-width: 99999px) {
   }
   header a {
     background: rgba(255, 255, 255, 0.95);
@@ -512,15 +539,25 @@
     color: #0080d0; /* @boysenberry */
   }
 
-  /* @disabled */
-  @media (min-width: 99999px) {
-  }
   li figure img {
     /* Fallback */
     top: 420px; /* 120px + 300px (assumed viewport height) */
 
     /* For browsers that understand calc() */
     top: calc(50vh + 7.5em); /* 120px (header height) / 16px = 12em */
+  }
+
+  @media (min-width: 40em) {
+    li .body p {
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+    }
+    li .body p.more {
+      padding-right: 5em;
+    }
+    li .source {
+      padding-right: 5em;
+    }
   }
 
   </style>
@@ -532,7 +569,7 @@
     <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
       <h2>Do</h2>
 
-      <h1>Share a story about how design and technology helped you learn.</h1>
+      <h1>Share a story about how design and technology helped you (or someone you love) learn.</h1>
       <!--
       <h1>Go on an adventure</h1>
       -->
@@ -557,7 +594,7 @@
 
   <ul>
     <li>
-      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-8B6ABB0E" target="_top">
         <div class="body">
           <p>Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only…</p>
           <p class="more">Read More</p>
@@ -569,7 +606,7 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
         <figure>
           <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/584/271/original/DirtBike_Riding.jpg=s1000x1000" alt="">
         </figure>
@@ -586,7 +623,7 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
         <figure>
           <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F267%2Foriginal%2F95fb124aa53811e2877122000a1fbc4f_7.jpg&amp;geometry=1000x1000%3E" />
         </figure>
@@ -601,7 +638,7 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
         <figure>
           <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=1000x1000%3E" />
         </figure>
@@ -616,7 +653,7 @@
       </a>
     </li>
     <li>
-      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
         <figure>
           <img src="//img.youtube.com/vi/IGfjMnvJaak/0.jpg" alt="">
         </figure>
