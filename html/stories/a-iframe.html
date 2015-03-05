@@ -1,0 +1,913 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Go for an adventure – GOOD</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+
+  /* =Third Party Fonts
+  -----------------------------------------------
+  This CSS resource incorporates links to font software which is the valuable copyrighted
+  property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+  redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+  Imaging with any questions regarding Web Fonts:  http://webfonts.fonts.com
+  ----------------------------------------------- */
+
+  @font-face {
+    font-family: "Brandon Grotesque Bold";
+    src: url(../../assets/third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot);
+    src: url(../../assets/third-party/c12a6d37-72c1-408b-9ca9/32946956c57f.eot?#iefix) format("eot"),
+         url(../../assets/third-party/4f2d0548-c7dc-459b-a2e0/e86656a10ded.woff)       format("woff"),
+         url(../../assets/third-party/dc21d9e5-516f-4e7e-9a84/7be79a44c2dd.ttf)        format("truetype"),
+         url(../../assets/third-party/a9bdb836-ee14-494d-8c69/5617c5720992.svg#a9bdb836-ee14-494d-8c69-5617c5720992) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Trade Gothic Bold Condensed";
+    src: url(../../assets/third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot);
+    src: url(../../assets/third-party/257c802f-349c-4b4d-aefa/546d5de15ec6.eot?#iefix) format("eot"),
+         url(../../assets/third-party/5fdc935e-9e30-442a-bbe9/8d887b858471.woff)       format("woff"),
+         url(../../assets/third-party/616c4c87-a077-43f4-a9f4/f01267c13818.ttf)        format("truetype"),
+         url(../../assets/third-party/c901ad5f-a842-4549-a1f4/583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  /* =Elements
+  -----------------------------------------------
+  -----------------------------------------------
+  ----------------------------------------------- */
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  /* Fit media to the available width */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  iframe, object, embed {
+    width: 100%;
+  }
+
+  a img {
+    border-width: 0;
+  }
+
+
+  /* =Avatars
+  ----------------------------------------------- */
+  .avatar > span {
+    display: inline-block;
+    background: rgb(153, 153, 153); /* @nickel */
+    color: white;
+    width       : 1.5em;
+    line-height : 1.5em;
+  }
+
+  .avatar .sky {
+    background: rgb(116, 235, 231);
+  }
+  .avatar .banana {
+    background: rgb(250, 193, 66);
+  }
+  .avatar .tangerine {
+    background: rgb(249, 124, 86);
+  }
+
+  .avatar .size25 {
+    font-size: 1.0416666667em; /* 2/3 x 25px / @font-size */
+  }
+  .avatar .size30 {
+    font-size: 1.25em;         /* 2/3 x 30px / @font-size */
+  }
+  .avatar .size40 {
+    font-size: 1.6666666667em; /* 2/3 x 40px / @font-size */
+  }
+  .avatar .size60 {
+    font-size: 2.5em;          /* 2/3 x 60px / @font-size */
+  }
+  .avatar .size80 {
+    font-size: 3.3333333333em; /* 2/3 x 80px / @font-size */
+  }
+  .avatar .size130 {
+    font-size: 5.4166666667em; /* 2/3 x 130px / @font-size */
+  }
+
+  .avatar [data-content]:after {
+    display: block;
+    content: attr(data-content);
+    speak: none;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .avatar .name {
+    /* @hidden-accessible */
+    position: absolute;
+    left: -9999px;
+  }
+
+
+  /* =Stories
+  ----------------------------------------------- */
+  header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    color: white;
+    border-top: 5px solid rgb(0, 0, 0);
+    font-size: 0.875em;
+  }
+  @media (min-width: 40em) {
+    header {
+      font-size: inherit;
+    }
+  }
+  header a {
+    display: block;
+    text-decoration: none;
+    padding: 1.5em 1.25em 1.125em;
+  }
+  header a:hover,
+  header a:active,
+  header a:focus {
+    text-decoration: none;
+  }
+  header h1,
+  header h2 {
+    margin: 0;
+  }
+  header h1 {
+    font-size: inherit;
+    line-height: inherit;
+    font-size: 1.5em;
+    line-height: 1.25;
+    padding-top: 2.25em;
+    vertical-align: middle;
+    max-height: 3.75em;
+    overflow: hidden;
+  }
+  @media (min-width: 40em) {
+    header h1 {
+      padding-top: 0;
+      margin-left: 55px;
+      margin-right: 175px;
+    }
+  }
+  header h2 {
+    font-family: "Trade Gothic Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @trade */
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1em;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 100%;
+    width: 2.25em;
+    line-height: 2.25em;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+  }
+  header .action {
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+    margin: 0;
+    background-color: #2fd864; /* @lime */
+    color: white;
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.125;
+    line-height: 1.5em;
+    padding: 0.5em 1em;
+    font-size: 0.875em;
+  }
+  header a:hover  .action,
+  header a:active .action,
+  header a:focus  .action {
+    background-color: #26b252; /* @kiwi */
+  }
+  .meta {
+    margin-top: 1em;
+    border-top: 0.1em solid rgba(255, 255, 255, 0.25);
+    padding-top: 1em;
+  }
+  .meta:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .meta .stories {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .meta .more {
+    margin-top: 0.75em;
+    margin-bottom: 0;
+  }
+  .meta .stories {
+    font-size: 0.875em;
+    line-height: 1.7142857143; /* @line-height / 0.875em */
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-family: "Brandon Grotesque Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; /* @brandon */
+    margin-right: 1em;
+  }
+  .meta .stories .count {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: none;
+    font-variant: default;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* @helvetica */
+    margin-left: 0.375em;
+  }
+  .meta .stories .count:before {
+    content: "(";
+  }
+  .meta .stories .count:after {
+    content: ")";
+  }
+  .meta .stories svg {
+    vertical-align: bottom;
+    margin-right: 0.375em;
+  }
+  .meta .stories svg path {
+    fill: currentColor;
+  }
+  .meta .more {
+    text-transform: lowercase;
+    font-size: 0.875em;
+    line-height: 1.7142857143; /* @line-height / 0.875em */
+    padding-right: 1em;
+  }
+  .meta .stories {
+    margin: 0;
+    float: left;
+  }
+  .meta .more {
+    margin: 0;
+    float: right;
+  }
+  .meta .more {
+    font-size: inherit;
+    line-height: 1.5;
+  }
+  .story-list,
+  .story-list li {
+    .story-list list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .story-list {
+    margin: 0;
+  }
+  .story-list a {
+    background-color: #2fd864; /* @lime */
+    display: block;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow: hidden;
+    color: white;
+    padding-top: 12em;
+  }
+  .story-list a:hover,
+  .story-list a:active,
+  .story-list a:focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  .story-list .raspberry {
+    background-color: #b70941;
+  }
+  .story-list .strawberry {
+    background-color: #ee135c;
+  }
+  .story-list .banana {
+    background-color: #ffd50c;
+  }
+  .story-list .bilberry {
+    background-color: #00efc7;
+  }
+  .story-list .tangerine {
+    background-color: #ff4f19;
+  }
+  .story-list .orange {
+    background-color: #f8830b;
+  }
+  .story-list .plumb {
+    background-color: #a72dff;
+  }
+  .story-list .blueberry {
+    background-color: #009cff;
+  }
+  .story-list .boysenberry {
+    background-color: #0080d0;
+  }
+  .story-list .kiwi {
+    background-color: #26b252;
+  }
+  .story-list .lime {
+    background-color: #2fd864;
+  }
+
+  .story-list li figure {
+    padding: 0;
+    margin: 0;
+  }
+  .story-list li figure:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  .story-list li figure img {
+    max-width: 100%;
+    height: auto;
+
+    /* Reset */
+    margin: 0;
+    max-width: none;
+    max-height: none;
+
+    /* Fill the available space */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    /* OPTIONAL: Center the image */
+    width: 100vmax;
+    left: 50vw;
+    top: 50vh;
+    margin-left: -50vmax;
+    margin-top: -50vmax;
+  }
+  .story-list li .body p {
+    max-height: 8.75em;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 1.25em 1.25em 0;
+    color: rgb(204, 204, 204);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    font-size: 0.875em;
+  }
+  .story-list li .body p.more {
+    margin-top: 0.5454545455em;
+    padding-top: 0;
+    padding-right: 1.25em;
+    text-align: right;
+    text-transform: lowercase;
+    font-size: 0.6875em;
+  }
+  .story-list li .body p.more:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0.375em;
+    opacity: 0.75;
+    /*
+    @icon-right
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path fill="white" d="M8.8,3c-0.5,0.5-0.5,1.2,0,1.6l4.2,4.2H4.3c-0.6,0-1.2,0.5-1.2,1.2c0,0.7,0.6,1.2,1.2,1.2H13l-4.2,4.2
+        c-0.5,0.4-0.5,1.1,0,1.6s1.1,0.4,1.6,0l6.2-6.2c0.2-0.2,0.3-0.5,0.3-0.8s-0.1-0.6-0.3-0.8L10.4,3C9.9,2.6,9.1,2.6,8.8,3z"/>
+    </svg>
+    */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+DQogIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJNOC44LDNjLTAuNSwwLjUtMC41LDEuMiwwLDEuNmw0LjIsNC4ySDQuM2MtMC42LDAtMS4yLDAuNS0xLjIsMS4yYzAsMC43LDAuNiwxLjIsMS4yLDEuMkgxM2wtNC4yLDQuMg0KICAgIGMtMC41LDAuNC0wLjUsMS4xLDAsMS42czEuMSwwLjQsMS42LDBsNi4yLTYuMmMwLjItMC4yLDAuMy0wLjUsMC4zLTAuOHMtMC4xLTAuNi0wLjMtMC44TDEwLjQsM0M5LjksMi42LDkuMSwyLjYsOC44LDN6Ii8+DQo8L3N2Zz4=);
+  }
+  .story-list li .body p.video:after {
+    width: 1.5em;
+    height: 1.5em;
+    /*
+    @icon-play
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <polygon fill="white" points="8.3,6.6 12.9,10 8.3,13.4"/>
+      <path fill="white" d="M10,19c-5,0-9-4-9-9s4-9,9-9s9,4,9,9S15,19,10,19z M10,2.4c-4.2,0-7.6,3.4-7.6,7.6s3.4,7.6,7.6,7.6 s7.6-3.4,7.6-7.6S14.2,2.4,10,2.4z"/>
+    </svg>
+    */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+DQogIDxwb2x5Z29uIGZpbGw9IndoaXRlIiBwb2ludHM9IjguMyw2LjYgMTIuOSwxMCA4LjMsMTMuNCIvPg0KICA8cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTEwLDE5Yy01LDAtOS00LTktOXM0LTksOS05czksNCw5LDlTMTUsMTksMTAsMTl6IE0xMCwyLjRjLTQuMiwwLTcuNiwzLjQtNy42LDcuNnMzLjQsNy42LDcuNiw3LjYgczcuNi0zLjQsNy42LTcuNlMxNC4yLDIuNCwxMCwyLjR6Ii8+DQo8L3N2Zz4NCg==);
+  }
+  @media (min-width: 40em) {
+    .story-list li .body p {
+      font-size: 1.25em;
+      padding-left: 3.75em; /* 4.6875em / 1.25em */
+      padding-right: 3.75em;
+    }
+    .story-list li .body p.more {
+      margin-top: 0.5357142857em;
+      font-size: 0.875em;
+      padding-left: 3.5714285714em; /* 50px / 14px */
+      padding-right: 3.5714285714em; /* 50px / 14px */
+    }
+  }
+  /*
+  @media (min-width: 40em) {
+    .story-list li .body p {
+      font-size: 2em;
+      max-height: 6.25em;
+      padding-top: 0.25em;
+      padding-left: 2.25em;
+      padding-right: 2.25em;
+    }
+    .story-list li .body p.more {
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 1em;
+      padding-right: 4.5em;
+    }
+  }
+  */
+  .story-list li a:hover  .body p,
+  .story-list li a:active .body p,
+  .story-list li a:focus  .body p {
+    color: white;
+  }
+  .story-list li .source {
+    background: black;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 1em 1.25em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 0.75em;
+  }
+  @media (min-width: 40em) {
+    .story-list li .source {
+      padding-right: 6.25em;
+    }
+  }
+  .story-list li .source .avatar,
+  .story-list li .source img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+
+  /* Attempt to make the image the same size as the avatar */
+  .story-list li .source img {
+    width: 1.875em;
+    height: 1.875em;
+  }
+
+  .story-list li.inactive {
+    display: none;
+  }
+
+  /*
+  header {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  */
+
+  nav {
+    position: absolute;
+    bottom: 0;
+    left: 0.5em;
+    z-index: 9999;
+    padding-top: 3em;
+    padding-right: 3em;
+  }
+
+  @media (min-width: 40em) {
+    nav {
+      left: 2.25em;
+    }
+  }
+
+  nav ul,
+  nav li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  nav ul {
+    margin: 0;
+  }
+  nav li {
+    display: block;
+    float: left;
+  }
+  nav button {
+    display: block;
+    background: transparent;
+    padding: 0.875em 0.375em;
+    border-width: 0;
+    color: white;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    font-size: 0.75em;
+  }
+  nav button:hover,
+  nav button:active,
+  nav button:focus {
+    color: white;
+  }
+  nav button svg {
+    width: 1.25em;
+    height: 1.25em;
+  }
+  nav button svg path {
+    fill: currentColor;
+  }
+
+  @media (min-width: 40em) {
+    nav button {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+    nav button svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  header {
+    border-top-width: 0;
+  }
+
+  @media (min-width: 40em) {
+    header .meta .stories {
+      padding-left: 1.875em;
+    }
+  }
+
+
+  /* @disabled */
+  @media (min-width: 99999px) {
+  }
+  header a {
+    background: rgba(255, 255, 255, 0.95);
+    background: white;
+    color: black;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header h2 {
+    top: 0;
+    left: 0.25em;
+  }
+  header .action {
+    right: 0;
+    top: 0;
+  }
+  .meta .stories .count {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  header .meta {
+    border-top-color: rgba(0, 0, 0, 0.1);
+  }
+  header .meta .more {
+    color: #009cff; /* @blueberry */
+  }
+  header a:hover  .meta .more,
+  header a:active .meta .more,
+  header a:focus  .meta .more {
+    color: #0080d0; /* @boysenberry */
+  }
+
+  .story-list li figure img {
+    /* Fallback */
+    top: 320px; /* 120px + 200px (assumed viewport height / 2) */
+
+    /* For browsers that understand calc() */
+    top: calc(50vh + 7.5em); /* 120px (header height) / 16px = 12em */
+  }
+
+  @media (min-width: 40em) {
+    .story-list li .body p {
+      padding-top: 0.375em;
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+    }
+    .story-list li .source {
+      padding-right: 5em;
+    }
+  }
+
+
+
+  nav {
+    left: 0.5em;
+  }
+  .story-list li .source {
+    padding-right: 1.6666666667em;
+  }
+
+
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn" target="_top">
+      <h2>Do</h2>
+
+      <h1>Share a story about how design and technology helped you (or someone you love) learn.</h1>
+      <!--
+      <h1>Go on an adventure</h1>
+      -->
+
+      <p class="action">Add your story</p>
+
+      <div class="meta">
+        <p class="stories">
+          <svg viewBox="0 0 20 20" width="20" height="20">
+            <path fill="white" d="M11.8,10.9c0-0.5-0.4-0.9-0.9-0.9c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9
+              C11.4,11.8,11.8,11.4,11.8,10.9z M13.1,3.4v4L9.9,5.6L3.3,8.5V3.4h0H13.1z M17.9,19H5.7c-0.6,0-1.1-0.5-1.1-1.1v-2.5H2.1
+              c-0.6,0-1.1-0.5-1.1-1.1V2.1C1,1.5,1.5,1,2.1,1h12.2c0.6,0,1.1,0.5,1.1,1.1v2.5h2.5c0.6,0,1.1,0.5,1.1,1.1v12.2
+              C19,18.5,18.5,19,17.9,19z M14,2.4H2.4V14H14C14,14,14,2.4,14,2.4z M17.6,6h-2.2v8.3c0,0.6-0.5,1.1-1.1,1.1H6v2.2h11.5
+              C17.6,17.6,17.6,6,17.6,6z"/>
+          </svg>
+          Stories <span class="count">12</span>
+        </p>
+        <p class="more">View all</p>
+      </div><!-- /.meta -->
+    </a>
+  </header>
+
+  <ul class="story-list">
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
+        <figure>
+          <img src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F453%2Foriginal%2FIMG_8827.JPG&amp;geometry=1000x1000%3E" />
+        </figure>
+        <div class="body">
+          <p>I have the good fortune of working in a building and a neighborhood teeming with creative people. A few months ago Skrillex, the one and only, had a rehearsal space…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <span class="avatar">
+            <span class="size30 orange" data-content="e"></span>
+          </span>
+          Ethan Lipsitz
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-491D4E86" target="_top">
+        <div class="body">
+          <p>When I was in third grade, my school in Cancun, Mexico, had a computer game that through a character's journey and his/hers challenges taught spelling and grammar in spanish…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/624/077/original/556951_10152643463090713_664224108_n.jpg=c30x30" width="30">
+          Gabriela Avm
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
+        <figure>
+          <img src="http://images-2.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fimages%2Fattachments%2F000%2F584%2F267%2Foriginal%2F95fb124aa53811e2877122000a1fbc4f_7.jpg&amp;geometry=1000x1000%3E" />
+        </figure>
+        <div class="body">
+          <p>A few of my friends and I go for a monthly hike. Here are some pics from our recent walk around Paramount Ranch in Malibu. This is an old Western set used by Paramount for various…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <img alt="" height="30" src="http://images-4.good.is/albums/crop?image_url=http%3A%2F%2Fs3.amazonaws.com%2Fproduction.calumet.good.is%2Fusers%2Favatars%2F001%2F789%2F706%2Foriginal%2F68757_10150302296215416_2135631_n.jpg&amp;geometry=30x30%23" width="30" />
+          Paris Marron
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-A29C2F33" target="_top">
+        <div class="body">
+          <p>When my daughter got an iPad in her classroom, she started reading lots of eBooks and playing all kinds of games that got her really excited about schoolwork. I wish we could have…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <span class="avatar"><span class="size30 banana" data-content="J"></span></span>
+          JasonPJones
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-710866EA" target="_top">
+        <figure>
+          <img src="//img.youtube.com/vi/IGfjMnvJaak/0.jpg" alt="">
+        </figure>
+        <div class="body">
+          <p>Cyclist could soon be paid to cycle to work under a new plan to boost cycling to get people fitter to save on health spending and, perhaps, create more jobs. In fact, the Transport Minister…</p>
+          <p class="more video">Watch Video</p>
+        </div>
+        <p class="source">
+          <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/115/613/original/profile_next.png=c30x30" width="30" />
+          Nicolo Riggio
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-A29C2F33" target="_top">
+        <div class="body">
+          <p>Basketball is my favorite sport, I like the way they dribble up and down the court. When I was introduced to the world of basketball in sixth grade, I was mesmerized. I wanted to learn…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/001/643/297/original/10847665_10152939945391181_7208412693979836484_o.jpg=c30x30" width="30">
+          Benison Choi
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-23510D11" target="_top">
+        <figure>
+          <img src="http://assets.goodstatic.com/s3/prod/images/attachments/000/587/571/original/BikingCopenhagen.jpg=s1000x450" alt="">
+        </figure>
+        <div class="body">
+          <p>Growing up in an Asian home, the only language I spoke and knew was Vietnamese. It wasn't until I entered Kindergarten did I realize that I was the "weird" one for speaking a foreign language…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <span class="avatar">
+            <span class="size30 banana" data-content="m"></span>
+          </span>
+          Mindy Nguyen
+        </p>
+      </a>
+    </li>
+    <li>
+      <a href="http://community.good.is/do/share-a-story-about-how-design-and-technology-helped-you-or-someone-you-love-learn#story-8B6ABB0E" target="_top">
+        <div class="body">
+          <p>Back when I was a kid, my mom was a teacher, and got to bring the classroom computer home over the summer. When I was only around 3 or 4, I would play a "game" on the computer…</p>
+          <p class="more">Read More</p>
+        </div>
+        <p class="source">
+          <img alt="" height="30" src="http://assets.goodstatic.com/s3/prod/users/avatars/002/573/222/original/Screen_Shot_2015-02-13_at_11.22.36_AM.png=c30x30" width="30">
+          Katie Wudel
+        </p>
+      </a>
+    </li>
+  </ul>
+
+  <script type="text/template" id="navigation">
+  <nav>
+    <ul>
+      <li>
+        <button class="previous">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+            <path d="M14.5,19V1l-9,9L14.5,19z"/>
+            <foreignobject>Previous</foreignobject>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+            <path d="M14.5,10l-9-9v18L14.5,10z"/>
+            <foreignobject>Next</foreignobject>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  </script>
+
+  <script>
+
+    (function() {
+      if (!document.querySelectorAll) return;
+
+      var colors = [
+        'raspberry',
+        'tangerine',
+        'plumb',
+        'blueberry',
+        'kiwi',
+        'strawberry',
+        //'banana',
+        //'bilberry',
+        'orange',
+        'boysenberry',
+        'lime'
+      ];
+
+      var min = 0;
+      var max = colors.length - 1;
+
+      var items = document.querySelectorAll('.story-list li');
+      var cursor = Math.floor(Math.random() * (max - min + 1) + min);
+
+      for (var index = 0; index < items.length; index++) {
+        cursor = (cursor + 1) % colors.length;
+        var link = items[index].querySelector('a');
+        link.className += ' ' + colors[cursor];
+        items[index].className = 'inactive';
+      }
+
+    })();
+
+    (function() {
+      if (!document.querySelectorAll || !document.body.addEventListener) return;
+
+      var items = document.querySelectorAll('.story-list li');
+
+      var min = 0;
+      var max = items.length - 1;
+
+      var cursor = Math.floor(Math.random() * (max - min + 1) + min);
+
+      function next() {
+        items[cursor].className = 'inactive';
+        cursor = (cursor + 1) % items.length;
+        items[cursor].className = '';
+      }
+
+      function previous() {
+        items[cursor].className = 'inactive';
+        if (cursor == 0) cursor = items.length;
+        cursor = (cursor - 1) % items.length;
+        items[cursor].className = '';
+      }
+
+      next();
+      var timer = setInterval(next, 7000);
+
+      var navigation = document.getElementById('navigation');
+      if (navigation) {
+        var div = document.createElement('div');
+        div.innerHTML = navigation.innerHTML;
+        document.body.appendChild(div);
+
+        function addEvents() {
+          var nextButton     = document.querySelector('nav .next');
+          var previousButton = document.querySelector('nav .previous');
+          if (nextButton && previousButton) {
+            nextButton.addEventListener('click', function(e) {
+              if (timer) clearInterval(timer); // Switch to manual mode, since the user is now pressing buttons.
+              next();
+            }, false);
+            previousButton.addEventListener('click', function(e) {
+              if (timer) clearInterval(timer);
+              previous();
+            }, false);
+          } else {
+            setTimeout(addEvents, 10);
+          }
+        }
+
+        addEvents();
+      }
+
+    })();
+
+  </script>
+
+</body>
+</html>
