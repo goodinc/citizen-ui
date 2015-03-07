@@ -375,14 +375,28 @@
     left: 0;
     width: 100%;
     height: auto;
-
-    /* OPTIONAL: Center the image */
-    width: 100vmax;
-    left: 50vw;
-    top: 50vh;
-    margin-left: -50vmax;
-    margin-top: -50vmax;
   }
+
+  /* OPTIONAL: Center the image (this assumes the image is a square) */
+  .story-list li figure img {
+    left:         50vw;
+    top:          50vh;
+  }
+  /* For wide screens */
+  .story-list li figure img {
+    width:       100vw;
+    margin-left: -50vw;
+    margin-top:  -50vw;
+  }
+  /* For tall screens */
+  @media (max-aspect-ratio: 1/1) {
+    .story-list li figure img {
+      width:       100vh;
+      margin-left: -50vh;
+      margin-top:  -50vh;
+    }
+  }
+
   .story-list li .body p {
     max-height: 8.75em;
     overflow: hidden;
